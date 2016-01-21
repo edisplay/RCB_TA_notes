@@ -31,7 +31,7 @@ letter.js
 	* create a property called `appear` set it to `false`
 	* create a function inside of the `Letter` constructor called `letterRender`
 	* when the function `letterRender` is called
-		- it will check the value of `charac`
+		- it will check the value of `appear`
 		if `false` return a string `"_"`, else it will return the value `charac`
 
 export the Letter constuctor function with
