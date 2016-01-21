@@ -16,17 +16,17 @@ indexing
 
 Table: careTaker
 
-| pk | Zoo | careTaker_name  |
-|----|-----|-----------------|
-|  1 |  NY |    John         |
-|  2 |  NY |    Mary         |
-|  3 |  SF |    Sara         |
+| pk | Zoo | name  |
+|----|-----|-------|
+|  1 |  NY |   John|
+|  2 |  NY |   Mary|
+|  3 |  SF |   Sara|
 
 Table: animal
 
-| pk | CareTaker_fk |  animal_Name | Type  | Age |
-|----|--------------|--------------|-------|-----|
-|  1 |      1       |  Bobo        |  Bear |  4  |
-|  1 |      1       |  Link        |  Lion |  3  |
-|  1 |      2       |  CiCi        |  Cat  |  1  |
+| pk | CareTaker_fk |  name | Type  | Age |
+|----|--------------|-------|-------|-----|
+|  1 |      1       |  Bobo |  Bear |  4  |
+|  1 |      1       |  Link |  Lion |  3  |
+|  1 |      2       |  CiCi |  Cat  |  1  |
 

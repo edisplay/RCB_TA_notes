@@ -26,12 +26,21 @@ PRIMARY KEY (careTaker_id)
 );
 
 CREATE TABLE animal(
-animal_id int NOT NULL AUOT_INCREMENT,
+animal_id int AUTO_INCREMENT,
 careTaker_id int NOT NULL,
-name
+name varchar(30) NOT NULL,
+type varchar(30) NOT NULL,
+age int NOT NULL,
 PRIMARY KEY(animal_id),
-FOREIGN KEY(stud_id) REFERENCES careTaker(careTaker_id)
+FOREIGN KEY(careTaker_id) REFERENCES careTaker(careTaker_id)
 ); 
+
+
+INSERT INTO careTaker (city, name) VALUES ('NY', 'John') ;
+INSERT INTO animal (careTaker_id, name, type, age) VALUES (1, 'Bobo', 'Bear', 3) ;
+
+SELECT * FROM careTaker;
+SELECT * FROM animal;
 
 <!-- 
 CREATE TABLE Tasks
