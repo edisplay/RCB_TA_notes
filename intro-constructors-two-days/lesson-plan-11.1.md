@@ -4,9 +4,11 @@
 
 # Lesson Plan + In Class Exercises
 
-### 1. Student do (15 minutes)
+### 1. Student do (20 minutes)
 
-Slack me your answers when the timer rings.
+Everyone open up sublime text and code.
+
+If you don't have sublime text open, then you're not doing your job.
 
 Part one:
 ---------
