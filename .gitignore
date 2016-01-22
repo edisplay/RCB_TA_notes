@@ -1,8 +1,14 @@
-intro-constructors-two-days/homework_solution/node_modules
-intro-constructors-two-days/Spotify_Preview_Player
-intro-constructors-two-days/in_browser_homework_solution
+week-10-intro-node-three-days/homework_solution/keys.js
+week-10-intro-node-three-days/homework_solution/node_modules
+week-10-intro-node-three-days/test-stuff.js
+week-10-intro-node-three-days/in-class-10.2
 
-week-12-homework/zoo_keeper_app/node_modules
+week-11-intro-constructors-two-days/homework_solution/node_modules
+week-11-intro-constructors-two-days/11.1-in-class-exercises/node_modules
+week-11-intro-constructors-two-days/Spotify_Preview_Player
+week-11-intro-constructors-two-days/in_browser_homework_solution
+
+week-12-mysql-three-days/zoo_keeper_app/node_modules
 
 */.DS_Store
 .DS_Store
