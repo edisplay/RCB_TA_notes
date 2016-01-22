@@ -13,12 +13,33 @@ Have a question? It's probably in the Instructor Guide.
 look at this file at the root of the repository: 
 [Instructor Guide](https://github.com/RutgersCodingBootcamp/All-Lesson-Plans/blob/master/instructor_guide.md)
 
+# Theme
+
+Connecting Constructor Functions Together
+
 # Objectives
 
+* students will discover why the prompt npm package fails inside of a while loop and will be able to use an alternative strategy around it
+* students will be able to use constructor functions to connect two different objects together
 
-### Instructor do (25 minutes)
+### Instructor do (15 minutes)
 
-* show how prompt in while loop fails * 
+- write code in first_instructor_demonstration.1.js
+
+- do not execute it.
+
+### Everyone do (5 minutes)
+
+"When I run this node file, will it fail?"
+
+"I'll be calling on groups, so get ready - talk - learn! I could call on any one of you."
+
+
+### Everyone do (10 minutes)
+
+""
+
+- get students to explain every line before it executes
 
 ask students a better way
 
