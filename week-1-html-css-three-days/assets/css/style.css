@@ -133,6 +133,18 @@ h3,
 main {
 	padding-top: 130px;
 }
+.main-section {
+	background: #fff;
+	padding: 30px;
+	margin: 0 0 40px 0;
+	width: 100%;
+	max-width: 650px;
+	float: left;
+	border: 1px solid #ddd;
+}
+
+/*portfolio page*/
+
 .work {
 	width: 274px;
 	overflow: auto;
@@ -161,15 +173,6 @@ main {
 	margin-bottom: 0;
 	font-weight: 300;
 }
-article.post {
-	background: #fff;
-	padding: 30px;
-	margin: 0 0 30px 0;
-	width: 100%;
-	max-width: 650px;
-	float: left;
-	border: 1px solid #ddd;
-}
 .auth-image {
 	width: 200px;
 	height: auto;
@@ -177,6 +180,9 @@ article.post {
 	float: left;
 	margin-right: 25px;
 }
+
+/*contact page*/
+
 #contact-form ul {
 	margin-bottom: 20px;
 }
