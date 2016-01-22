@@ -7,7 +7,6 @@ var connection = mysql.createConnection({
     database: 'myTestDB'
 });
 
-
 //setup npm
 var prompt = require('prompt');
 var animals = require('animals');
@@ -21,19 +20,15 @@ connection.connect(function(err) {
     };
     //console.log('connected as id ' + connection.threadId);
 });
-prompt.start();
 
+prompt.start();
+prompt.message = '';
 /*
 var sillyName = generateName() + "mon";
 var randomAnimal = animals();
 console.log(sillyName, randomAnimal);
 */
-/*var addData = function() {
-	//mySQL commands
-  	connection.query('INSERT INTO Tasks (Todo, Done) VALUES (?, ?)', [req.body.todo, false], function(err, result) {
-	if (err) throw err;
-	});
-}*/
+
 	// connection.query('SELECT * FROM careTaker;', function(err, res) {
 	//   if (err) throw err;
 	//     console.log('Here is the keeper: ', res);
@@ -44,23 +39,51 @@ console.log(sillyName, randomAnimal);
 	// });
 
 //show user choices
-//do now use switch case does not work with npm prompt
+//prompt is weird, wtf do not use nodemon to test~!!!
+
 zoo = {
-	state: null,
 	welcome: function() {
-		console.log("°º¤ø,¸¸,ø¤º°`°º¤ø,¸,ø¤°º¤ø,¸¸,ø¤º°`°º¤ø,°º¤ø,¸¸,ø¤º°`°º¤ø,¸,ø¤°º¤ø,¸¸,ø¤º°`°º¤ø,");
+		console.log("°º¤ø,¸¸,ø¤º°`°º¤ø,¸,ø¤°º¤ø,¸¸,ø¤º°`°º¤ø,°º¤ø,¸¸,ø¤º°`°º¤ø,¸,ø¤°º¤ø,¸¸,ø¤º°`°º¤ø,ø");
+		console.log("°");
+		console.log("°                      Welcome to the Zoo And Friends App~!                     ø");
+		console.log("°");
+		console.log("°º¤ø,¸¸,ø¤º°`°º¤ø,¸,ø¤°º¤ø,¸¸,ø¤º°`°º¤ø,°º¤ø,¸¸,ø¤º°`°º¤ø,¸,ø¤°º¤ø,¸¸,ø¤º°`°º¤ø,ø");
 		console.log("");
-		console.log("                      Welcome to the Zoo And Friends App~!                      ");
-		console.log("");
-		console.log("°º¤ø,¸¸,ø¤º°`°º¤ø,¸,ø¤°º¤ø,¸¸,ø¤º°`°º¤ø,°º¤ø,¸¸,ø¤º°`°º¤ø,¸,ø¤°º¤ø,¸¸,ø¤º°`°º¤ø,");
-		console.log("");
+	},
+	menu : function() {
 		console.log("Please select what you want to do...");
 		console.log("--------------------------------------------------");
 		console.log("Enter (A): ------>", "Add a new animal to the Zoo!");
+		console.log("");
 		console.log("Enter (U): ------>", "Update info on an animal in the Zoo!");
+		console.log("");
 		console.log("Enter (V): ------>", "Visit different animals in the Zoo!");
+		console.log("");
 		console.log("Enter (D): ------>", "Adopt an animal from the Zoo!");
+		console.log("");
+		console.log("Enter (Q): ------>", "Quit and exit the Zoo!");
 		console.log("--------------------------------------------------");
+	},
+	add : function(input_scope) {
+		var currentScope = input_scope;
+		console.log("To add an animal to the zoo please fill out the following form for us!");
+		console.log("--------------------------------------------------");
+		//ask for user input
+		//prompt.get(['_','name','_','type','_','age'], function(err, result) {
+		prompt.get(['_','name','type','age'], function(err, result) {
+			//console.log(result.name, result.type, result.age);
+			//INSERT INTO animal (careTaker_id, name, type, age) VALUES (1, 'Bobo', 'Bear', 3) ;
+			/*		  	
+			connection.query('INSERT INTO animal (careTaker_id,name,type,age) VALUES (?,?,?,?)', [1, result.name,result.type,result.age], function(err, result) {
+			if (err) throw err;
+			});
+			*/
+			console.log("Thank you for adding this animal!");
+			console.log("--------------------------------------------------");
+			//going back to start menu
+			currentScope.menu();
+			currentScope.promptUser();
+		});
 	},
 	visit: function() {
 	    console.log("How would you like to see the animals today?");
@@ -71,21 +94,44 @@ zoo = {
 		console.log("Enter (Care): ------>", "You know the careTaker visit all animal under that person!");
 		console.log("--------------------------------------------------");
 	},
+	update : function(input_scope) {
+		var currentScope = input_scope;
+		console.log("To update an animal please enter the ID of the animal and it's changed information!");
+		console.log("--------------------------------------------------");
+		prompt.get(['_','ID','new_name','new_age','new_careTaker_ID'], function(err, result) {
+			console.log(result.new_name, result.new_age, result.new_careTaker_ID);
+			console.log("Thank you for updating this animal, would you like to do something else today?");
+			console.log("--------------------------------------------------");
+			//going back to start menu
+			currentScope.menu();
+			currentScope.promptUser();
+		});
+	},
 	open : function () {
 		//welcome the user at start of the app
-		if (this.state == null) {
-			this.welcome();
-		};
-		this.state = "opened";
-		this.keepPromptingUser();
+		this.welcome();
+		this.menu();
+		this.promptUser();
 	}, 
-	keepPromptingUser : function() {
+	exit : function() {
+		console.log("Thank you for visiting us, good bye~!");
+		process.exit();
+	},
+	promptUser : function() {
 		var self = this;
-		prompt.get(['input'], function(err, result) {
-			if (result.input == 'V') {
-				self.visit();
-			  	self.keepPromptingUser();
-			};
+		prompt.get('input', function(err, result) {
+			if (result.input == 'Q') {
+				self.exit();
+			}else if (result.input == 'A') { 
+				//pass this in the form of self into new func
+				self.add(self);
+			}else if (result.input == 'U') {
+				//pass this in the form of self into new func
+				self.update(self);
+			}else{
+				console.log("Sorry didn't get that, come again?");
+				self.promptUser();
+			}
 		});
 	}
 
