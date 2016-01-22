@@ -23,8 +23,9 @@ look at this file at the root of the repository:
 Internal NPM Packages vs External NPM Packages
 
 # INSTRUCTOR MUST COVER!!!
+```
 19. - 23.
-
+```
 or they won't be able to do the homework.
 
 # Objectives (Slack out to students, have unique students read each one and Instructor makes a comment after each one being read)
