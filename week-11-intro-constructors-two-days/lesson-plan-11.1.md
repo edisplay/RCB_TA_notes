@@ -1,3 +1,11 @@
+# Pavan to do
+
+add in timing
+
+add in master objectives
+
+make sure the timing works in the class format
+
 # Have you read the Instructor Guide?
 
 You should before you teach anyone anything.
@@ -66,7 +74,7 @@ We go over together previous exercise together as a class
 
 Make it known that people are responsible for the people around them. This will force stronger students to explain to the people around them what's going on.
 
-### 3. Instructor do
+### 4. Instructor do
 
 * show how to reduce redundancies with constructor functions *
 
@@ -88,7 +96,7 @@ function Animal(sleepy, noise){
 }
 ```
 
-### 4. Partners do (10 minutes)
+### 5. Partners do (10 minutes)
 
 "You should never outright invoke a constructor funtion.
 
@@ -102,13 +110,13 @@ Animal();
 
 "What's going to happen? Talk about this with your partners. Figure out what's going to happen. Figure out why it's bad."
 
-### 5. Everyone do (10 minutes)
+### 6. Everyone do (10 minutes)
 
 call on people and try to get this full story:
 
 "When you invoke the Animal() constructor function, it creates global variables, sleepy, noise and makeNoise. This is bad, because if you had variables named sleepy, noise or makeNoise, you'll end up over riding those variables. And that's bad."
 
-### Instructor do
+### 7. Instructor do
 
 Now i'm going to use the constructor function to make a cat.
 
@@ -116,7 +124,7 @@ Now i'm going to use the constructor function to make a cat.
 var cat = new Animal(false, 'meow');
 ```
 
-### Everyone do
+### 8. Everyone do
 
 "Don't shout out the answer. Think in your head -  how do I make a dog?"
 
@@ -127,7 +135,7 @@ var dog = new Animal(false, 'woof');
 var giraffe = new Animal(false, 'dude');
 
 
-### Instructor do
+### 9. Instructor do
 
 "Now if you notice I have sleepy in the function arguments here. And sleepy twice below it."
 
@@ -161,11 +169,11 @@ function Animal(cashews, dude){
 }
 ```
 
-### Partners do 10 minutes
+### 10. Partners do 10 minutes
 
 "Everyone explain to your partners the above code. If someone around you doesn't understand the code on the screen. It's on you. 10 minutes go."
 
-### 4. Partners do 20 minutes
+### 11. Partners do 20 minutes
 
 For those who don't remember (or choose to forget), Tamagotchis were "digital pets" that you could carry around with you and feed them, clean up after them, pet them, and try to keep them happy.
 
@@ -190,66 +198,8 @@ Make a variable named cat that is set to a new Tamagotchi. Add the following met
 1. meow() - prints out "Meow!"
 2. scratchThatChair() - "Stop scratching that chair!!!"
 
-* solution
-
-```
-var Tamagotchi = function() {
-  this.hungry = false;
-  this.sick = false;
-  this.age = 0;
-
-  this.feed = function() {
-    if(this.hungry === true) {
-      console.log("That was yummy!");
-      this.hungry = false;
-    }
-    else {
-      console.log("No thanks, I'm full.");
-      this.hungry = true;
-    }
-  };
-
-  this.sleep = function() {
-    console.log("zzzzzzzzzzzz");
-  };
-
-  this.medicate = function() {
-    if(this.sick === true) {
-      console.log("I feel much better");
-      this.sick = false;
-    }
-    else {
-      console.log("No thanks, I feel fine.");
-      this.sick = true;
-    }
-  };
-
-  this.increaseAge = function() {
-    this.age ++;
-    console.log("Happy Birthday to me! I am " + this.age +
-    " years old!");
-  };
-};
-
-var dog = new Tamagotchi();
-dog.bark = function() {
-  console.log("ruff ruff!");
-}
-
-dog.goOutside = function() {
-  console.log("I own that tree now!");
-}
-
-var cat = new Tamagotchi();
-cat.meow = function() {
-  console.log("Meow!");
-}
-cat.scratchThatChair = function() {
-  console.log("Stop scratching that chair!!!");
-}
-```
 	
-### Partners do (20 minutes)
+### 12. Partners do (20 minutes)
 
 * Pair students strong to strong - weak to weak * 
 
@@ -262,7 +212,7 @@ cat.scratchThatChair = function() {
 5. Inside constructorFun.js, make a constructor function called Student that creates a student object with properties of name, gender, grade, GPA, detentions, sleepingInClass, catchPhrase, and a function called canStudentHaveFun that checks if they have less than 10 detentions and above a 2 GPA. If they do then console.log out to the terminal that the student can have fun.
 6. Prompt the user for a student's information, make a new Student Object with it, then invoke the canStudentHaveFun function.
 
-### everyone does
+### 13. everyone does
 
 * Go over the previous code *
 

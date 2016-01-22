@@ -1,3 +1,9 @@
+# Pavan to do
+
+add in timing
+
+add in master objectives
+
 # Have you read the Instructor Guide?
 
 You should before you teach anyone anything.
@@ -7,38 +13,24 @@ Have a question? It's probably in the Instructor Guide.
 look at this file at the root of the repository: 
 [Instructor Guide](https://github.com/RutgersCodingBootcamp/All-Lesson-Plans/blob/master/instructor_guide.md)
 
-#Object CONSTRUCTOR
-
-Let's make two minions
-What sucks about this?
-How can we DRY up this code?
-Minion!
-
-#I DO 
-
-Show them how to make the minion.
-
-```
-var Minion = function(name, color, eyes){
-	this.name = name;
-	this.color = color;
-	this.eyes = eyes;
-	this.mutate = function(){
-		this.color = "purple"
-		return this.name + " is now " + this.color;
-  }
-  this.revert = function(){
-  	this.color = "yellow"
-  	return this.name + " is now " + this.color;
-  }
-}
-
-```
-
-Now have them make a few new minions. Show them how to do so first. Have them add a function called changeName.
+# Objectives
 
 
-#WE DO 
+### Partners do 45 minutes
+
+"Everyone open up sublime text and code."
+
+"If you don't have sublime text open, then you're not doing your job."
+
+* Walk around make sure people have sublime text open and are all coding * 
+
+Make a student constructor function.
+
+
+Make a bus constructor function.
+
+
+### Everyone do
 
 Together lets make a Car constructor. So we are going to make a Car constructor. This car constructor should have a make, model, year, hp. It should be able to return its full name, ex: "1967 Ford Mustang". Its should be able to be supercharged, which will ramp up the hp by 150hp. 
 
