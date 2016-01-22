@@ -24,28 +24,52 @@ Connecting Constructor Functions Together
 
 ### Instructor do (15 minutes)
 
-- write code in first_instructor_demonstration.1.js
+- write code from 11.2-in-class-exercises/first_instructor_demonstration/1.js DO NOT EXECUTE IT
 
-- do not execute it.
-
-### Everyone do (5 minutes)
+### Partners do (5 minutes)
 
 "When I run this node file, will it fail?"
 
-"I'll be calling on groups, so get ready - talk - learn! I could call on any one of you."
+"I'll be calling on groups, so get ready - talk - learn - discuss! I could call on any one of you. You are responsible for the people around you."
 
 
 ### Everyone do (10 minutes)
 
-""
-
-- get students to explain every line before it executes
-
-ask students a better way
-
-show students the way - prompt in function that recursively calls itself
+* call on weaker students until you get the complete right answer out of them
 
 ### Instructor do (15 minutes)
+
+- write code from 11.2-in-class-exercises/first_instructor_demonstration/2.js DO NOT EXECUTE IT
+
+### Partners do (5 minutes)
+
+"When I run this node file, why will it fail?"
+
+"I'll be calling on groups, so get ready - talk - learn - discuss! I could call on any one of you. You are responsible for the people around you."
+
+### Everyone do (15 minutes)
+
+* call on two average students then two strong students until you get the complete right answer out of them
+
+* execute it + explain
+
+### Instructor do (15 minutes)
+
+* change up code to match 11.2-in-class-exercises/first_instructor_demonstration/3.js and execute it.
+
+* explain it to the class.
+
+### Everyone do (10 minutes)
+
+- explain every line to your partner. You're responsible for your partners understanding of this. I'll be calling on two people to present
+
+### Students Present (10 minutes)
+
+two students present to the class and go over line by line what each does
+
+### Instructor do (15 minutes)
+
+* Note to Pavan: need to spell this out step by step
 
 * show students how to require a constructor function in Node.js *
 look at 11.2-in-class-exercises/party_time (don't do it verbatim. Do it slowly using the steps below. We need students to come to conclusions.)
@@ -59,12 +83,11 @@ var Dud = require('./dud.js');
 var PartyBus = require('./party_bus.js');
 ```
 
-
-
-
 * show students how you have to require a constructor function file inside of a constructor function file to get it to work
 
 ### Partners do 45 minutes
+
+* Pavan to do: finish this exercise * 
 
 "Everyone open up sublime text and code."
 
@@ -84,134 +107,10 @@ Make a student constructor function.
 
 Make a bus constructor function, that has the following functions:
 
+it basically stores students and it would have a function called busChatter that outputs the students' catch phrases one by one if they can have fun
 */
 
-### Everyone do 25 minutes
-
-Together lets make a Car constructor. So we are going to make a Car constructor. This car constructor should have a make, model, year, hp. It should be able to return its full name, ex: "1967 Ford Mustang". Its should be able to be supercharged, which will ramp up the hp by 150hp. 
-
-```
-var Car = function (make, model, year, hp) {
-	this.make = make;
-	this.model = model;
-	this.year = year;
-	this.hp = hp;
-	this.fullName = function(){
-		// this.year + " " + this.make + " " + this.model
-		return [this.year, this.make, this.model].join(" ")
-	};
-	this.supercharge = function(){
-		this.hp += 150
-		return this.
-	};
-}
-
-
-var Person = function(firstName, lastName, age) {
-	this.firstName = name;
-	this.LastName = lastName;
-	this.age = age;
-	this.fullName = function(){
-		return [this.firstName, this.lastName].join(" ")
-	};
-}
-
-```
-
-# You do
-
-Lets tie these two things together!!! Lets make a Garage constructor. People are building car collections like hot cakes. The Garage constructor should have the following attributes: owner - which will be a Person object, cars - which will start as an empty array, it will hold Car objects. addCar - which will be a behavior that adds a new Car to the cars array. changeOwner - which will transfer ownership to a new Person. 
-
-
-```
-
-var Garage = function(owner) {
-	this.owner = owner;
-	this.cars = [];
-	this.addCar = function(car){
-		this.cars.push(car)
-	};
-	this.changeOwner = function(newOwner){
-		this.owner = newOwner
-	};
-}
-```
-
-Review!
-
-
-### Partners do (30 minutes)
-
-# Create an Account
-
-An account should have the following attributes:
-
-- a balance (starts at 0) -> `balance`
-
-An account should be able to:
-
-- deposit money -> `deposit`
-	- should deposit money into the current account
-- withdraw money -> `withdraw`
-	- should withdraw money from the current account but only if enough is available
-
-# Create a Bank
-
-A Bank should have the following attributes:
-
-- `name` -> a name
-- `address` -> an address
-- `accounts` -> accounts
-	+ - you decide how this should be represented (array vs object)
-	+ - a bank starts with a checking AND savings account
-- `information` -> display its information 
-	- should return the banks name and address
-- `makeTransaction` -> make a transaction
-	+ - should accept three arguments -> a transaction type, an account type, and an amount
-	+ - should use the appropriate account functions to perform a transaction (deposit or withdrawal)
-	+ - should render the new balances
-- `render` -> display the account balances
-	+ - should take the current balances of the savings and checking accounts, then update the DOM display of the bank account balances
-
-
-```
-var Account = function() {
-	this.balance = 0;
-}
-
-Account.prototype.deposit = function(amount) {
-	if (amount > 0) {
-		this.balance += amount;
-	}
-};
-
-Account.prototype.withdraw = function(amount) {
-	if (amount <= this.balance) {
-		this.balance -= amount;
-	}
-};
-
-var Bank = function(name, address) {
-	this.name = name;
-	this.address = address;
-	this.accounts = {
-		checking: new Account(),
-		savings: new Account()
-	};
-};
-
-Bank.prototype.information = function() {
-	return this.name + '\n' + this.address;
-};
-
-Bank.prototype.makeTransaction = function(transaction, account, amount) {
-	var currentAccount = this.accounts[account];
-	currentAccount[transaction](parseInt(amount));
-	this.render();
-};
-
-```
-
+### More exercises
 
 # Copyright
 Rutgers Coding Boot Camp (C) 2015. All Rights Reserved.
