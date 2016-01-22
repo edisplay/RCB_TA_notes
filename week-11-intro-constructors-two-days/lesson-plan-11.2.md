@@ -13,6 +13,27 @@ Have a question? It's probably in the Instructor Guide.
 look at this file at the root of the repository: 
 [Instructor Guide](https://github.com/RutgersCodingBootcamp/All-Lesson-Plans/blob/master/instructor_guide.md)
 
+# Master Objectives (Internal Use - do not share with students - because it's a waste of time)
+
+	* Develop your vision for a website -- and then build it!
+	* Expertly navigate the file system and terminal basics
+	* Work independently or in a group on complex projects throughout the entire development lifecycle
+	* Understand the basics of troubleshooting and enhancing legacy code
+	* Communicate the basics of serving a webpage and how the browser renders code
+	* Build a frontend website either from scratch or utilizing a frontend framework (such as Bootstrap)
+	* Deploy static websites to a cloud provider
+	* Create and deploy dynamic websites to a cloud provider utilizing a backend framework
+	* Implement complex logical conditions to meet an objective.
+	* Write SQL commands to perform Create, Read, Update and Delete commands
+	* Utilize an ORM to manage a database schema and connection from a server
+	* Create a full-stack Single Page Application with AJAX communication
+	* Create and consume RESTful API’s utilizing JSON as a data format
+	* Create session based applications utilizing user authentication schemes that are well-known and widely used
+	* Understand and implement the mechanics of Git flow (including branching, merging, pull requests)
+	* Apply ‘social coding’ accepted and best practices (including source control, issue tracking, functional feedback, etc)
+	* Write clean code with proper variable names, indentation according to industry best practices
+
+
 # Theme
 
 Connecting Constructor Functions Together
