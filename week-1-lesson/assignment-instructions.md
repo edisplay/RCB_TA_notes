@@ -28,7 +28,7 @@
   + The content for the `index.html` should be unique to YOU. Write a paragraph or two about yourself. Make it fun, show your personality!
   + The main logo where it says "Your Name" should say your name. This may make the logo section smaller or wider depending on how long your name is, that is fine and expected.
   + Make Git commits often and especially for each page you complete.
-6. After all your html is written you can begin styling your pages using the `style.css` file you created.
+6. After all your html is written (Pro-tip: Be sure to [validate your html](https://validator.w3.org/#validate_by_input) you can begin styling your pages using the `style.css` file you created.
 7. Push your changes to Github.
 8. Deploy your code to Heroku.
 
