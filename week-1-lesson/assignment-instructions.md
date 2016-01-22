@@ -20,8 +20,10 @@
       + Inside the images folder you can save the images you plan on using (e.g. your profile image, the placeholder images for the portfolio, and the social icon images).
 3. Push up the above changes to Github (Make sure to `git add .` and `git commit -m "initial site files" then type `git push origin master` to push your changes to your Github repo.
 4. Reference the screenshots for the site located here:
-  [link to screenshots](http://idk.com)
-  + What you code must exactly match this layout (excluding minor changes like replacing "your name" with your actual name and writing your own unique bio, etc). The design itself must match the screenshots. The specs are located below.
+  +[about.html screenshot](assets/screenshot-index.jpg)
+  +[contact.html screenshot](assets/screenshot-contact.jpg)
+  +[portfolio.html screenshot](assets/screenshot-portfolio.jpg)
+    + What you code must exactly match this layout (excluding minor changes like replacing "your name" with your actual name and writing your own unique bio, etc). The design itself must match the screenshots. The specs are located below.
 5. Begin coding the site one page at a time by writing the html code semantically (meaning if something is a heading, you use a heading tag. If something is a list, you use an unordered or ordered list tag etc.). DO NOT start the CSS styling. CSS comes after your html code is finished. 
   + The content for the index.html should be unique to YOU. Write a paragraph or two about yourself. Make it fun, show your personality!
   + The main logo where it says "Your Name" should say your name. This may make the logo section smaller or wider depending on how long your name is, that is fine and expected.
