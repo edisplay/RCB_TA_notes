@@ -10,9 +10,9 @@
     + You use `980px` because you never want any of the content to be cut off. Since the desktop layout is about 960px wide, you want the media queries to kick in before it cuts off the content.
     `768px` is about the width of a tablet and `640px` is about the width of a phone in landscape
 2. Make the layout match the following screenshots:
-  + `index.html` - [980px](assets/980-index.jpg), [768px](assets/768-index.jpg), [640px](assets/640-index.jpg)
-  + `portfolio.html` - [980px](assets/980-portfolio.jpg), [768px](assets/768-portfolio.jpg), [640px](assets/640-portfolio.jpg)
-  + `contact.html` - [980px](assets/980-contact.jpg), [768px](assets/768-contact.jpg), [640px](assets/640-contact.jpg)
+  + `index.html` - [980px](homework_assets/980-index.jpg), [768px](homework_assets/768-index.jpg), [640px](homework_assets/640-index.jpg)
+  + `portfolio.html` - [980px](homework_assets/980-portfolio.jpg), [768px](homework_assets/768-portfolio.jpg), [640px](homework_assets/640-portfolio.jpg)
+  + `contact.html` - [980px](homework_assets/980-contact.jpg), [768px](homework_assets/768-contact.jpg), [640px](homework_assets/640-contact.jpg)
 3. Make the position of the header `static` (the default positioning) when the screen is `640px` wide. You want to do this because the header design takes up a lot of room which is undesirable on small screens.
 4. Be sure to include the `viewport` tag in all your html files.
 5. *Pro-tip: Use the Chrome extensions [Window Resizer](https://chrome.google.com/webstore/detail/window-resizer/kkelicaakdanhinjdeammmilcgefonfh) and [Browser Width](https://chrome.google.com/webstore/detail/browser-width/mlnegepkjlccabakompdmbcmdieaideh) to see the browser dimensions in Chrome.*
