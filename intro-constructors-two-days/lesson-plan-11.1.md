@@ -1,15 +1,18 @@
 # Objectives
 
-* Students will run their first node app in the terminal
+* students will use constructor functions to structure objects and solve problems in a DRY way
 
 # Lesson Plan + In Class Exercises
 
-### 1. Student do (20 minutes)
+### 1. Partners do (20 minutes)
 
-Everyone open up sublime text and code.
+"Everyone open up sublime text and code."
 
-If you don't have sublime text open, then you're not doing your job.
+"If you don't have sublime text open, then you're not doing your job."
 
+* Walk around make sure people have sublime text open and are all coding * 
+
+```
 Part one:
 ---------
 Make a dog object with two keys.
@@ -18,7 +21,7 @@ One key called sleepy = false;
 
 Second key called noise = 'woof';
 
-Third key called makeNoise which alerts the noise to the screen if the dog is not sleepy. 
+Third key called makeNoise which console.logs the noise to the screen if the dog is not sleepy. 
 
 Part two:
 ---------
@@ -28,7 +31,7 @@ One key called sleepy = true;
 
 Second key called noise = 'meow';
 
-Third key called makeNoise which alerts the noise to the screen if the cat is not sleepy. 
+Third key called makeNoise which console.logs the noise to the screen if the cat is not sleepy. 
 
 Part Three:
 -----------
@@ -39,17 +42,123 @@ make the cat meow
 Part Four:
 -----------
 Why are parts one and two redundant? What are ways we can write dry code?
+```
+
+### 2. Everyone do (15 minutes)
+
+We go over together previous exercise together as a class
+
+### 3. Partners do (15 minutes)
+
+"Spend the next 5 minutes talking about the code above"
+"You are responsible for the people around you understanding the previous code completely."
+
+* call on a weak student to go over part 1 + 2. If he/she screws up call out the students near him/her *
+
+* call on another weak student to go over part 3 + 4. If he/she screws up call out the students near him/her *
+
+Make it known that people are responsible for the people around them. This will force stronger students to explain to the people around them what's going on.
+
+### 3. Instructor do
+
+* show how to reduce redundancies with constructor functions *
+
+"construction functions are used to reduce redundancy of object creation"
+
+"Notice the capital A at the beginning of the function"
+"This tells developers that this is a Constructor Function and shouldn't be directly invoked"
+"It doesn't prevent you from invoking the function, it's a convention that tells developers, hey this is a constructor function and will be used to create objects." 
+
+```
+function Animal(sleepy, noise){
+  this.sleepy = sleepy;
+  this.noise = noise;
+  this.makeNoise = function(){
+    if (this.sleepy === false){
+      console.log(this.noise);  
+    }
+  }
+}
+```
+
+### 4. Partners do (10 minutes)
+
+"You should never outright invoke a constructor funtion.
+
+Ever...
+
+So, first thing i'm going to do now, is invoke a constructor function.
+
+* don't execute this *
+
+Animal();
+
+"What's going to happen? Talk about this with your partners. Figure out what's going to happen. Figure out why it's bad."
+
+### 5. Everyone do (10 minutes)
+
+call on people and try to get this full story:
+
+"When you invoke the Animal() constructor function, it creates global variables, sleepy, noise and makeNoise. This is bad, because if you had variables named sleepy, noise or makeNoise, you'll end up over riding those variables. And that's bad."
+
+### Instructor do
+
+Now i'm going to use the constructor function to make a cat.
+
+```
+var cat = new Animal(false, 'meow');
+```
+
+### Everyone do
+
+"Don't shout out the answer. Think in your head -  how do I make a dog?"
+
+var dog = new Animal(false, 'woof');
+
+"Now what about a giraffe?"
+
+var giraffe = new Animal(false, 'dude');
 
 
-### 2. Everyone do (10 minutes)
+### Instructor do
 
-We go over together previous exercise.
+"Now if you notice I have sleepy in the function arguments here. And sleepy twice below it."
 
-### 3. I do
+"Everyone think in your head. Don't shout it out. Does the argument sleepy HAVE TO BE written as sleepy?"
 
-show how to reduce redundancies with constructor functions
+"No. It doesn't. I could name sleepy cashews and it would work still"
 
-### 4. they do 20 minutes
+original:
+```
+function Animal(sleepy, noise){
+  this.sleepy = sleepy;
+  this.noise = noise;
+  this.makeNoise = function(){
+    if (this.sleepy === false){
+      console.log(this.noise);  
+    }
+  }
+}
+```
+
+changed:
+```
+function Animal(cashews, dude){
+  this.sleepy = cashews;
+  this.noise = dude;
+  this.makeNoise = function(){
+    if (this.sleepy === false){
+      console.log(this.noise);  
+    }
+  }
+}
+```
+
+### Partners do 10 minutes
+
+"Everyone explain to your partners the above code. If someone around you doesn't understand the code on the screen. It's on you. 10 minutes go."
+
+### 4. Partners do 20 minutes
 
 For those who don't remember (or choose to forget), Tamagotchis were "digital pets" that you could carry around with you and feed them, clean up after them, pet them, and try to keep them happy.
 
@@ -132,13 +241,12 @@ cat.scratchThatChair = function() {
   console.log("Stop scratching that chair!!!");
 }
 ```
-
 	
 ### Partners do (20 minutes)
 
-strong to strong - weak to weak
+* Pair students strong to strong - weak to weak * 
 
-both of you code
+* Everyone codes. Everyone has Sublime Text open.*
 
 1. In a new folder
 2. make a new node file called constructorFun.js
@@ -149,7 +257,12 @@ both of you code
 
 ### everyone does
 
+* Go over the previous code *
 
+```
+
+
+```
 
 # Copyright
 Rutgers Coding Boot Camp (C) 2015. All Rights Reserved.

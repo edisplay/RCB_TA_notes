@@ -1,6 +1,5 @@
 var prompt = require('prompt');
 var Word = require('./word.js');
-//var game = require('./game.js');
 
 prompt.start();
 
