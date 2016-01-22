@@ -4,6 +4,15 @@ last one needs solution
 
 package.json lesson needs multiple packages to show use case
 
+# Have you read the Instructor Guide?
+
+You should before you teach anyone anything.
+
+Have a question? It's probably in the Instructor Guide.
+
+look at this file at the root of the repository: 
+[Instructor Guide](https://github.com/RutgersCodingBootcamp/All-Lesson-Plans/blob/master/instructor_guide.md)
+
 # Master Objectives (Internal Use - do not share with students - because it's a waste of time)
 
 * Yes

@@ -1,3 +1,12 @@
+# Have you read the Instructor Guide?
+
+You should before you teach anyone anything.
+
+Have a question? It's probably in the Instructor Guide.
+
+look at this file at the root of the repository: 
+[Instructor Guide](https://github.com/RutgersCodingBootcamp/All-Lesson-Plans/blob/master/instructor_guide.md)
+
 # For lesson plan:
 
 ### HTML
@@ -95,3 +104,6 @@
 * [Window Resizer](https://chrome.google.com/webstore/detail/window-resizer/kkelicaakdanhinjdeammmilcgefonfh)
 * [Browser Width](https://chrome.google.com/webstore/detail/browser-width/mlnegepkjlccabakompdmbcmdieaideh)
 * [Page Ruler](https://chrome.google.com/webstore/detail/page-ruler/jlpkojjdgbllmedoapgfodplfhcbnbpn/related?hl=en)
+
+# Copyright
+Rutgers Coding Boot Camp (C) 2015. All Rights Reserved.
