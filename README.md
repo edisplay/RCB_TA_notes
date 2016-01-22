@@ -1,5 +1,9 @@
 # All-Lesson-Plans
-* text Pavan Katepalli - 732-236-8447 if you have any problems with anything! Texting me is the fastest way to get to me since my email gets flooded. I do however priortize emails from instructors, TAs and lesson planners above everyone else. Your voice is the most important part of the Company.
+
+### Problem? Idea? Suggestion?
+* text Pavan Katepalli - 732-236-8447 about anything! 
+  + * Texting me is the fastest way to get to me since my email gets flooded. 
+    + I do however priortize emails from instructors, TAs and lesson planners above everyone else. Your voice is the most important part of the Company.
 
 ### Want to contribute?
 
