@@ -1,5 +1,7 @@
 # All-Lesson-Plans
 
+#### Please don't push to master without making a branch and making a pull request to pavankat!!!!
+
 ### Problem? Idea? Suggestion?
 * text Pavan Katepalli - 732-236-8447 about anything! 
   + Texting me is the fastest way to get to me since my email gets flooded. 
@@ -12,4 +14,3 @@
 * Then make a pull request and assign it to pavankat
 * Then slack me about it to remind me
 
-#### Please don't push to master without asking Pavan Katepalli!!!!
