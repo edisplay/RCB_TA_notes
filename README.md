@@ -4,7 +4,7 @@
 ### Want to contribute?
 
 * Make a branch with your ```<github name>-<lesson you are editing>-<full date>```
-+ * So pavankat-lesson-one-2-13-22 would be good if it was year 2022 ;)
+  + So pavankat-lesson-one-2-13-22 would be good if it was year 2022 ;)
 * Then make a pull request and assign it to pavankat
 * Then slack me about it to remind me
 
