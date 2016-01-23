@@ -112,7 +112,7 @@ Go around the room until you get the answer you want
 
 It won't look different.
 
-Open the html file in the browser.
+* Open the html file in the browser by right clicking on the file in SublimeText and going to "Open in Browser" * 
 
 ### 6. Instructor Do (20 minutes)
 
