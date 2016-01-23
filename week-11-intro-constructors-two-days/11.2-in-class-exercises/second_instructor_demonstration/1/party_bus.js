@@ -1,10 +1,7 @@
-var PartyBus = function(driverName, startLocation, destination){
+var PartyBus = function(){
 	this.duds = [];
-	this.driverName = driverName;
-	this.startLocation = startLocation;
-	this.destination = destination;
-	this.addDud = function(g, n, r){
-		this.duds.push(new Dud(g, n, r));
+	this.addDud = function(g){
+		this.duds.push(new Dud(g));
 	}
 }
 

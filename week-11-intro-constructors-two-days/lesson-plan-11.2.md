@@ -77,12 +77,23 @@ two students present to the class and go over line by line what each does
 
 ### Everyone do (15 minutes)
 
-* Note to Pavan: need to spell this out step by step
-
 * show students how to require a constructor function in Node.js *
 look at 11.2-in-class-exercises/second_instructor_demonstration/1
 
-Before executing, ask the students why it'll fail.
+* Note to instructor: 
+
+	+ the first time you do this it will pass because you didn't use the Dud constructor function yet.
+
+	+ ```console.log('dudes?', zbtPartyBus.duds);```
+
+	+ the second time you do it, it will fail because the PartyBus constructor function was looking for the Dud constructor function and couldn't find it.
+
+* Before executing the code, ask the students why it'll fail. * 
+	+ You execute the code by running
+
+```
+node main.js
+```
 
 ### Instructor do (15 minutes)
 
