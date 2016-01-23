@@ -199,7 +199,8 @@ In a new HTML file, create the basic structure of an HTML document and include t
     * Make the second link bold.
     * Stub the third link so it goes nowhere.
 
-### BONUS
+Bonus:
+
 * Create an ordered list.
 * Create an unordered list.
 * Create a table to organize information.
