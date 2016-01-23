@@ -108,13 +108,13 @@ zoo = {
 	visit : function() {
 	    console.log("How would you like to see the animals today?");
 		console.log("--------------------------------------------------");
-		console.log("Enter (O): ------>", "Count every animal in zoo with the same type!");
-		console.log("");
 		console.log("Enter (I): ------>", "You know the animal by it's Id visit only it!");
 		console.log("");
 		console.log("Enter (N): ------>", "You know the animal by name visit only it!");
 		console.log("");
 		console.log("Enter (C): ------>", "You know the careTaker's ID and visit all animal under that person!");
+		console.log("");
+		console.log("Enter (O): ------>", "Count every animal in zoo with the same type!");
 		console.log("");
 		console.log("Enter (Q): ------>", "Quit to main menu!");
 		console.log("--------------------------------------------------");
@@ -128,29 +128,63 @@ zoo = {
 				currentScope.menu();
 				currentScope.promptUser();
 			}else if (result.visit == "O") {
-				connection.query('SELECT COUNT(*) FROM animal WHERE type = ?',['snake'], function(err, res) {
-				  if (err) throw err;
-				    console.log(res);
-				});
-				currentScope.visit();
-				currentScope.view(currentScope);
+				currentScope.type(input_scope);
 			}else if (result.visit == "I") {
-				connection.query('SELECT * FROM animal WHERE animal_id = ?',[1], function(err, res) {
-				  if (err) throw err;
-				    console.log(res);
-				});
-				currentScope.visit();
-				currentScope.view(currentScope);
+				currentScope.animId(input_scope);
 			}else if (result.visit == "N") {
-				console.log(result.visit);
+				// console.log(result.visit);
 			}else if (result.visit == "C") {
-				console.log(result.visit);
+				currentScope.care(input_scope);
 			}else{
 				console.log("Sorry didn't get that, come again?");
 				console.log("--------------------------------------------------");
 				currentScope.visit();
 				currentScope.view(currentScope);
 			}
+		});
+	},
+	type : function(input_scope) {
+		var currentScope = input_scope;
+		console.log("Enter animal type to check out many those we got.");
+		console.log("--------------------------------------------------");
+		prompt.get(['--->','animal_type'], function(err, result) {
+			connection.query('SELECT COUNT(*) FROM animal WHERE type = ?',[result.animal_type], function(err, res) {
+			  if (err) throw err;
+			  	var t = res[0];
+			    console.log("Okay we got ", t, result.animal_type);
+			    console.log("--------------------------------------------------");
+				currentScope.visit();
+				currentScope.view(currentScope);
+			});
+		});
+	},
+	care : function(input_scope) {
+		var currentScope = input_scope;
+		console.log("Enter careTaker's ID.");
+		console.log("--------------------------------------------------");
+		prompt.get(['--->','care_id'], function(err, result) {
+			connection.query('SELECT COUNT(*) FROM animal LEFT JOIN careTaker ON careTaker.careTaker_id = animal.careTaker_id',[result.animal_type], function(err, res) {
+			  if (err) throw err;
+			  	var t = res[0];
+			    console.log("Okay we got ", t, result.animal_type);
+			    console.log("--------------------------------------------------");
+				currentScope.visit();
+				currentScope.view(currentScope);
+			});
+		});
+	},
+	animId : function(input_scope) {
+		var currentScope = input_scope;
+		console.log("Enter ID of the animal you want.");
+		console.log("--------------------------------------------------");
+		prompt.get(['--->','anim_id'], function(err, result) {
+			connection.query('SELECT * FROM animal WHERE animal_id = ?',[result.anim_id], function(err, res) {
+			  if (err) throw err;
+			    console.log(res);
+			    console.log("--------------------------------------------------");
+				currentScope.visit();
+				currentScope.view(currentScope);
+			});
 		});
 	},
 	update : function(input_scope) {

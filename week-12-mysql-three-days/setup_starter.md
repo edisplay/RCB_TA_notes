@@ -52,6 +52,10 @@ SELECT COUNT(*) FROM animal WHERE type = 'snake';
 DROP DATABASE myTestDB;
 
 
+<!-- SELECT COUNT(*) name
+FROM animal
+LEFT JOIN careTaker
+ON animal.careTaker_id = careTaker.careTaker_id; -->
 
 C:/xampp/mysql/bin/mysqldump -u root -p myTestDB > C:/zhenDB.sql
 
