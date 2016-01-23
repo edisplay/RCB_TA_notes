@@ -19,18 +19,20 @@ Look at this file at the root of the repository:
 Zen of Coding
 
 # INSTRUCTOR MUST COVER!!!
-or they won't be able to do the homework.
+
+```
+ALL or they won't be able to do the homework.
+```
 
 # Objectives (Slack out to students, have unique students read each one and Instructor makes a comment after each one being read)
 
 * Students will be able to get to know their classmates, Instructor, TA's, and Support Team.
 * Students will resolve any issues regarding pre-work / setting up the students' computers.
 * Students will understand the course structure.
-* Students will learn common Terminal (Mac) / Console (Windows) commands to set up your folder/file structure to create your first HTML page.
-* Students will be able to use common Terminal (Mac) / Console (Windows) commands for web development.
-* Students will learn how to set up a basic HTML document.
+* Students will learn common Terminal (Mac) / Git Bash (Windows) commands to set up your folder/file structure to create your first HTML page.
+* Students will be able to use common Terminal (Mac) / Git Bash (Windows) commands for web development.
 * Students will be able to set up a basic HTML document.
-* Students will get familiar with Chrome DevTools.
+* Students will be able to open up Chrome DevTools and use Inspector.
 
 ----
 
@@ -38,60 +40,74 @@ or they won't be able to do the homework.
 * Welcome all the students to the class.
 * Introduce yourself, the TA's, and Support Team (Dan S, Student Success, Career Coach)
 * Have all the students give a quick intro consisting of:
-   What their career background is.
-   What they want to accomplish in this course.
-   Where are they coming from geographically.
+  + What their career background is.
+  + What they want to accomplish in this course.
+  + Where are they coming from geographically.
 * If there is time remaining, play some games to fill up the time so the students become better friends/colleagues:
-  * Have the students get into groups of 4 or 5 and have each group assign one person as the leader to write down or type 1 interest and 1 bad movie they last watched from each member of the group.
-  * Have the group leaders read out the names of each member, their interest and last bad movie they watched.
+  + Have the students get into groups of 4 or 5 and have each group assign one person as the leader to write down or type 1 interest and 1 bad movie they last watched from each member of the group.
+  + Have the group leaders read out the names of each member, their interest and last bad movie they watched.
 
 ----
 
 ### 2. Instructor Do (20 minutes)
 * Engage the students to see who has any pre-work issues.
-* TA's will assist those students who need help (WiFi connection, Sublime Text, etc.).
+* TA's and Instructors will assist those students who need help (WiFi connection, Sublime Text, etc.).
 
 ----
 
 ### 3. Instructor Do (10 minutes)
-* Discuss the modules that will be covered throughout the course and gauge the students to see who's familiar with what.
-  * The Browser
-    * HTML
-    * CSS
-    * Javascript
-    * jQuery
-  * API Interaction
-    * API's (Consuming)
-    * JSON
-    * Ajax
-    * Cloud Databases via Parse
-    * Javascript Objects
-  * Full Stack Development
-    * Node.js
-    * Constructor Functions
-    * MySQL
-    * Express
-    * API's (Creating) & Model-View-Controller (MVC)
-    * User Authentication & Object Relational Mapping (ORM)
-  * MEAN Stack Development
-    * Angular
-    * MongoDB
-  * Cutting Edge
-    * Meteor
+* Discuss the technologies that will be covered throughout the course and gauge the students to see who is familiar with what.
+  + The Browser
+    + HTML
+    + CSS
+    + Javascript
+    + jQuery
+    + Bootstrap
+    + SEO
+  + Tools
+    + Grunt
+    + Heroku
+    + Git
+    + Github
+  + API Interaction
+    + API's (Consuming)
+    + JSON
+    + AJAX
+    + Cloud Databases via Parse
+    + Javascript Objects
+  + Full Stack Development
+    + Constructor Functions
+    + Templating Engines (Handlebars, Blaze)
+    + Cookies, Sessions
+    + TDD
+    + Node.js
+    + MySQL
+    + Express.js
+    + API's (Creating) & Model-View-Controller (MVC)
+    + User Authentication & Object Relational Mapping (ORM)
+  + MEAN Stack Development
+    + Angular
+    + MongoDB
+  + Cutting Edge Development
+    + Meteor
+  + Computer Science Fundamentals Applied to JavaScript
+    + Data Structures
+    + Sorting Algorithms
+    + Design Patterns
 
 ----
 
 ### 4. Instructor do (10 minutes)
 * Discuss what the daily class structure will consist of:
-  * Brief Introduction/Background to Objectives for the day
-  * Quick Watch Me / Demonstration
-  * Students Discuss Code
-  * In-class Exercises
-   * independent
-   * with partners
-  * Project work
-   * independent 
-   * with partners
+  + Brief Introduction/Background to Objectives for the day
+  + Quick Watch Me / Demonstration
+  + Students Discuss Code
+  + In-class Exercises
+    + independent
+    + with partners
+  + Project work
+    + independent 
+    + with partners
 
 ----
 Break (15 minutes)
@@ -107,34 +123,44 @@ Break (15 minutes)
   * `mkdir folder_name`
 * Ask the class how to create a new html file.
   * `touch my-first-example-page.html`
-* Ask the class how to open the current working directory from the Terminal/Console with the Sublime command.
-  * `subl .`
-* Slack out Class Exercise to students.
+
+* Ask the class how to 
 
 ----
 
 ### 6. Student do (10 minutes)
-* SLACK THE FOLLOWING: From the Terminal/Console and using only the command line, create the following:
+* SLACK THE FOLLOWING: 
+
+```
+From the Terminal/Console and using only the command line, create the following:
   * A new folder
   * A new HTML file
   * Open the current folder containing the new HTML file.
 
-### BONUS
+BONUS:
 * Create multiple directories/folders in one command.
 * Create multiple files in one command in the current directory.
-
+```
 ----
 
 ### 7. Student do (5 minutes)
-* Tell the students to discuss with the person next to them what they just did.
+* Tell the students to discuss with the person next to them what they just did. 
+
+"You are responsible for the people around you - understanding what just happened."
+
+"Everyone you should be talking now."
 
 ----
 
 ### 8. Instructor Do (15 minutes)
 
 * Ask the class how they should start setting up their HTML document.
-  * In your newly created folder and HTML file, set up the HTML file with the proper structure.  An example solution could look like:
-   ###### HTML
+  * In your newly created folder and HTML file, set up the HTML file with the proper structure.
+
+  * And code this out.
+
+  * After done. Commit, Push up to your in class code github repo, link students to it. Explain briefly what you done did (southern accent) through the process. *
+
   ```html
   <!DOCTYPE html>
   <html>
@@ -158,12 +184,15 @@ Break (15 minutes)
       </body>
   </html>
   ```
-* Slack out Class Exercise to students.
 
 ----
 
 ### 9. Students Do (20 minutes)
-* SLACK THE FOLLOWING: In your new HTML file, create the basic structure of an HTML document and include the following in it:
+
+* always slack out student exercises and display them on the screen + have students read out the exercise to the class + google timer and set the timer appropriately and put the sound on your computer up. Make them feel the pressure. * 
+
+```
+In a new HTML file, create the basic structure of an HTML document and include the following in it:
   * DOCTYPE declaration
   * Head tag with a title tag
   * H1 tag with a title of your choice
@@ -173,26 +202,42 @@ Break (15 minutes)
     * Make the second link bold.
     * Stub the third link so it goes nowhere.
 
-### BONUS
+Bonus:
+
 * Create an ordered list.
 * Create an unordered list.
 * Create a table to organize information.
 * Use an alternate way of separating links without the line breaks.
 * Embed a Youtube video.
+```
 
 ----
 
-### 10. Instructor Do (15 minutes)
+### 10. Instructor Do (10 minutes)
+
 * Inspect your newly created HTML files with Chrome DevTools.
-* Right-click on any element inside the HTML page and select the `Inspect` option.
+
+* Right-click on any element inside the HTML page and select 
+the `Inspect` option.
+
 * Navigate to the `Elements` tab and focus specifically on the HTML markup inside.
+
 * Hover over the HTML markup and observe the page as it highlights the corresponding rendered parts.
+
+----
+
+### 11. Everyone Do (10 minutes)
+
 * Direct students to look at the `Elements` tab specifically and hover over the various HTML elements and have them watch it highlight to it's corresponding rendered part in the page.
+
 * Discuss with students as actions are being performed.
 
 ----
 
-### 11. Students Do (10 minutes)
+### 12. Students Do (10 minutes)
+
 * Right-click on any element in their newly created HTML file and click on the `Inspect` option.
+
 * Navigate to the `Elements` tab and focus specifically on the HTML markup inside.
+
 * Hover over the HTML markup and observe the page as it highlights the corresponding rendered parts.
