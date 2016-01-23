@@ -1,7 +1,6 @@
 var Dud = require('./dud.js');
 var PartyBus = require('./party_bus.js');
 
-//fun fact: Beersville is a real city in PA!!!
 var zbtPartyBus = new PartyBus();
 
 //none
