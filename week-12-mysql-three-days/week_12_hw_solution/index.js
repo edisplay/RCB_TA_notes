@@ -6,15 +6,6 @@ var connection = mysql.createConnection({
     password: '',
     database: 'myTestDB'
 });
-
-//setup npm
-var prompt = require('prompt');
-var animals = require('animals');
-var generateName = require('sillyname');
-var random = require('random-name')
-//console.log(random.first())
-
-//connect to mySQL 
 connection.connect(function(err) {
     if (err) {
         console.error('error connecting: ' + err.stack);
@@ -22,9 +13,18 @@ connection.connect(function(err) {
     };
     //console.log('connected as id ' + connection.threadId);
 });
-
+var prompt = require('prompt');
 prompt.start();
 prompt.message = '';
+
+/*
+//setup npm
+var animals = require('animals');
+var generateName = require('sillyname');
+var random = require('random-name')
+//console.log(random.first())
+*/
+//connect to mySQL 
 
 /*
 var sillyName = generateName() + "mon";

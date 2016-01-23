@@ -53,7 +53,9 @@ You should get back 99 rows in set.
 
 With the database imported, you are ready to create the node app.
 
-## Part 1: Making zoo object
+## Part 1: Creating the Node.js connection to mySQL
+
+
 
 
 
