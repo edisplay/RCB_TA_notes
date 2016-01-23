@@ -2,8 +2,6 @@
 
 add in timing
 
-add in master objectives
-
 # Have you read the Instructor Guide?
 
 You should before you teach anyone anything.
@@ -15,22 +13,11 @@ look at this file at the root of the repository:
 
 # Master Objectives (Internal Use - do not share with students - because it's a waste of time)
 
-	* Develop your vision for a website -- and then build it!
+* Yes
 	* Expertly navigate the file system and terminal basics
 	* Work independently or in a group on complex projects throughout the entire development lifecycle
 	* Understand the basics of troubleshooting and enhancing legacy code
-	* Communicate the basics of serving a webpage and how the browser renders code
-	* Build a frontend website either from scratch or utilizing a frontend framework (such as Bootstrap)
-	* Deploy static websites to a cloud provider
-	* Create and deploy dynamic websites to a cloud provider utilizing a backend framework
 	* Implement complex logical conditions to meet an objective.
-	* Write SQL commands to perform Create, Read, Update and Delete commands
-	* Utilize an ORM to manage a database schema and connection from a server
-	* Create a full-stack Single Page Application with AJAX communication
-	* Create and consume RESTful API’s utilizing JSON as a data format
-	* Create session based applications utilizing user authentication schemes that are well-known and widely used
-	* Understand and implement the mechanics of Git flow (including branching, merging, pull requests)
-	* Apply ‘social coding’ accepted and best practices (including source control, issue tracking, functional feedback, etc)
 	* Write clean code with proper variable names, indentation according to industry best practices
 
 
@@ -88,27 +75,51 @@ Connecting Constructor Functions Together
 
 two students present to the class and go over line by line what each does
 
-### Instructor do (15 minutes)
-
-* Note to Pavan: need to spell this out step by step
+### Everyone do (15 minutes)
 
 * show students how to require a constructor function in Node.js *
-look at 11.2-in-class-exercises/party_time (don't do it verbatim. Do it slowly using the steps below. We need students to come to conclusions.)
+look at 11.2-in-class-exercises/second_instructor_demonstration/1
 
-* make party_bus.js, dud.js
- 
-* make main.js like this.
+* Note to instructor: 
+
+	+ the first time you do this it will pass because you didn't use the Dud constructor function yet.
+
+	+ ```console.log('dudes?', zbtPartyBus.duds);```
+
+	+ the second time you do it, it will fail because the PartyBus constructor function was looking for the Dud constructor function and couldn't find it.
+
+* Before executing the code, ask the students why it'll fail. * 
+	+ You execute the code by running
 
 ```
-var Dud = require('./dud.js');
-var PartyBus = require('./party_bus.js');
+node main.js
 ```
+
+### Instructor do (15 minutes)
 
 * show students how you have to require a constructor function file inside of a constructor function file to get it to work
 
-### Partners do 45 minutes
+* code is here:
+11.2-in-class-exercises/second_instructor_demonstration/2
 
-* Pavan to do: finish this exercise * 
+### Everyone do (15 minutes)
+
+* Bring up all three files on the screen (you can drag sublime text windows out and line them up next to each other) *
+
+"Why did it work? Explain every single line to your partners."
+
+
+### Everyone do (5 minutes)
+
+* Go over it with the class - call on random people * 
+
+### Instructor do (20 minutes)
+
+* code out the full solution. It's here * 
+11.2-in-class-exercises/second_instructor_demonstration/2
+
+
+### Partners do 45 minutes
 
 "Everyone open up sublime text and code."
 
@@ -116,22 +127,25 @@ var PartyBus = require('./party_bus.js');
 
 * Walk around make sure people have sublime text open and are all coding * 
 
+```
 /*
 Make a student constructor function.
 
 1. In a new folder
-2. make a new node file called constructorFun.js
-3. auto create a package.json file with npm init
-4. install the prompt package so that it's 
-5. Inside constructorFun.js, make a constructor function called Student that creates a student object with properties of name, gender, grade, GPA, detentions, sleepingInClass, catchPhrase, and a function called canStudentHaveFun that checks if they have less than 10 detentions and above a 2 GPA. If they do then console.log out to the terminal that the student can have fun.
+2. auto create a package.json file with ```npm init```
+3. use ```npm install prompt --save``` to install prompt
+2. make a new node file called main.js
+3. require prompt in it
+2. make a new node file called student.js
+4. install the prompt package so that it's required at the top
+5. Inside student.js, make a constructor function called Student that creates a student object with properties of name, gender, grade, GPA, detentions, sleepingInClass, catchPhrase, and a function called canStudentHaveFun that checks if they have less than 10 detentions and above a 2 GPA. If they do then console.log out to the terminal that the student can have fun.
 6. Prompt the user for a student's information, make a new Student Object with it, then invoke the canStudentHaveFun function.
 
 Make a bus constructor function, that has the following functions:
 
 it basically stores students and it would have a function called busChatter that outputs the students' catch phrases one by one if they can have fun
 */
-
-### More exercises
+```
 
 # Copyright
 Rutgers Coding Boot Camp (C) 2015. All Rights Reserved.
