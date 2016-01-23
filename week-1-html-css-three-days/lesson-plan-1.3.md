@@ -59,7 +59,7 @@ ALL or they won't be able to do the homework.
 
 Practice floats and box model margins / padding
 
-* Inside the repo make a new file called `floats.html` using terminal
+* Inside your `floats.html` using terminal
 * Make another file called `floats.css`, reference this file in your `floats.html1 file
 * git push to github
 * Style the image on the projector
