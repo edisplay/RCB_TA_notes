@@ -19,18 +19,20 @@ Look at this file at the root of the repository:
 Zen of Coding
 
 # INSTRUCTOR MUST COVER!!!
-or they won't be able to do the homework.
+
+```
+ALL or they won't be able to do the homework.
+```
 
 # Objectives (Slack out to students, have unique students read each one and Instructor makes a comment after each one being read)
 
 * Students will be able to get to know their classmates, Instructor, TA's, and Support Team.
 * Students will resolve any issues regarding pre-work / setting up the students' computers.
 * Students will understand the course structure.
-* Students will learn common Terminal (Mac) / Console (Windows) commands to set up your folder/file structure to create your first HTML page.
-* Students will be able to use common Terminal (Mac) / Console (Windows) commands for web development.
-* Students will learn how to set up a basic HTML document.
+* Students will learn common Terminal (Mac) / Git Bash (Windows) commands to set up your folder/file structure to create your first HTML page.
+* Students will be able to use common Terminal (Mac) / Git Bash (Windows) commands for web development.
 * Students will be able to set up a basic HTML document.
-* Students will get familiar with Chrome DevTools.
+* Students will be able to open up Chrome DevTools and use Inspector.
 
 ----
 
@@ -38,60 +40,74 @@ or they won't be able to do the homework.
 * Welcome all the students to the class.
 * Introduce yourself, the TA's, and Support Team (Dan S, Student Success, Career Coach)
 * Have all the students give a quick intro consisting of:
-   What their career background is.
-   What they want to accomplish in this course.
-   Where are they coming from geographically.
+  + What their career background is.
+  + What they want to accomplish in this course.
+  + Where are they coming from geographically.
 * If there is time remaining, play some games to fill up the time so the students become better friends/colleagues:
-  * Have the students get into groups of 4 or 5 and have each group assign one person as the leader to write down or type 1 interest and 1 bad movie they last watched from each member of the group.
-  * Have the group leaders read out the names of each member, their interest and last bad movie they watched.
+  + Have the students get into groups of 4 or 5 and have each group assign one person as the leader to write down or type 1 interest and 1 bad movie they last watched from each member of the group.
+  + Have the group leaders read out the names of each member, their interest and last bad movie they watched.
 
 ----
 
 ### 2. Instructor Do (20 minutes)
 * Engage the students to see who has any pre-work issues.
-* TA's will assist those students who need help (WiFi connection, Sublime Text, etc.).
+* TA's and Instructors will assist those students who need help (WiFi connection, Sublime Text, etc.).
 
 ----
 
 ### 3. Instructor Do (10 minutes)
-* Discuss the modules that will be covered throughout the course and gauge the students to see who's familiar with what.
-  * The Browser
-    * HTML
-    * CSS
-    * Javascript
-    * jQuery
-  * API Interaction
-    * API's (Consuming)
-    * JSON
-    * Ajax
-    * Cloud Databases via Parse
-    * Javascript Objects
-  * Full Stack Development
-    * Node.js
-    * Constructor Functions
-    * MySQL
-    * Express
-    * API's (Creating) & Model-View-Controller (MVC)
-    * User Authentication & Object Relational Mapping (ORM)
-  * MEAN Stack Development
-    * Angular
-    * MongoDB
-  * Cutting Edge
-    * Meteor
+* Discuss the technologies that will be covered throughout the course and gauge the students to see who is familiar with what.
+  + The Browser
+    + HTML
+    + CSS
+    + Javascript
+    + jQuery
+    + Bootstrap
+    + SEO
+  + Tools
+    + Grunt
+    + Heroku
+    + Git
+    + Github
+  + API Interaction
+    + API's (Consuming)
+    + JSON
+    + AJAX
+    + Cloud Databases via Parse
+    + Javascript Objects
+  + Full Stack Development
+    + Constructor Functions
+    + Templating Engines (Handlebars, Blaze)
+    + Cookies, Sessions
+    + TDD
+    + Node.js
+    + MySQL
+    + Express.js
+    + API's (Creating) & Model-View-Controller (MVC)
+    + User Authentication & Object Relational Mapping (ORM)
+  + MEAN Stack Development
+    + Angular
+    + MongoDB
+  + Cutting Edge Development
+    + Meteor
+  + Computer Science Fundamentals Applied to JavaScript
+    + Data Structures
+    + Sorting Algorithms
+    + Design Patterns
 
 ----
 
 ### 4. Instructor do (10 minutes)
 * Discuss what the daily class structure will consist of:
-  * Brief Introduction/Background to Objectives for the day
-  * Quick Watch Me / Demonstration
-  * Students Discuss Code
-  * In-class Exercises
-   * independent
-   * with partners
-  * Project work
-   * independent 
-   * with partners
+  + Brief Introduction/Background to Objectives for the day
+  + Quick Watch Me / Demonstration
+  + Students Discuss Code
+  + In-class Exercises
+    + independent
+    + with partners
+  + Project work
+    + independent 
+    + with partners
 
 ----
 Break (15 minutes)
