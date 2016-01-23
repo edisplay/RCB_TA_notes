@@ -129,15 +129,18 @@ Break (15 minutes)
 ----
 
 ### 6. Student do (10 minutes)
-* SLACK THE FOLLOWING: From the Terminal/Console and using only the command line, create the following:
+* SLACK THE FOLLOWING: 
+
+```
+From the Terminal/Console and using only the command line, create the following:
   * A new folder
   * A new HTML file
   * Open the current folder containing the new HTML file.
 
-### BONUS
+BONUS:
 * Create multiple directories/folders in one command.
 * Create multiple files in one command in the current directory.
-
+```
 ----
 
 ### 7. Student do (5 minutes)
