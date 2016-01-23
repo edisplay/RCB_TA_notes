@@ -12,7 +12,6 @@ var prompt = require('prompt');
 var animals = require('animals');
 var generateName = require('sillyname');
 var random = require('random-name')
-
 //console.log(random.first())
 
 //connect to mySQL 
@@ -180,7 +179,7 @@ zoo = {
 		prompt.get(['--->','anim_id'], function(err, result) {
 			connection.query('SELECT * FROM animal WHERE animal_id = ?',[result.anim_id], function(err, res) {
 			  if (err) throw err;
-			    console.log(res);
+			    console.log("Here is the animal", res);
 			    console.log("--------------------------------------------------");
 				currentScope.visit();
 				currentScope.view(currentScope);

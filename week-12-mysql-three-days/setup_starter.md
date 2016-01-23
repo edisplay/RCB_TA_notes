@@ -52,10 +52,12 @@ SELECT COUNT(*) FROM animal WHERE type = 'snake';
 DROP DATABASE myTestDB;
 
 
-<!-- SELECT COUNT(*) name
+SELECT COUNT(*) name
 FROM animal
-LEFT JOIN careTaker
-ON animal.careTaker_id = careTaker.careTaker_id; -->
+RIGHT JOIN careTaker
+ON animal.careTaker_id = careTaker.careTaker_id
+WHERE careTaker.city = SF;
+
 
 C:/xampp/mysql/bin/mysqldump -u root -p myTestDB > C:/zhenDB.sql
 
@@ -63,6 +65,7 @@ open zhenDB.sql file in text editor save as UTF-8 file
 C:/xampp/mysql/bin/mysql –u root -p myTestDB < C:/zhenDB.sql
 
 zooDB
+
 <!-- 
 CREATE TABLE Tasks
 (
