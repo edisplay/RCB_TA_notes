@@ -123,9 +123,8 @@ Break (15 minutes)
   * `mkdir folder_name`
 * Ask the class how to create a new html file.
   * `touch my-first-example-page.html`
-* Ask the class how to open the current working directory from the Terminal/Console with the Sublime command.
-  * `subl .`
-* Slack out Class Exercise to students.
+
+* Ask the class how to 
 
 ----
 
