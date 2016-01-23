@@ -142,15 +142,23 @@ Break (15 minutes)
 ----
 
 ### 7. Student do (5 minutes)
-* Tell the students to discuss with the person next to them what they just did.
+* Tell the students to discuss with the person next to them what they just did. 
+
+"You are responsible for the people around you - understanding what just happened."
+
+"Everyone you should be talking now."
 
 ----
 
 ### 8. Instructor Do (15 minutes)
 
 * Ask the class how they should start setting up their HTML document.
-  * In your newly created folder and HTML file, set up the HTML file with the proper structure.  An example solution could look like:
-   ###### HTML
+  * In your newly created folder and HTML file, set up the HTML file with the proper structure.
+
+  * And code this out.
+
+  * After done. Commit, Push up to your in class code github repo, link students to it. Explain briefly what you done did (southern accent) through the process. *
+
   ```html
   <!DOCTYPE html>
   <html>
@@ -174,12 +182,15 @@ Break (15 minutes)
       </body>
   </html>
   ```
-* Slack out Class Exercise to students.
 
 ----
 
 ### 9. Students Do (20 minutes)
-* SLACK THE FOLLOWING: In your new HTML file, create the basic structure of an HTML document and include the following in it:
+
+* always slack out student exercises and display them on the screen + have students read out the exercise to the class + google timer and set the timer appropriately and put the sound on your computer up. Make them feel the pressure. * 
+
+```
+In a new HTML file, create the basic structure of an HTML document and include the following in it:
   * DOCTYPE declaration
   * Head tag with a title tag
   * H1 tag with a title of your choice
@@ -195,20 +206,35 @@ Break (15 minutes)
 * Create a table to organize information.
 * Use an alternate way of separating links without the line breaks.
 * Embed a Youtube video.
+```
 
 ----
 
-### 10. Instructor Do (15 minutes)
+### 10. Instructor Do (10 minutes)
+
 * Inspect your newly created HTML files with Chrome DevTools.
-* Right-click on any element inside the HTML page and select the `Inspect` option.
+
+* Right-click on any element inside the HTML page and select 
+the `Inspect` option.
+
 * Navigate to the `Elements` tab and focus specifically on the HTML markup inside.
+
 * Hover over the HTML markup and observe the page as it highlights the corresponding rendered parts.
+
+----
+
+### 11. Everyone Do (10 minutes)
+
 * Direct students to look at the `Elements` tab specifically and hover over the various HTML elements and have them watch it highlight to it's corresponding rendered part in the page.
+
 * Discuss with students as actions are being performed.
 
 ----
 
-### 11. Students Do (10 minutes)
+### 12. Students Do (10 minutes)
+
 * Right-click on any element in their newly created HTML file and click on the `Inspect` option.
+
 * Navigate to the `Elements` tab and focus specifically on the HTML markup inside.
+
 * Hover over the HTML markup and observe the page as it highlights the corresponding rendered parts.
