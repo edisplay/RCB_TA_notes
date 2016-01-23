@@ -11,6 +11,9 @@ var connection = mysql.createConnection({
 var prompt = require('prompt');
 var animals = require('animals');
 var generateName = require('sillyname');
+var random = require('random-name')
+
+//console.log(random.first())
 
 //connect to mySQL 
 connection.connect(function(err) {
@@ -24,25 +27,41 @@ connection.connect(function(err) {
 prompt.start();
 prompt.message = '';
 
-"use strict";
-
 /*
 var sillyName = generateName() + "mon";
 var randomAnimal = animals();
 console.log(sillyName, randomAnimal);
 */
-
 // connection.query('SELECT * FROM careTaker;', function(err, res) {
 //   if (err) throw err;
 //     console.log('Here is the keeper: ', res);
 // });
-// connection.query('SELECT * FROM animal;', function(err, res) {
-//   if (err) throw err;
-//     console.log('Here is the animal: ', res);
-// });
 
 //prompt is weird, wtf do not use nodemon to test~!!!
 //node index.js
+
+/*
+var pop = function(input) {
+	var taker = input;
+	for (var i=0; i < 100000; i++) {
+		var n = generateName() + "mon";
+		var a = animals();
+		var g = taker;
+		connection.query('INSERT INTO animal (careTaker_id,name,type,age) VALUES (?,?,?,?)', [taker,n,a,g], function(err, result) {	
+		if (err) throw err;
+			connection.commit(function(err) {
+		        if (err) { 
+		          connection.rollback(function() {
+		            throw err;
+		          });
+		        }
+		    });
+		});	
+	};
+}
+//pop(1);
+console.log("done insert");
+*/
 
 zoo = {
 	welcome: function() {
@@ -60,7 +79,7 @@ zoo = {
 		console.log("");
 		console.log("Enter (U): ------>", "Update info on an animal in the Zoo!");
 		console.log("");
-		console.log("Enter (V): ------>", "Visit different animals in the Zoo!");
+		console.log("Enter (V): ------>", "Visit the animals in the Zoo!");
 		console.log("");
 		console.log("Enter (D): ------>", "Adopt an animal from the Zoo!");
 		console.log("");
@@ -86,14 +105,53 @@ zoo = {
 			currentScope.promptUser();
 		});
 	},
-	visit: function() {
+	visit : function() {
 	    console.log("How would you like to see the animals today?");
 		console.log("--------------------------------------------------");
-		console.log("Enter (E): ------>", "View every animal in the zoo!");
+		console.log("Enter (O): ------>", "Count every animal in zoo with the same type!");
+		console.log("");
 		console.log("Enter (I): ------>", "You know the animal by it's Id visit only it!");
+		console.log("");
 		console.log("Enter (N): ------>", "You know the animal by name visit only it!");
-		console.log("Enter (C): ------>", "You know the careTaker visit all animal under that person!");
+		console.log("");
+		console.log("Enter (C): ------>", "You know the careTaker's ID and visit all animal under that person!");
+		console.log("");
+		console.log("Enter (Q): ------>", "Quit to main menu!");
 		console.log("--------------------------------------------------");
+	},
+	view : function(input_scope) {
+		var currentScope = input_scope;
+		console.log("Please choice what you like to visit!");
+		console.log("--------------------------------------------------");
+		prompt.get(['--->','visit'], function(err, result) {
+			if (result.visit == "Q") {
+				currentScope.menu();
+				currentScope.promptUser();
+			}else if (result.visit == "O") {
+				connection.query('SELECT COUNT(*) FROM animal WHERE type = ?',['snake'], function(err, res) {
+				  if (err) throw err;
+				    console.log(res);
+				});
+				currentScope.visit();
+				currentScope.view(currentScope);
+			}else if (result.visit == "I") {
+				connection.query('SELECT * FROM animal WHERE animal_id = ?',[1], function(err, res) {
+				  if (err) throw err;
+				    console.log(res);
+				});
+				currentScope.visit();
+				currentScope.view(currentScope);
+			}else if (result.visit == "N") {
+				console.log(result.visit);
+			}else if (result.visit == "C") {
+				console.log(result.visit);
+			}else{
+				console.log("Sorry didn't get that, come again?");
+				console.log("--------------------------------------------------");
+				currentScope.visit();
+				currentScope.view(currentScope);
+			}
+		});
 	},
 	update : function(input_scope) {
 		var currentScope = input_scope;
@@ -137,36 +195,28 @@ zoo = {
 		console.log("Thank you for visiting us, good bye~!");
 		process.exit();
 	},
-	populate : function() {
-		//"use strict";
-		for (var i=0 ; i < 100000 ; i++ ) {
-			var n = generateName() + "mon";
-			var a = animals();
-			var g = 1;
-			connection.query('INSERT INTO animal (careTaker_id,name,type,age) VALUES (?,?,?,?)', [1, n,a,g], function(err, result) {
-			if (err) throw err;
-			});			
-		}
-	},
 	promptUser : function() {
+		//pass this in as self into funcs
 		var self = this;
-		//pass this in the form of self into other function
+		//user choices
 		prompt.get('input', function(err, result) {
 			//data creation
-			if (result.input == 'P') {
+			if (result.input == 'C') {
 				//self.populate();
 				connection.query('SELECT COUNT(*) FROM animal', function(err, result) {
-					console.log(result);
+				console.log(result);
 				if (err) throw err;
+				self.promptUser();
 				});			
-			};
-			//user choices
-			if (result.input == 'Q') {
+			}else if (result.input == 'Q') {
 				self.exit();
 			}else if (result.input == 'A') { 
 				self.add(self);
 			}else if (result.input == 'U') {
 				self.update(self);
+			}else if (result.input == 'V') { 
+				self.visit();
+				self.view(self);
 			}else if (result.input == 'D') {
 				self.adopt(self);
 			}else{
