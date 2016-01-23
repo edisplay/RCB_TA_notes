@@ -15,6 +15,8 @@ launch: MySQL 5.7 Command Line Client
 enter password
 
 CREATE DATABASE myTestDB;
+CREATE DATABASE myTestDB CHARACTER SET utf8 COLLATE utf8_general_ci;
+
 USE myTestDB;
 
 CREATE TABLE careTaker (
@@ -44,9 +46,23 @@ SELECT * FROM careTaker;
 SELECT * FROM animal;
 
 SELECT name FROM animal WHERE type = "Bear";
+SELECT COUNT(*) FROM animal;
+SELECT COUNT(*) FROM animal WHERE type = 'snake';
 
 DROP DATABASE myTestDB;
 
+
+<!-- SELECT COUNT(*) name
+FROM animal
+LEFT JOIN careTaker
+ON animal.careTaker_id = careTaker.careTaker_id; -->
+
+C:/xampp/mysql/bin/mysqldump -u root -p myTestDB > C:/zhenDB.sql
+
+open zhenDB.sql file in text editor save as UTF-8 file
+C:/xampp/mysql/bin/mysql –u root -p myTestDB < C:/zhenDB.sql
+
+zooDB
 <!-- 
 CREATE TABLE Tasks
 (
@@ -81,3 +97,5 @@ FOREIGN KEY(stud_id) REFERENCES student(stud_id)
 
 -->
 
+<!-- 
+ -->
