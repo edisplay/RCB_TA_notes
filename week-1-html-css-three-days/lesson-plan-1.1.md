@@ -34,7 +34,7 @@ or they won't be able to do the homework.
 
 ----
 
-### 1. Instructor Do (45 minutes)
+### 1. Instructor Do (35 minutes)
 * Welcome all the students to the class.
 * Introduce yourself, the TA's, and Support Team (Dan S, Student Success, Career Coach)
 * Have all the students give a quick intro consisting of:
@@ -47,13 +47,13 @@ or they won't be able to do the homework.
 
 ----
 
-### 2. Instructor Do (10 minutes)
+### 2. Instructor Do (20 minutes)
 * Engage the students to see who has any pre-work issues.
 * TA's will assist those students who need help (WiFi connection, Sublime Text, etc.).
 
 ----
 
-### 3. Instructor Do (15 minutes)
+### 3. Instructor Do (10 minutes)
 * Discuss the modules that will be covered throughout the course and gauge the students to see who's familiar with what.
   * The Browser
     * HTML
@@ -81,11 +81,17 @@ or they won't be able to do the homework.
 
 ----
 
-### 4. Instructor do (5 minutes)
+### 4. Instructor do (10 minutes)
 * Discuss what the daily class structure will consist of:
   * Brief Introduction/Background to Objectives for the day
   * Quick Watch Me / Demonstration
+  * Students Discuss Code
   * In-class Exercises
+   * independent
+   * with partners
+  * Project work
+   * independent 
+   * with partners
 
 ----
 Break (15 minutes)
