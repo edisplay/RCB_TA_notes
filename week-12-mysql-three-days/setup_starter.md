@@ -6,6 +6,7 @@ App setup:
 4.mysql config
 5.npm install prompt --save
 5.create index.js
+
 6.npm install --save animals
 7.npm install sillyname --save
 
@@ -51,19 +52,17 @@ SELECT COUNT(*) FROM animal WHERE type = 'snake';
 
 DROP DATABASE myTestDB;
 
-
 SELECT COUNT(*) name
 FROM animal
 RIGHT JOIN careTaker
 ON animal.careTaker_id = careTaker.careTaker_id
-WHERE careTaker.city = SF;
+WHERE careTaker.city = 'SF';
 
 
 C:/xampp/mysql/bin/mysqldump -u root -p myTestDB > C:/zhenDB.sql
 
 open zhenDB.sql file in text editor save as UTF-8 file
 C:/xampp/mysql/bin/mysql –u root -p myTestDB < C:/zhenDB.sql
-
 zooDB
 
 <!-- 
@@ -99,6 +98,3 @@ FOREIGN KEY(stud_id) REFERENCES student(stud_id)
 ); 
 
 -->
-
-<!-- 
- -->
