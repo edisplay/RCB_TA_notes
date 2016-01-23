@@ -7,7 +7,7 @@ Have a question? It's probably in the Instructor Guide.
 look at this file at the root of the repository: 
 [Instructor Guide](https://github.com/RutgersCodingBootcamp/All-Lesson-Plans/blob/master/instructor_guide.md)
 
-# For lesson plan:
+# Resources For Week:
 
 ### HTML
 
