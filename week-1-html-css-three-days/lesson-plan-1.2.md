@@ -51,7 +51,7 @@ ALL or they won't be able to do the homework.
   + `git push`
   + `git pull`
 
-### 2. Student Do (30 minutes)
+### 2. Student Do (20 minutes)
 
 * If you haven't already, go to https://github.com/ and make an account
 
@@ -72,6 +72,7 @@ https://developer.mozilla.org/en-US/docs/Web/HTML/Element
 Bonus 2: 
 Find a tag that the instructors don't know about and try to stump them
 
+
 ### 3. Everyone Do (10 minutes)
 * Go over the previous exercise
 
@@ -83,6 +84,9 @@ Find a tag that the instructors don't know about and try to stump them
 
 ----
 Break (15 minutes)
+----
+----
+70 minutes so far
 ----
 
 ### 5. Everyone Do (5 minutes)
@@ -114,72 +118,123 @@ It won't look different.
 
 * Open the html file in the browser by right clicking on the file in SublimeText and going to "Open in Browser" * 
 
+
 ### 6. Instructor Do (20 minutes)
 
 * Discuss what a doctype is and why it is important
-* Emphasis the importance of semantic markup 
-  + w3validator.com
 * Explain indentation and syntax e.g. open and closing tags, self closing tags, double quotations (never single quotes)
+* Emphasis the importance of semantic markup 
+  + https://validator.w3.org/#validate_by_input
+  + Copy paste in this example to W3.org to show what happens if the markup is invalid
+  ```
+  <!doctype html>
+  <html>
+  <head>
+    <title>Broken HTML</title>
+  </head>
+  <body>
+
+    <div>
+      <h1>Heading 1</h1>
+
+      <p>
+        Test paragraph
+      </div>
+    </p>
+
+    <p>Another test paragraph</p>
+
+  </p>
+
+    <li>
+    <ul> List Item
+      </li>
+
+    <table>
+      <td>
+        <tr>
+          <td>Table Contents</td>
+        </tr>
+      </td>
+    </table>
+
+  </body>
+  </html>
+  ```
 * Go over how to write the following tags
-  + headings (h1, h2, h3 etc) and when to use them
-  + paragraphs
-  + anchors
-  + unordered/ordered lists
-  + divs
-  + img
-  + tables - thead, tbody, tr, td, th
-  + html5 tags - header, nag, footer, article, figure
-  + form
-  + label
-  + br
-  + input - types - email, text, phone etc
-  + textarea
-  + address attributes - alt for example, width
+  + Core tags
+    + doctype
+    + html
+    + head
+    + title
+    + body
+  + Other tags
+    + headings (h1, h2, h3 etc) and when to use them
+    + paragraphs
+    + anchors
+    + unordered/ordered lists
+    + divs
+    + img
+    + tables - thead, tbody, tr, td, th
+    + html5 tags - header, nag, footer, article, figure
+    + form
+    + label
+    + br
+    + input - types - email, text, phone etc
+    + textarea
+    + address attributes - alt for example, width
+
+* Show an image on the projector of what they need to code out in the student exercise
 
 ### 6. Student Do (15 minutes)
-* Make a new file called `html-tags.html` using terminal
+* Make a new file called `sample-page.html` using terminal
 * Commit the file and push to github
-* Inside your `html-tags.html` file code out the following (show an image on the project of what they need to code out)
-
-### 7. Partner Do (5 minutes)
-
-* Compare work and discuss with partner to see if the code is the same. If not work together to make it the same and discuss
-
-### 8. Student Do (5 minutes)
-
+* Inside your `sample-page.html` file code the example on the projector
+* If your forgot how to write the html tags, you can reference all html tags here https://developer.mozilla.org/en-US/docs/Web/HTML/Element
 * Commit code and push to github
 
+### 7. Partner Do (10 minutes)
+
+* Share your Github code with your partner
+* Take your partners code and validate it using https://validator.w3.org/#validate_by_input
+* Compare work and discuss with partner to see how similar your code is. If not the same, work together to make it the same and valid and discuss.
+
 --
-135 minutes so far
+130 minutes so far
 --
 
-### 9. Instructor Do (30 minutes)
+### 8. Instructor Do (20 minutes)
 
-* Discuss CSS
-  * What it is
-  * What is a style sheet
-    * inline vs internal vs external
-  * ID vs Class
-    * Where it goes in the html
-    * What happens in the CSS
-  * Show basic styling examples for   
-    * font-family
-    * font-weight
-    * text-align
-    * line-height
-    * color
-    * background-color
-    * border
++ Discuss CSS
+  + What is CSS
+  + What is a style sheet
+    + inline vs internal vs external
+  + ID vs Class
+    + Where id's and classes go in the html
+    + How id's and classes are is written in the css
+  + Show basic styling examples for   
+    + font-family
+    + font-weight
+    + text-align
+    + line-height
+    + color
+    + background-color
+    + border
 
-### 10. Student Do (30 minutes)
+* show an image on the projector of what they need to code out in the student exercise
 
-* Using terminal make a folder called `css` using terminal
+### 9. Student Do (20 minutes)
+
+* Make a folder called `css` using terminal
 * Inside the `css` folder make a file called `style.css` using terminal
 * Git commit and push this new file to Github
-* Reference the `style.css` in your `html-tags.html` file
+* Reference the `style.css` in your `sample-page.html` file
 * Style the example on the projector
+* If your forgot how to write the css properties, you can reference all css properties here https://developer.mozilla.org/en-US/docs/Web/CSS/Reference
 * Git commit and push this new file to Github
 
-### 11. Partner Do (10 minutes)
+### 10. Partner Do (10 minutes)
 
-* See if what you did matches what your partner did. Help each other out.
+* Share your Github code with your partner
+* Take your partners code and validate it using https://validator.w3.org/#validate_by_input
+* Compare work and discuss with partner to see how similar your code is. If not the same, work together to make it the same and valid and discuss.

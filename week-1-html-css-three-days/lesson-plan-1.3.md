@@ -36,59 +36,71 @@ ALL or they won't be able to do the homework.
 
 ----
 
-### 1. Instructor Do (40 minutes)
+### 1. Instructor Do (30 minutes)
 * Recap last class
 * Discuss CSS in more detail
-  + box model
-  + box-sizing
-  + positioning: absolute, relative, fixed, static
-  + float
-  + display: none vs visibility: hidden
-  + clear
-  + overflow
-  + z-index
-  + width
-  + margin
-  + padding
-  + line-height - ideal line height ratios (1.5 times the height) http://www.pearsonified.com/typography/
+  + Concepts
+    + box model
+    + box-sizing
+    + block vs inline elements
+  + Styling
+    + float
+    + display: none vs visibility: hidden
+    + clear
+    + overflow
+    + width
+    + margin
+    + padding
+
+* show an image on the projector of what they need to code out in the student exercise
 
 
 ### 2. Student Do (20 minutes)
 
-Practice floats and box model
+Practice floats and box model margins / padding
 
 * Inside the repo make a new file called `floats.html` using terminal
+* Make another file called `floats.css`, reference this file in your `floats.html1 file
 * git push to github
 * Style the image on the projector
 * git push to github
 
 ### 3. Partner Do (10 minutes)
 
-* See if you and your partner did the same thing. If not work together.
+* Share your Github code with your partner
+* Take your partners code and validate it using https://validator.w3.org/#validate_by_input AND http://www.css-validator.org/#validate_by_input
+* Compare work and discuss with partner to see how similar your code is. If not the same, work together to make it the same and valid and discuss.
 
-### 4. Instructor Do (10 minutes)
+### 4. Instructor Do (15 minutes)
 
-* confirm no one has questions
-* give another example on the projector for the kids to code
+* Discuss CSS positioning
+    + absolute, relative, fixed, static
+    + z-index
+
+* give another example on the projector for the students to code
+
 
 ### 5. Student Do (20 minutes)
 
 Practice positioning
 
 * Inside the repo make a new file called `positioning.html` using terminal
+* Make another file called `positioning.css`, reference this file in your `positioning.html1 file
 * git push to github
 * Style the image on the projector
 * git push to github
 
 ### 6. Partner Do (10 minutes)
 
-* See if you and your partner did the same thing. If not work together.
+* Share your Github code with your partner
+* Take your partners code and validate it using https://validator.w3.org/#validate_by_input AND http://www.css-validator.org/#validate_by_input
+* Compare work and discuss with partner to see how similar your code is. If not the same, work together to make it the same and valid and discuss.
 
 ----
 Break (15 minutes)
 ----
 
-125 minutes 
+130 minutes 
 
 ### 7. Instructor Do (20 minutes)
 
