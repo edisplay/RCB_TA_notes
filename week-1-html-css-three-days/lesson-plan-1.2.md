@@ -76,12 +76,6 @@ https://developer.mozilla.org/en-US/docs/Web/HTML/Element
 ### 4. Instructor Do (10 minutes)
 * Walk around room and make sure everyone is caught up
 
-----
-#### Break (15 minutes)
-
-----
-###### 65 minutes so far
-
 ### 5. Everyone Do (5 minutes)
 Let's go over html 
 
@@ -112,8 +106,12 @@ It won't look different.
 * Open the html file in the browser by right clicking on the file in SublimeText and going to "Open in Browser" * 
 
 ----
+#### Break (15 minutes)
 
-### 6. Instructor Do (30 minutes)
+----
+###### 75 minutes so far
+
+### 6. Instructor Do (25 minutes)
 
 * Discuss what a doctype is and why it is important
 * Explain indentation and syntax e.g. open and closing tags, self closing tags, double quotations (never single quotes)
