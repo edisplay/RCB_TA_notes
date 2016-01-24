@@ -133,7 +133,9 @@ zoo = {
 			}else if (result.visit == "I") {
 				currentScope.animId(input_scope);
 			}else if (result.visit == "N") {
-				// console.log(result.visit);
+				currentScope.name(input_scope);
+			}else if (result.visit == "A") {
+				currentScope.all(input_scope);
 			}else if (result.visit == "C") {
 				currentScope.care(input_scope);
 			}else{
@@ -176,7 +178,7 @@ zoo = {
 	},
 	animId : function(input_scope) {
 		var currentScope = input_scope;
-		console.log("Enter ID of the animal you want.");
+		console.log("Enter ID of the animal you want to visit.");
 		console.log("--------------------------------------------------");
 		prompt.get(['--->','anim_id'], function(err, result) {
 			connection.query('SELECT * FROM animal WHERE animal_id = ?',[result.anim_id], function(err, res) {
@@ -186,6 +188,31 @@ zoo = {
 				currentScope.visit();
 				currentScope.view(currentScope);
 			});
+		});
+	},
+	name : function(input_scope) {
+		var currentScope = input_scope;
+		console.log("Enter name of the animal you want to visit.");
+		console.log("--------------------------------------------------");
+		prompt.get(['--->','anim_name'], function(err, result) {
+			connection.query('SELECT * FROM animal WHERE name = ?',[result.anim_name], function(err, res) {
+			  if (err) throw err;
+			    console.log("Here is the animal", res);
+			    console.log("--------------------------------------------------");
+				currentScope.visit();
+				currentScope.view(currentScope);
+			});
+		});
+	},
+	all: function(input_scope) {
+		var currentScope = input_scope;
+		//SELECT COUNT(*) FROM animal;
+		connection.query('SELECT COUNT(*) FROM animal', function(err, res) {
+		  if (err) throw err;
+		    console.log("Here is the total animal count", res);
+		    console.log("--------------------------------------------------");
+			currentScope.visit();
+			currentScope.view(currentScope);
 		});
 	},
 	update : function(input_scope) {
@@ -220,16 +247,6 @@ zoo = {
 			currentScope.promptUser();
 		});
 	},
-	open : function () {
-		//welcome the user at start of the app
-		this.welcome();
-		this.menu();
-		this.promptUser();
-	}, 
-	exit : function() {
-		console.log("Thank you for visiting us, good bye~!");
-		process.exit();
-	},
 	promptUser : function() {
 		//pass this in as self into funcs
 		var self = this;
@@ -259,6 +276,16 @@ zoo = {
 				self.promptUser();
 			};
 		});
+	}, 
+	exit : function() {
+		console.log("Thank you for visiting us, good bye~!");
+		process.exit();
+	},
+	open : function () {
+		//welcome the user at start of the app
+		this.welcome();
+		this.menu();
+		this.promptUser();
 	}
 //zoo obj
 };
