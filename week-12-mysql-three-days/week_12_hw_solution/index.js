@@ -6,16 +6,6 @@ var connection = mysql.createConnection({
     password: '',
     database: 'myTestDB'
 });
-
-//setup npm
-var prompt = require('prompt');
-var animals = require('animals');
-var generateName = require('sillyname');
-var random = require('random-name')
-
-//console.log(random.first())
-
-//connect to mySQL 
 connection.connect(function(err) {
     if (err) {
         console.error('error connecting: ' + err.stack);
@@ -23,9 +13,18 @@ connection.connect(function(err) {
     };
     //console.log('connected as id ' + connection.threadId);
 });
-
+var prompt = require('prompt');
 prompt.start();
 prompt.message = '';
+
+/*
+//setup npm
+var animals = require('animals');
+var generateName = require('sillyname');
+var random = require('random-name')
+//console.log(random.first())
+*/
+//connect to mySQL 
 
 /*
 var sillyName = generateName() + "mon";
@@ -112,7 +111,9 @@ zoo = {
 		console.log("");
 		console.log("Enter (N): ------>", "You know the animal by name visit only it!");
 		console.log("");
-		console.log("Enter (C): ------>", "You know the careTaker's ID and visit all animal under that person!");
+		console.log("Enter (A): ------>", "Count all the animals in all the zoo locations!");
+		console.log("");
+		console.log("Enter (C): ------>", "Count number of animal in zoo based on city!");
 		console.log("");
 		console.log("Enter (O): ------>", "Count every animal in zoo with the same type!");
 		console.log("");
@@ -160,13 +161,13 @@ zoo = {
 	},
 	care : function(input_scope) {
 		var currentScope = input_scope;
-		console.log("Enter careTaker's ID.");
+		console.log("Enter city name NY/SF.");
 		console.log("--------------------------------------------------");
-		prompt.get(['--->','care_id'], function(err, result) {
-			connection.query('SELECT COUNT(*) FROM animal LEFT JOIN careTaker ON careTaker.careTaker_id = animal.careTaker_id',[result.animal_type], function(err, res) {
+		prompt.get(['--->','city_name'], function(err, result) {
+			// connection.query('SELECT parent_tagid AS owner_id FROM '+dbname+'.iag_key_tag_relationships WHERE TYPE =2 AND tagid =  '+ voucher.voucher_id,
+			connection.query('SELECT COUNT(*) name FROM animal RIGHT JOIN careTaker ON animal.careTaker_id = careTaker.careTaker_id WHERE careTaker.city = ?',[result.city_name], function(err, res) {
 			  if (err) throw err;
-			  	var t = res[0];
-			    console.log("Okay we got ", t, result.animal_type);
+			    console.log("Okay we got ", res);
 			    console.log("--------------------------------------------------");
 				currentScope.visit();
 				currentScope.view(currentScope);
@@ -180,7 +181,7 @@ zoo = {
 		prompt.get(['--->','anim_id'], function(err, result) {
 			connection.query('SELECT * FROM animal WHERE animal_id = ?',[result.anim_id], function(err, res) {
 			  if (err) throw err;
-			    console.log(res);
+			    console.log("Here is the animal", res);
 			    console.log("--------------------------------------------------");
 				currentScope.visit();
 				currentScope.view(currentScope);
@@ -191,9 +192,9 @@ zoo = {
 		var currentScope = input_scope;
 		console.log("To update an animal please enter the ID of the animal and it's changed information!");
 		console.log("--------------------------------------------------");
-		prompt.get(['--->','ID','new_name','new_age','new_careTaker_ID'], function(err, result) {
+		prompt.get(['--->','ID','new_name','new_age','new_type','new_careTaker_ID'], function(err, result) {
 			//console.log(result.new_name, result.new_age, result.new_careTaker_ID);
-			connection.query('UPDATE animal SET name=?,age=?,careTaker_id=? WHERE animal_id = ?', [result.new_name,result.new_age,result.new_careTaker_ID,result.ID], function(err, result) {
+			connection.query('UPDATE animal SET name=?,age=?,type=?,careTaker_id=? WHERE animal_id = ?', [result.new_name,result.new_age,result.new_type,result.new_careTaker_ID,result.ID], function(err, result) {
 			if (err) throw err;
 			});	
 			console.log("Thank you for updating this animal, would you like to do something else today?");
