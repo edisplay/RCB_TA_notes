@@ -219,6 +219,7 @@ It won't look different.
     + What is CSS
     + What is a style sheet
         + inline vs internal vs external
+        + explain the order of which the CSS is written is important. Whatever CSS property is closest to the element is the most powerful (e.g. inline is more powerful than internal, internal is more powerful than external, etc.)
   + ID vs Class
     + Where id's and classes go in the html
     + How id's and classes are written in the css
