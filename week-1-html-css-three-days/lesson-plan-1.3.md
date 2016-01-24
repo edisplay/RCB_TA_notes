@@ -9,17 +9,16 @@ Look at this file at the root of the repository:
 
 # Master Objectives (Internal Use - do not share with students - because it's a waste of time)
 
-* Yes
-  * Develop your vision for a website -- and then build it!
-  * Expertly navigate the file system and terminal basics
-  * Work independently or in a group on complex projects throughout the entire development lifecycle
-  * Communicate the basics of serving a webpage and how the browser renders code
-  * Understand and implement the mechanics of Git flow (including branching, merging, pull requests)
-  * Deploy static websites to a cloud provider
+* Develop your vision for a website -- and then build it!
+* Expertly navigate the file system and terminal basics
+* Work independently or in a group on complex projects throughout the entire development lifecycle
+* Communicate the basics of serving a webpage and how the browser renders code
+* Understand and implement the mechanics of Git flow (including branching, merging, pull requests)
+* Deploy static websites to a cloud provider
 
 
 # Theme
-Zen of Coding
+HTML / CSS
 
 # INSTRUCTOR MUST COVER!!!
 
@@ -32,43 +31,33 @@ ALL or they won't be able to do the homework.
 * Students will open up Chrome DevTools and use Inspector.
 * Students will learn more advanced CSS styling to make more beautiful web pages
 * Students will understand the html box-model and how it impacts CSS styling
-* Students will understand how to make multi-column websites
+* Students will be able to make multi-column websites
 * Students will learn how to use Heroku and deploy their code to it
 
 ----
 
-### 10. Instructor Do (10 minutes)
+### 1. Instructor Do (5 minutes)
 
-* Inspect the HTML file with with Chrome DevTools.
-
-* Right-click on any element inside the HTML page and select 
-the `Inspect` option.
-
-* Navigate to the `Elements` tab and focus specifically on the HTML markup inside.
-
-* Hover over the HTML markup and observe the page as it highlights the corresponding rendered parts.
-
-----
-
-### 11. Everyone Do (10 minutes)
-
-* Direct students to look at the `Elements` tab specifically and hover over the various HTML elements and have them watch it highlight to it's corresponding rendered part in the page.
-
-* Discuss with students as actions are being performed.
-
-----
-
-### 12. Students Do (10 minutes)
-
-* Right-click on any element in their newly created HTML file and click on the `Inspect` option.
-
-* Navigate to the `Elements` tab and focus specifically on the HTML markup inside.
-
-* Hover over the HTML markup and observe the page as it highlights the corresponding rendered parts.
-
-
-### 1. Instructor Do (30 minutes)
 * Recap last class
+  + Went over HTML and CSS.
+  + Students created a student-bio.html
+
+
+### 2. Everyone Do (10 minutes)
+
+* Open up last weeks `student-bio.html` file in Google Chrome
+* Right click anywhere on the page and select "Inspect". This is Chrome Developer Tools.
+* Look at the `Elements` tab specifically and hover over the various HTML elements and  watch it highlight to it's corresponding rendered part in the page.
+
+
+### 3. Instructor Do (20 minutes)
+
+Explain GIT
+
+----
+
+### 4. Instructor Do (30 minutes)
+
 * Discuss CSS in more detail
   + Concepts
     + box model

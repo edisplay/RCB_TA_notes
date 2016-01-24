@@ -261,6 +261,9 @@ ctrl+j
                 + `class="class-name"` - used to idenfity multiple elements
                 + `id="id-name"` - used to identify one element
                 + `for="form-elem-id"` - used to associate the label with the input or text area
++ HTML comments
+    + `<!-- comment -->` 
+            + In Sublime text you can type `command + /` on the line or a selected section to comment it out
 
 ### 6. Student Do (20 minutes)
 * *Show [this html file](in-class-exercises-1.2/1.2.6-in-class-exercise.html) on the projector. It is what the students must code out in this exercise.*
@@ -324,6 +327,9 @@ ctrl+j
     + width
     + height
     + floats (briefly discuss so they can use it in the exercise)
++ CSS comments
+    + `/* comment */`
+        + In Sublime text you can type `command + /` on the line or a selected section to comment it out
 
 * Show [this html file](in-class-exercises-1.2/1.2.9-in-class-exercise.html) on the projector. It is what the students must code out in the next exercise.
 
