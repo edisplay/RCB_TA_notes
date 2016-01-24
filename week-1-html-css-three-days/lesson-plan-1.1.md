@@ -26,13 +26,13 @@ ALL or they won't be able to do the homework.
 
 # Objectives (Slack out to students, have unique students read each one and Instructor makes a comment after each one being read)
 
-* Students will be able to get to know their classmates, Instructor, TA's, and Support Team.
-* Students will resolve any issues regarding pre-work / setting up the students' computers.
+* Students will get to know their classmates, Instructor, TA's, and Support Team.
+* Students and Instructors/TAs will resolve any issues regarding pre-work / setting up computers.
 * Students will understand the course structure.
-* Students will learn common Terminal (Mac) / Git Bash (Windows) commands to set up your folder/file structure to create your first HTML page.
-* Students will be able to use common Terminal (Mac) / Git Bash (Windows) commands for web development.
-* Students will be able to set up a basic HTML document.
-* Students will be able to open up Chrome DevTools and use Inspector.
+* Students will use common Terminal (Mac) / Git Bash (Windows) commands to set up their folder/file structure to create their first HTML page.
+* Students will use common Terminal (Mac) / Git Bash (Windows) commands for web development.
+* Students will set up a basic HTML document.
+* Students will open up Chrome DevTools and use Inspector.
 
 ----
 
