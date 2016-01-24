@@ -9,10 +9,9 @@ Look at this file at the root of the repository:
 
 # Master Objectives (Internal Use - do not share with students - because it's a waste of time)
 
-* Yes
-  * Expertly navigate the file system and terminal basics
-  * Work independently or in a group on complex projects throughout the entire development lifecycle
-  * Implement complex logical conditions to meet an objective.
+* Expertly navigate the file system and terminal basics
+* Work independently or in a group on complex projects throughout the entire development lifecycle
+* Implement complex logical conditions to meet an objective.
 
 
 # Theme
@@ -108,15 +107,15 @@ ALL or they won't be able to do the homework.
     + You'll be doing live timed coding tests during your interviews, and this will prepare you
     + You will constantly be put in an interview setting in every class with these timed exercises
      + exercises will be
-       + independent
-       + with partners
+        + independent
+        + with partners
   + Project work
     + independent 
-      + Browser based RPG Game
-      + Independent Free Form Final Project
+        + Browser based RPG Game
+        + Independent Free Form Final Project
     + with partners
-      + Front End Project (mashing up APIs)
-      + Full Stack Project (server + database + front end)
+        + Front End Project (mashing up APIs)
+        + Full Stack Project (server + database + front end)
 
 ----
 Break (15 minutes)
@@ -124,40 +123,60 @@ Break (15 minutes)
 
 ### 5. Instructor do (15 minutes)
 
-* Ask the class how to navigate to the home directory.
-  * `cd ~` or `cd ..`
-* Ask the class how to print the current working directory.
-  * `pwd`
-* Ask the class how to create a new folder.
-  * `mkdir folder_name`
-* Ask the class how to create a new html file.
-  * `touch my-first-example-page.html`
+* *When done going over these, slack out the below commands to the students* 
 
-* Ask the class how to 
+* Ask the class how to
+    * navigate to the home directory.
+        + `cd ~`
+    * go back a directory
+        + `cd ..`
+    * print the current working directory.
+        + `pwd`
+    * create a new folder.
+        + `mkdir folder_name`
+    * create a new html file.
+        + `touch my-first-example-page.html`
+    * delete a file
+        + `rm my-first-example-page.html`
+    * delete a folder
+        + `rm -r folder_name`
+    * list files in a folder
+        + `ls` - list files
+        + `ls -a` - list all files, even hidden ones without filenames
+        + `ls -la` - list all files and permissions in a list format
+
+* *if you don't have a mac then talk about these commands*
+
+* Mac specific commands
+    * `open .`
+        + opens the current folder you are at in finder
+    * `open <file name>`
+        + open a specific file
+
+* *When done going over these, slack out the above commands to the students* 
 
 ----
 
 ### 6. Student do (10 minutes)
-* SLACK THE FOLLOWING: 
+* SLACK THE FOLLOWING to the students, call on students to read it to the class LOUD, google timer, set it to 10 minutes and start it, make sure your computer volume is up so the alarm goes off: 
 
-```
-From the Terminal/Console and using only the command line, create the following:
-  * A new folder
-  * A new HTML file
-  * Open the current folder containing the new HTML file.
+* From the Terminal/Console and using only the command line, create the following:
+    * A new folder with the name of first_day_stuff
+    * A new HTML file with the name of first_day.html
+    * Open the current folder containing the new HTML file.
 
-BONUS:
-* Create multiple directories/folders in one command.
-* Create multiple files in one command in the current directory.
-```
+* BONUS:
+    * Create multiple directories/folders with the names `one_folder` and `second_folder` in one command.
+    * Create multiple files with the names `one.html` and `two.html` in one command in the first_day_stuff directory.
+
 ----
 
 ### 7. Student do (5 minutes)
 * Tell the students to discuss with the person next to them what they just did. 
 
-"You are responsible for the people around you - understanding what just happened."
+"You are responsible for the people around you understanding what just happened."
 
-"Everyone you should be talking now."
+"Everyone you should be talking now. Turn to your partners and talk."
 
 ----
 
