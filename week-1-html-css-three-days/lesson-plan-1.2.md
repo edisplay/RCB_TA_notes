@@ -26,43 +26,13 @@ ALL or they won't be able to do the homework.
 
 # Objectives (Slack out to students, have unique students read each one and Instructor makes a comment after each one being read)
 
-* Students will open up Chrome DevTools and use Inspector.
-* Students will the importance of Version Control (Git) and how to use it
-* Students will learn how to make a basic html document
-* Students will understand basic html tags and when to use them
-* Students will learn how to make and implement basic CSS styling
+* Students will be able to explain the importance of Version Control (GIT) and how to use it
+* Students will make a github respository, push their code to it, and share it with their partners
+* Students will make a basic HTML document
+* Students will be able to use basic HTML tags appropriately
+* Students will be able to implement basic CSS styling to HTML documents
 
 ----
-
-### 10. Instructor Do (10 minutes)
-
-* Inspect the HTML file with with Chrome DevTools.
-
-* Right-click on any element inside the HTML page and select 
-the `Inspect` option.
-
-* Navigate to the `Elements` tab and focus specifically on the HTML markup inside.
-
-* Hover over the HTML markup and observe the page as it highlights the corresponding rendered parts.
-
-----
-
-### 11. Everyone Do (10 minutes)
-
-* Direct students to look at the `Elements` tab specifically and hover over the various HTML elements and have them watch it highlight to it's corresponding rendered part in the page.
-
-* Discuss with students as actions are being performed.
-
-----
-
-### 12. Students Do (10 minutes)
-
-* Right-click on any element in their newly created HTML file and click on the `Inspect` option.
-
-* Navigate to the `Elements` tab and focus specifically on the HTML markup inside.
-
-* Hover over the HTML markup and observe the page as it highlights the corresponding rendered parts.
-
 
 ### 1. Instructor Do (15 minutes)
 
@@ -76,13 +46,15 @@ the `Inspect` option.
 * Discuss what a github repository is
     + What it is 
     + Why it is important
-* Discuss git commands
+* Demonstrate git commands
     + `git add`
     + `git commit`
     + `git push`
     + `git pull`
 
 ### 2. Student Do (15 minutes)
+
+* *Slack out to students*
 
 * If you haven't already, go to https://github.com/ and make an account
 * Install Git to your machine if you haven't already http://git-scm.com/downloads
@@ -97,20 +69,20 @@ the `Inspect` option.
     + Add additional HTML tags to your page and read up on all of them:
 https://developer.mozilla.org/en-US/docs/Web/HTML/Element
 
-* ** Bonus 2**
-    + Find a tag that the instructors don't know about and try to stump them
+* **Bonus 2**
+    + Find a tag that the instructors don't know about and try to stump them with what it is used for
 
 
 ### 3. Partners Do (10 minutes)
-* "Discuss line by line what happened. If the people around you are lost, YOU ARE RESPONSIBLE for the people around you."
+
+>Discuss line by line what happened. If the people around you are lost, YOU ARE RESPONSIBLE for the people around you.
 
 ### 4. Instructor Do (10 minutes)
 * Walk around room and make sure everyone is caught up
 
 ### 5. Everyone Do (5 minutes)
-Let's go over html 
 
-* Combine all the html code on one line with holding down the following command on an html file on the first line of it
+* *Combine all the html code on one line with holding down the following command on an html file on the first line of it*
 
 on Mac:
 
@@ -124,17 +96,16 @@ or on Windows:
 ctrl+j
 ```
 
-* save the code *
+* *save the code*
 
-"How will this look different in the browser? Discuss with your partners"
+>How will this look different in the browser? Discuss with your partners
 
 ### 5. Everyone do (5 minutes)
 
-Go around the room until you get the answer you want
+* *Go around the room until you get the answer you want*
+        * It won't look different.
 
-It won't look different.
-
-* Open the html file in the browser by right clicking on the file in SublimeText and going to "Open in Browser" * 
+* *Open the html file in the browser by right clicking on the file in Sublime Text and going to "Open in Browser"* 
 
 ----
 #### Break (15 minutes)
@@ -144,9 +115,9 @@ It won't look different.
 
 ### 6. Instructor Do (25 minutes)
 
-* Discuss what a doctype is and why it is important
-* Explain indentation and syntax e.g. open and closing tags, self closing tags, double quotations (never single quotes)
-* Emphasis the importance of semantic markup 
+* *Discuss what a doctype is and why it is important*
+* *Explain indentation and syntax e.g. open and closing tags, self closing tags, double quotations (never single quotes)*
+* *Emphasis the importance of semantic markup*
     + https://validator.w3.org/#validate_by_input
     + Copy paste in this example to W3.org to show what happens if the markup is invalid
   ```
@@ -184,7 +155,7 @@ It won't look different.
   </body>
   </html>
   ```
-* Go over how to write the following tags
+* *Go over how to write the following tags*
     + Core tags
         + doctype
         + html
@@ -206,12 +177,16 @@ It won't look different.
         + br
         + input - types - email, text, phone etc
         + textarea
-        + address attributes - alt for example, width
-
-* Show [this html file](1.2-exercises/1.2.6-in-class-exercise.html) on the projector. It is what the students must code out in the next exercise.
-
-
+        + talk about attributes for elements
+                + alt
+                + class
+                + id
+                + value
+                + for
+                
 ### 6. Student Do (20 minutes)
+* *Show [this html file](1.2-exercises/1.2.6-in-class-exercise.html) on the projector. It is what the students must code out in the next exercise.*
+
 * Make a new file called `student-bio.html` using terminal
 * Stage, commit, and push to github
 * Inside your `student-bio.html` file do the following:
@@ -275,7 +250,7 @@ It won't look different.
 
 * Make a folder called `css` using terminal
 * Inside the `css` folder make a file called `style.css` using terminal
-* Stage, commit, and push this new file to Github
+* Stage, commit, and push this code to Github
 * Reference the `style.css` in your `student-bio.html` file
 * Style the example on the projector
     + Add a class called "container" on the `main` tag
@@ -311,6 +286,11 @@ It won't look different.
 
 ### 10. Partner Do (10 minutes)
 
+* *Slack the following to students*
+
 * Share your Github code with your partner
 * Take your partners code and validate it using https://validator.w3.org/#validate_by_input
 * Compare work and discuss with partner to see how similar your code is. If not the same, work together to make it the same and valid and discuss.
+
+# Copyright
+Rutgers Coding Boot Camp (C) 2015. All Rights Reserved.

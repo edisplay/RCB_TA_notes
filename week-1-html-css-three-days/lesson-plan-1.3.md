@@ -29,12 +29,43 @@ ALL or they won't be able to do the homework.
 
 # Objectives (Slack out to students, have unique students read each one and Instructor makes a comment after each one being read)
 
+* Students will open up Chrome DevTools and use Inspector.
 * Students will learn more advanced CSS styling to make more beautiful web pages
 * Students will understand the html box-model and how it impacts CSS styling
 * Students will understand how to make multi-column websites
 * Students will learn how to use Heroku and deploy their code to it
 
 ----
+
+### 10. Instructor Do (10 minutes)
+
+* Inspect the HTML file with with Chrome DevTools.
+
+* Right-click on any element inside the HTML page and select 
+the `Inspect` option.
+
+* Navigate to the `Elements` tab and focus specifically on the HTML markup inside.
+
+* Hover over the HTML markup and observe the page as it highlights the corresponding rendered parts.
+
+----
+
+### 11. Everyone Do (10 minutes)
+
+* Direct students to look at the `Elements` tab specifically and hover over the various HTML elements and have them watch it highlight to it's corresponding rendered part in the page.
+
+* Discuss with students as actions are being performed.
+
+----
+
+### 12. Students Do (10 minutes)
+
+* Right-click on any element in their newly created HTML file and click on the `Inspect` option.
+
+* Navigate to the `Elements` tab and focus specifically on the HTML markup inside.
+
+* Hover over the HTML markup and observe the page as it highlights the corresponding rendered parts.
+
 
 ### 1. Instructor Do (30 minutes)
 * Recap last class
@@ -113,3 +144,5 @@ Break (15 minutes)
 * Setup Heroku
 * push all code in github to heroku
 
+# Copyright
+Rutgers Coding Boot Camp (C) 2015. All Rights Reserved.
