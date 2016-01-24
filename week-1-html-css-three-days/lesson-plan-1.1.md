@@ -269,3 +269,6 @@ Bonus:
 * *go around the room and go over the previous exercise*
 
 ----
+
+# Copyright
+Rutgers Coding Boot Camp (C) 2015. All Rights Reserved.

@@ -131,3 +131,6 @@
 * Check points = Questions you ask the student(s) to make sure they understand what's going on
 	* Bad check point: "Do you understand?"
 	* Good check point: "So in your own words, what does this line of code do?"
+
+# Copyright
+Rutgers Coding Boot Camp (C) 2015. All Rights Reserved.
