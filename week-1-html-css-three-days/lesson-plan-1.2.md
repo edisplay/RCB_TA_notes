@@ -60,7 +60,7 @@ ALL or they won't be able to do the homework.
 * Make a new repository called `first-week-repo`
     + Check box to "Initialize this repository with a README"
 * Make a basic html file called `test.html` that contains the core structure of an html file (e.g. doctype, head, title, body) and include an image. You can find a cute image online or grab a placeholder image http://lorempixel.com/
-* Commit test.html using `git add test.html`, and `git commit -m "initial commit"` and `git push`
+* Stage, commit, and push `test.html` to Github by using `git add test.html`, and `git commit -m "initial commit"` and `git push`
 
 * **Bonus 1**
     + Add additional HTML tags to your page and read up on all of them:
@@ -179,12 +179,12 @@ It won't look different.
         + textarea
         + address attributes - alt for example, width
 
-* Show [this html file](1.2-exercises/1.2.6-in-class-exercise.html)on the projector. It is what the students must code out in the next exercise.
+* Show [this html file](1.2-exercises/1.2.6-in-class-exercise.html) on the projector. It is what the students must code out in the next exercise.
 
 
 ### 6. Student Do (20 minutes)
 * Make a new file called `student-bio.html` using terminal
-* Commit the file and push to github
+* Stage, commit, and push to github
 * Inside your `student-bio.html` file do the following:
     + Make a `header` tag, inside the header put an image "LINK TO IMAGE FILEPATH" 
         + The `alt` text for the image should read "Rutgers Coding Bootcamp"
@@ -204,7 +204,7 @@ It won't look different.
 
 * If your forgot how to write the html tags, you can reference all html tags here https://developer.mozilla.org/en-US/docs/Web/HTML/Element
 * **Do not use any CSS**
-* Commit code and push to github
+* Stage, commit, and push to github
 
 
 ### 7. Partner Do (10 minutes)
@@ -245,7 +245,7 @@ It won't look different.
 
 * Make a folder called `css` using terminal
 * Inside the `css` folder make a file called `style.css` using terminal
-* Git commit and push this new file to Github
+* Stage, commit, and push this new file to Github
 * Reference the `style.css` in your `student-bio.html` file
 * Style the example on the projector
     + Add a class called "container" on the `main` tag
@@ -267,17 +267,17 @@ It won't look different.
     + h2
         + The font size is `24px`
     + Make the container have a width of 1024 pixels and center it
-    + Make #main-bio, #contact-info, #bio-image all `float: left`
-    + Make the #bio-image have a width of 200 pixels
+    + Make "#main-bio", #contact-info, #bio-image all `float: left`
+    + Make the "#bio-image" have a width of 200 pixels
     + Be sure to include alt text in all images
-    + #main-bio should have a width of `70%`
+    + "#main-bio" should have a width of `70%`
         + Add margins to the image so there is distance between it and the bio text
-    + #content-info should have a width of `30%`
+    + "#content-info" should have a width of `30%`
     + Adjust the line height so it is 1.5 times the size of the font
     + Make the link color `#d21034`
 
 * If your forgot how to write the css properties, you can reference all css properties here https://developer.mozilla.org/en-US/docs/Web/CSS/Reference
-* Git commit and push this new file to Github
+* Stage, commit, and push this new file to Github
 
 ### 10. Partner Do (10 minutes)
 

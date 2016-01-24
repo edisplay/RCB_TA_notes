@@ -44,7 +44,7 @@ ALL or they won't be able to do the homework.
     + box-sizing
     + block vs inline elements
   + Browser rendering for CSS and how it is different in each browser
-  + CSS Resets (http://meyerweb.com/eric/tools/css/reset/)
+      + CSS Resets (http://meyerweb.com/eric/tools/css/reset/)
   + Styling properties
     + float
     + display: none vs visibility: hidden
@@ -62,7 +62,7 @@ ALL or they won't be able to do the homework.
 Practice floats and box model margins / padding
 
 * Inside your `floats.html` using terminal
-* Make another file called `floats.css`, reference this file in your `floats.html1 file
+* Make another file called `floats.css`, reference this file in your `floats.html` file
 * git push to github
 * Style the image on the projector
 * git push to github
