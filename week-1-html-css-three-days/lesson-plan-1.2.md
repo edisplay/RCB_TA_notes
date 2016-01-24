@@ -161,7 +161,7 @@ It won't look different.
         + html
         + head
         + title
-        + body
+        + body (mention how browsers input their own styling and by default the body tag has margins)
     + Other tags
         + headings (h1, h2, h3 etc) and when to use them
         + paragraphs
@@ -179,32 +179,31 @@ It won't look different.
         + textarea
         + address attributes - alt for example, width
 
-* Show an image on the projector of what they need to code out in the student exercise
+* Show [this html file](1.2-exercises/1.2.6-in-class-exercise.html)on the projector. It is what the students must code out in the next exercise.
 
-* [This is the Exercise](1.2-exercises/1.2.6-in-class-exercise.html)
 
 ### 6. Student Do (20 minutes)
 * Make a new file called `student-bio.html` using terminal
 * Commit the file and push to github
 * Inside your `student-bio.html` file do the following:
-    + Make a header tag, inside the header put an image with the url of "LINK TO URL" 
-        + The alt text for the image should read "Rutgers Coding Bootcamp"
-    + Underneath the image make a h1 tag that says "Student Bio"
+    + Make a `header` tag, inside the header put an image "LINK TO IMAGE FILEPATH" 
+        + The `alt` text for the image should read "Rutgers Coding Bootcamp"
+    + Underneath the image (and inside the `header` tag) make a `h1` tag that says "Student Bio"
     + Below the header, make a `main` tag
-        + Inside this `main` tag make two section tags
-    + Inside the first section tag do the following: 
-        + Make an h2 that contains your name
-        + Underneath the h2, make an image tag. Include an image of yourself or use a placeholder http://placehold.it/200x200
+        + Inside this `main` tag make two `section` tags
+    + Inside the first `section` tag do the following: 
+        + Make an `h2` that contains your name
+        + Underneath the `h2`, make an image tag. Include an image of yourself or use a placeholder http://placehold.it/200x200
         + Undernearth the image tag, make a paragraph (or two) and write a short bio about yourself. You don't have to overthink this. Just something quick. If you can't think of anything right now you can use some placeholder text found http://www.lipsum.com/
-    + Inside the second section tag do the following:
-        + Make a h2 that says "Contact Info"
-        + Underneath the h2, make an unordered list that contains three elements: "Email: Youremail@address.com", "Github: github.com/YourGithubProfile", and "Portfolio: coming soon". 
+    + Inside the second `section` tag do the following:
+        + Make a `h2` that says "Contact Info"
+        + Underneath the `h2`, make an unordered list that contains three elements: "Email: Youremail@address.com", "Github: github.com/YourGithubProfile", and "Portfolio: coming soon". 
             + Make the part before the colon bold. e.g. "Email:" bold, but the text after it should not be bold
             + Make the content after "Github:" a link. e.g. github.com/YourGithubProfile should be a link
             + Make the content after "Portfolio:" (e.g. "coming soon") a link that points to "#"
 
 * If your forgot how to write the html tags, you can reference all html tags here https://developer.mozilla.org/en-US/docs/Web/HTML/Element
-* Do not use any CSS
+* **Do not use any CSS**
 * Commit code and push to github
 
 
@@ -224,7 +223,7 @@ It won't look different.
         + inline vs internal vs external
   + ID vs Class
     + Where id's and classes go in the html
-    + How id's and classes are is written in the css
+    + How id's and classes are written in the css
   + Explain basic styling properties  
     + font-family
     + font-weight
@@ -239,9 +238,8 @@ It won't look different.
     + height
     + floats (briefly discuss so they can use it in the exercise)
 
-* Show an image on the projector of what they need to code out in the student exercise
+* Show [this html file](1.2-exercises/1.2.9-in-class-exercise.html) on the projector. It is what the students must code out in the next exercise.
 
-* [This is the Exercise](1.2-exercises/1.2.9-in-class-exercise.html)
 
 ### 9. Student Do (20 minutes)
 
@@ -276,6 +274,7 @@ It won't look different.
         + Add margins to the image so there is distance between it and the bio text
     + #content-info should have a width of `30%`
     + Adjust the line height so it is 1.5 times the size of the font
+    + Make the link color `#d21034`
 
 * If your forgot how to write the css properties, you can reference all css properties here https://developer.mozilla.org/en-US/docs/Web/CSS/Reference
 * Git commit and push this new file to Github
