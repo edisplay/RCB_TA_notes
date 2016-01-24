@@ -120,6 +120,10 @@ ctrl+j
 * *Emphasis the importance of semantic markup*
     + https://validator.w3.org/#validate_by_input
     + Copy paste in this example to W3.org to show what happens if the markup is invalid
+    + Go over what's wrong with the code to the students error by error
+            + for the most part, errors include
+                    + missing closing tags
+                    + tags not being closed in the right order
   ```
   <!doctype html>
   <html>
@@ -183,12 +187,14 @@ ctrl+j
                 + id
                 + value
                 + for
-                
+
 ### 6. Student Do (20 minutes)
-* *Show [this html file](1.2-exercises/1.2.6-in-class-exercise.html) on the projector. It is what the students must code out in the next exercise.*
+* *Show [this html file](1.2-exercises/1.2.6-in-class-exercise.html) on the projector. It is what the students must code out in this exercise.*
+
+* *Slack this out*
 
 * Make a new file called `student-bio.html` using terminal
-* Stage, commit, and push to github
+* Stage, commit, and push to first-week-repo
 * Inside your `student-bio.html` file do the following:
     + Make a `header` tag, inside the header put an image "LINK TO IMAGE FILEPATH" 
         + The `alt` text for the image should read "Rutgers Coding Bootcamp"
