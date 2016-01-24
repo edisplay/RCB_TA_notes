@@ -273,7 +273,8 @@ ctrl+j
 * Make a new file called `student-bio.html` using terminal
 * Stage, commit, and push to first-week-repo
 * Inside your `student-bio.html` file do the following:
-    + Make a `header` tag, inside the header put an image "LINK TO IMAGE FILEPATH" 
+    + Make a `header` tag, inside the header, make an img tag that uses this image:
+    https://github.com/RutgersCodingBootcamp/All-Classwork-Homework/blob/master/week-1-html-css-git-heroku/in-class-exercises-1.2/RutgersBanner.png 
         + The `alt` text for the image should read "Rutgers Coding Bootcamp"
     + Underneath the image (and inside the `header` tag) make a `h1` tag that says "Student Bio"
     + Below the header, make a `div` tag
