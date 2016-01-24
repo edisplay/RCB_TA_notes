@@ -33,57 +33,48 @@ ALL or they won't be able to do the homework.
 
 ----
 
-### 1. Instructor Do (20 minutes)
+### 1. Instructor Do (15 minutes)
 
-+ Discuss Git
-  + What it is 
-  + Why it is important
-+ Discuss Github
-  + What it is
-  + Why it is important
-+ Discuss difference between Git and Github
-+ Discuss what a github repository is
-  + What it is 
-  + Why it is important
-+ Discuss git commands
-  + `git add`
-  + `git commit`
-  + `git push`
-  + `git pull`
+* Discuss Git
+    + What it is 
+    + Why it is important
+* Discuss Github
+    + What it is
+    + Why it is important
+* Discuss difference between Git and Github
+* Discuss what a github repository is
+    + What it is 
+    + Why it is important
+* Discuss git commands
+    + `git add`
+    + `git commit`
+    + `git push`
+    + `git pull`
 
-### 2. Student Do (30 minutes)
+### 2. Student Do (15 minutes)
 
 * If you haven't already, go to https://github.com/ and make an account
-
 * Install Git to your machine if you haven't already http://git-scm.com/downloads
-  + Follow instructions here to do so: https://help.github.com/articles/set-up-git/
-  + If you haven't already, generate your SSH keys https://help.github.com/articles/generating-a-new-ssh-key/
-
+    + Follow instructions here to do so: https://help.github.com/articles/set-up-git/
+    + If you haven't already, generate your SSH keys https://help.github.com/articles/generating-a-new-ssh-key/
 * Make a new repository called `first-week-repo`
-  + check box to "Initialize this repository with a README"
-
+    + Check box to "Initialize this repository with a README"
 * Make a basic html file called `test.html` that contains the core structure of an html file (e.g. doctype, head, title, body) and include an image. You can find a cute image online or grab a placeholder image http://lorempixel.com/
-* Commit test.html using `git add test.html`, and `git commit -m "initial commit"` and `git push`
+* Stage, commit, and push `test.html` to Github by using `git add test.html`, and `git commit -m "initial commit"` and `git push`
 
-Bonus 1:
-Add additional HTML tags to your page and read up on all of them:
+* **Bonus 1**
+    + Add additional HTML tags to your page and read up on all of them:
 https://developer.mozilla.org/en-US/docs/Web/HTML/Element
 
-Bonus 2: 
-Find a tag that the instructors don't know about and try to stump them
+* ** Bonus 2**
+    + Find a tag that the instructors don't know about and try to stump them
 
-### 3. Everyone Do (10 minutes)
-* Go over the previous exercise
 
 ### 3. Partners Do (10 minutes)
 * "Discuss line by line what happened. If the people around you are lost, YOU ARE RESPONSIBLE for the people around you."
 
 ### 4. Instructor Do (10 minutes)
 * Walk around room and make sure everyone is caught up
-
-----
-Break (15 minutes)
-----
 
 ### 5. Everyone Do (5 minutes)
 Let's go over html 
@@ -106,7 +97,7 @@ ctrl+j
 
 "How will this look different in the browser? Discuss with your partners"
 
-### 5. Everyone do (10 minutes)
+### 5. Everyone do (5 minutes)
 
 Go around the room until you get the answer you want
 
@@ -114,72 +105,181 @@ It won't look different.
 
 * Open the html file in the browser by right clicking on the file in SublimeText and going to "Open in Browser" * 
 
-### 6. Instructor Do (20 minutes)
+----
+#### Break (15 minutes)
+
+----
+###### 75 minutes so far
+
+### 6. Instructor Do (25 minutes)
 
 * Discuss what a doctype is and why it is important
-* Emphasis the importance of semantic markup 
-  + w3validator.com
 * Explain indentation and syntax e.g. open and closing tags, self closing tags, double quotations (never single quotes)
+* Emphasis the importance of semantic markup 
+    + https://validator.w3.org/#validate_by_input
+    + Copy paste in this example to W3.org to show what happens if the markup is invalid
+  ```
+  <!doctype html>
+  <html>
+  <head>
+    <title>Broken HTML</title>
+  </head>
+  <body>
+
+    <div>
+      <h1>Heading 1</h1>
+
+      <p>
+        Test paragraph
+      </div>
+    </p>
+
+    <p>Another test paragraph</p>
+
+  </p>
+
+    <li>
+    <ul> List Item
+      </li>
+
+    <table>
+      <td>
+        <tr>
+          <td>Table Contents</td>
+        </tr>
+      </td>
+    </table>
+
+  </body>
+  </html>
+  ```
 * Go over how to write the following tags
-  + headings (h1, h2, h3 etc) and when to use them
-  + paragraphs
-  + anchors
-  + unordered/ordered lists
-  + divs
-  + img
-  + tables - thead, tbody, tr, td, th
-  + html5 tags - header, nag, footer, article, figure
-  + form
-  + label
-  + br
-  + input - types - email, text, phone etc
-  + textarea
-  + address attributes - alt for example, width
+    + Core tags
+        + doctype
+        + html
+        + head
+        + title
+        + body (mention how browsers input their own styling and by default the body tag has margins)
+    + Other tags
+        + headings (h1, h2, h3 etc) and when to use them
+        + paragraphs
+        + anchors
+        + strong vs b
+        + unordered/ordered lists
+        + divs
+        + img
+        + tables - thead, tbody, tr, td, th
+        + html5 tags - header, nav, footer, article, section, main
+        + form
+        + label
+        + br
+        + input - types - email, text, phone etc
+        + textarea
+        + address attributes - alt for example, width
 
-### 6. Student Do (15 minutes)
-* Make a new file called `html-tags.html` using terminal
-* Commit the file and push to github
-* Inside your `html-tags.html` file code out the following (show an image on the project of what they need to code out)
+* Show [this html file](1.2-exercises/1.2.6-in-class-exercise.html) on the projector. It is what the students must code out in the next exercise.
 
-### 7. Partner Do (5 minutes)
 
-* Compare work and discuss with partner to see if the code is the same. If not work together to make it the same and discuss
+### 6. Student Do (20 minutes)
+* Make a new file called `student-bio.html` using terminal
+* Stage, commit, and push to github
+* Inside your `student-bio.html` file do the following:
+    + Make a `header` tag, inside the header put an image "LINK TO IMAGE FILEPATH" 
+        + The `alt` text for the image should read "Rutgers Coding Bootcamp"
+    + Underneath the image (and inside the `header` tag) make a `h1` tag that says "Student Bio"
+    + Below the header, make a `main` tag
+        + Inside this `main` tag make two `section` tags
+    + Inside the first `section` tag do the following: 
+        + Make an `h2` that contains your name
+        + Underneath the `h2`, make an image tag. Include an image of yourself or use a placeholder http://placehold.it/200x200
+        + Undernearth the image tag, make a paragraph (or two) and write a short bio about yourself. You don't have to overthink this. Just something quick. If you can't think of anything right now you can use some placeholder text found http://www.lipsum.com/
+    + Inside the second `section` tag do the following:
+        + Make a `h2` that says "Contact Info"
+        + Underneath the `h2`, make an unordered list that contains three elements: "Email: Youremail@address.com", "Github: github.com/YourGithubProfile", and "Portfolio: coming soon". 
+            + Make the part before the colon bold. e.g. "Email:" bold, but the text after it should not be bold
+            + Make the content after "Github:" a link. e.g. github.com/YourGithubProfile should be a link
+            + Make the content after "Portfolio:" (e.g. "coming soon") a link that points to "#"
 
-### 8. Student Do (5 minutes)
+* If your forgot how to write the html tags, you can reference all html tags here https://developer.mozilla.org/en-US/docs/Web/HTML/Element
+* **Do not use any CSS**
+* Stage, commit, and push to github
 
-* Commit code and push to github
 
---
-135 minutes so far
---
+### 7. Partner Do (10 minutes)
 
-### 9. Instructor Do (30 minutes)
+* Share your Github code with your partner
+* Take your partners code and validate it using https://validator.w3.org/#validate_by_input
+* Compare work and discuss with partner to see how similar your code is. If not the same, work together to make it the same and valid and discuss.
 
-* Discuss CSS
-  * What it is
-  * What is a style sheet
-    * inline vs internal vs external
-  * ID vs Class
-    * Where it goes in the html
-    * What happens in the CSS
-  * Show basic styling examples for   
-    * font-family
-    * font-weight
-    * text-align
-    * line-height
-    * color
-    * background-color
-    * border
+----
 
-### 10. Student Do (30 minutes)
+### 8. Instructor Do (20 minutes)
 
-* Using terminal make a folder called `css` using terminal
++ Discuss CSS
+    + What is CSS
+    + What is a style sheet
+        + inline vs internal vs external
+        + explain the order of which the CSS is written is important. Whatever CSS property is closest to the element is the most powerful (e.g. inline is more powerful than internal, internal is more powerful than external, etc.)
+  + ID vs Class
+    + Where id's and classes go in the html
+    + How id's and classes are written in the css
+  + Explain basic styling properties  
+    + font-family
+    + font-weight
+    + text-align
+    + line-height
+    + color (uses hex, rgb, and words e.g. white)
+    + background-color ( uses hex, rgb/rgba, and words e.g. red)
+    + padding (talk about short hand e.g. it goes clockwise: top right bottom left)
+    + margin (go over margin: 0 auto; for centering so they can use it in the exercise)
+    + border
+    + width
+    + height
+    + floats (briefly discuss so they can use it in the exercise)
+
+* Show [this html file](1.2-exercises/1.2.9-in-class-exercise.html) on the projector. It is what the students must code out in the next exercise.
+
+
+### 9. Student Do (20 minutes)
+
+* Make a folder called `css` using terminal
 * Inside the `css` folder make a file called `style.css` using terminal
-* Git commit and push this new file to Github
-* Reference the `style.css` in your `html-tags.html` file
+* Stage, commit, and push this new file to Github
+* Reference the `style.css` in your `student-bio.html` file
 * Style the example on the projector
-* Git commit and push this new file to Github
+    + Add a class called "container" on the `main` tag
+    + Add an id called "main-bio" for the first `section` tag
+    + Add an id called "contact-info" for the second `section` tag
+    + Add an id called "bio-image" for the bio image
+* Style specs
+    + body
+        + The background color is `#efeee7`
+        + The font used `"Georgia",Times New Roman,Times,serif;`
+        + The font color is `#333333`
+        + Be sure to zero out the body margins and padding so the page is flush to the top of the page
+    + header
+        + The background color is `#d21034`
+    + h1
+        + The background color is `#333333`, try to figure out the font color
+        + The font size is `28px`
+        + Look at the example on the screen and eyeball the padding and/or margins and positioning of the text. 
+    + h2
+        + The font size is `24px`
+    + Make the container have a width of 1024 pixels and center it
+    + Make "#main-bio", #contact-info, #bio-image all `float: left`
+    + Make the "#bio-image" have a width of 200 pixels
+    + Be sure to include alt text in all images
+    + "#main-bio" should have a width of `70%`
+        + Add margins to the image so there is distance between it and the bio text
+    + "#content-info" should have a width of `30%`
+    + Adjust the line height so it is 1.5 times the size of the font
+    + Make the link color `#d21034`
 
-### 11. Partner Do (10 minutes)
+* If your forgot how to write the css properties, you can reference all css properties here https://developer.mozilla.org/en-US/docs/Web/CSS/Reference
+* Stage, commit, and push this new file to Github
 
-* See if what you did matches what your partner did. Help each other out.
+### 10. Partner Do (10 minutes)
+
+* Share your Github code with your partner
+* Take your partners code and validate it using https://validator.w3.org/#validate_by_input
+* Compare work and discuss with partner to see how similar your code is. If not the same, work together to make it the same and valid and discuss.

@@ -17,6 +17,7 @@
   + Make a folder called `assets`.
     + Inside the assets folder make two additional folders called `css` and `images`.
       + Inside the css folder make a file called `style.css`.
+      + Inside the css folder make a file called `reset.css` and include the code found from the Meyerweb reset located [here](http://meyerweb.com/eric/tools/css/reset/reset.css)
       + Inside the images folder you can save the images you plan on using (e.g. your profile image, the placeholder images for the portfolio, and the social icon images).
 3. Push up the above changes to Github (Make sure to `git add .` and `git commit -m "initial site files"` then type `git push origin master` to push your changes to your Github repo.
 4. Reference the screenshots for the site located here:
