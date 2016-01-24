@@ -112,11 +112,11 @@ ALL or they won't be able to do the homework.
       + with partners
   + Project work
     + independent 
-     + Browser based RPG Game
-     + Independent Free Form Final Project
+      + Browser based RPG Game
+      + Independent Free Form Final Project
     + with partners
-     + Front End Project (mashing up APIs)
-     + Full Stack Project (server + database + front end)
+      + Front End Project (mashing up APIs)
+      + Full Stack Project (server + database + front end)
 
 ----
 Break (15 minutes)
