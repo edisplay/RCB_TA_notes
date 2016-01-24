@@ -1,8 +1,8 @@
 # Pavan to do
 
-add in timing
-add in solution to last problem
-add in more problems
+* add in timing
+* add in solution to last problem
+* add in more problems
 
 # Have you read the Instructor Guide?
 
