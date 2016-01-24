@@ -108,8 +108,8 @@ ALL or they won't be able to do the homework.
     + You'll be doing live timed coding tests during your interviews, and this will prepare you
     + You will constantly be put in an interview setting in every class with these timed exercises
      + exercises will be
-      + independent
-      + with partners
+       + independent
+       + with partners
   + Project work
     + independent 
       + Browser based RPG Game
