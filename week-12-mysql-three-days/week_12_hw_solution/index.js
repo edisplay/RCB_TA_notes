@@ -134,6 +134,8 @@ zoo = {
 				currentScope.animId(input_scope);
 			}else if (result.visit == "N") {
 				// console.log(result.visit);
+			}else if (result.visit == "A") {
+				// console.log(result.visit);
 			}else if (result.visit == "C") {
 				currentScope.care(input_scope);
 			}else{

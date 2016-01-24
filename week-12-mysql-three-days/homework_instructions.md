@@ -23,7 +23,12 @@ Install npm packages
 npm install prompt --save
 npm install mysql --save
 ```
+Start mySQL server
+`net start mysql`
+Make sure you are Admin when start the mySQl server
+And make sure you have the correct instance name my instance name is `mysql`
 
+*Importing the database
 launch: MySQL 5.7 Command Line Client
 enter your password
 ```
@@ -134,7 +139,20 @@ Nodemon doesn't play nice with prompt so beware if you are testing with nodemon
 		* console logs Enter (O): ------> to Count every animal in zoo with the same type!
 		* console logs Enter (Q): ------> to Quit to main menu!
 
-		
+	* The view function
+		* Create a function inside of `zoo` named `add` with one input name it `input_scope`
+		* console log Please choice what you like to visit!
+		* calls the function `prompt.get()` with two inputs
+			* first input: an array of all strings `->`, `visit`
+			* second input: an anonymous function with an input (`err`, `result`)
+				* if the `result.visit` == "Q"
+					-call the `currentScope.menu()` function
+				* else if the `result.visit` == "O"
+					-call the `currentScope.type(input_scope)` function
+				* else if the `result.visit` == "I" 
+					-call the `currentScope.type(input_scope)` function
+				* else if the `result.visit` == "N"
+
 
 # Copyright
 Rutgers Coding Boot Camp (C) 2016. All Rights Reserved.
