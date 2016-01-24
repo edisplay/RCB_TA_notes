@@ -52,7 +52,7 @@ ALL or they won't be able to do the homework.
 
 ### 3. Instructor Do (20 minutes)
 
-Explain GIT
+Explain INSPECTOR
 
 ----
 
@@ -93,6 +93,12 @@ Practice floats and box model margins / padding
 * Take your partners code and validate it using https://validator.w3.org/#validate_by_input AND http://www.css-validator.org/#validate_by_input
 * Compare work and discuss with partner to see how similar your code is. If not the same, work together to make it the same and valid and discuss.
 
+----
+#### Break (15 minutes)
+
+----
+###### 110 minutes so far
+
 ### 4. Instructor Do (15 minutes)
 
 * Discuss CSS positioning
@@ -102,7 +108,7 @@ Practice floats and box model margins / padding
 * give another example on the projector for the students to code
 
 
-### 5. Student Do (20 minutes)
+### 5. Student Do (15 minutes)
 
 Practice positioning
 
@@ -117,18 +123,13 @@ Practice positioning
 * Share your Github code with your partner
 * Take your partners code and validate it using https://validator.w3.org/#validate_by_input AND http://www.css-validator.org/#validate_by_input
 * Compare work and discuss with partner to see how similar your code is. If not the same, work together to make it the same and valid and discuss.
+ 
 
-----
-Break (15 minutes)
-----
-
-130 minutes 
-
-### 7. Instructor Do (20 minutes)
+### 7. Instructor Do (10 minutes)
 
 * Heroku setup
 
-### 8. Student Do (30 minutes)
+### 8. Student Do (20 minutes)
 
 * Setup Heroku
 * push all code in github to heroku
