@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+	<head>
+		<title>HTML Tag Structure</title>
+
+		<style type="text/css">
+			* {
+				text-align: center;
+				font-size: 18px;
+				font: 18px/60px Arial;
+				color: #333;
+			}
+			.container {
+				width: 80%;
+				margin: 30px auto;
+			}
+			#margin {
+				padding: 0 40px 40px;
+				border: 3px dashed #999;
+			}
+			#border {
+				background: #1E5792;
+				border: 60px solid #1E5792;
+				border-top: 0;
+				color: white;
+				border-bottom-width: 40px;
+
+			}
+			#padding {
+				background: white;
+				color: #333;
+				padding: 0 60px 60px;
+			}
+			#content {
+				background: white;
+				border: 3px solid #999;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<div id="margin">
+				margin
+				<div id="border">
+					border
+					<div id="padding">
+						padding
+						<div id="content">
+							content
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

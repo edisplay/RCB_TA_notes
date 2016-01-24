@@ -38,44 +38,124 @@ ALL or they won't be able to do the homework.
 
 ### 1. Instructor Do (5 minutes)
 
-* Recap last class
-  + Went over HTML and CSS.
-  + Students created a student-bio.html
++ Recap last class
+    + Went over HTML and CSS.
+    + Students created a `student-bio.html` page
 
 
-### 2. Everyone Do (10 minutes)
+### 2. Everyone Do (5 minutes)
 
 * Open up last weeks `student-bio.html` file in Google Chrome
 * Right click anywhere on the page and select "Inspect". This is Chrome Developer Tools.
 * Look at the `Elements` tab specifically and hover over the various HTML elements and  watch it highlight to it's corresponding rendered part in the page.
 
 
-### 3. Instructor Do (20 minutes)
+### 3. Instructor Do (10 minutes)
 
-Explain INSPECTOR
+* Explain Inspector
+    + There are 8 Main Panels
+        + Elements
+            + This is the panel you use to examine your HTML
+            + This lets you see everything in one DOM tree
+            + Lets you edit your HTML on the fly to test things out
+            + [reference](https://developer.chrome.com/devtools/docs/dom-and-styles)
+        + Console 
+            + You use this for Javascript.
+            + Console will be discussed later on when it is more relevant to the course
+            + [reference](https://developer.chrome.com/devtools/docs/console)
+        + Sources
+            + You use for Javascript.
+            + Sources will be discussed later on when it is more relevant to the course
+        + Network
+            + This panel records information about each network operation in your application, including detailed timing data, HTTP request and response headers, cookies, WebSocket data, and more. The Network panel helps you answer questions about the network performance of your web application
+            + Network will be discussed later on when it is more relevant to the course
+            + [reference](https://developer.chrome.com/devtools/docs/network)
+        + Timeline
+            + The Timeline panel lets you record and analyze all the activity in your application as it runs. It's the best place to start investigating perceived performance issues in your application.
+            + Timeline will be discussed later on when it is more relevant to the course
+            + [reference](https://developer.chrome.com/devtools/docs/timeline)
+        + Profiles
+            + The Profiles panel lets you profile the execution time and memory usage of a web app or page
+            + Profiles will be discussed later on when it is more relevant to the course
+            + [reference](https://developer.chrome.com/devtools/docs/profiles)
+        + Audits
+            + The Audit panel can analyze a page as it loads.
+            + Audits will be discussed later on when it is more relevant to the course
+
+  + Elements is the main panel you will be using in todays class and next week. It is what you use to view and make quick on the fly changes to your html and css
+
+  + On the right side panel there is information pertaining to your CSS
+      + Styles
+          + This shows you all your CSS that pertains to the element you have highlighted in the main Elements panel
+          + You have the ability to edit the CSS to preview what it would look like
+          + **Warning**: refreshing the browser will delete all your changes. It is important to not make too many changes because nothing is saved
+      + Computed
+          + This shows how the browser is interpreting the element you have selected in the Elements panel
+
+  + Instructor - Do some samples of you editing the html and css [the student-bio.html page](in-class-exercises-1.2/1.2.9-in-class-exercise.html)
+    + Change some text
+    + Change some styling
+
+### 4. Student Do (5 minutes)
+
+1. Highilight the `<div class="container">` element in the Elements panel
+2. In the Styles side panel change the width from `1024px` to `600px`
+    * Observe what happens
+3. In the Elements panel highlight the `<h1>` tag. Right click and select "Edit Text" OR you can double click on the text to edit it. Change the text to say "My Biography". Press "enter" to finalize your changes.
+    * Observe what happens
+
+Bonus:
+  * Make a new `section` tag with an id of `#new` using Inspector
+  * Make your new section tag appear just below the #contact-info section
+  * Now make it appear below both #main-bio and #contact-info
+  * Make it have a `background-color` of red
 
 ----
 
-### 4. Instructor Do (30 minutes)
+### 5. Instructor Do (10 minutes)
 
 * Discuss CSS in more detail
   + Concepts
-    + box model
-    + box-sizing
     + block vs inline elements
-  + Browser rendering for CSS and how it is different in each browser
-      + CSS Resets (http://meyerweb.com/eric/tools/css/reset/)
-  + Styling properties
-    + float
-    + display: none vs visibility: hidden
-    + clear
-    + overflow
-    + width
-    + margin
-    + padding
+    + box model
+        + The CSS box model is essentially a box that wraps around every HTML element. It consists of: margins, borders, padding, and the actual content.
+        + [box model example](css-box-model-visual.html)
+    + box-sizing
 
 * show an image on the projector of what they need to code out in the student exercise
 
+
+### 6. Student Do (10 minutes)
+
+* Make a new file called `box.html`
+* Inside the file make a div with an id called `box`
+* Using internal css (style tag in the `<head>` of the document), for example:
+  ```css
+  <style type="text/css">
+    #example-id {
+
+    }
+  </style>
+  ```
+* Style the `#box` in the following ways:
+    + background color of `#1E5792'
+    + width of 400 pixels wide
+    + height of 400 pixels tall
+    + `margin: 0 auto` so it is centered
+
+
+### 7. Instructor Do (15 minutes)
+
++ Browser rendering for CSS and how it is different in each browser
+    + CSS Resets (http://meyerweb.com/eric/tools/css/reset/)
++ Styling properties
+  + float
+  + display: none vs visibility: hidden
+  + clear
+  + overflow
+  + width
+  + margin
+  + padding
 
 ### 2. Student Do (20 minutes)
 
@@ -97,7 +177,7 @@ Practice floats and box model margins / padding
 #### Break (15 minutes)
 
 ----
-###### 110 minutes so far
+###### 100 minutes so far
 
 ### 4. Instructor Do (15 minutes)
 
@@ -124,6 +204,7 @@ Practice positioning
 * Take your partners code and validate it using https://validator.w3.org/#validate_by_input AND http://www.css-validator.org/#validate_by_input
 * Compare work and discuss with partner to see how similar your code is. If not the same, work together to make it the same and valid and discuss.
  
+----
 
 ### 7. Instructor Do (10 minutes)
 

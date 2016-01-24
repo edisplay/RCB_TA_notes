@@ -52,7 +52,7 @@ ALL or they won't be able to do the homework.
     + `git push`
     + `git pull`
 
-### 2. Student Do (15 minutes)
+### 2. Student Do (20 minutes)
 
 * *Slack out to students*
 
@@ -73,7 +73,7 @@ https://developer.mozilla.org/en-US/docs/Web/HTML/Element
     + Find a tag that the instructors don't know about and try to stump them with what it is used for
 
 
-### 3. Partners Do (10 minutes)
+### 3. Partners Do (5 minutes)
 
 >Discuss line by line what happened. If the people around you are lost, YOU ARE RESPONSIBLE for the people around you.
 
@@ -237,7 +237,9 @@ ctrl+j
             + `<article></article>` - [description](http://www.w3schools.com/tags/tag_article.asp)
             + `<section></section>` - [description](http://www.w3schools.com/tags/tag_section.asp)
             + `<aside></aside>` - [description](http://www.w3schools.com/tags/tag_aside.asp)
-            + [HTML structure example](html5-tag-structure.html)
+
+        + *Share this with the students: [HTML structure example](html5-tag-structure.html)*
+
         + label
             + `<label for="input-id"></label>`
         + input - types - email, text, phone, submit etc
@@ -332,10 +334,14 @@ ctrl+j
     + `/* comment */`
         + In Sublime text you can type `command + /` on the line or a selected section to comment it out
 
-* Show [this html file](in-class-exercises-1.2/1.2.9-in-class-exercise.html) on the projector. It is what the students must code out in the next exercise.
+
 
 
 ### 9. Student Do (20 minutes)
+
+* *Show [this html file](in-class-exercises-1.2/1.2.9-in-class-exercise.html) on the projector. It is what the students must code out in the next exercise.*
+
+* *Slack this out*
 
 * Make a folder called `css` using terminal
 * Inside the `css` folder make a file called `style.css` using terminal
