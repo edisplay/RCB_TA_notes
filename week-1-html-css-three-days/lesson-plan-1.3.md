@@ -29,7 +29,7 @@ ALL or they won't be able to do the homework.
 
 # Objectives (Slack out to students, have unique students read each one and Instructor makes a comment after each one being read)
 
-* Students will learn more advances CSS styling to make more beautiful web pages
+* Students will learn more advanced CSS styling to make more beautiful web pages
 * Students will understand the html box-model and how it impacts CSS styling
 * Students will understand how to make multi-column websites
 * Students will learn how to use Heroku and deploy their code to it
@@ -43,7 +43,9 @@ ALL or they won't be able to do the homework.
     + box model
     + box-sizing
     + block vs inline elements
-  + Styling
+  + Browser rendering for CSS and how it is different in each browser
+  + CSS Resets (http://meyerweb.com/eric/tools/css/reset/)
+  + Styling properties
     + float
     + display: none vs visibility: hidden
     + clear

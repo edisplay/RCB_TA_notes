@@ -33,7 +33,7 @@ ALL or they won't be able to do the homework.
 
 ----
 
-### 1. Instructor Do (20 minutes)
+### 1. Instructor Do (15 minutes)
 
 * Discuss Git
     + What it is 
@@ -51,7 +51,7 @@ ALL or they won't be able to do the homework.
     + `git push`
     + `git pull`
 
-### 2. Student Do (20 minutes)
+### 2. Student Do (15 minutes)
 
 * If you haven't already, go to https://github.com/ and make an account
 * Install Git to your machine if you haven't already http://git-scm.com/downloads
@@ -70,9 +70,6 @@ https://developer.mozilla.org/en-US/docs/Web/HTML/Element
     + Find a tag that the instructors don't know about and try to stump them
 
 
-### 3. Everyone Do (10 minutes)
-* Go over the previous exercise
-
 ### 3. Partners Do (10 minutes)
 * "Discuss line by line what happened. If the people around you are lost, YOU ARE RESPONSIBLE for the people around you."
 
@@ -83,7 +80,7 @@ https://developer.mozilla.org/en-US/docs/Web/HTML/Element
 #### Break (15 minutes)
 
 ----
-###### 70 minutes so far
+###### 65 minutes so far
 
 ### 5. Everyone Do (5 minutes)
 Let's go over html 
@@ -106,7 +103,7 @@ ctrl+j
 
 "How will this look different in the browser? Discuss with your partners"
 
-### 5. Everyone do (10 minutes)
+### 5. Everyone do (5 minutes)
 
 Go around the room until you get the answer you want
 
@@ -116,7 +113,7 @@ It won't look different.
 
 ----
 
-### 6. Instructor Do (20 minutes)
+### 6. Instructor Do (30 minutes)
 
 * Discuss what a doctype is and why it is important
 * Explain indentation and syntax e.g. open and closing tags, self closing tags, double quotations (never single quotes)
@@ -169,11 +166,12 @@ It won't look different.
         + headings (h1, h2, h3 etc) and when to use them
         + paragraphs
         + anchors
+        + strong vs b
         + unordered/ordered lists
         + divs
         + img
         + tables - thead, tbody, tr, td, th
-        + html5 tags - header, nag, footer, article, figure
+        + html5 tags - header, nav, footer, article, section, main
         + form
         + label
         + br
@@ -183,19 +181,32 @@ It won't look different.
 
 * Show an image on the projector of what they need to code out in the student exercise
 
-* [This is the Exercise](1.2.6-in-class-exercise.html)
+* [This is the Exercise](1.2-exercises/1.2.6-in-class-exercise.html)
 
-### 6. Student Do (15 minutes)
-* Make a new file called `sample-page.html` using terminal
+### 6. Student Do (20 minutes)
+* Make a new file called `student-bio.html` using terminal
 * Commit the file and push to github
-* Inside your `sample-page.html` file code the example on the projector
+* Inside your `student-bio.html` file do the following:
+    + Make a header tag, inside the header put an image with the url of "LINK TO URL" 
+        + The alt text for the image should read "Rutgers Coding Bootcamp"
+    + Underneath the image make a h1 tag that says "Student Bio"
+    + Below the header, make a `main` tag
+        + Inside this `main` tag make two section tags
+    + Inside the first section tag do the following: 
+        + Make an h2 that contains your name
+        + Underneath the h2, make an image tag. Include an image of yourself or use a placeholder http://placehold.it/200x200
+        + Undernearth the image tag, make a paragraph (or two) and write a short bio about yourself. You don't have to overthink this. Just something quick. If you can't think of anything right now you can use some placeholder text found http://www.lipsum.com/
+    + Inside the second section tag do the following:
+        + Make a h2 that says "Contact Info"
+        + Underneath the h2, make an unordered list that contains three elements: "Email: Youremail@address.com", "Github: github.com/YourGithubProfile", and "Portfolio: coming soon". 
+            + Make the part before the colon bold. e.g. "Email:" bold, but the text after it should not be bold
+            + Make the content after "Github:" a link. e.g. github.com/YourGithubProfile should be a link
+            + Make the content after "Portfolio:" (e.g. "coming soon") a link that points to "#"
+
 * If your forgot how to write the html tags, you can reference all html tags here https://developer.mozilla.org/en-US/docs/Web/HTML/Element
 * Do not use any CSS
 * Commit code and push to github
 
-* **Bonus**
-
-    + Since you are not allowed to use CSS, figure out which HTML attributes you have to use to incorporate colors. Will adding those attributes still be valid html? Which doctype would you have to use to make it valid html?
 
 ### 7. Partner Do (10 minutes)
 
@@ -210,28 +221,62 @@ It won't look different.
 + Discuss CSS
     + What is CSS
     + What is a style sheet
-  + inline vs internal vs external
+        + inline vs internal vs external
   + ID vs Class
     + Where id's and classes go in the html
     + How id's and classes are is written in the css
-  + Show basic styling examples for   
+  + Explain basic styling properties  
     + font-family
     + font-weight
     + text-align
     + line-height
-    + color
-    + background-color
+    + color (uses hex, rgb, and words e.g. white)
+    + background-color ( uses hex, rgb/rgba, and words e.g. red)
+    + padding (talk about short hand e.g. it goes clockwise: top right bottom left)
+    + margin (go over margin: 0 auto; for centering so they can use it in the exercise)
     + border
+    + width
+    + height
+    + floats (briefly discuss so they can use it in the exercise)
 
 * Show an image on the projector of what they need to code out in the student exercise
+
+* [This is the Exercise](1.2-exercises/1.2.9-in-class-exercise.html)
 
 ### 9. Student Do (20 minutes)
 
 * Make a folder called `css` using terminal
 * Inside the `css` folder make a file called `style.css` using terminal
 * Git commit and push this new file to Github
-* Reference the `style.css` in your `sample-page.html` file
+* Reference the `style.css` in your `student-bio.html` file
 * Style the example on the projector
+    + Add a class called "container" on the `main` tag
+    + Add an id called "main-bio" for the first `section` tag
+    + Add an id called "contact-info" for the second `section` tag
+    + Add an id called "bio-image" for the bio image
+* Style specs
+    + body
+        + The background color is `#efeee7`
+        + The font used `"Georgia",Times New Roman,Times,serif;`
+        + The font color is `#333333`
+        + Be sure to zero out the body margins and padding so the page is flush to the top of the page
+    + header
+        + The background color is `#d21034`
+    + h1
+        + The background color is `#333333`, try to figure out the font color
+        + The font size is `28px`
+        + Look at the example on the screen and eyeball the padding and/or margins and positioning of the text. 
+    + h2
+        + The font size is `24px`
+    + Make the container have a width of 1024 pixels and center it
+    + Make #main-bio, #contact-info, #bio-image all `float: left`
+    + Make the #bio-image have a width of 200 pixels
+    + Be sure to include alt text in all images
+    + #main-bio should have a width of `70%`
+        + Add margins to the image so there is distance between it and the bio text
+    + #content-info should have a width of `30%`
+    + Adjust the line height so it is 1.5 times the size of the font
+
 * If your forgot how to write the css properties, you can reference all css properties here https://developer.mozilla.org/en-US/docs/Web/CSS/Reference
 * Git commit and push this new file to Github
 
