@@ -1,3 +1,16 @@
+# Students and Lesson Plans
+
+* don't give lesson plans to students
+		* it'll ruin the magic
+
+* have lesson plans open on your phone/tablet so you can refer to it during the class and also have it open on your computer but not visible to students (so you can copy and paste stuff from it to them on slack)
+
+* during class you'll have Sublime Text open on your screen for the most of it while also referring to things on Google.
+
+# Public and Lesson Plans
+
+* never share lesson plans with anyone outside of Trilogy Education Services
+
 # Lesson Plan Goal
 * Goal of lesson plan: Get every single person involved at the sametime for the majority of class! 
 

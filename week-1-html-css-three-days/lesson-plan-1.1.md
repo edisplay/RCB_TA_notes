@@ -23,7 +23,7 @@ Zen of Coding
 ALL or they won't be able to do the homework.
 ```
 
-# Objectives (Slack out to students, have unique students read each one and Instructor makes a comment after each one being read)
+# Objectives (Slack out to students, have unique students read each one and Instructor makes a comment after each one is read)
 
 * Students will get to know their classmates, Instructor, TA's, and Support Team.
 * Students and Instructors/TAs will resolve any issues regarding pre-work / setting up computers.
@@ -31,31 +31,42 @@ ALL or they won't be able to do the homework.
 * Students will use common Terminal (Mac) / Git Bash (Windows) commands to set up their folder/file structure to create their first HTML page.
 * Students will use common Terminal (Mac) / Git Bash (Windows) commands for web development.
 * Students will set up a basic HTML document.
-* Students will open up Chrome DevTools and use Inspector.
 
 ----
 
-### 1. Instructor Do (35 minutes)
-* Welcome all the students to the class.
+### 1. Instructor Do (40 minutes)
+* Welcome all the students to the class. 
+* Slack out the objectives to the students, have unique students read each one and then you make a comment after each one is read
 * Introduce yourself, the TA's, and Support Team (Dan S, Student Success, Career Coach)
 * Have all the students give a quick intro consisting of:
-  + What their career background is.
-  + What they want to accomplish in this course.
-  + Where are they coming from geographically.
+    + What their career background is.
+    + What they want to accomplish in this course.
+    + Where are they coming from geographically.
 * If there is time remaining, play some games to fill up the time so the students become better friends/colleagues:
-  + Have the students get into groups of 4 or 5 and have each group assign one person as the leader to write down or type 1 interest and 1 bad movie they last watched from each member of the group.
-  + Have the group leaders read out the names of each member, their interest and last bad movie they watched.
+    + Have the students get into groups of 4 or 5 and have each group assign one person as the leader to write down or type 1 interest and 1 bad movie they last watched from each member of the group.
+        + Have the group leaders read out the names of each member, their interest and last bad movie they watched.
 
 ----
 
 ### 2. Instructor Do (20 minutes)
+* Google timer, set it to 20 minutes, put your volume up
+
 * Engage the students to see who has any pre-work issues.
 * TA's and Instructors will assist those students who need help (WiFi connection, Sublime Text, etc.).
 
+* If there are still issues, let students know that you and TAs are available for 30 minutes after class and 45 minutes before the next class
+
 ----
 
-### 3. Instructor Do (10 minutes)
+### 3. Instructor Do (15 minutes)
+
+* Quickly go over this - don't rant on every single technology - if students have questions direct them to the parking lot
+
 * Discuss the technologies that will be covered throughout the course and gauge the students to see who is familiar with what.
+
+* Slack the following out to students
+
+```
   + The Browser
     + HTML
     + CSS
@@ -93,6 +104,7 @@ ALL or they won't be able to do the homework.
     + Data Structures
     + Sorting Algorithms
     + Design Patterns
+```
 
 ----
 
@@ -118,7 +130,7 @@ ALL or they won't be able to do the homework.
         + Full Stack Project (server + database + front end)
 
 ----
-Break (15 minutes)
+###### Break (15 minutes) 100 minutes went by including break
 ----
 
 ### 5. Instructor do (15 minutes)
@@ -172,52 +184,64 @@ Break (15 minutes)
 ----
 
 ### 7. Student do (5 minutes)
-* Tell the students to discuss with the person next to them what they just did. 
+> Discuss with the person next to you what you just did.
 
-"You are responsible for the people around you understanding what just happened."
+> You are responsible for the people around you understanding what just happened.
 
-"Everyone you should be talking now. Turn to your partners and talk."
+> Everyone you should be talking now. Turn to your partners and talk.
 
 ----
+
+### 8. Everyone do (5 minutes)
+* *briefly call on one person to go over the previous exercise*
 
 ### 8. Instructor Do (15 minutes)
 
-* Ask the class how they should start setting up their HTML document.
-  * In your newly created folder and HTML file, set up the HTML file with the proper structure.
+> How should you set up an HTML page?
 
-  * And code this out.
+Answer:
 
-  * After done. Commit, Push up to your in class code github repo, link students to it. Explain briefly what you done did (southern accent) through the process. *
+```
+The <!DOCTYPE html> declaration must be the very first thing in your HTML document, before the <html> tag.
 
-  ```html
-  <!DOCTYPE html>
+The <!DOCTYPE html> declaration is not an HTML tag; it is an instruction to the web browser about what version of HTML the page is written in.
+```
+
+1. *In your newly created folder and HTML file, set up an HTML file with the proper structure (located below).*
+
+2. *code the below out.*
+
+3. *After done, Stage, Commit and Push up to your in class code github repo, link students to the code. Explain briefly what you did through the process.*
+
+```html
+<!DOCTYPE html>
   <html>
-      <head>
-        <title>My First Page</title>
-      </head>
-      <body>
-        <h1>Hello World!</h1>
-        <img src="http://static.comicvine.com/uploads/original/12/128399/2509558-arts-tron-props-584.jpg" alt="image" />
-        <!-- Absolute path-->
-        <a href="any_url_you_want" target="_blank">Opens new tab</a>
-        <!----------------->
-        <br>
-        <!--Relative Path-->
-        <strong><a href="local_file.html">This is a bold link</a></strong>
-        <!----------------->
-        <br>
-        <!--Stub-->
-        <a href="#">This is a stub, goes no where, for now</a>
-        <!-------->
-      </body>
-  </html>
-  ```
+    <head>
+      <title>My First Page</title>
+    </head>
+    <body>
+      <h1>Hello World!</h1>
+      <img src="http://static.comicvine.com/uploads/original/12/128399/2509558-arts-tron-props-584.jpg" alt="image" />
+      <!-- Absolute path-->
+      <a href="any_url_you_want" target="_blank">Opens new tab</a>
+      <!----------------->
+      <br>
+      <!--Relative Path-->
+      <strong><a href="local_file.html">This is a bold link</a></strong>
+      <!----------------->
+      <br>
+      <!--placeholder link-->
+      <a href="#">This is a placeholder link, goes no where, for now</a>
+      <!-------->
+    </body>
+</html>
+```
 
 ----
 
-### 9. Students Do (20 minutes)
+### 9. Students Do (25 minutes)
 
-* always slack out student exercises and display them on the screen + have students read out the exercise to the class + google timer and set the timer appropriately and put the sound on your computer up. Make them feel the pressure. * 
+* always slack out student exercises and display them on the screen + have students read out the exercise to the class + google timer and set the timer to the amount above and turn up the sound on your computer. Make them feel the pressure. * 
 
 ```
 In a new HTML file, create the basic structure of an HTML document and include the following in it:
@@ -226,46 +250,22 @@ In a new HTML file, create the basic structure of an HTML document and include t
   * H1 tag with a title of your choice
   * Embed an image
   * Create the following three links on your page:
-    * One link opens a new tab when clicked on.
+    * One link that is target="_blank" so that it opens a new tab when clicked on.
     * Make the second link bold.
-    * Stub the third link so it goes nowhere.
+    * Make the third link a placeholder so it goes nowhere.
 
 Bonus:
 
-* Create an ordered list.
-* Create an unordered list.
-* Create a table to organize information.
-* Use an alternate way of separating links without the line breaks.
-* Embed a Youtube video.
+* Create an ordered list of steps to make a sandwich.
+* Create an unordered list of 5 bands/musicians you like.
+* Create a table with 2 columns (animal class, animal name) and have 4 rows of animals 
+* Use an alternate way of separating links without line breaks.
+* Embed a Youtube video of your favorite band/musician.
 ```
 
 ----
+### 10. Everyone Do (5 minutes)
 
-### 10. Instructor Do (10 minutes)
-
-* Inspect your newly created HTML files with Chrome DevTools.
-
-* Right-click on any element inside the HTML page and select 
-the `Inspect` option.
-
-* Navigate to the `Elements` tab and focus specifically on the HTML markup inside.
-
-* Hover over the HTML markup and observe the page as it highlights the corresponding rendered parts.
+* *go around the room and go over the previous exercise*
 
 ----
-
-### 11. Everyone Do (10 minutes)
-
-* Direct students to look at the `Elements` tab specifically and hover over the various HTML elements and have them watch it highlight to it's corresponding rendered part in the page.
-
-* Discuss with students as actions are being performed.
-
-----
-
-### 12. Students Do (10 minutes)
-
-* Right-click on any element in their newly created HTML file and click on the `Inspect` option.
-
-* Navigate to the `Elements` tab and focus specifically on the HTML markup inside.
-
-* Hover over the HTML markup and observe the page as it highlights the corresponding rendered parts.

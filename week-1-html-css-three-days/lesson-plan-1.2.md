@@ -26,12 +26,43 @@ ALL or they won't be able to do the homework.
 
 # Objectives (Slack out to students, have unique students read each one and Instructor makes a comment after each one being read)
 
+* Students will open up Chrome DevTools and use Inspector.
 * Students will the importance of Version Control (Git) and how to use it
 * Students will learn how to make a basic html document
 * Students will understand basic html tags and when to use them
 * Students will learn how to make and implement basic CSS styling
 
 ----
+
+### 10. Instructor Do (10 minutes)
+
+* Inspect the HTML file with with Chrome DevTools.
+
+* Right-click on any element inside the HTML page and select 
+the `Inspect` option.
+
+* Navigate to the `Elements` tab and focus specifically on the HTML markup inside.
+
+* Hover over the HTML markup and observe the page as it highlights the corresponding rendered parts.
+
+----
+
+### 11. Everyone Do (10 minutes)
+
+* Direct students to look at the `Elements` tab specifically and hover over the various HTML elements and have them watch it highlight to it's corresponding rendered part in the page.
+
+* Discuss with students as actions are being performed.
+
+----
+
+### 12. Students Do (10 minutes)
+
+* Right-click on any element in their newly created HTML file and click on the `Inspect` option.
+
+* Navigate to the `Elements` tab and focus specifically on the HTML markup inside.
+
+* Hover over the HTML markup and observe the page as it highlights the corresponding rendered parts.
+
 
 ### 1. Instructor Do (15 minutes)
 
