@@ -195,7 +195,7 @@ ALL or they won't be able to do the homework.
 ### 8. Everyone do (5 minutes)
 * *briefly call on one person to go over the previous exercise*
 
-### 8. Instructor Do (15 minutes)
+### 9. Instructor Do (15 minutes)
 
 > How should you set up an HTML page?
 
@@ -239,7 +239,7 @@ The <!DOCTYPE html> declaration is not an HTML tag; it is an instruction to the 
 
 ----
 
-### 9. Students Do (25 minutes)
+### 10. Students Do (25 minutes)
 
 * always slack out student exercises and display them on the screen + have students read out the exercise to the class + google timer and set the timer to the amount above and turn up the sound on your computer. Make them feel the pressure. * 
 
@@ -264,7 +264,7 @@ Bonus:
 ```
 
 ----
-### 10. Everyone Do (5 minutes)
+### 11. Everyone Do (5 minutes)
 
 * *go around the room and go over the previous exercise*
 

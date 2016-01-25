@@ -1,0 +1,102 @@
+<!doctype html>
+<html>
+	<head>
+		<title>HTML Tag Structure</title>
+
+		<style type="text/css">
+			* {
+				padding: 10px;
+				margin: 10px;
+				box-sizing: border-box;
+				font: 300 18px/30px Georgia, serif;
+			}
+			body {
+				padding: 0;
+				margin: 0;
+			}
+
+			header {
+				background: #ddd;
+			}
+			nav {
+				background: #eee;
+			}
+			section#main {
+				background: #ccc;
+				width: 65%;
+				float: left;
+			}
+			section#side {
+				width: 30%;
+				background: #ccc;
+				float: right;
+			}
+			article {
+				background: #eee;
+				overflow: auto;
+			}
+			aside {
+				width: 50%;
+				float: right;
+				background: #aaa;
+				margin-top: 0;
+			}
+			footer {
+				background: #999;
+			}
+			h1, h2 {
+				background: #eee;
+			}
+			p {
+				background: #ddd;
+			}
+			.clearfix {
+				clear: both;
+				margin: 0; 
+				padding: 0;
+			}
+		</style>
+	</head>
+	<body>
+		&lt;body&gt;
+		<header>
+			&lt;header&gt;
+			<nav>
+				&lt;nav&gt;
+			</nav>
+		</header>
+
+		<section id="main">
+			&lt;section&gt;
+
+			<article>
+				&lt;article&gt;
+
+				<header>
+					&lt;header&gt;
+					<h1>
+						&lt;h1&gt;
+					</h1>
+				</header>
+				<aside>
+					&lt;aside&gt;
+				</aside>
+				<p>&lt;p&gt;</p>
+
+			</article>
+		</section>
+		<section id="side">
+			&lt;section&gt;
+			<h2>
+				&lt;h2&gt;
+			</h2>
+			<p>&lt;p&gt;</p>
+		</section>
+
+		<div class="clearfix"></div>
+
+		<footer>
+			&lt;footer&gt;
+		</footer>
+	</body>
+</html>

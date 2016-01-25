@@ -47,8 +47,8 @@ ALL or they won't be able to do the homework.
     + What it is 
     + Why it is important
 * Demonstrate git commands
-    + `git add`
-    + `git commit`
+    + `git add filename` vs `git add .`
+    + `git commit -m "Commit Message"`
     + `git push`
     + `git pull`
 
@@ -162,48 +162,126 @@ ctrl+j
 * *Go over how to write the following tags*
     + Core tags
         + doctype
+                + HTML5  = `<!DOCTYPE html>`
+                + Older doctypes found [here](http://www.w3schools.com/tags/tag_doctype.asp)
         + html
+                + `<html> </html>`
         + head
+                + `<head></head>`
         + title
+                + `<title></title>`
         + body (mention how browsers input their own styling and by default the body tag has margins)
+                + `<body></body>
+        +basic structure looks like this
+                ```html
+                <!doctype html>
+                <html>
+                    <head>
+                        <title>Title of Page</title>
+                    </head>
+                    <body>
+
+                    </body>
+                </html>
+                ```
     + Other tags
         + headings (h1, h2, h3 etc) and when to use them
+            + `<h1>Heading 1</h1>`
         + paragraphs
+            + `<p>Paragraph Tag</p>`
         + anchors
+            + `<a href="http://www.google.com">Google</a>`
         + strong vs b
+            + `<strong>Important message that appears bold in browsers</strong>` has semantic meaning signifying importance. Browsers display this as bold
+                + `<b>Unimportant message that appears bold in browsers</b>`
+
         + unordered/ordered lists
+                ```html
+                <ul>
+                    <li>Unordered list item</li>
+                    <li>Unordered list item</li>
+                </ul>
+
+                <ol>
+                    <li>Ordered list item</li>
+                    <li>Ordered list item</li>
+                </ol>
+                ``` 
         + divs
+            + `<div>Division of content</div>`
         + img
-        + tables - thead, tbody, tr, td, th
-        + html5 tags - header, nav, footer, article, section, main
-        + form
-        + label
+            + `<img src="url to image path">`
         + br
-        + input - types - email, text, phone etc
+            + `<br>`
+        + tables - thead, tbody, tr, td, th
+            ```html
+            <table>
+                <thead>
+                    <tr>
+                        <th>Table Heading</th>
+                        <th>Table Heading</th>
+                    </tr>   
+                </thead>  
+                <tbody>
+                    <tr>
+                        <td>Table column content</td>
+                        <td>Table column content</td>
+                    </tr>   
+                </tbody>      
+            </table>
+            ```
+        + html5 tags - header, nav, footer, article, section, main
+            + `<header></header>` - [description](http://www.w3schools.com/tags/tag_header.asp)
+            + `<nav></nav>` - [description](http://www.w3schools.com/tags/tag_nav.asp)
+            + `<footer></footer>` - [description](http://www.w3schools.com/tags/tag_footer.asp)
+            + `<article></article>` - [description](http://www.w3schools.com/tags/tag_article.asp)
+            + `<section></section>` - [description](http://www.w3schools.com/tags/tag_section.asp)
+            + `<aside></aside>` - [description](http://www.w3schools.com/tags/tag_aside.asp)
+            + [HTML structure example](html5-tag-structure.html)
+        + label
+            + `<label for="input-id"></label>`
+        + input - types - email, text, phone, submit etc
+            + `<input type="text">`
         + textarea
-        + talk about attributes for elements
-                + alt
-                + class
-                + id
-                + value
-                + for
+            + `<textarea></textarea>`
+        + form
+            ```html
+            <form>
+                <label for="first-name">First Name</label>
+                <input type="text" id="first-name" name="first-name">
+
+                <textarea></textarea>
+
+                <input type="submit">
+            </form>
+
+            ```
+        + HTML attributes for elements
+                + `alt="Alternate Text"` - used on the img tag to describe the image
+                + `class="class-name"` - used to idenfity multiple elements
+                + `id="id-name"` - used to identify one element
+                + `for="form-elem-id"` - used to associate the label with the input or text area
++ HTML comments
+    + `<!-- comment -->` 
+            + In Sublime text you can type `command + /` on the line or a selected section to comment it out
 
 ### 6. Student Do (20 minutes)
-* *Show [this html file](1.2-exercises/1.2.6-in-class-exercise.html) on the projector. It is what the students must code out in this exercise.*
+* *Show [this html file](in-class-exercises-1.2/1.2.6-in-class-exercise.html) on the projector. It is what the students must code out in this exercise.*
 
 * *Slack this out*
 
 * Make a new file called `student-bio.html` using terminal
 * Stage, commit, and push to first-week-repo
 * Inside your `student-bio.html` file do the following:
-    + Make a `header` tag, inside the header put an image "LINK TO IMAGE FILEPATH" 
+    + Make a `header` tag, inside the header, make an img tag that uses this image:
+    https://github.com/RutgersCodingBootcamp/All-Classwork-Homework/blob/master/week-1-html-css-git-heroku/in-class-exercises-1.2/RutgersBanner.png 
         + The `alt` text for the image should read "Rutgers Coding Bootcamp"
     + Underneath the image (and inside the `header` tag) make a `h1` tag that says "Student Bio"
-    + Below the header, make a `main` tag
-        + Inside this `main` tag make two `section` tags
+    + Below the header, make a `div` tag
+        + Inside this `div` tag make two `section` tags
     + Inside the first `section` tag do the following: 
         + Make an `h2` that contains your name
-        + Underneath the `h2`, make an image tag. Include an image of yourself or use a placeholder http://placehold.it/200x200
+        + Underneath the `h2`, make an image tag. Include an image of yourself or use a placeholder http://placehold.it/200x200 - be sure to include alt text
         + Undernearth the image tag, make a paragraph (or two) and write a short bio about yourself. You don't have to overthink this. Just something quick. If you can't think of anything right now you can use some placeholder text found http://www.lipsum.com/
     + Inside the second `section` tag do the following:
         + Make a `h2` that says "Contact Info"
@@ -231,10 +309,12 @@ ctrl+j
     + What is CSS
     + What is a style sheet
         + inline vs internal vs external
-        + explain the order of which the CSS is written is important. Whatever CSS property is closest to the element is the most powerful (e.g. inline is more powerful than internal, internal is more powerful than external, etc.)
+        + Explain that the order of which the CSS is written is important. Whatever CSS property is closest to the element is the most powerful (e.g. inline overrides internal, internal overrides external, etc.)
   + ID vs Class
     + Where id's and classes go in the html
     + How id's and classes are written in the css
+    + Classes are used for multiple elements on a page
+    + Id's are used for one element on a page only
   + Explain basic styling properties  
     + font-family
     + font-weight
@@ -248,8 +328,11 @@ ctrl+j
     + width
     + height
     + floats (briefly discuss so they can use it in the exercise)
++ CSS comments
+    + `/* comment */`
+        + In Sublime text you can type `command + /` on the line or a selected section to comment it out
 
-* Show [this html file](1.2-exercises/1.2.9-in-class-exercise.html) on the projector. It is what the students must code out in the next exercise.
+* Show [this html file](in-class-exercises-1.2/1.2.9-in-class-exercise.html) on the projector. It is what the students must code out in the next exercise.
 
 
 ### 9. Student Do (20 minutes)
@@ -259,7 +342,7 @@ ctrl+j
 * Stage, commit, and push this code to Github
 * Reference the `style.css` in your `student-bio.html` file
 * Style the example on the projector
-    + Add a class called "container" on the `main` tag
+    + Add a class called "container" on the `div` tag
     + Add an id called "main-bio" for the first `section` tag
     + Add an id called "contact-info" for the second `section` tag
     + Add an id called "bio-image" for the bio image

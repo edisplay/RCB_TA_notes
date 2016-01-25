@@ -23,7 +23,12 @@ Install npm packages
 npm install prompt --save
 npm install mysql --save
 ```
+Start mySQL server
+`net start mysql`
+Make sure you are Admin when start the mySQl server
+And make sure you have the correct instance name my instance name is `mysql`
 
+*Importing the database
 launch: MySQL 5.7 Command Line Client
 enter your password
 ```
@@ -117,7 +122,10 @@ Nodemon doesn't play nice with prompt so beware if you are testing with nodemon
 		* calls the function `prompt.get()` with two inputs
 			* first input: an array of all strings `->`, `name`, `type`, `age`
 			* second input: an anonymous function with an input (`err`, `result`)
-				*  call the function `connection.query()` with a string in the form of a mySQL insert command
+				*  call the function `connection.query()` with a string in the form of a mySQL insert command into the database based on the user's input into the correct table
+
+				- [x] *Hint: Check the `hw_readme.md` table for what the database might need, also what you asked the user for input*
+
 					* call the function `currentScope.menu()`
 					* call the function `currentScope.promptUser()`
 
@@ -134,7 +142,126 @@ Nodemon doesn't play nice with prompt so beware if you are testing with nodemon
 		* console logs Enter (O): ------> to Count every animal in zoo with the same type!
 		* console logs Enter (Q): ------> to Quit to main menu!
 
-		
+	* The view function
+		* Create a function inside of `zoo` named `add` with one input name it `input_scope`
+		* Create a variable named `currentScope` set it to `input_scope`
+		* console log Please choice what you like to visit!
+		* calls the function `prompt.get()` with two inputs
+			* first input: an array of all strings `->`, `visit`
+			* second input: an anonymous function with an input (`err`, `result`)
+				* if the `result.visit` == "Q"
+					-call the `currentScope.menu()` function
+				* else if the `result.visit` == "O"
+					-call the `currentScope.type(input_scope)` function
+				* else if the `result.type` == "I" 
+					-call the `currentScope.type(input_scope)` function
+				* else if the `result.animId` == "N"
+					-call the `currentScope.name(input_scope)` function
+				* else if the `result.name` == "A"
+					-call the `currentScope.all(input_scope)` function
+				* else if the `result.all` == "C"
+					-call the `currentScope.care(input_scope)` function
+				* else
+					- console log Sorry didn't get that, come again?
+					- call `currentScope.visit()`
+					- call `currentScope.view(currentScope)`
+
+	* The type function
+		* Create a function inside of `zoo` named `type` with one input name it `input_scope`
+		* Create a variable named `currentScope` set it to `input_scope`
+		* console log Enter animal type to check out many those we got.
+		* calls the function `prompt.get()` with two inputs
+			* first input: an array of all strings `->`, `animal_type`
+			* second input: an anonymous function with an input (`err`, `result`)
+				*  call the function `connection.query()` with a string in the form of a mySQL select from and where command, all the animal of the user inputed type from the correct table
+					* call the function `currentScope.visit()`
+					* call the function `currentScope.view(currentScope)`
+
+	* The care function
+		* Create a function inside of `zoo` named `care` with one input name it `input_scope`
+		* Create a variable named `currentScope` set it to `input_scope`
+		* console log Enter city name NY/SF.
+
+		- [x] *Hint: Notice that this database has 2 tables and are going into the realms of dealing with both database at the same time*
+
+		* calls the function `prompt.get()` with two inputs
+			* first input: an array of all strings `->`, `city_name`
+			* second input: an anonymous function with an input (`err`, `result`)
+				*  call the function `connection.query()` with a string in the form of a mySQL select the number of animal that all the careTakers from a city takes care of
+					* call the function `currentScope.visit()`
+					* call the function `currentScope.view(currentScope)`
+
+	* The animId function
+		* Create a function inside of `zoo` named `animId` with one input name it `input_scope`
+		* Create a variable named `currentScope` set it to `input_scope`
+		* console log Enter ID of the animal you want to visit.
+		* calls the function `prompt.get()` with two inputs
+			* first input: an array of all strings `->`, `animal_id`
+			* second input: an anonymous function with an input (`err`, `result`)
+				*  call the function `connection.query()` with a string in the form of a mySQL select from and where command, the target animal of the user inputed id from the correct table
+					* call the function `currentScope.visit()`
+					* call the function `currentScope.view(currentScope)`
+
+	* The name function
+		* similar to the animId function but finds the animal by name instead of id
+
+	* The all function
+		* similar to the type function but finds the count of total animals instead of count of total animals of a type
+
+	* The update function
+		* Create a function inside of `zoo` named `update` with one input name it `input_scope`
+		* Create a variable named `currentScope` set it to `input_scope`
+		* calls the function `prompt.get()` with two inputs
+			* first input: an array of all strings '--->','ID','new_name','new_age','new_type','new_careTaker_ID'
+			* second input: an anonymous function with an input (`err`, `result`)
+				*  call the function `connection.query()` with a string in the form of a mySQL updates the info on the animal finding it with a where animal_id
+					* call the function `currentScope.menu()`
+					* call the function `currentScope.promptUser()`
+
+	* The adopt  function
+		* Create a function inside of `zoo` named `adopt` with one input name it `input_scope`
+		* Create a variable named `currentScope` set it to `input_scope`	
+		* calls the function `prompt.get()` with two inputs
+			* first input: an array of all strings `->`, `animal_id`
+			* second input: an anonymous function with an input (`err`, `result`)
+				*  call the function `connection.query()` with a string in the form of a mySQL delete from and where command, the target animal of the user inputed id from the correct table and delete it
+					* call the function `currentScope.visit()`
+					* call the function `currentScope.view(currentScope)`
+
+	* The promptUser function
+		* Create a function inside of `zoo` named `promptUser` with no input
+		* create a varibale named `self` set it to `this`
+		* calls the function `prompt.get()` with two inputs
+			* first input: an array of all strings `input`
+			* second input: an anonymous function with an input (`err`, `result`)
+				* if the `result.visit` == "Q"
+					-call the `self.exit()` function
+				* else if the `result.visit` == "A"
+					-call the `self.add(self)` function
+				* else if the `result.animId` == "V"
+					-call the `self.visit()` function
+					-call the `self.view(self)` function
+				* else if the `result.name` == "D"
+					-call the `self.adopt(self)` function
+				* else
+					- console log Sorry didn't get that, come again?
+					- call `self.promptUser()`
+
+	* The exit function
+		* Create a function inside of `zoo` named `exit` with no input
+		* console log Thank you for visiting us, good bye~!
+		* call the `process.exit()` function
+
+	* The open function
+		* Create a function inside of `zoo` named `open` with no input
+		* call `this.welcome()`
+		* call `this.menu()`
+		* call `this.promptUser()`
+
+call the function `zoo.open()`
+
+
+
 
 # Copyright
 Rutgers Coding Boot Camp (C) 2016. All Rights Reserved.
