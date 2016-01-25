@@ -44,11 +44,28 @@ Right a formula in Google Sheets to list all the Presidents with a name that sta
 
 1. make a mysql db
 
-2. create a table of animals 
+2. create a table of pets with two columns: name, type, age
 
-3. 
+3. add 3 pets
 
-### 3. Student do
+4. select all of them 
+
+### 3. Student do 15 minutes
+
+1. make a mysql db
+
+2. create a table of candies with two columns: name, rating
+
+3. add 3 candies in
+
+4. select all of them 
+
+### 4. Instructor do 15 minutes
+
+
+### 5. Student do 15 minutes
+
+
 
 ###
 mysql> CREATE DATABASE animals;
