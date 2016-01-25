@@ -4,7 +4,7 @@ var connection = mysql.createConnection({
     host: 'localhost',
     user: 'root',
     password: '',
-    database: 'myTestDB'
+    database: 'zoo_db'
 });
 connection.connect(function(err) {
     if (err) {
@@ -39,29 +39,6 @@ console.log(sillyName, randomAnimal);
 //prompt is weird, wtf do not use nodemon to test~!!!
 //node index.js
 
-/*
-var pop = function(input) {
-	var taker = input;
-	for (var i=0; i < 100000; i++) {
-		var n = generateName() + "mon";
-		var a = animals();
-		var g = taker;
-		connection.query('INSERT INTO animal (careTaker_id,name,type,age) VALUES (?,?,?,?)', [taker,n,a,g], function(err, result) {	
-		if (err) throw err;
-			connection.commit(function(err) {
-		        if (err) { 
-		          connection.rollback(function() {
-		            throw err;
-		          });
-		        }
-		    });
-		});	
-	};
-}
-//pop(1);
-console.log("done insert");
-*/
-
 zoo = {
 	welcome: function() {
 		console.log("°º¤ø,¸¸,ø¤º°`°º¤ø,¸,ø¤°º¤ø,¸¸,ø¤º°`°º¤ø,°º¤ø,¸¸,ø¤º°`°º¤ø,¸,ø¤°º¤ø,¸¸,ø¤º°`°º¤ø,ø");
@@ -94,7 +71,7 @@ zoo = {
 		prompt.get(['--->','name','type','age'], function(err, result) {
 			//console.log(result.name, result.type, result.age);
 			//INSERT INTO animal (careTaker_id, name, type, age) VALUES (1, 'Bobo', 'Bear', 3) ;	  	
-			connection.query('INSERT INTO animal (careTaker_id,name,type,age) VALUES (?,?,?,?)', [1, result.name,result.type,result.age], function(err, result) {
+			connection.query('INSERT INTO animals (caretaker_id,name,type,age) VALUES (?,?,?,?)', [1, result.name,result.type,result.age], function(err, result) {
 			if (err) throw err;
 			});			
 			console.log("Thank you for adding this animal!");
@@ -151,7 +128,7 @@ zoo = {
 		console.log("Enter animal type to check out many those we got.");
 		console.log("--------------------------------------------------");
 		prompt.get(['--->','animal_type'], function(err, result) {
-			connection.query('SELECT COUNT(*) FROM animal WHERE type = ?',[result.animal_type], function(err, res) {
+			connection.query('SELECT COUNT(*) FROM animals WHERE type = ?',[result.animal_type], function(err, res) {
 			  if (err) throw err;
 			  	var t = res[0];
 			    console.log("Okay we got ", t, result.animal_type);
@@ -167,7 +144,7 @@ zoo = {
 		console.log("--------------------------------------------------");
 		prompt.get(['--->','city_name'], function(err, result) {
 			// connection.query('SELECT parent_tagid AS owner_id FROM '+dbname+'.iag_key_tag_relationships WHERE TYPE =2 AND tagid =  '+ voucher.voucher_id,
-			connection.query('SELECT COUNT(*) name FROM animal RIGHT JOIN careTaker ON animal.careTaker_id = careTaker.careTaker_id WHERE careTaker.city = ?',[result.city_name], function(err, res) {
+			connection.query('SELECT COUNT(*) name FROM animals RIGHT JOIN caretakers ON animals.caretaker_id = caretakers.id WHERE caretakers.city = ?',[result.city_name], function(err, res) {
 			  if (err) throw err;
 			    console.log("Okay we got ", res);
 			    console.log("--------------------------------------------------");
@@ -181,7 +158,7 @@ zoo = {
 		console.log("Enter ID of the animal you want to visit.");
 		console.log("--------------------------------------------------");
 		prompt.get(['--->','anim_id'], function(err, result) {
-			connection.query('SELECT * FROM animal WHERE animal_id = ?',[result.anim_id], function(err, res) {
+			connection.query('SELECT * FROM animals WHERE id = ?',[result.anim_id], function(err, res) {
 			  if (err) throw err;
 			    console.log("Here is the animal", res);
 			    console.log("--------------------------------------------------");
@@ -195,7 +172,7 @@ zoo = {
 		console.log("Enter name of the animal you want to visit.");
 		console.log("--------------------------------------------------");
 		prompt.get(['--->','anim_name'], function(err, result) {
-			connection.query('SELECT * FROM animal WHERE name = ?',[result.anim_name], function(err, res) {
+			connection.query('SELECT * FROM animals WHERE name = ?',[result.anim_name], function(err, res) {
 			  if (err) throw err;
 			    console.log("Here is the animal", res);
 			    console.log("--------------------------------------------------");
@@ -207,7 +184,7 @@ zoo = {
 	all: function(input_scope) {
 		var currentScope = input_scope;
 		//SELECT COUNT(*) FROM animal;
-		connection.query('SELECT COUNT(*) FROM animal', function(err, res) {
+		connection.query('SELECT COUNT(*) FROM animals', function(err, res) {
 		  if (err) throw err;
 		    console.log("Here is the total animal count", res);
 		    console.log("--------------------------------------------------");
@@ -221,7 +198,7 @@ zoo = {
 		console.log("--------------------------------------------------");
 		prompt.get(['--->','ID','new_name','new_age','new_type','new_careTaker_ID'], function(err, result) {
 			//console.log(result.new_name, result.new_age, result.new_careTaker_ID);
-			connection.query('UPDATE animal SET name=?,age=?,type=?,careTaker_id=? WHERE animal_id = ?', [result.new_name,result.new_age,result.new_type,result.new_careTaker_ID,result.ID], function(err, result) {
+			connection.query('UPDATE animals SET name=?,age=?,type=?,caretaker_id=? WHERE id = ?', [result.new_name,result.new_age,result.new_type,result.new_careTaker_ID,result.ID], function(err, result) {
 			if (err) throw err;
 			});	
 			console.log("Thank you for updating this animal, would you like to do something else today?");
@@ -237,7 +214,7 @@ zoo = {
 		console.log("--------------------------------------------------");
 		prompt.get(['--->','animal_ID'], function(err, result) {
 			//DELETE FROM orders WHERE id_users = 1 AND id_product = 2 LIMIT 1
-			connection.query('DELETE FROM animal WHERE animal_id=?', [result.animal_ID], function(err, result) {
+			connection.query('DELETE FROM animals WHERE id=?', [result.animal_ID], function(err, result) {
 			if (err) throw err;
 			});	
 			console.log("Thank you for adopting this animal, would you like to do something else today?");
@@ -255,7 +232,7 @@ zoo = {
 			//data creation
 			if (result.input == 'C') {
 				//self.populate();
-				connection.query('SELECT COUNT(*) FROM animal', function(err, result) {
+				connection.query('SELECT COUNT(*) FROM animals', function(err, result) {
 				console.log(result);
 				if (err) throw err;
 				self.promptUser();
