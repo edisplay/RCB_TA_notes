@@ -10,13 +10,53 @@
 
 * It will be a command line node app that will take in prompted text as an input.
 
+### Summary 
 
-## Part 0: Setup
+mySQL hw 
+C-R-U-D/ node mySQL app/ commandline 
+
+~1,000,000 rows
+one database
+indexed
+2 Tables
+
+1. see all the records 
+2. delete a single record based off the primary key 
+3. update a single record based off the primary key 
+4. delete a record based off the primary key 
+5. return a certain amount of records based off a where on a certain column 
+6. two table left joins
+
+DB breakdown: Database structure
+
+Table: careTaker
+
+| pk | Zoo | name  |
+|----|-----|-------|
+|  1 |  NY |   John|
+|  2 |  NY |   Mary|
+|  3 |  SF |   Sara|
+
+Table: animal
+
+| pk | CareTaker_fk |  name | Type  | Age |
+|----|--------------|-------|-------|-----|
+|  1 |      1       |  Bobo |  Bear |  4  |
+|  1 |      1       |  Link |  Lion |  3  |
+|  1 |      2       |  CiCi |  Cat  |  1  |
+
+
+### Part 0: Setup
 
 Make sure to download or aquire the file
 ```
 zooDB.sql
 ```
+
+* download here
+		* https://drive.google.com/file/d/0B3LJTwQLW6DoZXAzczc5VWtUMjg/view?usp=sharing
+
+
 Install npm packages
 
 ```
@@ -40,7 +80,8 @@ Example command:
 ```
 C:/xampp/mysql/bin/mysql –u root -p myTestDB < C:/zooDB.sql
 ```
-In this example mySQL is connect via XAMPP and mysql database is located with in path:
+
+In this example mySQL is connected via XAMPP and mysql database is located within path:
 
 -u for your mySQL user name, my user name "root", it may also ask for your password.
 
@@ -58,7 +99,7 @@ You should get back 99 rows in set.
 
 With the database imported, you are ready to create the node app.
 
-## Part 1: Creating the Node.js connection to mySQL
+### Part 1: Creating the Node.js connection to mySQL
 
 * create a file named in side of the app folder if you already have one
 ```
@@ -96,7 +137,7 @@ node index.js
 
 Nodemon doesn't play nice with prompt so beware if you are testing with nodemon
 
-## Part 2: Creating the zoo object
+### Part 2: Creating the zoo object
 
 * Start by creating an object `zoo`
 	* The welcome message function
@@ -264,4 +305,4 @@ call the function `zoo.open()`
 
 
 # Copyright
-Rutgers Coding Boot Camp (C) 2016. All Rights Reserved.
+Coding Boot Camp (C) 2016. All Rights Reserved.
