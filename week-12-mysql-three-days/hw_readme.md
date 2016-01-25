@@ -1,11 +1,10 @@
 mySQL hw 
-C-R-U-D
-node mySQL app
-commandline 
+C-R-U-D/ node mySQL app/ commandline 
 
-1,000,000 rwos
+~1,000,000 rows
 one database
 indexed
+2 Tables
 
 1. see all the records 
 2. delete a single record based off the primary key 
@@ -14,9 +13,10 @@ indexed
 5. return a certain amount of records based off a where on a certain column 
 6. two table left joins
 
-DB breakdown:
+DB breakdown: Database structure
 
 Table: careTaker
+
 | pk | Zoo | name  |
 |----|-----|-------|
 |  1 |  NY |   John|
@@ -24,6 +24,7 @@ Table: careTaker
 |  3 |  SF |   Sara|
 
 Table: animal
+
 | pk | CareTaker_fk |  name | Type  | Age |
 |----|--------------|-------|-------|-----|
 |  1 |      1       |  Bobo |  Bear |  4  |
