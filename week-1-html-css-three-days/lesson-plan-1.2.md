@@ -163,7 +163,7 @@ ctrl+j
     + Core tags
         + doctype
                 + HTML5  = `<!DOCTYPE html>`
-                + Older doctypes found [here](http://www.w3schools.com/tags/tag_doctype.asp)
+                + Older doctypes found [here](http://www.w3schools.com/tags/tag_doctype.asp){:target="_blank"}
         + html
                 + `<html> </html>`
         + head
@@ -231,14 +231,14 @@ ctrl+j
             </table>
             ```
         + html5 tags - header, nav, footer, article, section, main
-            + `<header></header>` - [description](http://www.w3schools.com/tags/tag_header.asp)
-            + `<nav></nav>` - [description](http://www.w3schools.com/tags/tag_nav.asp)
-            + `<footer></footer>` - [description](http://www.w3schools.com/tags/tag_footer.asp)
-            + `<article></article>` - [description](http://www.w3schools.com/tags/tag_article.asp)
-            + `<section></section>` - [description](http://www.w3schools.com/tags/tag_section.asp)
-            + `<aside></aside>` - [description](http://www.w3schools.com/tags/tag_aside.asp)
+            + `<header></header>` - [description](http://www.w3schools.com/tags/tag_header.asp){:target="_blank"}
+            + `<nav></nav>` - [description](http://www.w3schools.com/tags/tag_nav.asp){:target="_blank"}
+            + `<footer></footer>` - [description](http://www.w3schools.com/tags/tag_footer.asp){:target="_blank"}
+            + `<article></article>` - [description](http://www.w3schools.com/tags/tag_article.asp){:target="_blank"}
+            + `<section></section>` - [description](http://www.w3schools.com/tags/tag_section.asp){:target="_blank"}
+            + `<aside></aside>` - [description](http://www.w3schools.com/tags/tag_aside.asp){:target="_blank"}
 
-        + *Share this with the students: [HTML structure example](html5-tag-structure.html)*
+        + *Share this with the students: [HTML structure example](html5-tag-structure.html){:target="_blank"}*
 
         + label
             + `<label for="input-id"></label>`
@@ -268,7 +268,7 @@ ctrl+j
             + In Sublime text you can type `command + /` on the line or a selected section to comment it out
 
 ### 6. Student Do (20 minutes)
-* *Show [this html file](in-class-exercises-1.2/1.2.6-in-class-exercise.html) on the projector. It is what the students must code out in this exercise.*
+* *Show [this html file](in-class-exercises-1.2/1.2.6-in-class-exercise.html){:target="_blank"} on the projector. It is what the students must code out in this exercise.*
 
 * *Slack this out*
 
@@ -339,7 +339,7 @@ ctrl+j
 
 ### 9. Student Do (20 minutes)
 
-* *Show [this html file](in-class-exercises-1.2/1.2.9-in-class-exercise.html) on the projector. It is what the students must code out in the next exercise.*
+* *Show [this html file](in-class-exercises-1.2/1.2.9-in-class-exercise.html){:target="_blank"} on the projector. It is what the students must code out in the next exercise.*
 
 * *Slack this out*
 
@@ -357,7 +357,13 @@ ctrl+j
         + The background color is `#efeee7`
         + The font used `"Georgia",Times New Roman,Times,serif;`
         + The font color is `#333333`
-        + Be sure to zero out the body margins and padding so the page is flush to the top of the page
+        + Be sure to zero out the body margins and padding so the page is flush to the top of the page, like this:
+        ```
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        ```
     + header
         + The background color is `#d21034`
     + h1
@@ -366,7 +372,7 @@ ctrl+j
         + Look at the example on the screen and eyeball the padding and/or margins and positioning of the text. 
     + h2
         + The font size is `24px`
-    + Make the container have a width of 1024 pixels and center it
+    + Make the container have a width of 1024 pixels and center it. You do this using `margin: 0 auto;`
     + Make "#main-bio", #contact-info, #bio-image all `float: left`
     + Make the "#bio-image" have a width of 200 pixels
     + Be sure to include alt text in all images
