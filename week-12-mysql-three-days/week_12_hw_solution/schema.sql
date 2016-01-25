@@ -20,10 +20,44 @@ FOREIGN KEY(caretaker_id) REFERENCES caretakers(id),
 INDEX (type)
 ); 
 
+/* ----------------------------- */
+/* HOW WE POPULATED THE DATABASE */
+/* ----------------------------- */
 
 /*
-generate data from node into mysql
+//setup npm
+var animals = require('animals');
+var generateName = require('sillyname');
+var random = require('random-name')
+//console.log(random.first())
+*/
 
+/*
+var sillyName = generateName() + "mon";
+var randomAnimal = animals();
+console.log(sillyName, randomAnimal);
+*/
+
+/*
+connection.query('SELECT * FROM careTaker;', function(err, res) {
+  if (err) throw err;
+    console.log('Here is the keeper: ', res);
+});
+*/
+
+/*comment
+prompt is weird, do not use nodemon to test!!!
+*/
+
+/*
+node index.js
+*/
+
+/*comment
+generate data from node into mysql
+*/
+
+/*
 var pop = function(input) {
 	var taker = input;
 	for (var i=0; i < 100000; i++) {
@@ -42,7 +76,9 @@ var pop = function(input) {
 		});	
 	};
 }
+*/
 
-//pop(1);
+/*
+pop(1);
 console.log("done insert");
 */
