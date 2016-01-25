@@ -19,13 +19,38 @@ Intro to MySQL
 
 ### 1. Students do 20 minutes
 
-Open up google sheet
+* *slack out the following exercise to students*
 
-Columns: ID, 
+Part 1:
 
+Test whether MySQL works or not on your computer. If it doesn't, call over a TA/Instructor
 
+Part 2:
 
+Open up google sheet name it rutgers_presidents
 
+Columns: id, full_name, years_in_office, career_highlights
+
+Fill it in with 20 rows.
+
+reference: https://en.wikipedia.org/wiki/List_of_Rutgers_University_presidents
+
+Bonus: 
+Right a formula in Google Sheets to list all the Presidents with a name that starts with a vowel.
+
+### 2. Instructor do 15 minutes
+
+* talk about what a database is (it's just a bunch of google sheets. And you can use a programming language called SQL to query that data)
+
+1. make a mysql db
+
+2. create a table of animals 
+
+3. 
+
+### 3. Student do
+
+###
 mysql> CREATE DATABASE animals;
 ERROR 1044 (42000): Access denied for user ''@'localhost' to database 'animals'
 mysql> 
