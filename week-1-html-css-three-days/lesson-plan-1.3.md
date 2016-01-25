@@ -104,68 +104,105 @@ ALL or they won't be able to do the homework.
 3. In the Elements panel highlight the `<h1>` tag. Right click and select "Edit Text" OR you can double click on the text to edit it. Change the text to say "My Biography". Press "enter" to finalize your changes.
     * Observe what happens
 
-Bonus:
-  * Make a new `section` tag with an id of `#new` using Inspector
-  * Make your new section tag appear just below the #contact-info section
-  * Now make it appear below both #main-bio and #contact-info
-  * Make it have a `background-color` of red
+* Bonus:
+    * Make a new `section` tag with an id of `#new` using Inspector
+    * Make your new section tag appear just below the #contact-info section
+    * Now make it appear below both #main-bio and #contact-info
+    * Make it have a `background-color` of red
 
 ----
 
-### 5. Instructor Do (10 minutes)
+### 5. Instructor Do (15 minutes)
 
 * Discuss CSS in more detail
   + Concepts
-    + block vs inline elements
+    + block vs inline vs inline-block
     + box model
         + The CSS box model is essentially a box that wraps around every HTML element. It consists of: margins, borders, padding, and the actual content.
         + [box model example](css-box-model-visual.html)
-    + box-sizing
-
-* show an image on the projector of what they need to code out in the student exercise
-
-
-### 6. Student Do (10 minutes)
-
-* Make a new file called `box.html`
-* Inside the file make a div with an id called `box`
-* Using internal css (style tag in the `<head>` of the document), for example:
-  ```css
-  <style type="text/css">
-    #example-id {
-
-    }
-  </style>
-  ```
-* Style the `#box` in the following ways:
-    + background color of `#1E5792'
-    + width of 400 pixels wide
-    + height of 400 pixels tall
-    + `margin: 0 auto` so it is centered
+    + padding, margins, borders
+        + shorthand is clockwise (top, right, bottom, left), if there are only 3 values, then the last value (left), assumes the same value as the right side. If there is only one value, it applies to all sides.
+        + how padding and margins work on inline elements vs block elements
+        + css display property
+            + `display: block'
+            + `display: inline`
+            + `display: inline-block`
+            + `display: none`
 
 
-### 7. Instructor Do (15 minutes)
+### 6. Student Do (5 minutes)
+
+* *Show [this html file](in-class-exercises-1.3/box.html) on the projector. It is what the students must see.*
+
+* *Slack this out*
+
+* Calculate the width and height of the blue #box div
+```html
+#box {
+  background-color: #1E5792;
+  width: 400px;
+  height: 440px;
+  margin: 10px 30px 20px 50px;
+  color: #fff;
+  padding: 25px 10px 30px 20px;
+  border-style: solid;
+  border-width: 22px;
+  border-color: #113152;
+}
+```
+* Slack your answer
+* Remember: the margin and padding values are clockwise (top, right, bottom, left)
+* Remember: the border values apply to all 4 sides
+
+
+### 7. Instructor Do (5 minutes)
+
+Answer to previous exercise: The blue #box is 554 pixels wide, and 569 pixels tall
+
+```html
+* {
+  box-sizing: border-box;
+}
+```
+
+Pro-tip: Use the above snippet have the padding and border included in the element's total width and height. This makes styling a lot easier. Put this at the top of your css files.
+
+* *Slack this to students*
+
+```html
+* {
+  box-sizing: border-box;
+}
+```
+
+----
+
+### 7. Instructor Do (20 minutes)
 
 + Browser rendering for CSS and how it is different in each browser
-    + CSS Resets (http://meyerweb.com/eric/tools/css/reset/)
+    + CSS styles for Webkit (Chrome and Safari) http://stackoverflow.com/questions/6867254/browsers-default-css-for-html-elements
+    + CSS Styles for Firefox http://mxr.mozilla.org/mozilla-central/source/layout/style/html.css
+    
++ CSS Resets (http://meyerweb.com/eric/tools/css/reset/)
+    + CSS resets make styling more consistent across browsers
+    + You reference a css file before you reference your own style sheet, because of the order that CSS renders (remember that whatever CSS is closest to the element is the most dominant, you want your own styling to be more dominant than the reset file)
+
 + Styling properties
   + float
-  + display: none vs visibility: hidden
   + clear
   + overflow
-  + width
-  + margin
-  + padding
 
 ### 2. Student Do (20 minutes)
 
-Practice floats and box model margins / padding
+Practice floats
 
-* Inside your `floats.html` using terminal
-* Make another file called `floats.css`, reference this file in your `floats.html` file
-* git push to github
+* Inside your first-week-repo repository, make a file called `floats.html` using terminal
+* Inside floats.html, write the core tags for a basic html page (e.g. doctype, html, head, title, body)
+* Inside your `css` folder, make a file called `reset.css` and paste in the code from here http://meyerweb.com/eric/tools/css/reset/reset.css, reference this file in the head tag in your floats.html
+* Make another file inside your `css folder called `floats.css`, reference this file in the head tag in your `floats.html` file
+* Stage, commit, and push to github
 * Style the image on the projector
-* git push to github
+* Stage, commit, and push to github
 
 ### 3. Partner Do (10 minutes)
 
@@ -206,7 +243,7 @@ Practice positioning
  
 ----
 
-### 7. Instructor Do (10 minutes)
+### 7. Instructor Do (20 minutes)
 
 * Heroku setup
 
