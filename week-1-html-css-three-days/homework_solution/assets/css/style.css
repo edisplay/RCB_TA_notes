@@ -1,5 +1,3 @@
-@import url("reset.css");
-
 body {
 	background: url("../images/concrete_seamless.png");
 	font-size: 18px;
@@ -130,7 +128,7 @@ h3,
 
 /*main*/
 
-main {
+#main-container {
 	padding-top: 130px;
 }
 .main-section {

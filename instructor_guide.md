@@ -1,3 +1,32 @@
+# Students and Lesson Plans
+
+* don't give lesson plans to students
+		* it'll ruin the magic
+
+* have lesson plans open on your phone/tablet so you can refer to it during the class and also have it open on your computer but not visible to students (so you can copy and paste stuff from it to them on slack)
+
+* during class you'll have Sublime Text open on your screen for the most of it while also referring to things on Google.
+
+# Public and Lesson Plans
+
+* never share lesson plans with anyone outside of Trilogy Education Services
+
+# Your Computer Turns Off
+
+* Buy yourself time
+
+1. "<TA name> is going to slack out the code to the exercise I just went over to everyone. I want you all to spend the next 10 minutes explaining it to each other. I'm going to call on random people at the end. The explanations better be perfect, and if you're wrong, I'm holding you, AND the people around you accountable."
+
+2. "solve project euler problem 5, <TA name> will send you all a link on Slack. You have 20 minutes."
+
+# The Projector Stops Working
+
+* Improvise
+
+1. Start a Join.me session. Share your screen, have everyone mute their microphones. Share the link to the class.
+
+2. Above ^^ with Google Hangout. Have everyone mute and hide their webcam.
+
 # Lesson Plan Goal
 * Goal of lesson plan: Get every single person involved at the sametime for the majority of class! 
 
@@ -118,3 +147,6 @@
 * Check points = Questions you ask the student(s) to make sure they understand what's going on
 	* Bad check point: "Do you understand?"
 	* Good check point: "So in your own words, what does this line of code do?"
+
+# Copyright
+Rutgers Coding Boot Camp (C) 2015. All Rights Reserved.
