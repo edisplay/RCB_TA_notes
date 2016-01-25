@@ -10,15 +10,11 @@
 
 * It will be a command line node app that will take in prompted text as an input.
 
+* See demo of how this APP works
+
 ### Summary 
-
-mySQL hw 
 C-R-U-D/ node mySQL app/ commandline 
-
-~1,000,000 rows
-one database
-indexed
-2 Tables
+This homwork will exercise you ability to:
 
 1. see all the records 
 2. delete a single record based off the primary key 
@@ -31,7 +27,7 @@ DB breakdown: Database structure
 
 Table: careTaker
 
-| pk | Zoo | name  |
+| pk | Zoo | name  | 
 |----|-----|-------|
 |  1 |  NY |   John|
 |  2 |  NY |   Mary|
@@ -139,7 +135,7 @@ index.js
 	host: 'nameOfYourHost',
 	user: 'YourUserName',
 	password: 'YourPassword',
-	database: 'myTestDB'
+	database: 'zoo_db'
 	}
 
 * Call the function `connection.connect()` with a function as it's input
@@ -240,7 +236,7 @@ Nodemon doesn't play nice with prompt so beware if you are testing with nodemon
 		* calls the function `prompt.get()` with two inputs
 			* first input: an array of all strings `->`, `animal_type`
 			* second input: an anonymous function with an input (`err`, `result`)
-				*  call the function `connection.query()` with a string in the form of a mySQL select from and where command, all the animal of the user inputed type from the correct table
+				*  call the function `connection.query()` with a string in the form of a mySQL select from and where command, all the animals of the user inputed type from the correct table
 					* call the function `currentScope.visit()`
 					* call the function `currentScope.view(currentScope)`
 
@@ -254,7 +250,7 @@ Nodemon doesn't play nice with prompt so beware if you are testing with nodemon
 		* calls the function `prompt.get()` with two inputs
 			* first input: an array of all strings `->`, `city_name`
 			* second input: an anonymous function with an input (`err`, `result`)
-				*  call the function `connection.query()` with a string in the form of a mySQL select the number of animal that all the careTakers from a city takes care of
+				*  call the function `connection.query()` with a string in the form of a mySQL select the number of animals that all the caretakers from the specific user inputed city
 					* call the function `currentScope.visit()`
 					* call the function `currentScope.view(currentScope)`
 
@@ -281,7 +277,7 @@ Nodemon doesn't play nice with prompt so beware if you are testing with nodemon
 		* calls the function `prompt.get()` with two inputs
 			* first input: an array of all strings '--->','ID','new_name','new_age','new_type','new_careTaker_ID'
 			* second input: an anonymous function with an input (`err`, `result`)
-				*  call the function `connection.query()` with a string in the form of a mySQL updates the info on the animal finding it with a where animal_id
+				*  call the function `connection.query()` with a string in the form of a mySQL updates the info on the animal finding it with a where id is what the user inputed
 					* call the function `currentScope.menu()`
 					* call the function `currentScope.promptUser()`
 
@@ -326,8 +322,6 @@ Nodemon doesn't play nice with prompt so beware if you are testing with nodemon
 		* call `this.promptUser()`
 
 call the function `zoo.open()`
-
-
 
 
 # Copyright
