@@ -346,7 +346,7 @@ ctrl+j
 * Make a folder called `css` using terminal
 * Inside the `css` folder make a file called `style.css` using terminal
 * Stage, commit, and push this code to Github
-* Reference the `style.css` in your `student-bio.html` file
+* Reference the `style.css` in your `student-bio.html` file. You do this by placing `<link rel="stylesheet" type="text/css" href="css/style.css">` inside the `<head>` tag
 * Style the example on the projector
     + Add a class called "container" on the `div` tag
     + Add an id called "main-bio" for the first `section` tag
