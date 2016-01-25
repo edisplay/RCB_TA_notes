@@ -54,8 +54,7 @@ zooDB.sql
 ```
 
 * download here
-		* https://drive.google.com/file/d/0B3LJTwQLW6DoZXAzczc5VWtUMjg/view?usp=sharing
-
+		* https://drive.google.com/a/trilogyed.com/file/d/0Bz0Wzew04n0ub2NDSmxsZ201dkk/view?usp=sharing
 
 Install npm packages
 
@@ -76,11 +75,12 @@ CREATE DATABASE myTestDB;
 ```
 
 launch: gitbash
-Example command:
-```
-C:/xampp/mysql/bin/mysql –u root -p myTestDB < C:/zooDB.sql
-```
+Example commands:
 
+on windows it might look like this:
+```
+C:/xampp/mysql/bin/mysql –u root -p zoo_db < C:/zooDB.sql
+```
 In this example mySQL is connected via XAMPP and mysql database is located within path:
 
 -u for your mySQL user name, my user name "root", it may also ask for your password.
@@ -88,7 +88,33 @@ In this example mySQL is connected via XAMPP and mysql database is located withi
 myTestDB is the name of the DB you created
 zooDB is located in C folder
 
-Test to see if import worked, inside MyySQL Client:
+on a mac it might look like this, and you would run the command in your terminal (do not go into the mysql console and run this)
+
+if you get this:
+mysql> create database zoo_db;
+ERROR 1044 (42000): Access denied for user ''@'localhost' to database 'zoo_db'
+
+then do this
+mysql -u root -p
+
+and then press enter for your password
+
+and then do stuff.
+
+```
+/usr/local/bin/mysql -u root -p zoo_db < /Users/pavankatepalli/Desktop/zooDB.sql
+```
+
+On a Mac, to find out where your mysql is, do this in terminal
+
+```
+type -a mysql
+```
+that returns/usr/local/bin/mysql.
+
+### Part 0.5: Test
+
+Test to see if import worked, inside MySQL Client:
 Use myTestDB
 
 run the following command
