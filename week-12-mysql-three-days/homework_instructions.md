@@ -50,7 +50,7 @@ zooDB.sql
 ```
 
 * download here
-		* https://drive.google.com/a/trilogyed.com/file/d/0Bz0Wzew04n0ub2NDSmxsZ201dkk/view?usp=sharing
+		* https://drive.google.com/file/d/0Bz0Wzew04n0ub2NDSmxsZ201dkk/view
 
 Install npm packages
 
@@ -67,7 +67,7 @@ And make sure you have the correct instance name my instance name is `mysql`
 launch: MySQL 5.7 Command Line Client
 enter your password
 ```
-CREATE DATABASE myTestDB;
+CREATE DATABASE zoo_db;
 ```
 
 launch: gitbash
@@ -81,7 +81,7 @@ In this example mySQL is connected via XAMPP and mysql database is located withi
 
 -u for your mySQL user name, my user name "root", it may also ask for your password.
 
-myTestDB is the name of the DB you created
+zoo_db is the name of the DB you created
 zooDB is located in C folder
 
 on a mac it might look like this, and you would run the command in your terminal (do not go into the mysql console and run this)
@@ -110,12 +110,20 @@ that returns/usr/local/bin/mysql.
 
 ### Part 0.5: Test
 
+To launch the mysql in windows:
+You can find the desktop app 
+```
+C:\ProgramData\Microsoft\Windows\Start Menu\Programs\MySQL\MySQL Server 5.7
+```
+or start menu and search for mysql
+to lanuch the: MySQL 5.7 Command Line Client
+
 Test to see if import worked, inside MySQL Client:
 Use myTestDB
 
 run the following command
 ```
-SELECT * FROM careTaker;
+SELECT * FROM careTakers;
 ```
 You should get back 99 rows in set.
 
