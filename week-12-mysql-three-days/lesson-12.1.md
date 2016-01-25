@@ -17,7 +17,7 @@ look at this file at the root of the repository:
 # Theme
 Intro to MySQL
 
-# Students do 15 minutes
+### 1. Students do 20 minutes
 
 Open up google sheet
 
