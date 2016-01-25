@@ -16,7 +16,7 @@ look at this file at the root of the repository:
 
 # INSTRUCTOR MUST COVER!!!
 ```
-1 - 11
+1 - 10 at min
 ```
 or they will be seriously behind
 
@@ -27,21 +27,25 @@ Intro to MySQL
 
 * *slack out the following exercise to students*
 
+**********
 PART ONE:
----------
+**********
 
 Test whether MySQL works or not on your computer. 
 
 For Mac:
-type: ```mysql```
+type following into terminal and press enter: ```mysql```
 
 For Windows:
-ask your instructor
+launch the MySQL app and test if the MySQL commandline works from it
 
-If it doesn't, call over a TA/Instructor
+If it doesn't, get it set up
 
-PART TWO:
----------
+If having trouble, call over a TA/Instructor to help you get it set up.
+
+**********
+Bonus:
+**********
 
 Open up google sheet name it rutgers_presidents
 
@@ -119,6 +123,8 @@ demonstrate limit
 
 3. select all the candies but use limit to limit the output to 2 candies.
 
+###### 105 minutes have passed - break time for 15 minutes :)
+
 ### 8. Instructor do 15 minutes
 
 demonstrate update on the pets table
@@ -126,7 +132,7 @@ demonstrate update on the pets table
 - slack out the next exercise + 
 - commit your sql queries and push up to the repo where you save all your in class code (do not make a new repo)
 
-### 9. Students do 15 minutes
+### 9. Students do 10 minutes
 
 Update every candy so that the name has updated at the beginning of it.
 
@@ -137,16 +143,7 @@ Drop the animals table
 - slack out the next exercise + 
 - commit your sql queries and push up to the repo where you save all your in class code (do not make a new repo)
 
-### 11. Students do 5 minutes
-
-Students drop the candies table
-
-# If time left over 
-
-* we will do these exercises again first thing next lesson for a reivew 
-		* so if you don't cover these, it'll be fine
-
-### 12. Instructor do 
+### 11. Instructor do 20 minutes
 
 Make two tables 
 
@@ -175,7 +172,7 @@ FOREIGN KEY(tournament_id) REFERENCES tournaments(id)
 - slack out the next exercise + 
 - commit your sql queries and push up to the repo where you save all your in class code (do not make a new repo)
 
-### 13. Students do 
+### 12. Students do 15 minutes
 
 - create the tables like the instructor did (get the sql from him/her from slack)
 - insert data into both tables. 
