@@ -1,9 +1,10 @@
-Weekday Lessons Template
+# Weekday Lessons Template
 
 3 hour class - 15 minute break = 180 minutes - 15 = 165 minutes of class time.
+
 100+ minutes of "Partners do" and "Student do"
 
-block quotes:
+block quotes: scripted lines
 
 Theme:
 
@@ -60,3 +61,17 @@ Second half: ~80 mins, steps 10
 		20.(Instructor do - Teacher demo) go over: 5 mins 
 
 		(Instructor do): Review all topics
+
+
+durations;
+
+	(short) 2-5 mins
+
+	(medium short) 5-10 mins
+
+	(medium) 10-12 mins 
+
+	(medium long) 15-20 mins
+
+	(long) 20-25 mins
+
