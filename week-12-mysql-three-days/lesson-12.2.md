@@ -27,52 +27,57 @@ Students will be able to:
 PART ONE:
 ---------
 
-	Starter(Review): ~25 mins
+Starter(Review): ~25 mins
 
-		### 1. Instructor do ( 2 mins )
-		Introduce the reivew exerise and explain what student need to do + bonus 
+#### 1. Instructor do ( 2 mins )
+Introduce the reivew exerise and explain what student need to do + bonus 
+See exericse folder for material
+12.2.1 exericse 1: (reivew mySQl basics)
 
-		### 2. Partners do ( 2 mins)
-		Have student turn to eachother and talk about how to do this exerices before starting
+#### 2. Partners do ( 2 mins)
+Have student turn to eachother and talk about how to do this exerices before starting
 
-		### 1. Student do ( 14 mins )
-		(Partners Exercies): review exerices: duration(medium):
+#### 3. Student do ( 14 mins )
+(Partners exericse): review exerices: duration(medium):
 
-		### 3. Cold call ( 3 mins )
-		Ask for the code via slack, and student to explain code
+#### 4. Cold call ( 3 mins )
+Ask for the code via slack, and student to explain sql code
 
-		### 4. Instructor do ( 4 mins )
-		go over last exercise: explain/demo
+#### 5. Instructor do ( 4 mins )
+go over last exericse: explain/demo
 
-	New Materials Intro: ~55 mins
+New Materials Intro: ~55 mins
 
-		### 5. Instructor demo: ( 2 mins ) 
-		Create a demo database with demo tables
-		Demo issue that database can have with mulitple tables, ask student to help
+#### 6. Instructor demo: ( 2 mins ) 
+Create a demo database with demo tables 
+12.2.2 demo 1: (Country and counties)
+Demo issue that database can have with mulitple tables, ask student to help
 
-		### 6. Instructor do: New concepts "block quotes": ( 12 mins ) 
-		Relational db JOINs (INNER, LEFT, RIGHT, FULL)
+#### 7. Instructor do: New concepts "block quotes": ( 12 mins ) 
+Relational db JOINs (INNER, LEFT, RIGHT, FULL)
 
-		### 7. Partners: ( 5 mins )
-		Ask student telk to eachother and explain what how to use JOIN and why it's used
+#### 8. Partners: ( 5 mins )
+Ask student telk to eachother and explain what how to use JOIN and why it's used
 
-		### 8. Partners do: ( 10 mins ) 
-		Review exerices: duration(medium short): 
-		Student are to create a database with 2 tables with reference given to them creating a JOIN
+#### 9. Partners do: ( 10 mins ) 
+12.2.3 exericse 2: (teams and cities)
+Intrucduce exerices: duration(medium short): 
+Student are to create a database with 2 tables with reference given to them creating a JOIN
 
-		### 9. Instructor do: ( 5 mins )
-		Demo and go over the exerices and ask student/partner to explain
+#### 10. Instructor do: ( 5 mins )
+Demo and go over the exerices and ask student/partner to explain
 
-		### 10. Student do: ( 15 mins )
-		Indivduial Exercies: duration (medium long)
-		Student create a database with mulitple tables and create data from reference given
-		Student create JOIN and different types combined with WHERE, ON, using from C.R.U.D
+#### 11. Student do: ( 15 mins )
+12.2.4 exericse 3: (price of drinks)
+Indivduial Exercies: duration (medium long)
+Student create a database with mulitple tables and create data from reference given
+Student create JOIN and different types combined with WHERE, ON, using from C.R.U.D
 
-		### 11. Student present: ( 4 mins )
-		Slacked code from student, student explain code
+#### 12. Student present: ( 4 mins )
+Slacked code from student, student explain code
 
-		### 12. Instructor do: ( 2 mins )
-		Demo and go over the exerices
+#### 13. Instructor do: ( 2 mins )
+Demo and go over the exerices
 
 BREAK: (15 mins)
 ---------
@@ -80,53 +85,56 @@ BREAK: (15 mins)
 PART TWO:
 ---------
 
-	New Materials Intro:  ~85 mins
+New Materials Intro:  ~85 mins
 
-		### 13. Student do: ( 5 mins )
-		Create a new Node App 
-		Install npm packages 
+#### 14. Student do: ( 5 mins )
+Create a new Node App 
+Install npm packages 
 
-		### 14. Instructor do: New concepts "block quotes": ( 5 mins )
-		MySQL inside of Node
-		Connecting Node to mySQL via npm package, do a simple SELECT  from a db
+#### 15. Instructor do: New concepts "block quotes": ( 5 mins )
+12.2.5 demo 2: (basic mysql node app)
+MySQL inside of Node
+Connecting Node to mySQL via npm package, do a simple SELECT  from a db
 
-		### 15. Partners do: ( 8 mins )
-		Connecting Node to mySQL via npm package, do a simple SELECT from a db
+#### 16. Partners do: ( 8 mins )
+Connecting Node to mySQL via npm package, do a simple SELECT from a db
 
-		### 16. Partners Demo: ( 2 mins )
-		Slacked code from student have have student partners explain what they did
+#### 17. Partners Demo: ( 2 mins )
+Slacked code from student have have student partners explain what they did
 
-		### 17. Instructor do ( 2 mins )
-		Introduce the reivew exerise and explain what student need to do + bonus 
-		Student Exercies: duration (long)
-		Connecting Node to mySQL via npm package
-		Create the functions of C.R.U.D in Node using a mySQL db
+#### 18. Instructor do ( 2 mins )
+12.2.5 exerise 4: (climbing gym members)
+Introduce the reivew exerise and explain what student need to do + bonus 
+Student Exercies: duration (long)
+Connecting Node to mySQL via npm package
+Create the functions of C.R.U.D in Node using a mySQL db
 
-		### 18. Partners do ( 3 mins)
-		Have student turn to eachother and talk about how to do this exerices before starting
+#### 19. Partners do ( 3 mins )
+Have student turn to eachother and talk about how to do this exerices before starting
 
-		### 19. Student do: ( 20 mins )
-		Work on exersice
+#### 20. Student do: ( 18 mins )
+Work on exersice alone
 
-		### 19. Instructor do: ( 10 mins )
-		Teacher demo go over solution 
+#### 21. Instructor do: ( 10 mins )
+Teacher demo go over solution 
 
-		### 20. Partners do: ( 5 mins )
-		Student talk to eachother, explain what just happened
+#### 22. Partners do: ( 5 mins )
+Student talk to eachother, explain what just happened
 
-		### 21. Instructor do: ( 5 mins ) 
-		Teacher intro 1 JOIN mySQL
+#### 23. Instructor do: ( 5 mins ) 
+12.2.6 exerise 5: (6 degrees of Kevin Bacon)
+Teacher intro 1 JOIN mySQL
 
-		### 22. Partner do: ( 10 mins)
-		Work on exersice different JOIN in mySQL
+#### 24. Partner do: ( 15 mins )
+Work on exersice different JOIN in mySQL
 
-		### 23. Partners present: ( 5 mins )
-		Student explain demo
+#### 25. Partners present: ( 3 mins )
+Student explain demo
 
-		### 24. Instructor do: ( 5 mins )
-		Teacher demo go over solution 
+#### 26. Instructor do: ( 4 mins )
+Teacher demo go over solution 
 
-		(Instructor do): Review all topics
+(Instructor do): Review all topics
 
 # Copyright
 Coding Boot Camp (C) 2016. All Rights Reserved.
