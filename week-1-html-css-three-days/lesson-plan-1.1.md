@@ -34,7 +34,7 @@ ALL or they won't be able to do the homework.
 
 ----
 
-### 1. Instructor Do (40 minutes)
+### 1. Instructor Do (45 minutes)
 * Welcome all the students to the class. 
 * Slack out the objectives to the students, have unique students read each one and then you make a comment after each one is read
 * Introduce yourself, the TA's, and Support Team (Dan S, Student Success, Career Coach)
@@ -48,7 +48,7 @@ ALL or they won't be able to do the homework.
 
 ----
 
-### 2. Instructor Do (15 minutes)
+### 2. Instructor Do (10 minutes)
 
 * Quickly go over this - don't rant on every single technology - if students have questions direct them to the parking lot
 
@@ -135,6 +135,10 @@ ALL or they won't be able to do the homework.
 
 * Point out to students that they should be storing all their code in one folder that's easily accessible.
 
+* Point out to students that if they're slow at typing then they need to get better - fast. Show: https://typing.io. 
+
+> Practice when you get home.
+
 * *When done going over these, slack out the below commands to the students* 
 
 * Run the following commands while having the finder window open to show the files being created
@@ -213,9 +217,13 @@ The <!DOCTYPE html> declaration is not an HTML tag; it is an instruction to the 
 
 1. *In your newly created folder and HTML file, set up an HTML file with the proper structure (located below).*
 
-2. *code the below out.*
+2. Open up the whole folder with Sublime Text 
 
-3. *After done, Stage, Commit and Push up to your in class code github repo, link students to the code. Explain briefly what you did through the process.*
+3. *code the below out.*
+
+4. Point out that the language is set to html and that's why the code highlighting is working
+
+5. *After done, Stage, Commit and Push up to your in class code github repo, link students to the code. Explain briefly what you did through the process.*
 
 ```html
 <!DOCTYPE html>
