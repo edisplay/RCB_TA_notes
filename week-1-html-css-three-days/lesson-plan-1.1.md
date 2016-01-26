@@ -96,16 +96,7 @@ ALL or they won't be able to do the homework.
     + Design Patterns
 ```
 
-### 3. Instructor Do (20 minutes)
-* Google timer, set it to 20 minutes, put your volume up
-
-* Engage the students to see who has any pre-work issues.
-* TA's and Instructors will assist those students who need help (WiFi connection, Sublime Text, etc.).
-
-* If there are still issues, let students know that you and TAs are available for 30 minutes after class and 45 minutes before the next class
-----
-
-### 4. Instructor do (10 minutes)
+### 3. Instructor do (10 minutes)
 * Discuss what the daily class structure will consist of:
   + Brief Introduction/Background to Objectives for the day
   + Quick Watch Me / Demonstration
@@ -126,13 +117,27 @@ ALL or they won't be able to do the homework.
         + Front End Project (mashing up APIs)
         + Full Stack Project (server + database + front end)
 
+
+### 4. Instructor Do (20 minutes)
+* Google timer, set it to 20 minutes, put your volume up
+
+* Engage the students to see who has any pre-work issues.
+* TA's and Instructors will assist those students who need help (WiFi connection, Sublime Text, etc.).
+
+* If there are still issues, let students know that you and TAs are available for 30 minutes after class and 45 minutes before the next class
+----
+
 ----
 ###### Break (15 minutes) 100 minutes went by including break
 ----
 
 ### 5. Instructor do (15 minutes)
 
+* Point out to students that they should be storing all their code in one folder that's easily accessible.
+
 * *When done going over these, slack out the below commands to the students* 
+
+* Run the following commands while having the finder window open to show the files being created
 
 * Ask the class how to
     * navigate to the home directory.
@@ -161,6 +166,8 @@ ALL or they won't be able to do the homework.
         + opens the current folder you are at in finder
     * `open <file name>`
         + open a specific file
+
+> Why do these commands when you can do it in the file system? Because you'll have to use the terminal or git bash to deploy your website to heroku or to use node - so we might as well start now
 
 * *When done going over these, slack out the above commands to the students* 
 
