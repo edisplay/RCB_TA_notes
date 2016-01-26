@@ -48,17 +48,7 @@ ALL or they won't be able to do the homework.
 
 ----
 
-### 2. Instructor Do (20 minutes)
-* Google timer, set it to 20 minutes, put your volume up
-
-* Engage the students to see who has any pre-work issues.
-* TA's and Instructors will assist those students who need help (WiFi connection, Sublime Text, etc.).
-
-* If there are still issues, let students know that you and TAs are available for 30 minutes after class and 45 minutes before the next class
-
-----
-
-### 3. Instructor Do (15 minutes)
+### 2. Instructor Do (15 minutes)
 
 * Quickly go over this - don't rant on every single technology - if students have questions direct them to the parking lot
 
@@ -106,6 +96,13 @@ ALL or they won't be able to do the homework.
     + Design Patterns
 ```
 
+### 3. Instructor Do (20 minutes)
+* Google timer, set it to 20 minutes, put your volume up
+
+* Engage the students to see who has any pre-work issues.
+* TA's and Instructors will assist those students who need help (WiFi connection, Sublime Text, etc.).
+
+* If there are still issues, let students know that you and TAs are available for 30 minutes after class and 45 minutes before the next class
 ----
 
 ### 4. Instructor do (10 minutes)
