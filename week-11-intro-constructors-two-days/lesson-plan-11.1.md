@@ -61,12 +61,13 @@ Why are parts one and two redundant? What are ways we can write dry code?
 
 ### 2. Everyone do (15 minutes)
 
-We go over together previous exercise together as a class
+We go over previous exercise together as a class
 
 ### 3. Partners do (15 minutes)
 
-"Spend the next 5 minutes talking about the code above"
-"You are responsible for the people around you understanding the previous code completely."
+> Spend the next 5 minutes talking about the code above
+
+> You are responsible for the people around you understanding the previous code completely.
 
 * call on a weak student to go over part 1 + 2. If he/she screws up call out the students near him/her *
 
@@ -74,15 +75,17 @@ We go over together previous exercise together as a class
 
 Make it known that people are responsible for the people around them. This will force stronger students to explain to the people around them what's going on.
 
-### 4. Instructor do
+### 4. Instructor do (15 minutes)
 
 * show how to reduce redundancies with constructor functions *
 
-"construction functions are used to reduce redundancy of object creation"
+> construction functions are used to reduce redundancy of object creation
 
-"Notice the capital A at the beginning of the function"
-"This tells developers that this is a Constructor Function and shouldn't be directly invoked"
-"It doesn't prevent you from invoking the function, it's a convention that tells developers, hey this is a constructor function and will be used to create objects." 
+> Notice the capital A at the beginning of the function
+
+> This tells developers that this is a Constructor Function and shouldn't be directly invoked
+
+> It doesn't prevent you from invoking the function, it's a convention that tells developers, hey this is a constructor function and will be used to create objects.
 
 ```
 function Animal(sleepy, noise){
@@ -98,7 +101,7 @@ function Animal(sleepy, noise){
 
 ### 5. Partners do (10 minutes)
 
-"You should never outright invoke a constructor funtion.
+> You should never outright invoke a constructor function.
 
 Ever...
 
