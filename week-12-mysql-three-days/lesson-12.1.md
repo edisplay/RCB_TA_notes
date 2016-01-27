@@ -23,7 +23,7 @@ or they will be seriously behind
 # Theme
 Intro to MySQL
 
-### 1. Students do 15 minutes
+### 1. Partners do 15 minutes
 
 * *slack out the following exercise to students*
 
@@ -132,7 +132,7 @@ ctrl + l
 - slack out the next exercise + 
 - commit your sql queries and push up to the repo where you save all your in class code (do not make a new repo)
 
-### 3. Student do 15 minutes
+### 3. Partners do 15 minutes
 
 1. make a mysql db
 
@@ -173,60 +173,98 @@ SELECT * FROM pets WHERE age > 3;
 - slack out the next exercise + 
 - commit your sql queries and push up to the repo where you save all your in class code (do not make a new repo)
 
-### 5. Student do 15 minutes
+### 5. Partners do 5 minutes
 
-find all the candies that have a rating of 5 or greater in the database with a select where
+Find all the candies that have a rating of 5 or greater in the database with a select where query.
 
 ### 6. Instructor do 15 minutes
 
-demonstrate count
+* *demonstrate count*
 
-demonstrate delete a record
+```
+SELECT COUNT(*) FROM pets;
+```
 
-demonstrate limit 
+```
+SELECT COUNT(*) FROM pets where name = 'cat';
+```
+
+* *demonstrate delete a record*
+
+```
+DELETE FROM pets WHERE type = 'mouse';
+```
+
+* *demonstrate count*
+
+```
+SELECT COUNT(*) FROM pets;
+```
+
+* *demonstrate select all*
+
+```
+SELECT * FROM pets;
+```
+
+* *demonstrate limit*
+
+```
+SELECT * FROM pets LIMIT 3;
+```
 
 - slack out the next exercise + 
 - commit your sql queries and push up to the repo where you save all your in class code (do not make a new repo)
 
-### 7. Student do 15 minutes
+### 7. Partners do 15 minutes
 
 1. use a SQL query to count the total # of candies in your candies table.
 
 2. delete one candy that you like the least.
 
-3. select all the candies but use limit to limit the output to 2 candies.
+3. check to see if the candy was deleted.
+
+4. select all the candies but use limit to limit the output to 2 candies.
 
 ###### 105 minutes have passed - break time for 15 minutes :)
 
-### 8. Instructor do 15 minutes
+### 8. Instructor do 10 minutes
 
-demonstrate update on the pets table
+* *demonstrate update on the pets table*
+
+```
+UPDATE pets SET name='under dog' WHERE type = 'dog';
+```
+
+```
+SELECT * FROM pets;
+```
 
 - slack out the next exercise + 
 - commit your sql queries and push up to the repo where you save all your in class code (do not make a new repo)
 
-### 9. Students do 10 minutes
+### 9. Students do 5 minutes
 
 Update every candy so that the name has updated at the beginning of it.
 
 ### 10. Insructor do 5 minutes
 
-Drop the animals table
-
-- slack out the next exercise + 
-- commit your sql queries and push up to the repo where you save all your in class code (do not make a new repo)
+Drop the pets table
 
 ### 11. Instructor do 20 minutes
 
 Make two tables 
 
+```
 CREATE TABLE tournaments (
 id int AUTO_INCREMENT,
 name varchar(30) NOT NULL,
 skill_level varchar(30) NOT NULL,
 PRIMARY KEY (id)
 );
+```
 
+```
 CREATE TABLE players (
 id int AUTO_INCREMENT,
 tournament_id int NOT NULL,
@@ -235,6 +273,7 @@ age int NOT NULL,
 PRIMARY KEY(id),
 FOREIGN KEY(tournament_id) REFERENCES tournaments(id)
 ); 
+```
 
 - add in data for players and for tournaments - be sure that the players' foreign tournament_id's exist
 
