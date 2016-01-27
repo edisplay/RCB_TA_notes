@@ -110,7 +110,7 @@ BONUS:
 
 * *Create a database called countries*
 
-12.2.2 demo 1: (Country and counties)
+12.2.2 demo 1: (Country and cities)
 Demo issue that database can have with mulitple tables, ask student to help
 
 ```
