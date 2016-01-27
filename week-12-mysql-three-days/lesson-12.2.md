@@ -106,16 +106,15 @@ BONUS:
 
 ###### 40 minutes have passed
 
-### 5. Instructor do ( 2 mins ) 
+### 5. Instructor do ( 15 minutes ) 
 
 * *Create a database called countries*
 
 12.2.2 demo 1: (Country and counties)
 Demo issue that database can have with mulitple tables, ask student to help
 
-Zhen put code in to make tables and make inserts into the below table. 
 ```
-
+Zhen put code in to make tables and make inserts into the below table. 
 ```
 
 table: countries
@@ -146,47 +145,57 @@ WHERE countries.id = 1
 ORDER BY cities.hipsters;
 `
 
-### 7. Instructor do: New concepts "block quotes": ( 12 mins ) 
-Talk about the other joins:
+### 7. Instructor do ( 15 mins ) 
 
-Relational db JOINs (INNER, LEFT, RIGHT, FULL)
+* *Slack this out, put it on the screen and talk about each one. Save this to your in class code, commit and push.*
 
+```
+Relational database JOINs (INNER, LEFT, RIGHT, FULL):
+
+INNER JOIN: Returns all rows when there is at least one match in BOTH tables
+
+LEFT JOIN: Return all rows from the left table, and the matched rows from the right table
+
+RIGHT JOIN: Return all rows from the right table, and the matched rows from the left table
+
+FULL JOIN: Return all rows when there is a match in ONE of the tables
+```
+
+```
+ZHEN chop off outer joins from this picture
+```
+
+* *Show this to students. Save this to your in class code, commit and push.*
 ![JOINS](./mySQL_JOIN.jpg)
 
-### 8. Partners: ( 5 mins )
-Ask student telk to eachother and explain what how to use JOIN and why it's used
+### 8. Partners do ( 5 minutes )
 
-### 9. Partners do: ( 10 mins ) 
-12.2.3 exercise 2: (teams and cities)
-Intrucduce exerices: duration(medium short): 
-Student are to create a database with 2 tables with reference given to them creating a JOIN
+> Explain to the people around you what each of these joins do and why they're used. I'll call on random people. If you're wrong, i'm going to call out the people next to you for not explaining it to you well.
 
-### 10. Instructor do: ( 5 mins )
+### 9. Partners do ( 20 mins ) 
+
+Objectives: 
+* Students will run basic queries to make a database, tables, and populate those tables.
+* Students will use join SQL clauses
+
+1. Run all your commands in MySQL but also put all of them in chronological order inside of a fun_time.sql file
+2. Create a database called fun_time
+3. Inside fun_time, create a bars table with id, bar_name
+4. bars table must have at least 3 different bars (3 rows with different names)
+5. Create a 4th bar with the name of 'Moo Milk Bar' 
+6. Inside fun_time, create a drinks table with id, bar_id, drink_name, drink_price
+7. Create 3 different drinks in the drinks table (3 rows with different drink names, prices and bar_ids)
+8. Create another drink in the drinks table with a bar_id of the 'Moo Milk Bar'
+9. Create 1 drink that has no bar_id (because it's not available in any of the bars in your bars table)
+10. Use the following SQL JOINS: LEFT, RIGHT, INNER, FULL
+
+Bonus: 
+
+* check out the Moo Milk Bar website http://www.moomilkbar.ca/#the-bakery
+
+### 10. Instructor do ( 5 mins )
 Demo and go over the exerices and ask student/partner to explain
 
-### 11. Student do: ( 15 mins )
-12.2.4 exercise 3: (price of drinks)
-Indivduial Exercies: duration (medium long)
-Student create a database with mulitple tables and create data from reference given
-Student create JOIN and different types
-
-Create 2 tables:
-A bar table:
-
-* Bar table with ID, bar_name
-* Bar table must have at least 3 different bars
-* Create a 4th bar with the name of 'MooMilk'
-* 4 total bars
-
-A Drinks table:
-
-* A drinks table with ID, FK, drink_name, drink_price
-* Create 3 different drinks three times each time with a different price for each of the different bars in bars table that is not 'MooMilk'
-* Create 1 drink once only in the bar 'MooMilk'
-* Create 1 drink that is not in any of the bars that you created
-
-Write the SQL statments in text editor using all of the possible SQL JOINS
-LEFT, RIGHT, INNER, FULL
 
 ### 12. Student present: ( 4 mins )
 Slacked code from student, student explain code
