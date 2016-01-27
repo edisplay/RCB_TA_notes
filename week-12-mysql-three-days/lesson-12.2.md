@@ -41,10 +41,8 @@ PART ONE:
 ---------
 
 Starter(Review): ~25 mins
-
 #### 1. Instructor do ( 2 mins )
-Introduce the reivew exerise and explain what student need to do + bonus 
-(reivew mySQl basics): Define what each of the letter in C.R.U.D stand for
+(reivew mySQl basics): Have student efine what each of the letter in C.R.U.D stand for
 
 	* C - POST - INSERT INTO
 	* R - GET - SELECT something FROM somewhere WHERE a condition is true
@@ -52,9 +50,11 @@ Introduce the reivew exerise and explain what student need to do + bonus
 	* D - DELETE - DELETE WHERE
 
 #### 2. Partners do ( 2 mins)
-Have student turn to eachother and talk about how to do this exerices before starting
+Have student turn to each other and talk about how to do this exerices before starting
 
 #### 3. Student do ( 14 mins )
+Introduce the reivew exerise and explain what student need to do + bonus 
+
 12.2.1 exericse 1: (simple mySQL db)
 Create a db in mySQL with the following data, code out in your code editor the mySQL statement that can
 
@@ -152,6 +152,7 @@ A bar table:
 * Bar table with ID, bar_name
 * Bar table must have at least 3 different bars
 * Create a 4th bar with the name of 'MooMilk'
+* 4 total bars
 
 A Drinks table:
 
@@ -263,8 +264,9 @@ Teacher demo go over solution
 Student talk to each other, explain to each other the code
 
 #### 23. Instructor do: ( 5 mins ) 
-12.2.6 exerise 5: (6 degrees of Kevin Bacon)
+12.2.6 exerise 5: (2 degrees of Kevin Bacon)
 Teacher intro 1 JOIN mySQL
+
 
 #### 24. Partner do: ( 15 mins )
 Work on exersice different JOIN in mySQL
