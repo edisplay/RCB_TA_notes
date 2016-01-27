@@ -44,7 +44,7 @@ If it doesn't, get it set up
 If having trouble, call over a TA/Instructor to help you get it set up.
 
 **********
-Bonus:
+PART TWO:
 **********
 
 Open up google sheet name it rutgers_presidents
