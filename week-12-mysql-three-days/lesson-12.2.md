@@ -69,10 +69,7 @@ D - DELETE - DELETE FROM pets WHERE type = 'mouse';
 ```
 
 ### 3. Student do (20 minutes)
-* *Introduce the review exercise and explain what students need to do + bonus 
-(review MySQL basics)* 
-
-12.2.1 exercise 1: (simple MySQL db)
+* *Introduce this MySQL review exercise and explain what students need to do + bonus (review MySQL basics)*
 
 1. With the following steps, run the commands in the MySQL console, but also copy the commands into a movies.sql file, and push this file to a github repository 
 1. Create a database in MySQL named movies
@@ -187,21 +184,27 @@ Objectives:
 7. Create 3 different drinks in the drinks table (3 rows with different drink names, prices and bar_ids)
 8. Create another drink in the drinks table with a bar_id of the 'Moo Milk Bar'
 9. Create 1 drink that has no bar_id (because it's not available in any of the bars in your bars table)
-10. Use the following SQL JOINS: LEFT, RIGHT, INNER, FULL
+10. Use the following SQL JOINS: 
+
+LEFT join bars to drinks
+
+RIGHT join bars to drinks 
+
+Select all the drinks
+
+INNER JOIN drinks to bars
+
+FULL JOIN drinks to bars
+
+11. Explain to your partners what each query above did and the importance of it.
 
 Bonus: 
 
 * check out the Moo Milk Bar website http://www.moomilkbar.ca/#the-bakery
 
-### 10. Instructor do ( 5 mins )
-Demo and go over the exerices and ask student/partner to explain
+### 10. Everyone do ( 15 minutes )
 
-
-### 12. Student present: ( 4 mins )
-Slacked code from student, student explain code
-
-### 13. Instructor do: ( 2 mins )
-Demo and go over the exerices
+go over the previous exercise with the class
 
 BREAK: (15 mins)
 ---------
