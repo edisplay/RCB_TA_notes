@@ -34,17 +34,22 @@ ALL or they won't be able to do the homework.
 
 ----
 
-### 1. Instructor Do (45 minutes)
+### 1. Instructor Do (30 minutes)
 * Welcome all the students to the class. 
 * Slack out the objectives to the students, have unique students read each one and then you make a comment after each one is read
 * Introduce yourself, the TA's, and Support Team (Dan S, Student Success, Career Coach)
+
+
+### 2. Partners Do (15 minutes)
++ Have the students get into groups of 4 or 5 and talk within their groups about 1 bad movie they last watched and 1 interest.
+
++ Go around the room to each group 
+
 * Have all the students give a quick intro consisting of:
     + What their career background is.
     + What they want to accomplish in this course.
     + Where are they coming from geographically.
-* If there is time remaining, play some games to fill up the time so the students become better friends/colleagues:
-    + Have the students get into groups of 4 or 5 and have each group assign one person as the leader to write down or type 1 interest and 1 bad movie they last watched from each member of the group.
-        + Have the group leaders read out the names of each member, their interest and last bad movie they watched.
+
 
 ----
 

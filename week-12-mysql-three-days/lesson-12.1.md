@@ -60,17 +60,68 @@ Right a formula in Google Sheets to list all the Presidents with a name that sta
 
 ### 2. Instructor do 15 minutes
 
-* talk about what a database is (it's just a bunch of google sheets. And you can use a programming language called SQL to query that data)
+* talk about what a database is (it's just a bunch of google sheets. And you can use a programming language called SQL to write commands to bring back data)
 
 * talk about MySQL, and other databases in the landscape (PostgreSQL, ...)
 
-1. make a mysql db
+1. get into mysql console
+
+> We get into the mysql console
+
+```
+mysql
+```
+
+> This creates a database. A database stores a bunch of tables. Tables are like google sheets. 
+
+```
+create database lifeDB
+```
+
+> this gets you into the db
+
+```
+use lifeDB;
+```
 
 2. create a table of pets with two columns: name, type, age
 
+```
+CREATE TABLE pets (
+name varchar(30) NOT NULL,
+type varchar(30) NOT NULL,
+age int NOT NULL
+); 
+```
+
+
+> Think in your heads, how many pets there are in here right now.
+
+```
+SELECT * FROM pets;
+```
+
+> There are none. Because we haven't added any yet.
+
+> Let's do that now.
+
 3. insert 3 pets
 
+```
+INSERT INTO pets (name, type, age) VALUES ('fido', 'dog', 3);
+
+INSERT INTO pets (name, type, age) VALUES ('meows', 'cat', 5);
+
+INSERT INTO pets (name, type, age) VALUES ('whiskers', 'mouse', 1);
+```
+
 4. select all of them 
+
+> Now we have 3 pets in the pets table of the lifeDB database
+
+```
+SELECT * FROM pets;
+```
 
 5. Demonstrate how to clear the screen in the mysql console for a mac:
 
@@ -91,11 +142,33 @@ ctrl + l
 
 4. select all of them 
 
-### 4. Instructor do 15 minutes
+### 4. Partners do 5 minutes
 
-find all the dogs in the database with a select where
+> Explain to your partners how I would add 2 more dogs into my pets table
 
-find all the pets with an age of over 3 in the database with a select where
+### 5. Instructor do 15 minutes
+
+* *add in 2 more dog records into the pets table*
+
+```
+INSERT INTO pets (name, type, age) VALUES ('barky', 'dog', 8);
+```
+
+```
+INSERT INTO pets (name, type, age) VALUES ('rex', 'dog', 2);
+```
+
+* *find all the dogs in the database with a select where*
+
+```
+SELECT * FROM pets WHERE type = 'dog';
+```
+
+* *find all the pets with an age of over 3 in the database with a select where* 
+
+```
+SELECT * FROM pets WHERE age > 3;
+```
 
 - slack out the next exercise + 
 - commit your sql queries and push up to the repo where you save all your in class code (do not make a new repo)
