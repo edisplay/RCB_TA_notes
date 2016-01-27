@@ -176,6 +176,7 @@ A bar table:
 * Bar table with ID, bar_name
 * Bar table must have at least 3 different bars
 * Create a 4th bar with the name of 'MooMilk'
+* 4 total bars
 
 A Drinks table:
 
