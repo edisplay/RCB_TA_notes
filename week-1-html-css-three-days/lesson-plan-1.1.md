@@ -34,31 +34,26 @@ ALL or they won't be able to do the homework.
 
 ----
 
-### 1. Instructor Do (40 minutes)
+### 1. Instructor Do (30 minutes)
 * Welcome all the students to the class. 
 * Slack out the objectives to the students, have unique students read each one and then you make a comment after each one is read
 * Introduce yourself, the TA's, and Support Team (Dan S, Student Success, Career Coach)
+
+
+### 2. Partners Do (15 minutes)
++ Have the students get into groups of 4 or 5 and talk within their groups about 1 bad movie they last watched and 1 interest.
+
++ Go around the room to each group 
+
 * Have all the students give a quick intro consisting of:
     + What their career background is.
     + What they want to accomplish in this course.
     + Where are they coming from geographically.
-* If there is time remaining, play some games to fill up the time so the students become better friends/colleagues:
-    + Have the students get into groups of 4 or 5 and have each group assign one person as the leader to write down or type 1 interest and 1 bad movie they last watched from each member of the group.
-        + Have the group leaders read out the names of each member, their interest and last bad movie they watched.
+
 
 ----
 
-### 2. Instructor Do (20 minutes)
-* Google timer, set it to 20 minutes, put your volume up
-
-* Engage the students to see who has any pre-work issues.
-* TA's and Instructors will assist those students who need help (WiFi connection, Sublime Text, etc.).
-
-* If there are still issues, let students know that you and TAs are available for 30 minutes after class and 45 minutes before the next class
-
-----
-
-### 3. Instructor Do (15 minutes)
+### 2. Instructor Do (10 minutes)
 
 * Quickly go over this - don't rant on every single technology - if students have questions direct them to the parking lot
 
@@ -106,9 +101,7 @@ ALL or they won't be able to do the homework.
     + Design Patterns
 ```
 
-----
-
-### 4. Instructor do (10 minutes)
+### 3. Instructor do (10 minutes)
 * Discuss what the daily class structure will consist of:
   + Brief Introduction/Background to Objectives for the day
   + Quick Watch Me / Demonstration
@@ -129,13 +122,31 @@ ALL or they won't be able to do the homework.
         + Front End Project (mashing up APIs)
         + Full Stack Project (server + database + front end)
 
+
+### 4. Instructor Do (20 minutes)
+* Google timer, set it to 20 minutes, put your volume up
+
+* Engage the students to see who has any pre-work issues.
+* TA's and Instructors will assist those students who need help (WiFi connection, Sublime Text, etc.).
+
+* If there are still issues, let students know that you and TAs are available for 30 minutes after class and 45 minutes before the next class
+----
+
 ----
 ###### Break (15 minutes) 100 minutes went by including break
 ----
 
 ### 5. Instructor do (15 minutes)
 
+* Point out to students that they should be storing all their code in one folder that's easily accessible.
+
+* Point out to students that if they're slow at typing then they need to get better - fast. Show: https://typing.io. 
+
+> Practice when you get home.
+
 * *When done going over these, slack out the below commands to the students* 
+
+* Run the following commands while having the finder window open to show the files being created
 
 * Ask the class how to
     * navigate to the home directory.
@@ -164,6 +175,8 @@ ALL or they won't be able to do the homework.
         + opens the current folder you are at in finder
     * `open <file name>`
         + open a specific file
+
+> Why do these commands when you can do it in the file system? Because you'll have to use the terminal or git bash to deploy your website to heroku or to use node - so we might as well start now
 
 * *When done going over these, slack out the above commands to the students* 
 
@@ -209,9 +222,13 @@ The <!DOCTYPE html> declaration is not an HTML tag; it is an instruction to the 
 
 1. *In your newly created folder and HTML file, set up an HTML file with the proper structure (located below).*
 
-2. *code the below out.*
+2. Open up the whole folder with Sublime Text 
 
-3. *After done, Stage, Commit and Push up to your in class code github repo, link students to the code. Explain briefly what you did through the process.*
+3. *code the below out.*
+
+4. Point out that the language is set to html and that's why the code highlighting is working
+
+5. *After done, Stage, Commit and Push up to your in class code github repo, link students to the code. Explain briefly what you did through the process.*
 
 ```html
 <!DOCTYPE html>

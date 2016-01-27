@@ -36,7 +36,7 @@ console.log(sillyName, randomAnimal);
 //     console.log('Here is the keeper: ', res);
 // });
 
-//prompt is weird, wtf do not use nodemon to test~!!!
+//prompt is weird, do not use nodemon to test!!!
 //node index.js
 
 zoo = {

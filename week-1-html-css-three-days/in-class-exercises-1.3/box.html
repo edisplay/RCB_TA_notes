@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Box Model Calculation: Blue Box</title>
+
+		<style type="text/css">
+			body {
+				font-size: 24px;
+				line-height: 36px;
+				margin: 0;
+				padding: 0;
+				background: #eee;
+				font-family: "Times New Roman";
+				color: #555;
+			}
+			#box {
+				background-color: #1E5792;
+				width: 400px;
+				height: 440px;
+				margin: 10px 30px 20px 50px;
+				color: #eee;
+				padding: 25px 10px 30px 20px;
+				border: 22px solid #113152;
+				float: left;
+			}
+			.css-block {
+				padding-left: 40px
+			}
+			.tip {
+				font-size: 22px;
+			}
+			#quiz {
+				width: 500px;
+				margin-top: 50px;
+				float: left;
+				margin-left: 50px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box">
+			#box {<br>
+			<p class="css-block">
+				background-color: #1E5792;<br>
+				width: 400px;<br>
+				height: 440px;<br>
+				margin: 10px 30px 20px 50px;<br>
+				color: #fff;<br>
+				padding: 25px 10px 30px 20px;<br>
+				border-style: solid;<br>
+				border-width: 22px;<br>
+				border-color: #113152;<br>
+			</p>
+			}
+		</div>
+		<div id="quiz">
+			<p><strong>How wide is the blue #box?</strong></p>
+			<p><strong>How tall is the blue #box?</strong></p>
+			<p class="tip"><strong>Total element width</strong> = content width + left padding + right padding + left border + right border + left margin + right margin</p>
+			<p class="tip"><strong>Total element height</strong> = content height + top padding + bottom padding + top border + bottom border + top margin + bottom margin</p>
+		</div>
+
+	</body>
+</html>

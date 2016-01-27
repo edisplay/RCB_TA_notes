@@ -8,11 +8,25 @@ look at this file at the root of the repository:
 [Instructor Guide](https://github.com/RutgersCodingBootcamp/All-Lesson-Plans/blob/master/instructor_guide.md)
 
 ### Master Objectives (Internal Use - do not share with students - because it's a waste of time)
-* review mySQL topics: basic C.R.U.D
-* Create a database structure in a relation for JOINs
-* Create a Node app which can perform C.R.U.D with mySQL npm
+* Expertly navigate the file system and terminal basics
+* Work independently or in a group on complex projects throughout the entire development lifecycle
+* Implement complex logical conditions to meet an objective.
+* Write SQL commands to perform Create, Read, Update and Delete commands
+* Write clean code with proper variable names, indentation according to industry best practices
 
 ### Objectives (Slack out to students, have unique students read each one and Instructor makes a comment after each one being read)
+
+1. slack out the objectives to the students, and call on random students to read them outloud. *Make a comment about the objective after each person reads them.*
+
+1. in class repo for your sectio, make a new folder for this week and day.
+
+1. open them up that folder in Sublime Text
+
+1. make an objectives.txt file in that folder
+
+1. copy these objectives into that objectives.txt file and save it, commit it, push it up.
+
+1. keep the file open while the students are reading the objectives 
 
 Students will be able to:
 

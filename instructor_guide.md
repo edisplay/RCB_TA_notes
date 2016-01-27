@@ -149,4 +149,4 @@
 	* Good check point: "So in your own words, what does this line of code do?"
 
 # Copyright
-Rutgers Coding Boot Camp (C) 2015. All Rights Reserved.
+Coding Boot Camp (C) 2015. All Rights Reserved.
