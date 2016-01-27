@@ -202,15 +202,9 @@ Bonus:
 
 * check out the Moo Milk Bar website http://www.moomilkbar.ca/#the-bakery
 
-### 10. Instructor do ( 5 mins )
-Demo and go over the exerices and ask student/partner to explain
+### 10. Everyone do ( 15 minutes )
 
-
-### 12. Student present: ( 4 mins )
-Slacked code from student, student explain code
-
-### 13. Instructor do: ( 2 mins )
-Demo and go over the exerices
+go over the previous exercise with the class
 
 BREAK: (15 mins)
 ---------
