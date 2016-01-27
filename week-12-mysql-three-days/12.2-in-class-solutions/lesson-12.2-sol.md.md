@@ -1,4 +1,4 @@
-12.2.1 exercise 1: (simple MySQL db)
+### 3. Student do (20 minutes)
 ```
 CREATE DATABASE movies;
 USE movies;
@@ -12,31 +12,32 @@ PRIMARY KEY(id)
 ); 
 
 INSERT INTO samuel_l_jackson_movies (movie, chara, year)
-VALUES ('Avengers: Age of Ultron','Nick Fury', 1015);
+VALUES ('Shaft','John Shaft', 2000);
+
+INSERT INTO samuel_l_jackson_movies (movie, chara, year)
+VALUES ('Snakes on a Plane','Neville Flynn', 2006);
+
+INSERT INTO samuel_l_jackson_movies (movie, chara, year)
+VALUES ('Star Wars: The Clone Wars','Mace Windu', 2008);
+
+INSERT INTO samuel_l_jackson_movies (movie, chara, year)
+VALUES ('Captain America: The First Avenger','Nick Fury', 1997);
+
+INSERT INTO samuel_l_jackson_movies (movie, chara, year)
+VALUES ('Fury','Foley', 2012);
+
+INSERT INTO samuel_l_jackson_movies (movie, chara, year)
+VALUES ('The Avengers','Foley', 2012);
+
+INSERT INTO samuel_l_jackson_movies (movie, chara, year)
+VALUES ('Django Unchained','Foley', 2012);
 
 INSERT INTO samuel_l_jackson_movies (movie, chara, year)
 VALUES ('Avengers: Age of Ultron','Nick Fury', 1015);
-
-INSERT INTO samuel_l_jackson_movies (movie, chara, year)
-VALUES ('Jackie Brown','Ordell Robbie', 1997);
-
-INSERT INTO samuel_l_jackson_movies (movie, chara, year)
-VALUES ('Avengers: Age of Ultron','Nick Fury', 1015);
-
-
-|Shaft|John Shaft|2000|
-|Snakes on a Plane|Neville Flynn|2006 |
-|Star Wars: The Clone Wars| Mace Windu |2008| 
-|Captain America: The First Avenger | Nick Fury|2011 |
-|Fury| Foley| 2012 |
-|The Avengers | Nick Fury| 2012 |
-|Django Unchained | Stephen| 2012 |
-|Avengers: Age of Ultron| Nick Fury | 1015 |
 
 UPDATE samuel_l_jackson_movies
 SET year=2015
 WHERE movie='Avengers: Age of Ultron';
-
 
 DELETE FROM samuel_l_jackson_movies 
 WHERE id = 1;
@@ -44,7 +45,7 @@ WHERE id = 1;
 SELECT COUNT(*) FROM samuel_l_jackson_movies;
 ```
 
-12.2.2 demo 1: (Country and cities)
+### 5. Instructor do ( 15 minutes ) 
 ```
 CREATE DATABASE hispsters;
 USE hispsters;
@@ -80,15 +81,8 @@ WHERE countries.id = 1
 ORDER BY cities.hipsters;
 ```
 
-12.2.3 exercise 3: (bar and drinks)
-4. bars table must have at least 3 different bars (3 rows with different names)
+### 9. Partners do ( 20 mins ) 
 
-5. Create a 4th bar with the name of 'Moo Milk Bar' 
-6. Inside fun_time, create a drinks table with id, bar_id, drink_name, drink_price
-7. Create 3 different drinks in the drinks table (3 rows with different drink names, prices and bar_ids)
-8. Create another drink in the drinks table with a bar_id of the 'Moo Milk Bar'
-9. Create 1 drink that has no bar_id (because it's not available in any of the bars in your bars table)
-10. Use the following SQL JOINS: LEFT, RIGHT, INNER, FULL
 ```
 CREATE DATABASE fun_time;
 USE fun_time;
@@ -104,11 +98,51 @@ INSERT INTO bars (bar_name) VALUES ('City Bar');
 INSERT INTO bars (bar_name) VALUES ('NYC Bar');
 INSERT INTO bars (bar_name) VALUES ('Moo Milk Bar');
 
+CREATE TABLE drinks (
+id int AUTO_INCREMENT,
+bar_id int,
+drink_name varchar(60) NOT NULL,
+drink_price float NOT NULL,
+PRIMARY KEY(id),
+FOREIGN KEY(bar_id) REFERENCES bars(id)
+); 
 
+INSERT INTO drinks (bar_id, drink_name, drink_price) VALUES (1, 'apple pie milkshake', 5);
+INSERT INTO drinks (bar_id, drink_name, drink_price) VALUES (2, 'chocolate milk', 2);
+INSERT INTO drinks (bar_id, drink_name, drink_price) VALUES (3, 'beer', 3.5);
 
+/* moo milk bar drink */
+INSERT INTO drinks (bar_id, drink_name, drink_price) VALUES (4, 'wine', 8);
 
+/* Create 1 drink that has no bar_id  */
+INSERT INTO drinks (drink_name, drink_price) VALUES ('wine and chocolate milk', 10);
 
+/* joins */
+
+SELECT * 
+FROM bars
+LEFT JOIN drinks
+ON drinks.bar_id = bars.id;
+
+SELECT * 
+FROM bars
+RIGHT JOIN drinks
+ON drinks.bar_id = bars.id;
+
+SELECT *
+FROM drinks;
+
+SELECT * 
+FROM drinks
+INNER JOIN bars
+ON drinks.bar_id = bars.id;
+
+/* if you need to find data that you don't know where it is - just join everything */
+SELECT * 
+FROM drinks
+FULL JOIN bars
 ```
+
 
 
 
