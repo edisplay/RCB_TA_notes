@@ -1,5 +1,7 @@
 # Pavan to do
 
+make sure all students have mysql
+
 add in timing
 
 add in master objectives
