@@ -44,4 +44,4 @@ Connect to movies db: note synatx is bit different
 connection.query('SELECT * FROM samuel_l_jackson_movies', function(err, res) {
     console.log("Okay we got ", res);
 });
-``
+```
