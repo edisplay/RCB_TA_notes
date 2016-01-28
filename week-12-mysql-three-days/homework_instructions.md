@@ -1,87 +1,99 @@
-#Week of 12 HW: Node.js & mySQL
+#Week of 12 HW: Node.js & MySQL
 
 ### Introduction
 
 * You will be creating a Zoo app.
 
-* Building it with an object.
+* You will organize your code into a JavaScript object.
 
-* Using an mySQL database
+* You will use MySQL and the MySQL NPM Package.
 
-* It will be a command line node app that will take in prompted text as an input.
+* You will make a command line node app that will take in prompted text as input.
 
-* See demo of how this APP works
+* *See demo of how this App works*
 
 ### Summary 
-C-R-U-D/ node mySQL app/ commandline 
-This homwork will exercise you ability to:
+
+Skills/Technologies you'll need: C-R-U-D, Node.js, MySQL NPM Package, Prompt NPM Package
+
+This homwork will exercise your ability to:
 
 1. see all the records 
-2. delete a single record based off the primary key 
-3. update a single record based off the primary key 
-4. delete a record based off the primary key 
-5. return a certain amount of records based off a where on a certain column 
-6. two table left joins
+2. delete a single record based off of the primary key 
+3. update a single record based off of the primary key 
+4. delete a record based off of the primary key 
+5. return a certain amount of records based off a where clause on a certain column 
+6. using a join
 
-DB breakdown: Database structure
+##### Database structure (what your database might look like)
 
-Table: careTaker
+* Don't replicate this. You will be importing the database with the instructions below.
+* This is just to show you what the structure of the tables looks like.
 
-| pk | Zoo | name  | 
+Table: care_takers
+
+| id | zoo | name  | 
 |----|-----|-------|
 |  1 |  NY |   John|
 |  2 |  NY |   Mary|
 |  3 |  SF |   Sara|
 
-Table: animal
+Table: animals
 
-| pk | CareTaker_fk |  name | Type  | Age |
+| id | care_taker_id |  name | type  | age |
 |----|--------------|-------|-------|-----|
 |  1 |      1       |  Bobo |  Bear |  4  |
-|  1 |      1       |  Link |  Lion |  3  |
-|  1 |      2       |  CiCi |  Cat  |  1  |
+|  2 |      1       |  Link |  Lion |  3  |
+|  3 |      2       |  CiCi |  Cat  |  1  |
 
 
 ### Part 0: Setup
 
-Make sure to download or aquire the file
-```
-zooDB.sql
-```
+1. Make sure to download or aquire the following file:
 
-* download here
-		* https://drive.google.com/file/d/0Bz0Wzew04n0ub2NDSmxsZ201dkk/view
+	```
+	zooDB.sql
+	```
 
-Install npm packages
+	* download here
+			* https://drive.google.com/file/d/0Bz0Wzew04n0ub2NDSmxsZ201dkk/view
 
-```
-npm install prompt --save
-npm install mysql --save
-```
-Start mySQL server
-`net start mysql`
-Make sure you are Admin when start the mySQl server
-And make sure you have the correct instance name my instance name is `mysql`
+2. Initialize your package.json file
 
-*Importing the database
-launch: MySQL 5.7 Command Line Client
-enter your password
-```
-CREATE DATABASE zoo_db;
-```
+3. Install npm packages
 
-launch: gitbash
-Example commands:
+	```
+	npm install prompt --save
+	npm install mysql --save
+	```
+
+4. If you haven't already start your MySQL server
+
+	* Make sure you are an admin when you start the MySQL server
+
+	* If you're on Windows, make sure you are on the correct instance name (typically it's `mysql`)
+
+5. Now create and import the database
+
+	```
+	CREATE DATABASE zoo_db;
+	```
+
+
+You can't do this in the MySQL console, you have to do this in the terminal (for mac), git bash (for windows)
 
 on windows it might look like this:
 ```
 C:/xampp/mysql/bin/mysql –u root -p zoo_db < C:/zooDB.sql
 ```
-In this example mySQL is connected via XAMPP and mysql database is located within path:
+In the previous command, the first part is where MySQL is located on your computer, -u is for your MySQL user name (in the previous command it's "root"), it may also ask for your password (in the previous command we have a blank password) .
 
--u for your mySQL user name, my user name "root", it may also ask for your password.
+If you have trouble finding where MySQL is located on your computer, then do this:
 
-zoo_db is the name of the DB you created
+* run this command in the MySQL console `SHOW VARIABLES WHERE Variable_name LIKE '%dir';`
+* The datadir is where MySQL is located
+
+zoo_db is the name of the Database you created
 zooDB is located in C folder
 
 on a mac it might look like this, and you would run the command in your terminal (do not go into the mysql console and run this)
