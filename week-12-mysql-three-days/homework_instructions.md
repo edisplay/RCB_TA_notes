@@ -1,4 +1,4 @@
-#Week of 12 HW: Node.js & mySQL
+#Week of 12 HW: Node.js & MySQL
 
 ### Introduction
 
@@ -66,7 +66,7 @@ npm install mysql --save
 
 If you haven't already start your MySQL server
 
-Make sure you are admin when start the MySQL server
+Make sure you are an admin when you start the MySQL server
 
 If you're on Windows, make sure you are on the correct instance name (typically it's `mysql`)
 
@@ -76,18 +76,21 @@ If you're on Windows, make sure you are on the correct instance name (typically 
 CREATE DATABASE zoo_db;
 ```
 
-launch: gitbash
-Example commands:
+
+You can't do this in the MySQL console, you have to do this in the terminal (for mac), git bash (for windows)
 
 on windows it might look like this:
 ```
 C:/xampp/mysql/bin/mysql –u root -p zoo_db < C:/zooDB.sql
 ```
-In this example mySQL is connected via XAMPP and mysql database is located within path:
+In the previous command, the first part is where MySQL is located on your computer, -u is for your MySQL user name (in the previous command it's "root"), it may also ask for your password (in the previous command we have a blank password) .
 
--u for your mySQL user name, my user name "root", it may also ask for your password.
+If you have trouble finding where MySQL is located on your computer, then do this:
 
-zoo_db is the name of the DB you created
+* run this command in the MySQL console `SHOW VARIABLES WHERE Variable_name LIKE '%dir';`
+* The datadir is where MySQL is located
+
+zoo_db is the name of the Database you created
 zooDB is located in C folder
 
 on a mac it might look like this, and you would run the command in your terminal (do not go into the mysql console and run this)
