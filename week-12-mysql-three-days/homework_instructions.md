@@ -4,26 +4,28 @@
 
 * You will be creating a Zoo app.
 
-* Building it with an object.
+* You will organize your code into a JavaScript object.
 
-* Using an mySQL database
+* You will use MySQL and the MySQL NPM Package.
 
-* It will be a command line node app that will take in prompted text as an input.
+* You will make a command line node app that will take in prompted text as input.
 
-* See demo of how this APP works
+* *See demo of how this App works*
 
 ### Summary 
-C-R-U-D/ node mySQL app/ commandline 
-This homwork will exercise you ability to:
+
+Skills/Technologies you'll need: C-R-U-D, Node.js, MySQL NPM Package, Prompt NPM Package
+
+This homwork will exercise your ability to:
 
 1. see all the records 
-2. delete a single record based off the primary key 
-3. update a single record based off the primary key 
-4. delete a record based off the primary key 
-5. return a certain amount of records based off a where on a certain column 
-6. two table left joins
+2. delete a single record based off of the primary key 
+3. update a single record based off of the primary key 
+4. delete a record based off of the primary key 
+5. return a certain amount of records based off a where clause on a certain column 
+6. two joins
 
-DB breakdown: Database structure
+Database structure (what your database will look like)
 
 Table: careTaker
 
