@@ -40,15 +40,17 @@ ALL or they won't be able to do the homework.
 * Introduce yourself, the TA's, and Support Team (Dan S, Student Success, Career Coach)
 
 
-### 2. Partners Do (15 minutes)
+### 2. Partners Do (5 minutes)
 + Have the students get into groups of 4 or 5 and talk within their groups about 1 bad movie they last watched and 1 interest.
 
+### 3. Everyone do (10 minutes)
 + Go around the room to each group 
 
 * Have all the students give a quick intro consisting of:
-    + What their career background is.
-    + What they want to accomplish in this course.
-    + Where are they coming from geographically.
+    + Their name
+    + What their bad movie is
+    + What their interest is
+    + Where they come from geographically.
 
 
 ----
