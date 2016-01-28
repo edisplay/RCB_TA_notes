@@ -20,7 +20,7 @@ look at this file at the root of the repository:
 
 1. in class repo for your section, make a new folder for this week and day.
 
-1. open them up that folder in Sublime Text
+1. open up that folder in Sublime Text
 
 1. make an objectives.txt file in that folder
 
