@@ -34,7 +34,7 @@ ALL or they won't be able to do the homework.
 
 ----
 
-### 1. Instructor Do (20 minutes)
+### 1. Instructor Do (15 minutes)
 
 * Recap last weeks class
 
@@ -104,33 +104,58 @@ ALL or they won't be able to do the homework.
 
 ### 2. Instructor Do (15 minutes)
 
+* Git Branching
+* Git cloning
+
+
+### 3. Partner Do (10 minutes)
+
+* Make a new folder
+* Clone your partners git repo for their homework
+* Inside their homework folder, make a new branch off master
+  `git checkout -b firstname-lastname-cleanup`
+* `git push origin -b firstname-lastname-cleanup`
+
+
+### 4. Instructor Do (15 minutes)
+
 * CSS Refinement
 
 
-### 3. Student Do (15 minutes)
+### 5. Partner Do (30 minutes)
 
-* Reformat the following CSS so that it is cleaner
 
-----
+** IF student did not start homework, they should work by themselves to finish it
 
-### 4. Instructor Do (20 minutes)
 
-*Psuedo Classes
+* You must work together and talk abour your code, how it is different, how it is the same. Work together to make sure both partners homework is completed.
 
-* A pseudo-class is used to define a special state of an element.
-    
-
-----
-
-### 5. Student Do (15 minutes)
-
-* Make links hover
-* Make table striped
+* Reformat their CSS and HTML so that it is cleaner
+* You are not allowed to edit your own code. You are required to tell your partner what to edit in your code. He/she can discuss with you what they would do. He/she will type any agreed-upon changes.
+* Validate the html and css https://validator.w3.org/#validate_by_input AND http://www.css-validator.org/#validate_by_input
+* Repeat the above with other partner.
 
 
 
 ----
 ###### Break (15 minutes) 100 minutes went by including break
+----
+
+
+### 4. Instructor Do (20 minutes)
+
+* Psuedo classes
+    * A pseudo-class is used to define a special state of an element.
+* Pseudo elements
+
+
+### 5. Partner Do (20 minutes)
+
+* Make a pseudo class in your partners repo
+
+* You are not allowed to edit your own code. You are required to tell your partner what to edit in your code 
+* Repeat the above with other partner
+
 ----
 
 ### 6. Instructor do (20 minutes)
@@ -144,28 +169,14 @@ ALL or they won't be able to do the homework.
 
 ----
 
-### 7. Student Do (20 minutes)
+### 7. Partner Do (20 minutes)
+
+* Add shadows and rounded corners to partners code
+
+* You are not allowed to edit your own code. You are required to tell your partner what to edit in your code 
+* Repeat the above with other partner
 
 
 ----
-
-### 8. Instructor do (20 minutes)
-
-* CSS3
-
-  * shadows
-  * rounded corners
-  * nth-child
-  * content
-
-----
-
-### 9. Student Do (20 minutes)
-
-
-----
-
-
-
 # Copyright
 Rutgers Coding Boot Camp (C) 2015. All Rights Reserved.
