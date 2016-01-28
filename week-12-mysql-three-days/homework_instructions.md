@@ -240,8 +240,8 @@ node index.js
 
 							* now send the user back to the start menu
 								* this will start working on later on.
-									* call the function `currentScope.menu()`
-									* call the function `currentScope.promptUser()`
+									* call `currentScope.menu()`
+									* call `currentScope.promptUser()`
 
 							* ***Hint: What we're doing here is first calling the prompt function asking the user to give us some inputs, and prompt gives that in the result argument of the callback function. Then inside the anonymous function in prompt.get, we are making a connection to the MySQL database and doing an insert commmand using the user input as our data. Then at the end, we are calling functions to get back to our start menu prompt***
 
@@ -298,22 +298,22 @@ node index.js
 
 						* now send the user back to the start menu
 							* this will start working on later on.
-								* call the function `currentScope.menu()`
-								* call the function `currentScope.promptUser()`
+								* call `currentScope.menu()`
+								* call `currentScope.promptUser()`
 
 	* The care function
 		* Create a function inside of `zoo` named `care` with one input name it `input_scope`
 		* Create a variable named `currentScope` set it to `input_scope`
 		* console log Enter city name NY/SF.
 
-		- [x] *Hint: Notice that this database has 2 tables and are going into the realms of dealing with both database at the same time*
+		* ***Hint: Hint: Notice that this database has 2 tables and are going into the realms of dealing with both database at the same time***
 
 		* calls the function `prompt.get()` with two inputs
 			* first input: an array of all strings `->`, `city_name`
 			* second input: an anonymous function with an input (`err`, `result`)
 				*  call the function `connection.query()` with a string in the form of a mySQL select the number of animals that all the caretakers from the specific user inputed city
-					* call the function `currentScope.visit()`
-					* call the function `currentScope.view(currentScope)`
+					* call `currentScope.visit()`
+					* call `currentScope.view(currentScope)`
 
 	* The animId function
 		* Create a key inside of the `zoo` object named `animId` and point it to an anonymous function with one input name it `input_scope`
@@ -324,9 +324,9 @@ node index.js
 					* first input: an array of all strings `->`, `animal_id`
 					* second input: an anonymous function with an input (`err`, `result`)
 						* inside that anonymous function of the prompt.get do this
-							*  call the function `connection.query()` and get the data for the particular animal of that id that the user typed in.
-								* call the function `currentScope.visit()`
-								* call the function `currentScope.view(currentScope)`
+							*  call `connection.query()` and get the data for the particular animal of that id that the user typed in.
+								* call `currentScope.visit()`
+								* call `currentScope.view(currentScope)`
 
 	* The name function
 		* similar to the animId function but finds the animal by name instead of the animal id
@@ -342,8 +342,8 @@ node index.js
 					* first input: an array of all strings '--->','id','new_name','new_age','new_type','new_caretaker_id'
 					* second input: an anonymous function with an input (`err`, `result`)
 						*  call the function `connection.query()` and update that particular animal with the input the user provided
-							* call the function `currentScope.menu()`
-							* call the function `currentScope.promptUser()`
+							* call `currentScope.menu()`
+							* call `currentScope.promptUser()`
 
 	* The adopt function
 		* Create a key inside of the `zoo` object named `adopt` and point it to an anonymous function
@@ -353,9 +353,9 @@ node index.js
 					* first input: an array of all strings `->`, `animal_id`
 					* second input: an anonymous function with an input (`err`, `result`)
 						* inside that anonymous function of prompt.get
-							*  call the function `connection.query()` and delete it from the animals table
-								* call the function `currentScope.visit()`
-								* call the function `currentScope.view(currentScope)`
+							*  call `connection.query()` and delete it from the animals table
+								* call `currentScope.visit()`
+								* call `currentScope.view(currentScope)`
 
 	* The promptUser function
 		* Create a key inside of the `zoo` object named `promptUser` and point it to an anonymous function
@@ -383,7 +383,7 @@ node index.js
 		* Create a key inside of the `zoo` object named `exit` and point it to an anonymous function
 			* inside that anonymous function do the following:
 				* console log Thank you for visiting us, good bye~!
-				* call the `process.exit()` function
+				* call `process.exit()` function
 
 	* The open function
 		* Create a key inside of the `zoo` object named `open` and point it to an anonymous function
