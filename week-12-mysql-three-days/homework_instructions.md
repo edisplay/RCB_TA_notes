@@ -27,26 +27,27 @@ This homwork will exercise your ability to:
 
 Database structure (what your database will look like)
 
-Table: careTaker
+Table: care_takers
 
-| pk | Zoo | name  | 
+| id | zoo | name  | 
 |----|-----|-------|
 |  1 |  NY |   John|
 |  2 |  NY |   Mary|
 |  3 |  SF |   Sara|
 
-Table: animal
+Table: animals
 
-| pk | CareTaker_fk |  name | Type  | Age |
+| id | care_taker_id |  name | type  | age |
 |----|--------------|-------|-------|-----|
 |  1 |      1       |  Bobo |  Bear |  4  |
-|  1 |      1       |  Link |  Lion |  3  |
-|  1 |      2       |  CiCi |  Cat  |  1  |
+|  2 |      1       |  Link |  Lion |  3  |
+|  3 |      2       |  CiCi |  Cat  |  1  |
 
 
 ### Part 0: Setup
 
-Make sure to download or aquire the file
+Make sure to download or aquire the following file:
+
 ```
 zooDB.sql
 ```
@@ -54,20 +55,23 @@ zooDB.sql
 * download here
 		* https://drive.google.com/file/d/0Bz0Wzew04n0ub2NDSmxsZ201dkk/view
 
+Initialize your package.json file
+
 Install npm packages
 
 ```
 npm install prompt --save
 npm install mysql --save
 ```
-Start mySQL server
-`net start mysql`
-Make sure you are Admin when start the mySQl server
-And make sure you have the correct instance name my instance name is `mysql`
 
-*Importing the database
-launch: MySQL 5.7 Command Line Client
-enter your password
+If you haven't already start your MySQL server
+
+Make sure you are admin when start the MySQL server
+
+If you're on Windows, make sure you are on the correct instance name (typically it's `mysql`)
+
+* Importing the database
+
 ```
 CREATE DATABASE zoo_db;
 ```
