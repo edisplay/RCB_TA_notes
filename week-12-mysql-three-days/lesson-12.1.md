@@ -23,6 +23,8 @@ or they will be seriously behind
 # Theme
 Intro to MySQL
 
+mysql -u root -p
+
 ### 1. Partners do 15 minutes
 
 * *slack out the following exercise to students*

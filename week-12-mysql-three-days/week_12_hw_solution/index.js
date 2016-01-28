@@ -6,6 +6,7 @@ var connection = mysql.createConnection({
     password: '',
     database: 'zoo_db'
 });
+
 connection.connect(function(err) {
     if (err) {
         console.error('error connecting: ' + err.stack);
@@ -13,6 +14,7 @@ connection.connect(function(err) {
     };
     //console.log('connected as id ' + connection.threadId);
 });
+
 var prompt = require('prompt');
 prompt.start();
 prompt.message = '';
