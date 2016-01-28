@@ -1314,8 +1314,8 @@ var connection = mysql.createConnection({
 <p>now send the user back to the start menu</p>
 <ul>
 <li>this will start working on later on.<ul>
-<li>call the function <code>currentScope.menu()</code></li>
-<li>call the function <code>currentScope.promptUser()</code></li>
+<li>call <code>currentScope.menu()</code></li>
+<li>call <code>currentScope.promptUser()</code></li>
 </ul>
 </li>
 </ul>
@@ -1422,8 +1422,8 @@ var connection = mysql.createConnection({
 <p>now send the user back to the start menu</p>
 <ul>
 <li>this will start working on later on.<ul>
-<li>call the function <code>currentScope.menu()</code></li>
-<li>call the function <code>currentScope.promptUser()</code></li>
+<li>call <code>currentScope.menu()</code></li>
+<li>call <code>currentScope.promptUser()</code></li>
 </ul>
 </li>
 </ul>
@@ -1440,14 +1440,14 @@ var connection = mysql.createConnection({
 </li>
 <li>
 <p>The care function</p>
-<ul class="task-list">
+<ul>
 <li>Create a function inside of <code>zoo</code> named <code>care</code> with one input name it <code>input_scope</code></li>
 <li>Create a variable named <code>currentScope</code> set it to <code>input_scope</code></li>
 <li>
 <p>console log Enter city name NY/SF.</p>
 </li>
-<li class="task-list-item">
-<p><input type="checkbox" disabled checked> <em>Hint: Notice that this database has 2 tables and are going into the realms of dealing with both database at the same time</em></p>
+<li>
+<p><strong><em>Hint: Hint: Notice that this database has 2 tables and are going into the realms of dealing with both database at the same time</em></strong></p>
 </li>
 <li>
 <p>calls the function <code>prompt.get()</code> with two inputs</p>
@@ -1455,8 +1455,8 @@ var connection = mysql.createConnection({
 <li>first input: an array of all strings <code>-&gt;</code>, <code>city_name</code></li>
 <li>second input: an anonymous function with an input (<code>err</code>, <code>result</code>)<ul>
 <li>call the function <code>connection.query()</code> with a string in the form of a mySQL select the number of animals that all the caretakers from the specific user inputed city<ul>
-<li>call the function <code>currentScope.visit()</code></li>
-<li>call the function <code>currentScope.view(currentScope)</code></li>
+<li>call <code>currentScope.visit()</code></li>
+<li>call <code>currentScope.view(currentScope)</code></li>
 </ul>
 </li>
 </ul>
@@ -1476,9 +1476,9 @@ var connection = mysql.createConnection({
 <li>first input: an array of all strings <code>-&gt;</code>, <code>animal_id</code></li>
 <li>second input: an anonymous function with an input (<code>err</code>, <code>result</code>)<ul>
 <li>inside that anonymous function of the prompt.get do this<ul>
-<li>call the function <code>connection.query()</code> and get the data for the particular animal of that id that the user typed in.<ul>
-<li>call the function <code>currentScope.visit()</code></li>
-<li>call the function <code>currentScope.view(currentScope)</code></li>
+<li>call <code>connection.query()</code> and get the data for the particular animal of that id that the user typed in.<ul>
+<li>call <code>currentScope.visit()</code></li>
+<li>call <code>currentScope.view(currentScope)</code></li>
 </ul>
 </li>
 </ul>
@@ -1515,8 +1515,8 @@ var connection = mysql.createConnection({
 <li>first input: an array of all strings &lsquo;&mdash;&gt;&rsquo;,&rsquo;id&rsquo;,&rsquo;new_name&rsquo;,&rsquo;new_age&rsquo;,&rsquo;new_type&rsquo;,&rsquo;new_caretaker_id&rsquo;</li>
 <li>second input: an anonymous function with an input (<code>err</code>, <code>result</code>)<ul>
 <li>call the function <code>connection.query()</code> and update that particular animal with the input the user provided<ul>
-<li>call the function <code>currentScope.menu()</code></li>
-<li>call the function <code>currentScope.promptUser()</code></li>
+<li>call <code>currentScope.menu()</code></li>
+<li>call <code>currentScope.promptUser()</code></li>
 </ul>
 </li>
 </ul>
@@ -1539,9 +1539,9 @@ var connection = mysql.createConnection({
 <li>first input: an array of all strings <code>-&gt;</code>, <code>animal_id</code></li>
 <li>second input: an anonymous function with an input (<code>err</code>, <code>result</code>)<ul>
 <li>inside that anonymous function of prompt.get<ul>
-<li>call the function <code>connection.query()</code> and delete it from the animals table<ul>
-<li>call the function <code>currentScope.visit()</code></li>
-<li>call the function <code>currentScope.view(currentScope)</code></li>
+<li>call <code>connection.query()</code> and delete it from the animals table<ul>
+<li>call <code>currentScope.visit()</code></li>
+<li>call <code>currentScope.view(currentScope)</code></li>
 </ul>
 </li>
 </ul>
@@ -1599,7 +1599,7 @@ var connection = mysql.createConnection({
 <li>Create a key inside of the <code>zoo</code> object named <code>exit</code> and point it to an anonymous function<ul>
 <li>inside that anonymous function do the following:<ul>
 <li>console log Thank you for visiting us, good bye~!</li>
-<li>call the <code>process.exit()</code> function</li>
+<li>call <code>process.exit()</code> function</li>
 </ul>
 </li>
 </ul>
