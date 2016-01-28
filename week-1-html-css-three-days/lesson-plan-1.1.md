@@ -43,7 +43,7 @@ ALL or they won't be able to do the homework.
 ### 2. Partners Do (5 minutes)
 + Have the students get into groups of 4 or 5 and talk within their groups about 1 bad movie they last watched and 1 interest.
 
-### 3. Everyone do
+### 3. Everyone do (10 minutes)
 + Go around the room to each group 
 
 * Have all the students give a quick intro consisting of:
