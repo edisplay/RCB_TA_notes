@@ -1,6 +1,6 @@
 # Pavan to do
 
-make sure all students have mysql
+make sure all students have mysql for next week when they have to use it - if they don't then make sure those students come to office hours for help installing it
 
 add in timing
 
