@@ -30,7 +30,7 @@ This homwork will exercise your ability to:
 * Don't replicate this. You will be importing the database with the instructions below.
 * This is just to show you what the structure of the tables looks like.
 
-* Table: care_takers
+Table: care_takers
 
 | id | zoo | name  | 
 |----|-----|-------|
@@ -38,7 +38,7 @@ This homwork will exercise your ability to:
 |  2 |  NY |   Mary|
 |  3 |  SF |   Sara|
 
-* Table: animals
+Table: animals
 
 | id | care_taker_id |  name | type  | age |
 |----|--------------|-------|-------|-----|
@@ -49,35 +49,35 @@ This homwork will exercise your ability to:
 
 ### Part 0: Setup
 
-Make sure to download or aquire the following file:
+1. Make sure to download or aquire the following file:
 
-```
-zooDB.sql
-```
+	```
+	zooDB.sql
+	```
 
-* download here
-		* https://drive.google.com/file/d/0Bz0Wzew04n0ub2NDSmxsZ201dkk/view
+	* download here
+			* https://drive.google.com/file/d/0Bz0Wzew04n0ub2NDSmxsZ201dkk/view
 
-Initialize your package.json file
+2. Initialize your package.json file
 
-Install npm packages
+3. Install npm packages
 
-```
-npm install prompt --save
-npm install mysql --save
-```
+	```
+	npm install prompt --save
+	npm install mysql --save
+	```
 
-If you haven't already start your MySQL server
+4. If you haven't already start your MySQL server
 
-Make sure you are an admin when you start the MySQL server
+	* Make sure you are an admin when you start the MySQL server
 
-If you're on Windows, make sure you are on the correct instance name (typically it's `mysql`)
+	* If you're on Windows, make sure you are on the correct instance name (typically it's `mysql`)
 
-* Importing the database
+5. Now create and import the database
 
-```
-CREATE DATABASE zoo_db;
-```
+	```
+	CREATE DATABASE zoo_db;
+	```
 
 
 You can't do this in the MySQL console, you have to do this in the terminal (for mac), git bash (for windows)
