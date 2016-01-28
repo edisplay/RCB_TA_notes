@@ -23,11 +23,14 @@ This homwork will exercise your ability to:
 3. update a single record based off of the primary key 
 4. delete a record based off of the primary key 
 5. return a certain amount of records based off a where clause on a certain column 
-6. two joins
+6. using a join
 
-Database structure (what your database will look like)
+##### Database structure (what your database might look like)
 
-Table: care_takers
+* Don't replicate this. You will be importing the database with the instructions below.
+* This is just to show you what the structure of the tables looks like.
+
+* Table: care_takers
 
 | id | zoo | name  | 
 |----|-----|-------|
@@ -35,7 +38,7 @@ Table: care_takers
 |  2 |  NY |   Mary|
 |  3 |  SF |   Sara|
 
-Table: animals
+* Table: animals
 
 | id | care_taker_id |  name | type  | age |
 |----|--------------|-------|-------|-----|
