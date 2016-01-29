@@ -262,7 +262,6 @@ node index.js
 
 	* The view function
 		* Create a key inside of the `zoo` object named `view`, that points to an anonymous function
-			* Create a function inside of `zoo` named `add` with one input name it `input_scope`
 			* Create a variable named `currentScope` set it to `input_scope`
 			* console log Please choice what you like to visit!
 			* calls the function `prompt.get()` with two inputs
