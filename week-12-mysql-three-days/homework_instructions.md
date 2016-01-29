@@ -365,14 +365,14 @@ node index.js
 					* first input: a string with the value of `input`
 					* second input: an anonymous function with an input (`err`, `result`)
 						* inside that anonymous function
-							* if the `result.visit` == "Q"
+							* if the `result.input` == "Q"
 								-call the `self.exit()` function
-							* else if the `result.visit` == "A"
+							* else if the `result.input` == "A"
 								-call the `self.add(self)` function
-							* else if the `result.animId` == "V"
+							* else if the `result.input` == "V"
 								-call the `self.visit()` function
 								-call the `self.view(self)` function
-							* else if the `result.name` == "D"
+							* else if the `result.input` == "D"
 								-call the `self.adopt(self)` function
 							* else
 								- console log Sorry didn't get that, come again?

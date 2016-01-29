@@ -1566,14 +1566,14 @@ var connection = mysql.createConnection({
 <li>first input: a string with the value of <code>input</code></li>
 <li>second input: an anonymous function with an input (<code>err</code>, <code>result</code>)<ul>
 <li>inside that anonymous function<ul>
-<li>if the <code>result.visit</code> == &ldquo;Q&rdquo;<br />
+<li>if the <code>result.input</code> == &ldquo;Q&rdquo;<br />
     -call the <code>self.exit()</code> function</li>
-<li>else if the <code>result.visit</code> == &ldquo;A&rdquo;<br />
+<li>else if the <code>result.input</code> == &ldquo;A&rdquo;<br />
     -call the <code>self.add(self)</code> function</li>
-<li>else if the <code>result.animId</code> == &ldquo;V&rdquo;<br />
+<li>else if the <code>result.input</code> == &ldquo;V&rdquo;<br />
     -call the <code>self.visit()</code> function<br />
     -call the <code>self.view(self)</code> function</li>
-<li>else if the <code>result.name</code> == &ldquo;D&rdquo;<br />
+<li>else if the <code>result.input</code> == &ldquo;D&rdquo;<br />
     -call the <code>self.adopt(self)</code> function</li>
 <li>else<ul>
 <li>console log Sorry didn&rsquo;t get that, come again?</li>
