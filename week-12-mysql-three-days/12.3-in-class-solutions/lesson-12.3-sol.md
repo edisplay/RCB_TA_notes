@@ -316,15 +316,23 @@ jukebox.start();
 /*
 Create the functions of C.R.U.D in Node using a mySQL db
 
-You are creating an App for a climbing gym, in this gym new members comes in with a sign up of 30 session.
-Each time a member comes to visit the gym adds 1 to the session_used count which starts at 0, and record the current date.
+You are creating an App for a climbing gym:
+There is a prompt form that let's users fillout info.
+You can calculate what kind of membership they are buying, how many sessions.
+Once the app is lanuched it can take member sign ins.
+Adding new members.
+Update existing memebers info/sessions.
+Remove memebers.
+Do earning calculations.
 
 Create a new db in mySQL:
 
 * Create a table with PK(id), name, total session, session used, last session date.
-* Create a new memeber with any name, 30 total sessions, 0 session used, and last session date set to false.
-* Create a function that finds the number of session used by checking the name.
-* Create a function that add 1 to the session used and update the last session date to current date.
+
+
+Create in a new node app:
+
+* 
 
 Bonus: Create a function that checks total session against session used if it's both 30, delete the memeber
 */
