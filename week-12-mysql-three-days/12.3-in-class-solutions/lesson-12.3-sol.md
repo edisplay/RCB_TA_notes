@@ -1,4 +1,4 @@
-### 1. Everyone do
+### 1. Student do
 
 ```
 CREATE DATABASE bears_db;
