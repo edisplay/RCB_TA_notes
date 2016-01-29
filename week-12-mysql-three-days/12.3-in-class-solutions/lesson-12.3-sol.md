@@ -59,8 +59,6 @@ node index.js
 
 ### 2. Partners do (Simple MySQL db C.R.U.D.)
 
-Create a node.js function that will insert the following bear data when the node.js server starts. Go ahead and copy and paste this bearData array to your node script and loop over it to insert the three bears into your happy_bears table.
-
 ```
 var bearData = [
 	{name: 'Grizzly', favorite_food: 'Pizza', personality: 'Out going' },
