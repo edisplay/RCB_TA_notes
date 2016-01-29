@@ -1014,43 +1014,50 @@ body .markdown-body
     page-break-after: avoid;
   }
 }
-</style><title>homework_instructions</title></head><body><article class="markdown-body"><h1 id="week-of-12-hw-nodejs-mysql"><a name="user-content-week-of-12-hw-nodejs-mysql" href="#week-of-12-hw-nodejs-mysql" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Week of 12 HW: Node.js &amp; mySQL</h1>
+</style><title>homework_instructions</title></head><body><article class="markdown-body"><h1 id="week-of-12-hw-nodejs-mysql"><a name="user-content-week-of-12-hw-nodejs-mysql" href="#week-of-12-hw-nodejs-mysql" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Week of 12 HW: Node.js &amp; MySQL</h1>
 <h3 id="introduction"><a name="user-content-introduction" href="#introduction" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Introduction</h3>
 <ul>
 <li>
 <p>You will be creating a Zoo app.</p>
 </li>
 <li>
-<p>Building it with an object.</p>
+<p>You will organize your code into a JavaScript object.</p>
 </li>
 <li>
-<p>Using an mySQL database</p>
+<p>You will use MySQL and the MySQL NPM Package.</p>
 </li>
 <li>
-<p>It will be a command line node app that will take in prompted text as an input.</p>
+<p>You will make a command line node app that will take in prompted text as input.</p>
 </li>
 <li>
-<p>See demo of how this APP works</p>
+<p>You will become a PRO at SCOPING and Closures in JavaScript</p>
+</li>
+<li>
+<p><em>See demo of how this App works</em></p>
 </li>
 </ul>
 <h3 id="summary"><a name="user-content-summary" href="#summary" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Summary</h3>
-<p>C-R-U-D/ node mySQL app/ commandline <br />
-This homwork will exercise you ability to:</p>
+<p>Skills/Technologies you&rsquo;ll need: C-R-U-D, Node.js, MySQL NPM Package, Prompt NPM Package</p>
+<p>This homwork will exercise your ability to:</p>
 <ol>
 <li>see all the records </li>
-<li>delete a single record based off the primary key </li>
-<li>update a single record based off the primary key </li>
-<li>delete a record based off the primary key </li>
-<li>return a certain amount of records based off a where on a certain column </li>
-<li>two table left joins</li>
+<li>delete a single record based off of the primary key </li>
+<li>update a single record based off of the primary key </li>
+<li>delete a record based off of the primary key </li>
+<li>return a certain amount of records based off a where clause on a certain column </li>
+<li>using a join</li>
 </ol>
-<p>DB breakdown: Database structure</p>
-<p>Table: careTaker</p>
+<h5 id="database-structure-what-your-database-might-look-like"><a name="user-content-database-structure-what-your-database-might-look-like" href="#database-structure-what-your-database-might-look-like" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Database structure (what your database might look like)</h5>
+<ul>
+<li>Don&rsquo;t replicate this. You will be importing the database with the instructions below.</li>
+<li>This is just to show you what the structure of the tables looks like.</li>
+</ul>
+<p>Table: caretakers</p>
 <table>
 <thead>
 <tr>
-<th>pk</th>
-<th>Zoo</th>
+<th>id</th>
+<th>zoo</th>
 <th>name</th>
 </tr>
 </thead>
@@ -1072,15 +1079,15 @@ This homwork will exercise you ability to:</p>
 </tr>
 </tbody>
 </table>
-<p>Table: animal</p>
+<p>Table: animals</p>
 <table>
 <thead>
 <tr>
-<th>pk</th>
-<th>CareTaker_fk</th>
+<th>id</th>
+<th>care_taker_id</th>
 <th>name</th>
-<th>Type</th>
-<th>Age</th>
+<th>type</th>
+<th>age</th>
 </tr>
 </thead>
 <tbody>
@@ -1092,14 +1099,14 @@ This homwork will exercise you ability to:</p>
 <td>4</td>
 </tr>
 <tr>
-<td>1</td>
+<td>2</td>
 <td>1</td>
 <td>Link</td>
 <td>Lion</td>
 <td>3</td>
 </tr>
 <tr>
-<td>1</td>
+<td>3</td>
 <td>2</td>
 <td>CiCi</td>
 <td>Cat</td>
@@ -1108,197 +1115,257 @@ This homwork will exercise you ability to:</p>
 </tbody>
 </table>
 <h3 id="part-0-setup"><a name="user-content-part-0-setup" href="#part-0-setup" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Part 0: Setup</h3>
-<p>Make sure to download or aquire the file<br />
+<ol>
+<li>
+<p>Make sure to download or aquire the following file:</p>
 <pre><code>zooDB.sql
-</code></pre></p>
+</code></pre>
+
 <ul>
 <li>download here<br />
         * <a href="https://drive.google.com/file/d/0Bz0Wzew04n0ub2NDSmxsZ201dkk/view">https://drive.google.com/file/d/0Bz0Wzew04n0ub2NDSmxsZ201dkk/view</a></li>
 </ul>
+</li>
+<li>
+<p>Initialize your package.json file</p>
+</li>
+<li>
 <p>Install npm packages</p>
-<p><pre><code>npm install prompt --save
+<pre><code>npm install prompt --save
 npm install mysql --save
-</code></pre><br />
-Start mySQL server<br />
-<code>net start mysql</code><br />
-Make sure you are Admin when start the mySQl server<br />
-And make sure you have the correct instance name my instance name is <code>mysql</code></p>
-<p>*Importing the database<br />
-launch: MySQL 5.7 Command Line Client<br />
-enter your password<br />
-<pre><code>CREATE DATABASE zoo_db;
-</code></pre></p>
-<p>launch: gitbash<br />
-Example commands:</p>
-<p>on windows it might look like this:<br />
-<pre><code>C:/xampp/mysql/bin/mysql –u root -p zoo_db &lt; C:/zooDB.sql
-</code></pre><br />
-In this example mySQL is connected via XAMPP and mysql database is located within path:</p>
-<p>-u for your mySQL user name, my user name &ldquo;root&rdquo;, it may also ask for your password.</p>
-<p>zoo_db is the name of the DB you created<br />
-zooDB is located in C folder</p>
-<p>on a mac it might look like this, and you would run the command in your terminal (do not go into the mysql console and run this)</p>
-<p>if you get this:<br />
-mysql&gt; create database zoo_db;<br />
-ERROR 1044 (42000): Access denied for user &lsquo;&rsquo;@&rsquo;localhost&rsquo; to database &lsquo;zoo_db&rsquo;</p>
-<p>then do this<br />
-mysql -u root -p</p>
-<p>and then press enter for your password</p>
-<p>and then do stuff.</p>
-<pre><code>/usr/local/bin/mysql -u root -p zoo_db &lt; /Users/pavankatepalli/Desktop/zooDB.sql
 </code></pre>
 
-<p>On a Mac, to find out where your mysql is, do this in terminal</p>
-<p><pre><code>type -a mysql
+</li>
+<li>
+<p>If you haven&rsquo;t already start your MySQL server</p>
+<ul>
+<li>
+<p>Make sure you are an admin when you start the MySQL server</p>
+</li>
+<li>
+<p>If you&rsquo;re on Windows, make sure you are on the correct instance name (typically it&rsquo;s <code>mysql</code>)</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Now create and import the database</p>
+<pre><code>CREATE DATABASE zoo_db;
+</code></pre>
+
+</li>
+</ol>
+<p>You can&rsquo;t do this in the MySQL console, you have to do this in the terminal (for mac), git bash (for windows)</p>
+<p>on windows the commmand might look like this:<br />
+<pre><code>C:/xampp/mysql/bin/mysql –u root -p zoo_db &lt; C:/zooDB.sql
+</code></pre></p>
+<p>on mac the command might look like this:<br />
+<pre><code>/usr/local/var/mysql/ -u root -p zoo_db &lt; /Users/pavankatepalli/Downloads/zooDB.sql
+</code></pre></p>
+<h5 id="understanding-the-previous-command"><a name="user-content-understanding-the-previous-command" href="#understanding-the-previous-command" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Understanding the previous command</h5>
+<p>In the previous command, the first part is where MySQL is located on your computer, -u is for your MySQL user name (in the previous command it&rsquo;s &ldquo;root&rdquo;), -p is for your password (in the previous command we have a blank password). </p>
+<p>It may still ask for your password after that, and if its blank, then press enter.</p>
+<p>The third part (/Users/pavankatepalli/Downloads/zooDB.sql) is where the sql file is located on your computer. This contains all the data (tables and rows inside those tables) for your database.</p>
+<h5 id="if-you-have-trouble-finding-where-mysql-is-located-on-your-computer-then-do-this"><a name="user-content-if-you-have-trouble-finding-where-mysql-is-located-on-your-computer-then-do-this" href="#if-you-have-trouble-finding-where-mysql-is-located-on-your-computer-then-do-this" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>If you have trouble finding where MySQL is located on your computer, then do this:</h5>
+<ul>
+<li>run this command in the MySQL console </li>
+</ul>
+<p><pre><code>SHOW VARIABLES WHERE Variable_name LIKE '%dir';
 </code></pre><br />
-that returns/usr/local/bin/mysql.</p>
+* The datadir is where MySQL is located</p>
+<p>Alternatively, on a mac you can do this in the terminal to find out where MySQL is located:</p>
+<pre><code>type -a mysql
+</code></pre>
+
+<h5 id="hint-how-to-tackle-access-denied-error"><em>Hint: How to tackle access denied error</em></h5>
+<p>if you get this:</p>
+<pre><code>mysql&gt; create database zoo_db;
+ERROR 1044 (42000): Access denied for user ''@'localhost' to database 'zoo_db'
+</code></pre>
+
+<p>then do this</p>
+<pre><code>mysql -u root -p
+</code></pre>
+
+<p>and then press enter for your password</p>
+<p>and then do the importing above.</p>
 <h3 id="part-05-test"><a name="user-content-part-05-test" href="#part-05-test" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Part 0.5: Test</h3>
-<p>To launch the mysql in windows:<br />
-You can find the desktop app <br />
-<pre><code>C:\ProgramData\Microsoft\Windows\Start Menu\Programs\MySQL\MySQL Server 5.7
-</code></pre><br />
-or start menu and search for mysql<br />
-to lanuch the: MySQL 5.7 Command Line Client</p>
-<p>Test to see if import worked, inside MySQL Client:<br />
-Use myTestDB</p>
+<p>Test to see if import worked, inside the MySQL console</p>
+<p>Get into the database</p>
 <p>run the following command<br />
-<pre><code>SELECT * FROM careTakers;
-</code></pre><br />
-You should get back 99 rows in set.</p>
-<p>With the database imported, you are ready to create the node app.</p>
-<h3 id="part-1-creating-the-nodejs-connection-to-mysql"><a name="user-content-part-1-creating-the-nodejs-connection-to-mysql" href="#part-1-creating-the-nodejs-connection-to-mysql" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Part 1: Creating the Node.js connection to mySQL</h3>
-<ul class="task-list">
-<li>create a file named in side of the app folder if you already have one<br />
+<pre><code>SELECT * FROM caretakers;
+</code></pre></p>
+<p>You should get back data.</p>
+<p>With the database correctly imported, you are ready to create the node app.</p>
+<h3 id="part-1-creating-the-nodejs-connection-to-mysql"><a name="user-content-part-1-creating-the-nodejs-connection-to-mysql" href="#part-1-creating-the-nodejs-connection-to-mysql" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Part 1: Creating the Node.js connection to MySQL</h3>
+<ul>
+<li>create a file named index.js inside of your homework folder for this assignment</li>
+</ul>
 <pre><code>index.js
-</code></pre></li>
-<li>Start by creating a variable named mysql`<ul>
-<li>set it to the function <code>require()</code> with an input string of &lsquo;mysql&rsquo;</li>
+</code></pre>
+
+<ul>
+<li><em>Hint: Look up the NPM package mysql for more info</em></li>
+</ul>
+<p>Put the following at the top of your index.js file:</p>
+<p><pre><code>var mysql = require('mysql');
+var connection = mysql.createConnection({
+    host: 'nameOfYourHost',
+    user: 'YourUserName',
+    password: 'YourPassword',
+    database: 'zoo_db'
+});
+
+</code></pre><br />
+* modify the above credentials to fit your machine. <code>'nameOfYourHost'</code> could be <code>'localhost'</code>, <code>'YourUserName'</code> could be <code>'root'</code>, <code>'YourPassword'</code> could be <code>''</code>.  </p>
+<h5 id="explanation-of-the-above-code"><a name="user-content-explanation-of-the-above-code" href="#explanation-of-the-above-code" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Explanation of the above code</h5>
+<ul>
+<li>
+<p>You are using the mysql npm package in your index.js file</p>
+<ul>
+<li>you have a global variable called mysql<ul>
+<li>you set it equal to <code>require()</code> with an input string of &lsquo;mysql&rsquo;</li>
+</ul>
+</li>
 </ul>
 </li>
 <li>
-<p>Create a global variable named <code>connection</code></p>
+<p>You created a global variable named <code>connection</code></p>
 <ul>
-<li>set it to the function <code>mysql.createConnection()</code> with an input object<br />
-{<br />
-host: &lsquo;nameOfYourHost&rsquo;,<br />
-user: &lsquo;YourUserName&rsquo;,<br />
-password: &lsquo;YourPassword&rsquo;,<br />
-database: &lsquo;zoo_db&rsquo;<br />
-}</li>
+<li>and set it equal to <code>mysql.createConnection()</code> with an input object of your database credentials.</li>
 </ul>
 </li>
-<li>
-<p>Call the function <code>connection.connect()</code> with a function as it&rsquo;s input</p>
+</ul>
+<p>Add the following code in to check if your connection to the database works or not and also make the connection to your database:</p>
+<pre><code>    connection.connect(function(err) {
+        if (err) {
+            console.error('error connecting: ' + err.stack);
+            return;
+        };
+        //console.log('connected as id ' + connection.threadId);
+    });
+</code></pre>
+
 <ul>
-<li>an anonymous function with an input <code>err</code> </li>
-<li>if err <code>console.error('err connection ' + err.stack)</code>;</li>
-<li>return</li>
+<li>Create a variable named <code>prompt</code><ul>
+<li>set it to <code>require()</code> with an input string of &lsquo;prompt&rsquo;</li>
+<li>call this <code>prompt.start()</code></li>
+<li>call this <code>prompt.message</code> and set it to an empty string &ldquo;&rdquo;</li>
 </ul>
 </li>
-<li class="task-list-item">
-<p><input type="checkbox" disabled checked> <em>Hint: Look up the NPM package mysql for more info</em></p>
-</li>
-<li>
-<p>Create a variable named <code>prompt</code></p>
-<ul>
-<li>set it to the function <code>require()</code> with an input string of &lsquo;prompt&rsquo;</li>
-<li>call the function <code>prompt.start()</code></li>
-<li>call the function <code>prompt.message</code> set it to an empty string &ldquo;&rdquo;</li>
 </ul>
-</li>
-<li class="task-list-item">
-<p><input type="checkbox" disabled checked> <em>Hint: Look up the NPM prompt mysql for more info</em></p>
-</li>
-</ul>
-<p>Launch your node App<br />
+<p>Launch your node app<br />
 <pre><code>node index.js
 </code></pre></p>
-<p>Nodemon doesn&rsquo;t play nice with prompt so beware if you are testing with nodemon</p>
+<ul>
+<li><strong><em>Hint: Don&rsquo;t use Nodemon. Nodemon doesn&rsquo;t play nice with prompt so beware if you are testing with Nodemon.</em></strong></li>
+</ul>
 <h3 id="part-2-creating-the-zoo-object"><a name="user-content-part-2-creating-the-zoo-object" href="#part-2-creating-the-zoo-object" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Part 2: Creating the zoo object</h3>
 <ul>
 <li>
-<p>Start by creating an object <code>zoo</code></p>
+<p>Start by creating a variable <code>zoo</code> and make it an object</p>
 <ul>
-<li>The welcome message function</li>
 <li>
-<p>Create a function inside of <code>zoo</code> named <code>welcome</code> with no input</p>
+<p>The welcome message function</p>
 <ul>
-<li>console logs a welcome message &ldquo;Welcome to the Zoo And Friends App~!&rdquo;</li>
+<li>Create a key named <code>welome</code> inside of the <code>zoo</code> object <ul>
+<li>The function should console log the following welcome message: &ldquo;Welcome to the Zoo And Friends App~!&rdquo;</li>
+</ul>
+</li>
 </ul>
 </li>
 <li>
 <p>The menu message function</p>
 </li>
 <li>
-<p>Create a function inside of <code>zoo</code> named <code>menu</code> with no input</p>
-<ul class="task-list">
+<p>Create a key named <code>menu</code> inside of the <code>zoo</code> object</p>
+<ul>
 <li>console logs Enter (A): ------&gt; to Add a new animal to the Zoo!</li>
 <li>console logs Enter (U): ------&gt; to Update info on an animal in the Zoo!</li>
 <li>console logs Enter (V): ------&gt; to Visit the animals in the Zoo!</li>
 <li>console logs Enter (D): ------&gt; to Adopt an animal from the Zoo!</li>
-<li>console logs Enter (Q): ------&gt; to Quit and exit the Zoo!</li>
-<li class="task-list-item"><input type="checkbox" disabled checked> <em>Hint: To make it pretty when displaying make sure to console log a empty line after every console log with a message</em></li>
+<li>
+<p>console logs Enter (Q): ------&gt; to Quit and exit the Zoo!</p>
+<ul>
+<li><strong><em>Hint: To make it pretty when displaying make sure to console log a empty line after every console log with a message</em></strong></li>
 </ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong><em>Hint: <code>this</code> will change many times in your app, because we are using the npm package prompt, and now we&rsquo;re using prompts within prompts, so, you should be storing <code>this</code> into a variable before you use <code>this</code> inside of a prompt callback function. Then you should be using that variable in the next function. This will get clearer as we move on.</em></strong></p>
 </li>
 <li>
 <p>The menu message function</p>
-</li>
-<li>
-<p>Create a function inside of <code>zoo</code> named <code>add</code> with one input name it <code>input_scope</code></p>
-<ul class="task-list">
-<li>
-<p>Create a variable named <code>currentScope</code> set it to <code>input_scope</code></p>
-</li>
-<li class="task-list-item">
-<p><input type="checkbox" disabled checked> <em>Hint: The zoo object will have many function within it because the <code>prompt</code> npm only works when calling it as a function we are going to lose scope many-a-times while the app is being used it&rsquo;s aways safer to store the current <code>this</code> as we pass from function to function and back</em></p>
-</li>
-<li>
-<p>console logs &ldquo;To add an animal to the zoo please fill out the following form for us!&rdquo;</p>
-</li>
-<li>
-<p>calls the function <code>prompt.get()</code> with two inputs</p>
 <ul>
+<li>Create a key inside of <code>zoo</code> named <code>add</code> that points to an anonymous function with one argument named <code>input_scope</code><ul>
+<li>Inside that anonymous function<ul>
+<li>Create a variable named <code>currentScope</code> set it to <code>input_scope</code></li>
+<li>console log &ldquo;To add an animal to the zoo please fill out the following form for us!&rdquo;</li>
+<li>calls the function <code>prompt.get()</code> with two inputs<ul>
 <li>first input: an array of all strings <code>-&gt;</code>, <code>name</code>, <code>type</code>, <code>age</code></li>
+<li>second input: an anonymous function with an input (<code>err</code>, <code>result</code>)<ul>
 <li>
-<p>second input: an anonymous function with an input (<code>err</code>, <code>result</code>)</p>
-<ul class="task-list">
-<li>
-<p>call the function <code>connection.query()</code> with a string in the form of a mySQL insert command into the database based on the user&rsquo;s input into the correct table</p>
-</li>
-<li class="task-list-item">
-<p><input type="checkbox" disabled checked> <em>Hint: Check the <code>hw_readme.md</code> table for what the database might need, also what you asked the user for input</em></p>
+<p>inside of that anonymous function of prompt.get</p>
 <ul>
-<li>call the function <code>currentScope.menu()</code></li>
-<li>call the function <code>currentScope.promptUser()</code></li>
+<li>
+<p>use the function <code>connection.query()</code> to take the user&rsquo;s input and insert it into the animal&rsquo;s table</p>
+</li>
+<li>
+<p>now send the user back to the start menu</p>
+<ul>
+<li>this will start working on later on.<ul>
+<li>call <code>currentScope.menu()</code></li>
+<li>call <code>currentScope.promptUser()</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong><em>Hint: What we&rsquo;re doing here is first calling the prompt function asking the user to give us some inputs, and prompt gives that in the result argument of the callback function. Then inside the anonymous function in prompt.get, we are making a connection to the MySQL database and doing an insert commmand using the user input as our data. Then at the end, we are calling functions to get back to our start menu prompt</em></strong></p>
+</li>
+<li>
+<p><strong><em>Hint: The NPM mysql package has slightly different syntax than normal MySQL commands, look up the mysql NPM package for more info</em></strong></p>
+</li>
 </ul>
 </li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="task-list-item">
-<p><input type="checkbox" disabled checked> <em>Hint: What we are doing here is first calling the prompt function asking user to give us some inputs, by saving the result in `result, inside the prompt function we are making a connection the mySQL server and doing an insert commmand using the user input as our data, inside of the connection function we call promptUser function to go back to the menu of app</em></p>
+</ul>
 </li>
-<li class="task-list-item">
-<p><input type="checkbox" disabled checked> <em>Hint: NPM mysql has a sligtly different syntax than normal mySQL commands, look up mysql NPM for more info</em></p>
+</ul>
 </li>
 </ul>
 </li>
 <li>
 <p>The visit message function</p>
 <ul>
-<li>Create a function inside of <code>zoo</code> named <code>visit</code> with no input</li>
-<li>console logs Enter (I): ------&gt; to You know the animal by it&rsquo;s Id visit only it!</li>
-<li>console logs Enter (N): ------&gt; to You know the animal by name visit only it!</li>
-<li>console logs Enter (A): ------&gt; to Count all the animals in all the zoo locations!</li>
-<li>console logs Enter (C): ------&gt; to Count number of animal in zoo based on city!</li>
-<li>console logs Enter (O): ------&gt; to Count every animal in zoo with the same type!</li>
-<li>console logs Enter (Q): ------&gt; to Quit to main menu!</li>
+<li>Create a key inside of the <code>zoo</code> object named <code>visit</code>, that points to an anonymous function<ul>
+<li>inside the anonymous function<ul>
+<li>console log Enter (I): ------&gt; do you know the animal by it&rsquo;s id? We will visit that animal!</li>
+<li>console log Enter (N): ------&gt; do you know the animal by it&rsquo;s name? We will visit that animal!</li>
+<li>console log Enter (A): ------&gt; here&rsquo;s the count for all animals in all locations!</li>
+<li>console log Enter (C): ------&gt; here&rsquo;s the count for all animals in this one city!</li>
+<li>console log Enter (O): ------&gt; here&rsquo;s the count for all the animals in all locations by the type you specified!</li>
+<li>console log Enter (Q): ------&gt; Quits to the main menu!<ul>
+<li>this will start working on later on.<ul>
+<li>call <code>currentScope.visit()</code></li>
+<li>call <code>currentScope.view(currentScope)</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 </li>
 <li>
 <p>The view function</p>
 <ul>
+<li>Create a key inside of the <code>zoo</code> object named <code>view</code>, that points to an anonymous function<ul>
 <li>Create a function inside of <code>zoo</code> named <code>add</code> with one input name it <code>input_scope</code></li>
 <li>Create a variable named <code>currentScope</code> set it to <code>input_scope</code></li>
 <li>console log Please choice what you like to visit!</li>
@@ -1318,9 +1385,16 @@ database: &lsquo;zoo_db&rsquo;<br />
 <li>else if the <code>result.all</code> == &ldquo;C&rdquo;<br />
     -call the <code>currentScope.care(input_scope)</code> function</li>
 <li>else<ul>
-<li>console log Sorry didn&rsquo;t get that, come again?</li>
+<li>console log Sorry didn&rsquo;t get that, come again?<ul>
+<li>this will start working on later on.<ul>
 <li>call <code>currentScope.visit()</code></li>
 <li>call <code>currentScope.view(currentScope)</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -1332,15 +1406,30 @@ database: &lsquo;zoo_db&rsquo;<br />
 <li>
 <p>The type function</p>
 <ul>
-<li>Create a function inside of <code>zoo</code> named <code>type</code> with one input name it <code>input_scope</code></li>
+<li>Create a key inside of the <code>zoo</code> object named <code>type</code>, that points to an anonymous function that has one argument named <code>input_scope</code><ul>
 <li>Create a variable named <code>currentScope</code> set it to <code>input_scope</code></li>
-<li>console log Enter animal type to check out many those we got.</li>
+<li>console log Enter animal type to find how many animals we have of those type.</li>
 <li>calls the function <code>prompt.get()</code> with two inputs<ul>
-<li>first input: an array of all strings <code>-&gt;</code>, <code>animal_type</code></li>
+<li>first input: an array of strings <code>-&gt;</code>, <code>animal_type</code></li>
 <li>second input: an anonymous function with an input (<code>err</code>, <code>result</code>)<ul>
-<li>call the function <code>connection.query()</code> with a string in the form of a mySQL select from and where command, all the animals of the user inputed type from the correct table<ul>
-<li>call the function <code>currentScope.visit()</code></li>
-<li>call the function <code>currentScope.view(currentScope)</code></li>
+<li>
+<p>inside that anonymous function in prompt.get</p>
+<ul>
+<li>
+<p>call the function <code>connection.query()</code> and give a count of the animals of this type</p>
+</li>
+<li>
+<p>now send the user back to the start menu</p>
+<ul>
+<li>this will start working on later on.<ul>
+<li>call <code>currentScope.menu()</code></li>
+<li>call <code>currentScope.promptUser()</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -1351,14 +1440,14 @@ database: &lsquo;zoo_db&rsquo;<br />
 </li>
 <li>
 <p>The care function</p>
-<ul class="task-list">
+<ul>
 <li>Create a function inside of <code>zoo</code> named <code>care</code> with one input name it <code>input_scope</code></li>
 <li>Create a variable named <code>currentScope</code> set it to <code>input_scope</code></li>
 <li>
 <p>console log Enter city name NY/SF.</p>
 </li>
-<li class="task-list-item">
-<p><input type="checkbox" disabled checked> <em>Hint: Notice that this database has 2 tables and are going into the realms of dealing with both database at the same time</em></p>
+<li>
+<p><strong><em>Hint: Hint: Notice that this database has 2 tables and are going into the realms of dealing with both database at the same time</em></strong></p>
 </li>
 <li>
 <p>calls the function <code>prompt.get()</code> with two inputs</p>
@@ -1366,8 +1455,8 @@ database: &lsquo;zoo_db&rsquo;<br />
 <li>first input: an array of all strings <code>-&gt;</code>, <code>city_name</code></li>
 <li>second input: an anonymous function with an input (<code>err</code>, <code>result</code>)<ul>
 <li>call the function <code>connection.query()</code> with a string in the form of a mySQL select the number of animals that all the caretakers from the specific user inputed city<ul>
-<li>call the function <code>currentScope.visit()</code></li>
-<li>call the function <code>currentScope.view(currentScope)</code></li>
+<li>call <code>currentScope.visit()</code></li>
+<li>call <code>currentScope.view(currentScope)</code></li>
 </ul>
 </li>
 </ul>
@@ -1379,15 +1468,23 @@ database: &lsquo;zoo_db&rsquo;<br />
 <li>
 <p>The animId function</p>
 <ul>
-<li>Create a function inside of <code>zoo</code> named <code>animId</code> with one input name it <code>input_scope</code></li>
+<li>Create a key inside of the <code>zoo</code> object named <code>animId</code> and point it to an anonymous function with one input name it <code>input_scope</code><ul>
+<li>inside that anonymous function do the following:<ul>
 <li>Create a variable named <code>currentScope</code> set it to <code>input_scope</code></li>
 <li>console log Enter ID of the animal you want to visit.</li>
 <li>calls the function <code>prompt.get()</code> with two inputs<ul>
 <li>first input: an array of all strings <code>-&gt;</code>, <code>animal_id</code></li>
 <li>second input: an anonymous function with an input (<code>err</code>, <code>result</code>)<ul>
-<li>call the function <code>connection.query()</code> with a string in the form of a mySQL select from and where command, the target animal of the user inputed id from the correct table<ul>
-<li>call the function <code>currentScope.visit()</code></li>
-<li>call the function <code>currentScope.view(currentScope)</code></li>
+<li>inside that anonymous function of the prompt.get do this<ul>
+<li>call <code>connection.query()</code> and get the data for the particular animal of that id that the user typed in.<ul>
+<li>call <code>currentScope.visit()</code></li>
+<li>call <code>currentScope.view(currentScope)</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -1399,7 +1496,7 @@ database: &lsquo;zoo_db&rsquo;<br />
 <li>
 <p>The name function</p>
 <ul>
-<li>similar to the animId function but finds the animal by name instead of id</li>
+<li>similar to the animId function but finds the animal by name instead of the animal id</li>
 </ul>
 </li>
 <li>
@@ -1411,14 +1508,19 @@ database: &lsquo;zoo_db&rsquo;<br />
 <li>
 <p>The update function</p>
 <ul>
-<li>Create a function inside of <code>zoo</code> named <code>update</code> with one input name it <code>input_scope</code></li>
+<li>Create a key inside of the <code>zoo</code> object named <code>update</code> and point it to an anonymous function with one input name it <code>input_scope</code><ul>
+<li>inside that anonymous function do the following:<ul>
 <li>Create a variable named <code>currentScope</code> set it to <code>input_scope</code></li>
 <li>calls the function <code>prompt.get()</code> with two inputs<ul>
-<li>first input: an array of all strings &lsquo;&mdash;&gt;&rsquo;,&rsquo;ID&rsquo;,&rsquo;new_name&rsquo;,&rsquo;new_age&rsquo;,&rsquo;new_type&rsquo;,&rsquo;new_careTaker_ID&rsquo;</li>
+<li>first input: an array of all strings &lsquo;&mdash;&gt;&rsquo;,&rsquo;id&rsquo;,&rsquo;new_name&rsquo;,&rsquo;new_age&rsquo;,&rsquo;new_type&rsquo;,&rsquo;new_caretaker_id&rsquo;</li>
 <li>second input: an anonymous function with an input (<code>err</code>, <code>result</code>)<ul>
-<li>call the function <code>connection.query()</code> with a string in the form of a mySQL updates the info on the animal finding it with a where id is what the user inputed<ul>
-<li>call the function <code>currentScope.menu()</code></li>
-<li>call the function <code>currentScope.promptUser()</code></li>
+<li>call the function <code>connection.query()</code> and update that particular animal with the input the user provided<ul>
+<li>call <code>currentScope.menu()</code></li>
+<li>call <code>currentScope.promptUser()</code></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -1428,16 +1530,24 @@ database: &lsquo;zoo_db&rsquo;<br />
 </ul>
 </li>
 <li>
-<p>The adopt  function</p>
+<p>The adopt function</p>
 <ul>
-<li>Create a function inside of <code>zoo</code> named <code>adopt</code> with one input name it <code>input_scope</code></li>
+<li>Create a key inside of the <code>zoo</code> object named <code>adopt</code> and point it to an anonymous function<ul>
+<li>inside that anonymous function do the following:<ul>
 <li>Create a variable named <code>currentScope</code> set it to <code>input_scope</code>    </li>
-<li>calls the function <code>prompt.get()</code> with two inputs<ul>
+<li>call the function <code>prompt.get()</code> with two inputs<ul>
 <li>first input: an array of all strings <code>-&gt;</code>, <code>animal_id</code></li>
 <li>second input: an anonymous function with an input (<code>err</code>, <code>result</code>)<ul>
-<li>call the function <code>connection.query()</code> with a string in the form of a mySQL delete from and where command, the target animal of the user inputed id from the correct table and delete it<ul>
-<li>call the function <code>currentScope.visit()</code></li>
-<li>call the function <code>currentScope.view(currentScope)</code></li>
+<li>inside that anonymous function of prompt.get<ul>
+<li>call <code>connection.query()</code> and delete it from the animals table<ul>
+<li>call <code>currentScope.visit()</code></li>
+<li>call <code>currentScope.view(currentScope)</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -1449,23 +1559,32 @@ database: &lsquo;zoo_db&rsquo;<br />
 <li>
 <p>The promptUser function</p>
 <ul>
-<li>Create a function inside of <code>zoo</code> named <code>promptUser</code> with no input</li>
-<li>create a varibale named <code>self</code> set it to <code>this</code></li>
-<li>calls the function <code>prompt.get()</code> with two inputs<ul>
-<li>first input: an array of all strings <code>input</code></li>
+<li>Create a key inside of the <code>zoo</code> object named <code>promptUser</code> and point it to an anonymous function<ul>
+<li>inside that anonymous function do the following:<ul>
+<li>create a variable named <code>self</code> set it to <code>this</code></li>
+<li>call the function <code>prompt.get()</code> with two inputs<ul>
+<li>first input: a string with the value of <code>input</code></li>
 <li>second input: an anonymous function with an input (<code>err</code>, <code>result</code>)<ul>
-<li>if the <code>result.visit</code> == &ldquo;Q&rdquo;<br />
+<li>inside that anonymous function<ul>
+<li>if the <code>result.input</code> == &ldquo;Q&rdquo;<br />
     -call the <code>self.exit()</code> function</li>
-<li>else if the <code>result.visit</code> == &ldquo;A&rdquo;<br />
+<li>else if the <code>result.input</code> == &ldquo;A&rdquo;<br />
     -call the <code>self.add(self)</code> function</li>
-<li>else if the <code>result.animId</code> == &ldquo;V&rdquo;<br />
+<li>else if the <code>result.input</code> == &ldquo;V&rdquo;<br />
     -call the <code>self.visit()</code> function<br />
     -call the <code>self.view(self)</code> function</li>
-<li>else if the <code>result.name</code> == &ldquo;D&rdquo;<br />
+<li>else if the <code>result.input</code> == &ldquo;D&rdquo;<br />
     -call the <code>self.adopt(self)</code> function</li>
 <li>else<ul>
 <li>console log Sorry didn&rsquo;t get that, come again?</li>
-<li>call <code>self.promptUser()</code></li>
+<li>do not call <code>self.promptUser()</code></li>
+<li>do not call <code>self.menu()</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -1477,15 +1596,21 @@ database: &lsquo;zoo_db&rsquo;<br />
 <li>
 <p>The exit function</p>
 <ul>
-<li>Create a function inside of <code>zoo</code> named <code>exit</code> with no input</li>
+<li>Create a key inside of the <code>zoo</code> object named <code>exit</code> and point it to an anonymous function<ul>
+<li>inside that anonymous function do the following:<ul>
 <li>console log Thank you for visiting us, good bye~!</li>
-<li>call the <code>process.exit()</code> function</li>
+<li>call <code>process.exit()</code> function</li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 </li>
 <li>
 <p>The open function</p>
 <ul>
-<li>Create a function inside of <code>zoo</code> named <code>open</code> with no input</li>
+<li>Create a key inside of the <code>zoo</code> object named <code>open</code> and point it to an anonymous function<ul>
+<li>inside that anonymous function do the following:<ul>
 <li>call <code>this.welcome()</code></li>
 <li>call <code>this.menu()</code></li>
 <li>call <code>this.promptUser()</code></li>
@@ -1494,6 +1619,11 @@ database: &lsquo;zoo_db&rsquo;<br />
 </ul>
 </li>
 </ul>
-<p>call the function <code>zoo.open()</code></p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="after-your-zoo-object-is-completed"><a name="user-content-after-your-zoo-object-is-completed" href="#after-your-zoo-object-is-completed" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>After your zoo object is completed</h3>
+<p>call the function <code>zoo.open();</code> after your object in index.js.</p>
 <h1 id="copyright"><a name="user-content-copyright" href="#copyright" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Copyright</h1>
 <p>Coding Boot Camp (C) 2016. All Rights Reserved.</p></article></body></html>

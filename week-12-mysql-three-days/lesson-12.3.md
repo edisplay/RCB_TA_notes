@@ -34,7 +34,7 @@ look at this file at the root of the repository:
 * Students will write code inside of a Node.js script to perform C.R.U.D on a MySQL database
 
 # Theme: 
-Using MySQL in a Node.js file
+Prompt + MySQL + Node
 
 --------- --------- ---------
 
@@ -44,64 +44,161 @@ Using MySQL in a Node.js file
 ALL or they won't be able to do the homework.
 ```
 
-PART ONE:
----------
+### 1. Students do (15 minutes)
 
-### 1. Partners do (5 minutes)
+1. Create a `bears_db` database, make a `happy_bears` table with a primary integer auto incrementing key of id, a name varchar(30) not null, a favorite_food varchar(30) not null, a personality varchar(30) not null.
 
-* *say this and slack it out:*
+2. Insert a happy bear named Nom Nom whose favorite food is tacos and is mean.
 
-> Define what each of the letters in C.R.U.D stand for. Turn to your partners and talk about this. You are responsible for the people around you understanding C.R.U.D.
+3. Make a node file that uses the mysql npm package, connects to the bears_db database and selects all the bears and returns them to the terminal through a console log. 
 
-### 2. Everyone do (5 minutes)
+4. Run the node file.
+
+
+### 2. Everyone do (10 minutes)
 
 * *Call on a weaker student to go over the previous exercise*
 
-Solution:
+* *Slack out your solution and commit this in your in class repo*
 
-* *Slack this out and commit this in your in class repo*
+
+### 3. Instructor do (20 minutes)
+
+* *do the following in mysql in front of students*
 
 ```
-C - CREATE - INSERT INTO pets (name, type, age) VALUES ('fido', 'dog', 3);
-R - READ - SELECT * FROM pets;
-U - UDPATE - UPDATE pets SET name='under dog' WHERE type = 'dog';
-D - DELETE - DELETE FROM pets WHERE type = 'mouse';
+CREATE DATABASE sports_db;
+USE sports_db;
+
+CREATE TABLE sports (
+id int AUTO_INCREMENT,
+sport_name varchar(30) NOT NULL,
+intensity int NOT NULL,
+PRIMARY KEY(id)
+); 
+
+SELECT * FROM sports; /* show that it's empty */
 ```
 
-### 3. Student do (20 minutes)
-* *Introduce this MySQL review exercise and explain what students need to do + bonus (review MySQL basics)*
+* *make a node script that will select, insert, update, delete from the sports_db* 
+* ***TO SAVE TIME: please copy and paste the following code in batches instead of coding this from scratch. Obviously go over each part as you copy and paste it.***
 
-1. With the following steps, run the commands in the MySQL console, but also copy the commands into a movies.sql file, and push this file to a github repository 
-1. Create a database in MySQL named movies
-1. Make a table called samuel_l_jackson_movies
-1. Insert the below data into the samuel_l_jackson_movies table
-1. Update the last row in the table to year 2015
-1. Delete the first row of the table
-1. Find out how many total movies are in the table using a SQL query
-1. Finish the bonus
-1. Slack the instructor the github repository
+* *** Don't run all the functions all at once. Run them one at a time and make sure you get the class talking to each other about what's happening on the screen. Not one person. The entire class should be talking to each other. ***
 
-| movie  | character  | year |
-|------------| ------ |-------|
-|Jackie Brown|Ordell Robbie|1997|
-|Shaft|John Shaft|2000|
-|Snakes on a Plane|Neville Flynn|2006 |
-|Star Wars: The Clone Wars| Mace Windu |2008| 
-|Captain America: The First Avenger | Nick Fury|2011 |
-|Fury| Foley| 2012 |
-|The Avengers | Nick Fury| 2012 |
-|Django Unchained | Stephen| 2012 |
-|Avengers: Age of Ultron| Nick Fury | 1015 |
+```
+var mysql = require('mysql');
+var connection = mysql.createConnection({
+    host: 'localhost',
+    user: 'root',
+    password: '',
+    database: 'sports_db'
+});
 
-BONUS:
+var showSports = function() {
+  connection.query('SELECT * FROM sports', function(err, res) {
+      console.log("Sports we have ", res);
+  });
+}
 
-* Using a sql statement, find all the movies where the year is equal to 2012 and doesn't have the character Nick Fury 
+//showSports();
+```
+
+> Explain what just happened to your partners
+
+```
+var addFourSports = function() {
+  connection.query('INSERT INTO sports (sport_name, intensity) VALUES (?,?)', ['extreme ping pong', 10], function(err, result) {
+    if (err) throw err;
+
+    console.log("insert finished~!")
+
+  });
+
+  connection.query('INSERT INTO sports (sport_name, intensity) VALUES (?,?)', ['tag', 7], function(err, result) {
+    if (err) throw err;
+
+    console.log("insert finished~!")
+
+  });
+
+  connection.query('INSERT INTO sports (sport_name, intensity) VALUES (?,?)', ['man hunt', 9], function(err, result) {
+    if (err) throw err;
+
+    console.log("insert finished~!")
+
+  });
+
+  connection.query('INSERT INTO sports (sport_name, intensity) VALUES (?,?)', ['ninja warrior', 10], function(err, result) {
+    if (err) throw err;
+
+    console.log("insert finished~!")
+
+  });
+};
+
+//addFourSports();
+```
+
+> Explain what just happened to your partners
+
+```
+var updateThirdSport = function() {
+  connection.query('UPDATE sports SET sport_name = ? WHERE id = 3', ['knife fighting'], function(err, result) {
+    if (err) throw err;
+
+    console.log("update finished~!");
+  }); 
+  
+};
+
+//updateThirdSport();
+```
+
+> Explain what just happened to your partners
+
+```
+var deleteFirstSport = function() {
+  connection.query('DELETE FROM sports WHERE id=?', [1], function(err, result) {
+    if (err) throw err;
+
+    console.log("delete finished~!");
+  }); 
+  
+};
+
+//deleteFirstSport();
+```
+
+> Explain what just happened to your partners
+
+### 4. Partners do (20 minutes)
+
+1. In your previous happy_bears node script that you made, make an addBears funtion that loops over the below bearData array of objects and inserts the appropriate bear with the appropriate information into the happy_bears table.
+
+2. Make an updateBear function that will update the third bear's favorite food to bamboo.
+
+3. Make a deleteBear function that will delete the first bear in the happy_bears table.
+
+4. call your functions at the end one at a time in the order that you made them. 
+
+```
+var bearData = [
+  {name: 'Grizzly', favorite_food: 'Pizza', personality: 'Out going' },
+  {name: 'Panda', favorite_food: 'Hot Dog', personality: 'Shy' },
+  {name: 'Ice Bear', favorite_food: 'Fish', personality: 'Chill' }
+];
+```
 
 ### 4. Everyone Do (10 minutes)
 
 * *Go over the previous exercise with the class - call on one unique student per each part of the previous exercise to explain what they did for each part of the exercise*
 
-###### 40 minutes have passed
+###### 75 minutes have passed
+
+*** ZHEN and Pavan need to update objectives at the top and the INSTRUCTOR MUST COVER!!! section when finished ***
+*** ZHEN And PAVAN approve of above ***
+
+
 
 ### 5. Instructor do ( 15 minutes ) 
 
@@ -202,17 +299,11 @@ Bonus:
 
 * check out the Moo Milk Bar website http://www.moomilkbar.ca/#the-bakery
 
-### 10. Everyone do ( 15 minutes )
+### 10. Everyone do ( 40 minutes )
 
 go over the previous exercise with the class
 
-BREAK: (15 mins)
----------
-
-PART TWO:
----------
-
-New Materials Intro:  ~85 mins
+##### x minutes passed by - break time for 15 minutes
 
 ### 14. Student do: ( 5 mins )
 Create a new Node App 

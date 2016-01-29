@@ -1,0 +1,38 @@
+12.3 longer day 200mins 40 mins breaks
+
+goals: 
+
+1. review mysql node (DEMO 1)
+   connect to mysql db
+   select data
+
+2. crud mysql node no prompt (EX 1)
+   crud functions mysql    
+
+3. introduce prompt (DEMO 2)
+   prompt
+
+4. simple prompt FBI (EX 3)
+
+5. nested prompts (DEMO 3) music jukebox
+-justice
+-lorde
+-kwest
+
+6. prompt (EX 4)
+
+7. instructor do and partner dos 
+
+8. node + nested prompts + mysql (EX 5)
+2 tables joins (NBA)
+
+-warriors
+-spurs
+-cavs
+-bulls
+
+
+ctrl + shift + p
+markdown preview save to HTML
+use markdown
+
