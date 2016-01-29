@@ -1,4 +1,4 @@
-### 12.3.1 Exercise 1: (Simple MySQL db C.R.U.D.)
+### 1. Students do (15 minutes)
 
 ```
 CREATE DATABASE bears_db;
@@ -57,7 +57,7 @@ Run app
 node index.js
 ```
 
-Create an node.js function that will insert the following data when the node.js server starts
+### 4. Partners do (20 minutes)
 
 | name  | favorite_food  | personality |
 |-------|----------------|-------------|
@@ -66,13 +66,23 @@ Create an node.js function that will insert the following data when the node.js 
 |'Ice Bear'|'Fish'|Chill|
 
 ```
-var bearsData = ['Grizzly','Panda','Ice Bear'];
-var foodData = ['Pizza','Hot Dog','Fish'];
-var PersonData = ['Out going','Shy','Chill'];
+var bearData = [
+	{name: 'Grizzly', favorite_food: 'Pizza', personality: 'Out going' },
+	{name: 'Panda', favorite_food: 'Hot Dog', personality: 'Shy' },
+	{name: 'Ice Bear', favorite_food: 'Fish', personality: 'Chill' }
+];
+```
+
+```
+var bearData = [
+	{name: 'Grizzly', favorite_food: 'Pizza', personality: 'Out going' },
+	{name: 'Panda', favorite_food: 'Hot Dog', personality: 'Shy' },
+	{name: 'Ice Bear', favorite_food: 'Fish', personality: 'Chill' }
+];
 
 var addBears = function() {
 	for (var i = 0; i < 3; i++) {
-		connection.query('INSERT INTO happy_bears (name,favorite_food,personality) VALUES (?,?,?)', [bearsData[i],foodData[i],PersonData[i]], function(err, result) {
+		connection.query('INSERT INTO happy_bears (name,favorite_food,personality) VALUES (?,?,?)', [bearsData[i].name, bearsData[i].favorite_food, bearsData[i].personality], function(err, result) {
 		if (err) throw err;
 		});
 	};
