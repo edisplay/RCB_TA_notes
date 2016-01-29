@@ -1,4 +1,4 @@
-### 12.3.1 Exercise 1: (Simple MySQL db C.R.U.D.)
+### 1. Everyone do
 
 ```
 CREATE DATABASE bears_db;
@@ -56,6 +56,8 @@ Run app
 ```
 node index.js
 ```
+
+### 2. Partners do (Simple MySQL db C.R.U.D.)
 
 Create an node.js function that will insert the following data when the node.js server starts
 
