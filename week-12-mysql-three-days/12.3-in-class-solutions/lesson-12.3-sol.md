@@ -13,8 +13,8 @@ PRIMARY KEY(id)
 ); 
 
 INSERT INTO happy_bears (name, favorite_food, personality) VALUES ('Nom Nom','Vanity','Mean');
-
 ```
+
 App setup:
 ```
 1.create App Dir named 'bears'
@@ -26,7 +26,6 @@ Database setup:
 2.mysql config
 ```
 
-```
 If you can't get access to the db, you might have installed mySQL with a port you need to put it
 ```
 var mysql = require('mysql');
@@ -37,7 +36,6 @@ var connection = mysql.createConnection({
     password: '1111',
     database: 'bears_db'
 });
-
 connection.query('SELECT * FROM happy_bears', function(err, res) {
     console.log("Okay we got ", res);
 });
@@ -90,10 +88,20 @@ var updateBear = function() {
 };
 //updateBear();
 
-
-
+var deleteBear = function() {
+	connection.query('DELETE FROM happy_bears WHERE id=?', [1], function(err, result) {
+	if (err) throw err;
+	});	
+	console.log("delete finished~!")
+};
+//deleteBear();
 ```
 
 --------- --------- ---------
+### 12.3.2 Exercise 2: (Simple Prompt)
+```
+npm install prompt
+```
+Create 3 function that will create the FBI report 
 
-### 12.3.2 Exercise 2:
+
