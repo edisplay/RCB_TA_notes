@@ -1,4 +1,4 @@
-### 1. Student do
+### 1. Students do (15 minutes)
 
 ```
 CREATE DATABASE bears_db;
@@ -57,7 +57,13 @@ Run app
 node index.js
 ```
 
-### 2. Partners do (Simple MySQL db C.R.U.D.)
+### 4. Partners do (20 minutes)
+
+| name  | favorite_food  | personality |
+|-------|----------------|-------------|
+|Grizzly|Pizza|'Out going'|
+|Panda|'Hot Dog'|Shy|
+|'Ice Bear'|'Fish'|Chill|
 
 ```
 var bearData = [
@@ -66,13 +72,6 @@ var bearData = [
 	{name: 'Ice Bear', favorite_food: 'Fish', personality: 'Chill' }
 ];
 ```
-
-| name  | favorite_food  | personality |
-|-------|----------------|-------------|
-|Grizzly|Pizza|'Out going'|
-|Panda|'Hot Dog'|Shy|
-|'Ice Bear'|'Fish'|Chill|
-
 
 ```
 var bearData = [
