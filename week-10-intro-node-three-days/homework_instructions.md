@@ -177,4 +177,4 @@ npm install request
 * Your log.txt file should not be overwritten each time you run a command.
 
 # Copyright
-Rutgers Coding Boot Camp (C) 2015. All Rights Reserved.
+Coding Boot Camp (C) 2015. All Rights Reserved.

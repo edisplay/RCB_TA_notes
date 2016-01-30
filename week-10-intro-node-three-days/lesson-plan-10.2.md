@@ -328,4 +328,4 @@ request('http://www.omdbapi.com/?t=remember+the+titans&y=&plot=short&r=json', fu
 Explain to your partners. What's going to happen when I run this file?
 
 # Copyright
-Rutgers Coding Boot Camp (C) 2015. All Rights Reserved.
+Coding Boot Camp (C) 2015. All Rights Reserved.

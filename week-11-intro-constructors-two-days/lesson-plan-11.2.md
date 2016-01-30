@@ -170,4 +170,4 @@ make a property inside of the bus constructor function to remove a particular st
 * no solution for this. get a student to present *
 
 # Copyright
-Rutgers Coding Boot Camp (C) 2015. All Rights Reserved.
+Coding Boot Camp (C) 2015. All Rights Reserved.

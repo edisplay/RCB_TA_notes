@@ -20,4 +20,4 @@ look at this file at the root of the repository:
 
 
 # Copyright
-Rutgers Coding Boot Camp (C) 2015. All Rights Reserved.
+Coding Boot Camp (C) 2015. All Rights Reserved.

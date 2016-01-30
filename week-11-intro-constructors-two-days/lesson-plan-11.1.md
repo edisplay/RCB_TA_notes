@@ -224,4 +224,4 @@ Make a variable named cat that is set to a new Tamagotchi. Add the following met
 
 
 # Copyright
-Rutgers Coding Boot Camp (C) 2015. All Rights Reserved.
+Coding Boot Camp (C) 2015. All Rights Reserved.

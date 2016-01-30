@@ -394,4 +394,4 @@ ctrl+j
 * Compare work and discuss with partner to see how similar your code is. If not the same, work together to make it the same and valid and discuss.
 
 # Copyright
-Rutgers Coding Boot Camp (C) 2015. All Rights Reserved.
+Coding Boot Camp (C) 2015. All Rights Reserved.
