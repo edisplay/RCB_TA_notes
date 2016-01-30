@@ -286,6 +286,7 @@ var jukebox = {
 				// currentScope.pickArtist(currentScope);
 			}else if (result.song_choice == "Y") {
 				console.log("\n" + "~ I’m a princess cut from marble," + "\n" + "smoother than a storm." + "\n" + "And the scars that mark my body, they’re silver and gold ~" + "\n")
+				currentScope.exit();
 			}else{
 				console.log("Sorry didn't get that come again?");
 				currentScope.LordeChoices(currentScope);
@@ -300,9 +301,10 @@ var jukebox = {
 				currentScope.exit();
 			}else if (result.song_choice == "S") {
 				console.log("\n" + "~ N-now th-that that don't kill me" + "\n" + "Can only make me stronger" + "\n" + "I need you to hurry up now ~" + "\n");
+				currentScope.exit();
 			}else{
 				console.log("Sorry didn't get that come again?");
-				currentScope.LordeChoices(currentScope);
+				currentScope.KanyeChoices(currentScope);
 			}
 		});
 	},

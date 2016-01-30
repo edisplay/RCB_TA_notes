@@ -298,7 +298,7 @@ Instructions:
 
 
 ##### Make sure to use nodemon for this app
-  * *If students are still unclear demo the app infront of the class*
+  * *If students are still unclear demo the app infront of the class from lesson-12.3-sol*
 
 ### 9. Everyone Do (10 minutes)
 
@@ -309,25 +309,189 @@ Instructions:
 ### 10. BREAK ( 40 minutes )
 --------- --------- ---------
 
-### 11. Instructor do: ( 15 minutes ) 
+### 11. Partners do: ( 5 minutes ) 
 
-* Matryoshka doll Demo *
-This demo will show how scope is losting during multiple nested prompt functions.
-The solution to this demo shows how to get around the scope issue but using self.
+* Russian nesting doll Demo *
+This demo will show how scope is lost during multiple nested prompt functions.
+
+* Start by Creating a dir named russianDoll
+  * setup node (npm install)
+  * create `index.js` file
+  * setup prompt (npm install prompt)
+
+Make sure `index.js` has the following code
 
 ```
-//matryoshka doll app
-
+var prompt = require('prompt');
+prompt.start();
+prompt.message = '';
 ```
 
-### 12. Partners do: ( 5 minutes ) 
+Follow this demo step by step will show how to get around the scope issue but using `self` and pass `self`.
 
-> Explain what just happened in the last example to your partners
+> Ask students to partner up and discuss, what the following code is doing and why it wouldn't work, and what needs to changed to get user to the `second_layer`.
 
-### 12. Students do: ( 25 minutes ) 
+> Slack this code to the student so they can play around with it.
 
-* *Run the `jukebox` demo to demo how this app should work *
+Version 1
+```
+//Russian nesting doll 1
 
+var russianDoll = {
+  start : function() {
+    console.log("Welcome to matryoshka doll a.k.a russian nesting doll~!");
+    this.first_layer();
+  },
+  first_layer : function() {
+    console.log("You are at the first layer of the doll, would you like to open another layer? Y/N");
+    prompt.get('open', function(err, result) {
+      if (result.open == 'Y') {
+        this.second_layer();
+      }else{
+        process.exit();
+      };
+    });
+  },
+  second_layer : function() {
+    console.log("You are at the second layer of the doll, would you like to open another layer? Y/N");
+    prompt.get(['->','open'], function(err, result) {
+      if (result.open == 'Y') {
+        this.final_layer.third_layer();
+      }else{
+        process.exit();
+      };
+    });
+  },
+  final_layer: {
+    third_layer : function() {
+      console.log("You are at the third layer of the doll. would you like to close the doll? Y/N");
+      prompt.get(['->','close'], function(err, result) {
+        if (result.close == 'Y') {
+          this.start();
+        }else{
+          process.exit();
+        };
+      });
+    }
+  }
+};
+
+russianDoll.start();
+```
+### 12. Instructor do: ( 5 minutes ) 
+
+Explain why `self` is used, because the `prompt` function loses scope when another function is called inside of it.
+
+> Ask students to partner up and discuss, what the following code is doing and why it still wouldn't work, and what needs to changed to get user to the `third_layer`.
+
+Version 2
+```
+//Russian nesting doll 2
+
+var russianDoll = {
+  start : function() {
+    console.log("Welcome to matryoshka doll a.k.a russian nesting doll~!");
+    this.first_layer();
+  },
+  first_layer : function() {
+    var self = this;
+    console.log("You are at the first layer of the doll, would you like to open another layer? Y/N");
+    prompt.get('open', function(err, result) {
+      if (result.open == 'Y') {
+        self.second_layer();
+      }else{
+        process.exit();
+      };
+    });
+  },
+  second_layer : function() {
+    var self = this;
+    console.log("You are at the second layer of the doll, would you like to open another layer? Y/N");
+    prompt.get(['->','open'], function(err, result) {
+      if (result.open == 'Y') {
+        self.final_layer.third_layer();
+      }else{
+        process.exit();
+      };
+    });
+  },
+  final_layer: {
+    third_layer : function() {
+      var self = this;
+      console.log("You are at the third layer of the doll. would you like to close the doll? Y/N");
+      prompt.get(['->','close'], function(err, result) {
+        if (result.close == 'Y') {
+          self.start();
+        }else{
+          process.exit();
+        };
+      });
+    }
+  }
+};
+
+russianDoll.start();
+```
+
+### 13. Instructor do: ( 10 minutes ) 
+
+Explain why `input_scope` and `current` is used.
+
+```
+//Russian nesting doll 3
+
+var russianDoll = {
+  start : function() {
+    console.log("Welcome to matryoshka doll a.k.a russian nesting doll~!");
+    this.first_layer();
+  },
+  first_layer : function() {
+    var self = this;
+    console.log("You are at the first layer of the doll, would you like to open another layer? Y/N");
+    prompt.get('open', function(err, result) {
+      if (result.open == 'Y') {
+        self.second_layer();
+      }else{
+        process.exit();
+      };
+    });
+  },
+  second_layer : function() {
+    var self = this;
+    console.log("You are at the second layer of the doll, would you like to open another layer? Y/N");
+    prompt.get(['->','open'], function(err, result) {
+      if (result.open == 'Y') {
+        self.final_layer.third_layer(self);
+      }else{
+        process.exit();
+      };
+    });
+  },
+  final_layer: {
+    third_layer : function(input_scope) {
+      var current = input_scope;
+      console.log("You are at the third layer of the doll. would you like to close the doll? Y/N");
+      prompt.get(['->','close'], function(err, result) {
+        if (result.close == 'Y') {
+          current.start();
+        }else{
+          process.exit();
+        };
+      });
+    }
+  }
+};
+
+russianDoll.start();
+```
+* *Copy paste version 3 into `index.js` save run the app to show it works*
+* *Make sure to use `node index.js` not nodemon*
+
+### 14. Students do: ( 20 minutes ) 
+
+* *Slack the followin instructions to student for them to do this exercise*
+
+You are going to creat a jukebox app.
 In the jukebox app there are two artists they each carry two songs, with the following lyrics.
 
 ```
@@ -361,35 +525,26 @@ KanyeWest:
     Can only make me stronger
     I need you to hurry up now ~
 ```
-### Creating the jukebox object
 
-* Start by creating a variable `jukebox` and make it an object
-  * Inside of the jukebox object we will be creating some functions
+  * When the app is launched in terminal, it should console log a menu in the terminal and prompt to ask me which artist the user would like to chose.
+  * Depending on which artist is picked, it should console log another menu with the titles of the songs for that artist and prompt the user to chose a song.
+  * Depending on which song is picked, it should console log the lyrics of that song in terminal and exit the app.
+  * You must create at least 2 artist, each with at least 2 songs.
 
-* The `artistMenu` message function
-  * Create a key named `artistMenu` inside of the `jukebox` object
-    * console logs Please select who you want to listen to...
-    * console logs Enter (L): ------> Pick songs from Lorde!
-    * console logs Enter (K): ------> Pick songs from KanyeWest!
-    * console logs Enter (Q): ------> Quit and exit jukebox!
-
-
-
-  artistMenu : function()
-  pickArtist : function(input_scope)
-  LordeSongs : function()
-  KanyeSongs : function()
-  LordeChoices : function(input_scope)
-  KanyeChoices : function(input_scope)
-  start : function()
-  exit: function()
-
-To start the app call `jukebox.start();`
-
-Part 2: 
+BONUS: 
   * After a song is played don't quit the jukebox, the jukebox will now go back to menu displaying the chooses and the take user input.
 
-### 13. Instructor do: ( 15 minutes )
+* *Run the `jukebox` demo to demo how this app should work *
+
+* Start by Creating a dir named russian_nesting_doll
+  * setup node (npm install)
+  * create `index.js` file
+  * setup prompt (npm install prompt)
+  * copy code from lesson-12.3-sol
+  * call `jukebox.start()` to demo the app
+
+
+### 15. Instructor do: ( 10 minutes )
 
 * *Go over the previous exercise with the class - call on one unique student per each part of the previous exercise to explain what they did for each part of the exercise*
 
