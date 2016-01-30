@@ -395,5 +395,4 @@ you'll see the url to your heroku link in the terminal after pushing to heroku, 
 * Setup Heroku
 * push one of your html creations to heroku using the above steps.
 
-# Copyright
-Coding Boot Camp (C) 2015. All Rights Reserved.
+# Copyright Coding Boot Camp (C) 2015. All Rights Reserved.
