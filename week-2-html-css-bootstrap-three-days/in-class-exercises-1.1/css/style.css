@@ -9,6 +9,7 @@ body {
 header#main-header {
 	background-color: #ddd;
 	margin-bottom: 30px;
+	min-height: 100px;
 }
 
 .wrapper {

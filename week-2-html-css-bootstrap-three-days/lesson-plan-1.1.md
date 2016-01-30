@@ -34,9 +34,9 @@ TBD
 
 ----
 
-### 1. Instructor Do (15 minutes)
+### 1. Instructor Do (10 minutes)
 
-* Recap last weeks class
+* Recap last weeks class QUICKLY
 
     * Terminal
         * Terminal Commands
@@ -114,28 +114,27 @@ TBD
 * Inside the `index.html` file add in the core html tags (e.g. doctype, html, head, title, body)
 * Inside the `title` write "Week Two Exercise"
 * Reference both CSS files in the `head` tag, making sure to include your `style.css` last
-* Code what is on screen
 * Inside your `style.css` file include the following to reduce box model math
 ```
 * {
   box-sizing: border-box;
 }
 ```
-* Specs
+* Code what is on screen with the following specs:
     * body 
         * background-color is `#f1f1f1`
     * header
         * id is `main-header`
         * background-color is `#ddd`
         * margin-bottom is `30px`
-        * padding is `30px`
+        * minimum height is is `100px`
     * wrapper
         * this element is a `div`
         * class is `wrapper`
         * width is `1024px`
         * centered margins e.g. `margin: 0 auto`
     * section tag 1  
-        * is is `main-section`
+        * id is `main-section`
         * background-color is `#ddd`
         * floats left
         * width is 60%
@@ -155,8 +154,8 @@ TBD
 
 * Git branching
     * Git branches enable people to modify code independently from the `master branch` without it impacting the `master` branch itself
-    * For example, you can code features on a `features` branch, and not have your in-progress code impact your `master` production branch
-    * This is especially usefull when working on teams. Two people can modify the same file in separate branches and then have the ability to merge their changes without fearing things will get overwritten
+    * For example, you can code features on a `features` branch, and not have your in-progress features code impact your `master` production branch
+    * This is especially useful when working on teams. Two people can modify the same file in separate branches and then have the ability to merge their changes without fearing things will get overwritten
     * Commands
         * `git branch branch-name` - creates a new branch
         * `git checkout branch-name` switches to the branch
@@ -164,23 +163,23 @@ TBD
         * `git push origin branch-name` will push the contents of the branch, this will not impact `master`
         * To return to master you type `git checkout master`
     * **Important**
-        * The new branch you make references the branch you are currently on. For example, if you are on the `master` branch and type `git checkout -b new-branch` the `new-branch` will adopt the same code from `master`. 
+        * When making a new branch, the new branch references the branch you are currently on. For example, if you are on the `master` branch and type `git checkout -b new-branch` the `new-branch` will adopt the same code from `master`. 
         * Let's say you make a lot of changes in your `new-branch`, and while on that branch you type `git checkout -b additional-branch`, the `additional-branch` will adopt the code from `new-branch` NOT from `master`.
         * It is important to type `git branch` before you make a new branch so you can see which branch you are currently on.
 * Git cloning
-    * You can get any code from any public Git repository.
+    * You can get any code from other public Git repositories.
     * Running `git clone git@github.com:twbs/bootstrap.git` will clone the Bootstrap repo to your local machine
     * You have the ability to modify files
-    * Github lets you modify settings to prevent others from deleting or modifying certain branches
+    * Github lets you modify settings to prevent others from deleting or modifying certain branches, as well as restricting user access
 * Pull requests
-    * When working with teams, slmost never should work be performed using the `master` branch
+    * When working with teams, almost never should work be performed using the `master` branch. Master branch is usually production level code, not code that is in-progress
     * All work should be merged into `master` by creating a "pull request"
     * You can do this by navigating to your repository using Chrome, selecting the "pull requests" tab and pressing the "new pull request" button
     * You can select which branch you want to merge from and to
     * Pull requests should be reviewed by the owner to ensure the code is proper, if not you can tell the person making the request to modify their code
 
 
-### 4. Partner Do (10 minutes)
+### 4. Partner Do (15 minutes)
 
 * Navigate to your partners repo that they just made in the previous exercise using Chrome
 * Obtain the SSH url. It should look something like `git@github.com:PartnersUsername/##-week-two-exercises.git`
@@ -203,11 +202,11 @@ TBD
 
 * Review your partners pull request
 * If all looks good, merge in their pull request
-* After merged, making sure you are in your master branch, run `git pull origin master` to pull down their changes locally
+* After merged, making sure you are in your master branch, type `git pull origin master` to pull down their changes locally
 * Review on your computer to make sure you have their changes
 ----
 
-### 5. Instructor Do (15 minutes)
+### 6. Instructor Do (15 minutes)
 
 * Typography
     * Serif fonts have lines on the edges of the characters
@@ -227,6 +226,7 @@ TBD
     * Keep a good contrast between font color and background color, but sometimes too much contrast isn't good either. A pure white background (#fff) with pure black text (#000) is harder to read and can cause more eye fatigue than a pure white background with a softer shade of grey like (#333)
 * Letter spacing
     * You can define letter spacing in css like this `letter-spacing: 1px`
+    * You should adjust letter spacing if your chosen font looks too cramped
 * Font files
     * If hosting your own fonts, you will need to include font file formats to enable support across browsers
         * Embedded OpenType (EOT) - A Microsoft font format used for Internet Explorer [caniuse](http://caniuse.com/#search=eot){:target="_blank"}
@@ -252,10 +252,12 @@ TBD
     * You can link to Googles CSS file which hosts the fonts for you
 
 
-### 6. Student Do (15 minutes)
+### 7. Student Do (15 minutes)
 
 * Go to Google Fonts https://www.google.com/fonts
 * Find two fonts from Google that you like. One font MUST be serif, the other MUST be sans-serif
+* While on the master branch type `git pull origin master`
+* Make a new branch `git checkout -b ##-fonts` replacing ## with your own initials
 * Inside your `index.html` used in the previous exercise, reference the Google fonts BEFORE your `style.css` file
 * Inside your `style.css` file do the following
     * Update all headings (e.g. h1, h2, h3, h4, h5, h6) to use the sans-serif font
@@ -264,7 +266,8 @@ TBD
     * Inside the `body` css selector add the serif font. This should make all other tags use this font, except the heading tags
     * Inside the `body` css selector make the font atleast 16 pixels, you can make it larger if needed
     * Inside the `body` css selector make the `line-height` atleast 1.5 times your base font size, or larger if needed
-* Stage, commit, and push 
+* Stage, commit, and push `git push origin ##-fonts` replacing ## with your intials
+* Make a pull request and merge your own pull request into master
 
 * BONUS
     * adjust any margins or paddings so it looks more pleasing
@@ -275,10 +278,10 @@ TBD
 ----
 
 
-### 4. Instructor Do (15 minutes)
+### 8. Instructor Do (15 minutes)
 
 * Psuedo classes
-    * uses single colon
+    * Uses single colon
     * A pseudo-class is used to define a special state of an element. For example, this would make the text red when hovering over it:
     ```
     a:hover {
@@ -294,9 +297,9 @@ TBD
     }
     ```
 * Pseudo elements
-    * Pseudo-elements are added to selectors but instead of describing a special state, they allow you to style certain parts of a document. For example, the ::first-line pseudo-element targets only  the first line of an element specified by the selector
+    * Pseudo-elements are added to selectors but instead of describing a special state, they allow you to style certain parts of a document.
     [source](https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-elements){:target="_blank"}
-    * Uses double colons like  `element::after`
+    * Uses double colons like `element::after`
     * [full list of pseudo classes here](https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-elements){:target="_blank"}
 * Inserting cosmetic content using the `content` property
     * Content property is an inline element by default, but you can make it block using css
@@ -326,13 +329,13 @@ TBD
     </body>
     </html>
     ```
-    * [Output](in-clas-exercises-1.1/pseudo-element-example.html){:target="_blank"}
+    * [Output](in-class-exercises-1.1/pseudo-element-example.html){:target="_blank"}
     * Special characters use hex http://www.evotech.net/articles/testjsentities.html
 
 
-### 5. Partner Do (20 minutes)
+### 9. Partner Do (15 minutes)
 
-* *Instructor - Show [exercise](in-clas-exercises-1.1/pseudo-element-example.html){:target="_blank"} on the projector. It is what the students must code out in the next exercise.*
+* *Instructor - Show [exercise](in-class-exercises-1.1/index-4.html){:target="_blank"} on the projector. It is what the students must code out in the next exercise.*
 
 * Inside your partners repo, switch to the `master` branch
 * `git pull origin master` to get you up to date
@@ -346,7 +349,7 @@ TBD
       content: "\201C";
     }
     ```
-    * Make the pseudo element absolutely positioned 65 pixels to the left (more or less if needed). Also make it positioned around 20 pixels from the top (more or less if needed)
+    * Make the pseudo element absolutely positioned 65 pixels to the left of the block quote (more or less if needed). Also make it positioned around 20 pixels from the top (more or less if needed)
     * Preview all these changes as you go to see what is happening
     * Give the psuedo element a font size of around 80 pixels
     * Notice how the font used to display the quotation mark is the SAME as the blockquote. IF this looks odd to you, try changing the font of the blockquote
@@ -364,7 +367,7 @@ TBD
 
 ----
 
-### 6. Instructor do (20 minutes)
+### 10. Instructor do (15 minutes)
 
 * CSS3
 
@@ -379,7 +382,7 @@ TBD
 
 ----
 
-### 7. Student Do (15 minutes)
+### 11. Student Do (20 minutes)
 
 * *Instructor - Show [exercise](in-class-exercises-1.1/index-5.html){:target="_blank"} on the projector. It is what the students must code out in the next exercise.*
 
@@ -389,10 +392,13 @@ TBD
 * Style the assignment on the projector
 * Specs
     * Make the #main-header have a bottom border of 1 pixel with the color of #bbb
-    * Make the `#main-header` have a `box-shadow: 0 3px 9px #ccc;`
-    * Make both sections have a border radius of 15 pixels
+    * Make the `#main-header` have a `box-shadow: 0 2px 6px #ccc;`
+    * Make both sections have a `border-radius` of 15 pixels on all sides
     * Make both sections have a one pixel border with the color of #d7d7d7
-    * Make all the second list item have a `text-shadow` that is 2 pixels horizonal and vertical, 8 pixels blurred, with a color of #aaa, also make it bold
+    * Make the h1 have a text shadow `text-shadow: 2px 2px 1px #aaa;`
+    * Make the h1 and h2's have a font color `#336699`
+    * Try adjusting the `letter-spacing` as needed
+    * Adjust the margins as needed
 * Code what is on the screen
 
 ----
