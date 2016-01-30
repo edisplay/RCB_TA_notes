@@ -34,7 +34,9 @@ ALL or they won't be able to do the homework.
 
 ----
 
-### 1.1. Introduction (30-45 minutes)
+### 1.1. Introduction (35 minutes max)
+
+* *Let the speakers know how much time they have left in intervals of 10 minutes, and 5 minutes near the end*
 
 * *Instructor + TAs take a seat and relax*
 
@@ -142,16 +144,20 @@ ALL or they won't be able to do the homework.
 
 > If it doesn't, then please stay after class for 30 minutes to get git installed. Or come to office hours 45 minutes before the next class and get your issues fixed.
 
-* *TA's and Instructors will assist those students who need help (WiFi connection, Sublime Text, etc.).*
+> Everyone open up Sublime Text on their computer. If you don't have it, then start downloading it and installing it now.
 
-* If there are still issues, let students know that you and TAs are available for 30 minutes after class and 45 minutes before the next class
+> The rest of the programs can be installed and downloaded during office hours before or after class with instructors and TAs
+
+* *TA's and Instructors assist students who need help (WiFi connection, Sublime Text, etc.).*
+
+* *If there are still issues, let students know that you and TAs are available for 30 minutes after class and 45 minutes before the next class*
 ----
 
 ----
 ###### Break (15 minutes) 100 minutes went by including break
 ----
 
-### 5. Instructor do (15 minutes)
+### 5. Instructor do (10 minutes)
 
 * Point out to students that they should be storing all their code in one folder that's easily accessible.
 
@@ -283,7 +289,7 @@ The <!DOCTYPE html> declaration is not an HTML tag; it is an instruction to the 
 
 ----
 
-### 10. Students Do (25 minutes)
+### 10. Students Do (15 minutes)
 
 * always slack out student exercises and display them on the screen + have students read out the exercise to the class + google timer and set the timer to the amount above and turn up the sound on your computer. Make them feel the pressure. * 
 
