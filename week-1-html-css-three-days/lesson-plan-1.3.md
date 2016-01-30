@@ -23,7 +23,7 @@ HTML, CSS, Github, Heroku
 # INSTRUCTOR MUST COVER!!!
 
 ```
-ALL or they won't be able to do the homework.
+1-15
 ```
 
 # Objectives (Slack out to students, have unique students read each one and Instructor makes a comment after each one being read)
@@ -95,11 +95,15 @@ ALL or they won't be able to do the homework.
 
 ----
 
-### 5. Instructor Do (20 minutes)
+### 5. Instructor Do (5 minutes)
 
 * ***reminder to instructor: commit and push your code to your in class code repository***
 
 * *Demonstrate these one at a time to the students on a single html page. DO NOT CODE ALL OF IT AND THEN SHOW IT. Code a little bit, show it to the students, explain it.*
+
+* *** DO NOT DRONE ON ABOUT THESE CONCEPTS. Talk about them at a high level to the class.***
+
+* *Slack these out to the students*
 
 * Discuss CSS in more detail
   + Concepts
@@ -130,15 +134,6 @@ ALL or they won't be able to do the homework.
                 + `<img>`
                 + `<input type="text">`
                 + `<textarea></textarea>`
-    
-    + CSS Box Model
-        + The CSS box model is essentially a box that wraps around every HTML element. It consists of: margins, borders, padding, and the actual content.
-        
-        + *Instructor - open this [box model example](in-class-exercises-1.3/css-box-model-visual.html){:target="_blank"} on the projector*
-
-    + Padding, margins, borders
-        + Writing shorthand for margin and padding is clockwise (top, right, bottom, left e.g. `padding: 20px 30px 20px 30px`). If there are only 3 values, then the last value (left), assumes the same value as the right side. If there are 2 values, the first two apply to top and bottom, the second two apply to left and right. If there is only one value, it applies to all sides. Or you can write just one side at a time like `padding-right: 20px`
-
     + CSS display property
         + `display: block`
         + `display: inline`
@@ -146,7 +141,37 @@ ALL or they won't be able to do the homework.
         + `display: none`
 
 
-### 6. Student Do (5 minutes)
+### 6. Instructor Do (10 minutes)
+
+* *[Open this file that shows these block elements to the students](in-class-exercises-1.3/element-examples.html)*
+    1. *open up the file in sublime text and open up the file in the browser - split your screen*
+    2. *move the block elements around show how they take up the full width of the page, so whatever element comes after them moves beneath them*
+    3. *move the inline elements around to show how they stack next to each other because they don't take the full width of the page*
+    4. *show how the inline-block and block elements can have padding and margins on the top and bottom BUT inline can not.*
+
+### 7. Instructor Do (10 minutes)
+
++ CSS Box Model
+
+*Instructor - open this [box model example](in-class-exercises-1.3/css-box-model-visual.html){:target="_blank"} on the projector*
+
+> The CSS box model is essentially a box that wraps around every HTML element. It consists of: margins, borders, padding, and the actual content.
+    
+
++ Padding, margins, borders
+
+> Writing shorthand for margin and padding is clockwise (top, right, bottom, left e.g. `padding: 20px 30px 20px 30px`). 
+
+> If there are only 3 values, then the last value (left), assumes the same value as the right side. 
+
+> If there are 2 values, the first two apply to top and bottom, the second two apply to left and right. 
+
+> If there is only one value, it applies to all sides. 
+
+> Or you can write just one side at a time like `padding-right: 20px`
+
+
+### 8. Student Do (5 minutes)
 
 * *Instructor - Show [this html file](in-class-exercises-1.3/box.html){:target="_blank"} on the projector. It is what the students must see.*
 
@@ -171,7 +196,7 @@ ALL or they won't be able to do the homework.
 * Remember: the border values apply to all 4 sides
 
 
-### 7. Instructor Do (5 minutes)
+### 9. Instructor Do (5 minutes)
 
 Answer to previous exercise: The blue #box is 554 pixels wide, and 569 pixels tall
 
@@ -191,18 +216,26 @@ Pro-tip: Use the above snippet have the padding and border included in the eleme
 }
 ```
 
-### 7. Instructor Do (15 minutes)
+### 10. Instructor Do (5 minutes)
 
-+ Browser rendering for CSS and how it is different in each browser
-    + CSS styles for Webkit (Chrome and Safari) http://stackoverflow.com/questions/6867254/browsers-default-css-for-html-elements
-    + CSS Styles for Firefox http://mxr.mozilla.org/mozilla-central/source/layout/style/html.css
+* *Talk about how browser rendering for CSS and how it is different in each browser*
+    + Refer to these resources to learn what to talk about
+        + CSS styles for Webkit (Chrome and Safari) http://stackoverflow.com/questions/6867254/browsers-default-css-for-html-elements
+        + CSS Styles for Firefox http://mxr.mozilla.org/mozilla-central/source/layout/style/html.css
     
-+ CSS Resets (http://meyerweb.com/eric/tools/css/reset/)
-    + CSS resets make styling more consistent across browsers
-    + You reference a css file before you reference your own style sheet, because of the order that CSS renders (remember that whatever CSS is closest to the element is the most dominant, you want your own styling to be more dominant than the reset file)
+* *Talk about CSS Resets* (http://meyerweb.com/eric/tools/css/reset/)
+
+> CSS resets make styling more consistent across browsers
+
+> You reference a css file before you reference your own style sheet, because of the order that CSS renders (remember that whatever CSS is closest to the element is the most dominant, you want your own styling to be more dominant than the reset file)
+
+
+#### 11. Instructor do (10 minutes)
 
 + Styling properties
-  
+    
+    + *Instructor - use [this html file](in-class-exercises-1.3/floats.html){:target="_blank"} example on the screen. Use inspector, comment and uncomment the overflow property on `#full`, and the clear on the footer. Show how they do similar things and what happens when they aren't there.*
+
     + floats
         + The float CSS property specifies that an element should be taken from the normal flow and placed along the left or right side of its container, where text and inline elements will wrap around it. [reference](https://developer.mozilla.org/en-US/docs/Web/CSS/float){:target="_blank"}
             + `float: left`
@@ -215,11 +248,9 @@ Pro-tip: Use the above snippet have the padding and border included in the eleme
     + overflow
         + `overflow: auto` on the parent element will contain the floats
 
-  + *Instructor - use [this html file](in-class-exercises-1.3/floats.html){:target="_blank"} example on the screen  simply comment and uncomment the overflow property on `#full`, and the clear on the footer. Show how they do similar things and what happens when they aren't there.*
+### 12. Student Do (15 minutes)
 
-### 8. Student Do (15 minutes)
-
-* *Instructor - Show [this html file](in-class-exercises-1.3/floats.html){:target="_blank"} on the projector. It is what the students must code out in the next exercise.*
+* *Instructor - Show [this html file](in-class-exercises-1.3/floats.html){:target="_blank"} on the projector. It is what the students must code out in this exercise.*
 
 * *Slack this out*
 
@@ -250,21 +281,21 @@ Pro-tip: Use the above snippet have the padding and border included in the eleme
 * Bonus:
     + Make it so the div doesnt extend behind the aside tag
 
-### 9. Partner Do (10 minutes)
+### 13. Partner Do (10 minutes)
 
 * Share your Github code with your partner
 * Take your partners code and validate it using https://validator.w3.org/#validate_by_input AND http://www.css-validator.org/#validate_by_input
 * Compare work and discuss with partner to see how similar your code is. If not the same, work together to make it the same and valid and discuss.
 
 ----
-#### Break (15 minutes)
+#### Break (40 minutes)
 
 ----
-###### 110 minutes so far
+###### 165 minutes so far including break
 
 ----
 
-### 10. Instructor Do (10 minutes)
+### 14. Instructor Do (10 minutes)
 
 * Discuss CSS positioning
     + absolute, relative, fixed, static
@@ -281,7 +312,7 @@ Pro-tip: Use the above snippet have the padding and border included in the eleme
 * *Instructor - Show [this html file](in-class-exercises-1.3/positioning.html){:target="_blank"} on the projector. It is what the students must code out in the next exercise.*
 
 
-### 11. Student Do (15 minutes)
+### 15. Student Do (15 minutes)
 
 * *Show [this html file](in-class-exercises-1.3/positioning.html){:target="_blank"} on the projector. It is what the students must code out in the next exercise.*
 
@@ -295,7 +326,11 @@ Pro-tip: Use the above snippet have the padding and border included in the eleme
 * Grab 5 paragraphs worth of lorem ipsum text http://www.lipsum.com/feed/html. You need to make this page scroll to see how the fixed position element behaves.
 * Stage, commit, and push to github
 
-### 12. Partner Do (10 minutes)
+
+# If there is time left over - there should be
+
+
+### 16. Partner Do (10 minutes)
 
 * Share your Github code with your partner
 * Take your partners code and validate it using https://validator.w3.org/#validate_by_input AND http://www.css-validator.org/#validate_by_input
@@ -303,11 +338,11 @@ Pro-tip: Use the above snippet have the padding and border included in the eleme
  
 ----
 
-### 13. Instructor Do (20 minutes)
+### 17. Instructor Do (20 minutes)
 
 * Heroku setup
 
-### 14. Student Do (20 minutes)
+### 18. Student Do (20 minutes)
 
 * Setup Heroku
 * push all code in github to heroku
