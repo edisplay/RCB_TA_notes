@@ -161,7 +161,7 @@ var makeReport = function() {
 	console.log("What is...");
 	prompt.get(['your_first_name','your_last_name','your_age','time_of_sighting','location_of_sighting','a_name_of_another_witness','description_of_sighting','your_initial_thoughts','number_of_previous_encounters','current_drug_use_habit'], function(err, result) {
 		
-		report = '\n' + report + '\n' + 'Eye witness name is '+ result.your_first_name + " " +  result.your_last_name + ' at age: ' + result.your_age + '\n' + 'According to eye witness sighting happened sometime around ' +  result.time_of_sighting + ' near ' +  result.time_of_sighting + '\n' + 'Another possible witness include a person by the name: ' + result.a_name_of_another_witness + '\n' + 'The sighting is described as: ' + result.description_of_sighting + " and the witness's initial thoughts are: " + result.your_initial_thoughts + '\n' + "This is the witness: " + result.number_of_previous_encounters + "th encounter, current drug use habit is " + result.current_drug_use_habit + '\n';
+		report = '\n' + report + '\n' + 'Eye witness name is '+ result.your_first_name + " " +  result.your_last_name + ' at age: ' + result.your_age + '\n' + 'According to eye witness sighting happened sometime around ' +  result.time_of_sighting + ' near ' +  result.location_of_sighting + '\n' + 'Another possible witness include a person by the name: ' + result.a_name_of_another_witness + '\n' + 'The sighting is described as: ' + result.description_of_sighting + " and the witness's initial thoughts are: " + result.your_initial_thoughts + '\n' + "This is the witness: " + result.number_of_previous_encounters + "th encounter, current drug use habit is " + result.current_drug_use_habit + '\n';
 		
 		var checkAnswers = [result.your_first_name, result.your_last_name, result.your_age, result.time_of_sighting,result.a_name_of_another_witness, result.description_of_sighting, result.a_name_of_another_witness, result.your_initial_thoughts, result.number_of_previous_encounters, result.current_drug_use_habit];
 
@@ -176,7 +176,7 @@ var makeReport = function() {
 			conculsion = "Very Unreliable";
 		}else if (answerCount >= 5) {
 			conculsion = "Unreliable";
-		}else if (answerCount <= 2) {
+		}else if (answerCount < 5) {
 			conculsion = "Complete";
 		};
 
@@ -286,6 +286,7 @@ var jukebox = {
 				// currentScope.pickArtist(currentScope);
 			}else if (result.song_choice == "Y") {
 				console.log("\n" + "~ I’m a princess cut from marble," + "\n" + "smoother than a storm." + "\n" + "And the scars that mark my body, they’re silver and gold ~" + "\n")
+				currentScope.exit();
 			}else{
 				console.log("Sorry didn't get that come again?");
 				currentScope.LordeChoices(currentScope);
@@ -300,9 +301,10 @@ var jukebox = {
 				currentScope.exit();
 			}else if (result.song_choice == "S") {
 				console.log("\n" + "~ N-now th-that that don't kill me" + "\n" + "Can only make me stronger" + "\n" + "I need you to hurry up now ~" + "\n");
+				currentScope.exit();
 			}else{
 				console.log("Sorry didn't get that come again?");
-				currentScope.LordeChoices(currentScope);
+				currentScope.KanyeChoices(currentScope);
 			}
 		});
 	},
@@ -319,30 +321,3 @@ var jukebox = {
 
 jukebox.start();
 ```
-
---------- --------- ---------
-### 12.3.4 Exercise 4: (CRUD + Node + Prompt + MySQL)
-
-/*
-Create the functions of C.R.U.D in Node using a mySQL db
-
-You are creating an App for a climbing gym:
-There is a prompt form that let's users fillout info.
-You can calculate what kind of membership they are buying, how many sessions.
-Once the app is lanuched it can take member sign ins.
-Adding new members.
-Update existing memebers info/sessions.
-Remove memebers.
-Do earning calculations.
-
-Create a new db in mySQL:
-
-* Create a table with PK(id), name, total session, session used, last session date.
-
-
-Create in a new node app:
-
-* 
-
-Bonus: Create a function that checks total session against session used if it's both 30, delete the memeber
-*/

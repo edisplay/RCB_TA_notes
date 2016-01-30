@@ -68,5 +68,6 @@
 #### BONUS
 1. Make the pages more sophisticated by adding styling to text links, image links, and buttons when the mouse hovers over them. A CSS hover tutorial can be found [here](http://www.codeitpretty.com/2013/06/how-to-use-css-hover-effects.html). You can use [Adobe Kuler](https://color.adobe.com/create/color-wheel/) to find colors that match the theme (In this case, the primary color is Teal `#4aaaa5`).
 2. Make a 'sticky footer'. You will notice the dark grey footer will always rest just below the content. This is fine when the content is long, but if there isn't much content in the body the footer could rest in the middle of the page. Try to code the footer in a way that it will always remain at the bottom of the page, no matter how short the content is. A sticky footer tutorial can be found [here](http://ryanfait.com/html5-sticky-footer/). Please note, I am not talking about positioning the footer as "fixed" to the browser. See screenshots examples:
-  + [No sticky footer](bonus/assets/screenshot-no-sticky-footer.jpg)
-  + [Has sticky footer](bonus/assets/screenshot-has-sticky-footer.jpg)
+  + [No sticky footer](bonus_assets/nosticky.jpg)
+  + [Has sticky footer](bonus_assets/stickyfooter.jpg)
+
