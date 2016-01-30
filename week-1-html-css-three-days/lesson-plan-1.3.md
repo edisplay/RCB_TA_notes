@@ -18,7 +18,7 @@ Look at this file at the root of the repository:
 
 
 # Theme
-HTML / CSS
+HTML, CSS, Github, Heroku
 
 # INSTRUCTOR MUST COVER!!!
 
@@ -29,60 +29,43 @@ ALL or they won't be able to do the homework.
 # Objectives (Slack out to students, have unique students read each one and Instructor makes a comment after each one being read)
 
 * Students will open up Chrome DevTools and use Inspector.
-* Students will learn more advanced CSS styling to make more beautiful web pages
+* Students will use advanced CSS styling to make beautiful web pages
 * Students will understand the html box-model and how it impacts CSS styling
-* Students will be able to make multi-column websites
-* Students will learn how to use Heroku and deploy their code to it
+* Students will make multi-column websites
+* Students will use Heroku and deploy their code to it
 
 ----
 
 ### 1. Instructor Do (5 minutes)
 
-+ Recap last class
++ *Recap last class*
     + Went over HTML and CSS.
     + Students created a `student-bio.html` page
 
 
-### 2. Everyone Do (5 minutes)
+### 2. Everyone Do (10 minutes)
 
-* Open up last weeks `student-bio.html` file in Google Chrome
-* Right click anywhere on the page and select "Inspect". This is Chrome Developer Tools.
-* Look at the `Elements` tab specifically and hover over the various HTML elements and  watch it highlight to it's corresponding rendered part in the page.
+* *Instructor does this while the students do this*
+
+> Open up last lesson's `student-bio.html` file in Google Chrome
+
+> Right click anywhere on the page and select "Inspect". This is Chrome Developer Tools.
+
+> Look at the `Elements` tab specifically and hover over the various HTML elements and  watch it highlight to it's corresponding rendered part in the page.
 
 
-### 3. Instructor Do (10 minutes)
+### 3. Instructor Do (15 minutes)
 
-* Explain Inspector
-    + There are 8 Main Panels
-        + Elements
+* ***PLEASE DO NOT DRONE ON ABOUT EACH PART OF INSPECTOR! Only discuss the Elements panel.***
+
+* *Explain Inspector*
+    + There are 8 Main Panels, but Elements is all we will use for now
+        + "Elements" is the main panel you will be using in todays class and next week. It is what you use to view and make quick on the fly changes to your html and css
             + This is the panel you use to examine your HTML
             + This lets you see everything in one DOM tree
             + Lets you edit your HTML on the fly to test things out
             + [reference](https://developer.chrome.com/devtools/docs/dom-and-styles){:target="_blank"}
-        + Console 
-            + You use this for Javascript.
-            + Console will be discussed later on when it is more relevant to the course
-            + [reference](https://developer.chrome.com/devtools/docs/console){:target="_blank"}
-        + Sources
-            + You use for Javascript.
-            + Sources will be discussed later on when it is more relevant to the course
-        + Network
-            + This panel records information about each network operation in your application, including detailed timing data, HTTP request and response headers, cookies, WebSocket data, and more. The Network panel helps you answer questions about the network performance of your web application
-            + Network will be discussed later on when it is more relevant to the course
-            + [reference](https://developer.chrome.com/devtools/docs/network){:target="_blank"}
-        + Timeline
-            + The Timeline panel lets you record and analyze all the activity in your application as it runs. It's the best place to start investigating perceived performance issues in your application.
-            + Timeline will be discussed later on when it is more relevant to the course
-            + [reference](https://developer.chrome.com/devtools/docs/timeline){:target="_blank"}
-        + Profiles
-            + The Profiles panel lets you profile the execution time and memory usage of a web app or page
-            + Profiles will be discussed later on when it is more relevant to the course
-            + [reference](https://developer.chrome.com/devtools/docs/profiles){:target="_blank"}
-        + Audits
-            + The Audit panel can analyze a page as it loads.
-            + Audits will be discussed later on when it is more relevant to the course
 
-  + "Elements" is the main panel you will be using in todays class and next week. It is what you use to view and make quick on the fly changes to your html and css
 
   + On the right side panel there is information pertaining to your CSS
       + Styles
@@ -92,20 +75,20 @@ ALL or they won't be able to do the homework.
       + Computed
           + This shows how the browser is interpreting the element you have selected in the Elements panel
 
-  + *Instructor - Do some samples of you editing [the student-bio.html page](in-class-exercises-1.2/1.2.9-in-class-exercise.html){:target="_blank"} using Inspector*
+  + *Instructor - Change the styling of the page via the left and right part of the elements tab of inspector [the student-bio.html page](in-class-exercises-1.2/1.2.9-in-class-exercise.html){:target="_blank"} using Inspector*
     + Change some text
     + Change some styling
 
-### 4. Student Do (5 minutes)
+### 4. Student Do (10 minutes)
 
-1. Highilight the `<div class="container">` element in the Elements panel
+1. Highlight the `<div class="container">` element in the Elements panel
 2. In the Styles side panel, change the width from `1024px` to `600px`
     * Observe what happens
 3. In the Elements panel, highlight the `<h1>` tag. Right click and select "Edit Text" OR you can double click on the text to edit it. Change the text to say "My Biography". Press "enter" to finalize your changes or mouse click away.
     * Observe what happens
 
 * Bonus:
-    * Make a new `section` tag with an id of `#new` using Inspector
+    * Using Inspector, make a new `section` tag with an id of `#new`
     * Make your new section tag appear just below the #contact-info section
     * Now make it appear below both #main-bio and #contact-info
     * Make it have a `background-color` of red
@@ -114,39 +97,46 @@ ALL or they won't be able to do the homework.
 
 ### 5. Instructor Do (20 minutes)
 
+* ***reminder to instructor: commit and push your code to your in class code repository***
+
+* *Demonstrate these one at a time to the students on a single html page. DO NOT CODE ALL OF IT AND THEN SHOW IT. Code a little bit, show it to the students, explain it.*
+
 * Discuss CSS in more detail
   + Concepts
     + block vs inline vs inline-block
         + Block elements:
             + A block-level element occupies the entire width of its parent element (container), thereby creating a "block." Nothing can go next to this element.
-            + `<div></div>`
-            + `h1-h6`
-            + `<p></p>`
-            + `<form></form>`
-            + `<ul><li></li></ul>` and `<ol><li></li></ol>`
-            + `<table></table>`
-            + `<header></header>`
-            + `<nav></nav>`
-            + `<footer></footer>`
-            + [view more block elements](https://developer.mozilla.org/en-US/docs/Web/HTML/Block-level_elements){:target="_blank"}
+            + Examples of block elements
+                + `<div></div>`
+                + `h1-h6`
+                + `<p></p>`
+                + `<form></form>`
+                + `<ul><li></li></ul>` and `<ol><li></li></ol>`
+                + `<table></table>`
+                + `<header></header>`
+                + `<nav></nav>`
+                + `<footer></footer>`
+                + [view more block elements](https://developer.mozilla.org/en-US/docs/Web/HTML/Block-level_elements){:target="_blank"}
         + Inline elements:
             + An inline element occupies only the space bounded by the tags that define the inline element. Other inline elements can go next to inline elements.
             + padding top/bottom and margin top/bottom DO NOT work on inline elements
-            + `<span></span>`
-            + `<a href="http://www.google.com">Google</a>`
-            + [view more inline elements](https://developer.mozilla.org/en-US/docs/Web/HTML/Inline_elements){:target="_blank"}
+            + Examples of inline elements
+                + `<span></span>`
+                + `<a href="http://www.google.com">Google</a>`
+                + [view more inline elements](https://developer.mozilla.org/en-US/docs/Web/HTML/Inline_elements){:target="_blank"}
         + Inline-block elements:
-            + padding top/bottom and margin top/bottom DO   work on inline elements, but content from other inline or inline-block elements can rest beside them. Therefore, they are a combination of inline and block, hence inline-block
-            + `<img>`
-            + `<input type="text">`
-            + `<textarea></textarea>`
+            + Padding top/bottom and margin top/bottom DO   work on inline elements, but content from other inline or inline-block elements can rest beside them. Therefore, they are a combination of inline and block, hence inline-block
+            + Examples of inline block elements
+                + `<img>`
+                + `<input type="text">`
+                + `<textarea></textarea>`
     
     + CSS Box Model
         + The CSS box model is essentially a box that wraps around every HTML element. It consists of: margins, borders, padding, and the actual content.
         
-        + *Instructor - open this [box model example](css-box-model-visual.html){:target="_blank"} on the projector*
+        + *Instructor - open this [box model example](in-class-exercises-1.3/css-box-model-visual.html){:target="_blank"} on the projector*
 
-    + padding, margins, borders
+    + Padding, margins, borders
         + Writing shorthand for margin and padding is clockwise (top, right, bottom, left e.g. `padding: 20px 30px 20px 30px`). If there are only 3 values, then the last value (left), assumes the same value as the right side. If there are 2 values, the first two apply to top and bottom, the second two apply to left and right. If there is only one value, it applies to all sides. Or you can write just one side at a time like `padding-right: 20px`
 
     + CSS display property
