@@ -10,12 +10,11 @@ blockquote {
 	margin-bottom: 10px;
 }
 h1, h2 {
-
 	color: #336699;
-	letter-spacing: 2px;
 }
 h1 {
 	text-shadow: 2px 2px 1px #bbb;
 	font-size: 40px;
+	letter-spacing: 2px;
 	margin-bottom: 30px;
 }
