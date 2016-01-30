@@ -15,7 +15,7 @@ Look at this file at the root of the repository:
 
 
 # Theme
-IDK
+TBD
 
 # INSTRUCTOR MUST COVER!!!
 
@@ -63,6 +63,9 @@ ALL or they won't be able to do the homework.
 * make a pull request
 
 ### 6. Student Do (10 minutes)
+
+* review pull request
+* make any additional changes
 
 
 ----

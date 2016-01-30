@@ -15,7 +15,7 @@ Look at this file at the root of the repository:
 
 
 # Theme
-IDK
+TBD
 
 # INSTRUCTOR MUST COVER!!!
 
@@ -75,14 +75,15 @@ ALL or they won't be able to do the homework.
 
 * Progressive Enhancement vs Graceful Degradation
 * CSS Refinement
-* Line-height
-* UX stuff
+* @import
+* commas, h1, h2, h3, h4, h5, h6
+* measurements, rems, ems, pixels etc
 
 
 
 ### 5. Student Do (30 minutes)
 
-* stuff
+* SASS
 
 ----
 # Copyright

@@ -1,0 +1,14 @@
+header#main-header {
+	border-bottom: 1px solid #bbb;
+	box-shadow: 0 3px 9px #ccc;
+}
+section {
+	border-radius: 15px;
+	border: 1px solid #d7d7d7;
+}
+blockquote {
+	margin-bottom: 10px;
+}
+li:nth-child(2) {
+	text-shadow: 2px 2px 8px #aaa;
+}
