@@ -340,12 +340,60 @@ Pro-tip: Use the above snippet have the padding and border included in the eleme
 
 ### 17. Instructor Do (20 minutes)
 
-* Heroku setup
+* *Slack this to class and go over the steps to the class*
+
+* Heroku setup (steps as of 1/30/16)
+
+1. Go to the folder you want to host. 
+
+2. Make sure that you have the following files in your folder:
+
+composer.json that only has this inside of it:
+```
+{}
+```
+
+index.php that only has this inside of it (please remove the angle brackets inside the quotes)
+
+```
+<?php include_once("<filename of your html file with the extension>"); ?>
+```
+
+3. Make sure you push up everything to your github repository. Make sure the only files you are pushing up are the html, css, images, composer.json and index.php files. No extra files!
+
+4. Check if you have heroku
+
+run this command in your terminal
+
+```heroku```
+
+5. download the heroku toolbelt and install it
+
+https://toolbelt.heroku.com/
+
+6. in terminal run this command and login with your heroku credentials
+```heroku login```
+
+7. ```git remote -v```
+
+notice the remotes
+
+8. ```heroku create```
+
+9. ```git remote -v```
+
+notice the remotes now
+
+10. ```git push heroku master```
+
+push up your master branch from your github repository to heroku
+
+you'll see the url to your heroku link in the terminal after pushing to heroku, visit it!
 
 ### 18. Student Do (20 minutes)
 
 * Setup Heroku
-* push all code in github to heroku
+* push one of your html creations to heroku using the above steps.
 
 # Copyright
-Rutgers Coding Boot Camp (C) 2015. All Rights Reserved.
+Coding Boot Camp (C) 2015. All Rights Reserved.
