@@ -365,26 +365,27 @@ index.php that only has this inside of it (please remove the angle brackets insi
 
 run this command in your terminal
 
-```heroku```
+`heroku`
 
 5. download the heroku toolbelt and install it
 
 https://toolbelt.heroku.com/
 
 6. in terminal run this command and login with your heroku credentials
-```heroku login```
 
-7. ```git remote -v```
+`heroku login`
+
+7. `git remote -v`
 
 notice the remotes
 
-8. ```heroku create```
+8. `heroku create`
 
-9. ```git remote -v```
+9. `git remote -v`
 
 notice the remotes now
 
-10. ```git push heroku master```
+10. `git push heroku master`
 
 push up your master branch from your github repository to heroku
 
