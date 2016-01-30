@@ -38,7 +38,7 @@ Prompt + MySQL + Node
 
 --------- --------- ---------
 
-# INSTRUCTOR MUST COVER!!!
+# INSTRUCTOR MUST COVER ALL!!!
 
 ```
 ALL or they won't be able to do the homework.
@@ -107,6 +107,7 @@ var showSports = function() {
 
 ```
 var addFourSports = function() {
+
   connection.query('INSERT INTO sports (sport_name, intensity) VALUES (?,?)', ['extreme ping pong', 10], function(err, result) {
     if (err) throw err;
 
@@ -198,210 +199,354 @@ var bearData = [
 *** ZHEN and Pavan need to update objectives at the top and the INSTRUCTOR MUST COVER!!! section when finished ***
 *** ZHEN And PAVAN approve of above ***
 
+### 5. Instructor do (10 minutes)
 
+* *create the following node app in front of students*
 
-### 5. Instructor do ( 15 minutes ) 
-
-* *Create a database called countries*
-
-12.2.2 demo 1: (Country and cities)
-Demo issue that database can have with mulitple tables, ask student to help
-
-```
-Zhen put code in to make tables and make inserts into the below table. 
-```
-
-table: countries
-
-|id|country|
-|---------|-------|
-|1|U.S.A|
-|2|U.K|
-|3|FRANCE|
-
-table: cities
-
-|id|city|hipsters|country_id|
-|--------|----|--------------|---------|
-|1|'paris'|85,000|3|
-|2|'san francisco'|290,000|1|
-|3|'london'|150,000|2|
-|4|'new york city'|370,000|1|
-
-Question is...in one sql statement how do get back the hipister count from all US citys in order?
-
-`
-SELECT * 
-FROM countries 
-LEFT JOIN cities 
-ON countries.id=cities.country_id 
-WHERE countries.id = 1
-ORDER BY cities.hipsters;
-`
-
-### 7. Instructor do ( 15 mins ) 
-
-* *Slack this out, put it on the screen and talk about each one. Save this to your in class code, commit and push.*
-
-```
-Relational database JOINs (INNER, LEFT, RIGHT, FULL):
-
-INNER JOIN: Returns all rows when there is at least one match in BOTH tables
-
-LEFT JOIN: Return all rows from the left table, and the matched rows from the right table
-
-RIGHT JOIN: Return all rows from the right table, and the matched rows from the left table
-
-FULL JOIN: Return all rows when there is a match in ONE of the tables
-```
-
-```
-ZHEN chop off outer joins from this picture
-```
-
-* *Show this to students. Save this to your in class code, commit and push.*
-![JOINS](./mySQL_JOIN.jpg)
-
-### 8. Partners do ( 5 minutes )
-
-> Explain to the people around you what each of these joins do and why they're used. I'll call on random people. If you're wrong, i'm going to call out the people next to you for not explaining it to you well.
-
-### 9. Partners do ( 20 mins ) 
-
-Objectives: 
-* Students will run basic queries to make a database, tables, and populate those tables.
-* Students will use join SQL clauses
-
-1. Run all your commands in MySQL but also put all of them in chronological order inside of a fun_time.sql file
-2. Create a database called fun_time
-3. Inside fun_time, create a bars table with id, bar_name
-4. bars table must have at least 3 different bars (3 rows with different names)
-5. Create a 4th bar with the name of 'Moo Milk Bar' 
-6. Inside fun_time, create a drinks table with id, bar_id, drink_name, drink_price
-7. Create 3 different drinks in the drinks table (3 rows with different drink names, prices and bar_ids)
-8. Create another drink in the drinks table with a bar_id of the 'Moo Milk Bar'
-9. Create 1 drink that has no bar_id (because it's not available in any of the bars in your bars table)
-10. Use the following SQL JOINS: 
-
-LEFT join bars to drinks
-
-RIGHT join bars to drinks 
-
-Select all the drinks
-
-INNER JOIN drinks to bars
-
-FULL JOIN drinks to bars
-
-11. Explain to your partners what each query above did and the importance of it.
-
-Bonus: 
-
-* check out the Moo Milk Bar website http://www.moomilkbar.ca/#the-bakery
-
-### 10. Everyone do ( 40 minutes )
-
-go over the previous exercise with the class
-
-##### x minutes passed by - break time for 15 minutes
-
-### 14. Student do: ( 5 mins )
-Create a new Node App 
-Install npm packages 
-
-### 15. Instructor do: New concepts "block quotes": ( 5 mins )
-12.2.5 demo 2: (basic mysql node app)
-MySQL inside of Node
-Connecting Node to mySQL via npm package, do a simple SELECT  from a db
-```
 App setup:
-1.create App Dir
+```
+1.create App Dir named 'askme'
 2.npm init
-4.setup 'index.js' file
+4.create 'index.js' file
+5.npm install prompt
+```
+* Create this in the `index.js` file
 
-Database setup:
-1.npm install mysql
-2.mysql config
 ```
-Basic setup: establishing connections
-```
-var mysql      = require('mysql');
-var connection = mysql.createConnection({
-  host     : 'example.org',
-  user     : 'bob',
-  password : 'secret'
-});
- 
-connection.connect(function(err) {
-  if (err) {
-    console.error('error connecting: ' + err.stack);
-    return;
+var prompt = require('prompt');
+prompt.start();
+prompt.message = '';
+
+prompt.get(['Say_anything'], function(err, result) {
+  if (result.Say_anything == "Marco") {
+    console.log("Polo!!!")
+  } else {
+    console.log("You said (" + result.Say_anything + ")" + " or watever...");
   }
- 
-  console.log('connected as id ' + connection.threadId);
 });
 ```
 
-Connect to a db and do a simple selection
-```
-connection.query('SELECT * FROM someTable', function(err, res) {
-  if (err) throw err;
+show that a prompt can take in multiple inputs.
 
-  console.log(res);
+* *Make sure to use nodemon for the following demo*
+```
+prompt.get(['year','month','day'], function(err, result) {
+  console.log("The date you entered is " + result.month + "/" + result.day + "/" + result.year );
 });
 ```
-* Notice that mySQL npm commands are a bit different compared to normal mySQL commands
 
-### 16. Partners do: ( 8 mins )
-Connecting Node to mySQL via npm package, do a simple SELECT from a db
+### 7. Partners do ( 5 mins ) 
 
-### 17. Partners Demo: ( 2 mins )
-Slacked code from student have have student partners explain what they did
+> Explain what just happened in the last two examples to your partners
 
-### 18. Instructor do ( 2 mins )
-12.2.5 exercise 4: (climbing gym members)
-Introduce the reivew exercise and explain what student need to do + bonus 
+### 8. Students do (20 minutes)
 
-Student Exercies: duration (long)
-Connecting Node to mySQL via npm package
-Create the functions of C.R.U.D in Node using a mySQL db
+Introduce the exercise:simple prompt
 
-You are creating an App for a climbing gym, in this gym new members comes in with a sign up of 30 session.
-Each time a member comes to visit the gym adds 1 to the session_used count which starts at 0, and record the current date.
+The FBI needs an app to take eye witness reports of UFO sighting, you will be creating a node.js app to help the FBI make reports.
 
-Create a new db in mySQL:
+* *Copy the following instructions below and paste it in slack, and have students work on it*
 
-* Create a table with PK(id), name, total session, session used, last session date.
-* Create a new memeber with any name, 30 total sessions, 0 session used, and last session date set to false.
-* Create a function that finds the number of session used by checking the name.
-* Create a function that add 1 to the session used and update the last session date to current date.
+When the app is run, the user will get a briefing with console logs.
+The app will start by console logging these messages each on their own lines:
 
-Bonus: Create a function that checks total session against session used if it's both 30, delete the memeber
+```
+  "Hi,I'm from the FBI (X-files Division) I just wanted to ask you some questions."
+  "Please answer the following questions as best you can, but if can't answer the question please say NOT SURE."
+  "What is..."
+```
 
-### 19. Partners do ( 3 mins )
-Have student turn to eachother and talk about how to do this exerices before starting
+* After these messages are been displayed, propmpt the user for their: 
+  * first name
+  * last name
+  * age
+  * time of sighting
+  * location of sighting
+  * name of another witness
+  * description of sighting
+  * initail thoughts
+  * number of previous encounters
+  * current drug use habit.
 
-### 20. Student do: ( 18 mins )
-Work on exersice alone
+* You must create a report conclusion depending on the answer you get from the user.
+  * If 8 or more answers are "NOT SURE" in the report, console log conclusion is Very Unreliable.
+  * If 5 or more answers are "NOT SURE" the report, console log conclusion is Unreliable.
+  * If only 2 or less answer are "NOT SURE" the report, console log conclusionis Complete.
 
-### 21. Instructor do: ( 10 mins )
-Teacher demo go over solution 
+Once the user has made an input for all of the questions, concatenate all the answers and your conculsion into one paragraph and console log it to the terminal in the following format, see example below.
 
-### 22. Partners do: ( 5 mins )
-Student talk to each other, explain to each other the code
+```
+FBI aliens sighitng report:
 
-### 23. Instructor do: ( 5 mins ) 
-12.2.6 exercise 5: (6 degrees of Kevin Bacon)
-Teacher intro 1 JOIN mySQL
+Eye witness name is Bob Johnson at age: 56
+According to eye witness sighting happened sometime around 8PM-ish near Burbank
+Another possible witness include a person by the name: NOT SURE
+The sighting is described as: Some monster thingy and the witness's initial thoughts are: WOAH MAN!
+This is the witness: 11 or 12th encounter, current drug use habit is None
 
-### 24. Partner do: ( 15 mins )
-Work on exersice different JOIN in mySQL
+Report conclusion: Complete
+```
 
-### 25. Partners present: ( 3 mins )
-Student explain demo
+Instructions:
 
-### 26. Instructor do: ( 4 mins )
-Teacher demo go over solution 
+  1. Create a new app directory named 'FBI'.
+  2. Setting up node by doing 'npm init'
+  3. Create 'index.js` file
+  4. Create a function called `makeReport()`
+  5. Call prompt inside of the `makeReport()` function, only one prompt for this app
+  6. Call `makeReport()` when you finishing building the function
+
+
+##### Make sure to use nodemon for this app
+  * *If students are still unclear demo the app infront of the class from lesson-12.3-sol*
+
+### 9. Everyone Do (10 minutes)
+
+* *Go over the previous exercise with the class - call on one unique student per each part of the previous exercise to explain what they did for each part of the exercise*
+
+###### 120 minutes have passed
+
+### 10. BREAK ( 40 minutes )
+--------- --------- ---------
+
+### 11. Partners do: ( 5 minutes ) 
+
+* Russian nesting doll Demo *
+This demo will show how scope is lost during multiple nested prompt functions.
+
+* Start by Creating a dir named russianDoll
+  * setup node (npm install)
+  * create `index.js` file
+  * setup prompt (npm install prompt)
+
+Make sure `index.js` has the following code
+
+```
+var prompt = require('prompt');
+prompt.start();
+prompt.message = '';
+```
+
+Follow this demo step by step will show how to get around the scope issue but using `self` and pass `self`.
+
+> Ask students to partner up and discuss, what the following code is doing and why it wouldn't work, and what needs to changed to get user to the `second_layer`.
+
+> Slack this code to the student so they can play around with it.
+
+Version 1
+```
+//Russian nesting doll 1
+
+var russianDoll = {
+  start : function() {
+    console.log("Welcome to matryoshka doll a.k.a russian nesting doll~!");
+    this.first_layer();
+  },
+  first_layer : function() {
+    console.log("You are at the first layer of the doll, would you like to open another layer? Y/N");
+    prompt.get('open', function(err, result) {
+      if (result.open == 'Y') {
+        this.second_layer();
+      }else{
+        process.exit();
+      };
+    });
+  },
+  second_layer : function() {
+    console.log("You are at the second layer of the doll, would you like to open another layer? Y/N");
+    prompt.get(['->','open'], function(err, result) {
+      if (result.open == 'Y') {
+        this.final_layer.third_layer();
+      }else{
+        process.exit();
+      };
+    });
+  },
+  final_layer: {
+    third_layer : function() {
+      console.log("You are at the third layer of the doll. would you like to close the doll? Y/N");
+      prompt.get(['->','close'], function(err, result) {
+        if (result.close == 'Y') {
+          this.start();
+        }else{
+          process.exit();
+        };
+      });
+    }
+  }
+};
+
+russianDoll.start();
+```
+### 12. Instructor do: ( 5 minutes ) 
+
+Explain why `self` is used, because the `prompt` function loses scope when another function is called inside of it.
+
+> Ask students to partner up and discuss, what the following code is doing and why it still wouldn't work, and what needs to changed to get user to the `third_layer`.
+
+Version 2
+```
+//Russian nesting doll 2
+
+var russianDoll = {
+  start : function() {
+    console.log("Welcome to matryoshka doll a.k.a russian nesting doll~!");
+    this.first_layer();
+  },
+  first_layer : function() {
+    var self = this;
+    console.log("You are at the first layer of the doll, would you like to open another layer? Y/N");
+    prompt.get('open', function(err, result) {
+      if (result.open == 'Y') {
+        self.second_layer();
+      }else{
+        process.exit();
+      };
+    });
+  },
+  second_layer : function() {
+    var self = this;
+    console.log("You are at the second layer of the doll, would you like to open another layer? Y/N");
+    prompt.get(['->','open'], function(err, result) {
+      if (result.open == 'Y') {
+        self.final_layer.third_layer();
+      }else{
+        process.exit();
+      };
+    });
+  },
+  final_layer: {
+    third_layer : function() {
+      var self = this;
+      console.log("You are at the third layer of the doll. would you like to close the doll? Y/N");
+      prompt.get(['->','close'], function(err, result) {
+        if (result.close == 'Y') {
+          self.start();
+        }else{
+          process.exit();
+        };
+      });
+    }
+  }
+};
+
+russianDoll.start();
+```
+
+### 13. Instructor do: ( 10 minutes ) 
+
+Explain why `input_scope` and `current` is used.
+
+```
+//Russian nesting doll 3
+
+var russianDoll = {
+  start : function() {
+    console.log("Welcome to matryoshka doll a.k.a russian nesting doll~!");
+    this.first_layer();
+  },
+  first_layer : function() {
+    var self = this;
+    console.log("You are at the first layer of the doll, would you like to open another layer? Y/N");
+    prompt.get('open', function(err, result) {
+      if (result.open == 'Y') {
+        self.second_layer();
+      }else{
+        process.exit();
+      };
+    });
+  },
+  second_layer : function() {
+    var self = this;
+    console.log("You are at the second layer of the doll, would you like to open another layer? Y/N");
+    prompt.get(['->','open'], function(err, result) {
+      if (result.open == 'Y') {
+        self.final_layer.third_layer(self);
+      }else{
+        process.exit();
+      };
+    });
+  },
+  final_layer: {
+    third_layer : function(input_scope) {
+      var current = input_scope;
+      console.log("You are at the third layer of the doll. would you like to close the doll? Y/N");
+      prompt.get(['->','close'], function(err, result) {
+        if (result.close == 'Y') {
+          current.start();
+        }else{
+          process.exit();
+        };
+      });
+    }
+  }
+};
+
+russianDoll.start();
+```
+* *Copy paste version 3 into `index.js` save run the app to show it works*
+* *Make sure to use `node index.js` not nodemon*
+
+### 14. Students do: ( 20 minutes ) 
+
+* *Slack the followin instructions to student for them to do this exercise*
+
+You are going to creat a jukebox app.
+In the jukebox app there are two artists they each carry two songs, with the following lyrics.
+
+```
+Lorde:
+
+  Team: (lyrics)
+    If user choose Team jukebox will play:
+    "~ Wait'til you're announced
+    We've not yet lost all our graces
+    The hounds will stay in chains ~""
+
+  Yellow Flicker Beat: (lyrics)
+    If user choose Team jukebox will play:
+    "~ I’m a princess cut from marble,
+    smoother than a storm.
+    And the scars that mark my body, they’re silver and gold ~"
+    Once a song is played will quit the jukebox.
+
+KanyeWest:
+
+  Power: (lyrics)
+    If user choose Power jukebox will play:
+    ~ I'm living' in that 21st century
+    Doing something mean to it
+    Do it better than anybody
+    you ever seen do it ~
+
+  Stronger: (lyrics)
+    If user choose Stronger jukebox will play:
+    ~ N-now th-that that don't kill me
+    Can only make me stronger
+    I need you to hurry up now ~
+```
+
+  * When the app is launched in terminal, it should console log a menu in the terminal and prompt to ask me which artist the user would like to chose.
+  * Depending on which artist is picked, it should console log another menu with the titles of the songs for that artist and prompt the user to chose a song.
+  * Depending on which song is picked, it should console log the lyrics of that song in terminal and exit the app.
+  * You must create at least 2 artist, each with at least 2 songs.
+
+BONUS: 
+  * After a song is played don't quit the jukebox, the jukebox will now go back to menu displaying the chooses and the take user input.
+
+* *Run the `jukebox` demo to demo how this app should work *
+
+* Start by Creating a dir named russian_nesting_doll
+  * setup node (npm install)
+  * create `index.js` file
+  * setup prompt (npm install prompt)
+  * copy code from lesson-12.3-sol
+  * call `jukebox.start()` to demo the app
+
+
+### 15. Instructor do: ( 10 minutes )
+
+* *Go over the previous exercise with the class - call on one unique student per each part of the previous exercise to explain what they did for each part of the exercise*
 
 (Instructor do): Review all topics
 
