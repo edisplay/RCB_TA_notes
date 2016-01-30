@@ -151,6 +151,8 @@ TBD
 
 ### 3. Instructor Do (15 minutes)
 
+**Spend 3-4 minutes on each of the following (git branching, git cloning, pull requests)**
+
 * Git branching
 
 > Git branches enable people to modify code independently from the `master branch` without it impacting the `master` branch itself
@@ -227,7 +229,7 @@ TBD
 
 ### 6. Instructor Do (15 minutes)
 
-**Spend only 1-2 minutes talking about each of the following**
+**Spend only 1-2 minutes talking about each of the following ( typography, line-height, font-size, line length, font colors, letter spacing, font files / @font-face, google fonts)**
 
 * Typography
 
@@ -331,7 +333,7 @@ TBD
 
 ### 8. Instructor Do (15 minutes)
 
-**Spend 2-3 minutes on each of the following**
+**Spend 2-3 minutes on each of the following (Pseudo classes, pseudo elements, content property)**
 
 * Psuedo classes
 
@@ -437,7 +439,7 @@ tr:nth-child(even) {
 
 * CSS3 Concepts
 
-**Spend about 3-4 minutes on each of the following**
+**Spend about 3-4 minutes on each of the following (text-shadow, box-shadow, rounded corners/border-radius)**
 
 * Shadows
 
