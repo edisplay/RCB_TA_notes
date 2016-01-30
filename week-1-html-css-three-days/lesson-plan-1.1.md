@@ -34,16 +34,21 @@ ALL or they won't be able to do the homework.
 
 ----
 
-### 1. Instructor Do (30 minutes)
+### 1.1. Introduction (30-45 minutes)
+
+* *Instructor + TAs take a seat and relax*
+
+* *University, Program Director, Student Services Director, Career Director chime in for an introduction to the students*
+
+### 1.2 Instructor Do (10 minutes)
 * Welcome all the students to the class. 
 * Slack out the objectives to the students, have unique students read each one and then you make a comment after each one is read
 * Introduce yourself, the TA's, and Support Team (Dan S, Student Success, Career Coach)
 
-
 ### 2. Partners Do (5 minutes)
-+ Have the students get into groups of 4 or 5 and talk within their groups about 1 bad movie they last watched and 1 interest.
++ Have the students get into groups of 4 or 5 and spend 30 seconds each talking about 1 bad movie they last watched and 1 interest they have.
 
-### 3. Everyone do (10 minutes)
+### 3. Everyone do (15 minutes)
 + Go around the room to each group 
 
 * Have all the students give a quick intro consisting of:
@@ -53,9 +58,7 @@ ALL or they won't be able to do the homework.
     + Where they come from geographically.
 
 
-----
-
-### 2. Instructor Do (10 minutes)
+### 2. Instructor Do (5 minutes)
 
 * Quickly go over this - don't rant on every single technology - if students have questions direct them to the parking lot
 
@@ -103,7 +106,8 @@ ALL or they won't be able to do the homework.
     + Design Patterns
 ```
 
-### 3. Instructor do (10 minutes)
+### 3. Instructor do (5 minutes)
+
 * Discuss what the daily class structure will consist of:
   + Brief Introduction/Background to Objectives for the day
   + Quick Watch Me / Demonstration
@@ -125,11 +129,20 @@ ALL or they won't be able to do the homework.
         + Full Stack Project (server + database + front end)
 
 
-### 4. Instructor Do (20 minutes)
-* Google timer, set it to 20 minutes, put your volume up
+### 4. Instructor Do (10 minutes)
+* Google timer, set it to 10 minutes, put your volume up
 
 * Engage the students to see who has any pre-work issues.
-* TA's and Instructors will assist those students who need help (WiFi connection, Sublime Text, etc.).
+
+* Everyone either go to terminal or git bash and run this command:
+
+```git```
+
+> If it worked then git is installed on your computer
+
+> If it doesn't, then please stay after class for 30 minutes to get git installed. Or come to office hours 45 minutes before the next class and get your issues fixed.
+
+* *TA's and Instructors will assist those students who need help (WiFi connection, Sublime Text, etc.).*
 
 * If there are still issues, let students know that you and TAs are available for 30 minutes after class and 45 minutes before the next class
 ----
@@ -147,6 +160,22 @@ ALL or they won't be able to do the homework.
 > Practice when you get home.
 
 * *When done going over these, slack out the below commands to the students* 
+
+* *Open up the terminal*
+
+> The terminal is an alternative way to use your computer.  
+
+> Why use it, when you can do everything the way you normally use your computer?
+
+> Because 
+
+> * it's not easy to see hidden files when clicking through folders
+
+> * you'll have to use the terminal or git bash to deploy your website to heroku. 
+
+> * You'll have to use the terminal/git bash when installing and running node apps. 
+
+> So we might as well get started now!
 
 * Run the following commands while having the finder window open to show the files being created
 
@@ -170,15 +199,11 @@ ALL or they won't be able to do the homework.
         + `ls -a` - list all files, even hidden ones without filenames
         + `ls -la` - list all files and permissions in a list format
 
-* *if you don't have a mac then talk about these commands*
-
 * Mac specific commands
     * `open .`
         + opens the current folder you are at in finder
     * `open <file name>`
         + open a specific file
-
-> Why do these commands when you can do it in the file system? Because you'll have to use the terminal or git bash to deploy your website to heroku or to use node - so we might as well start now
 
 * *When done going over these, slack out the above commands to the students* 
 
