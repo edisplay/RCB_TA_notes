@@ -30,81 +30,80 @@ TBD
 * Work independently or in a group on complex projects throughout the entire development lifecycle
 * Communicate the basics of serving a webpage and how the browser renders code
 * Understand and implement the mechanics of Git flow (including branching, merging, pull requests)
-* Deploy static websites to a cloud provider
 
 ----
 
 ### 1. Instructor Do (10 minutes)
 
-* Recap last weeks class QUICKLY
+***Recap last weeks class QUICKLY. Say one or two sentences about the following***
 
-    * Terminal
-        * Terminal Commands
-            * navigate to the home directory.
-                + `cd ~`
-            * go back a directory
-                + `cd ..`
-            * print the current working directory.
-                + `pwd`
-            * create a new folder.
-                + `mkdir folder_name`
-            * create a new html file.
-                + `touch my-first-example-page.html`
-            * delete a file
-                + `rm my-first-example-page.html`
-            * delete a folder
-                + `rm -r folder_name`
-            * list files in a folder
-                + `ls` - list files
-                + `ls -a` - list all files, even hidden ones without filenames
-                + `ls -la` - list all files and permissions in a list format
+* Terminal
+    * Terminal Commands
+        * navigate to the home directory.
+            + `cd ~`
+        * go back a directory
+            + `cd ..`
+        * print the current working directory.
+            + `pwd`
+        * create a new folder.
+            + `mkdir folder_name`
+        * create a new html file.
+            + `touch my-first-example-page.html`
+        * delete a file
+            + `rm my-first-example-page.html`
+        * delete a folder
+            + `rm -r folder_name`
+        * list files in a folder
+            + `ls` - list files
+            + `ls -a` - list all files, even hidden ones without filenames
+            + `ls -la` - list all files and permissions in a list format
 
-    * Git
-        * Git Commands
-            + `git add filename` vs `git add .`
-            + `git commit -m "Commit Message"`
-            + `git push`
-            + `git pull`
-        * Made first repo called `week-one-repo`
+* Git
+    * Git Commands
+        + `git add filename` vs `git add .`
+        + `git commit -m "Commit Message"`
+        + `git push`
+        + `git pull`
+    * Made first repo called `week-one-repo`
 
-    * Inspector
-        * Elements panel and style side panel
+* Inspector
+    * Elements panel and style side panel
 
-    * Heroku
-        * Deploying to the web
+* Heroku
+    * Deploying to the web
 
-    * HTML
-        * Doctype
-        * HTML indentation and syntax e.g. open and closing tags, self closing tags, double quotations (never single quotes)*
-        * Core html tags (e.g. doctype, html, head, title, body)
-        * Other html tags (e.g. headings, paragraphs, anchors, lists, divs, tables)
-        * html5 tags (e.g. header, section, article, footer)
+* HTML
+    * Doctype
+    * HTML indentation and syntax e.g. open and closing tags, self closing tags, double quotations (never single quotes)*
+    * Core html tags (e.g. doctype, html, head, title, body)
+    * Other html tags (e.g. headings, paragraphs, anchors, lists, divs, tables)
+    * html5 tags (e.g. header, section, article, footer)
 
-    * CSS
-        * Types of style sheets (e.g. inline vs internal vs external) and how the order that the CSS is written is important
-        * CSS properties (e.g. font-family, background-color)
-        * ID's vs classes
-        * CSS box model
-        * Floats
-        * Positioning (e.g. relative, static, absolute, fixed)
-        * CSS resets
+* CSS
+    * Types of style sheets (e.g. inline vs internal vs external) and how the order that the CSS is written is important
+    * CSS properties (e.g. font-family, background-color)
+    * ID's vs classes
+    * CSS box model
+    * Floats
+    * Positioning (e.g. relative, static, absolute, fixed)
+    * CSS resets
 
-    * Coded 3 in-class html and css pages
-        * student-bio.html
-        * floats.html
-        * positioning.html
+* Coded 3 in-class html and css pages
+    * student-bio.html
+    * floats.html
+    * positioning.html
 
-    * Coded 3 page portfolio site for homework
+* Coded 3 page portfolio site for homework
 
-* *Instructor - answer any questions students might have about these things*
+* *answer any questions students might have about these things*
 
-* *Instructor - Show [this html file](in-class-exercises-1.1/index-1.html){:target="_blank"} on the projector. It is what the students must code out in the next exercise.*
+* *Show [this html file](in-class-exercises-1.1/index-1.html){:target="_blank"} on the projector. It is what the students must code out in the next exercise.*
 
 ----
 
 ### 2. Student Do (20 minutes)
 
-* *Instructor - Show [this html file](in-class-exercises-1.1/index-1.html){:target="_blank"} on the projector. It is what the students must code out in the next exercise.*
+* *Show [this html file](in-class-exercises-1.1/index-1.html){:target="_blank"} on the projector. It is what the students must code out in the next exercise.*
 
 * Make a new public Git repo called `##-week-two-exercises` with you replacing `##` with your initials
 * Inside your new repo, make a new html file called `index.html`
@@ -153,31 +152,51 @@ TBD
 ### 3. Instructor Do (15 minutes)
 
 * Git branching
-    * Git branches enable people to modify code independently from the `master branch` without it impacting the `master` branch itself
-    * For example, you can code features on a `features` branch, and not have your in-progress features code impact your `master` production branch
-    * This is especially useful when working on teams. Two people can modify the same file in separate branches and then have the ability to merge their changes without fearing things will get overwritten
-    * Commands
-        * `git branch branch-name` - creates a new branch
-        * `git checkout branch-name` switches to the branch
-        * `git branch -b branch-name` is short for making a new branch and immediately switching to it
-        * `git push origin branch-name` will push the contents of the branch, this will not impact `master`
-        * To return to master you type `git checkout master`
-    * **Important**
-        * When making a new branch, the new branch references the branch you are currently on. For example, if you are on the `master` branch and type `git checkout -b new-branch` the `new-branch` will adopt the same code from `master`. 
-        * Let's say you make a lot of changes in your `new-branch`, and while on that branch you type `git checkout -b additional-branch`, the `additional-branch` will adopt the code from `new-branch` NOT from `master`.
-        * It is important to type `git branch` before you make a new branch so you can see which branch you are currently on.
-* Git cloning
-    * You can get any code from other public Git repositories.
-    * Running `git clone git@github.com:twbs/bootstrap.git` will clone the Bootstrap repo to your local machine
-    * You have the ability to modify files
-    * Github lets you modify settings to prevent others from deleting or modifying certain branches, as well as restricting user access
-* Pull requests
-    * When working with teams, almost never should work be performed using the `master` branch. Master branch is usually production level code, not code that is in-progress
-    * All work should be merged into `master` by creating a "pull request"
-    * You can do this by navigating to your repository using Chrome, selecting the "pull requests" tab and pressing the "new pull request" button
-    * You can select which branch you want to merge from and to
-    * Pull requests should be reviewed by the owner to ensure the code is proper, if not you can tell the person making the request to modify their code
 
+> Git branches enable people to modify code independently from the `master branch` without it impacting the `master` branch itself
+
+> For example, you can code features on a `features` branch, and not have your in-progress features code impact your `master` production branch
+
+> This is especially useful when working on teams. Two people can modify the same file in separate branches and then have the ability to merge their changes without fearing things will get overwritten
+
+**Slack out these git commands to students and say one or two sentences about each**
+
+* Commands
+    * `git branch branch-name` - creates a new branch
+    * `git checkout branch-name` switches to the branch
+    * `git branch -b branch-name` is short for making a new branch and immediately switching to it
+    * `git push origin branch-name` will push the contents of the branch, this will not impact `master`
+    * To return to master you type `git checkout master`
+
+**Important**
+
+> When making a new branch, the new branch references the branch you are currently on. For example, if you are on the `master` branch and type `git checkout -b new-branch` the `new-branch` will adopt the same code from `master`.
+
+> Let's say you make a lot of changes in your `new-branch`, and while on that branch you type `git checkout -b additional-branch`, the `additional-branch` will adopt the code from `new-branch` NOT from `master`.
+
+> It is important to type `git branch` before you make a new branch so you can see which branch you are currently on.
+
+* Git cloning
+
+> You can get any code from other public Git repositories.
+
+> Running `git clone git@github.com:twbs/bootstrap.git` will clone the Bootstrap repo to your local machine
+
+> You have the ability to modify files
+
+> Github lets you modify settings to prevent others from deleting or modifying certain branches, as well as restricting user access
+
+* Pull requests
+
+> When working with teams, almost never should work be performed using the `master` branch. Master branch is usually production level code, not code that is in-progress
+
+> All work should be merged into `master` by creating a "pull request"
+
+> You can do this by navigating to your repository using Chrome, selecting the "pull requests" tab and pressing the "new pull request" button
+
+> You can select which branch you want to merge from and to
+
+> Pull requests should be reviewed by the owner to ensure the code is proper, if not you can tell the person making the request to modify their code
 
 ### 4. Partner Do (15 minutes)
 
@@ -208,48 +227,80 @@ TBD
 
 ### 6. Instructor Do (15 minutes)
 
+**Spend only 1-2 minutes talking about each of the following**
+
 * Typography
-    * Serif fonts have lines on the edges of the characters
-    * Sans-serif fonts have no lines
-    [show this example on projector](in-class-exercises-1.1/font-example.html)
-    * It is generally considered that sans-serif fonts are easier to read online
+
+> Serif fonts have lines on the edges of the characters
+
+> Sans-serif fonts have no lines
+
+> [show this example on projector that shows different between sans-serif and serif](in-class-exercises-1.1/font-example.html)
+
+> It is generally considered that sans-serif fonts are easier to read online
+
 * Line-height
-    * golden ratio of line height is 1.5 times the font size
-    * depending on the font, you may need to increase the line height, but always make sure there is plenty of room between the lines of text
+
+> golden ratio of line height is 1.5 times the font size
+
+> depending on the font, you may need to increase the line height, but always make sure there is plenty of room between the lines of text
+
 * Font-size
-    * Font size should be atleast 16 pixels. Anything smaller is hard to read.
-    [source](https://www.smashingmagazine.com/2011/10/16-pixels-body-copy-anything-less-costly-mistake/){:target="_blank"}
+
+> Font size should be atleast 16 pixels. Anything smaller is hard to read.
+[source](https://www.smashingmagazine.com/2011/10/16-pixels-body-copy-anything-less-costly-mistake/){:target="_blank"}
+
 * Line length 
-    * This isnt a CSS property, but rather a standard. The optimal length for body text should be around 50-75 characters per line on desktop and about 30-40 characters per line on mobile
-    [source](http://baymard.com/blog/line-length-readability){:target="_blank"}
+
+> This isnt a CSS property, but rather a standard. The optimal length for body text should be around 50-75 characters per line on desktop and about 30-40 characters per line on mobile
+[source](http://baymard.com/blog/line-length-readability){:target="_blank"}
+
 * Font colors
-    * Keep a good contrast between font color and background color, but sometimes too much contrast isn't good either. A pure white background (#fff) with pure black text (#000) is harder to read and can cause more eye fatigue than a pure white background with a softer shade of grey like (#333)
+
+> Keep a good contrast between font color and background color, but sometimes too much contrast isn't good either. A pure white background (#fff) with pure black text (#000) is harder to read and can cause more eye fatigue than a pure white background with a softer shade of grey like (#333)
+
 * Letter spacing
-    * You can define letter spacing in css like this `letter-spacing: 1px`
-    * You should adjust letter spacing if your chosen font looks too cramped
+
+> You can define letter spacing in css like this `letter-spacing: 1px`
+
+> You should adjust letter spacing if your chosen font looks too cramped
+
 * Font files
-    * If hosting your own fonts, you will need to include font file formats to enable support across browsers
-        * Embedded OpenType (EOT) - A Microsoft font format used for Internet Explorer [caniuse](http://caniuse.com/#search=eot){:target="_blank"}
-        * Web Open Font Format (WOFF) - Is generally supported by modern browsers [caniuse](http://caniuse.com/#search=woff){:target="_blank"}
-        * WOFF2 - A newer version of WOFF but is not widely supported yet [caniuse](http://caniuse.com/#search=woff2){:target="_blank"}
-        * TTF - Created by Apple and Microsoft, has wide support [caniuse](http://caniuse.com/#feat=ttf){:target="_blank"}
-        * OTF - Used for special characters [caniuse](http://caniuse.com/#feat=ttf){:target="_blank"}
-        * SVG - Not much support yet [caniuse](http://caniuse.com/#feat=svg-fonts){:target="_blank"} 
-    * In your CSS you would define your fonts like this:
-    ```
-    @font-face {
-        font-family: font-name;
-        src: url('webfont.eot?#iefix') format('embedded-opentype'),
-             url('font-name.woff2') format('woff2'),
-             url('font-name.woff') format('woff'),
-             url('font-name.ttf') format('truetype'), 
-             url('font-name.otf') format('opentype'), 
-             url('font-name.svg#svgFontName') format('svg'); 
-    }
-    ```
+
+> If hosting your own fonts, you will need to include font file formats to enable support across browsers
+
+> Embedded OpenType (EOT) - A Microsoft font format used for Internet Explorer [caniuse](http://caniuse.com/#search=eot){:target="_blank"}
+
+> Web Open Font Format (WOFF) - Is generally supported by modern browsers [caniuse](http://caniuse.com/#search=woff){:target="_blank"}
+
+> WOFF2 - A newer version of WOFF but is not widely supported yet [caniuse](http://caniuse.com/#search=woff2){:target="_blank"}
+
+> TTF - Created by Apple and Microsoft, has wide support [caniuse](http://caniuse.com/#feat=ttf){:target="_blank"}
+
+> OTF - Used for special characters [caniuse](http://caniuse.com/#feat=ttf){:target="_blank"}
+
+> SVG - Not much support yet [caniuse](http://caniuse.com/#feat=svg-fonts){:target="_blank"} 
+
+> In your CSS you would define your fonts like this:
+
+**Slack this to students**
+```
+@font-face {
+    font-family: font-name;
+    src: url('webfont.eot?#iefix') format('embedded-opentype'),
+         url('font-name.woff2') format('woff2'),
+         url('font-name.woff') format('woff'),
+         url('font-name.ttf') format('truetype'), 
+         url('font-name.otf') format('opentype'), 
+         url('font-name.svg#svgFontName') format('svg'); 
+}
+```
+
 * Google Fonts
-    * Free fonts can be found here https://www.google.com/fonts
-    * You can link to Googles CSS file which hosts the fonts for you
+
+> Free fonts can be found here https://www.google.com/fonts
+
+> You can link to Googles CSS file which hosts the fonts for you
 
 
 ### 7. Student Do (15 minutes)
@@ -280,31 +331,47 @@ TBD
 
 ### 8. Instructor Do (15 minutes)
 
+**Spend 2-3 minutes on each of the following**
+
 * Psuedo classes
-    * Uses single colon
-    * A pseudo-class is used to define a special state of an element. For example, this would make the text red when hovering over it:
-    ```
-    a:hover {
-      color: red
-    }
-    ```
-    * You can also style links based on :visited, :active, :focus 
-    * [full list of pseudo classes here](https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes){:target="_blank"}
-    * nth-child you can style even or odd occurrences, or specific occurrences like `:nth-child(2)`
-    ```
-    tr:nth-child(even) {
-      background-color: red
-    }
-    ```
+
+> A pseudo-class is used to define a special state of an element. For example, this would make the text red when hovering over it:
+```
+a:hover {
+  color: red
+}
+```
+
+> You can also style links based on :visited, :active, :focus 
+
+> [full list of pseudo classes here](https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes){:target="_blank"}
+
+> nth-child you can style even or odd occurrences, or specific occurrences like `:nth-child(2)`
+```
+tr:nth-child(even) {
+  background-color: red
+}
+```
+
+> Uses single colon
+
 * Pseudo elements
-    * Pseudo-elements are added to selectors but instead of describing a special state, they allow you to style certain parts of a document.
-    [source](https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-elements){:target="_blank"}
-    * Uses double colons like `element::after`
-    * [full list of pseudo classes here](https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-elements){:target="_blank"}
+
+> Pseudo-elements are added to selectors but instead of describing a special state, they allow you to style certain parts of a document.
+[source](https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-elements){:target="_blank"}
+
+> Uses double colons like `element::after`
+
+> [full list of pseudo classes here](https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-elements){:target="_blank"}
+
 * Inserting cosmetic content using the `content` property
-    * Content property is an inline element by default, but you can make it block using css
-    * You can insert `content` before or after an element
-    * example
+
+
+> Content property is an inline element by default, but you can make it block using css
+
+> You can insert `content` before or after an element
+
+** Example - [Display this in Chrome](in-class-exercises-1.1/pseudo-element-example.html){:target="_blank"} **
     ```
     <!doctype html>
     <html>
@@ -329,13 +396,12 @@ TBD
     </body>
     </html>
     ```
-    * [Output](in-class-exercises-1.1/pseudo-element-example.html){:target="_blank"}
-    * Special characters use hex http://www.evotech.net/articles/testjsentities.html
+> Special characters use hex http://www.evotech.net/articles/testjsentities.html
 
 
 ### 9. Partner Do (15 minutes)
 
-* *Instructor - Show [exercise](in-class-exercises-1.1/index-4.html){:target="_blank"} on the projector. It is what the students must code out in the next exercise.*
+* *Show [exercise](in-class-exercises-1.1/index-4.html){:target="_blank"} on the projector. It is what the students must code out in the next exercise.*
 
 * Inside your partners repo, switch to the `master` branch
 * `git pull origin master` to get you up to date
@@ -369,22 +435,29 @@ TBD
 
 ### 10. Instructor do (15 minutes)
 
-* CSS3
+* CSS3 Concepts
 
-  * Shadows
-      * `text-shadow` - values are: horizontal vertical blur color
-      * `box-shadow` - values are: horizontal vertical blur color
-  * Rounded corners
-      * Shorthand for all 4 corners is `border-radius 5px`
-      * Single corners `border-top-left-radius: 5px`
+**Spend about 3-4 minutes on each of the following**
 
-* *Instructor - Show [exercise](in-class-exercises-1.1/index-5.html){:target="_blank"} on the projector. It is what the students must code out in the next exercise.*
+* Shadows
+
+> `text-shadow` - values are: horizontal vertical blur color. example: `text-shadow: 3px 3px 8px #999`
+
+> `box-shadow` - values are: horizontal vertical blur color
+
+* Rounded corners
+
+> Shorthand for all 4 corners is `border-radius: 5px`
+
+> Single corners `border-top-left-radius: 5px`
+
+* *Show [exercise](in-class-exercises-1.1/index-5.html){:target="_blank"} on the projector. It is what the students must code out in the next exercise.*
 
 ----
 
 ### 11. Student Do (20 minutes)
 
-* *Instructor - Show [exercise](in-class-exercises-1.1/index-5.html){:target="_blank"} on the projector. It is what the students must code out in the next exercise.*
+* *Show [exercise](in-class-exercises-1.1/index-5.html){:target="_blank"} on the projector. It is what the students must code out in the next exercise.*
 
 * Review pull request with partner made, if all looks good then merge it. If it looks off then pair program (work together) to make it nicer
 * Merge the pull request
