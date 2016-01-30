@@ -289,7 +289,7 @@ The <!DOCTYPE html> declaration is not an HTML tag; it is an instruction to the 
 
 ----
 
-### 10. Students Do (15 minutes)
+### 10. Students Do (10 minutes)
 
 * always slack out student exercises and display them on the screen + have students read out the exercise to the class + google timer and set the timer to the amount above and turn up the sound on your computer. Make them feel the pressure. * 
 
@@ -317,6 +317,12 @@ Bonus:
 ### 11. Everyone Do (5 minutes)
 
 * *go around the room and go over the previous exercise*
+
+----
+
+### 12. Instructor Do (5 minutes)
+
+* *go over the hw*
 
 ----
 
