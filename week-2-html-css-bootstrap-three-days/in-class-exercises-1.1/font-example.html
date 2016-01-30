@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+<head>
+	<title>Serif vs Sans-Serif</title>
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<style type="text/css">
+
+		html, body {
+		    height: 100%;
+		}
+		body {
+			background: #eee;
+			font-size: 90px;
+		}
+		.main {
+	    height: 100%;
+	    width: 100%;
+	    display: table;
+		}
+		.wrapper {
+			display: table-cell;
+			height: 100%;
+			vertical-align: middle;
+		}
+		span {	
+			text-align: center;
+			color: #555;
+			display: block;
+		}
+		#serif {
+			font-family: "Times New Roman", Georgia, Serif;
+			margin-bottom: 100px;
+		}
+		#sans {
+			font-family: Arial, Helvetica, sans-serif;
+		}
+	</style>
+</head>
+<body>
+	<div class="main">
+		<div class="wrapper">
+			<span id="serif">Serif Font - Times New Roman</span>
+			<span id="sans">Sans-Serif Font - Arial</span>
+		</div>
+	</div>
+</body>
+</html>
