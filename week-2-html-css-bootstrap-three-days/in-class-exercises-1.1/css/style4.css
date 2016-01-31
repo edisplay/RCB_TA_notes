@@ -1,0 +1,25 @@
+/*exercise four */
+blockquote {
+	margin-left: 60px;
+	position: relative;
+}
+blockquote::before {
+	content: "\201C";
+	position: absolute;
+	top: 20px;
+	left: -65px;
+	font-size: 80px;
+}
+#sidebar li {
+	position: relative;
+	margin-left: 30px;
+}
+#sidebar li::before {
+	content: "\2600";
+	position: absolute;
+	left: -30px;
+	font-size: 20px;
+}
+#sidebar li:nth-child(2) {
+	font-weight: 700;
+}
