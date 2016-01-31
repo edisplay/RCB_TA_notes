@@ -34,74 +34,55 @@ ALL or they won't be able to do the homework.
 
 ----
 
+### 1. Instructor Do (30 minutes)
 
-### 1. Instructor Do (10 minutes)
+* Media queries
+* viewport tags
+
+
+### 2. Student Do (30 minutes)
+
+* Make sure your repo form yesterday is up to date
+* Using that page, make it responsive
+
+
+### 3. Instructor Do (25 minutes)
+
+* Progressive Enhancement vs Graceful Degradation
+* CSS Refinement
+* @import
+* commas, h1, h2, h3, h4, h5, h6
+* measurements, rems, ems, pixels etc
+* colors, kuler
+
+
+### 4. Student Do (25 minutes)
+
+* refactor code
+
+----
+###### Break (40 minutes) 150 minutes went by including break
+----
+
+
+### 5. Instructor Do (30 minutes)
 
 * Bootstrap Overview
-
-
-### 2. Student Do (10 minutes)
-
-* Make a new repo called `Bootstrap`
-
-
-### 3. Instructor Do (15 minutes)
-
 * Grid system basics
 
 
-### 4. Student Do (10 minutes)
+### 6. Student Do (30 minutes)
 
+* Make a new repo called `Bootstrap`
 * Make a fixed grid
 
 
-### 5. Partner Do (10 minutes)
+### 7. Partner Do (30 minutes)
 
 * pull partners repo
 * make a new branch
 * make the grid fixed with a few other changes
 * make a pull request
-
-### 6. Student Do (10 minutes)
-
-* review pull request
-* make any additional changes
-
-
-----
-###### Break (15 minutes) 110 minutes went by including break
-----
-
-
-### 4. Instructor Do (20 minutes)
-
-* Bootstrap Overview
-
-
-### 5. Student Do (30 minutes)
-
-* Make a new repo called `Bootstrap`
-
-
-----
-
-### 6. Instructor do (20 minutes)
-
-* CSS3
-
-  * shadows
-  * rounded corners
-  * nth-child
-  * content
-
-----
-
-### 7. Partner Do (20 minutes)
-
-* Add shadows and rounded corners to partners code
-
-* You are not allowed to edit your own code. You are required to tell your partner what to edit in your code 
-* Repeat the above with other partner
 
 
 ----
