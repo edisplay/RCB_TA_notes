@@ -35,7 +35,7 @@ ALL or they won't be able to do the homework.
 ----
 
 
-### 6. Instructor Do (25 minutes)
+### 1. Instructor Do (30 minutes)
 
 **Spend only 2-3 minutes talking about each of the following (line-height, font-size, line length, font colors, letter spacing, typography, font files / @font-face, google fonts)**
 
@@ -67,7 +67,7 @@ ALL or they won't be able to do the homework.
 
 * Typography
 
-> [show this example on projector that shows different between sans-serif and serif](in-class-exercises-1.1/font-example.html)
+> [show this example on projector that shows different between sans-serif and serif](in-class-exercises-2.1/font-example.html)
 
 > Serif fonts have lines on the edges of the characters
 
@@ -113,7 +113,7 @@ ALL or they won't be able to do the homework.
 > You can link to Googles CSS file which hosts the fonts for you
 
 
-### 7. Student Do (25 minutes)
+### 2. Student Do (30 minutes)
 
 * Go to Google Fonts https://www.google.com/fonts
 * Find two fonts from Google that you like. One font MUST be serif, the other MUST be sans-serif
@@ -136,8 +136,7 @@ ALL or they won't be able to do the homework.
 
 ----
 
-
-### 8. Instructor Do (15 minutes)
+### 3. Instructor Do (20 minutes)
 
 **Spend 2-3 minutes on each of the following (Pseudo classes, pseudo elements, content property)**
 
@@ -179,7 +178,7 @@ tr:nth-child(even) {
 
 > You can insert `content` before or after an element
 
-** Example - [Display this in Chrome](in-class-exercises-1.1/pseudo-element-example.html){:target="_blank"} **
+** Example - [Display this in Chrome](in-class-exercises-2.1/pseudo-element-example.html){:target="_blank"} **
     ```
     <!doctype html>
     <html>
@@ -207,9 +206,9 @@ tr:nth-child(even) {
 > Special characters use hex http://www.evotech.net/articles/testjsentities.html
 
 
-### 9. Partner Do (15 minutes)
+### 4. Partner Do (20 minutes)
 
-* *Show [exercise](in-class-exercises-1.1/index-4.html){:target="_blank"} on the projector. It is what the students must code out in the next exercise.*
+* *Show [exercise](in-class-exercises-2.1/index-4.html){:target="_blank"} on the projector. It is what the students must code out in the next exercise.*
 
 * Inside your partners repo, switch to the `master` branch
 * `git pull origin master` to get you up to date
@@ -239,9 +238,12 @@ tr:nth-child(even) {
 * Stage, commit, and push to your branch
 * Make a pull request
 
+
+----
+###### Break (15 minutes) 115 minutes went by including break
 ----
 
-### 10. Instructor do (15 minutes)
+### 5. Instructor do (30 minutes)
 
 * CSS3 Concepts
 
@@ -259,13 +261,13 @@ tr:nth-child(even) {
 
 > Single corners `border-top-left-radius: 5px`
 
-* *Show [exercise](in-class-exercises-1.1/index-5.html){:target="_blank"} on the projector. It is what the students must code out in the next exercise.*
+* *Show [exercise](in-class-exercises-2.1/index-5.html){:target="_blank"} on the projector. It is what the students must code out in the next exercise.*
 
 ----
 
-### 11. Student Do (20 minutes)
+### 6. Student Do (35 minutes)
 
-* *Show [exercise](in-class-exercises-1.1/index-5.html){:target="_blank"} on the projector. It is what the students must code out in the next exercise.*
+* *Show [exercise](in-class-exercises-2.1/index-5.html){:target="_blank"} on the projector. It is what the students must code out in the next exercise.*
 
 * Review pull request with partner made, if all looks good then merge it. If it looks off then pair program (work together) to make it nicer
 * Merge the pull request
@@ -282,59 +284,6 @@ tr:nth-child(even) {
     * Adjust the margins as needed
 * Code what is on the screen
 
-----
-
-
-### 1. Instructor Do (20 minutes)
-
-* Media queries
-* viewport tags
-
-
-### 2. Student Do (30 minutes)
-
-* Make sure your repo form yesterday is up to date
-* Using that page, make it responsive
-
-
-### 3. Instructor Do (20 minutes)
-
-* CSS animations
-
-----
-
-### 4. Student Do (20 minutes)
-
-* Make new file
-* CSS animations
-
-
-### 5. Partner Do (15 minutes)
-
-* Pull down your partners code
-* make a new branch
-* add a different animation to it
-* make a pull request
-
-----
-###### Break (15 minutes) 120 minutes went by including break
-----
-
-
-### 4. Instructor Do (30 minutes)
-
-* Progressive Enhancement vs Graceful Degradation
-* CSS Refinement
-* @import
-* commas, h1, h2, h3, h4, h5, h6
-* measurements, rems, ems, pixels etc
-* colors, kuler
-
-
-
-### 5. Student Do (30 minutes)
-
-* SASS
 
 ----
 # Copyright
