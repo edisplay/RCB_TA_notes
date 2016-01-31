@@ -97,13 +97,13 @@ TBD
 
 * *answer any questions students might have about these things*
 
-* *Show [this html file](in-class-exercises-1.1/index-1.html){:target="_blank"} on the projector. It is what the students must code out in the next exercise.*
+* *Show [this html file](in-class-exercises-2.1/index-1.html){:target="_blank"} on the projector. It is what the students must code out in the next exercise.*
 
 ----
 
 ### 2. Student Do (20 minutes)
 
-* *Show [this html file](in-class-exercises-1.1/index-1.html){:target="_blank"} on the projector. It is what the students must code out in the next exercise.*
+* *Show [this html file](in-class-exercises-2.1/index-1.html){:target="_blank"} on the projector. It is what the students must code out in the next exercise.*
 
 * Make a new public Git repo called `##-week-two-exercises` with you replacing `##` with your initials
 * Inside your new repo, make a new html file called `index.html`
@@ -237,7 +237,7 @@ TBD
 
 > Sans-serif fonts have no lines
 
-> [show this example on projector that shows different between sans-serif and serif](in-class-exercises-1.1/font-example.html)
+> [show this example on projector that shows different between sans-serif and serif](in-class-exercises-2.1/font-example.html)
 
 > It is generally considered that sans-serif fonts are easier to read online
 
@@ -373,7 +373,7 @@ tr:nth-child(even) {
 
 > You can insert `content` before or after an element
 
-** Example - [Display this in Chrome](in-class-exercises-1.1/pseudo-element-example.html){:target="_blank"} **
+** Example - [Display this in Chrome](in-class-exercises-2.1/pseudo-element-example.html){:target="_blank"} **
     ```
     <!doctype html>
     <html>
@@ -403,7 +403,7 @@ tr:nth-child(even) {
 
 ### 9. Partner Do (15 minutes)
 
-* *Show [exercise](in-class-exercises-1.1/index-4.html){:target="_blank"} on the projector. It is what the students must code out in the next exercise.*
+* *Show [exercise](in-class-exercises-2.1/index-4.html){:target="_blank"} on the projector. It is what the students must code out in the next exercise.*
 
 * Inside your partners repo, switch to the `master` branch
 * `git pull origin master` to get you up to date
@@ -453,13 +453,13 @@ tr:nth-child(even) {
 
 > Single corners `border-top-left-radius: 5px`
 
-* *Show [exercise](in-class-exercises-1.1/index-5.html){:target="_blank"} on the projector. It is what the students must code out in the next exercise.*
+* *Show [exercise](in-class-exercises-2.1/index-5.html){:target="_blank"} on the projector. It is what the students must code out in the next exercise.*
 
 ----
 
 ### 11. Student Do (20 minutes)
 
-* *Show [exercise](in-class-exercises-1.1/index-5.html){:target="_blank"} on the projector. It is what the students must code out in the next exercise.*
+* *Show [exercise](in-class-exercises-2.1/index-5.html){:target="_blank"} on the projector. It is what the students must code out in the next exercise.*
 
 * Review pull request with partner made, if all looks good then merge it. If it looks off then pair program (work together) to make it nicer
 * Merge the pull request
