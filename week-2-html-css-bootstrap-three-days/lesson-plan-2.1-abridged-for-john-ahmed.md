@@ -104,12 +104,12 @@ you'll see the url to your heroku link in the terminal after pushing to heroku, 
 
 ### Instructor Do (5 minutes)
 
-* *Show [this html file](in-class-exercises-2.1/index-1.html){:target="_blank"} on the projector. It is what the students must code out in the next exercise.*
+* *Show [this html file](in-class-exercises-2.1/index-1.html) on the projector. It is what the students must code out in the next exercise.*
 
 
 ### 2. Student Do (25 minutes)
 
-* *Show [this html file](in-class-exercises-2.1/index-1.html){:target="_blank"} on the projector. It is what the students must code out in the next exercise.*
+* *Show [this html file](in-class-exercises-2.1/index-1.html) on the projector. It is what the students must code out in the next exercise.*
 
 * Make a new public Git repo called `##-week-two-exercises` with you replacing `##` with your initials
 * Inside your new repo, make a new html file called `index.html`
@@ -231,6 +231,7 @@ you'll see the url to your heroku link in the terminal after pushing to heroku, 
 * If all looks good, merge in their pull request
 * After merged, making sure you are in your master branch, type `git pull origin master` to pull down their changes locally
 * Review on your computer to make sure you have their changes
+
 ----
 
 # Copyright
