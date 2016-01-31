@@ -231,6 +231,7 @@ you'll see the url to your heroku link in the terminal after pushing to heroku, 
 * If all looks good, merge in their pull request
 * After merged, making sure you are in your master branch, type `git pull origin master` to pull down their changes locally
 * Review on your computer to make sure you have their changes
+
 ----
 
 # Copyright
