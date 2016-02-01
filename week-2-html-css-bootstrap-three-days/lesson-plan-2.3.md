@@ -34,8 +34,7 @@ ALL or they won't be able to do the homework.
 
 ----
 
-
-### 1. Instructor Do (20 minutes)
+### 1. Instructor Do (30 minutes)
 
 * Media queries
 * viewport tags
@@ -47,31 +46,7 @@ ALL or they won't be able to do the homework.
 * Using that page, make it responsive
 
 
-### 3. Instructor Do (20 minutes)
-
-* CSS animations
-
-----
-
-### 4. Student Do (20 minutes)
-
-* Make new file
-* CSS animations
-
-
-### 5. Partner Do (15 minutes)
-
-* Pull down your partners code
-* make a new branch
-* add a different animation to it
-* make a pull request
-
-----
-###### Break (15 minutes) 120 minutes went by including break
-----
-
-
-### 4. Instructor Do (30 minutes)
+### 3. Instructor Do (25 minutes)
 
 * Progressive Enhancement vs Graceful Degradation
 * CSS Refinement
@@ -81,10 +56,34 @@ ALL or they won't be able to do the homework.
 * colors, kuler
 
 
+### 4. Student Do (25 minutes)
 
-### 5. Student Do (30 minutes)
+* refactor code
 
-* SASS
+----
+###### Break (40 minutes) 150 minutes went by including break
+----
+
+
+### 5. Instructor Do (30 minutes)
+
+* Bootstrap Overview
+* Grid system basics
+
+
+### 6. Student Do (30 minutes)
+
+* Make a new repo called `Bootstrap`
+* Make a fixed grid
+
+
+### 7. Partner Do (30 minutes)
+
+* pull partners repo
+* make a new branch
+* make the grid fixed with a few other changes
+* make a pull request
+
 
 ----
 # Copyright
