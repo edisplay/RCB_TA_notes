@@ -33,11 +33,11 @@ USE burgers_db;
 
 CREATE TABLE burgers
 (
-ID int NOT NULL AUTO_INCREMENT,
+id int NOT NULL AUTO_INCREMENT,
 burger_name varchar(255) NOT NULL,
 devoured BOOL,
 date TIMESTAMP,
-PRIMARY KEY (ID)
+PRIMARY KEY (id)
 );
 
 SHOW COLUMNS from burgers;

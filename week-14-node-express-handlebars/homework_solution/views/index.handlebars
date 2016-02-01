@@ -9,13 +9,13 @@
 			  {{#each col}}
 			  	{{#unless this.devoured}}
 				<div class="col-xs-9 text-center">
-					<pre>{{this.ID}}. {{this.burger_name}}
+					<pre>{{this.id}}. {{this.burger_name}}
 					</pre>
 				  		<!-- {{this.Date}} -->
 				</div>
 				<div class="col-xs-3 text-center">
 					<form method="POST" action="/mySubmit?_method=PUT" class="button-size">
-						<input input type="hidden" type="text" name="todo_id" value={{this.ID}}><br>
+						<input input type="hidden" type="text" name="todo_id" value={{this.id}}><br>
 						<button type="submit" class="btn btn-default">Devoured!</button>
 					</form>
 				</div>
@@ -26,7 +26,7 @@
 		<div class="col-xs-6 text-center" class="task">
 			  {{#each col}}
 			  	{{#if this.devoured}}
-			  		<input class="form-control" type="text" placeholder="{{this.ID}} . {{this.burger_name}}" readonly>
+			  		<input class="form-control" type="text" placeholder="{{this.id}} . {{this.burger_name}}" readonly>
 				{{/if}}
 			  {{/each}}
 		</div>
