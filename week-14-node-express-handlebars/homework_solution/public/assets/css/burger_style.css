@@ -1,7 +1,7 @@
 body {
   width: 99%;
   height: 900px;
-  background-color: white;
+  background-color: #ffcc66;
 }
 #top-bar {
 	margin-top: 28px;
@@ -55,4 +55,8 @@ body {
 #text-enter-button {
 	margin-top: 10px;
 	margin-bottom: 18px;
+}
+
+h1 {
+  color: #ff3300;
 }
