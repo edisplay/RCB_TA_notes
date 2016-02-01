@@ -85,5 +85,3 @@ function getPath( nodes, queue, start, finish ){
 
   return path;
 }
-
-

@@ -1,6 +1,6 @@
 //http://dstromberg.com/2013/07/tutorial-random-maze-generation-algorithm-in-javascript/
 
-function maze( length, height ){
+function maze( height, length ){
 
   var cells = [];
 
@@ -10,7 +10,7 @@ function maze( length, height ){
 
     for( var j = 0; j< length; j++ ){
       temp_array.push({
-        location : { length: j, height: i },
+        location : { height: i, length: j },
         visited : 0,
         neighbors : [],
         daed_end : 0
@@ -21,12 +21,10 @@ function maze( length, height ){
 
   }
 
-
-  //get a random starting cell
-  var startingCell = cells[Math.floor(Math.random()*height)][Math.floor(Math.random()*length)];
+  var startingCell = cells[0][0];
 
   //setup default values
-  var total_cells = length * height;
+  var total_cells = height * length;
   var path = [];
 
   var currentCell = startingCell;
@@ -37,11 +35,6 @@ function maze( length, height ){
 
   //while we have nodes left to visit
   while( total_cells > total_visited ){
-
-    if( currentCell === undefined ){
-      debugger;
-
-    }
 
     var nextCell = getRandomNeighbor( cells, currentCell, height, length );
 
@@ -64,13 +57,6 @@ function maze( length, height ){
         cells[currentHeight][currentLength].neighbors.push( nextCell );;
       }
 
-
-      if( cells[nextCell[0]][nextCell[1]] === undefined ){
-
-        debugger;
-
-      }
-
       currentCell = cells[nextCell[0]][nextCell[1]];
       path.push( currentCell );
 
@@ -79,15 +65,12 @@ function maze( length, height ){
 
       //if we couldn't find a valid neighbor, go back one square
 
-      if( path[ path.length -1 ] === undefined ){
-        debugger;
-      }
       currentCell = path.pop();
     }
 
   }
 
-  return { cells: cells, start : startingCell, last : path.pop(), path : path };
+  return cells;
 }
 
 function findNextCell( ){
@@ -177,12 +160,6 @@ function getRandomNeighbor( cells, currentCell, height, length ){
 
   var neighbors = [ up_neighbor, down_neighbor, left_neighbor, right_neighbor ];
 
-  if( up_neighbor == null && down_neighbor == null && left_neighbor == null && right_neighbor ==null ){
-
-
-    //debugger;
-  }
-
   return getRandomIndex( neighbors );
 }
 
@@ -227,10 +204,8 @@ function cleanGraph( graph ){
   return newGraph;
 }
 
-function buildMaze( m ){
-  var start = m.start;
-  var last   = m.last ;
-  var maze = m.cells;
+function buildMaze( m, start, last ){
+  var maze = m;
 
   var table = document.querySelector("#maze");
 
@@ -244,12 +219,12 @@ function buildMaze( m ){
       //create a square
       var td = document.createElement("td");
 
-      if( i == start.location.height && j == start.location.length ){
+      if( i == start[0] && j == start[1] ){
         td.style.backgroundColor = "#e6c6c6";
 
       }
 
-      if( i == last .location.height && j == last .location.length ){
+      if( i == last[0] && j == last[1] ){
         td.style.backgroundColor = "#b2d5ff";
       }
 
@@ -377,6 +352,8 @@ function displayPath( path ){
 
         var td = document.querySelector('#'+id);
 
+        td.innerHtml = "";
+
         var t = document.createTextNode("\u2022");
         td.appendChild( t );
 
@@ -405,16 +382,23 @@ function displayPath( path ){
  *
  */
 
-var m = maze( 20, 20 );
+var height = 30;
+var length = 30;
 
-buildMaze( m );
+var m = maze( height, length );
 
-//var path = cleanGraph( m.cells, [m.start.location.height, m.start.location.length], [m.last.location.height, m.last.location.length] );
-var path = solve( m.cells, [m.start.location.height, m.start.location.length], [m.last.location.height, m.last.location.length] );
+var start = [0,0];
+var finish = [Math.floor(Math.random()*height),Math.floor(Math.random()*length)];
 
-setTimeout( function(){
-  displayPath( path );
+var path = solve( m, start, finish );
 
-}, 400 );
+//do DOM stuff
+window.onload = function(){
 
+  buildMaze( m, start, finish );
 
+  setTimeout( function(){
+    displayPath( path );
+  }, 400 );
+
+}
