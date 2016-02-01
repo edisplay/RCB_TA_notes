@@ -100,7 +100,7 @@ ctrl+j
 
 >How will this look different in the browser? Discuss with your partners
 
-### 5. Everyone do (5 minutes)
+### 6. Everyone do (5 minutes)
 
 * *Go around the room until you get the answer you want*
         * It won't look different.
@@ -113,7 +113,7 @@ ctrl+j
 ----
 ###### 75 minutes so far
 
-### 6. Instructor Do (25 minutes)
+### 7. Instructor Do (25 minutes)
 
 * *Discuss what a doctype is and why it is important*
 * *Explain indentation and syntax e.g. open and closing tags, self closing tags, double quotations (never single quotes)*
@@ -267,7 +267,7 @@ ctrl+j
     + `<!-- comment -->` 
             + In Sublime text you can type `command + /` on the line or a selected section to comment it out
 
-### 6. Student Do (20 minutes)
+### 8. Student Do (20 minutes)
 * *Show [this html file](in-class-exercises-1.2/1.2.6-in-class-exercise.html){:target="_blank"} on the projector. It is what the students must code out in this exercise.*
 
 * *Slack this out*
@@ -297,7 +297,7 @@ ctrl+j
 * Stage, commit, and push to github
 
 
-### 7. Partner Do (10 minutes)
+### 9. Partner Do (10 minutes)
 
 * Share your Github code with your partner
 * Take your partners code and validate it using https://validator.w3.org/#validate_by_input
@@ -305,7 +305,7 @@ ctrl+j
 
 ----
 
-### 8. Instructor Do (20 minutes)
+### 10. Instructor Do (20 minutes)
 
 + Discuss CSS
     + What is CSS
@@ -337,7 +337,7 @@ ctrl+j
 
 
 
-### 9. Student Do (20 minutes)
+### 11. Student Do (20 minutes)
 
 * *Show [this html file](in-class-exercises-1.2/1.2.9-in-class-exercise.html){:target="_blank"} on the projector. It is what the students must code out in the next exercise.*
 
@@ -385,7 +385,7 @@ ctrl+j
 * If your forgot how to write the css properties, you can reference all css properties here https://developer.mozilla.org/en-US/docs/Web/CSS/Reference
 * Stage, commit, and push this new file to Github
 
-### 10. Partner Do (10 minutes)
+### 12. Partner Do (10 minutes)
 
 * *Slack the following to students*
 
@@ -394,4 +394,4 @@ ctrl+j
 * Compare work and discuss with partner to see how similar your code is. If not the same, work together to make it the same and valid and discuss.
 
 # Copyright
-Rutgers Coding Boot Camp (C) 2015. All Rights Reserved.
+Coding Boot Camp (C) 2015. All Rights Reserved.

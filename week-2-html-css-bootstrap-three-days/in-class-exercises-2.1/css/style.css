@@ -1,0 +1,50 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+	background-color: #f1f1f1;
+}
+
+header#main-header {
+	background-color: #ddd;
+	margin-bottom: 30px;
+	min-height: 100px;
+}
+
+.wrapper {
+	width: 1024px;
+	margin: 0 auto;
+}
+
+#main-content {
+	background-color: #ddd;
+	float: left;
+	width: 60%;
+	padding: 30px;
+}
+
+#sidebar {
+	background-color: #ddd;
+	float: right;
+	width: 35%;
+	padding: 30px;
+}
+
+/*exercise two*/
+
+#logo {
+	height: 100px;
+	width: 400px;
+}
+
+/*exercise three*/
+body {
+	font-family: 'Merriweather', serif;
+}
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Noto Sans', sans-serif;
+}
+h1 {
+	font-size: 30px;
+}

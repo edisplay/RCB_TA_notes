@@ -18,71 +18,54 @@ Look at this file at the root of the repository:
 
 
 # Theme
-HTML / CSS
+HTML, CSS, Github, Heroku
 
 # INSTRUCTOR MUST COVER!!!
 
 ```
-ALL or they won't be able to do the homework.
+1-15
 ```
 
 # Objectives (Slack out to students, have unique students read each one and Instructor makes a comment after each one being read)
 
 * Students will open up Chrome DevTools and use Inspector.
-* Students will learn more advanced CSS styling to make more beautiful web pages
+* Students will use advanced CSS styling to make beautiful web pages
 * Students will understand the html box-model and how it impacts CSS styling
-* Students will be able to make multi-column websites
-* Students will learn how to use Heroku and deploy their code to it
+* Students will make multi-column websites
+* Students will use Heroku and deploy their code to it
 
 ----
 
 ### 1. Instructor Do (5 minutes)
 
-+ Recap last class
++ *Recap last class*
     + Went over HTML and CSS.
     + Students created a `student-bio.html` page
 
 
-### 2. Everyone Do (5 minutes)
+### 2. Everyone Do (10 minutes)
 
-* Open up last weeks `student-bio.html` file in Google Chrome
-* Right click anywhere on the page and select "Inspect". This is Chrome Developer Tools.
-* Look at the `Elements` tab specifically and hover over the various HTML elements and  watch it highlight to it's corresponding rendered part in the page.
+* *Instructor does this while the students do this*
+
+> Open up last lesson's `student-bio.html` file in Google Chrome
+
+> Right click anywhere on the page and select "Inspect". This is Chrome Developer Tools.
+
+> Look at the `Elements` tab specifically and hover over the various HTML elements and  watch it highlight to it's corresponding rendered part in the page.
 
 
-### 3. Instructor Do (10 minutes)
+### 3. Instructor Do (15 minutes)
 
-* Explain Inspector
-    + There are 8 Main Panels
-        + Elements
+* ***PLEASE DO NOT DRONE ON ABOUT EACH PART OF INSPECTOR! Only discuss the Elements panel.***
+
+* *Explain Inspector*
+    + There are 8 Main Panels, but Elements is all we will use for now
+        + "Elements" is the main panel you will be using in todays class and next week. It is what you use to view and make quick on the fly changes to your html and css
             + This is the panel you use to examine your HTML
             + This lets you see everything in one DOM tree
             + Lets you edit your HTML on the fly to test things out
             + [reference](https://developer.chrome.com/devtools/docs/dom-and-styles){:target="_blank"}
-        + Console 
-            + You use this for Javascript.
-            + Console will be discussed later on when it is more relevant to the course
-            + [reference](https://developer.chrome.com/devtools/docs/console){:target="_blank"}
-        + Sources
-            + You use for Javascript.
-            + Sources will be discussed later on when it is more relevant to the course
-        + Network
-            + This panel records information about each network operation in your application, including detailed timing data, HTTP request and response headers, cookies, WebSocket data, and more. The Network panel helps you answer questions about the network performance of your web application
-            + Network will be discussed later on when it is more relevant to the course
-            + [reference](https://developer.chrome.com/devtools/docs/network){:target="_blank"}
-        + Timeline
-            + The Timeline panel lets you record and analyze all the activity in your application as it runs. It's the best place to start investigating perceived performance issues in your application.
-            + Timeline will be discussed later on when it is more relevant to the course
-            + [reference](https://developer.chrome.com/devtools/docs/timeline){:target="_blank"}
-        + Profiles
-            + The Profiles panel lets you profile the execution time and memory usage of a web app or page
-            + Profiles will be discussed later on when it is more relevant to the course
-            + [reference](https://developer.chrome.com/devtools/docs/profiles){:target="_blank"}
-        + Audits
-            + The Audit panel can analyze a page as it loads.
-            + Audits will be discussed later on when it is more relevant to the course
 
-  + "Elements" is the main panel you will be using in todays class and next week. It is what you use to view and make quick on the fly changes to your html and css
 
   + On the right side panel there is information pertaining to your CSS
       + Styles
@@ -92,63 +75,65 @@ ALL or they won't be able to do the homework.
       + Computed
           + This shows how the browser is interpreting the element you have selected in the Elements panel
 
-  + *Instructor - Do some samples of you editing [the student-bio.html page](in-class-exercises-1.2/1.2.9-in-class-exercise.html){:target="_blank"} using Inspector*
+  + *Instructor - Change the styling of the page via the left and right part of the elements tab of inspector [the student-bio.html page](in-class-exercises-1.2/1.2.9-in-class-exercise.html){:target="_blank"} using Inspector*
     + Change some text
     + Change some styling
 
-### 4. Student Do (5 minutes)
+### 4. Student Do (10 minutes)
 
-1. Highilight the `<div class="container">` element in the Elements panel
+1. Highlight the `<div class="container">` element in the Elements panel
 2. In the Styles side panel, change the width from `1024px` to `600px`
     * Observe what happens
 3. In the Elements panel, highlight the `<h1>` tag. Right click and select "Edit Text" OR you can double click on the text to edit it. Change the text to say "My Biography". Press "enter" to finalize your changes or mouse click away.
     * Observe what happens
 
 * Bonus:
-    * Make a new `section` tag with an id of `#new` using Inspector
+    * Using Inspector, make a new `section` tag with an id of `#new`
     * Make your new section tag appear just below the #contact-info section
     * Now make it appear below both #main-bio and #contact-info
     * Make it have a `background-color` of red
 
 ----
 
-### 5. Instructor Do (20 minutes)
+### 5. Instructor Do (5 minutes)
+
+* ***reminder to instructor: commit and push your code to your in class code repository***
+
+* *Demonstrate these one at a time to the students on a single html page. DO NOT CODE ALL OF IT AND THEN SHOW IT. Code a little bit, show it to the students, explain it.*
+
+* *** DO NOT DRONE ON ABOUT THESE CONCEPTS. Talk about them at a high level to the class.***
+
+* *Slack these out to the students*
 
 * Discuss CSS in more detail
   + Concepts
     + block vs inline vs inline-block
         + Block elements:
             + A block-level element occupies the entire width of its parent element (container), thereby creating a "block." Nothing can go next to this element.
-            + `<div></div>`
-            + `h1-h6`
-            + `<p></p>`
-            + `<form></form>`
-            + `<ul><li></li></ul>` and `<ol><li></li></ol>`
-            + `<table></table>`
-            + `<header></header>`
-            + `<nav></nav>`
-            + `<footer></footer>`
-            + [view more block elements](https://developer.mozilla.org/en-US/docs/Web/HTML/Block-level_elements){:target="_blank"}
+            + Examples of block elements
+                + `<div></div>`
+                + `h1-h6`
+                + `<p></p>`
+                + `<form></form>`
+                + `<ul><li></li></ul>` and `<ol><li></li></ol>`
+                + `<table></table>`
+                + `<header></header>`
+                + `<nav></nav>`
+                + `<footer></footer>`
+                + [view more block elements](https://developer.mozilla.org/en-US/docs/Web/HTML/Block-level_elements){:target="_blank"}
         + Inline elements:
             + An inline element occupies only the space bounded by the tags that define the inline element. Other inline elements can go next to inline elements.
             + padding top/bottom and margin top/bottom DO NOT work on inline elements
-            + `<span></span>`
-            + `<a href="http://www.google.com">Google</a>`
-            + [view more inline elements](https://developer.mozilla.org/en-US/docs/Web/HTML/Inline_elements){:target="_blank"}
+            + Examples of inline elements
+                + `<span></span>`
+                + `<a href="http://www.google.com">Google</a>`
+                + [view more inline elements](https://developer.mozilla.org/en-US/docs/Web/HTML/Inline_elements){:target="_blank"}
         + Inline-block elements:
-            + padding top/bottom and margin top/bottom DO   work on inline elements, but content from other inline or inline-block elements can rest beside them. Therefore, they are a combination of inline and block, hence inline-block
-            + `<img>`
-            + `<input type="text">`
-            + `<textarea></textarea>`
-    
-    + CSS Box Model
-        + The CSS box model is essentially a box that wraps around every HTML element. It consists of: margins, borders, padding, and the actual content.
-        
-        + *Instructor - open this [box model example](css-box-model-visual.html){:target="_blank"} on the projector*
-
-    + padding, margins, borders
-        + Writing shorthand for margin and padding is clockwise (top, right, bottom, left e.g. `padding: 20px 30px 20px 30px`). If there are only 3 values, then the last value (left), assumes the same value as the right side. If there are 2 values, the first two apply to top and bottom, the second two apply to left and right. If there is only one value, it applies to all sides. Or you can write just one side at a time like `padding-right: 20px`
-
+            + Padding top/bottom and margin top/bottom DO   work on inline elements, but content from other inline or inline-block elements can rest beside them. Therefore, they are a combination of inline and block, hence inline-block
+            + Examples of inline block elements
+                + `<img>`
+                + `<input type="text">`
+                + `<textarea></textarea>`
     + CSS display property
         + `display: block`
         + `display: inline`
@@ -156,7 +141,37 @@ ALL or they won't be able to do the homework.
         + `display: none`
 
 
-### 6. Student Do (5 minutes)
+### 6. Instructor Do (10 minutes)
+
+* *[Open this file that shows these block elements to the students](in-class-exercises-1.3/element-examples.html)*
+    1. *open up the file in sublime text and open up the file in the browser - split your screen*
+    2. *move the block elements around show how they take up the full width of the page, so whatever element comes after them moves beneath them*
+    3. *move the inline elements around to show how they stack next to each other because they don't take the full width of the page*
+    4. *show how the inline-block and block elements can have padding and margins on the top and bottom BUT inline can not.*
+
+### 7. Instructor Do (10 minutes)
+
++ CSS Box Model
+
+*Instructor - open this [box model example](in-class-exercises-1.3/css-box-model-visual.html){:target="_blank"} on the projector*
+
+> The CSS box model is essentially a box that wraps around every HTML element. It consists of: margins, borders, padding, and the actual content.
+    
+
++ Padding, margins, borders
+
+> Writing shorthand for margin and padding is clockwise (top, right, bottom, left e.g. `padding: 20px 30px 20px 30px`). 
+
+> If there are only 3 values, then the last value (left), assumes the same value as the right side. 
+
+> If there are 2 values, the first two apply to top and bottom, the second two apply to left and right. 
+
+> If there is only one value, it applies to all sides. 
+
+> Or you can write just one side at a time like `padding-right: 20px`
+
+
+### 8. Student Do (5 minutes)
 
 * *Instructor - Show [this html file](in-class-exercises-1.3/box.html){:target="_blank"} on the projector. It is what the students must see.*
 
@@ -181,7 +196,7 @@ ALL or they won't be able to do the homework.
 * Remember: the border values apply to all 4 sides
 
 
-### 7. Instructor Do (5 minutes)
+### 9. Instructor Do (5 minutes)
 
 Answer to previous exercise: The blue #box is 554 pixels wide, and 569 pixels tall
 
@@ -201,18 +216,26 @@ Pro-tip: Use the above snippet have the padding and border included in the eleme
 }
 ```
 
-### 7. Instructor Do (15 minutes)
+### 10. Instructor Do (5 minutes)
 
-+ Browser rendering for CSS and how it is different in each browser
-    + CSS styles for Webkit (Chrome and Safari) http://stackoverflow.com/questions/6867254/browsers-default-css-for-html-elements
-    + CSS Styles for Firefox http://mxr.mozilla.org/mozilla-central/source/layout/style/html.css
+* *Talk about how browser rendering for CSS and how it is different in each browser*
+    + Refer to these resources to learn what to talk about
+        + CSS styles for Webkit (Chrome and Safari) http://stackoverflow.com/questions/6867254/browsers-default-css-for-html-elements
+        + CSS Styles for Firefox http://mxr.mozilla.org/mozilla-central/source/layout/style/html.css
     
-+ CSS Resets (http://meyerweb.com/eric/tools/css/reset/)
-    + CSS resets make styling more consistent across browsers
-    + You reference a css file before you reference your own style sheet, because of the order that CSS renders (remember that whatever CSS is closest to the element is the most dominant, you want your own styling to be more dominant than the reset file)
+* *Talk about CSS Resets* (http://meyerweb.com/eric/tools/css/reset/)
+
+> CSS resets make styling more consistent across browsers
+
+> You reference a css file before you reference your own style sheet, because of the order that CSS renders (remember that whatever CSS is closest to the element is the most dominant, you want your own styling to be more dominant than the reset file)
+
+
+#### 11. Instructor do (10 minutes)
 
 + Styling properties
-  
+    
+    + *Instructor - use [this html file](in-class-exercises-1.3/floats.html){:target="_blank"} example on the screen. Use inspector, comment and uncomment the overflow property on `#full`, and the clear on the footer. Show how they do similar things and what happens when they aren't there.*
+
     + floats
         + The float CSS property specifies that an element should be taken from the normal flow and placed along the left or right side of its container, where text and inline elements will wrap around it. [reference](https://developer.mozilla.org/en-US/docs/Web/CSS/float){:target="_blank"}
             + `float: left`
@@ -225,11 +248,9 @@ Pro-tip: Use the above snippet have the padding and border included in the eleme
     + overflow
         + `overflow: auto` on the parent element will contain the floats
 
-  + *Instructor - use [this html file](in-class-exercises-1.3/floats.html){:target="_blank"} example on the screen  simply comment and uncomment the overflow property on `#full`, and the clear on the footer. Show how they do similar things and what happens when they aren't there.*
+### 12. Student Do (15 minutes)
 
-### 8. Student Do (15 minutes)
-
-* *Instructor - Show [this html file](in-class-exercises-1.3/floats.html){:target="_blank"} on the projector. It is what the students must code out in the next exercise.*
+* *Instructor - Show [this html file](in-class-exercises-1.3/floats.html){:target="_blank"} on the projector. It is what the students must code out in this exercise.*
 
 * *Slack this out*
 
@@ -260,21 +281,21 @@ Pro-tip: Use the above snippet have the padding and border included in the eleme
 * Bonus:
     + Make it so the div doesnt extend behind the aside tag
 
-### 9. Partner Do (10 minutes)
+### 13. Partner Do (10 minutes)
 
 * Share your Github code with your partner
 * Take your partners code and validate it using https://validator.w3.org/#validate_by_input AND http://www.css-validator.org/#validate_by_input
 * Compare work and discuss with partner to see how similar your code is. If not the same, work together to make it the same and valid and discuss.
 
 ----
-#### Break (15 minutes)
+#### Break (40 minutes)
 
 ----
-###### 110 minutes so far
+###### 165 minutes so far including break
 
 ----
 
-### 10. Instructor Do (10 minutes)
+### 14. Instructor Do (10 minutes)
 
 * Discuss CSS positioning
     + absolute, relative, fixed, static
@@ -291,7 +312,7 @@ Pro-tip: Use the above snippet have the padding and border included in the eleme
 * *Instructor - Show [this html file](in-class-exercises-1.3/positioning.html){:target="_blank"} on the projector. It is what the students must code out in the next exercise.*
 
 
-### 11. Student Do (15 minutes)
+### 15. Student Do (15 minutes)
 
 * *Show [this html file](in-class-exercises-1.3/positioning.html){:target="_blank"} on the projector. It is what the students must code out in the next exercise.*
 
@@ -305,7 +326,11 @@ Pro-tip: Use the above snippet have the padding and border included in the eleme
 * Grab 5 paragraphs worth of lorem ipsum text http://www.lipsum.com/feed/html. You need to make this page scroll to see how the fixed position element behaves.
 * Stage, commit, and push to github
 
-### 12. Partner Do (10 minutes)
+
+# If there is time left over - there should be
+
+
+### 16. Partner Do (10 minutes)
 
 * Share your Github code with your partner
 * Take your partners code and validate it using https://validator.w3.org/#validate_by_input AND http://www.css-validator.org/#validate_by_input
@@ -313,14 +338,63 @@ Pro-tip: Use the above snippet have the padding and border included in the eleme
  
 ----
 
-### 13. Instructor Do (20 minutes)
+### 17. Instructor Do (20 minutes)
 
-* Heroku setup
+* *Slack this to class and go over the steps to the class*
 
-### 14. Student Do (20 minutes)
+* Heroku setup (steps as of 1/30/16)
+
+1. Go to the folder you want to host. 
+
+2. Make sure that you have the following files in your folder:
+
+composer.json that only has this inside of it:
+```
+{}
+```
+
+index.php that only has this inside of it (please remove the angle brackets inside the quotes)
+
+```
+<?php include_once("<filename of your html file with the extension>"); ?>
+```
+
+3. Make sure you push up everything to your github repository. Make sure the only files you are pushing up are the html, css, images, composer.json and index.php files. No extra files!
+
+4. Check if you have heroku
+
+run this command in your terminal
+
+`heroku`
+
+5. download the heroku toolbelt and install it
+
+https://toolbelt.heroku.com/
+
+6. in terminal run this command and login with your heroku credentials
+
+`heroku login`
+
+7. `git remote -v`
+
+notice the remotes
+
+8. `heroku create`
+
+9. `git remote -v`
+
+notice the remotes now
+
+10. `git push heroku master`
+
+push up your master branch from your github repository to heroku
+
+you'll see the url to your heroku link in the terminal after pushing to heroku, visit it!
+
+### 18. Student Do (20 minutes)
 
 * Setup Heroku
-* push all code in github to heroku
+* push one of your html creations to heroku using the above steps.
 
 # Copyright
-Rutgers Coding Boot Camp (C) 2015. All Rights Reserved.
+Coding Boot Camp (C) 2015. All Rights Reserved.

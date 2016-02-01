@@ -196,8 +196,6 @@ var bearData = [
 
 ###### 75 minutes have passed
 
-*** ZHEN and Pavan need to update objectives at the top and the INSTRUCTOR MUST COVER!!! section when finished ***
-*** ZHEN And PAVAN approve of above ***
 
 ### 5. Instructor do (10 minutes)
 
@@ -228,7 +226,6 @@ prompt.get(['Say_anything'], function(err, result) {
 
 show that a prompt can take in multiple inputs.
 
-* *Make sure to use nodemon for the following demo*
 ```
 prompt.get(['year','month','day'], function(err, result) {
   console.log("The date you entered is " + result.month + "/" + result.day + "/" + result.year );
@@ -241,11 +238,11 @@ prompt.get(['year','month','day'], function(err, result) {
 
 ### 8. Students do (20 minutes)
 
-Introduce the exercise:simple prompt
-
-The FBI needs an app to take eye witness reports of UFO sighting, you will be creating a node.js app to help the FBI make reports.
+Introduce the exercise: simple prompt
 
 * *Copy the following instructions below and paste it in slack, and have students work on it*
+
+The FBI needs an app to take eye witness reports of UFO sighting, you will be creating a node.js app to help the FBI make reports.
 
 When the app is run, the user will get a briefing with console logs.
 The app will start by console logging these messages each on their own lines:
@@ -254,37 +251,6 @@ The app will start by console logging these messages each on their own lines:
   "Hi,I'm from the FBI (X-files Division) I just wanted to ask you some questions."
   "Please answer the following questions as best you can, but if can't answer the question please say NOT SURE."
   "What is..."
-```
-
-* After these messages are been displayed, propmpt the user for their: 
-  * first name
-  * last name
-  * age
-  * time of sighting
-  * location of sighting
-  * name of another witness
-  * description of sighting
-  * initail thoughts
-  * number of previous encounters
-  * current drug use habit.
-
-* You must create a report conclusion depending on the answer you get from the user.
-  * If 8 or more answers are "NOT SURE" in the report, console log conclusion is Very Unreliable.
-  * If 5 or more answers are "NOT SURE" the report, console log conclusion is Unreliable.
-  * If only 2 or less answer are "NOT SURE" the report, console log conclusionis Complete.
-
-Once the user has made an input for all of the questions, concatenate all the answers and your conculsion into one paragraph and console log it to the terminal in the following format, see example below.
-
-```
-FBI aliens sighitng report:
-
-Eye witness name is Bob Johnson at age: 56
-According to eye witness sighting happened sometime around 8PM-ish near Burbank
-Another possible witness include a person by the name: NOT SURE
-The sighting is described as: Some monster thingy and the witness's initial thoughts are: WOAH MAN!
-This is the witness: 11 or 12th encounter, current drug use habit is None
-
-Report conclusion: Complete
 ```
 
 Instructions:
@@ -297,8 +263,36 @@ Instructions:
   6. Call `makeReport()` when you finishing building the function
 
 
-##### Make sure to use nodemon for this app
-  * *If students are still unclear demo the app infront of the class from lesson-12.3-sol*
+* After these messages are been displayed, prompt the user for their: 
+  * first name
+  * last name
+  * age
+  * time of sighting
+  * location of sighting
+  * name of another witness
+  * description of sighting
+  * initial thoughts
+  * number of previous encounters
+
+      * You must create a report with the answers you get from the user.
+        * If 7 or more answers are not answered in the report, console log conclusion is Very Unreliable.
+        * If 4 or more answers are not answered the report, console log conclusion is Unreliable.
+        * If only 2 or less answer are not answered the report, console log conclusion is Complete.
+
+Once the user has made an input for all of the questions, concatenate all the answers and your conclusion into one paragraph and console log it to the terminal in the following format, see example below.
+
+```
+FBI aliens sighting report:
+
+Eye witness name is Bob Johnson at age: 56
+According to eye witness sighting happened sometime around 8PM-ish near Burbank
+Another possible witness includes a person by the name of Alice
+The sighting is described as: Some monster thingy and the witness's initial thoughts are: WOAH MAN!
+This is the witness's 11th encounter
+
+Report conclusion: Complete
+```
+
 
 ### 9. Everyone Do (10 minutes)
 
@@ -309,7 +303,7 @@ Instructions:
 ### 10. BREAK ( 40 minutes )
 --------- --------- ---------
 
-### 11. Partners do: ( 5 minutes ) 
+### 11. Partners do: ( 15 minutes ) 
 
 * Russian nesting doll Demo *
 This demo will show how scope is lost during multiple nested prompt functions.
@@ -378,7 +372,7 @@ var russianDoll = {
 
 russianDoll.start();
 ```
-### 12. Instructor do: ( 5 minutes ) 
+### 12. Instructor do: ( 25 minutes ) 
 
 Explain why `self` is used, because the `prompt` function loses scope when another function is called inside of it.
 
@@ -432,6 +426,8 @@ var russianDoll = {
 
 russianDoll.start();
 ```
+
+# EXTRA STUFF
 
 ### 13. Instructor do: ( 10 minutes ) 
 

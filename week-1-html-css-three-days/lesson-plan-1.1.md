@@ -32,18 +32,23 @@ ALL or they won't be able to do the homework.
 * Students will use common Terminal (Mac) / Git Bash (Windows) commands for web development.
 * Students will set up a basic HTML document.
 
-----
+### 1.1. Introduction (35 minutes max)
 
-### 1. Instructor Do (30 minutes)
+* *Let the speakers know how much time they have left in intervals of 10 minutes, and 5 minutes near the end*
+
+* *Instructor + TAs take a seat and relax*
+
+* *University, Program Director, Student Services Director, Career Director chime in for an introduction to the students*
+
+### 1.2 Instructor Do (10 minutes)
 * Welcome all the students to the class. 
 * Slack out the objectives to the students, have unique students read each one and then you make a comment after each one is read
 * Introduce yourself, the TA's, and Support Team (Dan S, Student Success, Career Coach)
 
-
 ### 2. Partners Do (5 minutes)
-+ Have the students get into groups of 4 or 5 and talk within their groups about 1 bad movie they last watched and 1 interest.
++ Have the students get into groups of 4 or 5 and spend 30 seconds each talking about 1 bad movie they last watched and 1 interest they have.
 
-### 3. Everyone do (10 minutes)
+### 3. Everyone do (15 minutes)
 + Go around the room to each group 
 
 * Have all the students give a quick intro consisting of:
@@ -53,9 +58,7 @@ ALL or they won't be able to do the homework.
     + Where they come from geographically.
 
 
-----
-
-### 2. Instructor Do (10 minutes)
+### 2. Instructor Do (5 minutes)
 
 * Quickly go over this - don't rant on every single technology - if students have questions direct them to the parking lot
 
@@ -103,7 +106,8 @@ ALL or they won't be able to do the homework.
     + Design Patterns
 ```
 
-### 3. Instructor do (10 minutes)
+### 3. Instructor do (5 minutes)
+
 * Discuss what the daily class structure will consist of:
   + Brief Introduction/Background to Objectives for the day
   + Quick Watch Me / Demonstration
@@ -125,20 +129,33 @@ ALL or they won't be able to do the homework.
         + Full Stack Project (server + database + front end)
 
 
-### 4. Instructor Do (20 minutes)
-* Google timer, set it to 20 minutes, put your volume up
+### 4. Instructor Do (5 minutes)
+* Google timer, set it to 5 minutes, put your volume up
 
 * Engage the students to see who has any pre-work issues.
-* TA's and Instructors will assist those students who need help (WiFi connection, Sublime Text, etc.).
 
-* If there are still issues, let students know that you and TAs are available for 30 minutes after class and 45 minutes before the next class
-----
+> Everyone open up Sublime Text on their computer. If you don't have it, then start downloading it and installing it now.
 
-----
-###### Break (15 minutes) 100 minutes went by including break
-----
+> Everyone either go to terminal or git bash and run this command:
 
-### 5. Instructor do (15 minutes)
+```git```
+
+> If it worked then git is installed on your computer
+
+> If it doesn't, then please stay after class for 30 minutes to get git installed. Or come to office hours 45 minutes before the next class and get your issues fixed.
+
+> The rest of the programs can be installed and downloaded during office hours before or after class with instructors and TAs
+
+* *TA's and Instructors assist students who need help (WiFi connection, Sublime Text, etc.).*
+
+* *If there are still issues, let students know that you and TAs are available for 30 minutes after class and 45 minutes before the next class*
+
+
+
+###### Break (15 minutes) 95 minutes went by including break
+
+
+### 5. Instructor do (10 minutes)
 
 * Point out to students that they should be storing all their code in one folder that's easily accessible.
 
@@ -147,6 +164,22 @@ ALL or they won't be able to do the homework.
 > Practice when you get home.
 
 * *When done going over these, slack out the below commands to the students* 
+
+* *Open up the terminal*
+
+> The terminal is an alternative way to use your computer.  
+
+> Why use it, when you can do everything the way you normally use your computer?
+
+> Because 
+
+> * it's not easy to see hidden files when clicking through folders
+
+> * you'll have to use the terminal or git bash to deploy your website to heroku. 
+
+> * You'll have to use the terminal/git bash when installing and running node apps. 
+
+> So we might as well get started now!
 
 * Run the following commands while having the finder window open to show the files being created
 
@@ -161,7 +194,7 @@ ALL or they won't be able to do the homework.
         + `mkdir folder_name`
     * create a new html file.
         + `touch my-first-example-page.html`
-    * delete a file
+    * delete a file and show auto complete with tab
         + `rm my-first-example-page.html`
     * delete a folder
         + `rm -r folder_name`
@@ -170,22 +203,16 @@ ALL or they won't be able to do the homework.
         + `ls -a` - list all files, even hidden ones without filenames
         + `ls -la` - list all files and permissions in a list format
 
-* *if you don't have a mac then talk about these commands*
-
 * Mac specific commands
     * `open .`
         + opens the current folder you are at in finder
     * `open <file name>`
         + open a specific file
 
-> Why do these commands when you can do it in the file system? Because you'll have to use the terminal or git bash to deploy your website to heroku or to use node - so we might as well start now
-
 * *When done going over these, slack out the above commands to the students* 
 
-----
-
 ### 6. Student do (10 minutes)
-* SLACK THE FOLLOWING to the students, call on students to read it to the class LOUD, google timer, set it to 10 minutes and start it, make sure your computer volume is up so the alarm goes off: 
+* SLACK THE FOLLOWING to the students, call on students to read it to the class LOUD, google the word timer, set it to 10 minutes and start it, make sure your computer volume is up so the alarm goes off: 
 
 * From the Terminal/Console and using only the command line, create the following:
     * A new folder with the name of first_day_stuff
@@ -196,21 +223,22 @@ ALL or they won't be able to do the homework.
     * Create multiple directories/folders with the names `one_folder` and `second_folder` in one command.
     * Create multiple files with the names `one.html` and `two.html` in one command in the first_day_stuff directory.
 
-----
-
 ### 7. Student do (5 minutes)
-> Discuss with the person next to you what you just did.
+> Discuss with the person next to you how to make and remove files and folders.
 
 > You are responsible for the people around you understanding what just happened.
 
 > Everyone you should be talking now. Turn to your partners and talk.
 
-----
 
 ### 8. Everyone do (5 minutes)
 * *briefly call on one person to go over the previous exercise*
 
-### 9. Instructor Do (15 minutes)
+### 9. Instructor Do (20 minutes)
+
+* ***AFTER CODING A LITTLE BIT. STOP AND SHOW WHAT IT DID IN THE BROWSER.*** 
+
+* ***IF YOU HAVE TIME LEFT OVER DO A CHECK POINT***
 
 > How should you set up an HTML page?
 
@@ -224,7 +252,7 @@ The <!DOCTYPE html> declaration is not an HTML tag; it is an instruction to the 
 
 1. *In your newly created folder and HTML file, set up an HTML file with the proper structure (located below).*
 
-2. Open up the whole folder with Sublime Text 
+2. *Open up the whole folder with Sublime Text by dragging the folder into Sublime Text*
 
 3. *code the below out.*
 
@@ -256,9 +284,7 @@ The <!DOCTYPE html> declaration is not an HTML tag; it is an instruction to the 
 </html>
 ```
 
-----
-
-### 10. Students Do (25 minutes)
+### 10. Students Do (10 minutes)
 
 * always slack out student exercises and display them on the screen + have students read out the exercise to the class + google timer and set the timer to the amount above and turn up the sound on your computer. Make them feel the pressure. * 
 
@@ -282,12 +308,17 @@ Bonus:
 * Embed a Youtube video of your favorite band/musician.
 ```
 
-----
 ### 11. Everyone Do (5 minutes)
 
 * *go around the room and go over the previous exercise*
 
-----
+
+### 12. Instructor Do (5 minutes)
+
+* *go over the hw*
+
+> If you had problems with installing any of the programs. Stay here now to get help from TAs
+
 
 # Copyright
-Rutgers Coding Boot Camp (C) 2015. All Rights Reserved.
+Coding Boot Camp (C) 2015. All Rights Reserved.

@@ -260,4 +260,4 @@ and utilize a package.json file
 Presentations for two groups
 
 # Copyright
-Rutgers Coding Boot Camp (C) 2015. All Rights Reserved.
+Coding Boot Camp (C) 2015. All Rights Reserved.
