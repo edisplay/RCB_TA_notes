@@ -478,4 +478,4 @@ tr:nth-child(even) {
 
 ----
 # Copyright
-Rutgers Coding Boot Camp (C) 2015. All Rights Reserved.
+Coding Boot Camp (C) 2015. All Rights Reserved.
