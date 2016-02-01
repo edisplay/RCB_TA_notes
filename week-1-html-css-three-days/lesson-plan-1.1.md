@@ -183,6 +183,10 @@ ALL or they won't be able to do the homework.
 
 * Run the following commands while having the finder window open to show the files being created
 
+> You can't break your computer. Well you can, but it's really hard. And if you do, we'll fix it for you. But don't be scared of breaking your computer - because I do all the time, and it's no big deal.
+
+> If you do something wrong, then it'll tell you what you did or what you did wrong and you just have to get used to the language
+
 * Ask the class how to
     * navigate to the home directory.
         + `cd ~`
