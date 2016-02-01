@@ -35,14 +35,14 @@ CREATE TABLE burgers
 (
 ID int NOT NULL AUTO_INCREMENT,
 burger_name varchar(255) NOT NULL,
-ate_it BOOL,
+devoured BOOL,
 date TIMESTAMP,
 PRIMARY KEY (ID)
 );
 
 SHOW COLUMNS from burgers;
 
-INSERT INTO burgers (burger_name, ate_it) VALUES ('Cheese', False) ;
+INSERT INTO burgers (burger_name, devoured) VALUES ('Cheese', False) ;
 
 SELECT * FROM burgers;
 

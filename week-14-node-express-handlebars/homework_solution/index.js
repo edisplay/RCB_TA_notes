@@ -17,11 +17,11 @@ app.set('view engine', 'handlebars');
 
 var mysql      = require('mysql');
 var connection = mysql.createConnection({
-  port: 8000,
+  port	   : 8000,
   host     : 'localhost',
   user     : 'root',
   password : '1111',
-  database : 'myTestDB'
+  database : 'burgers_db'
 });
 
 connection.connect(function(err) {
@@ -34,7 +34,7 @@ console.log('connected as id ' + connection.threadId);
 //home get route
 app.get('/', function(req,res) {
 	//mySQL commands
-	connection.query('SELECT * FROM Tasks;', function(err, col) {
+	connection.query('SELECT * FROM burgers;', function(err, col) {
 	  if (err) throw err;
 	    console.log('The solution is: ', col);
 	    //res.send(col[0]);
@@ -49,7 +49,7 @@ app.put('/mySubmit', function(req,res){
     console.log("PUT received: ->");
     console.log(req.body);
 	//mySQL commands
-  	connection.query('UPDATE Tasks SET Done = ? WHERE ID = ?', [true, req.body.todo_id], function(err, result) {
+  	connection.query('UPDATE burgers SET devoured = ? WHERE ID = ?', [true, req.body.todo_id], function(err, result) {
 	if (err) throw err;
 	});
 	res.redirect('/');
@@ -59,7 +59,7 @@ app.put('/mySubmit', function(req,res){
 app.post('/mySubmit', function(req, res) {
 	console.log('You sent, ' + req.body.todo);
 	//mySQL commands
-  	connection.query('INSERT INTO Tasks (Todo, Done) VALUES (?, ?)', [req.body.todo, false], function(err, result) {
+  	connection.query('INSERT INTO burgers (burger_name, devoured) VALUES (?, ?)', [req.body.todo, false], function(err, result) {
 	if (err) throw err;
 	});
 	res.redirect('/');
