@@ -20,7 +20,7 @@ Zen of Coding
 # INSTRUCTOR MUST COVER!!!
 
 ```
-ALL or they won't be able to do the homework.
+5-12 or they will get really behind and won't be ready for the homework!
 ```
 
 # Objectives (Slack out to students, have unique students read each one and Instructor makes a comment after each one is read)
@@ -236,9 +236,7 @@ ALL or they won't be able to do the homework.
 
 ### 9. Instructor Do (20 minutes)
 
-* ***AFTER CODING A LITTLE BIT. STOP AND SHOW WHAT IT DID IN THE BROWSER.*** 
-
-* ***IF YOU HAVE TIME LEFT OVER DO A CHECK POINT***
+* ***AFTER CODING A LITTLE BIT. STOP, EXPLAIN AND SHOW WHAT IT DID IN THE BROWSER.*** 
 
 > How should you set up an HTML page?
 
@@ -268,7 +266,7 @@ The <!DOCTYPE html> declaration is not an HTML tag; it is an instruction to the 
     </head>
     <body>
       <h1>Hello World!</h1>
-      <img src="http://static.comicvine.com/uploads/original/12/128399/2509558-arts-tron-props-584.jpg" alt="image" />
+      <img src="<engage the students maybe ask them what someone had for lunch and google that find an image and put that here>" alt="image description goes here" />
       <!-- Absolute path-->
       <a href="any_url_you_want" target="_blank">Opens new tab</a>
       <!----------------->
