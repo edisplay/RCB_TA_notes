@@ -16,9 +16,8 @@ look at this file at the root of the repository:
 
 # INSTRUCTOR MUST COVER!!!
 ```
-1 - 10 at a
+1 - 5
 ```
-or they will be seriously behind
 
 # Theme
 Using `node.js` to serve web pages
@@ -28,7 +27,11 @@ Using `node.js` to serve web pages
 
 #### What is a web server
 
-* TBD: Fill this in
+* Where the browser gets data
+* Common web ports (this will come up again)
+* Request vs Response
+* Show AJAX Requests via `hurl.it` and `requestb.in`
+* Explain that `requestb.in` is basically a web server
 
 *Get student engagement now to ensure they understand what a web server is*
 
