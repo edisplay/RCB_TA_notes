@@ -218,6 +218,15 @@ ctrl+j
 
 > In Sublime text you can type `command + /` or `ctrl + /` on the line or a selected section to comment it out
 
+* go over every tag *
+
+* the same class can be applied to many elements
+
+* but the same id can be applied to only one element
+    * will your page break if you don't follow these rules? Not immediately.
+        * but your page will later once we get into JavaScript. 
+            * get used to doing things the right way now.
+
 ```html
 <!doctype html>
 <html>
@@ -231,13 +240,13 @@ ctrl+j
         <!-- <h4>Heading Four</h4> -->
 
         <ul>
-            <li>Unordered list item</li>
-            <li>Unordered list item</li>
+            <li id="iHaveTwo">Cat</li>
+            <li>Rabbit</li>
         </ul>
 
         <ol>
-            <li>Ordered list item</li>
-            <li>Ordered list item</li>
+            <li class="scrambledEggs">Heat up pan & put in olive oil</li>
+            <li class="scrambledEggs">Crack eggs in pan</li>
         </ol>
 
         <div>Division of content</div>
@@ -273,23 +282,23 @@ Explain what's happening in the html file
 
 ### 13. Instructor Do (10 minutes)
 
-html5-tag-structure.html: 
-[html5-tag-structure.html](html5-tag-structure.html){:target="_blank"}
-    + html5 tags - header, nav, footer, article, section, main
-        + `<header></header>` - [description](http://www.w3schools.com/tags/tag_header.asp){:target="_blank"}
-        + `<nav></nav>` - [description](http://www.w3schools.com/tags/tag_nav.asp){:target="_blank"}
-        + `<footer></footer>` - [description](http://www.w3schools.com/tags/tag_footer.asp){:target="_blank"}
-        + `<article></article>` - [description](http://www.w3schools.com/tags/tag_article.asp){:target="_blank"}
-        + `<section></section>` - [description](http://www.w3schools.com/tags/tag_section.asp){:target="_blank"}
-        + `<aside></aside>` - [description](http://www.w3schools.com/tags/tag_aside.asp){:target="_blank"}
+pull up this example for the students:
+[html5-tag-structure.html](in-class-exercises-1.2/html5-tag-structure.html){:target="_blank"}
+
+for your reference:
+
++ html5 tags - header, nav, footer, article, section, main
+    + `<header></header>` - [description](http://www.w3schools.com/tags/tag_header.asp){:target="_blank"}
+    + `<nav></nav>` - [description](http://www.w3schools.com/tags/tag_nav.asp){:target="_blank"}
+    + `<footer></footer>` - [description](http://www.w3schools.com/tags/tag_footer.asp){:target="_blank"}
+    + `<article></article>` - [description](http://www.w3schools.com/tags/tag_article.asp){:target="_blank"}
+    + `<section></section>` - [description](http://www.w3schools.com/tags/tag_section.asp){:target="_blank"}
+    + `<aside></aside>` - [description](http://www.w3schools.com/tags/tag_aside.asp){:target="_blank"}
+
+### 13. Student Do (10 minutes)
 
 > Explain to your partners what each line does in this html5 tag structure file
 
-        + HTML attributes for elements
-                + `alt="Alternate Text"` - used on the img tag to describe the image
-                + `class="class-name"` - used to idenfity multiple elements
-                + `id="id-name"` - used to identify one element
- 
 
 ### Student Do (20 minutes)
 * *Show [this html file](in-class-exercises-1.2/1.2.6-in-class-exercise.html){:target="_blank"} on the projector. It is what the students must code out in this exercise.*
@@ -318,6 +327,8 @@ html5-tag-structure.html:
 
 * If you forgot how to write the html tags, you can reference all html tags here https://developer.mozilla.org/en-US/docs/Web/HTML/Element
 * **Do not use any CSS**
+
+Bonus:
 * Stage, commit, and push to github
 
 
@@ -397,15 +408,14 @@ html5-tag-structure.html:
     + Make the link color `#d21034`
 
 * If your forgot how to write the css properties, you can reference all css properties here https://developer.mozilla.org/en-US/docs/Web/CSS/Reference
+
+Bonus 1:
 * Stage, commit, and push this new file to Github
 
 ### Instructor Do (10 minutes)
 
 * *Slack the following to students*
 
-* Share your Github code with your partner
-* Take your partners code and validate it using https://validator.w3.org/#validate_by_input
-* Compare work and discuss with partner to see how similar your code is. If not the same, work together to make it the same and valid and discuss.
 
 # Copyright
 Coding Boot Camp (C) 2015. All Rights Reserved.
