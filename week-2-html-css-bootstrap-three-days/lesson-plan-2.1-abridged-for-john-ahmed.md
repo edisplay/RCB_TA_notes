@@ -76,6 +76,8 @@ https://toolbelt.heroku.com/
 
 `heroku login`
 
+Note: If you are on a Windows machine you will be unable to use the heroku login command as is. You will first need to open cmd.exe -- login using heroku login then come back to git bash. Otherwise you will run into an issue. See https://github.com/heroku/heroku-cli/issues/84 
+
 7. `git remote -v`
 
 notice the remotes
