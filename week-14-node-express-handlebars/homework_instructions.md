@@ -2,7 +2,8 @@
 
 ### Introduction
 
-* You will create a single page Node Express App.
+* You will create a "single page" Node Express App.
+			* it will look and act like a single page app, but it won't be a single page app
 
 * You will use Handlebars to generate HTML.
 
@@ -12,7 +13,7 @@
 
 ### User story
 
-* Eat-Da-Burger! is a fun simple page app, that let's the user input the name of a burger they want to eat and submit it, once submited it's displayed in text in the left side of the page  waiting area where it's waiting to be Devoured, each burger in the waiting area also has a `Devoure it!` button, once clicked will move it to the right side of the page.
+* Eat-Da-Burger! is a fun single page app, that lets the user input the name of a burger they want to eat and submit; once submited it's displayed in text on the left side of the page where it's waiting to be devoured. Each burger in the waiting area also has a `Devour it!` button. Once clicked the burger text will move it to the right side of the page. Everything entered will be stored into a MySQL database.
 
 ### Steps
 
@@ -20,10 +21,10 @@ Database setup:
 
 	1. Create the `burgers_db` in MySQL
 
-	2. Create the tables and columns inside `burgers_db` like the table below
+	2. Create the tables and columns inside `burgers_db` like below
 	
 	3. The table should have 
-		* `id` as primary key auto increment
+		* `id` as primary key auto incrementing
 		* `burger_name` as a string
 		* `devoured` as a boolean
 		* `date` as currentime
@@ -32,27 +33,25 @@ App setup:
 
 	1. Create an App Dir called 'burger'
 
-	2. Install Node `npm init`
+	2. Make a package.json file `npm init`
 
-	3. Install npm package Express `npm install express --save`
+	3. Install Express npm package `npm install express --save`
 
 	4. Create the 'server.js' file
 
-	5. Install npm package Handlebars `npm install express-handlebars --save`
+	5. Install Handlebars npm package `npm install express-handlebars --save`
 
-	6. Install npm package Method-override `npm install method-override --save`
+	6. Install Method-override npm package `npm install method-override --save`
 
-	7. Install npm package Body-Parser `install body-parser --save`
+	7. Install Body-Parser npm package `npm install body-parser --save`
 
-	8. Install npm package MySQL `npm install mysql --save`
+	8. Install MySQL npm package `npm install mysql --save`
 
-	9. Create a `app_config.js` file 
-
-	10. Create the configuration needed for all npm packages and import it into `server.js`
+	10. Setup all npm packages inside of `server.js` file
 
 Model setup:
 
-	1. Inside your `burger` Dir create a Dir named `model`
+	1. Inside your `burger` Dir create a Dir named `models`
 
 	2. Create the `database.js` file.
 
@@ -78,7 +77,7 @@ View setup:
 
 Controller setup:
 
-	1. Inside your `burger` Dir create a Dir named `controller`
+	1. Inside your `burger` Dir create a Dir named `controllers`
 
 	2. Create the `routes.js` file
 
