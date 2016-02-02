@@ -46,15 +46,16 @@ Zen of Coding
 * Introduce yourself, the TA's, and Support Team (Dan S, Student Success, Career Coach)
 
 ### 2. Partners Do (5 minutes)
-+ Have the students get into groups of 4 or 5 and spend 30 seconds each talking about 1 bad movie they last watched and 1 interest they have.
++ Have the students get into groups of 4 or 5 and spend 30 seconds each talking about favorite/worst movie they watched and 1 interest they have.
 
 ### 3. Everyone do (15 minutes)
 + Go around the room to each group 
 
 * Have all the students give a quick intro consisting of:
     + Their name
-    + What their bad movie is
+    + What their favorite/worst movie is
     + What their interest is
+    + What they studied formally/informally
     + Where they come from geographically.
 
 

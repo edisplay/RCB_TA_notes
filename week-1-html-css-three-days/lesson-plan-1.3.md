@@ -385,7 +385,11 @@ notice the remotes
 
 notice the remotes now
 
-10. `git push heroku master`
+10. Next run the command `git add -A`.  This is to add the index.php file and the composer.json file to git.
+
+11. Next run the command `git commit -m "added heroku components"`. 
+
+12. `git push heroku master`
 
 push up your master branch from your github repository to heroku
 
