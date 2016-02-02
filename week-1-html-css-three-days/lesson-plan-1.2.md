@@ -21,8 +21,12 @@ HTML/CSS Intro
 # INSTRUCTOR MUST COVER!!!
 
 ```
-ALL or they won't be able to do the homework.
+1, 5, 7 
 ```
+- or they will be behind
+
+2 is not important 
+
 
 # Objectives (Slack out to students, have unique students read each one and Instructor makes a comment after each one being read)
 
@@ -35,6 +39,10 @@ ALL or they won't be able to do the homework.
 ----
 
 ### 1. Instructor Do (15 minutes)
+
+> If you have problems with git or github - then stay after class. Come to office hours on Saturday morning. 
+
+> Our main focus today is to get better with HTML and CSS
 
 * Discuss Git
     + What it is 
@@ -59,28 +67,36 @@ ALL or they won't be able to do the homework.
 * If you haven't already, go to https://github.com/ and make an account
 * Install Git to your machine if you haven't already http://git-scm.com/downloads
     + Follow instructions here to do so: https://help.github.com/articles/set-up-git/
-    + If you haven't already, generate your SSH keys https://help.github.com/articles/generating-a-new-ssh-key/
+
 * Make a new repository called `first-week-repo`
-    + Check box to "Initialize this repository with a README"
+    + do not check the checkbox in front of "Initialize this repository with a README" 
+        + if you do then make a new repo and don't check the checkbox this time.
+    + using the terminal make a new folder in the place where you store all your code for the class
+    + navigate to that folder in the terminal
+    + in your terminal run the commands listed on your github repository 
+
 * Make a basic html file called `test.html` that contains the core structure of an html file (e.g. doctype, head, title, body) and include an image. You can find a cute image online or grab a placeholder image http://lorempixel.com/
-* Stage, commit, and push `test.html` to Github by using `git add test.html`, and `git commit -m "initial commit"` and `git push`
+* Stage, commit, and push `test.html` to Github by using `git add test.html`, and `git commit -m "initial commit"` and `git push origin master`
 
 * **Bonus 1**
+    + If you haven't already, generate your SSH keys https://help.github.com/articles/generating-a-new-ssh-key/
+
+* **Bonus 2**
     + Add additional HTML tags to your page and read up on all of them:
 https://developer.mozilla.org/en-US/docs/Web/HTML/Element
 
-* **Bonus 2**
+* **Bonus 3**
     + Find a tag that the instructors don't know about and try to stump them with what it is used for
 
+### 3. Instructor Do (10 minutes)
 
-### 3. Partners Do (5 minutes)
+* *Go over the previous exercise*
 
->Discuss line by line what happened. If the people around you are lost, YOU ARE RESPONSIBLE for the people around you.
+### 4. Partners Do (5 minutes)
 
-### 4. Instructor Do (10 minutes)
-* Walk around room and make sure everyone is caught up
+> Discuss step by step what happened in the previous exercise. If the people around you are lost, YOU ARE RESPONSIBLE for the people around you.
 
-### 5. Everyone Do (5 minutes)
+### 5. Everyone Do (10 minutes)
 
 * *Combine all the html code on one line with holding down the following command on an html file on the first line of it*
 
@@ -100,26 +116,24 @@ ctrl+j
 
 >How will this look different in the browser? Discuss with your partners
 
-### 6. Everyone do (5 minutes)
-
 * *Go around the room until you get the answer you want*
         * It won't look different.
 
 * *Open the html file in the browser by right clicking on the file in Sublime Text and going to "Open in Browser"* 
 
-----
 #### Break (15 minutes)
 
-----
-###### 75 minutes so far
+###### 75 minutes so far including break
 
-### 7. Instructor Do (25 minutes)
+### 6 Instructor Do (10 minutes)
 
 * *Discuss what a doctype is and why it is important*
+
 * *Explain indentation and syntax e.g. open and closing tags, self closing tags, double quotations (never single quotes)*
+
 * *Emphasis the importance of semantic markup*
     + https://validator.w3.org/#validate_by_input
-    + Copy paste in this example to W3.org to show what happens if the markup is invalid
+    + Copy paste this example to W3.org to show what happens if the markup is invalid
     + Go over what's wrong with the code to the students error by error
             + for the most part, errors include
                     + missing closing tags
@@ -159,121 +173,137 @@ ctrl+j
   </body>
   </html>
   ```
-* *Go over how to write the following tags*
-    + Core tags
-        + doctype
-                + HTML5  = `<!DOCTYPE html>`
-                + Older doctypes found [here](http://www.w3schools.com/tags/tag_doctype.asp){:target="_blank"}
-        + html
-                + `<html> </html>`
-        + head
-                + `<head></head>`
-        + title
-                + `<title></title>`
-        + body (mention how browsers input their own styling and by default the body tag has margins)
-                + `<body></body>
-        +basic structure looks like this
-                ```html
-                <!doctype html>
-                <html>
-                    <head>
-                        <title>Title of Page</title>
-                    </head>
-                    <body>
 
-                    </body>
-                </html>
-                ```
-    + Other tags
-        + headings (h1, h2, h3 etc) and when to use them
-            + `<h1>Heading 1</h1>`
-        + paragraphs
-            + `<p>Paragraph Tag</p>`
-        + anchors
-            + `<a href="http://www.google.com">Google</a>`
-        + strong vs b
-            + `<strong>Important message that appears bold in browsers</strong>` has semantic meaning signifying importance. Browsers display this as bold
-                + `<b>Unimportant message that appears bold in browsers</b>`
+### 7. Instructor Do (5 minutes)
 
-        + unordered/ordered lists
-                ```html
-                <ul>
-                    <li>Unordered list item</li>
-                    <li>Unordered list item</li>
-                </ul>
+* *Use the html file below. Explain what each tag does and how it correlates to what happens in the browser. Have sublime text up and the browser up split screen*
 
-                <ol>
-                    <li>Ordered list item</li>
-                    <li>Ordered list item</li>
-                </ol>
-                ``` 
-        + divs
-            + `<div>Division of content</div>`
-        + img
-            + `<img src="url to image path">`
-        + br
-            + `<br>`
-        + tables - thead, tbody, tr, td, th
-            ```html
-            <table>
-                <thead>
-                    <tr>
-                        <th>Table Heading</th>
-                        <th>Table Heading</th>
-                    </tr>   
-                </thead>  
-                <tbody>
-                    <tr>
-                        <td>Table column content</td>
-                        <td>Table column content</td>
-                    </tr>   
-                </tbody>      
-            </table>
-            ```
-        + html5 tags - header, nav, footer, article, section, main
-            + `<header></header>` - [description](http://www.w3schools.com/tags/tag_header.asp){:target="_blank"}
-            + `<nav></nav>` - [description](http://www.w3schools.com/tags/tag_nav.asp){:target="_blank"}
-            + `<footer></footer>` - [description](http://www.w3schools.com/tags/tag_footer.asp){:target="_blank"}
-            + `<article></article>` - [description](http://www.w3schools.com/tags/tag_article.asp){:target="_blank"}
-            + `<section></section>` - [description](http://www.w3schools.com/tags/tag_section.asp){:target="_blank"}
-            + `<aside></aside>` - [description](http://www.w3schools.com/tags/tag_aside.asp){:target="_blank"}
+* doctype 
+    HTML5  = `<!DOCTYPE html>`
+        * Older doctypes found [here](http://www.w3schools.com/tags/tag_doctype.asp){:target="_blank"}
 
-        + *Share this with the students: [HTML structure example](html5-tag-structure.html){:target="_blank"}*
+* body (mention how browsers input their own styling and by default the body tag has margins)
+        * `<body></body>`
+* basic structure looks like this
 
-        + label
-            + `<label for="input-id"></label>`
-        + input - types - email, text, phone, submit etc
-            + `<input type="text">`
-        + textarea
-            + `<textarea></textarea>`
-        + form
-            ```html
-            <form>
-                <label for="first-name">First Name</label>
-                <input type="text" id="first-name" name="first-name">
+```html
+<!doctype html>
+<html>
+    <head>
+        <title>Title of Page</title>
+    </head>
+    <body>
+        <h1>Heading One</h1>
+        <h2>Heading Two</h2>
+        <h3>Heading Three</h3>
 
-                <textarea></textarea>
+        <p>paragraph tag</p>
+        <a href="http://www.google.com">Google</a>
+        <strong>strong tells browsers that it is important</strong>
+        <b>b is for style</b>
+    </body>
+</html>
+```
 
-                <input type="submit">
-            </form>
+### 8. Partners Do (2 minutes)
 
-            ```
-        + HTML attributes for elements
-                + `alt="Alternate Text"` - used on the img tag to describe the image
-                + `class="class-name"` - used to idenfity multiple elements
-                + `id="id-name"` - used to identify one element
-                + `for="form-elem-id"` - used to associate the label with the input or text area
-+ HTML comments
-    + `<!-- comment -->` 
-            + In Sublime text you can type `command + /` on the line or a selected section to comment it out
+> explain to your partners what each line does. Go. 
 
-### 8. Student Do (20 minutes)
+### 9. Cold Call (3 minutes)
+
+* *call on random student to go over each part*
+
+### 10. Instructor Do (10 minutes)
+
+* *Use the html file below. Explain what each tag does and how it correlates to what happens in the browser. Have sublime text up and the browser up split screen*
+
+> In Sublime text you can type `command + /` or `ctrl + /` on the line or a selected section to comment it out
+
+* go over every tag *
+
+* the same class can be applied to many elements
+
+* but the same id can be applied to only one element
+    * will your page break if you don't follow these rules? Not immediately.
+        * but your page will later once we get into JavaScript. 
+            * get used to doing things the right way now.
+
+```html
+<!doctype html>
+<html>
+    <head>
+        <title>Title of Page</title>
+    </head>
+    <body>
+        <h1>Heading One</h1>
+        <h2>Heading Two</h2>
+        <h3>Heading Three</h3>
+        <!-- <h4>Heading Four</h4> -->
+
+        <ul>
+            <li id="iHaveTwo">Cat</li>
+            <li>Rabbit</li>
+        </ul>
+
+        <ol>
+            <li class="scrambledEggs">Heat up pan & put in olive oil</li>
+            <li class="scrambledEggs">Crack eggs in pan</li>
+        </ol>
+
+        <div>Division of content</div>
+
+        <img src="url to image path"> <br>
+        <img src="url to image path"> <br>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Table Heading</th>
+                    <th>Table Heading</th>
+                </tr>   
+            </thead>  
+            <tbody>
+                <tr>
+                    <td>Table column content</td>
+                    <td>Table column content</td>
+                </tr>   
+            </tbody>      
+        </table>
+    </body>
+</html>
+```
+
+### 11. Partners Do (2 minutes)
+
+Explain what's happening in the html file
+
+### 12. Cold Call (3 minutes)
+
+* *call on random student to go over each part*
+
+##### 110 minutes go by
+
+### 13. Instructor Do (10 minutes)
+
+pull up this example for the students in sublime text and in the browser:
+[html5-tag-structure.html](in-class-exercises-1.2/html5-tag-structure.html){:target="_blank"}
+
+for your reference:
+
++ html5 tags - header, nav, footer, article, section, main
+    + `<header></header>` - [description](http://www.w3schools.com/tags/tag_header.asp){:target="_blank"}
+    + `<nav></nav>` - [description](http://www.w3schools.com/tags/tag_nav.asp){:target="_blank"}
+    + `<footer></footer>` - [description](http://www.w3schools.com/tags/tag_footer.asp){:target="_blank"}
+    + `<article></article>` - [description](http://www.w3schools.com/tags/tag_article.asp){:target="_blank"}
+    + `<section></section>` - [description](http://www.w3schools.com/tags/tag_section.asp){:target="_blank"}
+    + `<aside></aside>` - [description](http://www.w3schools.com/tags/tag_aside.asp){:target="_blank"}
+
+### 14. Student Do (15 minutes)
 * *Show [this html file](in-class-exercises-1.2/1.2.6-in-class-exercise.html){:target="_blank"} on the projector. It is what the students must code out in this exercise.*
 
 * *Slack this out*
 
 * Make a new file called `student-bio.html` using terminal
-* Stage, commit, and push to first-week-repo
 * Inside your `student-bio.html` file do the following:
     + Make a `header` tag, inside the header, make an img tag that uses this image:
     https://github.com/RutgersCodingBootcamp/All-Classwork-Homework/blob/master/week-1-html-css-git-heroku/in-class-exercises-1.2/RutgersBanner.png 
@@ -287,25 +317,22 @@ ctrl+j
         + Undernearth the image tag, make a paragraph (or two) and write a short bio about yourself. You don't have to overthink this. Just something quick. If you can't think of anything right now you can use some placeholder text found http://www.lipsum.com/
     + Inside the second `section` tag do the following:
         + Make a `h2` that says "Contact Info"
-        + Underneath the `h2`, make an unordered list that contains three elements: "Email: Youremail@address.com", "Github: github.com/YourGithubProfile", and "Portfolio: coming soon". 
+        + Underneath the `h2`, make an unordered list that contains three elements: "Email: Youremail@address.com", "Github: github.com/<your github username goes here>", and "Portfolio: coming soon". 
             + Make the part before the colon bold. e.g. "Email:" bold, but the text after it should not be bold
-            + Make the content after "Github:" a link. e.g. github.com/YourGithubProfile should be a link
+            + Make the content after "Github:" a link. e.g. github.com/your github username goes here> should be a link
             + Make the content after "Portfolio:" (e.g. "coming soon") a link that points to "#"
 
-* If your forgot how to write the html tags, you can reference all html tags here https://developer.mozilla.org/en-US/docs/Web/HTML/Element
+* If you forgot how to write the html tags, you can reference all html tags here https://developer.mozilla.org/en-US/docs/Web/HTML/Element
 * **Do not use any CSS**
+
+Bonus:
 * Stage, commit, and push to github
 
+##### 135 minutes went by
 
-### 9. Partner Do (10 minutes)
+### 15. Instructor Do (20 minutes)
 
-* Share your Github code with your partner
-* Take your partners code and validate it using https://validator.w3.org/#validate_by_input
-* Compare work and discuss with partner to see how similar your code is. If not the same, work together to make it the same and valid and discuss.
-
-----
-
-### 10. Instructor Do (20 minutes)
+* *demonstrate all of this with in-class-exercises-1.2/15-instructor-do.html*
 
 + Discuss CSS
     + What is CSS
@@ -335,14 +362,13 @@ ctrl+j
         + In Sublime text you can type `command + /` on the line or a selected section to comment it out
 
 
-
-
-### 11. Student Do (20 minutes)
+### 16. Student Do (20 minutes)
 
 * *Show [this html file](in-class-exercises-1.2/1.2.9-in-class-exercise.html){:target="_blank"} on the projector. It is what the students must code out in the next exercise.*
 
 * *Slack this out*
 
+* Put all of this code where you normally code in, inside a folder named week1-day2-html-css
 * Make a folder called `css` using terminal
 * Inside the `css` folder make a file called `style.css` using terminal
 * Stage, commit, and push this code to Github
@@ -383,15 +409,14 @@ ctrl+j
     + Make the link color `#d21034`
 
 * If your forgot how to write the css properties, you can reference all css properties here https://developer.mozilla.org/en-US/docs/Web/CSS/Reference
+
+Bonus:
 * Stage, commit, and push this new file to Github
 
-### 12. Partner Do (10 minutes)
+### 17. Instructor Do (5 minutes)
 
-* *Slack the following to students*
+* *Go over previous exercise*
 
-* Share your Github code with your partner
-* Take your partners code and validate it using https://validator.w3.org/#validate_by_input
-* Compare work and discuss with partner to see how similar your code is. If not the same, work together to make it the same and valid and discuss.
 
 # Copyright
 Coding Boot Camp (C) 2015. All Rights Reserved.

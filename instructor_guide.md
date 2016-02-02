@@ -27,6 +27,12 @@
 
 2. Above ^^ with Google Hangout. Have everyone mute and hide their webcam.
 
+# How to send exercises out to students
+
+* leverage TAs to send out exercises to students on slack
+
+* do it yourself, copy the exercise part of a lesson plan and slack it out to the students
+
 # Lesson Plan Goal
 * Goal of lesson plan: Get every single person involved at the sametime for the majority of class! 
 
