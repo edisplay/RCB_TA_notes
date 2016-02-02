@@ -1,0 +1,7 @@
+App setup:
+
+1. create dir "calculator"
+2. npm init
+3. npm install express --save
+4. create 'index.js' file
+
