@@ -227,7 +227,8 @@ node index.js
 			* ***Hint: To make it pretty when displaying make sure to console log a empty line after every console log with a message***
 
 	* ***Hint: `this` will change many times in your app, because we are using the npm package prompt, and now we're using prompts within prompts, so, you should be storing `this` into a variable before you use `this` inside of a prompt callback function. Then you should be using that variable in the next function. This will get clearer as we move on.***
-	* The menu message function
+	
+	* The add function
 		* Create a key inside of `zoo` named `add` that points to an anonymous function with one argument named `input_scope`
 			* Inside that anonymous function
 				* Create a variable named `currentScope` set it to `input_scope`
@@ -256,9 +257,6 @@ node index.js
 				* console log Enter (C): ------> here's the count for all animals in this one city!
 				* console log Enter (O): ------> here's the count for all the animals in all locations by the type you specified!
 				* console log Enter (Q): ------> Quits to the main menu!
-					* this will start working on later on.
-						- call `currentScope.visit()`
-						- call `currentScope.view(currentScope)`
 
 	* The view function
 		* Create a key inside of the `zoo` object named `view`, that points to an anonymous function
@@ -271,13 +269,13 @@ node index.js
 						-call the `currentScope.menu()` function
 					* else if the `result.visit` == "O"
 						-call the `currentScope.type(input_scope)` function
-					* else if the `result.type` == "I" 
+					* else if the `result.visit` == "I" 
 						-call the `currentScope.type(input_scope)` function
-					* else if the `result.animId` == "N"
+					* else if the `result.visit` == "N"
 						-call the `currentScope.name(input_scope)` function
-					* else if the `result.name` == "A"
+					* else if the `result.visit` == "A"
 						-call the `currentScope.all(input_scope)` function
-					* else if the `result.all` == "C"
+					* else if the `result.visit` == "C"
 						-call the `currentScope.care(input_scope)` function
 					* else
 						- console log Sorry didn't get that, come again?

@@ -1295,7 +1295,7 @@ var connection = mysql.createConnection({
 <p><strong><em>Hint: <code>this</code> will change many times in your app, because we are using the npm package prompt, and now we&rsquo;re using prompts within prompts, so, you should be storing <code>this</code> into a variable before you use <code>this</code> inside of a prompt callback function. Then you should be using that variable in the next function. This will get clearer as we move on.</em></strong></p>
 </li>
 <li>
-<p>The menu message function</p>
+<p>The add function</p>
 <ul>
 <li>Create a key inside of <code>zoo</code> named <code>add</code> that points to an anonymous function with one argument named <code>input_scope</code><ul>
 <li>Inside that anonymous function<ul>
@@ -1348,14 +1348,7 @@ var connection = mysql.createConnection({
 <li>console log Enter (A): ------&gt; here&rsquo;s the count for all animals in all locations!</li>
 <li>console log Enter (C): ------&gt; here&rsquo;s the count for all animals in this one city!</li>
 <li>console log Enter (O): ------&gt; here&rsquo;s the count for all the animals in all locations by the type you specified!</li>
-<li>console log Enter (Q): ------&gt; Quits to the main menu!<ul>
-<li>this will start working on later on.<ul>
-<li>call <code>currentScope.visit()</code></li>
-<li>call <code>currentScope.view(currentScope)</code></li>
-</ul>
-</li>
-</ul>
-</li>
+<li>console log Enter (Q): ------&gt; Quits to the main menu!</li>
 </ul>
 </li>
 </ul>
@@ -1375,13 +1368,13 @@ var connection = mysql.createConnection({
     -call the <code>currentScope.menu()</code> function</li>
 <li>else if the <code>result.visit</code> == &ldquo;O&rdquo;<br />
     -call the <code>currentScope.type(input_scope)</code> function</li>
-<li>else if the <code>result.type</code> == &ldquo;I&rdquo; <br />
+<li>else if the <code>result.visit</code> == &ldquo;I&rdquo; <br />
     -call the <code>currentScope.type(input_scope)</code> function</li>
-<li>else if the <code>result.animId</code> == &ldquo;N&rdquo;<br />
+<li>else if the <code>result.visit</code> == &ldquo;N&rdquo;<br />
     -call the <code>currentScope.name(input_scope)</code> function</li>
-<li>else if the <code>result.name</code> == &ldquo;A&rdquo;<br />
+<li>else if the <code>result.visit</code> == &ldquo;A&rdquo;<br />
     -call the <code>currentScope.all(input_scope)</code> function</li>
-<li>else if the <code>result.all</code> == &ldquo;C&rdquo;<br />
+<li>else if the <code>result.visit</code> == &ldquo;C&rdquo;<br />
     -call the <code>currentScope.care(input_scope)</code> function</li>
 <li>else<ul>
 <li>console log Sorry didn&rsquo;t get that, come again?<ul>
