@@ -1,180 +1,96 @@
-#Week of 10.1, 10.2, 10.3 homework for Node.js
+#Week of 14 Homework Node Express Handlebars
 
 ### Introduction
 
-* You will make LIRI. LIRI is like SIRI (from an iphone).
+* You will create a single page Node Express App.
 
-* SIRI is a Speech Interpretation and Recognition Interface
+* You will use Handlebars to generate HTML.
 
-* LIRI is a Language Interpretation and Recognition Interface.
-
-* LIRI will be a command line node app that takes in paramaters and gives you back data.
+* You will use Node to connect MySQL database and Express to handle routing.
 
 * see demonstration of how it works * 
 
-### Debugging This Program
-* need to install iron-node globally to use to debug things
+### User story
 
-* if you haven't already run this in your terminal
-
-```
-npm install iron-node -g;
-```
-
-* to use iron-node
-	* put a debugger; on the line where you want to stop the program
-	* run the program like this from the console:
-
-```
-iron-node liri.js
-```
-
-* to get out of iron-node from the terminal: CONTROL + C on a MAC
+* Eat-Da-Burger! is a fun simple page app, that let's the user input the name of a burger they want to eat and submit it, once submited it's displayed in text in the left side of the page  waiting area where it's waiting to be Devoured, each burger in the waiting area also has a `Devoure it!` button, once clicked will move it to the right side of the page.
 
 ### Steps
 
-0. Make a twitter account if you don't already have one and post a few tweets
+Database setup:
 
-1. Make a new github repository called liri-node-app
+	1. Create the `burgers_db` in MySQL
 
-2. Make a .gitignore file
+	2. Create the tables and columns inside `burgers_db` like the table below
+	
+	3. The table should have 
+		* `id` as primary key auto increment
+		* `burger_name` as a string
+		* `devoured` as a boolean
+		* `date` as currentime
 
-Add the following to it.
+App setup:
 
-```
-keys.js
-node_modules
-.DS_Store
-```
-* You don't need .DS_Store in the .gitignore file if you're on a Windows Machine.
+	1. Create an App Dir called 'burger'
 
-3. Make a JavaScript file named keys.js
+	2. Install Node `npm init`
 
-Inside keys.js your file will look like this:
+	3. Install npm package Express `npm install express --save`
 
-``` JavaScript
-console.log('this is loaded');
+	4. Create the 'server.js' file
 
-exports.twitterKeys = {
-  consumer_key: '<input here>',
-  consumer_secret: '<input here>',
-  access_token_key: '<input here>',
-  access_token_secret: '<input here>',
-}
+	5. Install npm package Handlebars `npm install express-handlebars --save`
 
-```
-4. Get your Twitter API creds by following these steps:
+	6. Install npm package Method-override `npm install method-override --save`
 
-* Step One: https://apps.twitter.com/app/new
-* Step Two: use http:// for your urls
-* Step Three: then go to Keys and Access Tokens to get your credentials for below
-* Step Four: then you have to click the button below on that page to create an access token
+	7. Install npm package Body-Parser `install body-parser --save`
 
-After you get those credentials fill in the <input here> portions in the keys.js file.
+	8. Install npm package MySQL `npm install mysql --save`
 
-5. Make a file called random.txt
+	9. Create a `app_config.js` file 
 
-* inside of random.txt put the following in with no extra characters or white space:
+	10. Create the configuration needed for all npm packages and import it into `server.js`
 
-```
-spotify-this-song,"I Want it That Way"
-```
+Model setup:
 
-6. Make a JavaScript file named liri.js
+	1. Inside your `burger` Dir create a Dir named `model`
 
-7. At the top of the liri.js file make it so you grab the data from keys.js and store it into a variable to use
+	2. Create the `database.js` file.
 
-8. Make it so liri.js can take in one of the following arguments
+	3. Setup the configuration to MySQL and export it.
 
-* my-tweets
+	4. Import `database.js` into `server.js`
 
-* spotify-this-song
+View setup:
 
-* movie-this
+	1. Inside your `burger` Dir create a Dir named `views`
+	
+	2. Create the `index.handlebars` file inside `views` Dir
 
-* do-what-it-says
+	3. Create the `layouts` Dir inside `views` Dir
 
-So if you succeed, running the following commands in your terminal will do the followig things
+	4. Create the `main.handlebars` file inside `layouts` Dir
+	
+	5. Setup the `main.handlebars` file so it's able to be used by Handlebars
 
-```
-node liri.js my-tweets
-```
-* will show your last 20 tweets and when they were created at in the terminal
+	6. Setup the `index.handlebars` to have the template that Handlebars can render onto
 
-```
-node liri.js spotify-this-song '<song name here>'
-```
+	6. Create a button in `index.handlebars` that will submit the user input into the database
 
-* shows the following information about the song in the terminal
+Controller setup:
 
-	* artist(s)
-	* song name
-	* preview link of the song from spotify
-	* album that the song is a part of
-	* song name
+	1. Inside your `burger` Dir create a Dir named `controller`
 
-* if no song is provided then your program will default to
-	* "what's my age again" by blink 182
+	2. Create the `routes.js` file
 
-```
-node liri.js movie-this '<movie name here>'
-```
+	3. Setup the routes(`GET`, `POST`, `UPDATE`) functions
 
-* this would output the following information to the terminal:
+	4. Import `routes.js` into `server.js`
 
-	* Title
-	* Year
-	* IMDB Rating
-	* Country
-	* Language
-	* Plot
-	* Actors
-	* Rotten Tomatoes Rating 
-	* Rotton Tomatoes UrL
-
-	* if no movie is provided then the program will output information for the movie: 'Mr. Nobody'
-		* if you haven't watched Mr. Nobody then you should: http://www.imdb.com/title/tt0485947/
-		* You can catch it on Netflix
-
-```
-node liri.js do-what-it-says 
-```
-
-* Using the fs package in node, the program would take the text inside of random.txt and use it to call the first command with the second part as it's parameter
-
-* Currently in random.txt, the following text is there:
-
-```
-spotify-this-song,"I Want it That Way"
-```
-
-* so according to those instructions, you would  call the appropriate function and pass in "I Want it That Way" as the song.
-
-* This should work for any function and paramter you use.
-
-9. To get the data for the above things you'll have to use the following npm packages:
-
-* [twitter](https://www.npmjs.com/package/twitter)
-* [spotify](https://www.npmjs.com/package/spotify)
-* [request](https://www.npmjs.com/package/request)
-	* The request npm package will be used to hit the OMDB API
-		* [OMDB API](http://www.omdbapi.com)
-
-* to install these npm packages run these commands one at a time.
-
-```
-npm install twitter
-npm install spotify
-npm install request
-```
+	5. Inside `server.js` setup Express to use the imported routes.
 
 # BONUS
 
-* In addition to outputting the data to the terminal, also output all data to a txt file called log.txt
-
-* Make sure that each command you run gets appended to the log.txt file. 
-
-* Your log.txt file should not be overwritten each time you run a command.
+	
 
 # Copyright
-Coding Boot Camp (C) 2015. All Rights Reserved.
+Coding Boot Camp (C) 2016. All Rights Reserved.
