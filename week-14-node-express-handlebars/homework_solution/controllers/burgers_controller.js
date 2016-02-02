@@ -2,35 +2,32 @@ var express = require('express');
 var router = express.Router();
 var burger = require('../models/burger.js');
 
-// router.get('/', function(req, res) {
-//     res.json({'foo':'bar'});
-// });
-
+//get rout -> index
 router.get('/index', function(req,res) {
+	//express callback response by calling burger.selectAllBurger
 	burger.selectAllBurger(function(burger_data){
+		//wrapper for orm.js that using MySQL query callback will return burger_data, render to index with handlebar
 		res.render('index', {burger_data});
 	});
 });
-/*
-//post route -> back to home
+
+//post route -> back to index
 router.post('/create', function(req, res) {
-	console.log('You sent, ' + req.body.todo);
-	//mySQL commands
-  	connection.query('INSERT INTO burgers (burger_name, devoured) VALUES (?, ?)', [req.body.todo, false], function(err, result) {
-	if (err) throw err;
+	//takes the request object using it as input for buger.addBurger
+	burger.addBurger(req.body.burger, function(result){
+		//wrapper for orm.js that using MySQL insert callback will return a log to console, render back to index with handle
+		console.log(result);
+		res.redirect('/index');
 	});
-	res.redirect('/index');
 });
 
-//put route -> back to home
+//put route -> back to index
 router.put('/update', function(req,res){
-    console.log("PUT received: ->");
-    console.log(req.body);
-	//mySQL commands
-  	connection.query('UPDATE burgers SET devoured = ? WHERE id = ?', [true, req.body.todo_id], function(err, result) {
-	if (err) throw err;
+	burger.eatBurger(req.body.burger_id, function(result){
+		//wrapper for orm.js that using MySQL update callback will return a log to console, render back to index with handle
+		console.log(result);
+		res.redirect('/index');
 	});
-	res.redirect('/index');
 });
-*/
+
 module.exports = router;
