@@ -1,11 +1,22 @@
+# Preparing for class
+* have lesson plans open on your phone/tablet so you can refer to it during the class and also have it open on your computer but not visible to students (so you can copy and paste stuff from it to them on slack)
+
+* during class you'll have Sublime Text open on your screen for the most of it while also referring to things on Google.
+
+Before class, during prep time, set up your in class repos like I did here for day one: https://github.com/RutgersCodingBootcamp/0201-mw-class-content/tree/master/week1-html-css-terminal-git-heroku
+
+- MANY OF YOU ASKED ME THIS: how should I deal with constantly going to the lesson plan to copy and paste exercises to the students? The answer is prepping and doing step 4 above!!!
+
+- When I did step 4 today, it made teaching class today for me cake. 
+
+I felt a lot more relaxed than I usually did because I eliminated the need to constantly jump between the lesson plan and my in class code. 
+
+I didn't have to constantly copy and paste things from the lesson plan. Because it was all ready for me! 
+
 # Students and Lesson Plans
 
 * don't give lesson plans to students
 		* it'll ruin the magic
-
-* have lesson plans open on your phone/tablet so you can refer to it during the class and also have it open on your computer but not visible to students (so you can copy and paste stuff from it to them on slack)
-
-* during class you'll have Sublime Text open on your screen for the most of it while also referring to things on Google.
 
 # Public and Lesson Plans
 
