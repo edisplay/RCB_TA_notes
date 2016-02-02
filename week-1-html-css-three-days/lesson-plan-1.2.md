@@ -177,13 +177,14 @@ ctrl+j
 ### 7. Instructor Do (5 minutes)
 
 * *Use the html file below. Explain what each tag does and how it correlates to what happens in the browser. Have sublime text up and the browser up split screen*
-        + doctype 
-            HTML5  = `<!DOCTYPE html>`
-                + Older doctypes found [here](http://www.w3schools.com/tags/tag_doctype.asp){:target="_blank"}
 
-        + body (mention how browsers input their own styling and by default the body tag has margins)
-                + `<body></body>
-        +basic structure looks like this
+* doctype 
+    HTML5  = `<!DOCTYPE html>`
+        * Older doctypes found [here](http://www.w3schools.com/tags/tag_doctype.asp){:target="_blank"}
+
+* body (mention how browsers input their own styling and by default the body tag has margins)
+        * `<body></body>`
+* basic structure looks like this
 
 ```html
 <!doctype html>
