@@ -123,7 +123,7 @@ ctrl+j
 
 #### Break (15 minutes)
 
-###### 75 minutes so far
+###### 75 minutes so far including break
 
 ### 6 Instructor Do (10 minutes)
 
@@ -281,9 +281,11 @@ Explain what's happening in the html file
 
 * *call on random student to go over each part*
 
+##### 110 minutes go by
+
 ### 13. Instructor Do (10 minutes)
 
-pull up this example for the students:
+pull up this example for the students in sublime text and in the browser:
 [html5-tag-structure.html](in-class-exercises-1.2/html5-tag-structure.html){:target="_blank"}
 
 for your reference:
@@ -296,18 +298,12 @@ for your reference:
     + `<section></section>` - [description](http://www.w3schools.com/tags/tag_section.asp){:target="_blank"}
     + `<aside></aside>` - [description](http://www.w3schools.com/tags/tag_aside.asp){:target="_blank"}
 
-### 13. Student Do (10 minutes)
-
-> Explain to your partners what each line does in this html5 tag structure file
-
-
-### Student Do (20 minutes)
+### 14. Student Do (15 minutes)
 * *Show [this html file](in-class-exercises-1.2/1.2.6-in-class-exercise.html){:target="_blank"} on the projector. It is what the students must code out in this exercise.*
 
 * *Slack this out*
 
 * Make a new file called `student-bio.html` using terminal
-* Stage, commit, and push to first-week-repo
 * Inside your `student-bio.html` file do the following:
     + Make a `header` tag, inside the header, make an img tag that uses this image:
     https://github.com/RutgersCodingBootcamp/All-Classwork-Homework/blob/master/week-1-html-css-git-heroku/in-class-exercises-1.2/RutgersBanner.png 
@@ -332,8 +328,11 @@ for your reference:
 Bonus:
 * Stage, commit, and push to github
 
+##### 135 minutes went by
 
-### Instructor Do (20 minutes)
+### 15. Instructor Do (20 minutes)
+
+* *demonstrate all of this with in-class-exercises-1.2/15-instructor-do.html*
 
 + Discuss CSS
     + What is CSS
@@ -363,12 +362,13 @@ Bonus:
         + In Sublime text you can type `command + /` on the line or a selected section to comment it out
 
 
-### Student Do (20 minutes)
+### 16. Student Do (20 minutes)
 
 * *Show [this html file](in-class-exercises-1.2/1.2.9-in-class-exercise.html){:target="_blank"} on the projector. It is what the students must code out in the next exercise.*
 
 * *Slack this out*
 
+* Put all of this code where you normally code in, inside a folder named week1-day2-html-css
 * Make a folder called `css` using terminal
 * Inside the `css` folder make a file called `style.css` using terminal
 * Stage, commit, and push this code to Github
@@ -410,12 +410,12 @@ Bonus:
 
 * If your forgot how to write the css properties, you can reference all css properties here https://developer.mozilla.org/en-US/docs/Web/CSS/Reference
 
-Bonus 1:
+Bonus:
 * Stage, commit, and push this new file to Github
 
-### Instructor Do (10 minutes)
+### 17. Instructor Do (5 minutes)
 
-* *Slack the following to students*
+* *Go over previous exercise*
 
 
 # Copyright
