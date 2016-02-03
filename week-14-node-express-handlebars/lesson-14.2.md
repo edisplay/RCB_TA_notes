@@ -95,7 +95,7 @@ PART TWO:
 Instructor Demo Update in C.R.U.D. using MySQL database.
 Using Node Express Handlebars and HTML form submit
 
-### 4. Partners do (10 minute) 
+### 12. Partners do (10 minute) 
 * *Have student explain to eachother what just happened* 
 
 ### 12. Everyone do: (10 minutes) 
