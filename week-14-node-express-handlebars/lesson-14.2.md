@@ -26,7 +26,8 @@ look at this file at the root of the repository:
 
 1. copy these objectives into that objectives.txt file and save it, commit it, push it up.
 
-* keep the file open while the students are reading the objectives 
+* keep the file open while the students are reading the objectives
+  * Students will use GET, POST, PUT, and DELETE.  
   * Students will be able to create C.R.U.D Apps in Node
   * Using Node.js server to connect MySQL database and Express and handlebar to server pages using different routes.
 
@@ -55,36 +56,30 @@ Review Exercise:
 
 
 ### 3. Instructor do (10 minutes)
-Instructor Demo Read in C.R.U.D. using MySQL database.
+Instructor Demo GET in C.R.U.D. using MySQL database.
 Using Node Express Handlebars and HTML form submit
 
 ### 4. Partners do (5 minute) 
 * *Have student explain to eachother what just happened* 
 
-### 5. Everyone do (10 minute) 
+### 4.5 Everyone do: ()
+Instructor calls on random students on what you happened.
+
+### 5. Everyone do (15 minute) 
 * *Slack this out and commit this in your in class repo*
 Student Exercise:
 Create a Node Express MySQL handlebars APP.
 That can do Read in C.R.U.D. using MySQL database.
 
-### 6. Instructor do (10 minutes) 
+### 6. Instructor do (15 minutes) 
 * *Go over the previous exercise with the class - call on one unique student per each part of the previous exercise to explain what they did for each part of the exercise*
 
-### 7. Instructor do (10 minutes) 
+### 7. Instructor do (15 minutes) 
 Instructor Demo Create in C.R.U.D. using MySQL database.
 Using Node Express Handlebars and HTML form submit
 
 ### 8. Everyone do (10 minutes)
 * *Have student explain to eachother what just happened* 
-
-### 9. Everyone do (10 minutes)
-Student Exercise:
-Create a Node Express MySQL handlebars APP.
-That can do Read in C.R.U.D. using MySQL database.
-
-### 10. Everyone do (10 minutes)
-> Explain to the people around you. I'll call on random people. If you're wrong, i'm going to call out the people next to you for not explaining it to you well.
-
 
 -- 15 minute break -- (total including break: 100 minutes)
 
