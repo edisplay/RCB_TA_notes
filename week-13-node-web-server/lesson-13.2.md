@@ -94,7 +94,7 @@ Explore:
 
 ###### 75 minutes have passed - break time for 15 minutes :)
 
-### 5. Instructor Do `20 minutes`
+### 5. Instructor Do `30 minutes`
 `npm install express-session --save`
 
 ```
@@ -145,7 +145,11 @@ app.listen(PORT, function() {
 * Create middleware to check if the user is logged in before allowing access to the account page
 * Have fun
 
-### 7. Instructor Review `10 minutes`
+### 7. Instructor Review `30 minutes`
+Explore:
+* How would you save this across multiple servers? (answer: DB)
+* What if the server dies?
+* Adding middleware only on routes that need to be secured
 
 # Copyright
 Coding Boot Camp (C) 2016. All Rights Reserved.
