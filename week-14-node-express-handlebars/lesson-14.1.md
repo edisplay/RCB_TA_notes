@@ -32,6 +32,7 @@ look at this file at the root of the repository:
   * Students will practice using handlebar to server pages.
 
 # Theme: 
+Node Express Handlebars
 
 --------- --------- ---------
 
@@ -245,11 +246,11 @@ Setup the App:
 * Setup the 'main.handlebars' file to take in handlebars data
 * Setup the 'index.handlebars' file to have the template to be able to render onto
 
-### 10. Partners do: (10 minutes) 
+### 9. Partners do: (10 minutes) 
 
 > Explain to the people around you. I'll call on random people. If you're wrong, i'm going to call out the people next to you for not explaining it to you well.
 
-### 12. Everyone do (20 minutes) 
+### 10. Everyone do (20 minutes) 
 Students exercise:
 
 Create you own Ben and Jerry App:
@@ -258,11 +259,11 @@ Create you own Ben and Jerry App:
   * Using handlebars and Express create a route for each of the ice cream you created
   * Whenever an ice cream route is hit, it will render the name, price, and awesomeness of that ice cream.
 
-### 13. Everyone do (10 minutes) 
+### 11. Everyone do (10 minutes) 
 * *Go over the previous exercise with the class - call on one unique student per each part of the previous exercise to explain what they did for each part of the exercise*
 
 
-### 14. Student do: ( 5 minutes )
+### 12. Student do: ( 5 minutes )
 * * Go over the instructions for the homework assignment*
 
 
