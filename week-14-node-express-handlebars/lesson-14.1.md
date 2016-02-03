@@ -39,7 +39,7 @@ Node Express Handlebars
 # INSTRUCTOR MUST COVER 3 - 12 !!!
 
 ```
-ALL or they won't be able to do the homework.
+Or they won't be able to do the homework.
 ```
 
 PART ONE:
@@ -95,7 +95,7 @@ The page will display: `0,5,5,10,15,25,40,65,105,170,275,445`
 Create a simple Node App to connect to MySQL & Express, that will send data to the page.
 
 * Create app dir named "magical_schools"
-* Create Node App `npm init`
+* Create package.json with `npm init`
 * Create `index.js` file
 * Install npm package Express `npm install express --save`
 * Setup Express in `index.js` file
@@ -179,17 +179,18 @@ Exercise:
 * Create a Node App with Express and MySQL npm.
 * Create 3 Express routes:
   * Create a '/cast' route that will display all the names from the table order by `id`
-  * Create a '/coolness' route that will display all the coolness_points from the table order from highest value to lowest value
-  * Create a '/:attitude' route that will display the name from the table if the param matches attitude to on any row in the table 
+  * Create a '/coolness-chart' route that will display all cast members and their coolness_points in the order from top to bottom
+  * Create a '/attitude-chart/:type' route that will display the name from the table if the param matches attitude to on any row in the table 
 
 ### 5. Instructor do (10 minutes) 
 
 * *Go over the previous exercise with the class - call on one unique student per each part of the previous exercise to explain what they did for each part of the exercise*
 
 ### 6. Instructor do (15 minutes) 
-Instructor shows why it's a bad idea to generate HTML using JavaScript only
+* *Instructor shows why it's a bad idea to generate HTML using JavaScript only.*
 
-Using the previous exercise the magical_schools send an HTML when the route is hit, send an html to the browser.
+* *Using the previous exercise the magical_schools send HTML when the route is hit, send html to the browser.*
+Show how primitive this way of generating HTML.
 
 ```
 app.get('/', function(req, res) {
@@ -202,20 +203,19 @@ app.get('/', function(req, res) {
         html += '<ul>'
         html += '<li> ' + result[s].id + ' </li>';
         html += '<li> ' + result[s].name + ' </li>';
-      html += '</ul>'
-      html += '<br />';
-    html += '</div>';
+        html += '</ul>'
+        html += '<br />';
+        html += '</div>';
     };
 
       res.send(html);
   });
 });
 ```
-Show how primitive this way of generating HTML.
 
 ### 7. Partners do (10 minutes)
 
-> Explain to the people around you. I'll call on random people. If you're wrong, i'm going to call out the people next to you for not explaining it to you well.
+> Explain why the above code is bad to the people around you. I'll call on random people. If you're wrong, i'm going to call out the people next to you for not explaining it to you well.
 
 
 -- 15 minute break -- (total including break: 110 minutes)
@@ -224,12 +224,12 @@ PART TWO:
 ---------
 
 ### 8. Instructor do: (15 minutes) 
-Instructor demos how to use handle bars
+* *Instructor demos how to use handlebars. Look in lesson-14.1.exercise_solutions folder.*
 
-Create a simple Node App with Express and handlebar and will generate and render HTML.
+Create a simple Node App with Express with handlebars that will generate and render HTML.
 
-* Create app dir named "ben_and_jerry"
-* Create Node App `npm init`
+* Create app dir named "instructor lunches"
+* Create package.json with `npm init`
 * Create `index.js` file
 * Install npm package Express `npm install express --save`
 * Setup Express in `index.js` file
@@ -246,28 +246,37 @@ Setup the App:
 * Setup the 'main.handlebars' file to take in handlebars data
 * Setup the 'index.handlebars' file to have the template to be able to render onto
 
-### 9. Partners do: (10 minutes) 
+### 9. Partners do: (5 minutes) 
 
-> Explain to the people around you. I'll call on random people. If you're wrong, i'm going to call out the people next to you for not explaining it to you well.
+> Explain how handlebars works to the people around you. I'll call on random people. If you're wrong, i'm going to call out the people next to you for not explaining it to you well.
 
-### 10. Everyone do (20 minutes) 
+### 10 Everyone do: (5 minutes)
+Call on random students to go over it.
+
+### 11. Everyone do (20 minutes) 
 Students exercise:
 
 Create you own Ben and Jerry App:
-  * Create 5 different kinds of ice cream, each with a different price and scale of awesomeness
-  * No MySQL keep all the data in the `index.js` file
+  * Create 5 different kinds of icecream, each with a different price and scale of awesomeness. Put the following variable in your 'index.js'
+  ```
+  var icecreams = [
+    {name: 'vanilla', price: 10, awesomeness: 3},
+    {name: 'chocolate', price: 4, awesomeness: 8},
+    {name: 'banana', price: 1, awesomeness: 1},
+    {name: 'greentea', price: 5, awesomeness: 7},
+    {name: 'jawbreakers', price: 6, awesomeness: 2},
+  ];
+  ```
+  * Do not use MySQL keep all the data in the `index.js` file
   * Using handlebars and Express create a route for each of the ice cream you created
-  * Whenever an ice cream route is hit, it will render the name, price, and awesomeness of that ice cream.
+  * When the icecreams route is hit, it will render the name, price, and awesomeness of that ice cream.
 
-### 11. Everyone do (10 minutes) 
+### 12. Everyone do (10 minutes) 
 * *Go over the previous exercise with the class - call on one unique student per each part of the previous exercise to explain what they did for each part of the exercise*
 
 
-### 12. Student do: ( 5 minutes )
+### 13. Student do: ( 5 minutes )
 * * Go over the instructions for the homework assignment*
-
-
-(Instructor do): Review all topics
 
 # Copyright
 Coding Boot Camp (C) 2016. All Rights Reserved.
