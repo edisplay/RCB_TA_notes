@@ -1,3 +1,32 @@
+When teaching in front of the class: make sure the students can all do the hw by the end of the week. Teach enough to do so. The lesson plans are built to do this, but now you're built to do this!
+
+What do you do in class?
+
+1. teach a little (15-20 minutes max)
+
+2. in between teaching - get them to talk to each other and explain concepts. Make sure they know that they are responsible for the people around them.
+
+If you understand what's going on and the person next to you doesn't, you fail.
+
+3. after they discuss things call on a student to go over it - get the class to clap for them if they get it right - if wrong say that's ok - move on to someone else
+
+4. get them to do an exercise
+
+5. go over the exercise
+
+
+Students are liars
+
+"do you understand" "yeah i got this"
+
+meanwhile they don't even have sublime text installed.
+
+look at their screen and then follow the steps for a good one on one
+
+
+
+
+
 # Preparing for class
 * have lesson plans open on your phone/tablet so you can refer to it during the class and also have it open on your computer but not visible to students (so you can copy and paste stuff from it to them on slack)
 
@@ -13,7 +42,7 @@ I felt a lot more relaxed than I usually did because I eliminated the need to co
 
 I didn't have to constantly copy and paste things from the lesson plan. Because it was all ready for me! 
 
-# why you can fall behind
+# why you can't fall behind
 
 if you fall behind, the students fall behind.
 
@@ -25,6 +54,10 @@ if the students fall behind - they can't do the hw. And if they can't do the hw 
 3. put your volume up
 4. After you set the timer, make sure it's up on the board clear so everyone can see, so students didn't know how much time was left
 5. Throughout the time period, you should give students updates regarding how long they have left for exercises.
+
+# always do checks for understanding
+
+
 
 # Students and Lesson Plans
 

@@ -137,6 +137,17 @@ and then press enter for your password
 and then do the importing above.
 
 
+##### None of the import directions above are working?
+
+do this instead to import the database, after you create zoo_db.
+
+`USE zoo_db`
+
+`source FILEpathTOzooDB.sql`
+
+`FILEpathTOzooDB = file path of zooDB.sql`
+
+
 ### Part 0.5: Test
 
 Test to see if import worked, inside the MySQL console
