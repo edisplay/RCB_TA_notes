@@ -8,9 +8,9 @@ app.use(express.static(__dirname + '/public'));
 
 // parse application/x-www-form-urlencoded 
 app.use(bodyParser.urlencoded({
-        extended: false
-    }))
-    // override with POST having ?_method=DELETE
+	extended: false
+}))
+// override with POST having ?_method=DELETE
 app.use(methodOverride('_method'))
 var exphbs = require('express-handlebars');
 app.engine('handlebars', exphbs({
@@ -18,9 +18,11 @@ app.engine('handlebars', exphbs({
 }));
 app.set('view engine', 'handlebars');
 
-var routes = require('./controller/routes.js');
+var routes = require('./controllers/burgers_controller.js');
+
 app.use('/', routes);
-app.use('/mySubmit', routes);
+app.use('/update', routes);
+app.use('/create', routes);
 
 var port = 3000;
 app.listen(port);

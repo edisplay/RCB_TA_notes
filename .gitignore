@@ -1,12 +1,15 @@
 week-10-intro-node-three-days/homework_solution/keys.js
 week-10-intro-node-three-days/test-stuff.js
 week-10-intro-node-three-days/in-class-10.2
+week-14-node-express-handlebars/homework_solution/notes
 
 node_modules/
 week-11-intro-constructors-two-days/Spotify_Preview_Player
 week-11-intro-constructors-two-days/in_browser_homework_solution
 week-11-intro-constructors-two-days/11.2-in-class-exercises/exercises-model.js
 week-14-node-express-handlebars/homework_solution/node_modules
-week-14-node-express-handlebars/lesson-14.1.exercise_solutions/calculator/node_modules
+week-14-node-express-handlebars/lesson-14.1.exercise_solutions/exercise1_calculator/node_modules
+week-14-node-express-handlebars/lesson-14.1.exercise_solutions/exercise2_magical_schools/node_modules
+week-14-node-express-handlebars/lesson-14.1.exercise_solutions/exercise3_ben_and_jerry/node_modules
 
 .DS_Store

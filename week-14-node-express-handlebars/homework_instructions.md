@@ -1,180 +1,130 @@
-#Week of 10.1, 10.2, 10.3 homework for Node.js
+#Week of 14 Homework Node Express Handlebars
 
 ### Introduction
 
-* You will make LIRI. LIRI is like SIRI (from an iphone).
+* You will create a "single page" Node Express App.
+			* it will look and act like a single page app, but it won't be a single page app
 
-* SIRI is a Speech Interpretation and Recognition Interface
+* You will use Handlebars to generate HTML.
 
-* LIRI is a Language Interpretation and Recognition Interface.
-
-* LIRI will be a command line node app that takes in paramaters and gives you back data.
+* You will use Node to connect MySQL database and Express to handle routing.
 
 * see demonstration of how it works * 
 
-### Debugging This Program
-* need to install iron-node globally to use to debug things
+### User story
 
-* if you haven't already run this in your terminal
-
-```
-npm install iron-node -g;
-```
-
-* to use iron-node
-	* put a debugger; on the line where you want to stop the program
-	* run the program like this from the console:
-
-```
-iron-node liri.js
-```
-
-* to get out of iron-node from the terminal: CONTROL + C on a MAC
+* Eat-Da-Burger! is a fun single page app, that lets the user input the name of a burger they want to eat and submit; once submited it's displayed in text on the left side of the page where it's waiting to be devoured. Each burger in the waiting area also has a `Devour it!` button. Once clicked the burger text will move it to the right side of the page. Everything entered will be stored into a MySQL database.
 
 ### Steps
 
-0. Make a twitter account if you don't already have one and post a few tweets
+Database setup:
 
-1. Make a new github repository called liri-node-app
+	1. Create the `burgers_db` in MySQL
 
-2. Make a .gitignore file
+	2. Create the tables and columns inside `burgers_db` like below
+	
+	3. The table should have 
+		* `id` as primary key auto incrementing
+		* `burger_name` as a string
+		* `devoured` as a boolean
+		* `date` as currentime
 
-Add the following to it.
+App setup:
 
-```
-keys.js
-node_modules
-.DS_Store
-```
-* You don't need .DS_Store in the .gitignore file if you're on a Windows Machine.
+	1. Create an App Dir called 'burger'
 
-3. Make a JavaScript file named keys.js
+	2. Make a package.json file `npm init`
 
-Inside keys.js your file will look like this:
+	3. Install Express npm package `npm install express --save`
 
-``` JavaScript
-console.log('this is loaded');
+	4. Create the 'server.js' file
 
-exports.twitterKeys = {
-  consumer_key: '<input here>',
-  consumer_secret: '<input here>',
-  access_token_key: '<input here>',
-  access_token_secret: '<input here>',
-}
+	5. Install Handlebars npm package `npm install express-handlebars --save`
 
-```
-4. Get your Twitter API creds by following these steps:
+	6. Install Method-override npm package `npm install method-override --save`
 
-* Step One: https://apps.twitter.com/app/new
-* Step Two: use http:// for your urls
-* Step Three: then go to Keys and Access Tokens to get your credentials for below
-* Step Four: then you have to click the button below on that page to create an access token
+	7. Install Body-Parser npm package `npm install body-parser --save`
 
-After you get those credentials fill in the <input here> portions in the keys.js file.
+	8. Install MySQL npm package `npm install mysql --save`
 
-5. Make a file called random.txt
+	10. Setup the following npm packages inside of `server.js` file
+		* express
+		* method-override
+		* body-parser
 
-* inside of random.txt put the following in with no extra characters or white space:
+DB Setup:
 
-```
-spotify-this-song,"I Want it That Way"
-```
+	1. Inside your `burger` Dir create a Dir named `db`
 
-6. Make a JavaScript file named liri.js
+	2. Create the `schema.sql` file
 
-7. At the top of the liri.js file make it so you grab the data from keys.js and store it into a variable to use
+	3. Code out the schema for your database
 
-8. Make it so liri.js can take in one of the following arguments
+	4. Launch MySQL, create the database and table
 
-* my-tweets
+Config Setup:
 
-* spotify-this-song
+	1. Inside your `burger` Dir create a Dir named `config`
 
-* movie-this
+	2. Create the `connection.js` file inside `config` Dir
 
-* do-what-it-says
+	3. Inside the `connection.js` setup the code to connect Node to MySQL
 
-So if you succeed, running the following commands in your terminal will do the followig things
+	4. Export connection
 
-```
-node liri.js my-tweets
-```
-* will show your last 20 tweets and when they were created at in the terminal
+	5. Create the `orm.js` file inside `config` Dir
 
-```
-node liri.js spotify-this-song '<song name here>'
-```
+	6. Import `connection.js` into `orm.js`
 
-* shows the following information about the song in the terminal
+	7. Inside the `orm.js` file create the code that will execute MySQL commands
 
-	* artist(s)
-	* song name
-	* preview link of the song from spotify
-	* album that the song is a part of
-	* song name
+	8. Export orm
 
-* if no song is provided then your program will default to
-	* "what's my age again" by blink 182
+Model setup:
 
-```
-node liri.js movie-this '<movie name here>'
-```
+	1. Inside your `burger` Dir create a Dir named `models`
 
-* this would output the following information to the terminal:
+	2. Create the `burger.js` file.
 
-	* Title
-	* Year
-	* IMDB Rating
-	* Country
-	* Language
-	* Plot
-	* Actors
-	* Rotten Tomatoes Rating 
-	* Rotton Tomatoes UrL
+	3. Import `orm.js` into `burger.js`
 
-	* if no movie is provided then the program will output information for the movie: 'Mr. Nobody'
-		* if you haven't watched Mr. Nobody then you should: http://www.imdb.com/title/tt0485947/
-		* You can catch it on Netflix
+	4. Inside `burger.js` create the code that will call the orm functions using burger specific input for the orm
 
-```
-node liri.js do-what-it-says 
-```
+	5. Export burger
 
-* Using the fs package in node, the program would take the text inside of random.txt and use it to call the first command with the second part as it's parameter
+Controller setup:
 
-* Currently in random.txt, the following text is there:
+	1. Inside your `burger` Dir create a Dir named `controllers`
 
-```
-spotify-this-song,"I Want it That Way"
-```
+	2. Create the `burgers_controller.js` file
 
-* so according to those instructions, you would  call the appropriate function and pass in "I Want it That Way" as the song.
+	3. Inside `burgers_controller.js` file import
+		* express
+		* router
+		* burger
 
-* This should work for any function and paramter you use.
+	4. Create the routes for the app.
 
-9. To get the data for the above things you'll have to use the following npm packages:
+View setup:
 
-* [twitter](https://www.npmjs.com/package/twitter)
-* [spotify](https://www.npmjs.com/package/spotify)
-* [request](https://www.npmjs.com/package/request)
-	* The request npm package will be used to hit the OMDB API
-		* [OMDB API](http://www.omdbapi.com)
+	1. Inside your `burger` Dir create a Dir named `views`
+	
+	2. Create the `index.handlebars` file inside `views` Dir
 
-* to install these npm packages run these commands one at a time.
+	3. Create the `layouts` Dir inside `views` Dir
 
-```
-npm install twitter
-npm install spotify
-npm install request
-```
+	4. Create the `main.handlebars` file inside `layouts` Dir
+	
+	5. Setup the `main.handlebars` file so it's able to be used by Handlebars
+
+	6. Setup the `index.handlebars` to have the template that Handlebars can render onto
+
+	6. Create a button in `index.handlebars` that will submit the user input into the database
+
 
 # BONUS
 
-* In addition to outputting the data to the terminal, also output all data to a txt file called log.txt
-
-* Make sure that each command you run gets appended to the log.txt file. 
-
-* Your log.txt file should not be overwritten each time you run a command.
+	Create nice CSS for this app.
 
 # Copyright
-Coding Boot Camp (C) 2015. All Rights Reserved.
+Coding Boot Camp (C) 2016. All Rights Reserved.
