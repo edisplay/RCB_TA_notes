@@ -1,0 +1,28 @@
+RUTGERS CODING BOOTCAMP
+	- ALL CLASS HOMEWORK
+		- Week 1
+			- homework assignment markdown
+			- homework solution (with css and html files, etc.)
+		- ...
+		- Week 26
+	- ALL LESSON PLANS
+		- instructor guide
+		- Week 1
+			- Monday/Tuesday
+				- lesson plan
+					- markdown
+					- powerpoints
+					- in-class assignments
+			- Wednesday/Thursday
+				- lesson plan
+					- markdown
+					- powerpoints
+					- in-class assignments
+		- Week ...
+		- Week 26
+	- PROJECTS
+		- Project 1
+			- project week instructions markdown
+			- group assignments
+		- Project 2, 3, etc.
+
