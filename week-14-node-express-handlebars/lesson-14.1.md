@@ -185,16 +185,39 @@ Exercise:
 
 * *Go over the previous exercise with the class - call on one unique student per each part of the previous exercise to explain what they did for each part of the exercise*
 
-### 6. Instructor do (5 minutes) 
-Instructor shows how you can't send the data from mysql to the page at the sametime 
+### 6. Instructor do (15 minutes) 
+Instructor shows why it's a bad idea to generate HTML using JavaScript only
+
+Using the previous exercise the magical_schools send an HTML when the route is hit, send an html to the browser.
+
+```
+app.get('/', function(req, res) {
+  connection.query('SELECT * FROM schools', function(err, result) {
+
+  var html = '<h1> These are the schools~!!! </h1>';
+
+    for (var s = 0; s < result.length; s++) {
+      html += '<div style="background-color:blue; color:red; margin-left:30px;">';
+        html += '<ul>'
+        html += '<li> ' + result[s].id + ' </li>';
+        html += '<li> ' + result[s].name + ' </li>';
+      html += '</ul>'
+      html += '<br />';
+    html += '</div>';
+    };
+
+      res.send(html);
+  });
+});
+```
+Show how primitive this way of generating HTML.
+
+### 7. Partners do (10 minutes)
+
+> Explain to the people around you. I'll call on random people. If you're wrong, i'm going to call out the people next to you for not explaining it to you well.
 
 
-### 7. Partners do (5 minutes)
-
-> Explain to the people around you what each of these joins do and why they're used. I'll call on random people. If you're wrong, i'm going to call out the people next to you for not explaining it to you well.
-
-
--- 15 minute break -- (total including break: 100 minutes)
+-- 15 minute break -- (total including break: 110 minutes)
 
 PART TWO:
 ---------
@@ -212,19 +235,30 @@ Create a simple Node App with Express and handlebar and will generate and render
 * Install npm package Express `npm install handlebars --save`
 * Install npm package `npm install express-handlebars --save` 
 
-### 10. Partners do: (15 minutes) 
-Students have an exercise with handlebars
+Setup the App:
 
+* Setup the config for `index.js` for all npm packages
+* Inside "ben_and_jerry" Dir create the 'views' Dir
+* Inside the 'views' Dir create the 'index.handlebars' file 
+* Inside the 'views' Dir create the 'layouts' Dir
+* Inside the 'layouts' Dir create the 'main.handlebars' file
+* Setup the 'main.handlebars' file to take in handlebars data
+* Setup the 'index.handlebars' file to have the template to be able to render onto
 
-### 11. Partners Demo: (15 minutes) 
-Instructor shows how to use handlebars to send data to a file from mysql and render the data on the page
+### 10. Partners do: (10 minutes) 
 
+> Explain to the people around you. I'll call on random people. If you're wrong, i'm going to call out the people next to you for not explaining it to you well.
 
-### 12. Instructor do (15 minutes) 
-Students have an exercise
+### 12. Everyone do (20 minutes) 
+Students exercise:
 
+Create you own Ben and Jerry App:
+  * Create 5 different kinds of ice cream, each with a different price and scale of awesomeness
+  * No MySQL keep all the data in the `index.js` file
+  * Using handlebars and Express create a route for each of the ice cream you created
+  * Whenever an ice cream route is hit, it will render the name, price, and awesomeness of that ice cream.
 
-### 13. Everyone do (15 minutes) 
+### 13. Everyone do (10 minutes) 
 * *Go over the previous exercise with the class - call on one unique student per each part of the previous exercise to explain what they did for each part of the exercise*
 
 
