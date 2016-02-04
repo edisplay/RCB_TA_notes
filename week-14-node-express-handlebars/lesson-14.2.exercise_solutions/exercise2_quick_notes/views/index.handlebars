@@ -1,0 +1,17 @@
+<h1>Quick Notes</h1>
+<h3>Saving the stories and events of life~!</h3>
+<div> 	
+  {{#each col}}
+	<div>
+		<pre>{{this.id}}. {{this.note}}</pre>
+	</div>
+  {{/each}}
+</div>
+
+<div>
+	<form action="/create" method="POST">
+		<textarea class="form-control" type="text" name="note" value="" id="enter_text"></textarea>
+		<button type="submit">Submit</button>
+	</form>
+	<p>Write down what's on your mind and Click the "Submit" button.</p>
+</div>

@@ -46,66 +46,195 @@ PART ONE:
 ---------
 
 ### 1. Student do (15 minutes) 
-
 * *Slack this out and commit this in your in class repo*
-Review Exercise:
+Review Exercise: Handlebars Render
 
+Given the following Js object 'lineage' create Node Express Handlebars App, that will render to HTML the family tree of these three house on one HTML page.
+	* Create the Node Express App
+	* Do not using MySQL
+	* Do not change the Js object 'lineage' in anyway
+	* Create the HTML for handlebars to properly render each character by their lineage. 
+
+Make sure the name of each house is displayed with an underline and make each house have a different colored text and indented according to generations.
+
+![lannister](images/housesL.png)
+![targaryen](images/housesT.png)
+![stark](images/housesS.png)
+
+```
+var lineage = {
+	lannister: {
+		house: 'House Lannister',
+		parents: {
+			first_parents: 'Joanna & Tywin',
+			second_parents: 'Devan & Dorna'
+		},
+		child: {
+			first_child: 'Cersei',
+			second_child: 'Jaime',
+			third_child: 'Tyrion',
+			fourth_child: 'Lancel'
+		}
+	},
+	targaryen: {
+		house: 'House Targaryen',
+		parents: 'Aerys II & Rhaella',
+		child: {
+			first_child: 'Rhaegar',
+			second_child: 'Viserys',
+			third_child: 'Daenerys'
+		}
+	},
+	stark: {
+		house: 'House Stark',
+		parents: 'Eddard & Catelyn',
+		child: {
+			first_child: 'Robb',
+			second_child: 'Sansa',
+			third_child: 'Arya',
+			fourth_child: 'Bran',
+			fifth_child: 'Rickon'		
+		}
+	},
+};
+```
+
+* *Instructor demos. Look in lesson-14.2.exercise_solutions folder.*
+
+BOUNS: 
+
+	Find an image online that represent the house sigils and make it appear above the name of each house in HTML.
 
 ### 2. Everyone do (10 minutes)
 * *Go over the previous exercise with the class - call on one unique student per each part of the previous exercise to explain what they did for each part of the exercise*
 
+### 3. Instructor do (15 minutes)
+Explain HTTP actions: 
 
-### 3. Instructor do (10 minutes)
-Instructor Demo GET in C.R.U.D. using MySQL database.
-Using Node Express Handlebars and HTML form submit
+GET: The GET method requests a representation of the specified resource. Requests using GET should only retrieve data and should have no other effect. (This is also true of some other HTTP methods.)
 
-### 4. Partners do (5 minute) 
+POST: The POST method requests that the server accept the entity enclosed in the request as a new subordinate of the web resource identified by the URI. The data POSTed might be, for example, an annotation for existing resources; a message for a bulletin board, newsgroup, mailing list, or comment thread; a block of data that is the result of submitting a web form to a data-handling process; or an item to add to a database.
+
+PUT: The PUT method requests that the enclosed entity be stored under the supplied URI. If the URI refers to an already existing resource, it is modified; if the URI does not point to an existing resource, then the server can create the resource with that URI
+
+DELETE: The DELETE method deletes the specified resource.
+
+
+### 4. Partners do (5 minutes)
+* *Have student talk to each other about how might these be using in an app* 
+
+### 5. Everyone do: (5 minutes)
+* *Call on one unique student per each part of the previous exercise to explain to the class on the topic*
+
+### 6. Instructor do (15 minutes)
+* *Create the 'quick_notes' App with GET, POST in front of students. Look in lesson-14.2.exercise_solutions folder.*
+
+* Create the 'quick_notes_db' in MySQL database.
+* Create app dir named "quick_notes"
+* Create package.json with `npm init`
+* Create `index.js` file
+* Install npm package MySQL `npm install mysql --save`
+* Install npm package Express `npm install express --save`
+* Setup Express in `index.js` file
+* Install npm package Express `npm install handlebars --save`
+* Install npm package `npm install express-handlebars --save` 
+* Install npm package Body-Parser `npm install body-parser --save`
+
+Setup the App:
+
+* Setup the config for `index.js` for all npm packages
+* Inside "quick_notes" Dir create the 'views' Dir
+* Inside the 'views' Dir create the 'index.handlebars' file 
+* Inside the 'views' Dir create the 'layouts' Dir
+* Inside the 'layouts' Dir create the 'main.handlebars' file
+* Setup the 'main.handlebars' file to take in handlebars data
+* Setup the 'index.handlebars' file to have the template to be able to render onto
+
+Code the App:
+
+* Write the code in 'index.js' with GET and POST route to connect to MySQL
+* Write the code in 'index.handlebars' with form action POST action
+
+* Explain what body-parser is and why it's needed.
+* Explain what {{#each}} is doing in 'index.handlebars' file
+
+### 7. Partners do (5 minutes)
 * *Have student explain to eachother what just happened* 
 
-### 4.5 Everyone do: ()
-Instructor calls on random students on what you happened.
+### 8. Everyone do: (5 minutes)
+* *Call on one unique student per each part of the previous demo to explain what just happened to the class*
 
-### 5. Everyone do (15 minute) 
+### 9. Everyone do (20 minute) 
 * *Slack this out and commit this in your in class repo*
-Student Exercise:
-Create a Node Express MySQL handlebars APP.
-That can do Read in C.R.U.D. using MySQL database.
 
-### 6. Instructor do (15 minutes) 
-* *Go over the previous exercise with the class - call on one unique student per each part of the previous exercise to explain what they did for each part of the exercise*
+Student Exercise: Wish List
 
-### 7. Instructor do (15 minutes) 
-Instructor Demo Create in C.R.U.D. using MySQL database.
-Using Node Express Handlebars and HTML form submit
+Create a Node Express MySQL Handlebars APP.
+That renders the MySQL data you created in the database when the index route is hit.
+And also let's user enter text that adds items to a wish list.
+Whenever a item is submited to the server redirect back to the same page.
 
-### 8. Everyone do (10 minutes)
-* *Have student explain to eachother what just happened* 
+### 10. Instructor do (15 minutes)
+* *Go over the previous exercise with the class, have student present what they created.*
 
--- 15 minute break -- (total including break: 100 minutes)
+-- 15 minute break -- (total including break: 120 minutes)
 
 PART TWO:
 ---------
 
-### 11. Instructor do (10 minutes)
-Instructor Demo Update in C.R.U.D. using MySQL database.
-Using Node Express Handlebars and HTML form submit
+### 11. Instructor do (20 minutes)
+* *Demo an App with PUT, DELETE.*
 
-### 12. Partners do (10 minute) 
+### 6. Instructor do (15 minutes)
+* *Create the 'day_planner' App with PUT, DELETE in front of students. Look in lesson-14.2.exercise_solutions folder.*
+
+* Create the 'day_planner_db' in MySQL database.
+* Create app dir named "day_planner"
+* Create package.json with `npm init`
+* Create `index.js` file
+* Install npm package MySQL `npm install mysql --save`
+* Install npm package Express `npm install express --save`
+* Setup Express in `index.js` file
+* Install npm package Express `npm install handlebars --save`
+* Install npm package `npm install express-handlebars --save` 
+* Install npm package Body-Parser `npm install body-parser --save`
+
+Setup the App:
+
+* Setup the config for `index.js` for all npm packages
+* Inside "quick_notes" Dir create the 'views' Dir
+* Inside the 'views' Dir create the 'index.handlebars' file 
+* Inside the 'views' Dir create the 'layouts' Dir
+* Inside the 'layouts' Dir create the 'main.handlebars' file
+* Setup the 'main.handlebars' file to take in handlebars data
+* Setup the 'index.handlebars' file to have the template to be able to render onto
+* Install npm package Method-override `npm install method-override --save`
+
+Code the App:
+
+* Write the code in 'index.js' with GET route to connect to MySQL
+* Write the code in 'index.handlebars' with form action PUT action
+* Write the code in 'index.handlebars' with form action DELETE action
+* Explain methodOverride and why it's needed inside 'index.handlebars' form action.
+
+### 12. Partners do (5 minute) 
 * *Have student explain to eachother what just happened* 
 
-### 12. Everyone do: (10 minutes) 
-Student Exercise:
-Create a Node Express MySQL handlebars APP.
-That can do Update in C.R.U.D. using MySQL database.
+### 13 Everyone do: (5 minute)
+Instructor calls on random students on what you happened.
 
-### 11. Everyone do (20 minutes) 
+### 14. Everyone do: (20 minutes) 
+Student Exercise: Current Mood
+* *Slack this out and commit this in your in class repo*
 
+* Create a Node Express MySQL Handlebars App.
+	* The app will let the user enter text from a text form box in HTML and hit sumbit button to store the text in MySQL database. 
+	* The app will render all the data from the database to the HTML.
+	* The app will have update and delete button on each of the text item in HTML, that let's the user update or delete.
 
-### 12. Everyone do (10 minutes) 
-* *Go over the previous exercise with the class - call on one unique student per each part of the previous exercise to explain what they did for each part of the exercise*
-
-
-(Instructor do): Review all topics
+### 15. Everyone do (15 minutes) 
+* *Look in lesson-14.2.exercise_solutions folder.*
+* *Go over the previous exercise with the class, have student present what they created.*
 
 # Copyright
 Coding Boot Camp (C) 2016. All Rights Reserved.
