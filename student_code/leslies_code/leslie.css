@@ -1,0 +1,36 @@
+*{
+    box-sizing: border-box;
+}
+
+#bio-title { /* the h2 tag. so only the font of the "About Me" is large */
+    font-size: 36px;
+}
+.bio {
+    border: 1px solid #cccccc;
+    position: relative;
+    background-color: #FFF8E1;
+    margin: 100px 80px 100px 80px;
+    padding: 20px;
+}
+#bio-text { /* your p tag, which includes all of the text in your biography  */ 
+    font-size: 15px;
+    position: relative;
+    margin-top: 15px;
+    clear: left;
+}
+#bio-image { /* grumpy cat/your photo */
+    float: right;
+}
+
+.footer {
+    clear:both;
+    background-color:#666666 ;
+    background-size:100px;
+    text-align:center;
+    font-size:10px;
+    font-color:#777777 ;
+    font-family:'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+}
