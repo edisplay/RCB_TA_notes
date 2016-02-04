@@ -1,4 +1,4 @@
-When teaching in front of the class: make sure the students can all do the hw by the end of the week. Teach enough to do so. The lesson plans are built to do this, but now you're built to do this!
+When teaching in front of the class: make sure the students can all do the hw by the end of the week. Teach enough to do so. The lesson plans are built to do this, but now 
 
 What do you do in class?
 
