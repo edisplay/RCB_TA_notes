@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>My Hangman Game</title>
+		<link rel="stylesheet" href="hangman.css">
+	</head>
+	<body>
+		<h1>My Hangman Game!</h1>
+		<button id="startGame">Start!</button>
+		<button id="restartGame">Restart</button>
+		<audio controls loop>
+			<source src="https://p.scdn.co/mp3-preview/05a8aac15b10fde968307c65200b0adff607c049">
+			Your browser does not support the audio element.
+		</audio>
+		<div class="border" id="game-section">
+			<div class="border" id="current-word-section">
+				<h3 class="section-title">Current Word</h3>
+				<div id="current-word"></div>
+			</div>
+			<div class="border" id="guesses-remaining-section">
+				<h3 class="section-title">Number of Guesses Remaining</h3>
+				<div id="guesses-remaining"></div>
+			</div>
+			<div class="border" id="guessed-letters-section">
+				<h3 class="section-title">Letters Already Guessed</h3>
+				<div id="guessed-letters"></div>
+			</div>
+		</div>
+		<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+		<script type="text/javascript" src="hangmanGame.js"></script>
+	</body>
+</html>
