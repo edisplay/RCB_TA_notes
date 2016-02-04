@@ -46,7 +46,6 @@ PART ONE:
 ---------
 
 ### 1. Student do (15 minutes) 
-
 * *Slack this out and commit this in your in class repo*
 Review Exercise: Handlebars Render
 
@@ -58,9 +57,9 @@ Given the following Js object 'lineage' create Node Express Handlebars App, that
 
 Make sure the name of each house is displayed with an underline and make each house have a different colored text and indented according to generations.
 
-![lannister](/images/housesL.png)
-![targaryen](/images/housesT.png)
-![stark](/images/housesS.png)
+![lannister](images/housesL.png)
+![targaryen](images/housesT.png)
+![stark](images/housesS.png)
 
 ```
 var lineage = {
@@ -134,6 +133,7 @@ DELETE: The DELETE method deletes the specified resource.
 * Create app dir named "quick_notes"
 * Create package.json with `npm init`
 * Create `index.js` file
+* Install npm package MySQL `npm install mysql --save`
 * Install npm package Express `npm install express --save`
 * Setup Express in `index.js` file
 * Install npm package Express `npm install handlebars --save`
@@ -154,7 +154,9 @@ Code the App:
 
 * Write the code in 'index.js' with GET and POST route to connect to MySQL
 * Write the code in 'index.handlebars' with form action POST action
+
 * Explain what body-parser is and why it's needed.
+* Explain what {{#each}} is doing in 'index.handlebars' file
 
 ### 7. Partners do (5 minutes)
 * *Have student explain to eachother what just happened* 
@@ -173,7 +175,7 @@ And also let's user enter text that adds items to a wish list.
 Whenever a item is submited to the server redirect back to the same page.
 
 ### 10. Instructor do (15 minutes)
-* *Go over the previous exercise with the class*
+* *Go over the previous exercise with the class, have student present what they created.*
 
 -- 15 minute break -- (total including break: 120 minutes)
 
@@ -190,6 +192,7 @@ PART TWO:
 * Create app dir named "day_planner"
 * Create package.json with `npm init`
 * Create `index.js` file
+* Install npm package MySQL `npm install mysql --save`
 * Install npm package Express `npm install express --save`
 * Setup Express in `index.js` file
 * Install npm package Express `npm install handlebars --save`
@@ -217,21 +220,21 @@ Code the App:
 ### 12. Partners do (5 minute) 
 * *Have student explain to eachother what just happened* 
 
-
 ### 13 Everyone do: (5 minute)
 Instructor calls on random students on what you happened.
 
-
 ### 14. Everyone do: (20 minutes) 
-Student Exercise:
-Create a Node Express MySQL handlebars APP.
-That can do Update in C.R.U.D. using MySQL database.
+Student Exercise: Current Mood
+* *Slack this out and commit this in your in class repo*
+
+* Create a Node Express MySQL Handlebars App.
+	* The app will let the user enter text from a text form box in HTML and hit sumbit button to store the text in MySQL database. 
+	* The app will render all the data from the database to the HTML.
+	* The app will have update and delete button on each of the text item in HTML, that let's the user update or delete.
 
 ### 15. Everyone do (15 minutes) 
-* *Go over the previous exercise with the class - call on one unique student per each part of the previous exercise to explain what they did for each part of the exercise*
-
-
-(Instructor do): Review all topics
+* *Look in lesson-14.2.exercise_solutions folder.*
+* *Go over the previous exercise with the class, have student present what they created.*
 
 # Copyright
 Coding Boot Camp (C) 2016. All Rights Reserved.
