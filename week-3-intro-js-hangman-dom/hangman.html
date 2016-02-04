@@ -6,13 +6,19 @@
 	</head>
 	<body>
 		<h1>My Hangman Game!</h1>
-		<button id="startGame">Start!</button>
+		
+		Press any key to get started!
+
 		<button id="restartGame">Restart</button>
 		<audio controls loop>
 			<source src="https://p.scdn.co/mp3-preview/05a8aac15b10fde968307c65200b0adff607c049">
 			Your browser does not support the audio element.
 		</audio>
 		<div class="border" id="game-section">
+			<div class="border" id="current-word-section">
+				<h3 class="section-title">Wins</h3>
+				<div id="wins"></div>
+			</div>
 			<div class="border" id="current-word-section">
 				<h3 class="section-title">Current Word</h3>
 				<div id="current-word"></div>

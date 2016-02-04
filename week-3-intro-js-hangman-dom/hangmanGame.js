@@ -13,43 +13,24 @@
 // ---BONUS: Make the screen flash
 
 var hangmanGame = {
-	wordsToPick: ["simple","bumrush","topgun","superbad","hackers","limitless"],
+	//"bumrush", "topgun", "superbad", "hackers", "limitless"
+	wordsToPick: ["simple"],
 	wordInPlay: "",
 	lettersOfTheWordInPlay: [],
-	shouldContinue: true,
 	matchedLetters: [],
 	guessedLetters: [],
 	guessesLeft: 0,
 	totalGuesses: 0,
-	letterPlayed: '',
+	letterGuessed: '',
+	wins: 0,
 
 	// ---Start the game---
 	playGame: function() {
-		this.getRandomWordToPlay();
-		this.promptAndPlay();
-	},
-	promptAndPlay: function() {
-		// ---Get the keystrokes from the User---
-		// ---Option 1---
-		var self = this;
-		var letter = $("body").on("keypress", this, function(event) {
-			console.log(event);
-			debugger;
-			var letter = String.fromCharCode(event.charCode);
-			console.log(letter);
-			event.data.letterPlayed = letter;
-			return letter;
-		});
-		console.log(letter);
-
-		// ---Get the letter from the prompt
-		// ---Option 2---
-		// var letter = prompt("Please guess a letter:");
-		// this.checkLetter(letter);
+		this.getRandomWordToPlay()
 	},
 	// ---Check the letter---
 	checkLetter: function(letter) {
-		console.log(letter);
+		//console.log(letter);
 
 		var lettersArray = this.lettersOfTheWordInPlay;
 		// ---Check if the letter is good, meaning compare the letter to the array of letters for the wordInPlay value.
@@ -77,13 +58,13 @@ var hangmanGame = {
 		var guesses = $("#guesses-remaining");
 		this.guessesLeft--;
 		guesses.empty();
-		console.log(this.guessesLeft);
+		//console.log(this.guessesLeft);
 		guesses.text(this.guessesLeft);
 	},
 	// ---Get the word to play with---
 	getRandomWordToPlay: function() {
 		// ---Get the word from the array of words.
-		console.log(this.wordsToPick.length);
+		//console.log(this.wordsToPick.length);
 		this.wordInPlay = this.wordsToPick[Math.floor(Math.random() * this.wordsToPick.length)];
 		this.lettersOfTheWordInPlay = this.wordInPlay.split('');
 		var currentWordElem = $("#current-word");
@@ -99,7 +80,7 @@ var hangmanGame = {
 		});
 
 		this.getTotalGuesses();
-		console.log(this.lettersOfTheWordInPlay);
+		//console.log(this.lettersOfTheWordInPlay);
 	},
 	getTotalGuesses: function() {
 		var letters = this.lettersOfTheWordInPlay;
@@ -109,10 +90,10 @@ var hangmanGame = {
 		$("#guesses-remaining").text(this.guessesLeft);
 	},
 	checkForMatch: function() {
-		console.log(this.matchedLetters);
-		console.log(this.guessesLeft);
+		//console.log(this.matchedLetters);
+		//console.log(this.guessesLeft);
 		if (this.totalGuesses) {
-			// console.log($("#current-word").children());
+			// //console.log($("#current-word").children());
 			var currentWordElements = $("#current-word").children();
 			var currentWord = [],
 					n = 0,
@@ -120,13 +101,13 @@ var hangmanGame = {
 			for (var k = 0; k < currentWordElements.length; k++) {
 				currentWord.push(currentWordElements.eq(k).text());
 			}
-			console.log(currentWord);
-			console.log(currWord);
+			//console.log(currentWord);
+			//console.log(currWord);
 			while (n <= currentWord.length) {
 				currWord += currentWord[n];
-				// console.log(currWord += currentWord[n]);
-				// console.log(this.wordInPlay);
-				console.log(currWord);
+				// //console.log(currWord += currentWord[n]);
+				// //console.log(this.wordInPlay);
+				//console.log(currWord);
 				// ---If yes, alert the user they won.
 				if (currWord === this.wordInPlay) {
 					$("#restartGame").css("visibility", "visible");
@@ -138,14 +119,17 @@ var hangmanGame = {
 					alert("You Win!");
 					return;
 				} else if (this.guessesLeft === 0) {
-					console.log(currWord);
-					console.log(this.wordInPlay);
+					//console.log(currWord);
+					//console.log(this.wordInPlay);
 					// ---If yes, alert the user they won.
 					if (currWord === this.wordInPlay) {
-						console.log(currWord);
-						console.log(this.wordInPlay);
+						//console.log(currWord);
+						//console.log(this.wordInPlay);
 						alert("You Win!");
 						$("#restartGame").css("visibility", "visible");
+						this.wins++;
+						var winsOnPage = document.querySelector('#wins');
+						winsOnPage.innerHTML = this.wins;
 					} else {
 						$("#restartGame").css("visibility", "visible");
 						alert("Game Ends!");
@@ -155,14 +139,19 @@ var hangmanGame = {
 
 				n++;
 			}
-			// ---If not, prompt user again.
-			this.promptAndPlay();
 		}
 	}
 };
 
-$("#startGame").on("click", function(e) {
-	hangmanGame.playGame();
+hangmanGame.playGame();
+
+debugger;
+
+$("body").on("keypress", function(event) {
+	var letter = String.fromCharCode(event.charCode);
+	hangmanGame.letterGuessed = letter;
+	hangmanGame.checkLetter(hangmanGame.letterGuessed);
+	debugger;
 });
 
 $("#restartGame").on("click", function(e) {
