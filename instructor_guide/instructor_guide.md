@@ -1,8 +1,10 @@
+# Pavan to do get academic sop in here and links to videos
+
 When teaching in front of the class: make sure the students can all do the hw by the end of the week. Teach enough to do so. The lesson plans are built to do this, but now 
 
 What do you do in class?
 
-1. teach a little (15-20 minutes max)
+1. teach a little (15 minutes max)
 
 2. in between teaching - get them to talk to each other and explain concepts. Make sure they know that they are responsible for the people around them.
 
@@ -14,6 +16,7 @@ If you understand what's going on and the person next to you doesn't, you fail.
 
 5. go over the exercise
 
+6. repeat steps 1-5
 
 Students are liars
 
@@ -21,7 +24,7 @@ Students are liars
 
 meanwhile they don't even have sublime text installed.
 
-look at their screen and then follow the steps for a good one on one
+look at their screen and then help them get to the conclusions they have to get to.
 
 
 

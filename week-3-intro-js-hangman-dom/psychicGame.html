@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>The Psychic Game</title>
+</head>
+<body>
+
+<h1>The Psychic Game</h1>
+
+<p>Guess what letter I'm thinking of</p>
+
+<p>Wins: <span id="wins">0</span></p>
+
+<p>Losses: <span id="losses">0</span></p>
+
+<p>Guesses Left: <span id="guessesLeft">0</span></p>
+
+<p>Your Guesses so far: <span id="guessesSoFar"></span></p>
+	
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+<script type="text/javascript">	
+	var letters = ['a', 'b', 'c'];
+	var guessedLetters = [];
+	var letterToGuess = null;
+	var totalGuesses = 9;
+	var guessesLeft = 9;
+	var wins = 0;
+	var losses = 0;
+
+	var updateGuessesLeft = function(){
+		document.querySelector('#guessesLeft').innerHTML = guessesLeft;
+	};
+	
+	var updateLetterToGuess = function(){
+		this.letterToGuess = this.letters[Math.floor(Math.random() * this.letters.length)];
+	};
+
+	var updateGuessesSoFar = function(){
+		document.querySelector('#guessesSoFar').innerHTML = guessedLetters.join(', ');;
+	};
+
+	var reset = function(){
+		totalGuesses = 9;
+		guessesLeft = 9;
+		guessedLetters = [];
+		updateLetterToGuess();
+		updateGuessesLeft();
+	}
+	
+	updateLetterToGuess(); //execute on page load
+	updateGuessesLeft();
+
+	document.onkeyup = function(event) {
+		guessesLeft--;
+		updateGuessesLeft();
+
+		if (guessesLeft > 0){
+			var letter = String.fromCharCode(event.keyCode).toLowerCase();
+			if (letter == letterToGuess){
+				wins++;
+				document.querySelector('#wins').innerHTML = wins;
+				reset();
+			}
+		}else if(guessesLeft == 0){
+			losses++;
+			document.querySelector('#losses').innerHTML = losses;
+			reset();
+		}
+
+	};
+</script>
+</body>
+</html>
