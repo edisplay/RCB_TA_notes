@@ -94,11 +94,13 @@ function attack(attacker, defender) {
 // console.log(jediMaster);
 // console.log(sithApprentice);
 
-// var attackResult = attack(jediMaster, sithApprentice); ---UNCOMMENT when ready to render result of attack
+// ---Currently, to change characters, just change the two arguments' indexes
+var attackResult = attack(characters[0], characters[3]); //---UNCOMMENT when ready to render result of attack
 
 // 2.1 Create functions to update objects after actions between objects.
 
-// var updatedCharacters = updateCharacterObjects(jediMaster, sithApprentice, attackResult);  ---UNCOMMENT when ready to render result of attack
+// ---Currently, to change characters, just change the first two arguments' indexes
+var updatedCharacters = updateCharacterObjects(characters[0], characters[3], attackResult);  //---UNCOMMENT when ready to render result of attack
 
 function updateCharacterObjects(attacker, defender, attackResult) {
 	console.log(attackResult);
@@ -110,6 +112,6 @@ function updateCharacterObjects(attacker, defender, attackResult) {
 	};
 };
 
-// console.log(updatedCharacters);
+console.log(updatedCharacters);
 
 // 3.1 Render character info from the results of actions between the characters to the DOM.
