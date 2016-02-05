@@ -286,7 +286,8 @@ Explain what's happening in the html file
 ### 13. Instructor Do (10 minutes)
 
 pull up this example for the students in sublime text and in the browser:
-[html5-tag-structure.html](in-class-exercises-1.2/html5-tag-structure.html)
+
+in-class-exercises-1.2/html5-tag-structure.html
 
 for your reference:
 
@@ -299,7 +300,7 @@ for your reference:
     + `<aside></aside>` - [description](http://www.w3schools.com/tags/tag_aside.asp)
 
 ### 14. Student Do (15 minutes)
-* *Show [this html file](in-class-exercises-1.2/1.2.6-in-class-exercise.html) on the projector. It is what the students must code out in this exercise.*
+* *Open in-class-exercises-1.2/14-student-do.html in chrome on the projector. It is what the students must code out in this exercise.*
 
 * *Slack this out*
 
@@ -332,7 +333,7 @@ Bonus:
 
 ### 15. Instructor Do (20 minutes)
 
-* *demonstrate all of this with in-class-exercises-1.2/15-instructor-do.html*
+* *demonstrate all of this referencing in-class-exercises-1.2/15-instructor-do.html*
 
 + Discuss CSS
     + What is CSS
@@ -364,7 +365,7 @@ Bonus:
 
 ### 16. Student Do (20 minutes)
 
-* *Show [this html file](in-class-exercises-1.2/1.2.9-in-class-exercise.html) on the projector. It is what the students must code out in the next exercise.*
+* *Open this file in chrome: in-class-exercises-1.2/16-student-do.html on the projector. It is what the students must code out in the next exercise.*
 
 * *Slack this out*
 

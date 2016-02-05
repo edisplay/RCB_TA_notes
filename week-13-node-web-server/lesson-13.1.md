@@ -39,7 +39,6 @@ Using `node.js` to serve web pages
 
 * Apache
 * Nginx
-* Ruby on Rails
 * Microsoft IIS
 * Apache Tomcat
 
