@@ -84,7 +84,7 @@ HTML, CSS, Github, Heroku
       + Computed
           + This shows how the browser is interpreting the element you have selected in the Elements panel
 
-  + *Instructor - Change the styling of the page via the left and right part of the elements tab of inspector [the student-bio.html page](in-class-exercises-1.2/1.2.9-in-class-exercise.html){:target="_blank"} using Inspector*
+  + *Instructor - Change the styling of the page via the left and right part of the elements tab of inspector [the student-bio.html page](in-class-exercises-1.2/14-student-do.html){:target="_blank"} using Inspector*
     + Change some text
     + Change some styling
 
