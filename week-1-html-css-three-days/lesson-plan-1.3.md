@@ -47,7 +47,16 @@ HTML, CSS, Github, Heroku
 
 * *Instructor does this while the students do this*
 
-> Open up last lesson's `student-bio.html` file in Google Chrome
+> Theodore_Roosevelt: Far better is it to dare mighty things, to win glorious triumphs, even though checkered by failure... than to rank with those poor spirits who neither enjoy nor suffer much, because they live in a gray twilight that knows not victory nor defeat.
+
+> you all try the hw - you all try these exercises - you all do what i say - and that is your triumph
+
+> Theodore_Roosevelt: Nobody cares how much you know, until they know how much you care."
+
+> team atmosphere - help thy neighbors - the stronger everyone is - the stronger our group projects are
+
+* *Slack this: https://en.wikipedia.org/wiki/Theodore_Roosevelt*
+> Open up https://en.wikipedia.org/wiki/Theodore_Roosevelt in Google Chrome
 
 > Right click anywhere on the page and select "Inspect". This is Chrome Developer Tools.
 
@@ -80,6 +89,9 @@ HTML, CSS, Github, Heroku
     + Change some styling
 
 ### 4. Student Do (10 minutes)
+
+* *slack them code from this folder: in-class-exercises-1.2*
+  * 16-student-do.html, assets/style.css, assets/RutgersBanner.png
 
 1. Highlight the `<div class="container">` element in the Elements panel
 2. In the Styles side panel, change the width from `1024px` to `600px`

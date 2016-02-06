@@ -1,13 +1,13 @@
 # Pavan to do get academic sop in here and links to videos 
 # Pavan to do get curriculum(s) for rutgers in here
 
-When teaching in front of the class: make sure the students can all do the hw by the end of the week. Teach enough to do so. The lesson plans are built to do this, but now 
+When teaching in front of the class: make sure the students can all do the hw by the end of the week. Teach enough to do so. The lesson plans are built to do this, but now you're built to do this.
 
 What do you do in class?
 
 1. teach a little (15 minutes max)
 
-2. in between teaching - get them to talk to each other and explain concepts. Make sure they know that they are responsible for the people around them.
+2. in between teaching - get them to talk to each other and explain concepts. Make sure they know that they are responsible for the understanding of the people around them.
 
 If you understand what's going on and the person next to you doesn't, you fail.
 
@@ -24,6 +24,8 @@ Students are liars
 "do you understand" "yeah i got this"
 
 meanwhile they don't even have sublime text installed.
+
+don't ask do you get this. Ask hey show me what you've done so far.
 
 look at their screen and then help them get to the conclusions they have to get to.
 
