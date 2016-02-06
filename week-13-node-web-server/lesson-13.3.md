@@ -125,6 +125,17 @@ app.listen(PORT, function() {
 * On the `Dashboard` page from earlier, add a list of `Github` usernames for 10 of your classmates
 * Clicking a username should get a list of repos for that user and return the JSON to the browser
 
+Starter code (using OMDB instead of Github. Same logic applies)
+```
+app.get('/movies/:movieName', function(req, res, next) {
+  var movieName = req.params.movieName;
+  omdb.search(movieName, function(err, movies) {
+    var firstMovie = movies[0];
+    res.send(JSON.stringify(firstMovie))
+  });
+});
+```
+
 ### 8. Instructor Review `15 minutes`
 * Talk about how this can be used via AJAX. They just created an API endpoint without realizing it
 

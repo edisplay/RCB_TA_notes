@@ -1,4 +1,7 @@
-instructor_report_card.md
+# Instructor Report Card
+* this is what instructors get graded on in the class.
+
+* *Pavan to do - make this a survey gizmo form so that we can get feedback on instructors from TAs on every class*
 
 1. did the instructor have students read out the objectives
 
