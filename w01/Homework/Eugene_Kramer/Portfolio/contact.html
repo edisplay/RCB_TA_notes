@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="robots" content="noindex">
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/layout.css"><!--sticky footer-->
+    <title>Contact</title>
+</head>
+<body>
+<div class="wrapper"><!--sticky footer-->
+    <div id="header-fullwrapper">
+        <header id="header-wrapper">
+            <div id="header-name">
+                <h1>
+                    <a href="index.html">Eugene Kramer</a>
+                </h1>
+            </div>
+
+            <nav id="header-nav">
+                <ul>
+                    <li><a href="index.html">About</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+    </div>
+    <div id="body-wrapper">
+        <section id="main">
+            <h2>Contact</h2>
+            <form action="contact.php" method="post">
+                <p class="form-label">Name</p>
+                <input type="text" name="name" placeholder="John Smith">
+                <p class="form-label">Email</p>
+                <input type="text" name="email" placeholder="example@gmail.com">
+                <p class="form-label">Message</p>
+                <textarea name="form-message"></textarea>
+                <input type="submit" value="Submit">
+            </form>
+        </section>
+        <div>
+            <aside id="sidebar">
+                <h4>Connect with Me</h4>
+                <div id="profileicons-container">
+
+                    <a href="https://github.com/EugeneKramer">
+                        <image src="assets/images/github.png" alt = "Github profile" height="64" width="64"/></a>
+                    <a href="http://www.linkedin.com">
+                        <image src="assets/images/linkedin.png" alt = "Linkedin profile" height="64" width="64"/></a>
+                    <a href="http://wwww.stackoverflow.com">
+                        <image src="assets/images/stackoverflow2.png" alt = "Stackoverflow Profile" height="64" width="64"/></a>
+                </div>
+            </aside>
+        </div>
+    </div>
+    <div class="push"></div>
+</div>
+<footer class="footer">
+    <div id="footer-wrapper">
+        <p>(C) 2016 Eugene Kramer</p>
+    </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,63 @@
+/*{
+		box-sizing: border-box;
+	}*/
+	
+		#James-Kim{
+			/*position: relative;*/
+			background-color: #4aaaa5;
+			text-align: left;
+			font-size: 30px;
+			padding-top: 20px;
+			padding-bottom: 20px;
+			color: white;
+		}
+
+		h2{
+			position: absolute;
+			margin-top: 75px;
+		}
+
+		#about-me{
+			font-size: 30px;
+			margin-left: 200px;
+			margin-top: 50px;
+			font-size: 35px;
+			color: #4aaaa5;
+			
+		}
+
+		#my-picture{
+			margin-top: 150px;
+			height: 200px;
+			width: 200px;
+		}
+		
+		p{
+			position: absolute;
+			font-size: 20px;
+			margin: 50px 100px 50px 200px;
+		}
+
+		#social-media{
+			position: relative;
+			left: 1400px;
+			bottom: 300px;
+			font-size: 30px;
+		}
+
+
+		#about{
+			position: static;
+			font-size: 25px;
+			margin-left: 1400px;
+			margin-top: 100px;
+		}
+		
+		#links{
+			position: absolute;
+			float: right;
+			margin: 110px 110px 110px 110px;
+			font-size: 20px;
+		
+
+		}
