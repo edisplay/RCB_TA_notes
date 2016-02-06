@@ -13,7 +13,7 @@
 
 <p>Losses: <span id="losses">0</span></p>
 
-<p>Guesses Left: <span id="guessesLeft">0</span></p>
+<p>Guesses Left: <span id="guessesLeft"></span></p>
 
 <p>Your Guesses so far: <span id="guessesSoFar"></span></p>
 	
@@ -36,7 +36,8 @@
 	};
 
 	var updateGuessesSoFar = function(){
-		document.querySelector('#guessesSoFar').innerHTML = guessedLetters.join(', ');;
+		document.querySelector('#guessesSoFar').innerHTML = guessedLetters.join(', ');
+		debugger;
 	};
 
 	var reset = function(){
@@ -52,10 +53,12 @@
 
 	document.onkeyup = function(event) {
 		guessesLeft--;
+		var letter = String.fromCharCode(event.keyCode).toLowerCase();
+		guessedLetters.push(letter);
 		updateGuessesLeft();
+		updateGuessesSoFar();
 
 		if (guessesLeft > 0){
-			var letter = String.fromCharCode(event.keyCode).toLowerCase();
 			if (letter == letterToGuess){
 				wins++;
 				document.querySelector('#wins').innerHTML = wins;
@@ -66,7 +69,6 @@
 			document.querySelector('#losses').innerHTML = losses;
 			reset();
 		}
-
 	};
 </script>
 </body>

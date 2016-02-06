@@ -8,11 +8,12 @@ look at this file at the root of the repository:
 [Instructor Guide](https://github.com/RutgersCodingBootcamp/All-Lesson-Plans/blob/master/instructor_guide.md)
 
 # Master Objectives (Internal Use - do not share with students - because it's a waste of time)
-* Expertly navigate the file system and terminal basics
-* Work independently or in a group on complex projects throughout the entire development lifecycle
-* Implement complex logical conditions to meet an objective.
-* Write SQL commands to perform Create, Read, Update and Delete commands
-* Write clean code with proper variable names, indentation according to industry best practices
+	* Expertly navigate the file system and terminal basics
+	* Work independently or in a group on complex projects throughout the entire development lifecycle
+	* Communicate the basics of serving a webpage and how the browser renders code
+	* Implement complex logical conditions to meet an objective.
+	* Write SQL commands to perform Create, Read, Update and Delete commands
+	* Write clean code with proper variable names, indentation according to industry best practices
 
 # Objectives (Slack out to students, have unique students read each one and Instructor makes a comment after each one being read)
 
