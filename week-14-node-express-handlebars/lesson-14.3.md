@@ -54,7 +54,7 @@ Review Exercise: feel_state
 * *Call on a weaker student to go over the previous exercise*
 
 ### 3. Instructor do (20 minutes)
-* *Do the following in in front of students*
+* *Demo the demo infront of students*
 * *Setup the MySQL with data from exercise_solutions folder*
 
 * *Instructor demos. Look in lesson-14.3.exercise_solutions folder.*
@@ -62,13 +62,13 @@ Review Exercise: feel_state
 * No Express, just MySQL and Node Instructor demo ORM just using Node console app, show how to use this with mulitple tables.
 	* The O.R.M functions once run when Node serer is lanuched will use MySQL commands with the user inputs
 		* Find all animals by name order by price
-		* Find an animal by the name of the buyer
+		* Find an animal by the name of the animal
 		* Find the buyer with the most animal
 
 * Explain why writting O.R.M are helpful, calling a function with inputs as opppose to written out each statement.
 
 ### 4. Partners do (5 minutes)
-* *Have student talk to each other about pros of O.R.M* 
+* *Have student talk to each other about the pros of O.R.M* 
 
 ### 4. Students do (15 minutes)
 Student Exercise: holiday party ORM
@@ -78,20 +78,29 @@ Student Exercise: holiday party ORM
 
 Create a holiday party planner app. Many different kinds of holidays are celebrated around the world, we want to help create parties for our clients and also keep track of all the events we host. In MySQL create a database called 'holiday_party_db' create two tables structured like the tables below.
 
-|id|client|
+- clients table
+|id|client name|
 |--|------|
 |1|Jonny|
+|2|Bobby|
 
-|id|party name|holiday name|party cost|client id|
+- parties table
+|id|party name|party type|party cost|client id|
 |--|----------|------------|----------|---------|
-|1|Jonny's Party|New Years|500|1|
+|1|Jonnys New Years Party|New Years|600|1|
+|2|Jonnys Chinese New Years Party|New Years|500|1|
+|3|Bobbys Baby Shower Party|Baby Shower|200|2|
+|4|Bobbys Cousin Birthday Party|Birthday Party|300|2|
+|5|Bobbys Superbowl Party|Superbowl Party|250|2|
 
 Create an Node MySQL app with an O.R.M functions that executes once the server is launched, no Express, no prompt.
-	* Make an O.R.M that will
-	* Create an entry in the database by inputing prompts, which saves to the MySQL database and their correct tables
-		* Insert an entry of a party with client info
-		* Find all active parties still being planned
-		* Find parties in cost from most expensive 
+	* Create a MySQL database with the tables and data given to you
+	* Create a Node app that connects to MySQL with a 'config' dir with a 'connection.js' file inside of it
+	* Create a 'orm.js' and make an O.R.M. that will
+		* Find all parties order by party cost
+		* Find parties by the party name
+		* Find the client with the most parties
+		* Bonus create a function in the O.R.M that will let the user add more clients and parties. 
 
 ### 5. Everyone Do (10 minutes)
 * *Go over the previous exercise with the class - call on one unique student per each part of the previous exercise to explain what they did for each part of the exercise*
@@ -101,7 +110,7 @@ Create an Node MySQL app with an O.R.M functions that executes once the server i
 ### 6. Instructor do (5 minutes)
 * * Talk about M.V.C *
 
-MVC is a framework for building web applications using a MVC (Model View Controller) design:
+* MVC is a framework for building web applications using a MVC (Model View Controller) design:
 	* The Model represents the application core (for instance a list of database records).
 	* The View displays the data (the database records).
 	* The Controller handles the input (to the database records).
@@ -124,31 +133,56 @@ MVC is a framework for building web applications using a MVC (Model View Control
 ### 12. BREAK ( 40 minutes )
 --------- --------- ---------
 
-
 ### 13. Instructor do: ( 10 minutes ) 
-* *Review callbacks*
+* *Demo Node app that is asynchronous *
+* *Instructor demo the app. Look in lesson-14.3.exercise_solutions folder.*
+Talk about why Node asynchronicity is an issue.
 
 ### 14. Partners do (5 minutes)
-* *Have student talk to each other about what just happened* 
+* *Have student talk to each other about why Node async happened and is an issue* 
 
-### 15. Everyone Do (5 minutes)
-* *Call on one unique student per each part of the previous demo to explain it*
+### 15. Instructor do: ( 10 minutes ) 
+* *Review callbacks*
+* *Instructor demo the functions. Look in lesson-14.3.exercise_solutions folder.*
 
-### 16. Instructor do: ( 10 minutes ) 
-* Node async *
+Explain what each of the functions is doing
 
+### 16. Partners do (5 minutes)
+* *Have student talk to each other about what just happened, and why callbacks can help with asynchronicity* 
 
-### 17. Partners do (5 minutes)
-* *Have student talk to each other about why Node async happenes* 
+### 17. Everyone Do (5 minutes)
+* *Call on one unique student per each part of the previous demo to explain what happened*
 
 ### 18. Instructor do: ( 15 minutes ) 
-* Demo M.V.C structure with orm - then give students this for next part.
+* Demo M.V.C structure with orm - then give students this exercise.
 * static public dir for assets
 * Handlebars `#if`
 
 ### 19. Students do: ( 20 minutes ) 
 * *Slack the followin instructions to student for them to do this exercise*
-* Create an App using M.V.C structure using callbacks to access the ORM.
+
+You are tasked to create a new App for a new gym that just opened up, the "Super Clubs Gym". In order to keep tracks of it's members you are to create a web based App that will do the following. Even before you finished the app other gyms got word of how awesome it is and they want you provid the same service for them as well.
+
+* Create an App using M.V.C structure using callbacks to access the O.R.M.
+	* Node Express Handlebars App uses MySQL database
+	* Renders an HTML that let's the user fillout a form to add new members
+	* Renders all the current users in the database
+	* Let's the user hit a button to update the visit_count of a member
+	* Let's the user delete a member from the database
+	* To make the code you created on as reuseable as possible create a Model file for each gym.
+	
+- super clubs gym table
+|id|member name|active|visit_count|
+|--|------|-|-|
+|1|Lenny|1|6|
+|2|Wendy|1|17|
+
+
+- sports gym table
+|id|member name|active|visit_count|
+|--|------|-|-|
+|1|Mike|0|4|
+|2|Ryan|1|153|
 
 ### 20. Instructor do: ( 10 minutes )
 * *Go over the previous exercise with the class - call on one unique student per each part of the previous exercise to explain what they did for each part of the exercise*

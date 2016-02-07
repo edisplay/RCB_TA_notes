@@ -1,4 +1,6 @@
-// examples of callbacks
+### examples of callbacks
+
+```
 
 var sayHi = function() {
 	var greeting = 'hi';
@@ -21,4 +23,4 @@ yell(function(input) {
 	alert(input);
 });
 
-
+```
