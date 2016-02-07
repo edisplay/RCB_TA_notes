@@ -152,7 +152,7 @@ DO NOT USE JS FIDDLES.
 </html>
 ```
 
-### 2. Student do (10 minutes)
+### 3. Student do (10 minutes)
 
 * Ask the user with a confirm: "Do you like sushi?" and store that into a variable.
 
@@ -181,17 +181,17 @@ solution
 </html>
 ```
 
-### 3. Everyone do (5 minutes)
+### 4. Everyone do (10 minutes)
 
 * *Go over the previous exercise*
 
-### 4. Instructor do (15 minutes)
+### 5. Instructor do (15 minutes)
 
-* *demo this code (it's additional to 2. student do)*
+* *demo the below code (we're basically adding to 2. student do)*
 
 * *explain it to the class*
 
-* *replace the conditional with (confirmSushi)*
+* *after demoing it then replace the conditional with (confirmSushi)*
 
 > you can't set a variable to an alert, because the alert function doesn't return anything
 
@@ -223,67 +223,65 @@ solution
 </html>
 ```
 
-### 5. Student do (15 minutes)
-
-
-As you go over the above code, you'll be covering the following:
-- taking in user input
-
-  - prompts take in strings
-    - what are strings
-
-  - confirms take in booleans
-    - what are booleans
-
-  - alerts just alert to the page
-
-### 6. 15 minutes I DO - use prompts/confirms, alerts/document.write, variables, strings/numbers/booleans, 
-   
-10 minutes we DO
+### 6. Student do (10 minutes)
 
 - ask the user if they eat steak
 
 - if they do then write the following to the screen: "Here's a steak sandwich!"
+
 - if they don't then write the following to the screen: "Here's a tofu stir fry!"
 
-/*
-  BONUS: additionally ask the user what their birthyear is. If it's greater than 1987, alert to the screen that "you're older than Pavan". If it's smaller than 1987, then alert to the screen that "you're younger than Pavan". If it's equal to 1987, then alert "you're around the same age as Pavan" to the screen.
-*/
 
-  solution:
-
-  //exercise
-  var eatSteak = confirm("do you eat steak?");
-  if (eatSteak){
-    document.write("Here's a steak");
-  }else{
-    document.write("Here's a tofu stir fry!");
-  }
-
-  //bonus
-  var year = prompt('What year were you born?');
-
-  var year = parseInt(year);
-
-  if (year > 1987){
-    alert("you're older than Pavan");
-  }elseif(year < 1987){
-    alert("you're younger than Pavan");
-  }else{
-    alert("you're around the same age as Pavan");
-  }
+BONUS: additionally ask the user what their birthyear is. If it's greater than 1987, alert to the screen that "you're older than Pavan". If it's smaller than 1987, then alert to the screen that "you're younger than Pavan". If it's equal to 1987, then alert "you're around the same age as Pavan" to the screen.
 
 
-    - variables contain data (like my name is 'Pavan')
+solution:
+```
+//exercise
+var eatSteak = confirm("do you eat steak?");
+if (eatSteak){
+  document.write("Here's a steak");
+}else{
+  document.write("Here's a tofu stir fry!");
+}
 
-    - variables can be initialized, then set
+//bonus
+var year = prompt('What year were you born?');
 
-    - if the variable is initialized, it's value is undefined
-      - you can do variable == undefined and it would be true
-        - undefined is a variable that's available in javascript on default (easy explaination)
-        - undefined is a variable that's available in global scope on default
+var year = parseInt(year);
 
-    - variables can be initialized and set in one go
+if (year > 1987){
+  alert("you're younger than Pavan");
+}elseif(year < 1987){
+  alert("you're older than Pavan");
+}else{
+  alert("you're around the same age as Pavan");
+}
+```
+
+### 7. Everyone Do 10 minutes
+
+Go over the previous exercise - call on students to speak
+
+##### 80 minutes have gone by
+
+### 7. Instructor demo 5 minutes
+
+* *show that the value of an initialized variable is undefined.*
+
+```
+var band;
+
+//prints to the console
+console.log(band);
+
+band = 'Collective Soul';
+
+console.log(band);
+```
+   
+
+
 
     - go over the different datatypes being used
 
@@ -585,48 +583,6 @@ As you go over the above code, you'll be covering the following:
 
   3 minutes I do
     break out of while loop with ```break;```
-
-Homework (you do):
-  Make an extreme rock paper scissors game that keeps running until the user wants to quit. It will look like this when done: https://youtu.be/z6YjKudahCE
-
-    - initialize a variable at the top called userInput
-
-    - inside a while loop that uses the following condition: userInput doesn't equal to a string 'quit'
-      - prompt the user with this question: "Please choose one of these options: rock, paper, scissors. If you want to stop playing then please type in quit" and capture it into the userInput variable
-
-    - you can use switch statements or if/elseif/else conditional logic
-
-    - if the user types in quit and clicks ok then the game should stop
-
-    - keep score and everytime you prompt the user to "Please choose one of these..." then tell the user their score
-
-    - if the user quits, then display the user's score on the page using document.write
-
-    - add this code to your github as a new repository called rock_paper_scissors_fun
-      - if you have trouble with github, then make a gist instead (doesn't require any installation): https://gist.github.com/
-
-      - submit your homework here: 
-        use: "week 1 extreme rock paper scissors" for the "name of assignment" question
-
-        https://docs.google.com/forms/d/1D8mazyOoKKOn7Kq5DHJWo6nSDyTOo94jxoPKGxDu5Y8/viewform?usp=send_form
-
-  Bonus 1: count the user's ties
-    - count everytime the user ties and display that when your game prompts the user to "Please choose one of these..."
-    - also display the user's ties when the user quits
-
-  Bonus 2: put in validation, so if the user doesn't type in rock, paper scissors, string or macbook then your prompt with "Please choose one of these options: rock, paper, scissors..." comes up again
-
-  Bonus 3: When the user quits, make a nice sound play if the user has a score greater than 0, make a bad sound play if the user has a score of 0 or below. Use the first answer to this question: http://stackoverflow.com/questions/9419263/playing-audio-with-javascript
-
-    - you can use sounds from here: http://soundbible.com/
-    - you need to download them and keep them included in the same folder as your javascript file in order to use them
-
-  Bonus 4: add in string, and macbook to the options available
-    - string beats rock and paper but gets beaten by scissors and macbook
-
-    - macbook beats paper, string but gets beaten by rock and scissors
-
-    - alternatively you can use envelope, rubber band and tape + come up with your own rules
 
 
 # Copyright
