@@ -84,7 +84,7 @@ HTML, CSS, Github, Heroku
       + Computed
           + This shows how the browser is interpreting the element you have selected in the Elements panel
 
-  + *Instructor - Change the styling of the page via the left and right part of the elements tab of inspector [the student-bio.html page](in-class-exercises-1.2/14-student-do.html){:target="_blank"} using Inspector*
+  + *Instructor - Change the styling of the page via the left and right part of the elements tab of inspector the student-bio.html page: in-class-exercises-1.2/14-student-do.html using Inspector*
     + Change some text
     + Change some styling
 
@@ -155,7 +155,7 @@ HTML, CSS, Github, Heroku
 
 ### 6. Instructor Do (10 minutes)
 
-* *[Open this file that shows these block elements to the students](in-class-exercises-1.3/element-examples.html)*
+* *Open this file that shows these block elements to the students: in-class-exercises-1.3/element-examples.html*
     1. *open up the file in sublime text and open up the file in the browser - split your screen*
     2. *move the block elements around show how they take up the full width of the page, so whatever element comes after them moves beneath them*
     3. *move the inline elements around to show how they stack next to each other because they don't take the full width of the page*
@@ -165,7 +165,7 @@ HTML, CSS, Github, Heroku
 
 + CSS Box Model
 
-*Instructor - open this [box model example](in-class-exercises-1.3/css-box-model-visual.html){:target="_blank"} on the projector*
+* *Instructor - open this box model example: in-class-exercises-1.3/css-box-model-visual.html on the projector*
 
 > The CSS box model is essentially a box that wraps around every HTML element. It consists of: margins, borders, padding, and the actual content.
     
@@ -185,7 +185,7 @@ HTML, CSS, Github, Heroku
 
 ### 8. Student Do (5 minutes)
 
-* *Instructor - Show [this html file](in-class-exercises-1.3/box.html){:target="_blank"} on the projector. It is what the students must see.*
+* *Instructor - Show in-class-exercises-1.3/box.html on the projector. It is what the students must see.*
 
 * *Slack this out*
 
@@ -203,7 +203,6 @@ HTML, CSS, Github, Heroku
   border-color: #113152;
 }
 ```
-* Slack your answer
 * Remember: the margin and padding values are clockwise (top, right, bottom, left)
 * Remember: the border values apply to all 4 sides
 
@@ -246,7 +245,7 @@ Pro-tip: Use the above snippet have the padding and border included in the eleme
 
 + Styling properties
     
-    + *Instructor - use [this html file](in-class-exercises-1.3/floats.html){:target="_blank"} example on the screen. Use inspector, comment and uncomment the overflow property on `#full`, and the clear on the footer. Show how they do similar things and what happens when they aren't there.*
+    + *Instructor - use this html file in-class-exercises-1.3/floats.html example on the screen. Use inspector, comment and uncomment the overflow property on `#full`, and the clear on the footer. Show how they do similar things and what happens when they aren't there.*
 
     + floats
         + The float CSS property specifies that an element should be taken from the normal flow and placed along the left or right side of its container, where text and inline elements will wrap around it. [reference](https://developer.mozilla.org/en-US/docs/Web/CSS/float){:target="_blank"}
@@ -262,7 +261,7 @@ Pro-tip: Use the above snippet have the padding and border included in the eleme
 
 ### 12. Student Do (15 minutes)
 
-* *Instructor - Show [this html file](in-class-exercises-1.3/floats.html){:target="_blank"} on the projector. It is what the students must code out in this exercise.*
+* *Instructor - Show this html file in-class-exercises-1.3/floats.html on the projector. It is what the students must code out in this exercise.*
 
 * *Slack this out*
 
@@ -321,12 +320,12 @@ Pro-tip: Use the above snippet have the padding and border included in the eleme
     + `display: none ` vs `visibility: hidden`
 
 
-* *Instructor - Show [this html file](in-class-exercises-1.3/positioning.html){:target="_blank"} on the projector. It is what the students must code out in the next exercise.*
+* *Instructor - Show this html file: in-class-exercises-1.3/positioning.html on the projector. It is what the students must code out in the next exercise.*
 
 
 ### 15. Student Do (15 minutes)
 
-* *Show [this html file](in-class-exercises-1.3/positioning.html){:target="_blank"} on the projector. It is what the students must code out in the next exercise.*
+* *Show this html file: in-class-exercises-1.3/positioning.html on the projector. It is what the students must code out in the next exercise.*
 
 * *Slack this out*
 
