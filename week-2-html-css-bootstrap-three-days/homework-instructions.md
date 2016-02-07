@@ -6,7 +6,7 @@
 
 ### Remember
 
-You will be fully capable of doing this homework by Saturday's class.
+You will be fully capable of doing this homework by the end of Saturday's class.
 
 ### Assignment One Instructions
 1. Inside your `portfolio` folder, find the `style.css` file. At the bottom you will write your media queries.

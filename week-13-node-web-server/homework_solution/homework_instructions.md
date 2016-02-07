@@ -14,6 +14,10 @@
 
 * You will add your (RPS game || Clicky game) as a page in your portfolio page
 
+### Remember
+
+You will be fully capable of doing this homework by the end of Saturday's class.
+
 
 ### Summary
 
