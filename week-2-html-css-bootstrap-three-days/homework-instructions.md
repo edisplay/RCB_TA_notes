@@ -4,6 +4,10 @@
 * Make the standard portfolio site you coded last week responsive
 * Create a unique and sophisticated portfolio using Bootstrap
 
+### Remember
+
+You will be fully capable of doing this homework by Saturday's class.
+
 ### Assignment One Instructions
 1. Inside your `portfolio` folder, find the `style.css` file. At the bottom you will write your media queries.
   + Use three `@media screen` tags with a `max-width` of `980px`, `768px`, and `640px`.

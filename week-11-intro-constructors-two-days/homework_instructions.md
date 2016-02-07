@@ -10,6 +10,10 @@
 
 * We will build this game step by setup one piece at a time.
 
+### Remember
+
+You will be fully capable of doing this homework by Saturday's class.
+
 ## Part 0: Setup
 
 * Install the npm package prompt

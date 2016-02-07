@@ -1,3 +1,11 @@
+# I will not continue until someone asks me a good question
+
+* force a question out
+
+> I will not continue teaching until I get one good question. 
+
+* *make sure the question is good before continuing* 
+
 # poll everywhere
 
 https://www.polleverywhere.com/plans/higher-ed
