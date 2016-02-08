@@ -336,9 +336,9 @@ if (age !== 'Run DMC'){
 
 if (age == 28){
   alert('You're as old as Pavan')
-}elseif(age < 28){
+}else if(age < 28){
   alert('You're younger than Pavan!')
-}elseif(age > 28){
+}else if(age > 28){
   alert('You're older than Pavan!)
 }
 ```
