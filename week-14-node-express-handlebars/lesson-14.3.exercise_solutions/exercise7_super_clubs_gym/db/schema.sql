@@ -1,24 +1,25 @@
 ### Schema
 /*
 
-CREATE DATABASE burgers_db;
-USE burgers_db;
+CREATE DATABASE gyms_db;
+USE gyms_db;
 
-CREATE TABLE burgers
+CREATE TABLE super_clubs
 (
 id int NOT NULL AUTO_INCREMENT,
-burger_name varchar(255) NOT NULL,
-devoured BOOL,
-date TIMESTAMP,
+name varchar(255) NOT NULL,
+active BOOL,
+visit_count INT,
 PRIMARY KEY (id)
 );
 
-SHOW COLUMNS from burgers;
+SHOW COLUMNS from super_clubs;
 
-INSERT INTO burgers (burger_name, devoured) VALUES ('Cheese', False) ;
+INSERT INTO super_clubs (name, active, visit_count) VALUES ('Lenny',1,6) ;
+INSERT INTO super_clubs (name, active, visit_count) VALUES ('Wendy',1,17) ;
 
-SELECT * FROM burgers;
+SELECT * FROM super_clubs;
 
-DROP DATABASE burgers_db;
+--DROP DATABASE gyms_db;
 
 */

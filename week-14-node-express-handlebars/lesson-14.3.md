@@ -164,21 +164,21 @@ Explain what each of the functions is doing
 You are tasked to create a new App for a new gym that just opened up, the "Super Clubs Gym". In order to keep tracks of it's members you are to create a web based App that will do the following. Even before you finished the app other gyms got word of how awesome it is and they want you provid the same service for them as well.
 
 * Create an App using M.V.C structure using callbacks to access the O.R.M.
-	* Node Express Handlebars App uses MySQL database
+	* Node Express Handlebars App uses MySQL database 
+	* Create a database name 'gyms_db' with tables structure like below
 	* Renders an HTML that let's the user fillout a form to add new members
 	* Renders all the current users in the database
 	* Let's the user hit a button to update the visit_count of a member
 	* Let's the user delete a member from the database
 	* To make the code you created on as reuseable as possible create a Model file for each gym.
 	
-- super clubs gym table
+- super clubs table
 |id|member name|active|visit_count|
 |--|------|-|-|
 |1|Lenny|1|6|
 |2|Wendy|1|17|
 
-
-- sports gym table
+- sports clubs table
 |id|member name|active|visit_count|
 |--|------|-|-|
 |1|Mike|0|4|
