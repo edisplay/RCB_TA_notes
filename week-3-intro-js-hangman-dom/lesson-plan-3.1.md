@@ -304,7 +304,7 @@ Go over the previous exercise - call on students to speak
 
 ##### 80 minutes have gone by
 
-### 7. Instructor demo 15 minutes
+### 7. Instructor demo 15 minutes   
 
 * with the below code
 
