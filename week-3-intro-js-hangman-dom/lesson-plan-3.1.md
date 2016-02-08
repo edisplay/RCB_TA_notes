@@ -388,6 +388,7 @@ switch (new Date().getDay()) {
 
 * *copy the code to the screen and ask the class to discuss what's going to get alerted to the screen (don't paste it to them)
 
+```
 <!DOCTYPE html>
 <html>
 <head>
@@ -452,6 +453,7 @@ switch (new Date().getDay()) {
   </script>
 </body>
 </html>
+```
 
 Solutions: 
   hi, dude, puppies, goats, goo goo dolls, one direction, tofu, richard
