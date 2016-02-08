@@ -43,8 +43,11 @@ DO NOT USE JS FIDDLES.
 
 # Objectives (Slack out to students, have unique students read each one and Instructor makes a comment after each one being read)
 
-* students will trigger break points in multiple ways to "stop time"
-* students will use 
+* students will trigger break points in a couple of ways to "stop time"
+* students will use JavaScript
+  * data types
+  * user input gathering techniques
+  * conditional logic
 
 ### 1. Partners do (15 minutes)
 
@@ -265,196 +268,223 @@ Go over the previous exercise - call on students to speak
 
 ##### 80 minutes have gone by
 
-### 7. Instructor demo 5 minutes
+### 7. Instructor demo 15 minutes
 
-* *show that the value of an initialized variable is undefined.*
+* with the below code
+
+* *show that the* 
+    * *value of an initialized variable is undefined.*
+    * *show not equal to comparison.*
+    * *show equal comparison.*
+    * *show else if.*
+    * *show parseInt.*
+    * *show the alternative to an if statement - a case statement.*
 
 ```
-var band;
+var favBand;
 
 //prints to the console
-console.log(band);
+console.log(favBand);
 
-band = 'Collective Soul';
+favBand = 'Collective Soul';
 
-console.log(band);
+console.log(favBand);
 ```
-   
+
+var age = prompt('your age');
+
+if (age !== 'Run DMC'){
+  alert('Your favorite band is not Run DMC.');
+}
+
+if (age == 28){
+  alert('You're as old as Pavan')
+}elseif(age < 28){
+  alert('You're younger than Pavan!')
+}elseif(age > 28){
+  alert('You're older than Pavan!)
+}
 
 
+//this replaces the entire page with this - so it's not something you'll normally use - but it's what we'll use for now to be able to print stuff to the page
+document.write('I am ' + age + ' years old.');
 
-    - go over the different datatypes being used
+var catAge = prompt('how old is your cat?');
 
-    - go over conditional logic 
+alert(catAge + 2); //won't work as expected
 
-    - go over writing to the page
+alert(parseInt(catAge) + 2); //works as expected
 
-      var userName = prompt("What's your name?");
-      var confirm = confirm('Do you like cats?');
+//alternatively you can do a switch statement:
 
-      var petName = 'Meeses';
-      var petType = 'tuxedo cat';
-      var petAge = 5;
-      var petIsCat = true;
+switch (new Date().getDay()) {
+    case 0:
+        day = "Sunday";
+        break;
+    case 1:
+        day = "Monday";
+        break;
+    case 2:
+        day = "Tuesday";
+        break;
+    case 3:
+        day = "Wednesday";
+        break;
+    case 4:
+        day = "Thursday";
+        break;
+    case 5:
+        day = "Friday";
+        break;
+    case 6:
+        day = "Saturday";
+        break;
+}
 
-      if (confirm){
-        alert(petName + petType + petAge)
-      }else{
-        alert("You don't get my cat's information")
-      }
+### 8. Everyone Do (15 minutes) 
 
-      if (petIsCat == true){
-        alert('my pet is a cat')
-      }else{
-        alert('my pet is not a cat')
-      }
+- exercise regarding strings, numbers and booleans, conditional logic
 
-      if (petAge !== 7){
-        alert('My pet is not 7 years old')
-      }
+* *copy the code to the screen and ask the class to discuss what's going to get alerted to the screen (don't paste it to them)
 
-      if (petAge == 5){
-        alert('My pet is 5 years old')
-      }elseif(petAge < 5){
-        alert('My pet is less than 5 years old')
-      }elseif(petAge > 5){
-        alert('My pet is older than 5 years old')
-      }
+if (true == true){
+  alert('hi')
+}else{
+  alert('bye')
+}
 
-      //this replaces the entire page with this - so it's not something you'll normally use - but it's what we'll use for now to be able to print stuff to the page
-      document.write('Welcome to our page ' + userName);
+if (false == false){
+  alert('dude')
+}else{
+  alert('nope')
+}
 
-      var catAge = prompt('how old is your cat?');
+if ("4" == 4){
+  alert('puppies')
+}else{
+  alert('goats')
+}
 
-      alert(catAge + 2); //won't work as expected
+if ("4" === 4){
+  alert('puppies')
+}else{
+  alert('goats')
+}
 
-      alert(parseInt(catAge) + 2); //works as expected
+if (true){
+  alert('goo goo dolls')
+}else{
+  alert('vanilla ice')
+}
+
+if (false){
+  alert('the neighborhood')
+}else{
+  alert('one direction')
+} 
+
+if (("5" + "5") == "55"){
+  alert('tofu')
+}else{
+  alert('soybean')
+}
+
+if ((6 + "5") == "65"){
+  alert('richard')
+}else{
+  alert('branson')
+}
+
+Solutions: 
+  hi, dude, puppies, goats, goo goo dolls, one direction, tofu, richard
+
+##### 110 minutes
+
+##### break - 15 minutes
+
+##### 125 minutes went by
+
+50 minutes
+arrays
+for loops
+
+### Instructor do - 10 minutes
+> It's time for arrays. Arrays are lists of things. Numbers, words, both, doesn't matter. Arrays are lists of things.
+
+> Everyone say it with me. "Arrays are lists of things"
+
+* *Demo and explain the below code*
+
+```
+var animals = ['parrot', 'cat', 'dog'];
+
+animals.length();
+
+animals[1];
+
+animals[2];
+
+animals[0];
+
+animals[animals.length()];
+
+animals[animals.length()-1];
+
+animals.indexOf('bear'); 
+
+animals.indexOf('parrot'); 
+```
+
+> arrays have indexes so we can get random value
+
+> arrays start at 0
+
+> arrays store any value you want, but you should probably store a list that makes sense
+
+> each instance of an array has its own methods
+
+```
+//check if something exists in an array or not
+if (animals.indexOf('bear') == -1) {
+  alert('not in the list man');
+}else{
+  alert('in the list man')
+}
+```
+
+```
+//choose random option from an array
+var randomComputerOption = animals[Math.floor(Math.random() * animals.length)];
+```
+
+```
+animals.push('bear') //pushes to the end
+
+animals.unshift('rabbit') //pushes to beginning // returns the new array length
+
+animals.pop() //removes the last element of the array //also returns that element as a value
+
+animals[0] = 'lion'; //replaces a value in an array
+```
 
 
+var word = 'barnard';
 
-      //alternatively you can do a switch statement:
+var wordsLetters = word.split(); //doesn't work as expected why?
 
-      switch (new Date().getDay()) {
-          case 0:
-              day = "Sunday";
-              break;
-          case 1:
-              day = "Monday";
-              break;
-          case 2:
-              day = "Tuesday";
-              break;
-          case 3:
-              day = "Wednesday";
-              break;
-          case 4:
-              day = "Thursday";
-              break;
-          case 5:
-              day = "Friday";
-              break;
-          case 6:
-              day = "Saturday";
-              break;
-      }
+var wordsLetters = word.split(''); //creates an array of the string 
+
+var letterIndex = wordsLetters.indexOf('a')
+
+wordsLetters.splice(letterIndex, 1); //gets rid of that letter in the array
+
+wordsLetters;
+
+//keep in mind that all of that is useful for the hangman game that you ladies will be building
+
+//explain what arrays are to your partner
 
 
-  10 minutes we Do (message me your answers)
-    - exercise regarding strings, numbers and booleans, conditional logic
-
-    if (true == true){
-      alert('hi')
-    }else{
-      alert('bye')
-    }
-
-    if (false == false){
-      alert('dude')
-    }else{
-      alert('nope')
-    }
-
-    if ("4" == 4){
-      alert('barnard')
-    }else{
-      alert('marford - I made this up')
-    }
-
-    if ("4" === 4){
-      alert('barnard')
-    }else{
-      alert('marford - I made this up')
-    }
-
-    if (true){
-      alert('goo goo dolls')
-    }else{
-      alert('vanilla ice')
-    }
-
-    if (false){
-      alert('the neighborhood')
-    }else{
-      alert('one direction')
-    }
-
-    if (("5" + "5") == "55"){
-      alert('tofu')
-    }else{
-      alert('soybean')
-    }
-
-    if ((6 + "5") == "65"){
-      alert('richard')
-    }else{
-      alert('branson')
-    }
-
-    Answers: 
-      goo goo dolls, one direction, tofu, richard
-
-  10 minutes I do (95 minutes)
-    - go over while loops
-
-    //1
-    var payingAttention = true;
-
-    while (payingAttention){
-      payingAttention = confirm('Are you paying attention _____?');
-    }
-
-    //ok ___ can you look at your phone - and stop paying attention - ____ is now not not paying attention
-
-    //2
-    var stockPrice = 10; //assume dollars
-
-    while (stockPrice >= 10){
-
-      stockPrice = confirm("What's YGE's stock price now?"); //won't work - why? Spend 2 minutes discussing this with your partner
-
-      if (stockPrice < 10){
-        alert('Sell!!!');
-      }
-    }
-
-    //Answer:
-    //wrap confirm in parseInt
-
-    //on a side note: isNaN(""); //checks if a value is a number or not - why not isNumber?... JavaScript
-
-  10 minutes we do (slack me your answers - if you don't, i'll assume you had trouble - and i'll be reaching out to help you)
-
-    - while loop exercise
-
-    //Problem 1
-      //ask the user for a number, if it's above 5, keep asking the user for a number, if not, then alert "you lost!!!"
-
-    //Problem 2
-      //ask the user for a letter
-
-      //if the letter is equal to either A, B, or C then keep going. If not then stop the loop. 
-
-      //make your program case insensitive by using toLowerCase() - go here: http://www.w3schools.com/jsref/jsref_tolowercase.asp
 
     //Bonus using arrays (we haven't gone over this yet)
       //start with this array 
@@ -463,66 +493,6 @@ console.log(band);
       //ask the user to guess a type of animal
         //if the animal is in the pets array then alert 'You won!'
         // use the indexOf method http://www.w3schools.com/jsref/jsref_indexof_array.asp - the indexOf method returns -1 if it's not in the array
-
-  10 minutes I do (arrays)
-    - lists of things
-    - has indexes so we can get random value
-    - starts at 0
-    - stores any value you want
-    - each instance has its own methods
-
-    lists
-      - animals, computers, trump
-
-    var animals = ['parrot', 'cat', 'dog'];
-
-    animals.length();
-
-    animals[1];
-
-    animals[2];
-
-    animals[animals.length()];
-    
-    animals[animals.length()-1];
-
-    animals.indexOf('bear'); 
-
-    animals.indexOf('parrot'); 
-
-    //check if something exists in an array or not
-    if (animals.indexOf('bear') == -1) {
-      alert('not in the list man');
-    }else{
-      alert('in the list man')
-    }
-
-    //choose random option from an array
-    var randomComputerOption = animals[Math.floor(Math.random() * animals.length)];
-
-    animals.push('bear') //pushes to the end
-
-    animals.unshift('rabbit') //pushes to beginning // returns the new array length
-
-    animals.pop() //removes the last element of the array //also returns that element as a value
-
-    animals[0] = 'lion'; //replaces a value in an array
-
-    var word = 'barnard';
-
-    var wordsLetters = word.split(); //doesn't work as expected why?
-
-    var wordsLetters = word.split(''); //creates an array of the string 
-
-    var letterIndex = wordsLetters.indexOf('a')
-
-    wordsLetters.splice(letterIndex, 1); //gets rid of that letter in the array
-
-    wordsLetters;
-
-    //keep in mind that all of that is useful for the hangman game that you ladies will be building
-
-    //explain what arrays are to your partner
 
 
   10 minutes we do
@@ -581,8 +551,16 @@ console.log(band);
 
       // slice will give us a copy of the array -> safer.
 
-  3 minutes I do
-    break out of while loop with ```break;```
+
+##### Instructor Do - 5 minutes
+    
+* show the hw instructions
+
+* two choices
+
+* make a psychic game
+
+* make a hangman game
 
 
 # Copyright

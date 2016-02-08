@@ -1,7 +1,17 @@
 # Engagement Tactics (most important part)
 
 ### Checkpoints
-- You should do check points. "Everyone explain what the css on the board does. Go you have three minutes!" ... "Stop! Ok, Allison what does the code on the screen do?" If she gets it wrong then ask the person next to her. If that person gets it right then tell them that they need to up their game and start explaining things better to the people around them.
+* You should do check points. 
+
+> Everyone explain what the css on the board does to your partners. Go you have three minutes!
+
+... 
+
+> Stop! Ok, Allison what does the code on the screen do?
+
+* *If she gets it wrong then ask the person next to her.*
+
+* *If that person gets it right then tell them that they need to up their game and start explaining things better to the people around them.*
 
 ### Don't ask - TELL!
 
