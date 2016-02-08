@@ -51,6 +51,9 @@ $(document).ready(function() {
 		}
 	];
 	var currSelectedCharacter;
+	var combatants = [];
+	var indexOfSelChar;
+	var attackResult;
 
 	// 1.1 Render character objects before actions to the DOM using jQuery.
 	for (var i = 0; i < characters.length; i++) {
@@ -85,15 +88,13 @@ $(document).ready(function() {
 			return;
 		} else {
 			event.currentTarget.className += " selected";
-			currSelectedCharEl.addClass("selected");
+			// currSelectedCharEl.addClass("selected");
 			currSelCharNameEl.text(event.currentTarget.children[0].textContent);
 			currSelCharHealthEl.text(event.currentTarget.children[1].textContent);
 		};
 
-		// 1.2.3 After choosing a character, generate the collection of available enemies to attack (you can't attack yourself).
+		// Capture selected character from global characters array.
 		var charactersArr = $(".character");
-		var availableCharsAttack = charactersArr.not(document.getElementsByClassName("character selected"));
-		var indexOfSelChar;
 		$.each(charactersArr, function(index, item) {
 			// console.log($(item).hasClass("selected"));
 			if ($(item).hasClass("selected")) {
@@ -101,14 +102,19 @@ $(document).ready(function() {
 				characters[index].selected = true;
 			}
 		});
-		// console.log(indexOfSelChar);
+		// console.log(characters[indexOfSelChar]);
+		// Push selected character in combatants array to capture combatants.
+		combatants.push(characters[indexOfSelChar]);
 		// Index of selected character is available, USE IT
 
+		// 1.2.2 After choosing a character, generate the collection of available enemies to attack (you can't attack yourself).
+		var availableCharsAttack = charactersArr.not(document.getElementsByClassName("character selected"));
+
 		for (var m = 0; m < availableCharsAttack.length; m++) {
-			$("#available-to-attack-section").append("<div class='enemy-character'>");
+			$("#available-to-attack-section").append("<div class='enemy-character available-get-attacked'>");
 		};
 
-		// 1.2.3.1 After generating the collection of available enemies to attack, render them to the DOM and give them an additional class name to distinguish them as 'available' to attack.
+		// 1.2.2.1 After generating the collection of available enemies to attack, render them to the DOM and give them an additional class name to distinguish them as 'available' to attack.
 
 		$(".enemy-character").each(function(index, el) {
 			var currEnemyCharEl = $(el),
@@ -121,32 +127,57 @@ $(document).ready(function() {
 			currEnemyNameEl = currEnemyCharEl.children().eq(0);
 			currEnemyHealthEl = currEnemyCharEl.children().eq(1);
 
-			console.log(availableCharsAttack[index].childNodes[0].textContent);
-			console.log(availableCharsAttack[index].childNodes[1].textContent);
-			// console.log(currEnemyNameEl.text());
-			// console.log(currEnemyHealthEl.text());
 			currEnemyNameEl.text(availableCharsAttack[index].childNodes[0].textContent);
 			currEnemyHealthEl.text(availableCharsAttack[index].childNodes[1].textContent);
 		});
-	}
 
-	// 1.2.2 Create a condition so that if a character is already selected, then clicking on another character will invoke another function to select that character as the defender.
+		// 1.2.3 Create a jQuery event listener for selecting a character to attack (create a defender object) by clicking on the available characters to attack.
+		// 1.2.3.1 Create conditional to account for a character already selected to be attacked.
+		$(".enemy-character").on("click", function(event) {
+			// console.log(event.currentTarget.className);
+			var currEnemyCharEl = $("#defender");
+			var currSelEnemyName = event.currentTarget.children[0].textContent,
+					currSelEnemyHealth = event.currentTarget.children[1].textContent;
+			var currSelEnemyNameEl = currEnemyCharEl.children().eq(0),
+					currSelEnemyHealthEl = currEnemyCharEl.children().eq(1);
+
+			if ((currSelEnemyNameEl.text()) && (currSelEnemyHealthEl.text())) {
+				alert("You already selected an enemy to attack!");
+				return;
+			} else {
+				event.currentTarget.className += " selected";
+
+				currSelEnemyNameEl.text(currSelEnemyName);
+				currSelEnemyHealthEl.text(currSelEnemyHealth);
+			}
+
+			// Account for selected enemy object and push into the combatants array.
+			for (var t = 0; t < characters.length; t++) {
+				if (currSelEnemyName === characters[t].name) {
+					combatants.push(characters[t]);
+				}
+			}
+		});
+
+
+
+	};
+
+
+
 	$(".character").on("click", chooseCharacter);
 
-
-
-
-	// 1.2.4 Create a jQuery event listener for selecting a character to attack (create a defender object) once the user has selected a character.
-	// 1.2.4.1 For the event listener, do everything in the anonymous callback function, which creates a closure (students won't know that this is called a closure yet).
-
-
-
-
+	$("#attack-button").on("click", function() {
+		console.log(combatants);
+		attackResult = attack(combatants[0], combatants[1]);
+	});
 	// ----------------------------------------------------------------
-
+	console.log(attackResult);
 	// 2. Create functions to enable actions between objects.
 	function attack(attacker, defender) {
 		var attackDifference;
+		console.log(attacker);
+		console.log(defender);
 		// If the attacker's attack value is greater than the defender's defense value, get the difference between the two values and decrease the life of the defender using that difference.
 		if (attacker.attack > defender.defense) {
 			attackDifference = attacker.attack - defender.defense;
@@ -171,7 +202,7 @@ $(document).ready(function() {
 
 
 	// ---Currently, to change characters, just change the two arguments' indexes
-	var attackResult = attack(characters[0], characters[3]); //---UNCOMMENT when ready to render result of attack
+	// var attackResult = attack(characters[0], characters[3]); //---UNCOMMENT when ready to render result of attack
 
 	// 2.1.1  Declare a variable to handle action type values e.g. attack, steal, scavenge (for 20 days), one-hit-kill...
 
@@ -182,6 +213,8 @@ $(document).ready(function() {
 		console.log(attackResult);
 		attacker.health = attackResult.attackerHealth;
 		defender.health = attackResult.defenderHealth;
+		console.log(attacker);
+		console.log(defender);
 		return {
 			attacker: attacker,
 			defender: defender
@@ -189,21 +222,21 @@ $(document).ready(function() {
 	};
 
 	// ---Currently, to change characters, just change the first two arguments' indexes
-	var updatedCharacters = updateCharacterObjects(characters[0], characters[3], attackResult);  //---UNCOMMENT when ready to render result of attack
+	// var updatedCharacters = updateCharacterObjects(combatants[0], combatants[1], attackResult);  //---UNCOMMENT when ready to render result of attack
 
 	// ----------------------------------------------------------------
 
 	// 3 Render character info from the results of actions between the characters to the DOM.
-	console.log(updatedCharacters.attacker);
-	console.log(updatedCharacters.defender);
+	// console.log(updatedCharacters.attacker);
+	// console.log(updatedCharacters.defender);
 
 	var attackerElement = $("#attacker");
-	$("#attacker-name").text(updatedCharacters.attacker.name);
-	$("#attacker-health").text(updatedCharacters.attacker.health);
+	// $("#attacker-name").text(updatedCharacters.attacker.name);
+	// $("#attacker-health").text(updatedCharacters.attacker.health);
 
 	var defenderElement = $("#defender");
-	$("#defender-name").text(updatedCharacters.defender.name);
-	$("#defender-health").text(updatedCharacters.defender.health);
+	// $("#defender-name").text(updatedCharacters.defender.name);
+	// $("#defender-health").text(updatedCharacters.defender.health);
 	// ----------------------------------------------------------------
 
 });
