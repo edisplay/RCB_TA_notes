@@ -1,16 +1,19 @@
 var orm = require('../config/orm.js');
 
 var super_clubs = {
-	selectAll: function(cb) {
+	findAllMembers: function(cb) {
 		orm.selectAll('super_clubs', function(res){
 			cb(res)
 		});
 	},
-	addOne: function(nameInput,cb) {
-		orm.insertOne('burgers', nameInput, 0, cb);
+	addOneMemeber: function(nameInput,cb) {
+		orm.insertOne('super_clubs', nameInput, 1, cb);
 	},
-	deleteOne: function(inputId, cb) {
-		orm.updateOne('burgers', 1, inputId, cb);
+	updateOneMember: function(inputId, cb){
+		orm.updateOne('super_clubs', 1, inputId, cb);
+	},
+	removeOneMember: function(inputId, cb) {
+		orm.deleteOne('super_clubs', 1, inputId, cb);
 	}
 };
     

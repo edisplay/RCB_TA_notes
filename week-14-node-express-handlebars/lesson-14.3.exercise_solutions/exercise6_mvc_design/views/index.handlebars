@@ -1,0 +1,10 @@
+<!-- 
+Here is where the handlebars template is setup for displaying data.
+ -->
+<div> 	
+  {{#each data}}
+  	{{#if this.thing_state}}
+		<pre>{{this.thing_name}}</pre>
+	{{/if}}
+  {{/each}}
+</div>
