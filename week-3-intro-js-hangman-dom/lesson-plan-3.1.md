@@ -45,7 +45,7 @@ DO NOT USE JS FIDDLES.
 
 * students will trigger break points in a couple of ways to "stop time"
 * students will use JavaScript
-  * data types
+  * data types (strings, numbers, arrays)
   * user input gathering techniques
   * conditional logic
 
@@ -543,11 +543,11 @@ var tetris = [ 'Tetris', 'SEGA', 49.99 ];
     
 * show the hw instructions
 
-* two choices
+* two choices of games to make:
 
-* make a psychic game
+  * easier: make a psychic game
 
-* make a hangman game
+  * harder: make a hangman game
 
 
 # Copyright
