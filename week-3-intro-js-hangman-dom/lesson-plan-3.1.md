@@ -146,17 +146,21 @@ DO NOT USE JS FIDDLES.
 </head>
 <body>
   <script type="text/javascript">
-    var name = 'pavan';
-    var age = 28;
+    function runFunction() {
+      var name = 'Captain America';
+      var age = 98;
 
-    alert(name);
-    alert(age);
+      alert(name);
+      alert(age);
 
-    var anotherName = prompt('what\'s your name');
-    var confirmAdult = confirm('are you 18 years or older?');
+      var anotherName = prompt('what\'s your name');
+      var confirmAdult = confirm('are you 18 years or older?');
 
-    alert(anotherName);
-    alert(confirmAdult);
+      alert(anotherName);
+      alert(confirmAdult);      
+    }
+    window.onLoad = runFunction()
+
   </script>
 </body>
 </html>
@@ -181,12 +185,15 @@ solution
 </head>
 <body>
   <script type="text/javascript">
-    var confirmSushi = confirm('Do you like sushi?');
-    var sushiType = prompt('What kind of sushi do you like?');
+    function runMe() = {
+      var confirmSushi = confirm('Do you like sushi?');
+      var sushiType = prompt('What kind of sushi do you like?');
 
-    alert(confirmSushi);
-    alert(sushiType);
-  </script>
+      alert(confirmSushi);
+      alert(sushiType);
+    }
+    window.onLoad = runMe();
+    </script>
 </body>
 </html>
 ```
@@ -217,17 +224,22 @@ solution
 </head>
 <body>
   <script type="text/javascript">
-    var confirmSushi = confirm('Do you like sushi?');
-    var confirmGingerTea = confirm('Do you like Ginger Tea?')
-    var sushiType = prompt('What kind of sushi do you like?');
+    function sushiScript() {
+      var confirmSushi = confirm('Do you like sushi?');
+      var confirmGingerTea = confirm('Do you like Ginger Tea?')
+      var sushiType = prompt('What kind of sushi do you like?');
 
-    if (confirmSushi){
-      alert("You like " + sushiType + " !");
-    }else if(confirmGingerTea){
-      alert("You like ginger tea!!")
-    }else{
-      document.write("You don't like sushi.");
+      if (confirmSushi){
+        alert("You like " + sushiType + " !");
+      }else if(confirmGingerTea){
+        alert("You like ginger tea!!")
+      }else{
+        document.write("You don't like sushi or ginger tea.");
+      }      
     }
+
+    window.onLoad = sushiScript();
+
   </script>
 </body>
 </html>
@@ -247,26 +259,43 @@ BONUS: additionally ask the user what their birthyear is. If it's greater than 1
 
 solution:
 ```
-//exercise
-var eatSteak = confirm("do you eat steak?");
-if (eatSteak){
-  document.write("Here's a steak");
-}else{
-  document.write("Here's a tofu stir fry!");
-}
+<!DOCTYPE html>
+<html>
+<head>
+  <title>
+    data types, user input, conditional logic
+  </title>
+</head>
+<body>
+  <script type="text/javascript">
+    function awesomeScript() {
+      //exercise
+      var eatSteak = confirm("do you eat steak?");
+      if (eatSteak){
+        document.write("Here's a steak");
+      }else{
+        document.write("Here's a tofu stir fry!");
+      }
 
-//bonus
-var year = prompt('What year were you born?');
+      //bonus
+      var year = prompt('What year were you born?');
 
-var year = parseInt(year);
+      var year = parseInt(year);
 
-if (year > 1987){
-  alert("you're younger than Pavan");
-}elseif(year < 1987){
-  alert("you're older than Pavan");
-}else{
-  alert("you're around the same age as Pavan");
-}
+      if (year > 1987){
+        alert("you're younger than Pavan");
+      }else if(year < 1987){
+        alert("you're older than Pavan");
+      }else{
+        alert("you're around the same age as Pavan");
+      }
+    }
+
+    window.onLoad = awesomeScript();
+
+  </script>
+</body>
+</html>
 ```
 
 ### 7. Everyone Do 10 minutes
@@ -298,6 +327,7 @@ favBand = 'Collective Soul';
 console.log(favBand);
 ```
 
+```
 var age = prompt('your age');
 
 if (age !== 'Run DMC'){
@@ -311,8 +341,9 @@ if (age == 28){
 }elseif(age > 28){
   alert('You're older than Pavan!)
 }
+```
 
-
+```
 //this replaces the entire page with this - so it's not something you'll normally use - but it's what we'll use for now to be able to print stuff to the page
 document.write('I am ' + age + ' years old.');
 
@@ -321,7 +352,9 @@ var catAge = prompt('how old is your cat?');
 alert(catAge + 2); //won't work as expected
 
 alert(parseInt(catAge) + 2); //works as expected
+```
 
+```
 //alternatively you can do a switch statement:
 
 switch (new Date().getDay()) {
@@ -347,6 +380,7 @@ switch (new Date().getDay()) {
         day = "Saturday";
         break;
 }
+```
 
 ### 8. Everyone Do (15 minutes) 
 
@@ -354,53 +388,70 @@ switch (new Date().getDay()) {
 
 * *copy the code to the screen and ask the class to discuss what's going to get alerted to the screen (don't paste it to them)
 
-if (true == true){
-  alert('hi')
-}else{
-  alert('bye')
-}
+<!DOCTYPE html>
+<html>
+<head>
+  <title>
+    data types, user input, conditional logic
+  </title>
+</head>
+<body>
+  <script type="text/javascript">
+    function awesomeScript() {
+        if (true == true){
+          alert('hi')
+        }else{
+          alert('bye')
+        }
 
-if (false == false){
-  alert('dude')
-}else{
-  alert('nope')
-}
+        if (false == false){
+          alert('dude')
+        }else{
+          alert('nope')
+        }
 
-if ("4" == 4){
-  alert('puppies')
-}else{
-  alert('goats')
-}
+        if ("4" == 4){
+          alert('puppies')
+        }else{
+          alert('goats')
+        }
 
-if ("4" === 4){
-  alert('puppies')
-}else{
-  alert('goats')
-}
+        if ("4" === 4){
+          alert('puppies')
+        }else{
+          alert('goats')
+        }
 
-if (true){
-  alert('goo goo dolls')
-}else{
-  alert('vanilla ice')
-}
+        if (true){
+          alert('goo goo dolls')
+        }else{
+          alert('vanilla ice')
+        }
 
-if (false){
-  alert('the neighborhood')
-}else{
-  alert('one direction')
-} 
+        if (false){
+          alert('the neighborhood')
+        }else{
+          alert('one direction')
+        } 
 
-if (("5" + "5") == "55"){
-  alert('tofu')
-}else{
-  alert('soybean')
-}
+        if (("5" + "5") == "55"){
+          alert('tofu')
+        }else{
+          alert('soybean')
+        }
 
-if ((6 + "5") == "65"){
-  alert('richard')
-}else{
-  alert('branson')
-}
+        if ((6 + "5") == "65"){
+          alert('richard')
+        }else{
+          alert('branson')
+        }
+    }
+
+    window.onLoad = awesomeScript();
+
+  </script>
+</body>
+</html>
 
 Solutions: 
   hi, dude, puppies, goats, goo goo dolls, one direction, tofu, richard
@@ -415,7 +466,7 @@ Solutions:
 arrays
 for loops
 
-### Instructor do - 15 minutes
+### 9. Instructor do - 15 minutes
 > It's time for arrays. Arrays are lists of things. Numbers, words, both, doesn't matter. Arrays are lists of things.
 
 > Everyone say it with me. "Arrays are lists of things"
@@ -423,23 +474,33 @@ for loops
 * *Demo and explain the below code*
 
 ```
-var animals = ['parrot', 'cat', 'dog'];
+<!DOCTYPE html>
+<html>
+<head>
+  <title>
+    data types, user input, conditional logic
+  </title>
+</head>
+<body>
+  <script type="text/javascript">
+    function awesomeScript() {
+      var animals = ['parrot', 'cat', 'dog'];
 
-animals.length();
+      console.log(animals.length);
+      console.log(animals[1]);
+      console.log(animals[2]);    
+      console.log(animals[0]);
+      console.log(animals[animals.length]);
+      console.log(animals[animals.length-1]);
+      console.log(animals.indexOf('bear'));
+      console.log(animals.indexOf('parrot'));
+    }
 
-animals[1];
+    window.onLoad = awesomeScript();
 
-animals[2];
-
-animals[0];
-
-animals[animals.length()];
-
-animals[animals.length()-1];
-
-animals.indexOf('bear'); 
-
-animals.indexOf('parrot'); 
+  </script>
+</body>
+</html>
 ```
 
 > arrays have indexes so we can get random value
@@ -498,6 +559,7 @@ if the animal is in the pets array then alert 'You guessed right!'
 * use the indexOf method. The indexOf method returns -1 if it's not in the array
   * http://www.w3schools.com/jsref/jsref_indexof_array.asp
 
+```
 var word = 'jupiter';
 
 var wordsLetters = word.split(); //doesn't work as expected why?
@@ -509,10 +571,11 @@ var letterIndex = wordsLetters.indexOf('a')
 wordsLetters.splice(letterIndex, 1); //gets rid of that letter in the array
 
 wordsLetters;
+```
 
 
 
-### Everyone do - 10 minutes
+### 10. Everyone do - 10 minutes
 
 go over the previous exercise with the class
 
@@ -542,11 +605,11 @@ var tetris = [ 'Tetris', 'SEGA', 49.99 ];
 // * Set the company of the tetris array to Nintendo instead of SEGA
 ```
 
-### Everyone do - 5 minutes
+### 11. Everyone do - 5 minutes
 
 * *go over the previous exercise with the class*
 
-##### Instructor Do - 5 minutes
+##### 12. Instructor Do - 5 minutes
     
 * show the hw instructions
 
