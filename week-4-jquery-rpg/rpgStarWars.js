@@ -46,6 +46,7 @@ $(document).ready(function() {
 			theForceLevel: 600
 		}
 	];
+	var currSelectedCharacter;
 
 	// 1.1 Render character objects before actions to the DOM using jQuery.
 	for (var i = 0; i < characters.length; i++) {
@@ -68,8 +69,7 @@ $(document).ready(function() {
 
 	// 1.2 Render selected character object before actions to the DOM using jQuery.
 	function chooseCharacter(event) {
-		// console.log(event.currentTarget.children[0].textContent);
-		// console.log(event.currentTarget.children[1].textContent);
+		console.log(event.currentTarget.className += " selected");
 
 		var currSelectedCharEl = $("#selected-character");
 		var currSelCharNameEl = currSelectedCharEl.children().eq(0),
@@ -81,6 +81,7 @@ $(document).ready(function() {
 			alert("You already selected a character!");
 			return;
 		} else {
+			event.currentTarget.className += " selected";
 			currSelCharNameEl.text(event.currentTarget.children[0].textContent);
 			currSelCharHealthEl.text(event.currentTarget.children[1].textContent);
 		};
@@ -127,13 +128,10 @@ $(document).ready(function() {
 	// ---Currently, to change characters, just change the two arguments' indexes
 	var attackResult = attack(characters[0], characters[3]); //---UNCOMMENT when ready to render result of attack
 
-	// 2.1.1  Declare a variable to handle action type values e.g. attack, steal, one-hit-kill...
+	// 2.1.1  Declare a variable to handle action type values e.g. attack, steal, scavenge, one-hit-kill...
 
 
 	// 2.2 Create functions to update objects after actions between objects.
-
-	// ---Currently, to change characters, just change the first two arguments' indexes
-	var updatedCharacters = updateCharacterObjects(characters[0], characters[3], attackResult);  //---UNCOMMENT when ready to render result of attack
 
 	function updateCharacterObjects(attacker, defender, attackResult) {
 		console.log(attackResult);
@@ -145,6 +143,9 @@ $(document).ready(function() {
 		};
 	};
 
+	// ---Currently, to change characters, just change the first two arguments' indexes
+	var updatedCharacters = updateCharacterObjects(characters[0], characters[3], attackResult);  //---UNCOMMENT when ready to render result of attack
+
 	// ----------------------------------------------------------------
 
 	// 3 Render character info from the results of actions between the characters to the DOM.
@@ -152,14 +153,10 @@ $(document).ready(function() {
 	console.log(updatedCharacters.defender);
 
 	var attackerElement = $("#attacker");
-	attackerElement.append("<div id='attacker-name'>");
-	attackerElement.append("<div id='attacker-health'>");
 	$("#attacker-name").text(updatedCharacters.attacker.name);
 	$("#attacker-health").text(updatedCharacters.attacker.health);
 
 	var defenderElement = $("#defender");
-	defenderElement.append("<div id='defender-name'>");
-	defenderElement.append("<div id='defender-health'>");
 	$("#defender-name").text(updatedCharacters.defender.name);
 	$("#defender-health").text(updatedCharacters.defender.health);
 	// ----------------------------------------------------------------

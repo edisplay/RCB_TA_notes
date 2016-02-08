@@ -3,9 +3,11 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>Star Wars with jQuery!</title>
+		<link href='https://fonts.googleapis.com/css?family=Share+Tech+Mono' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" href="styles.css">
 	</head>
 	<body>
+		<div class="main-section-title">Star Wars!</div>
 		<div id="main-game-section">
 			<div id="characters-section">
 				<div class="section-title">Characters Section</div>
@@ -21,7 +23,10 @@
 				<div class="section-title">Fight Section</div>
 				<div class="character-section">
 					<div class="section-title">Attacker</div>
-					<div id="attacker"></div>
+					<div id="attacker">
+						<div id="attacker-name"></div>
+						<div id="attacker-health"></div>
+					</div>
 				</div>
 				<div class="action-section">
 					<div class="section-title">Action Type</div>
@@ -31,7 +36,10 @@
 				</div>
 				<div class="character-section">
 					<div class="section-title">Defender</div>
-					<div id="defender"></div>
+					<div id="defender">
+						<div id="defender-name"></div>
+						<div id="defender-health"></div>
+					</div>
 				</div>
 			</div>
 		</div>

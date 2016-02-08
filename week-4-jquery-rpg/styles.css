@@ -1,5 +1,13 @@
+body {
+	font-family: 'Share Tech Mono', Arial, Helvetica, sans-serif;
+}
+
 .section-title {
 	font-size: 200%;
+}
+
+.main-section-title {
+	font-size: 300%;
 }
 
 .character {
@@ -26,3 +34,4 @@
 	border-color: red;
 	border-width: 3px;
 }
+
