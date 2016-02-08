@@ -36,7 +36,6 @@
 
 	var updateGuessesSoFar = function(){
 		document.querySelector('#guessesSoFar').innerHTML = guessedLetters.join(', ');
-		debugger;
 	};
 
 	var reset = function(){
@@ -45,6 +44,7 @@
 		guessedLetters = [];
 		updateLetterToGuess();
 		updateGuessesLeft();
+		updateGuessesSoFar();
 	}
 	
 	updateLetterToGuess(); //execute on page load

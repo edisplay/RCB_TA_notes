@@ -1,7 +1,9 @@
 # Pavan to do get academic sop in here and links to videos 
 # Pavan to do get curriculum(s) for rutgers in here
 
-When teaching in front of the class: make sure the students can all do the hw by the end of the week. Teach enough to do so. The lesson plans are built to do this, but now you're built to do this.
+Your mission: the mission it to make sure students demonstrate enough in class code during the week to be able to do the hw. 
+
+The lesson plans are built to do this, but now you're built to do this.
 
 What do you do in class?
 
