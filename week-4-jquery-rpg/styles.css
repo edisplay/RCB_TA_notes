@@ -1,0 +1,28 @@
+.section-title {
+	font-size: 200%;
+}
+
+.character {
+	border-style: solid;
+	border-color: green;
+	border-width: 3px;
+	cursor: pointer;
+}
+
+#selected-character {
+	border-style: solid;
+	border-color: orange;
+	border-width: 3px;
+}
+
+#attacker {
+	border-style: solid;
+	border-color: blue;
+	border-width: 3px;
+}
+
+#defender {
+	border-style: solid;
+	border-color: red;
+	border-width: 3px;
+}
