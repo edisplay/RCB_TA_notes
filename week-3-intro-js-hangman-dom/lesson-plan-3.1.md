@@ -408,7 +408,7 @@ Solutions:
 arrays
 for loops
 
-### Instructor do - 10 minutes
+### Instructor do - 15 minutes
 > It's time for arrays. Arrays are lists of things. Numbers, words, both, doesn't matter. Arrays are lists of things.
 
 > Everyone say it with me. "Arrays are lists of things"
@@ -443,19 +443,9 @@ animals.indexOf('parrot');
 
 > each instance of an array has its own methods
 
-```
-//check if something exists in an array or not
-if (animals.indexOf('bear') == -1) {
-  alert('not in the list man');
-}else{
-  alert('in the list man')
-}
-```
+> keep in mind that all of what we are doing is very useful for the homework
 
-```
-//choose random option from an array
-var randomComputerOption = animals[Math.floor(Math.random() * animals.length)];
-```
+* *slack the code below to the students after demoing*
 
 ```
 animals.push('bear') //pushes to the end
@@ -467,8 +457,41 @@ animals.pop() //removes the last element of the array //also returns that elemen
 animals[0] = 'lion'; //replaces a value in an array
 ```
 
+```
+//check if something exists in an array or not
+if (animals.indexOf('bear') == -1) {
+  alert('not in the list man');
+}else{
+  alert('in the list man')
+}
+```
 
-var word = 'barnard';
+```
+//choose random option from an array
+var ranNumZeroToArrLength = Math.random() * animals.length;
+var roundedNum = Math.floor(ranNumZeroToArrLength);
+
+var randomComputerOption = animals[roundedNum];
+```
+
+### Student do - 10 minutes
+
+* explain what arrays are to your partner
+
+* start with this array:
+
+```
+var animalsIamThinkingOf = ["lizards", "skunks", "chipmunks"]
+```
+
+ask the user to guess a type of animal you are thinking of (if it's in the above array then you're thinking of it)
+
+if the animal is in the pets array then alert 'You guessed right!'
+
+* use the indexOf method. The indexOf method returns -1 if it's not in the array
+  * http://www.w3schools.com/jsref/jsref_indexof_array.asp
+
+var word = 'jupiter';
 
 var wordsLetters = word.split(); //doesn't work as expected why?
 
@@ -480,77 +503,41 @@ wordsLetters.splice(letterIndex, 1); //gets rid of that letter in the array
 
 wordsLetters;
 
-//keep in mind that all of that is useful for the hangman game that you ladies will be building
-
-//explain what arrays are to your partner
 
 
+### Everyone do - 10 minutes
 
-    //Bonus using arrays (we haven't gone over this yet)
-      //start with this array 
-      //var pets = ["cats", "dogs", "rabbits"]
+go over the previous exercise with the class
 
-      //ask the user to guess a type of animal
-        //if the animal is in the pets array then alert 'You won!'
-        // use the indexOf method http://www.w3schools.com/jsref/jsref_indexof_array.asp - the indexOf method returns -1 if it's not in the array
+### Partners do - 10 minutes
 
+Part One
 
-  10 minutes we do
-    - make a list of 5 of your favorite bands/musicians and put it inside of an array and store that into a variable called myFavoriteMusicalArtists (make all your options lower case)
+- make a list of 5 of your favorite bands/musicians and put it inside of an array and store that into a variable called myFavoriteMusicalArtists
 
-    - ask the user for a band/artist, turn the user input lower case and then tell the user if you like the band too 
+- ask the user for a band/artist, turn the user input lower case (use the ) and then tell the user if the band is inside your myFavoriteMusicalArtists array or not. Which means you like the same band the user does too! 
 
-  10 minutes we do
-    // ### Array Manipulation - 20 minutes
+Part Two
 
-    var gameboy = [ 'Game Boy', 'nintendo', 149.99 ];
-    var pokemon = [ 'Pokemon Blue', 'nintendo', 49.99 ];
-    var tetris = [ 'Tetris', 'SEGA', 49.99 ];
+```
+// ### Array Manipulation - 20 minutes
 
-    // How would you:
+var gameboy = [ 'Game Boy', 'nintendo', 149.99 ];
+var pokemon = [ 'Pokemon Blue', 'nintendo', 49.99 ];
+var tetris = [ 'Tetris', 'SEGA', 49.99 ];
 
-    // Without touching the above code:
-    // * Change the name of the gameboy to be `Game Boy Color`.
-    // * Change the company of the pokemon game to be capitalized.
-    // * Remove the price of Tetris and store it in a variable oldPrice, then put in a new price 9000.99 into the tetris array.
-    // * Set the company of the tetris array to Nintendo instead of SEGA
+// How would you:
 
-  10 minutes we do 
-    // ### Nested Arrays - 20 minutes
+// Without touching the above code:
+// * Change the name of the gameboy to be `Game Boy Color`.
+// * Change the company of the pokemon game to be capitalized.
+// * Remove the price of Tetris and store it in a variable oldPrice, then put in a new price 9000.99 into the tetris array.
+// * Set the company of the tetris array to Nintendo instead of SEGA
+```
 
-    //PART ONE
-      // Create a new variable called cart. Add the gameboy, pokemon, and tetris arrays into the cart array.
+### Everyone do - 5 minutes
 
-      // How would you:
-
-      // * Access the name of the pokemon game through the cart variable.
-      // * Access the price of the tetris game.
-      // * Change the price of the tetris game to be 9012.
-      // * Change the name of the Game Boy in the cart to Game Boy Advance.
-
-      var gameboy = [ 'Game Boy', 'nintendo', 149.99 ];
-      var pokemon = [ 'Pokemon Blue', 'nintendo', 49.99 ];
-      var tetris = [ 'Tetris', 'SEGA', 49.99 ];
-
-    //PART TWO:
-      // * Look at the original variables and look at the values stored in the cart array.
-      // * Did changing the array values in the cart array affect the values of the original arrays?
-      // * Why?
-
-    // Solution
-
-      var cart = [gameboy, pokemon, tetris];
-      //cart.push(gameboy, pokemon, tetris)
-
-      cart[1][0]; //name of the pokemon game
-      cart[2][2] //price of the tetris game
-      cart[2][2] = 9012; 
-
-    // **Bonus Solution**
-      // When we use a variable we are referencing the original value stored there. Cart is just an array, holding references to the three original arrays. If we change the arrays within cart it is the same as changing the original arrays directly.
-
-      // slice will give us a copy of the array -> safer.
-
+* *go over the previous exercise with the class*
 
 ##### Instructor Do - 5 minutes
     
