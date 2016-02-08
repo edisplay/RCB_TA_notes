@@ -16,7 +16,8 @@ $(document).ready(function() {
 			health: 100,
 			attack: 8,
 			defense: 6,
-			theForceLevel: 600
+			theForceLevel: 600,
+			selected: false
 		},
 		{
 			type: 'jedi',
@@ -25,7 +26,8 @@ $(document).ready(function() {
 			health: 100,
 			attack: 7,
 			defense: 8,
-			theForceLevel: 700
+			theForceLevel: 700,
+			selected: false
 		},
 		{
 			type: 'sith',
@@ -34,7 +36,8 @@ $(document).ready(function() {
 			health: 150,
 			attack: 8,
 			defense: 8,
-			theForceLevel: 800
+			theForceLevel: 800,
+			selected: false
 		},
 		{
 			type: 'sith',
@@ -43,7 +46,8 @@ $(document).ready(function() {
 			health: 100,
 			attack: 5,
 			defense: 6,
-			theForceLevel: 600
+			theForceLevel: 600,
+			selected: false
 		}
 	];
 	var currSelectedCharacter;
@@ -68,9 +72,8 @@ $(document).ready(function() {
 
 
 	// 1.2 Render selected character object before actions to the DOM using jQuery.
-	function chooseCharacter(event) {
-		console.log(event.currentTarget.className += " selected");
-
+	var chooseCharacter = function(event) {
+		// console.log(event.currentTarget.className += " selected");
 		var currSelectedCharEl = $("#selected-character");
 		var currSelCharNameEl = currSelectedCharEl.children().eq(0),
 				currSelCharHealthEl = currSelectedCharEl.children().eq(1);
@@ -82,17 +85,59 @@ $(document).ready(function() {
 			return;
 		} else {
 			event.currentTarget.className += " selected";
+			currSelectedCharEl.addClass("selected");
 			currSelCharNameEl.text(event.currentTarget.children[0].textContent);
 			currSelCharHealthEl.text(event.currentTarget.children[1].textContent);
 		};
+
+		// 1.2.3 After choosing a character, generate the collection of available enemies to attack (you can't attack yourself).
+		var charactersArr = $(".character");
+		var availableCharsAttack = charactersArr.not(document.getElementsByClassName("character selected"));
+		var indexOfSelChar;
+		$.each(charactersArr, function(index, item) {
+			// console.log($(item).hasClass("selected"));
+			if ($(item).hasClass("selected")) {
+				indexOfSelChar = index;
+				characters[index].selected = true;
+			}
+		});
+		// console.log(indexOfSelChar);
+		// Index of selected character is available, USE IT
+
+		for (var m = 0; m < availableCharsAttack.length; m++) {
+			$("#available-to-attack-section").append("<div class='enemy-character'>");
+		};
+
+		// 1.2.3.1 After generating the collection of available enemies to attack, render them to the DOM and give them an additional class name to distinguish them as 'available' to attack.
+
+		$(".enemy-character").each(function(index, el) {
+			var currEnemyCharEl = $(el),
+					currEnemyNameEl,
+					currEnemyHealthEl;
+
+			currEnemyCharEl.append("<div class='character-name'>");
+			currEnemyCharEl.append("<div class='character-health'>");
+
+			currEnemyNameEl = currEnemyCharEl.children().eq(0);
+			currEnemyHealthEl = currEnemyCharEl.children().eq(1);
+
+			console.log(availableCharsAttack[index].childNodes[0].textContent);
+			console.log(availableCharsAttack[index].childNodes[1].textContent);
+			// console.log(currEnemyNameEl.text());
+			// console.log(currEnemyHealthEl.text());
+			currEnemyNameEl.text(availableCharsAttack[index].childNodes[0].textContent);
+			currEnemyHealthEl.text(availableCharsAttack[index].childNodes[1].textContent);
+		});
 	}
 
 	// 1.2.2 Create a condition so that if a character is already selected, then clicking on another character will invoke another function to select that character as the defender.
 	$(".character").on("click", chooseCharacter);
 
-	// 1.2.3 Create a jQuery event listener for selecting a character to attack (create a defender object) once the user has selected a character.
-	// 1.2.3.1 For the event listener, do everything in the anonymous callback function, which creates a closure (students won't know that this is called a closure yet).
 
+
+
+	// 1.2.4 Create a jQuery event listener for selecting a character to attack (create a defender object) once the user has selected a character.
+	// 1.2.4.1 For the event listener, do everything in the anonymous callback function, which creates a closure (students won't know that this is called a closure yet).
 
 
 
@@ -128,7 +173,7 @@ $(document).ready(function() {
 	// ---Currently, to change characters, just change the two arguments' indexes
 	var attackResult = attack(characters[0], characters[3]); //---UNCOMMENT when ready to render result of attack
 
-	// 2.1.1  Declare a variable to handle action type values e.g. attack, steal, scavenge, one-hit-kill...
+	// 2.1.1  Declare a variable to handle action type values e.g. attack, steal, scavenge (for 20 days), one-hit-kill...
 
 
 	// 2.2 Create functions to update objects after actions between objects.

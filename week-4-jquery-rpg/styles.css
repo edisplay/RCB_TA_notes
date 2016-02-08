@@ -17,6 +17,13 @@ body {
 	cursor: pointer;
 }
 
+.enemy-character {
+	border-style: solid;
+	border-color: red;
+	border-width: 3px;
+	cursor: pointer;
+}
+
 #selected-character {
 	border-style: solid;
 	border-color: orange;
