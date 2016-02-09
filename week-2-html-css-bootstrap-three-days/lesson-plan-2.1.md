@@ -21,8 +21,9 @@ Review + Git Branching
 
 # Objectives (Slack out to students, have unique students read each one and Instructor makes a comment after each one is read)
 
-- Students will be able to push to heroku
-- Students will be able to use branches to collaborate together on a github repository
+- Students will push to github
+- Students will push to heroku
+- Students will use branches to collaborate together on a github repository
 
 ### 1. Instructor Do (15 minutes)
 
@@ -149,8 +150,6 @@ in-class-exercises-2.1/index-1.html
 
 ### 5. Instructor Do (15 minutes)
 
-**Spend 3-4 minutes on each of the following (git branching, git cloning, pull requests)**
-
 * Git branching
 
 > Git branches enable people to modify code independently from the `master branch` without it impacting the `master` branch itself
@@ -159,47 +158,113 @@ in-class-exercises-2.1/index-1.html
 
 > This is especially useful when working on teams. Two people can modify the same file in separate branches and then have the ability to merge their changes without fearing things will get overwritten
 
-**Slack out these git commands to students and say one or two sentences about each**
+* *Make a repo*
 
-* Commands
-    * `git branch` - tells you all the branches you have locally and the one that you are currently on
-    * `git branch branch-name` - creates a new branch
-    * `git checkout branch-name` switches to the branch
-    * `git branch -b branch-name` is short for making a new branch and immediately switching to it
-    * `git push origin branch-name` will push the contents of the branch, this will not impact `master`
-    * To return to master you type `git checkout master`
+* *push an index.html file to it*
 
-**Important**
+* *put an h1 of `<student's name>'s favorite band`*
 
-> When making a new branch, the new branch references the branch you are currently on. For example, if you are on the `master` branch and type `git checkout -b new-branch` the `new-branch` will adopt the same code from `master`.
+* *put an image of a student's favorite band*
 
-> Let's say you make a lot of changes in your `new-branch`, and while on that branch you type `git checkout -b additional-branch`, the `additional-branch` will adopt the code from `new-branch` NOT from `master`.
+* *push it to github*
 
-> It is important to type `git branch` before you make a new branch so you can see which branch you are currently on.
+* *push to heroku*
 
-* Git cloning
+`git checkout -b <another student-first-name>`
 
-> You can get any code from other public Git repositories.
+> is short for making a new branch and immediately switching to it
 
-> Running `git clone git@github.com:twbs/bootstrap.git` will clone the Bootstrap repo to your local machine
+`git branch`
 
-> You have the ability to modify files
+> tells you all the branches you have locally and the one that you are currently on
 
-> Github lets you modify settings to prevent others from deleting or modifying certain branches, as well as restricting user access
+* *modify the h1 to be `<another student-first-name>'s favorite band`*
 
-* Pull requests
+* *add a picture of that student's favorite movie in the html file*
 
-> When working with teams, almost never should work be performed using the `master` branch. Master branch is usually production level code, not code that is in-progress
+* *git push origin <another student-first-name>*
 
-> All work should be merged into `master` by creating a "pull request"
+* *make a pull request to master with the branch you made*
 
-> You can do this by navigating to your repository using Chrome, selecting the "pull requests" tab and pressing the "new pull request" button
+* *github will say can not merge due to merge conflicts*
 
-> You can select which branch you want to merge from and to
+* *go to terminal and do `git pull origin master`*
 
-> Pull requests should be reviewed by the owner to ensure the code is proper, if not you can tell the person making the request to modify their code
+* *show students how to get out of vim and explain why it brought you there - also what vim is (code editor that lives in your terminal)*
 
-### 4. Partner Do (15 minutes)
+* *git push origin <branch name>*
+
+* *then go back to github.com to see the pull request - now you can merge it in - go ahead merge it*
+
+### 6. Student Do 25 minutes
+
+> repeat the steps that I did on your own githubs 
+
+* *slack this out to the students.*
+
+
+
+* *Make a repo*
+
+* *push an index.html file to it*
+
+* *put an h1 of your favorite band*
+
+* *put an image of your favorite band*
+
+* *push it to github*
+
+* *push to heroku*
+
+`git checkout -b another-band`
+    * is short for making a new branch and immediately switching to it
+
+`git branch`
+    * tells you all the branches you have locally and the one that you are currently on
+
+* *modify the h1 to be `the new band name`*
+
+* *add a picture of that new band in the html file*
+
+* *git push origin another-band*
+
+* *make a pull request to master with the branch you made*
+
+* *github will say can not merge due to merge conflicts*
+
+* *go to terminal and do `git pull origin master`*
+
+* *get out of vim*
+
+* *git push origin another-band*
+
+* *then go back to github.com to see the pull request - now you can merge it in - go ahead merge it*
+
+
+##### Break for 15 minutes 
+
+##### 120 minutes have went by so far
+
+
+### 7. Instructor Do 15 minutes
+
+have a TA clone the repo you made in the previous repo
+
+add the TA as a collaborator in settings
+
+have the TA make a branch off master and push up the branch
+
+have the TA make a change on one of your files and push it up to their branch
+
+have the TA make a pull request from the branch to master and assign it to you
+
+look over the pull request, and then merge it in. 
+
+then show students on github.com that the file on master changed!
+
+### 8. Partner Do (25 minutes)
+
+* The person that will use the repo
 
 * Navigate to your partners repo that was made in the previous exercise using Chrome
 
@@ -233,7 +298,13 @@ in-class-exercises-2.1/index-1.html
 
 * Review on your computer to make sure you have their changes
 
+### Everyone do 15 minutes
 
+go over the previous exercise with the class in four groups in four different parts of the room led by an instructor, the TAs and a strong student
+
+### Instructor do 5 minutes
+
+go over the hw
 
 # Copyright
 Coding Boot Camp (C) 2015. All Rights Reserved.
