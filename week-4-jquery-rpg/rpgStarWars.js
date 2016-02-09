@@ -76,8 +76,8 @@ $(document).ready(function() {
 	var attackResult;
 	var turnCounter = 1;
 
-	var renderCharacters = function(charObj){
-		$("#characters-section").empty();
+	var renderCharacters = function(charObj, areaRender){
+		$(areaRender).empty();
 
 		for (var key in charObj) {
 		  if (charObj.hasOwnProperty(key)) {
@@ -89,127 +89,150 @@ $(document).ready(function() {
 
 			charDiv.append(charName).append(charImage).append(charHealth);
 
-		    $("#characters-section").append(charDiv);
+		    $(areaRender).append(charDiv);
 		  }
 		}
 	}
 
 	//this is to render all characters for user to choose their computer
-	renderCharacters(characters);
+	renderCharacters(characters, '#characters-section');
 
 
-	// 1.2 Render selected character object before actions to the DOM using jQuery.
-	var chooseCharacter = function(event) {
+	$(document).on('click', '.character', function(){
+		name = $(this).data('name');
+		currSelectedCharacter = characters[name];
 
-		$('#characters-section').hide();
-
-		// console.log(event.currentTarget.className += " selected");
-		var currSelectedCharEl = $("#selected-character").css({
-			"border-style": "solid",
-			"border-color": "orange",
-			"border-width": "3px"
-		});
-		// console.log(currSelectedCharEl.children());
-		var currSelCharNameEl = currSelectedCharEl.children().eq(0),
-				currSelCharImage = currSelectedCharEl.children().eq(1).append("<img alt='image'>"),
-				currSelCharHealthEl = currSelectedCharEl.children().eq(2);
-		console.log(currSelCharImage);
-		// 1.2.1 Write conditional so that user can only select a character if there is NO character yet selected.
-		// Doesn't allow you to select a character.  Possible conflict in  selecting a character to attack will be handled in another function.
-		if ((currSelCharNameEl.text()) && (currSelCharHealthEl.text())) {
-			alert("You already selected a character!");
-			return;
-		} else {
-			event.currentTarget.className += " selected";
-			// currSelectedCharEl.addClass("selected");
-			currSelCharNameEl.text(event.currentTarget.children[0].textContent);
-			// console.log(event.currentTarget.children[1].children[0].src);
-			console.log(currSelCharImage.find("img").attr("src", event.currentTarget.children[1].children[0].src));
-			// currSelCharImage.find("img").attr("src", event.currentTarget.children[1].children[0].src);
-			currSelCharHealthEl.text(event.currentTarget.children[2].textContent);
-
-			$("#characters-section").hide();
-
-		};
-
-		// Capture selected character from global characters array.
-		var charactersArr = $(".character");
-		$.each(charactersArr, function(index, item) {
-			// console.log($(item).hasClass("selected"));
-			if ($(item).hasClass("selected")) {
-				indexOfSelChar = index;
-				characters[index].selected = true;
+		for (var key in characters) {
+			if (key != name){
+				combatants.push(characters[key])
 			}
-		});
+		}
 
-		// Push selected character in combatants array to capture combatants.
-		combatants.push(characters[indexOfSelChar]);
-		// Index of selected character is available, USE IT
+		$("#characters-section").hide();
+		renderCharacters(currSelectedCharacter, '#selected-character');
 
-		// 1.2.2 After choosing a character, generate the collection of available enemies to attack (you can't attack yourself).
-		var availableCharsAttack = charactersArr.not(document.getElementsByClassName("character selected"));
+		console.log(combatants);
+	});
 
-		for (var m = 0; m < availableCharsAttack.length; m++) {
-			$("#available-to-attack-section").append("<div class='enemy-character available-get-attacked'>");
-		};
 
-		// 1.2.2.1 After generating the collection of available enemies to attack, render them to the DOM and give them an additional class name to distinguish them as 'available' to attack.
 
-		$(".enemy-character").each(function(index, el) {
-			var currEnemyCharEl = $(el),
-					currEnemyNameEl,
-					currEnemyHealthEl;
+	//this is to render all characters for user to choose their computer
+	renderCharacters(combatanats);
 
-			currEnemyCharEl.append("<div class='character-name'>");
-			currEnemyCharEl.append("<div class='character-image'><img alt='image'>");
-			currEnemyCharEl.append("<div class='character-health'>");
 
-			currEnemyNameEl = currEnemyCharEl.children().eq(0);
-			currEnemyImage = currEnemyCharEl.children().eq(1);
-			currEnemyHealthEl = currEnemyCharEl.children().eq(2);
 
-			currEnemyNameEl.text(availableCharsAttack[index].childNodes[0].textContent);
-			currEnemyImage.find("img").attr("src", availableCharsAttack[index].childNodes[1].childNodes[0].src);
-			currEnemyHealthEl.text(availableCharsAttack[index].childNodes[2].textContent);
-		});
+	// // 1.2 Render selected character object before actions to the DOM using jQuery.
+	// var chooseCharacter = function(event) {
 
-		// 1.2.3 Create a jQuery event listener for selecting a character to attack (create a defender object) by clicking on the available characters to attack.
-		// 1.2.3.1 Create conditional to account for a character already selected to be attacked.
-		$(".enemy-character").on("click", function(event) {
-			// console.log(event.currentTarget.className);
-			var currEnemyCharEl = $("#defender").css({
-					"border-style": "solid",
-					"border-color": "red",
-					"border-width": "3px"
-			});
-			var currSelEnemyName = event.currentTarget.children[0].textContent,
-					currSelEnemyImageUrl = event.currentTarget.children[1].children[0].src,
-					currSelEnemyHealth = event.currentTarget.children[2].textContent;
-			var currSelEnemyNameEl = currEnemyCharEl.children().eq(0),
-					currSelEnemyHealthEl = currEnemyCharEl.children().eq(2);
+	// 	$('#characters-section').hide();
 
-					// console.log(currEnemyCharEl);
+	// 	// console.log(event.currentTarget.className += " selected");
+	// 	var currSelectedCharEl = $("#selected-character").css({
+	// 		"border-style": "solid",
+	// 		"border-color": "orange",
+	// 		"border-width": "3px"
+	// 	});
+	// 	// console.log(currSelectedCharEl.children());
+	// 	var currSelCharNameEl = currSelectedCharEl.children().eq(0),
+	// 			currSelCharImage = currSelectedCharEl.children().eq(1).append("<img alt='image'>"),
+	// 			currSelCharHealthEl = currSelectedCharEl.children().eq(2);
+	// 	console.log(currSelCharImage);
+	// 	// 1.2.1 Write conditional so that user can only select a character if there is NO character yet selected.
+	// 	// Doesn't allow you to select a character.  Possible conflict in  selecting a character to attack will be handled in another function.
+	// 	if ((currSelCharNameEl.text()) && (currSelCharHealthEl.text())) {
+	// 		alert("You already selected a character!");
+	// 		return;
+	// 	} else {
+	// 		event.currentTarget.className += " selected";
+	// 		// currSelectedCharEl.addClass("selected");
+	// 		currSelCharNameEl.text(event.currentTarget.children[0].textContent);
+	// 		// console.log(event.currentTarget.children[1].children[0].src);
+	// 		console.log(currSelCharImage.find("img").attr("src", event.currentTarget.children[1].children[0].src));
+	// 		// currSelCharImage.find("img").attr("src", event.currentTarget.children[1].children[0].src);
+	// 		currSelCharHealthEl.text(event.currentTarget.children[2].textContent);
 
-			if (true) {
-				event.currentTarget.className += " selected";
-				var currSelEnemyImageEl = currEnemyCharEl.children().eq(1).append("<img alt='image'>");
-				currSelEnemyNameEl.text(currSelEnemyName);
-				currSelEnemyImageEl.find("img").attr("src", currSelEnemyImageUrl);
-				currSelEnemyHealthEl.text(currSelEnemyHealth);
-				return;
-			};
+	// 		$("#characters-section").hide();
 
-			// Account for selected enemy object and push into the combatants array.
-			for (var t = 0; t < characters.length; t++) {
-				if (currSelEnemyName === characters[t].name) {
-					// combatants.pop();
-					combatants.push(characters[t]);
-				}
-				debugger; //see combatants
-			};
-			$(this).hide();
-		});
-	};
+	// 	};
+
+	// 	// Capture selected character from global characters array.
+	// 	var charactersArr = $(".character");
+	// 	$.each(charactersArr, function(index, item) {
+	// 		// console.log($(item).hasClass("selected"));
+	// 		if ($(item).hasClass("selected")) {
+	// 			indexOfSelChar = index;
+	// 			characters[index].selected = true;
+	// 		}
+	// 	});
+
+	// 	// Push selected character in combatants array to capture combatants.
+	// 	combatants.push(characters[indexOfSelChar]);
+	// 	// Index of selected character is available, USE IT
+
+	// 	// 1.2.2 After choosing a character, generate the collection of available enemies to attack (you can't attack yourself).
+	// 	var availableCharsAttack = charactersArr.not(document.getElementsByClassName("character selected"));
+
+	// 	for (var m = 0; m < availableCharsAttack.length; m++) {
+	// 		$("#available-to-attack-section").append("<div class='enemy-character available-get-attacked'>");
+	// 	};
+
+	// 	// 1.2.2.1 After generating the collection of available enemies to attack, render them to the DOM and give them an additional class name to distinguish them as 'available' to attack.
+
+	// 	$(".enemy-character").each(function(index, el) {
+	// 		var currEnemyCharEl = $(el),
+	// 				currEnemyNameEl,
+	// 				currEnemyHealthEl;
+
+	// 		currEnemyCharEl.append("<div class='character-name'>");
+	// 		currEnemyCharEl.append("<div class='character-image'><img alt='image'>");
+	// 		currEnemyCharEl.append("<div class='character-health'>");
+
+	// 		currEnemyNameEl = currEnemyCharEl.children().eq(0);
+	// 		currEnemyImage = currEnemyCharEl.children().eq(1);
+	// 		currEnemyHealthEl = currEnemyCharEl.children().eq(2);
+
+	// 		currEnemyNameEl.text(availableCharsAttack[index].childNodes[0].textContent);
+	// 		currEnemyImage.find("img").attr("src", availableCharsAttack[index].childNodes[1].childNodes[0].src);
+	// 		currEnemyHealthEl.text(availableCharsAttack[index].childNodes[2].textContent);
+	// 	});
+
+	// 	// 1.2.3 Create a jQuery event listener for selecting a character to attack (create a defender object) by clicking on the available characters to attack.
+	// 	// 1.2.3.1 Create conditional to account for a character already selected to be attacked.
+	// 	$(".enemy-character").on("click", function(event) {
+	// 		// console.log(event.currentTarget.className);
+	// 		var currEnemyCharEl = $("#defender").css({
+	// 				"border-style": "solid",
+	// 				"border-color": "red",
+	// 				"border-width": "3px"
+	// 		});
+	// 		var currSelEnemyName = event.currentTarget.children[0].textContent,
+	// 				currSelEnemyImageUrl = event.currentTarget.children[1].children[0].src,
+	// 				currSelEnemyHealth = event.currentTarget.children[2].textContent;
+	// 		var currSelEnemyNameEl = currEnemyCharEl.children().eq(0),
+	// 				currSelEnemyHealthEl = currEnemyCharEl.children().eq(2);
+
+	// 				// console.log(currEnemyCharEl);
+
+	// 		if (true) {
+	// 			event.currentTarget.className += " selected";
+	// 			var currSelEnemyImageEl = currEnemyCharEl.children().eq(1).append("<img alt='image'>");
+	// 			currSelEnemyNameEl.text(currSelEnemyName);
+	// 			currSelEnemyImageEl.find("img").attr("src", currSelEnemyImageUrl);
+	// 			currSelEnemyHealthEl.text(currSelEnemyHealth);
+	// 			return;
+	// 		};
+
+	// 		// Account for selected enemy object and push into the combatants array.
+	// 		for (var t = 0; t < characters.length; t++) {
+	// 			if (currSelEnemyName === characters[t].name) {
+	// 				// combatants.pop();
+	// 				combatants.push(characters[t]);
+	// 			}
+	// 			debugger; //see combatants
+	// 		};
+	// 		$(this).hide();
+	// 	});
+	// };
 
 	// User chooses character to play------------
 	// $(".character").on("click", chooseCharacter);
