@@ -161,6 +161,7 @@ $(document).ready(function() {
 					combatants.push(characters[t]);
 				}
 			};
+			// console.log(combatants);
 		});
 	};
 
@@ -179,14 +180,13 @@ $(document).ready(function() {
 			return;
 		}
 
-		console.log(defenderElement.children().eq(0).text());
-
+		// console.log(defenderElement.children().eq(0).text());
 		if (defenderElement.children().eq(0).text() === "") {
 			alert("Select your enemy!");
 			return;
 		}
 
-		console.log(combatants);
+		// console.log(combatants);
 		// Handles action of type attack
 		attackResult = attack(combatants[0], combatants[1]);
 		// console.log(updateCharacterObjects);
@@ -216,17 +216,38 @@ $(document).ready(function() {
 				updatedSelEnemyEl.children().eq(1).text(updatedCharacters.defender.health);
 			}
 		}
+		// 3.2 Update characters' health in the Enemies Available To Attack Section in the DOM
+		for (var e = 0; e < $(".enemy-character").length; e++) {
+			if (updatedCharacters.defender.name === $(".enemy-character").eq(e).children().eq(0).text()) {
+				$(".enemy-character").eq(e).children().eq(1).text(updatedCharacters.defender.health);
+			}
+		}
+		// 3.3 Update user character's health in the 'Your Character' Section in the DOM
+		if ($("#attacker").children().eq(0).text() === $("#selected-character").children().eq(0).text()) {
+			$("#selected-character").children().eq(1).text(updatedCharacters.attacker.health);
+		}
 
 		// Unhide 'Choose Different Enemy' button after attack occurs
 		$("#choose-enemy-button").css("visibility", "visible");
+
+		// Check characters' health.  If any are less than or equal to zero after an attack, then the game ends and we hide the action buttons but unhide the 'restart' button so the game can be restarted.
+		for (var b = 0; b < characters.length; b++) {
+			// console.log(characters[b]);
+			if (characters[b].health <= 0) {
+				$("#action").children().eq(0).css("visibility", "hidden");
+				$("#action").children().eq(1).css("visibility", "hidden");
+				$("#action").children().eq(2).css("visibility", "visible");
+				alert("Game has ended!");
+			}
+		}
 	});
 	// ----------------------------------------------------------------
 
 	// 2. Create functions to enable actions between objects.
 	function attack(attacker, defender) {
 		var attackDifference;
-		console.log(attacker);
-		console.log(defender);
+		// console.log(attacker);
+		// console.log(defender);
 		// If the attacker's attack value is greater than the defender's defense value, get the difference between the two values and decrease the life of the defender using that difference.
 		if (attacker.attack > defender.defense) {
 			attackDifference = attacker.attack - defender.defense;
@@ -238,16 +259,29 @@ $(document).ready(function() {
 			attacker.health = attacker.health - attackDifference;
 		};
 		// Need to account for attack === defense (if forceLevel is greater, then character with that forceLeve inflicts their damage)
+		if ((attacker.attack === defender.defense) && (attacker.theForceLevel < defender.theForceLevel)) {
+			attacker.health = attacker.health - defender.attack;
+		} else if ((attacker.attack === defender.defense) && (attacker.theForceLevel > defender.theForceLevel)) {
+			defender.health = defender.health - attacker.attack;
+		}
 
+		// console.log(attacker.health);
+		// console.log(defender.health);
 		return {
 			attackerHealth: attacker.health,
 			defenderHealth: defender.health
 		};
 	};
 
+	// When 'Restart' button is clicked, reload the page.
+	$("#restart-button").on("click", function() {
+		location.reload();
+	});
+
 
 	// When user clicks on the 'Choose Different Enemy' button after an attack, create an event listener that clears the Defender section of the DOM.
 	$("#choose-enemy-button").on("click", function() {
+		combatants.pop();
 		$("#defender").children().eq(0).empty();
 		$("#defender").children().eq(1).empty();
 	});
@@ -266,8 +300,8 @@ $(document).ready(function() {
 		attacker.health = attackResult.attackerHealth;
 		defender.health = attackResult.defenderHealth;
 
-		console.log(attacker);
-		console.log(defender);
+		// console.log(attacker);
+		// console.log(defender);
 		return {
 			attacker: attacker,
 			defender: defender

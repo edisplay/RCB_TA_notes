@@ -47,3 +47,6 @@ body {
 	visibility: hidden;
 }
 
+#restart-button {
+	visibility: hidden;
+}
