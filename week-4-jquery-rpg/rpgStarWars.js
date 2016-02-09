@@ -19,7 +19,8 @@ $(document).ready(function() {
 			theForceLevel: 600,
 			selected: false,
 			selectedAsEnemy: false,
-			imageUrl: "images/obi-wan.jpg"
+			imageUrl: "images/obi-wan.jpg",
+			enemyAttackBack: 5
 		},
 		{
 			type: 'jedi',
@@ -31,7 +32,8 @@ $(document).ready(function() {
 			theForceLevel: 700,
 			selected: false,
 			selectedAsEnemy: false,
-			imageUrl: "images/luke-skywalker.jpg"
+			imageUrl: "images/luke-skywalker.jpg",
+			enemyAttackBack: 10
 		},
 		{
 			type: 'sith',
@@ -43,7 +45,8 @@ $(document).ready(function() {
 			theForceLevel: 800,
 			selected: false,
 			selectedAsEnemy: false,
-			imageUrl: "images/darth-sidious.png"
+			imageUrl: "images/darth-sidious.png",
+			enemyAttackBack: 20
 		},
 		{
 			type: 'sith',
@@ -55,13 +58,15 @@ $(document).ready(function() {
 			theForceLevel: 600,
 			selected: false,
 			selectedAsEnemy: false,
-			imageUrl: "images/darth-maul.jpg"
+			imageUrl: "images/darth-maul.jpg",
+			enemyAttackBack: 15
 		}
 	];
 	var currSelectedCharacter;
 	var combatants = [];
 	var indexOfSelChar;
 	var attackResult;
+	var turnCounter = 1;
 
 	// 1.1 Render character objects before actions to the DOM using jQuery.
 	for (var i = 0; i < characters.length; i++) {
@@ -111,6 +116,9 @@ $(document).ready(function() {
 			console.log(currSelCharImage.find("img").attr("src", event.currentTarget.children[1].children[0].src));
 			// currSelCharImage.find("img").attr("src", event.currentTarget.children[1].children[0].src);
 			currSelCharHealthEl.text(event.currentTarget.children[2].textContent);
+
+			$("#characters-section").hide();
+
 		};
 
 		// Capture selected character from global characters array.
@@ -167,29 +175,31 @@ $(document).ready(function() {
 					currSelEnemyImageUrl = event.currentTarget.children[1].children[0].src,
 					currSelEnemyHealth = event.currentTarget.children[2].textContent;
 			var currSelEnemyNameEl = currEnemyCharEl.children().eq(0),
-					currSelEnemyImageEl = currEnemyCharEl.children().eq(1).append("<img alt='image'>"),
 					currSelEnemyHealthEl = currEnemyCharEl.children().eq(2);
 
 					// console.log(currEnemyCharEl);
 
-			if ((currSelEnemyNameEl.text()) && (currSelEnemyHealthEl.text())) {
-				alert("You already selected an enemy to attack!");
-				return;
-			} else {
+			if (true) {
 				event.currentTarget.className += " selected";
-
+				var currSelEnemyImageEl = currEnemyCharEl.children().eq(1).append("<img alt='image'>");
 				currSelEnemyNameEl.text(currSelEnemyName);
+				console.log(currSelEnemyImageUrl);
+				console.log(currEnemyCharEl);
+				console.log(currSelEnemyImageEl);
 				currSelEnemyImageEl.find("img").attr("src", currSelEnemyImageUrl);
 				currSelEnemyHealthEl.text(currSelEnemyHealth);
+				return;
 			};
 
 			// Account for selected enemy object and push into the combatants array.
 			for (var t = 0; t < characters.length; t++) {
 				if (currSelEnemyName === characters[t].name) {
+					// combatants.pop();
 					combatants.push(characters[t]);
 				}
 			};
 			console.log(combatants);
+			$(this).hide();
 		});
 	};
 
@@ -200,89 +210,14 @@ $(document).ready(function() {
 	$("#attack-button").on("click", function() {
 		var updatedCharacters,
 				attackerElement = $("#attacker"),
-				defenderElement = $("#defender");
+				defenderElement = $("#defender"),
+				enemyAttackBackResult,
+				updatedCharactersAttackBack;
 
 		// console.log($("#selected-character").children().eq(0).text());
 		if ($("#selected-character").children().eq(0).text() === "") {
 			alert("Select your character!");
 			return;
-		} else {
-			// 2.1 For random attacks throughout the game, use setInterval with Math.random and use attack function in anonymous function.
-			// Random attacks start as soon as a user attacks an enemy character.
-			console.log(combatants[1]);
-			var refreshId = setInterval(function() {
-				console.log(combatants[1]);
-				var randomEnemyEl = $(".enemy-character").eq(Math.floor(Math.random() * $(".enemy-character").length)).children(),
-						randomAttackResult,
-						updatedCharactersRandomAttack;
-
-				console.log(combatants[1]);
-				console.log("You're getting attacked by " + randomEnemyEl.eq(0).text());
-
-				// Get combatants array and empty it so a new attack function with new combatant objects can be used.
-				// For 'attack' function arguments, the user (combatant[0]) will always be the second argument...attack(combatants[1], combatants[0])
-
-				combatants.pop();
-
-				console.log(combatants);
-
-				for (var w = 0; w < characters.length; w++) {
-					if (randomEnemyEl.eq(0).text() === characters[w].name) {
-						combatants.push(characters[w]);
-					}
-				};
-
-				console.log(combatants);
-				randomAttackResult = attack(combatants[1], combatants[0]);
-
-				updatedCharactersRandomAttack = updateCharacterObjects(combatants[1], combatants[0], randomAttackResult);
-				console.log(updatedCharactersRandomAttack);
-
-				// console.log(updateCharacterObjects);
-				// --------------------DOM updates for random attacks------------------
-				$("#attacker-name").text(updatedCharactersRandomAttack.defender.name); // User is defender for random attack
-
-				$("#attacker-health").text(updatedCharactersRandomAttack.defender.health); // User is defender for random attack
-
-				// $("#defender-name").text(updatedCharactersRandomAttack.attacker.name); // Enemy is attacker for random attack
-				// $("#defender-health").text(updatedCharactersRandomAttack.attacker.health); // Enemy is attacker for random attack
-
-				// 3.1 Update characters' health in the Character Selection Section in the DOM
-				for (var c = 0; c < characters.length; c++) {
-					if (updatedCharactersRandomAttack.attacker.name === characters[c].name) {
-						var updatedSelCharEl = $(".character").eq(c);
-						updatedSelCharEl.children().eq(1).text(updatedCharactersRandomAttack.attacker.health);
-					}
-				}
-				for (var d = 0; d < characters.length; d++) {
-					if (updatedCharactersRandomAttack.defender.name === characters[d].name) {
-						var updatedSelEnemyEl = $(".character").eq(d);
-						updatedSelEnemyEl.children().eq(1).text(updatedCharactersRandomAttack.defender.health);
-					}
-				}
-				// 3.2 Update characters' health in the Enemies Available To Attack Section in the DOM
-				for (var e = 0; e < $(".enemy-character").length; e++) {
-					if (updatedCharactersRandomAttack.attacker.name === $(".enemy-character").eq(e).children().eq(0).text()) {
-						$(".enemy-character").eq(e).children().eq(1).text(updatedCharactersRandomAttack.attacker.health);
-					}
-				}
-				// 3.3 Update user character's health in the 'Your Character' Section in the DOM
-				if ($("#attacker").children().eq(0).text() === $("#selected-character").children().eq(0).text()) {
-					$("#selected-character").children().eq(1).text(updatedCharactersRandomAttack.defender.health);
-				}
-
-				for (var q = 0; q < characters.length; q++) {
-					// console.log(characters[b]);
-					if (characters[q].health <= 0) {
-						$("#action").children().eq(0).css("visibility", "hidden");
-						$("#action").children().eq(1).css("visibility", "hidden");
-						$("#action").children().eq(2).css("visibility", "visible");
-						location.reload();
-						alert("Game has ended! Random Attack");
-					}
-				}
-				// --------------------------------------------------------------------
-			}, (Math.random() * 10) * 1000);
 		}
 
 		// console.log(defenderElement.children().eq(0).text());
@@ -294,15 +229,16 @@ $(document).ready(function() {
 		// console.log(combatants);
 		// Handles action of type attack
 		attackResult = attack(combatants[0], combatants[1]);
+		console.log(attackResult)
 		// console.log(updateCharacterObjects);
 		updatedCharacters = updateCharacterObjects(combatants[0], combatants[1], attackResult);
-
+		console.log(updatedCharacters);
 		// 3 Render character info from the results of actions between the characters to the DOM.
 		// console.log(updatedCharacters.attacker);
 		// console.log(updatedCharacters.defender);
 
-		$("#attacker-name").text(updatedCharacters.attacker.name);
-		$("#attacker-health").text(updatedCharacters.attacker.health);
+		// $("#attacker-name").text(updatedCharacters.attacker.name);
+		// $("#attacker-health").text(updatedCharacters.attacker.health);
 
 		$("#defender-name").text(updatedCharacters.defender.name);
 		$("#defender-health").text(updatedCharacters.defender.health);
@@ -328,54 +264,73 @@ $(document).ready(function() {
 			}
 		}
 		// 3.3 Update user character's health in the 'Your Character' Section in the DOM
-		if ($("#attacker").children().eq(0).text() === $("#selected-character").children().eq(0).text()) {
-			$("#selected-character").children().eq(1).text(updatedCharacters.attacker.health);
-		}
+		// if ($("#attacker").children().eq(0).text() === $("#selected-character").children().eq(0).text()) {
+			$("#selected-character").children().eq(2).text(updatedCharacters.attacker.health);
+		// }
 
 		// Unhide 'Choose Different Enemy' button after attack occurs
-		$("#choose-enemy-button").css("visibility", "visible");
+		// $("#choose-enemy-button").css("visibility", "visible");
 
 		// Check characters' health.  If any are less than or equal to zero after an attack, then the game ends and we hide the action buttons but unhide the 'restart' button so the game can be restarted.
 		for (var b = 0; b < characters.length; b++) {
-			// console.log(characters[b]);
+			console.log(characters[b]);
 			if (characters[b].health <= 0) {
-				$("#action").children().eq(0).css("visibility", "hidden");
-				$("#action").children().eq(1).css("visibility", "hidden");
-				$("#action").children().eq(2).css("visibility", "visible");
-				alert("Game has ended!");
+				// $("#defender").children().eq(0).hide();
+				// var imageEl = $("#defender").children().eq(1).children().eq(0);
+				// imageEl.attr("src", "");
+				// imageEl.attr("alt", "");
+				$("#defender").hide();
+				// $("#defender").children().eq(2).empty();
+				// $("#defender").css({
+				// 	"border-style": "",
+				// 	"border-color": "",
+				// 	"border-width": ""
+				// })
 			}
 		}
+
+		console.log(turnCounter);
+		$("#turn-counter").empty();
+		turnCounter++;
+		$("#turn-counter").append(turnCounter);
 	});
 	// ----------------------------------------------------------------
-
+	$("#turn-counter").append(turnCounter);
 	// 2. Create functions to enable actions between objects.
 	function attack(attacker, defender) {
 		var attackDifference;
 		// console.log(attacker);
 		// console.log(defender);
+		console.log(turnCounter);
+		// Alert user's attack
+		alert("You attacked " + combatants[1].name + " for " + (combatants[0].attack * turnCounter) + " damage.");
 		// If the attacker's attack value is greater than the defender's defense value, get the difference between the two values and decrease the life of the defender using that difference.
-		if (attacker.attack > defender.defense) {
-			attackDifference = attacker.attack - defender.defense;
-			defender.health = defender.health - attackDifference;
-			console.log("attacker.attack > defender.defense");
-		};
+		// if (attacker.attack > defender.defense) {
+			// attackDifference = attacker.attack - defender.defense;
+			// attacker.attack = attacker.attack * turnCounter;
+			defender.health = defender.health - (attacker.attack * turnCounter);
+			// console.log("attacker.attack > defender.defense");
+		// };
 		// If the attacker's attack value is less than the defender's defense value, get the difference between the two values and decrease the life of the attacker using that difference.
-		if (attacker.attack < defender.defense) {
-			attackDifference = Math.abs(attacker.attack - defender.defense);
-			attacker.health = attacker.health - attackDifference;
-			console.log("attacker.attack < defender.defense");
-		};
+		// if (attacker.attack < defender.defense) {
+		// 	attackDifference = Math.abs(attacker.attack - defender.defense);
+		// 	attacker.health = attacker.health - attackDifference;
+		// 	console.log("attacker.attack < defender.defense");
+		// };
 		// Need to account for attack === defense (if forceLevel is greater, then character with that forceLeve inflicts their damage)
-		if ((attacker.attack === defender.defense) && (attacker.theForceLevel < defender.theForceLevel)) {
-			attacker.health = attacker.health - defender.attack;
-			console.log("attacker.theForceLevel < defender.theForceLevel");
-		} else if ((attacker.attack === defender.defense) && (attacker.theForceLevel > defender.theForceLevel)) {
-			defender.health = defender.health - attacker.attack;
-			console.log("attacker.theForceLevel > defender.theForceLevel");
-		}
+		// if ((attacker.attack === defender.defense) && (attacker.theForceLevel < defender.theForceLevel)) {
+		// 	attacker.health = attacker.health - defender.attack;
+		// 	console.log("attacker.theForceLevel < defender.theForceLevel");
+		// } else if ((attacker.attack === defender.defense) && (attacker.theForceLevel > defender.theForceLevel)) {
+		// 	defender.health = defender.health - attacker.attack;
+		// 	console.log("attacker.theForceLevel > defender.theForceLevel");
+		// }
 
-		// console.log(attacker.health);
-		// console.log(defender.health);
+		alert(defender.name + " attacked you back for " + defender.enemyAttackBack + " damage.");
+		attacker.health = attacker.health - defender.enemyAttackBack;
+
+		console.log(attacker.health);
+		console.log(defender.health);
 		return {
 			attackerHealth: attacker.health,
 			defenderHealth: defender.health

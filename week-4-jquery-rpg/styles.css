@@ -89,3 +89,7 @@ img {
 #restart-button {
 	visibility: hidden;
 }
+
+#turn-counter {
+	font-size: 150%;
+}
