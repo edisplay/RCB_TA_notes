@@ -1,7 +1,26 @@
-first thing you want is a 10 to 15 minute partners do exercise going over the previous concepts
+First thing you want is a 10 to 15 minute partners do exercise going over previous concepts or concepts that will introduce the students to the material.
+
+Everything in the lesson should help the students accomplish the hw - there should be no extra fluff that the students don't use in the hw. This will ensure that there is no waste.
+
+The style of the lesson plan is:
+		1. teach a little (15 minutes max)
+
+		2. in between teaching - get them to talk to each other and explain concepts. Make sure they know that they are responsible for the understanding of the people around them.
+
+		If you understand what's going on and the person next to you doesn't, you fail.
+
+		3. after they discuss things call on a student to go over it - get the class to clap for them if they get it right - if wrong say that's ok - move on to someone else
+
+		4. get them to do an exercise
+
+		5. go over the exercise
+
+		6. repeat steps 1-5
+
+
 
 # Lesson Plan Goal
-* Goal of lesson plan: 
+* Goals of lesson plan: 
 	* To make sure EVERY STUDENT can do the hw by the end of Saturday
 	* Get every single person involved at the sametime for the majority of class! 
 

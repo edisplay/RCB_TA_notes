@@ -15,6 +15,10 @@
 
 * Eat-Da-Burger! is a fun single page app, that lets the user input the name of a burger they want to eat and submit; once submited it's displayed in text on the left side of the page where it's waiting to be devoured. Each burger in the waiting area also has a `Devour it!` button. Once clicked the burger text will move it to the right side of the page. Everything entered will be stored into a MySQL database.
 
+### Remember
+
+You will be fully capable of doing this homework by the end of Saturday's class.
+
 ### Steps
 
 Database setup:

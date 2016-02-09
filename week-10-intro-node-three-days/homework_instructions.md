@@ -12,6 +12,10 @@
 
 * see demonstration of how it works * 
 
+### Remember
+
+You will be fully capable of doing this homework by the end of Saturday's class.
+
 ### Debugging This Program
 * need to install iron-node globally to use to debug things
 
