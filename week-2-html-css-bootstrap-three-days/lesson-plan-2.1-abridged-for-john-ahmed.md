@@ -25,11 +25,6 @@ TBD
 
 # Objectives (Slack out to students, have unique students read each one and Instructor makes a comment after each one is read)
 
-* Develop your vision for a website -- and then build it!
-* Expertly navigate the file system and terminal basics
-* Work independently or in a group on complex projects throughout the entire development lifecycle
-* Communicate the basics of serving a webpage and how the browser renders code
-* Understand and implement the mechanics of Git flow (including branching, merging, pull requests)
 
 ----
 

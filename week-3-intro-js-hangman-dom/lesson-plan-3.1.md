@@ -43,7 +43,6 @@ DO NOT USE JS FIDDLES.
 
 # Objectives (Slack out to students, have unique students read each one and Instructor makes a comment after each one being read)
 
-* students will trigger break points in a couple of ways to "stop time"
 * students will use JavaScript
   * data types (strings, numbers, arrays)
   * user input gathering techniques
@@ -51,74 +50,53 @@ DO NOT USE JS FIDDLES.
 
 ### 1. Partners do (15 minutes)
 
-> I know you don't know how to use JavaScript yet, I want you to try your best for 15 minutes to run this code and disuss it line by line with your partners.
+1. If Albert is thinking of a number, adds 5 to the number, then subtracts the result by 2, multiplies the result by 3, he gets 39. What's the original number that Albert thought of?
 
-1. Save the following code to an html file
-2. Open it in chrome watch how it works
-3. Relate what it does to to the code. 
-4. Explain to your partners what it does line by line
+2. 
 
-```
-<!DOCTYPE html>
-<html>
-<head>
-  <title>
-    Data types, user input, conditional logic
-  </title>
-</head>
-<body>
-  <script type="text/javascript">
+Find out what x and y are.
 
-    // Creates a Javascript Function
-    function runFunction() {
-      var userName = prompt("What's your name?");
-      var confirm = confirm('Do you like cats?');
+y is greater than x
 
-      var petName = 'Meeses';
-      var petType = 'tuxedo cat';
-      var petAge = 5;
-      var petIsCat = true;
+x + y = 10
+xy = 24
 
-      if (confirm){
-        alert(petName + petType + petAge)
-      }else{
-        alert("You don't get my cat's information")
-      }
+3. 
 
-      if (petIsCat == true){
-        alert('my pet is a cat')
-      }else{
-        alert('my pet is not a cat')
-      }
+if 4 is less than 6 then jump up
 
-      if (petAge !== 7){
-        alert('My pet is not 7 years old')
-      }
+4. 
+if 6 is less than 4 then clap
 
-      if (petAge == 5){
-        alert('My pet is 5 years old')
-      }else if(petAge < 5){
-        alert('My pet is less than 5 years old')
-      }else if(petAge > 5){
-        alert('My pet is older than 5 years old')
-      }
+5. 
+if cats are reptiles then clap
+else if dogs are mammals then snap
 
-      //this replaces the entire page with this - so it's not something you'll normally use - but it's what we'll use for now to be able to print stuff to the page
-      document.write('Welcome to our page ' + userName);
+6. 
 
-      var catAge = prompt('how old is your cat?');
+if dogs meow then stomp your feet
+else if Ghana is a continent then scream really loud
+else snap your fingers
 
-      alert(catAge + 2); //won't work as expected
+7. 
 
-      alert(parseInt(catAge) + 2); //works as expected
+make a list of 5 numbers: 4, 2, 8, 6, 9  
 
-    }
-    // Runs the code when page is loaded
-    window.onLoad =runFunction();
-  </script>
-</body>
-</html>
-```
+multiply the first and last ones by 3. Then multiply the middle ones by 2.
+
+What's the new list of numbers?
+
+8. 
+
+if you used to play tag when you were a child then whisper to your partner: "Tag was a lot of fun."
+
+else whisper to your partner that: "Tag wasn't that great; I was into books bro."
+
+
+answers:
+1. 13
+2. x is 4 and y is 6
+7. 12, 4, 16, 12, 27
 
 ### 2. Instructor do (10 minutes)
 
