@@ -25,81 +25,12 @@ TBD
 
 # Objectives (Slack out to students, have unique students read each one and Instructor makes a comment after each one is read)
 
-* Develop your vision for a website -- and then build it!
-* Expertly navigate the file system and terminal basics
-* Work independently or in a group on complex projects throughout the entire development lifecycle
-* Communicate the basics of serving a webpage and how the browser renders code
-* Understand and implement the mechanics of Git flow (including branching, merging, pull requests)
+- DIDN'T FINISH THIS
 
 ----
 
-### 1. Instructor Do (10 minutes)
+### 1. Partners Do (10 minutes)
 
-***Recap last weeks class QUICKLY. Say one or two sentences about the following***
-
-* Terminal
-    * Terminal Commands
-        * navigate to the home directory.
-            + `cd ~`
-        * go back a directory
-            + `cd ..`
-        * print the current working directory.
-            + `pwd`
-        * create a new folder.
-            + `mkdir folder_name`
-        * create a new html file.
-            + `touch my-first-example-page.html`
-        * delete a file
-            + `rm my-first-example-page.html`
-        * delete a folder
-            + `rm -r folder_name`
-        * list files in a folder
-            + `ls` - list files
-            + `ls -a` - list all files, even hidden ones without filenames
-            + `ls -la` - list all files and permissions in a list format
-
-* Git
-    * Git Commands
-        + `git add filename` vs `git add .`
-        + `git commit -m "Commit Message"`
-        + `git push`
-        + `git pull`
-    * Made first repo called `week-one-repo`
-
-* Inspector
-    * Elements panel and style side panel
-
-* Heroku
-    * Deploying to the web
-
-* HTML
-    * Doctype
-    * HTML indentation and syntax e.g. open and closing tags, self closing tags, double quotations (never single quotes)*
-    * Core html tags (e.g. doctype, html, head, title, body)
-    * Other html tags (e.g. headings, paragraphs, anchors, lists, divs, tables)
-    * html5 tags (e.g. header, section, article, footer)
-
-* CSS
-    * Types of style sheets (e.g. inline vs internal vs external) and how the order that the CSS is written is important
-    * CSS properties (e.g. font-family, background-color)
-    * ID's vs classes
-    * CSS box model
-    * Floats
-    * Positioning (e.g. relative, static, absolute, fixed)
-    * CSS resets
-
-* Coded 3 in-class html and css pages
-    * student-bio.html
-    * floats.html
-    * positioning.html
-
-* Coded 3 page portfolio site for homework
-
-* *answer any questions students might have about these things*
-
-* *Show [this html file](in-class-exercises-2.1/index-1.html){:target="_blank"} on the projector. It is what the students must code out in the next exercise.*
-
-----
 
 ### 2. Student Do (20 minutes)
 
