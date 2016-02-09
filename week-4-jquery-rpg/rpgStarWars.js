@@ -6,6 +6,18 @@
 // 2. Choose who to attack
 // 3. A random enemy will attack you
 
+// Students Don't Know
+// Constructors
+//
+
+// Students know
+// click events
+// variables
+// data types
+// html / css
+// git / heroku
+// arrays
+
 $(document).ready(function() {
 	// 1. Create 4 characters with objects.
 	var characters = [
@@ -228,6 +240,8 @@ $(document).ready(function() {
 
 		// console.log(combatants);
 		// Handles action of type attack
+		console.log(combatants[0]);
+		console.log(combatants[1]);
 		attackResult = attack(combatants[0], combatants[1]);
 		console.log(attackResult)
 		// console.log(updateCharacterObjects);
@@ -302,8 +316,9 @@ $(document).ready(function() {
 		// console.log(attacker);
 		// console.log(defender);
 		console.log(turnCounter);
+		console.log(attacker);
 		// Alert user's attack
-		alert("You attacked " + combatants[1].name + " for " + (combatants[0].attack * turnCounter) + " damage.");
+		alert("You attacked " + attacker.name + " for " + (defender.attack * turnCounter) + " damage.");
 		// If the attacker's attack value is greater than the defender's defense value, get the difference between the two values and decrease the life of the defender using that difference.
 		// if (attacker.attack > defender.defense) {
 			// attackDifference = attacker.attack - defender.defense;
@@ -344,11 +359,11 @@ $(document).ready(function() {
 
 
 	// When user clicks on the 'Choose Different Enemy' button after an attack, create an event listener that clears the Defender section of the DOM.
-	$("#choose-enemy-button").on("click", function() {
-		combatants.pop();
-		$("#defender").children().eq(0).empty();
-		$("#defender").children().eq(1).empty();
-	});
+	// $("#choose-enemy-button").on("click", function() {
+	// 	combatants.pop();
+	// 	$("#defender").children().eq(0).empty();
+	// 	$("#defender").children().eq(1).empty();
+	// });
 
 	// 2.1.1  Declare a variable to handle action type values e.g. attack, steal, scavenge (for 20 days), one-hit-kill...
 
