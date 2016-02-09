@@ -8,6 +8,17 @@
 
 You will be fully capable of doing this homework by the end of Saturday's class.
 
+### Week 2 Mantra
+
+Week 1 you learned a lot of html/css, github and heroku
+Week 2 you'll learn an easier way to manage the html/css along with some more github stuff
+Week 3 we'll start JavaScript, and weeks 1+2 get used a lot less
+
+There is no need to panic over week 1's material. Because you'll have 23 weeks to digest it and get good at it. 
+
+Again, Week 1 doesn't build over the next 23 weeks. Stay calm. You'll have plenty of time to get better at it.
+
+
 ### Assignment One Instructions
 1. Inside your `portfolio` folder, find the `style.css` file. At the bottom you will write your media queries.
   + Use three `@media screen` tags with a `max-width` of `980px`, `768px`, and `640px`.
