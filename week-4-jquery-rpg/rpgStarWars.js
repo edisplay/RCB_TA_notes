@@ -24,6 +24,7 @@ $(document).ready(function() {
 		'Obi-Wan Kenobi' : {
 			type: 'jedi',
 			rank: 'master',
+			name: 'Obi-Wan Kenobi', 
 			health: 100,
 			attack: 8,
 			defense: 6,
@@ -36,6 +37,7 @@ $(document).ready(function() {
 		'Luke Skywalker' : {
 			type: 'jedi',
 			rank: 'knight',
+			name: 'Luke Skywalker',
 			health: 100,
 			attack: 7,
 			defense: 8,
@@ -48,6 +50,7 @@ $(document).ready(function() {
 		'Darth Sidious' : {
 			type: 'sith',
 			rank: 'master',
+			name: 'Darth Sidious',
 			health: 150,
 			attack: 8,
 			defense: 8,
@@ -60,6 +63,7 @@ $(document).ready(function() {
 		'Darth Maul' : {
 			type: 'sith',
 			rank: 'apprentice',
+			name: 'Darth Maul',
 			health: 100,
 			attack: 5,
 			defense: 6,
@@ -71,55 +75,124 @@ $(document).ready(function() {
 		}
 	};
 	var currSelectedCharacter;
+	var currDefender;
 	var combatants = [];
 	var indexOfSelChar;
 	var attackResult;
 	var turnCounter = 1;
 
-	var renderCharacters = function(charObj, areaRender){
-		$(areaRender).empty();
-
-		for (var key in charObj) {
-		  if (charObj.hasOwnProperty(key)) {
-		  	var charDiv = $("<div class='character' data-name='" + key + "'>");
-		  	
-		  	var charName = $("<div class='character-name'>").text(key);
-		  	var charImage = $("<img alt='image' class='character-image'>").attr("src", charObj[key].imageUrl);
-			var charHealth = $("<div class='character-health'>").text(charObj[key].health);
-
+	var renderCharacters = function(charObj, areaRender) {
+		//render all characters
+		if (areaRender == '#characters-section') {
+			$(areaRender).empty();
+			for (var key in charObj) {
+			  if (charObj.hasOwnProperty(key)) {
+			  	var charDiv = $("<div class='character' data-name='" + key + "'>");
+			  	var charName = $("<div class='character-name'>").text(key);
+			  	var charImage = $("<img alt='image' class='character-image'>").attr("src", charObj[key].imageUrl);
+				var charHealth = $("<div class='character-health'>").text(charObj[key].health);
+				charDiv.append(charName).append(charImage).append(charHealth);
+			    $(areaRender).append(charDiv);
+			  }
+			}
+		};
+		//render player char
+		if (areaRender == '#selected-character') {
+		  	var charDiv = $("<div class='character' data-name='" + String(currSelectedCharacter.name) + "'>");
+		  	var charName = $("<div class='character-name'>").text(String(currSelectedCharacter.name));
+		  	var charImage = $("<img alt='image' class='character-image'>").attr("src", currSelectedCharacter.imageUrl);
+			var charHealth = $("<div class='character-health'>").text(currSelectedCharacter.health);
 			charDiv.append(charName).append(charImage).append(charHealth);
-
 		    $(areaRender).append(charDiv);
-		  }
-		}
+		};
+		//render combatants
+		if (areaRender == '#available-to-attack-section') {
+			console.log(charObj)
+			for (var i = 0; i < charObj.length; i++) {
+			  	var charDiv = $("<div class='character' data-name='" + charObj[i].name + "'>");
+			  	var charName = $("<div class='character-name'>").text(charObj[i].name);
+			  	var charImage = $("<img alt='image' class='character-image'>").attr("src", charObj[i].imageUrl);
+				var charHealth = $("<div class='character-health'>").text(charObj[i].health);
+				charDiv.append(charName).append(charImage).append(charHealth);
+			    $(areaRender).append(charDiv);
+				$(charDiv).addClass("enemy");
+			};
+			//render one enemy to defender area
+			$(document).on('click', '.enemy', function() {
+				//select an combatant to fight
+				name = ($(this).data('name'));
+				renderCharacters(name, '#defender');
+				$(this).hide();
+			})
+		};
+		//render defender
+		if (areaRender == '#defender') {
+			//$(areaRender).empty();
+			console.log()
+			for (var i = 0; i < combatants.length; i++) {
+				//add enemy to defender area
+				if (combatants[i].name == charObj) {				
+				  	var charDiv = $("<div class='character' data-name='" + combatants[i].name + "'>");
+				  	var charName = $("<div class='character-name'>").text(combatants[i].name);
+				  	var charImage = $("<img alt='image' class='character-image'>").attr("src", combatants[i].imageUrl);
+					var charHealth = $("<div class='character-health'>").text(combatants[i].health);
+					charDiv.append(charName).append(charImage).append(charHealth);
+				    $(areaRender).append(charDiv);
+				    //currDefender=combatants[i]
+				};
+			};
+		};
 	}
 
 	//this is to render all characters for user to choose their computer
 	renderCharacters(characters, '#characters-section');
 
-
 	$(document).on('click', '.character', function(){
 		name = $(this).data('name');
-		currSelectedCharacter = characters[name];
+		if (!currSelectedCharacter) {		
+			currSelectedCharacter = characters[name];
+			for (var key in characters) {
+				if (key != name){
+					combatants.push(characters[key]);
+				}
+			};
+			$("#characters-section").hide();
+			renderCharacters(currSelectedCharacter, '#selected-character');
+			console.log(combatants);
 
-		for (var key in characters) {
-			if (key != name){
-				combatants.push(characters[key])
-			}
-		}
-
-		$("#characters-section").hide();
-		renderCharacters(currSelectedCharacter, '#selected-character');
-
-		console.log(combatants);
+			//this is to render all characters for user to choose fight against
+			renderCharacters(combatants, '#available-to-attack-section');
+		};
 	});
 
+	// ----------------------------------------------------------------
+	//$("#turn-counter").append(turnCounter);
+	// 2. Create functions to enable actions between objects.
 
+	$("#attack-button").on("click", function() {
+		console.log(currSelectedCharacter);
+		console.log(currDefender);
+		// Alert user's attack
+		// alert("You attacked " + attackerObj.name + " for " + (defender.attack * turnCounter) + " damage.");
+		// defender.health = defender.health - (attackerObj.attack * turnCounter);
 
-	//this is to render all characters for user to choose their computer
-	renderCharacters(combatanats);
+		// alert(defender.name + " attacked you back for " + defender.enemyAttackBack + " damage.");
+		// attackerObj.health = attackerObj.health - defender.enemyAttackBack;
 
+		// console.log(attackerObj.health);
+		// console.log(defender.health);
+		// return {
+		// 	attackerObjHealth: attackerObj.health,
+		// 	defenderHealth: defender.health
+		// };
 
+	})
+
+/*	//When 'Restart' button is clicked, reload the page.
+	$("#restart-button").on("click", function() {
+		location.reload();
+	});
+*/
 
 	// // 1.2 Render selected character object before actions to the DOM using jQuery.
 	// var chooseCharacter = function(event) {
@@ -238,25 +311,6 @@ $(document).ready(function() {
 	// $(".character").on("click", chooseCharacter);
 	// // ------------------------------------------
 
-	// $("#attack-button").on("click", function() {
-	// 	var updatedCharacters,
-	// 			attackerElement = $("#attacker"),
-	// 			defenderElement = $("#defender"),
-	// 			enemyAttackBackResult,
-	// 			updatedCharactersAttackBack;
-
-	// 	// console.log($("#selected-character").children().eq(0).text());
-	// 	if ($("#selected-character").children().eq(0).text() === "") {
-	// 		alert("Select your character!");
-	// 		return;
-	// 	}
-
-	// 	// console.log(defenderElement.children().eq(0).text());
-	// 	if (defenderElement.children().eq(0).text() === "") {
-	// 		alert("Select your enemy!");
-	// 		return;
-	// 	}
-
 	// 	// console.log(combatants);
 	// 	// Handles action of type attack
 	// 	console.log(combatants[0]);
@@ -268,11 +322,11 @@ $(document).ready(function() {
 	// 	updatedCharacters = updateCharacterObjects(combatants[0], combatants[1], attackResult);
 	// 	console.log(updatedCharacters);
 	// 	// 3 Render character info from the results of actions between the characters to the DOM.
-	// 	// console.log(updatedCharacters.attacker);
+	// 	// console.log(updatedCharacters.attackerObj);
 	// 	// console.log(updatedCharacters.defender);
 
-	// 	// $("#attacker-name").text(updatedCharacters.attacker.name);
-	// 	// $("#attacker-health").text(updatedCharacters.attacker.health);
+	// 	// $("#attackerObj-name").text(updatedCharacters.attackerObj.name);
+	// 	// $("#attackerObj-health").text(updatedCharacters.attackerObj.health);
 
 	// 	$("#defender-name").text(updatedCharacters.defender.name);
 	// 	$("#defender-health").text(updatedCharacters.defender.health);
@@ -280,9 +334,9 @@ $(document).ready(function() {
 
 	// 	// 3.1 Update characters' health in the Character Selection Section in the DOM
 	// 	for (var c = 0; c < characters.length; c++) {
-	// 		if (updatedCharacters.attacker.name === characters[c].name) {
+	// 		if (updatedCharacters.attackerObj.name === characters[c].name) {
 	// 			var updatedSelCharEl = $(".character").eq(c);
-	// 			updatedSelCharEl.children().eq(1).text(updatedCharacters.attacker.health);
+	// 			updatedSelCharEl.children().eq(1).text(updatedCharacters.attackerObj.health);
 	// 		}
 	// 	}
 	// 	for (var d = 0; d < characters.length; d++) {
@@ -298,8 +352,8 @@ $(document).ready(function() {
 	// 		}
 	// 	}
 	// 	// 3.3 Update user character's health in the 'Your Character' Section in the DOM
-	// 	// if ($("#attacker").children().eq(0).text() === $("#selected-character").children().eq(0).text()) {
-	// 		$("#selected-character").children().eq(2).text(updatedCharacters.attacker.health);
+	// 	// if ($("#attackerObj").children().eq(0).text() === $("#selected-character").children().eq(0).text()) {
+	// 		$("#selected-character").children().eq(2).text(updatedCharacters.attackerObj.health);
 	// 	// }
 
 	// 	// Unhide 'Choose Different Enemy' button after attack occurs
@@ -330,57 +384,10 @@ $(document).ready(function() {
 
 	// 	debugger;
 	// });
-	// // ----------------------------------------------------------------
-	// $("#turn-counter").append(turnCounter);
-	// // 2. Create functions to enable actions between objects.
-	// function attack(attacker, defender) {
-	// 	var attackDifference;
-	// 	// console.log(attacker);
-	// 	// console.log(defender);
-	// 	console.log(turnCounter);
-	// 	console.log(attacker);
-	// 	// Alert user's attack
-	// 	alert("You attacked " + attacker.name + " for " + (defender.attack * turnCounter) + " damage.");
-	// 	// If the attacker's attack value is greater than the defender's defense value, get the difference between the two values and decrease the life of the defender using that difference.
-	// 	// if (attacker.attack > defender.defense) {
-	// 		// attackDifference = attacker.attack - defender.defense;
-	// 		// attacker.attack = attacker.attack * turnCounter;
-	// 		defender.health = defender.health - (attacker.attack * turnCounter);
-	// 		// console.log("attacker.attack > defender.defense");
-	// 	// };
-	// 	// If the attacker's attack value is less than the defender's defense value, get the difference between the two values and decrease the life of the attacker using that difference.
-	// 	// if (attacker.attack < defender.defense) {
-	// 	// 	attackDifference = Math.abs(attacker.attack - defender.defense);
-	// 	// 	attacker.health = attacker.health - attackDifference;
-	// 	// 	console.log("attacker.attack < defender.defense");
-	// 	// };
-	// 	// Need to account for attack === defense (if forceLevel is greater, then character with that forceLeve inflicts their damage)
-	// 	// if ((attacker.attack === defender.defense) && (attacker.theForceLevel < defender.theForceLevel)) {
-	// 	// 	attacker.health = attacker.health - defender.attack;
-	// 	// 	console.log("attacker.theForceLevel < defender.theForceLevel");
-	// 	// } else if ((attacker.attack === defender.defense) && (attacker.theForceLevel > defender.theForceLevel)) {
-	// 	// 	defender.health = defender.health - attacker.attack;
-	// 	// 	console.log("attacker.theForceLevel > defender.theForceLevel");
-	// 	// }
-
-	// 	alert(defender.name + " attacked you back for " + defender.enemyAttackBack + " damage.");
-	// 	attacker.health = attacker.health - defender.enemyAttackBack;
-
-	// 	console.log(attacker.health);
-	// 	console.log(defender.health);
-	// 	return {
-	// 		attackerHealth: attacker.health,
-	// 		defenderHealth: defender.health
-	// 	};
-	// };
-
-	// When 'Restart' button is clicked, reload the page.
-	// $("#restart-button").on("click", function() {
-	// 	location.reload();
-	// });
 
 
-	// When user clicks on the 'Choose Different Enemy' button after an attack, create an event listener that clears the Defender section of the DOM.
+
+	// When user clicks on the 'Choose Different Enemy' button after an attack, create an event listener that clears the defender section of the DOM.
 	// $("#choose-enemy-button").on("click", function() {
 	// 	combatants.pop();
 	// 	$("#defender").children().eq(0).empty();
@@ -391,14 +398,14 @@ $(document).ready(function() {
 
 
 	// 2.2 Create functions to update objects after actions between objects.
-	// function updateCharacterObjects(attacker, defender, attackResult) {
-	// 	attacker.health = attackResult.attackerHealth;
+	// function updateCharacterObjects(attackerObj, defender, attackResult) {
+	// 	attackerObj.health = attackResult.attackerObjHealth;
 	// 	defender.health = attackResult.defenderHealth;
 
-	// 	// console.log(attacker);
+	// 	// console.log(attackerObj);
 	// 	// console.log(defender);
 	// 	return {
-	// 		attacker: attacker,
+	// 		attackerObj: attackerObj,
 	// 		defender: defender
 	// 	};
 	// };
