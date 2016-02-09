@@ -47,16 +47,6 @@ app.get('/', function(req,res) {
     //res.render('index');
 })
 
-// //post route -> back to home
-// app.post('/mySubmit', function(req, res) {
-//   console.log('You sent, ' + req.body.todo);
-//   //mySQL commands
-//     connection.query('INSERT INTO Tasks (Todo, Done) VALUES (?, ?)', [req.body.todo, false], function(err, result) {
-//   if (err) throw err;
-//   });
-//   res.redirect('/');
-// });
-
 //put route -> back to home
 app.put('/update', function(req,res){
     console.log("PUT received: ->");
