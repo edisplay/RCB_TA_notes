@@ -17,7 +17,8 @@ $(document).ready(function() {
 			attack: 8,
 			defense: 6,
 			theForceLevel: 600,
-			selected: false
+			selected: false,
+			selectedAsEnemy: false
 		},
 		{
 			type: 'jedi',
@@ -27,7 +28,8 @@ $(document).ready(function() {
 			attack: 7,
 			defense: 8,
 			theForceLevel: 700,
-			selected: false
+			selected: false,
+			selectedAsEnemy: false
 		},
 		{
 			type: 'sith',
@@ -37,7 +39,8 @@ $(document).ready(function() {
 			attack: 8,
 			defense: 8,
 			theForceLevel: 800,
-			selected: false
+			selected: false,
+			selectedAsEnemy: false
 		},
 		{
 			type: 'sith',
@@ -47,7 +50,8 @@ $(document).ready(function() {
 			attack: 5,
 			defense: 6,
 			theForceLevel: 600,
-			selected: false
+			selected: false,
+			selectedAsEnemy: false
 		}
 	];
 	var currSelectedCharacter;
@@ -169,6 +173,19 @@ $(document).ready(function() {
 				attackerElement = $("#attacker"),
 				defenderElement = $("#defender");
 
+		// console.log($("#selected-character").children().eq(0).text());
+		if ($("#selected-character").children().eq(0).text() === "") {
+			alert("Select your character!");
+			return;
+		}
+
+		console.log(defenderElement.children().eq(0).text());
+
+		if (defenderElement.children().eq(0).text() === "") {
+			alert("Select your enemy!");
+			return;
+		}
+
 		console.log(combatants);
 		// Handles action of type attack
 		attackResult = attack(combatants[0], combatants[1]);
@@ -199,6 +216,9 @@ $(document).ready(function() {
 				updatedSelEnemyEl.children().eq(1).text(updatedCharacters.defender.health);
 			}
 		}
+
+		// Unhide 'Choose Different Enemy' button after attack occurs
+		$("#choose-enemy-button").css("visibility", "visible");
 	});
 	// ----------------------------------------------------------------
 
@@ -225,6 +245,12 @@ $(document).ready(function() {
 		};
 	};
 
+
+	// When user clicks on the 'Choose Different Enemy' button after an attack, create an event listener that clears the Defender section of the DOM.
+	$("#choose-enemy-button").on("click", function() {
+		$("#defender").children().eq(0).empty();
+		$("#defender").children().eq(1).empty();
+	});
 
 	// 2.1 For random attacks throughout the game, use setInterval with Math.random and use attack function as a callback.
 
