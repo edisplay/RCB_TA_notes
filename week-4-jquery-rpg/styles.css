@@ -1,0 +1,45 @@
+body {
+	font-family: 'Share Tech Mono', Arial, Helvetica, sans-serif;
+}
+
+.section-title {
+	font-size: 200%;
+}
+
+.main-section-title {
+	font-size: 300%;
+}
+
+.character {
+	border-style: solid;
+	border-color: green;
+	border-width: 3px;
+	cursor: pointer;
+}
+
+.enemy-character {
+	border-style: solid;
+	border-color: red;
+	border-width: 3px;
+	cursor: pointer;
+}
+
+#selected-character {
+	border-style: solid;
+	border-color: orange;
+	border-width: 3px;
+}
+
+#attacker {
+	border-style: solid;
+	border-color: blue;
+	border-width: 3px;
+}
+
+#defender {
+	border-style: solid;
+	border-color: red;
+	border-width: 3px;
+	cursor: pointer;
+}
+
