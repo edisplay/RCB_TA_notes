@@ -67,7 +67,7 @@ Review Exercise: `feel state`
 
 * *Instructor demos. Look in lesson-14.3.exercise_solutions folder.*
 
-* No Express, just MySQL and Node Instructor demo ORM just using Node console app, show how to use this with mulitple tables.
+* No Express, No handlebars, only MySQL and Node Instructor demo ORM just using Node console app, show how to use this with mulitple tables.
 	* The O.R.M functions once run when Node serer is lanuched will use MySQL commands with the user inputs
 		* Find all animals by name order by price
 		* Find an animal by the name of the animal
@@ -102,7 +102,8 @@ Create a holiday party planner app. Many different kinds of holidays are celebra
 |4|Bobbys Cousin Birthday Party|Birthday Party|300|2|
 |5|Bobbys Superbowl Party|Superbowl Party|250|2|
 
-Create an Node MySQL app with an O.R.M functions that executes once the server is launched, no Express, no prompt.
+Create an Node MySQL app with an O.R.M functions that executes once the server is launched.
+* No Express, No handlebars, display with console log
 
 	* Create a MySQL database with the tables and data given to you
 	* Create a Node app and connect it to MySQL with a 'config' dir and with a 'connection.js' file inside of that dir
