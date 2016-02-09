@@ -102,7 +102,7 @@ $(document).ready(function() {
 				characters[index].selected = true;
 			}
 		});
-		// console.log(characters[indexOfSelChar]);
+
 		// Push selected character in combatants array to capture combatants.
 		combatants.push(characters[indexOfSelChar]);
 		// Index of selected character is available, USE IT
@@ -149,30 +149,59 @@ $(document).ready(function() {
 
 				currSelEnemyNameEl.text(currSelEnemyName);
 				currSelEnemyHealthEl.text(currSelEnemyHealth);
-			}
+			};
 
 			// Account for selected enemy object and push into the combatants array.
 			for (var t = 0; t < characters.length; t++) {
 				if (currSelEnemyName === characters[t].name) {
 					combatants.push(characters[t]);
 				}
-			}
+			};
 		});
-
-
-
 	};
 
-
-
+	// User chooses character to play------------
 	$(".character").on("click", chooseCharacter);
+	// ------------------------------------------
 
 	$("#attack-button").on("click", function() {
+		var updatedCharacters,
+				attackerElement = $("#attacker"),
+				defenderElement = $("#defender");
+
 		console.log(combatants);
+		// Handles action of type attack
 		attackResult = attack(combatants[0], combatants[1]);
+		// console.log(updateCharacterObjects);
+		updatedCharacters = updateCharacterObjects(combatants[0], combatants[1], attackResult);
+
+		// 3 Render character info from the results of actions between the characters to the DOM.
+		// console.log(updatedCharacters.attacker);
+		// console.log(updatedCharacters.defender);
+
+		$("#attacker-name").text(updatedCharacters.attacker.name);
+		$("#attacker-health").text(updatedCharacters.attacker.health);
+
+		$("#defender-name").text(updatedCharacters.defender.name);
+		$("#defender-health").text(updatedCharacters.defender.health);
+		// ----------------------------------------------------------------
+
+		// 3.1 Update characters' health in the Character Selection Section in the DOM
+		for (var c = 0; c < characters.length; c++) {
+			if (updatedCharacters.attacker.name === characters[c].name) {
+				var updatedSelCharEl = $(".character").eq(c);
+				updatedSelCharEl.children().eq(1).text(updatedCharacters.attacker.health);
+			}
+		}
+		for (var d = 0; d < characters.length; d++) {
+			if (updatedCharacters.defender.name === characters[d].name) {
+				var updatedSelEnemyEl = $(".character").eq(d);
+				updatedSelEnemyEl.children().eq(1).text(updatedCharacters.defender.health);
+			}
+		}
 	});
 	// ----------------------------------------------------------------
-	console.log(attackResult);
+
 	// 2. Create functions to enable actions between objects.
 	function attack(attacker, defender) {
 		var attackDifference;
@@ -188,6 +217,7 @@ $(document).ready(function() {
 			attackDifference = Math.abs(attacker.attack - defender.defense);
 			attacker.health = attacker.health - attackDifference;
 		};
+		// Need to account for attack === defense (if forceLevel is greater, then character with that forceLeve inflicts their damage)
 
 		return {
 			attackerHealth: attacker.health,
@@ -199,8 +229,6 @@ $(document).ready(function() {
 	// 2.1 For random attacks throughout the game, use setInterval with Math.random and use attack function as a callback.
 
 
-
-
 	// ---Currently, to change characters, just change the two arguments' indexes
 	// var attackResult = attack(characters[0], characters[3]); //---UNCOMMENT when ready to render result of attack
 
@@ -208,11 +236,10 @@ $(document).ready(function() {
 
 
 	// 2.2 Create functions to update objects after actions between objects.
-
 	function updateCharacterObjects(attacker, defender, attackResult) {
-		console.log(attackResult);
 		attacker.health = attackResult.attackerHealth;
 		defender.health = attackResult.defenderHealth;
+
 		console.log(attacker);
 		console.log(defender);
 		return {
@@ -220,24 +247,6 @@ $(document).ready(function() {
 			defender: defender
 		};
 	};
-
-	// ---Currently, to change characters, just change the first two arguments' indexes
-	// var updatedCharacters = updateCharacterObjects(combatants[0], combatants[1], attackResult);  //---UNCOMMENT when ready to render result of attack
-
-	// ----------------------------------------------------------------
-
-	// 3 Render character info from the results of actions between the characters to the DOM.
-	// console.log(updatedCharacters.attacker);
-	// console.log(updatedCharacters.defender);
-
-	var attackerElement = $("#attacker");
-	// $("#attacker-name").text(updatedCharacters.attacker.name);
-	// $("#attacker-health").text(updatedCharacters.attacker.health);
-
-	var defenderElement = $("#defender");
-	// $("#defender-name").text(updatedCharacters.defender.name);
-	// $("#defender-health").text(updatedCharacters.defender.health);
-	// ----------------------------------------------------------------
 
 });
 

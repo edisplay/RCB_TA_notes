@@ -43,3 +43,7 @@ body {
 	cursor: pointer;
 }
 
+#choose-enemy-button {
+	visibility: hidden;
+}
+
