@@ -19,6 +19,8 @@
 // arrays
 
 $(document).ready(function() {
+
+	// ----------------------------------------------------------------
 	// 1. Create 4 characters with objects.
 	var characters = { 
 		'Obi-Wan Kenobi' : {
@@ -80,7 +82,13 @@ $(document).ready(function() {
 	var indexOfSelChar;
 	var attackResult;
 	var turnCounter = 1;
+	var killCount = 0;
 
+	// ----------------------------------------------------------------
+	// 2. Create HTML
+	
+	// ----------------------------------------------------------------
+	// 3. Create functions to render to DOM
 	var renderCharacters = function(charObj, areaRender) {
 		//render all characters
 		if (areaRender == '#characters-section') {
@@ -120,8 +128,11 @@ $(document).ready(function() {
 			$(document).on('click', '.enemy', function() {
 				//select an combatant to fight
 				name = ($(this).data('name'));
-				renderCharacters(name, '#defender');
-				$(this).hide();
+				//if defernder area is empty
+				if ( $('#defender').children().length == 0 ) {
+					renderCharacters(name, '#defender');
+					$(this).hide();
+				};
 			})
 		};
 		//render defender
@@ -141,7 +152,7 @@ $(document).ready(function() {
 				};
 			};
 		};
-		//render character's state
+		//render character's state when attacked
 		if (areaRender == 'playerDamage') {
 			$('#defender').empty();
 		  	var charDiv = $("<div class='character' data-name='" + charObj.name + "'>");
@@ -152,7 +163,7 @@ $(document).ready(function() {
 		    $('#defender').append(charDiv);
 		    $(charDiv).addClass("target-enemy");
 		};
-		//render character's state
+		//render character's state when attacked
 		if (areaRender == 'enemyDamage') {
 			$('#selected-character').empty();
 		  	var charDiv = $("<div class='character' data-name='" + charObj.name + "'>");
@@ -168,12 +179,11 @@ $(document).ready(function() {
 			alert("You have defated " + charObj.name + ", you can choose to fight another enemy.");
 		};
 	};
-
 	//this is to render all characters for user to choose their computer
 	renderCharacters(characters, '#characters-section');
-
 	$(document).on('click', '.character', function(){
 		name = $(this).data('name');
+		//if no player char has been selected
 		if (!currSelectedCharacter) {		
 			currSelectedCharacter = characters[name];
 			for (var key in characters) {
@@ -183,50 +193,56 @@ $(document).ready(function() {
 			};
 			$("#characters-section").hide();
 			renderCharacters(currSelectedCharacter, '#selected-character');
-			//console.log(combatants);
 			//this is to render all characters for user to choose fight against
 			renderCharacters(combatants, '#available-to-attack-section');
 		};
 	});
 
 	// ----------------------------------------------------------------
-	// 2. Create functions to enable actions between objects.
+	// 4. Create functions to enable actions between objects.
 	$("#attack-button").on("click", function() {
-		// console.log(currSelectedCharacter);
-		// console.log(currDefender);
+		//if defernder area has enemy
+		if ( $('#defender').children().length != 0 ) {
+			//defender state change
+			alert("You attacked " + currDefender.name + " for " + (currSelectedCharacter.attack * turnCounter) + " damage.");
+			//combat
+			currDefender.health = currDefender.health - (currSelectedCharacter.attack * turnCounter);
 
-		//defender state change
-		alert("You attacked " + currDefender.name + " for " + (currSelectedCharacter.attack * turnCounter) + " damage.");
-		//combat
-		currDefender.health = currDefender.health - (currSelectedCharacter.attack * turnCounter);
-
-		//win condition
-		if (currDefender.health >= 0) {
-			renderCharacters(currDefender, 'playerDamage');
-			//player state change
-			alert(currDefender.name + " attacked you back for " + currDefender.enemyAttackBack + " damage.");
-			currSelectedCharacter.health = currSelectedCharacter.health - currDefender.enemyAttackBack;
-			renderCharacters(currSelectedCharacter, 'enemyDamage');
-			if (currSelectedCharacter.health <= 0) {
-				//lose condition
-				$("body").empty();
-				alert("You been defeated...");
-				alert("GAME OVER!!!");
-				//When 'Restart' button is clicked, reload the page.
-			    var restart = $('<button>Restart</button>').click(function () {
-			    	location.reload();
-			    });
-			    $("body").append(restart);
+			//win condition
+			if (currDefender.health >= 0) {
+				renderCharacters(currDefender, 'playerDamage');
+				//player state change
+				alert(currDefender.name + " attacked you back for " + currDefender.enemyAttackBack + " damage.");
+				currSelectedCharacter.health = currSelectedCharacter.health - currDefender.enemyAttackBack;
+				renderCharacters(currSelectedCharacter, 'enemyDamage');
+				if (currSelectedCharacter.health <= 0) {
+					//lose condition
+					$("body").empty();
+					$('body').css("background", "black");
+					alert("You been defeated...");
+					alert("GAME OVER!!!");
+					restartGame();
+				};
+			}else{		
+				renderCharacters(currDefender, 'enemyDefeated');
+				killCount++;
+				if (killCount >= 3) {
+					alert("You Won!!!!");
+					alert("GAME OVER!!!");
+					restartGame();
+				};
 			};
-		}else{		
-			renderCharacters(currDefender, 'enemyDefeated');
-			$(document).on('click', '.enemy', function(){
-				console.log($(this));
-				//if (true) {};
-			});
+			turnCounter++;
+		}else{
+			alert("No enemy here.");
 		};
-		turnCounter++;
 	})
+	var restartGame = function() {
+		//When 'Restart' button is clicked, reload the page.
+	    var restart = $('<button>Restart</button>').click(function () {
+	    	location.reload();
+	    });
+	    $("body").append(restart);
+	};
 
 });
-

@@ -5,45 +5,39 @@
 		<title>Star Wars with jQuery!</title>
 		<link href='https://fonts.googleapis.com/css?family=Share+Tech+Mono' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" href="styles.css">
+		<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+		<script type="text/javascript" src="rpgStarWars.js"></script>
 	</head>
 	<body>
+
 		<div class="main-section-title">Star Wars!</div>
 		<div id="main-game-section">
 			<div id="characters-section">
 				<div class="section-title">Select Your Character</div>
 			</div>
+
 			<div id="selected-character-section">
 				<div class="section-title">Your Character</div>
 				<div id="selected-character">
-					<div class="character-name"></div>
-					<div class="character-image"></div>
-					<div class="character-health"></div>
 				</div>
 			</div>
+
 			<div id="available-to-attack-section">
 				<div class="section-title">Enemies Available To Attack</div>
 			</div>
+
+			<div class="section-title">Fight Section</div>
 			<div id="fight-section">
-				<div class="section-title">Fight Section</div>
-				<div class="action-section">
-					<div class="section-title">Action Type</div>
-					<div id="action">
-						<button id="attack-button">Attack</button>
-						<button id="choose-enemy-button">Choose Different Enemy</button>
-						<button id="restart-button">Restart?</button>
-					</div>
+				<button id="attack-button">Attack</button>
 				</div>
+				<div id="action">
 				<div class="character-section">
 					<div class="section-title">Defender</div>
 					<div id="defender">
-						<div id="defender-name"></div>
-						<div id="defender-image"></div>
-						<div id="defender-health"></div>
 					</div>
 				</div>
 			</div>
 		</div>
-		<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
-		<script type="text/javascript" src="rpgStarWars.js"></script>
+		
 	</body>
 </html>
