@@ -5,7 +5,7 @@ You should before you teach anyone anything.
 Have a question? It's probably in the Instructor Guide.
 
 look at this file at the root of the repository:
-[Instructor Guide](https://github.com/RutgersCodingBootcamp/All-Lesson-Plans/blob/master/instructor_guide.md)
+[Instructor Guide](https://github.com/RutgersCodingBootcamp/All-Lesson-Plans/blob/master/instructor_guide)
 
 # Master Objectives (Internal Use - do not share with students - because it's a waste of time)
 

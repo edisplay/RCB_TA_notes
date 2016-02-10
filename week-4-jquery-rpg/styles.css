@@ -1,5 +1,5 @@
 html {
-	background: url(images/star_wars_xwing.jpg) no-repeat center center fixed;
+	baddckground: url(images/star_wars_xwing.jpg) no-repeat center center fixed;
 }
 
 body {
@@ -88,4 +88,8 @@ img {
 
 #restart-button {
 	visibility: hidden;
+}
+
+#turn-counter {
+	font-size: 150%;
 }
