@@ -31,7 +31,6 @@ Database setup:
 		* `id` as primary key auto incrementing
 		* `burger_name` as a string
 		* `devoured` as a boolean
-		* `date` as currentime
 
 App setup:
 
