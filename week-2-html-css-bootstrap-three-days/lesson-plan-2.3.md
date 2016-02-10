@@ -5,7 +5,7 @@ You should before you teach anyone anything.
 Have a question? It's probably in the Instructor Guide.
 
 Look at this file at the root of the repository:
-[Instructor Guide](https://github.com/RutgersCodingBootcamp/All-Lesson-Plans/blob/master/instructor_guide.md)
+[Instructor Guide](https://github.com/RutgersCodingBootcamp/All-Lesson-Plans/blob/master/instructor_guide)
 
 # Master Objectives (Internal Use - do not share with students - because it's a waste of time)
 
@@ -29,8 +29,6 @@ ALL or they won't be able to do the homework.
 * Students will use media queries to make mobile friendly web pages
 * Students will use the viewport tag to make sure all devices are displaying web pages optimally
 * Students will use Bootstrap's grid system to make mobile friendly web pages 
-
-----
 
 ### 1. Instructor Do (20 minutes)
 
