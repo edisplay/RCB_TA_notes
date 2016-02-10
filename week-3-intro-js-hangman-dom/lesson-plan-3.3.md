@@ -1,10 +1,10 @@
-- break points
+- break point exercise
 
 - functions
 
 - objects
 	- scope
-	- object game 
+	- game where you use an object to organize your code
 
 - pseudo code for psychic game
 

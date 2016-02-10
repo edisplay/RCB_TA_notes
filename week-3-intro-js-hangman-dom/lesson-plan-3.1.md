@@ -71,14 +71,14 @@ PART ONE
 <body>
   <script type="text/javascript">
     var userName = prompt("What's your name?");
-    var confirm = confirm('Do you like cats?');
+    var likeCats = confirm('Do you like cats?');
 
     var petName = 'Meeses';
     var petType = 'tuxedo cat';
     var petAge = 5;
     var petIsCat = true;
 
-    if (confirm){
+    if (likeCats){
       alert(petName + petType + petAge)
     }else{
       alert("You don't get my cat's information")
