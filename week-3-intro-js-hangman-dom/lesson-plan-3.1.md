@@ -27,7 +27,7 @@ Intro to JavaScript
 
 # INSTRUCTOR MUST COVER!!!
 ```
-TBA
+2, 3, 5, 6, 8, 9, 10, 11, 13
 ```
 or they won't be able to do the homework.
 
@@ -50,6 +50,74 @@ DO NOT USE JS FIDDLES.
 
 ### 1. Partners do (15 minutes)
 
+~~~~~~~~~~~~
+PART ONE
+~~~~~~~~~~~~
+> I know you don't know how to use JavaScript yet, I want you to try your best for 15 minutes to run this code and disuss it line by line with your partners.
+
+1. Save the following code to an html file
+2. Open it in chrome watch how it works
+3. Relate what it does to to the code. 
+4. Explain to your partners what it does line by line
+
+```
+<!DOCTYPE html>
+<html>
+<head>
+  <title>
+    data types, user input, conditional logic
+  </title>
+</head>
+<body>
+  <script type="text/javascript">
+    var userName = prompt("What's your name?");
+    var confirm = confirm('Do you like cats?');
+
+    var petName = 'Meeses';
+    var petType = 'tuxedo cat';
+    var petAge = 5;
+    var petIsCat = true;
+
+    if (confirm){
+      alert(petName + petType + petAge)
+    }else{
+      alert("You don't get my cat's information")
+    }
+
+    if (petIsCat == true){
+      alert('my pet is a cat')
+    }else{
+      alert('my pet is not a cat')
+    }
+
+    if (petAge !== 7){
+      alert('My pet is not 7 years old')
+    }
+
+    if (petAge == 5){
+      alert('My pet is 5 years old')
+    }elseif(petAge < 5){
+      alert('My pet is less than 5 years old')
+    }elseif(petAge > 5){
+      alert('My pet is older than 5 years old')
+    }
+
+    //this replaces the entire page with this - so it's not something you'll normally use - but it's what we'll use for now to be able to print stuff to the page
+    document.write('Welcome to our page ' + userName);
+
+    var catAge = prompt('how old is your cat?');
+
+    alert(catAge + 2); //won't work as expected
+
+    alert(parseInt(catAge) + 2); //works as expected
+  </script>
+</body>
+</html>
+```
+
+~~~~~~~~~~~~
+PART TWO
+~~~~~~~~~~~~
 1. If Albert is thinking of a number, adds 5 to the number, then subtracts the result by 2, multiplies the result by 3, he gets 39. What's the original number that Albert thought of?
 
 2. 
@@ -91,6 +159,14 @@ What's the new list of numbers?
 if you used to play tag when you were a child then whisper to your partner: "Tag was a lot of fun."
 
 else whisper to your partner that: "Tag wasn't that great; I was into books bro."
+
+
+
+
+
+
+
+
 
 
 answers:
@@ -232,7 +308,7 @@ solution
 - if they don't then write the following to the screen: "Here's a tofu stir fry!"
 
 
-BONUS: additionally ask the user what their birthyear is. If it's greater than 1987, alert to the screen that "you're older than Pavan". If it's smaller than 1987, then alert to the screen that "you're younger than Pavan". If it's equal to 1987, then alert "you're around the same age as Pavan" to the screen.
+BONUS: additionally ask the user what their birth year is. If it's greater than 1987, alert to the screen that "you're older than Pavan". If it's smaller than 1987, then alert to the screen that "you're younger than Pavan". If it's equal to 1987, then alert "you're around the same age as Pavan" to the screen.
 
 
 solution:
@@ -282,7 +358,7 @@ Go over the previous exercise - call on students to speak
 
 ##### 80 minutes have gone by
 
-### 7. Instructor demo 15 minutes   
+### 8. Instructor demo 15 minutes   
 
 * with the below code
 
@@ -360,7 +436,7 @@ switch (new Date().getDay()) {
 }
 ```
 
-### 8. Everyone Do (15 minutes) 
+### 9. Everyone Do (15 minutes) 
 
 - exercise regarding strings, numbers and booleans, conditional logic
 
@@ -446,7 +522,7 @@ Solutions:
 arrays
 for loops
 
-### 9. Instructor do - 15 minutes
+### 10. Instructor do - 15 minutes
 > It's time for arrays. Arrays are lists of things. Numbers, words, both, doesn't matter. Arrays are lists of things.
 
 > Everyone say it with me. "Arrays are lists of things"
@@ -522,7 +598,7 @@ var roundedNum = Math.floor(ranNumZeroToArrLength);
 var randomComputerOption = animals[roundedNum];
 ```
 
-### Student do - 10 minutes
+### 11. Student do - 10 minutes
 
 Part 1
 
@@ -561,11 +637,11 @@ wordsLetters.splice(letterIndex, 1); //gets rid of that letter in the array
 wordsLetters;
 ```
 
-### 10. Everyone do - 10 minutes
+### 12. Everyone do - 10 minutes
 
 go over the previous exercise with the class
 
-### Partners do - 10 minutes
+### 13. Partners do - 10 minutes
 
 Part One
 
@@ -591,11 +667,11 @@ var tetris = [ 'Tetris', 'SEGA', 49.99 ];
 // * Set the company of the tetris array to Nintendo instead of SEGA
 ```
 
-### 11. Everyone do - 5 minutes
+### 14. Everyone do - 5 minutes
 
 * *go over the previous exercise with the class*
 
-##### 12. Instructor Do - 5 minutes
+##### 15. Instructor Do - 5 minutes
     
 * show the hw instructions
 
