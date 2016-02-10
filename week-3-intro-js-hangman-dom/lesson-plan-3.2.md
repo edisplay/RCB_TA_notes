@@ -16,7 +16,7 @@ Look at this file at the root of the repository:
 
 # Theme
 
-Arrays Continued + Looping + Hangman + Break Points
+Arrays Continued + Looping + Rock Paper Scsissors + Break Points
 
 # INSTRUCTOR MUST COVER!!!
 
