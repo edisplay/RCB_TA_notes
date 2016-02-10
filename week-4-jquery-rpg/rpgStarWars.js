@@ -27,7 +27,7 @@ $(document).ready(function() {
 			type: 'jedi',
 			rank: 'master',
 			name: 'Obi-Wan Kenobi', 
-			health: 100,
+			health: 120,
 			attack: 8,
 			defense: 6,
 			theForceLevel: 600,
@@ -41,7 +41,7 @@ $(document).ready(function() {
 			rank: 'knight',
 			name: 'Luke Skywalker',
 			health: 100,
-			attack: 10,
+			attack: 14,
 			defense: 8,
 			theForceLevel: 700,
 			selected: false,
@@ -54,7 +54,7 @@ $(document).ready(function() {
 			rank: 'master',
 			name: 'Darth Sidious',
 			health: 150,
-			attack: 7,
+			attack: 8,
 			defense: 8,
 			theForceLevel: 800,
 			selected: false,
@@ -66,8 +66,8 @@ $(document).ready(function() {
 			type: 'sith',
 			rank: 'apprentice',
 			name: 'Darth Maul',
-			health: 100,
-			attack: 5,
+			health: 180,
+			attack: 7,
 			defense: 6,
 			theForceLevel: 600,
 			selected: false,
@@ -83,46 +83,44 @@ $(document).ready(function() {
 	var attackResult;
 	var turnCounter = 1;
 	var killCount = 0;
-
-	// ----------------------------------------------------------------
-	// 2. Create HTML
 	
 	// ----------------------------------------------------------------
-	// 3. Create functions to render to DOM
+	// 2. Create functions to render to DOM
+	var renderOne = function(character, renderArea, makeChar) {
+		//character: obj, renderArea: class/id, makeChar: string
+	  	var charDiv = $("<div class='character' data-name='" + character.name + "'>");
+	  	var charName = $("<div class='character-name'>").text(character.name);
+	  	var charImage = $("<img alt='image' class='character-image'>").attr("src", character.imageUrl);
+		var charHealth = $("<div class='character-health'>").text(character.health);
+		charDiv.append(charName).append(charImage).append(charHealth);
+	    $(renderArea).append(charDiv);
+	    // conditional render
+	    if (makeChar == 'enemy') {
+	    	$(charDiv).addClass("enemy");
+	    }else if (makeChar == 'defender') {
+		    currDefender = character;
+		    $(charDiv).addClass("target-enemy");
+	    };
+	};
+
 	var renderCharacters = function(charObj, areaRender) {
 		//render all characters
 		if (areaRender == '#characters-section') {
 			$(areaRender).empty();
 			for (var key in charObj) {
 			  if (charObj.hasOwnProperty(key)) {
-			  	var charDiv = $("<div class='character' data-name='" + key + "'>");
-			  	var charName = $("<div class='character-name'>").text(key);
-			  	var charImage = $("<img alt='image' class='character-image'>").attr("src", charObj[key].imageUrl);
-				var charHealth = $("<div class='character-health'>").text(charObj[key].health);
-				charDiv.append(charName).append(charImage).append(charHealth);
-			    $(areaRender).append(charDiv);
+			  	renderOne(charObj[key], areaRender, '');
 			  }
 			}
 		};
-		//render player char
+		//render player character
 		if (areaRender == '#selected-character') {
-		  	var charDiv = $("<div class='character' data-name='" + String(currSelectedCharacter.name) + "'>");
-		  	var charName = $("<div class='character-name'>").text(String(currSelectedCharacter.name));
-		  	var charImage = $("<img alt='image' class='character-image'>").attr("src", currSelectedCharacter.imageUrl);
-			var charHealth = $("<div class='character-health'>").text(currSelectedCharacter.health);
-			charDiv.append(charName).append(charImage).append(charHealth);
-		    $(areaRender).append(charDiv);
+			renderOne(charObj, areaRender, '');
 		};
 		//render combatants
 		if (areaRender == '#available-to-attack-section') {
 			for (var i = 0; i < charObj.length; i++) {
-			  	var charDiv = $("<div class='character' data-name='" + charObj[i].name + "'>");
-			  	var charName = $("<div class='character-name'>").text(charObj[i].name);
-			  	var charImage = $("<img alt='image' class='character-image'>").attr("src", charObj[i].imageUrl);
-				var charHealth = $("<div class='character-health'>").text(charObj[i].health);
-				charDiv.append(charName).append(charImage).append(charHealth);
-			    $(areaRender).append(charDiv);
-				$(charDiv).addClass("enemy");
+				renderOne(charObj[i], areaRender, 'enemy');
 			};
 			//render one enemy to defender area
 			$(document).on('click', '.enemy', function() {
@@ -140,38 +138,20 @@ $(document).ready(function() {
 			$(areaRender).empty();
 			for (var i = 0; i < combatants.length; i++) {
 				//add enemy to defender area
-				if (combatants[i].name == charObj) {				
-				  	var charDiv = $("<div class='character' data-name='" + combatants[i].name + "'>");
-				  	var charName = $("<div class='character-name'>").text(combatants[i].name);
-				  	var charImage = $("<img alt='image' class='character-image'>").attr("src", combatants[i].imageUrl);
-					var charHealth = $("<div class='character-health'>").text(combatants[i].health);
-					charDiv.append(charName).append(charImage).append(charHealth);
-				    $(areaRender).append(charDiv);
-				    currDefender=combatants[i]
-				    $(charDiv).addClass("target-enemy");
+				if (combatants[i].name == charObj) {	
+					renderOne(combatants[i], areaRender, 'defender');			
 				};
 			};
 		};
-		//render character's state when attacked
+		//re-render defender when attacked
 		if (areaRender == 'playerDamage') {
 			$('#defender').empty();
-		  	var charDiv = $("<div class='character' data-name='" + charObj.name + "'>");
-		  	var charName = $("<div class='character-name'>").text(charObj.name);
-		  	var charImage = $("<img alt='image' class='character-image'>").attr("src", charObj.imageUrl);
-			var charHealth = $("<div class='character-health'>").text(charObj.health);
-			charDiv.append(charName).append(charImage).append(charHealth);
-		    $('#defender').append(charDiv);
-		    $(charDiv).addClass("target-enemy");
+			renderOne(charObj, '#defender', 'defender');	
 		};
-		//render character's state when attacked
+		//re-render player character when attacked
 		if (areaRender == 'enemyDamage') {
 			$('#selected-character').empty();
-		  	var charDiv = $("<div class='character' data-name='" + charObj.name + "'>");
-		  	var charName = $("<div class='character-name'>").text(charObj.name);
-		  	var charImage = $("<img alt='image' class='character-image'>").attr("src", charObj.imageUrl);
-			var charHealth = $("<div class='character-health'>").text(charObj.health);
-			charDiv.append(charName).append(charImage).append(charHealth);
-		    $('#selected-character').append(charDiv);
+			renderOne(charObj, '#selected-character', '');	
 		};
 		//render defeated enemy
 		if (areaRender == 'enemyDefeated') {
@@ -199,7 +179,7 @@ $(document).ready(function() {
 	});
 
 	// ----------------------------------------------------------------
-	// 4. Create functions to enable actions between objects.
+	// 3. Create functions to enable actions between objects.
 	$("#attack-button").on("click", function() {
 		//if defernder area has enemy
 		if ( $('#defender').children().length != 0 ) {
@@ -209,7 +189,8 @@ $(document).ready(function() {
 			currDefender.health = currDefender.health - (currSelectedCharacter.attack * turnCounter);
 
 			//win condition
-			if (currDefender.health >= 0) {
+			if (currDefender.health > 0) {
+				//enemy not dead keep playing
 				renderCharacters(currDefender, 'playerDamage');
 				//player state change
 				alert(currDefender.name + " attacked you back for " + currDefender.enemyAttackBack + " damage.");
@@ -236,7 +217,8 @@ $(document).ready(function() {
 		}else{
 			alert("No enemy here.");
 		};
-	})
+	});
+
 	var restartGame = function() {
 		//When 'Restart' button is clicked, reload the page.
 	    var restart = $('<button>Restart</button>').click(function () {
@@ -245,4 +227,4 @@ $(document).ready(function() {
 	    $("body").append(restart);
 	};
 
-});
+})
