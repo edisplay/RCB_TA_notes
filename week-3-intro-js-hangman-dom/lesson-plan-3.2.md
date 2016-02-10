@@ -243,7 +243,7 @@ in the for loop, if the value starts with a c or an o then additionally alert th
 
 ### 14. Groups do (10 minutes)
 
-* *Pick 4 student leaders - send them to four corners of the room, split the class among them. Have the leaders teach each line of code from rps-9.html to their groups.*
+* *Pick 4 student leaders (strong nice students)- send them to four corners of the room, split the class among them. Have the leaders teach each line of code from rps-9.html to their groups.*
 
 ### 15. Instructor do (15 minutes)
 
