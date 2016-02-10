@@ -46,7 +46,7 @@ img {
 	text-align: center;
 }
 
-.enemy-character {
+.enemy {
 	border-style: solid;
 	border-color: red;
 	border-width: 3px;
@@ -92,4 +92,8 @@ img {
 
 #turn-counter {
 	font-size: 150%;
+}
+.target-enemy {
+	background-color: red;
+	color: white;
 }
