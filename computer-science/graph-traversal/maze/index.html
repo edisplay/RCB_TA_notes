@@ -30,7 +30,52 @@
   </head>
   <body>
     <table id="maze"></table>
+    <div id="time"></div>
     <script src="homework.js"></script>
+    <script src="depthfirst.js"></script>
+    <script src="astar.js"></script>
     <script src="app.js"></script>
+    <script>
+
+    /*
+     *
+     *
+     *           RUN ALL THE THINGS HERE
+     *
+     *
+     */
+
+    var height = 10;
+    var length = 10;
+
+    var m = cleanGraph( maze( height, length ) );
+
+    var start = [0,0];
+    var finish = [Math.floor(Math.random()*height),Math.floor(Math.random()*length)];
+
+    var ender = timer();
+    //var path = solve( m, start, finish );
+    var bfs_time = ender();
+
+    var ender = timer();
+    var path = dfsolve( m, start, finish );
+    var dfs_time = ender();
+
+    var tt = document.querySelector('#time');
+    tt.innerText = "bfs time: " + bfs_time + "milliseconds | dfs time:" + dfs_time + "milliseconds";
+
+
+//do DOM stuff
+window.onload = function(){
+
+  buildMaze( m, start, finish );
+
+  setTimeout( function(){
+    displayPath( path );
+  }, 400 );
+
+}
+
+    </script>
   </body>
 </html>

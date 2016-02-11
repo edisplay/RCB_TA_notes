@@ -50,7 +50,7 @@ function solve( graph, start, finish ){
         if( finish[0] == neighbor_y && finish[1] == neighbor_x ){
 
           //follow the parents back to start
-          return getPath( nodes, queue, start, finish );
+          return getBFSPath( nodes, queue, start, finish );
         }
       }
     }
@@ -59,7 +59,7 @@ function solve( graph, start, finish ){
   return null;
 }
 
-function getPath( nodes, queue, start, finish ){
+function getBFSPath( nodes, queue, start, finish ){
 
   //we are at the finish
 
