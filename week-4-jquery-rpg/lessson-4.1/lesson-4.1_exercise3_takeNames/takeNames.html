@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>TakeNames</title>
+		<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+	</head>
+	<body>
+		<div id=""><h1>TakeNames!</h1></div>
+	
+		<div class="greekMythNames">Odysseus</div>
+		<div class="greekMythNames">Penelope</div>
+		<div class="greekMythNames">Medea</div>
+		<div class="greekMythNames">Callisto</div>
+		</br>
+		<div id="wrestler">Hulk Hogan</div>
+		</br>
+		<div data-name='007'>James Bond</div>
+		</br>
+		<div id="joker" data-name='Jack Napier'></div>
+
+	    <script type="text/javascript">
+
+	      function TakeNames () { 
+
+	      	//selecting via class
+	      	var greekMyth = $( ".greekMythNames" );
+	      	//getting to the text of the one of selected object
+	      	alert(greekMyth[1].innerText);
+
+	      	//select via id
+	     	var wrestle = $("#wrestler");
+			alert(wrestle[0].innerText);
+
+			//select via data-attribute
+	      	var bond = $('*[data-name="007"]');
+	      	alert(bond[0].innerHTML);
+
+	      	//getting to the data-attribute of an element
+	      	var element = $('#joker');
+	      	alert(element.attr('data-name'));
+	      };
+
+	      document.body.onload = TakeNames;
+	    </script>
+	</body>
+</html>

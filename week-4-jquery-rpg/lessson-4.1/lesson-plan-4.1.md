@@ -13,60 +13,147 @@ Look at this file at the root of the repository:
 * Work independently or in a group on complex projects throughout the entire development lifecycle
 * Build a frontend website either from scratch or utilizing a frontend framework (such as Bootstrap)
 
-# Theme
-
-Jquery
+# Theme: jQuery
 
 # INSTRUCTOR MUST COVER!!!
 
 ```
-
+Parts 3 - 21 
 ```
 
 # Objectives (Slack out to students, have unique students read each one and Instructor makes a comment after each one is read)
 
-* students will manipulate and use arrays
-* students will loop over an array
-* students will play rock paper scissors
-* students will outline out how to play rock paper scissors
-	*outlining means psuedo coding
-* students will make a rock paper scissors game
-* students will trigger break points in a couple of ways to "stop time"
+* students will be introduced to the jQuery library
+* students will use jQuery to select elements in the DOM
+* students will use jQuery to create elements in the DOM
+* students will create click events using jQuery to manipulate the DOM
 
 PART ONE:
 
 ### 1. Everyone do (15 minutes)
+Review Exercise: coffeeMenu
 
-exercise
-dom related assignment with just JavaScript and arrays and functions
+* *Instructor demos. Look in lesson-4.1.exercise1_coffeeMenu folder.*
+
+* *Slack this out to class*
+
+|Coffe Menu|
+|----------|
+|Coffee: $5|
+|Espresso: $7|
+|Capunchino: $6|
+|Latte: $4|
+|Tea: $3|
+|Ice Coffee: $6|
+|Ice Espresso: $8|
+|Ice Latte: $6|
+|Ice Tea: $4|
+
+```
+* You are given the following of coffee and their price above.
+	* Create a HTML that has display the title 'Coffee Menu'.
+	* Create a script tag and create a JavaScript function
+		* Create an array that contains both the name and price of each item on the list as a string
+		* Create a for loop, that loops through all the elements and makes them divs, add those divs the page
+		* Don't forget to onload the function when the HTML is loaded
+
+```
 
 ### 2. Everyone do (10 minutes)
-go over exercise
+* *Call on a student to go over the previous exercise*
 
-### 3. Everyone do (5 minutes)
-what is jQuery
+### 3. Instructor do (5 minutes)
+Intro to jQuery:
+
+> Explain what jQuery is and why it's useful.
 
 ### 4. Instructor do (10 minutes)
-instructor demo
-- selecting via jquery
+
+* *Show how it's sourced in HTML*
+
+* *Instructor demos. Look in lesson-4.1.exercise2_pickEm folder.*
+
+* *Explain what each line of code is doing*
 
 ### 5. Partners Do (5 minutes)
 
-### 6. Everyone do (10 minutes)
-selecting via jquery exercise
+* *Have student talk to each other about what just happened* 
 
-### 7. Instructor do (10 minutes)
-instructor demo
-- do on click events
+### 6. Everyone do (5 minutes)
+Student Exercise: Take Names
 
-### 8. partners do (15 minutes)
-partners exercise
+* *Slack this out to class*
 
-80 mintues has passed.
+* You are given the following HTML, using JQuery create the code that will.
+	* Select everything with the class "greekMythNames" and alert the second element's innerText.
+	* Select the element with the id "wrestler" alert it's innerText
+	* Select the element with the data-name "007" alert it's innerText
+	* Select the element with the id "joker" alert it's data-name
+```
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>TakeNames</title>
+		<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+	</head>
+	<body>
+		<div id=""><h1>TakeNames!</h1></div>
+	
+		<div class="greekMythNames">Odysseus</div>
+		<div class="greekMythNames">Penelope</div>
+		<div class="greekMythNames">Medea</div>
+		<div class="greekMythNames">Callisto</div>
+		</br>
+		<div id="wrestler">Hulk Hogan</div>
+		</br>
+		<div data-name='007'>James Bond</div>
+		</br>
+		<div id="joker" data-name='Jack Napier'></div>
 
-##### Break Time - 15 minutes
+	    <script type="text/javascript">
+			//write your code here
 
-### 9. Instructor do (10 minutes)
+	    </script>
+	</body>
+</html>
+```
+
+### 7. Everyone do (5 minutes)
+* *Go over the previous exercise*
+
+* *Instructor demos. Look in lesson-4.1.exercise3_takeNames folder.*
+
+### 8. Instructor do (10 minutes)
+
+* *Instructor demos. Look in lesson-4.1_exercise4_doughnut folder.*
+
+* *Explain what each line of code is doing*
+
+* *Explain why and how `event` is passed into the on click function.*
+* *Explain what `this` is, while inside of the click function.*
+
+### 9. partners do (10 minutes)
+Student Exercise: Chain Reaction
+
+* *Slack this out to class*
+
+* You are given the following HTML, using JQuery
+	* 
+
+
+### 10. Everyone do (10 minutes)
+* *Go over the previous exercise call on one unique student per each part of the previous demo to explain what happened*
+
+--------- --------- ---------
+
+###### 80 mintues has passed
+
+BREAK ( 15 minutes )
+--------- --------- ---------
+
+
+### 11. Instructor do (10 minutes)
 instructor demo
 - create elements
 	var el = $('<div id="buffy">')
@@ -75,41 +162,54 @@ instructor demo
 	$("#random-area").append(randomNumDiv);
 and compare to what the code would look like in JavaScript
 
-### 10. partners do (10 minutes)
+### 12. partners do (10 minutes)
 partners exercise
 
-### 11. Everyone do (5 minutes)
+### 13. Everyone do (5 minutes)
 go over exercise
 
-### 12. Instructor do (10 minutes)
+### 14. Instructor do (10 minutes)
 instructor demo
 
 - setting up an object to store an image, and etc
 - looping over objects and adding values to the dom
 
-### 13. Everyone do (5 minutes)
+### 15. Everyone do (5 minutes)
 student exercise
 
-### 14. Everyone do (5 minutes)
+### 16. Everyone do (5 minutes)
 go over
 
-### 15. Instructor do (10 minutes)
+### 17. Instructor do (10 minutes)
 - setting a counter and adding to it and then updating the dom with it
 
-### 16. Everyone do (5 minutes)
+### 18. Everyone do (5 minutes)
 
-### 17. Everyone do (5 minutes)
+### 19. Everyone do (5 minutes)
 go over exercise
 
-### 18. instructor do (10 minutes)
+### 20. instructor do (10 minutes)
 - do on click events
 - with $(this) to modify the element itself
 
-### 19. Everyone do (10 minutes)
+### 21. Everyone do (10 minutes)
 partners exercise
 
-### 20. Everyone do (5 minutes)
+### 22. Everyone do (5 minutes)
 go over exercise
+
+### 23. Instructor Do - (5 minutes)
+    
+* show the hw instructions
+
+* two choices of games to make:
+
+  * easier: make the crystal collector game
+
+  * harder: make the starwars rpg game
+
+# Copyright
+Coding Boot Camp (C) 2015. All Rights Reserved.
 
 <!-- 16. instructor demo like 3.2.13 
 
