@@ -301,7 +301,7 @@ The first option "Compiled and minified CSS, JavaScript, and fonts. No docs or o
 
 ### 15. Student Do (20 minutes)
 
-* ***Open [this file](in-class-exercises-2.3/2.3.13-in-class-exercise.html) file on the projector. This is what the students have to code out***
+* ***Open this file: in-class-exercises-2.3/2.3.13-in-class-exercise.html file on the projector. This is what the students have to code out***
 
 * Make a new css file called `bootstrap-overrides.css` and link to it in your html after the bootstrap css file. If you want to add your own styling, you do that here in this file, not inside the bootstrap css file.
 
@@ -319,6 +319,6 @@ The first option "Compiled and minified CSS, JavaScript, and fonts. No docs or o
 * Bonus
 	* Add in form http://getbootstrap.com/css/#forms
 
-----
+
 # Copyright
 Coding Boot Camp (C) 2015. All Rights Reserved.

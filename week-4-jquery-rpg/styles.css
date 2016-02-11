@@ -1,8 +1,5 @@
-html {
-	baddckground: url(images/star_wars_xwing.jpg) no-repeat center center fixed;
-}
-
 body {
+	background: url(images/star_wars_xwing.jpg) no-repeat center center fixed;
 	font-family: 'Share Tech Mono', Arial, Helvetica, sans-serif;
 }
 
@@ -36,6 +33,7 @@ img {
 	border-width: 3px;
 	cursor: pointer;
 	display: inline-block;
+	background-color: white;
 }
 
 .character-name {
@@ -46,12 +44,13 @@ img {
 	text-align: center;
 }
 
-.enemy-character {
+.enemy {
 	border-style: solid;
-	border-color: red;
-	border-width: 3px;
+	border-color: black;
+	border-width: 1px;
 	cursor: pointer;
 	display: inline-block;
+	background-color: red;
 }
 
 #selected-character {
@@ -92,4 +91,8 @@ img {
 
 #turn-counter {
 	font-size: 150%;
+}
+.target-enemy {
+	background-color: black;
+	color: white;
 }

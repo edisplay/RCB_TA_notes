@@ -18,6 +18,21 @@ The style of the lesson plan is:
 		6. repeat steps 1-5
 
 
+# Style of lesson plans
+
+```
+* *these are actions*
+
+> these are quotes
+
+
+# Timing of lesson plans
+
+* weekdays should be 180 minutes in total including a 15 minute break(edited)
+
+* weekends should be 240 minutes in total including a 40 minute break(edited)
+```
+
 
 # Lesson Plan Goal
 * Goals of lesson plan: 
