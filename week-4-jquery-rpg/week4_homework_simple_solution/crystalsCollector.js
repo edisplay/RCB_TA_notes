@@ -1,26 +1,21 @@
 $(document).ready(function() {
-	//generate the random value of each crystal
-	var crystalsValue = [];
-	for (var i = 0; i < 4; i++) {
-		var num = (Math.floor(Math.random() * 11) + 1);
-		crystalsValue.push(num);
-	};
+
 	// crystals obj
 	var crystals = {
 		'red' : {
-			points: crystalsValue[0],
+			points: Math.floor(Math.random() * 11) + 1,
 			imageUrl: "images/red.png"
 		},
 		'blue' : {
-			points: crystalsValue[1],
+			points: Math.floor(Math.random() * 11) + 1,
 			imageUrl: "images/blue.png"
 		},
 		'yellow' : {
-			points: crystalsValue[2],
+			points: Math.floor(Math.random() * 11) + 1,
 			imageUrl: "images/yellow.png"
 		},
 		'green' : {
-			points: crystalsValue[3],
+			points: Math.floor(Math.random() * 11) + 1,
 			imageUrl: "images/green.png"
 		}
 	};

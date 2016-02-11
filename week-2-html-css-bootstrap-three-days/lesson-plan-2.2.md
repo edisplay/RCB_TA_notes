@@ -26,6 +26,10 @@ The Bootstrap part for their homework
 
 # Objectives (Slack out to students, have unique students read each one and Instructor makes a comment after each one is read)
 
+students will make pull requests with branching in groups
+
+students will use bootstrap to style their pages using the grid system 
+
 ### 1. Student Do - 25 minutes
 
 * *Instructor picks groups - make sure the group has 1 strong, 1 average, 1 weak. Distribute everyone equally.*
