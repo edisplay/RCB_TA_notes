@@ -15,3 +15,16 @@ part twos for 1 and 2  will be what we assigned students for week 1 + 2 in JC fe
 The students that are struggling, for the most part didn't do their pre work at all. Eric Lopez didn't have any of the programs installed and didnt even have access to install programs on his computer. Moving forward, I'm thinking that's going to happen at least to 5 to 8 people each cohort, so we'll account for that.
 
 
+
+
+
+
+at the top of hw
+
+watch these videos for a frame of reference
+
+on how to do this
+
+----
+
+

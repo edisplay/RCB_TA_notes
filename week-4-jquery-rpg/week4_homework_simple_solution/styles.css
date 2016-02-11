@@ -2,6 +2,13 @@ body {
 	background: url(images/background_img.jpg);
 	background-repeat: repeat;
 }
+#screen {
+	overflow: auto;
+}
+#screen div {
+	float: left;
+}
+
 #title{
 	color: white;
 	background: chocolate;

@@ -20,12 +20,16 @@ $(document).ready(function() {
 		}
 	};
 
-	//create a random number and render it
-	var randomNum = Math.floor(Math.random() * 100) + 18;
-	var randomNumDiv = $("<div id='random-number'>").text(randomNum);
-	$("#random-area").append(randomNumDiv);
+	function setGame(){
+		//create a random number and render it
+		var randomNum = Math.floor(Math.random() * 100) + 18;
+		var randomNumDiv = $("<div id='random-number'>").text(randomNum);
+		$("#random-area").append(randomNumDiv);
 
-	var playerPoints = 0;
+		var playerPoints = 0;
+	}
+
+
 
 	//render crystals
 	for (var key in crystals) {
@@ -35,6 +39,8 @@ $(document).ready(function() {
 	    crystalDiv.append(crystalImg);
 	    $("#crystal-area").append(crystalDiv);
 	};
+
+
 
 	//create on.click event for crystals
 	$(".crystals-button").on("click", function(event) {
@@ -57,10 +63,10 @@ $(document).ready(function() {
 
 		//check of win or lost
 		if (playerPoints == randomNum) {
-			alert("YAY!! You win!!!!");
+			$('#winArea').html("YAY!! You win!!!!");
 			location.reload();
 		}else if (playerPoints > randomNum) {
-			alert("Opz, you lost...try again.")
+			$('#winArea').html("Opz, you lost...try again.")
 			location.reload();
 		};
 	});
