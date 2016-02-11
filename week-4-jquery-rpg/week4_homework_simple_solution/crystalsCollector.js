@@ -1,21 +1,8 @@
-// ---General directions
-
-// Students Don't Know
-// Constructors
-//
-
-// Students know
-// click events
-// variables
-// data types
-// html / css
-// arrays
-
 $(document).ready(function() {
 	//generate the random value of each crystal
 	var crystalsValue = [];
 	for (var i = 0; i < 4; i++) {
-		var num = (Math.floor(Math.random() * 25) + 1);
+		var num = (Math.floor(Math.random() * 11) + 1);
 		crystalsValue.push(num);
 	};
 	// crystals obj
@@ -39,12 +26,11 @@ $(document).ready(function() {
 	};
 
 	//create a random number and render it
-	var randomNum = Math.floor(Math.random() * 100);;
+	var randomNum = Math.floor(Math.random() * 100) + 18;
 	var randomNumDiv = $("<div id='random-number'>").text(randomNum);
 	$("#random-area").append(randomNumDiv);
 
 	var playerPoints = 0;
-	var clickCount = 0;
 
 	//render crystals
 	for (var key in crystals) {
@@ -73,8 +59,6 @@ $(document).ready(function() {
 		var scoreNumDiv = $("<div id='score-number'>").text(playerPoints);
 		$("#score-area").empty();
 		$("#score-area").append(scoreNumDiv);
-
-		clickCount++;
 
 		//check of win or lost
 		if (playerPoints == randomNum) {
