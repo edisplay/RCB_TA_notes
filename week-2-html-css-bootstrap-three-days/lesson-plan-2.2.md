@@ -53,9 +53,13 @@ another collaborator makes a branch off master called collab-two
 
 10. the collaborator will look over the pull request and accept it if things look ok. If they don't, then the collaborator will make comments on the file on the github.com pull request and ask the project leader to make edits. The project leader will make those edits and then push up to their project-lead branch. The pull request will automatically update. No need to make a new pull request! The collaborator will then merge it into master.
 
-11. the collaborators will now do git pull origin master to get the changes pushed to master
+11. the collaborators will now do git pull origin master to get the changes that were pushed to master
 
-12. each collaborator will 
+12. each collaborator will put their own favorit eband image, h2 of the band name and band youtube video into another column, and push up their code to their branches and then make a pull request to master with it. Then they'll assign it to each other to go over.
+
+13. If you run into a merging conflict (you probably will) then fix it on the project leader's computer and merge to master.
+
+14. deploy to heroku.
 
 
 
