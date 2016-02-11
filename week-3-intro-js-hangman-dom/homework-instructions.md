@@ -1,6 +1,4 @@
-# Week 1 Assignment
-
-## That Portfolio Though...
+# Week 3 Assignment
 
 ### Objectives
 * Create a fun and interactive hangman game (or psychic game) in the browser
