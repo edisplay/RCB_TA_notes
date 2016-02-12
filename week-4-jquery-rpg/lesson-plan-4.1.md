@@ -18,7 +18,7 @@ Look at this file at the root of the repository:
 # INSTRUCTOR MUST COVER!!!
 
 ```
-Parts 3 - 19 
+Parts 3 - 21 
 ```
 
 # Objectives (Slack out to students, have unique students read each one and Instructor makes a comment after each one is read)
@@ -51,12 +51,10 @@ Review Exercise: coffeeMenu
 
 ```
 * You are given the following coffee and their prices above.
-	* Create a HTML file that has display the title 'Coffee Menu'.
-	* Create a script tag and create a JavaScript function
+	* Create a HTML file that displays the title 'Coffee Menu'.
+	* Create a script tag and create a JavaScript function that will
 		* Create an array that contains both the name and price of each item on the list as a string
-		* Create a for loop, that loops through all the elements and makes them divs, add those divs the page
-		* Don't forget to onload the function when the HTML is loaded
-
+		* Create a `for` loop, that loops through all the elements and makes them into divs, append those divs to DOM
 ```
 
 ### 2. Everyone do (10 minutes)
@@ -82,7 +80,7 @@ Intro to jQuery:
 
 * *Have student talk to each other about what just happened. MAKE SURE THE CODE IS UP ON THE SCREEN!* 
 
-### 6. Everyone do (10 minutes)
+### 6. Student do (10 minutes)
 
 * *Slack this out to class*
 
@@ -91,6 +89,7 @@ Intro to jQuery:
 	* Select the element with the id "wrestler" alert it's innerText
 	* Select the element with the data-name "007" alert it's innerText
 	* Select the element with the id "joker" alert it's data-name
+
 ```
 <!DOCTYPE html>
 <html>
@@ -123,9 +122,10 @@ Intro to jQuery:
 ```
 
 ### 7. Everyone do (5 minutes)
-* *Go over the previous exercise*
 
-* *Instructor demos. Look in lesson-4.1.exercise3_takeNames folder.*
+* *Open the Code to the above exercise located in 4.1-in-class-exercises/lesson-4.1_exercise3_takeNames folder.*
+
+* *Call on a student to go over the previous exercise*
 
 ### 8. Instructor do (10 minutes)
 
@@ -137,9 +137,8 @@ Intro to jQuery:
 * *Explain what `this` is, while inside of the click function.*
 
 ### 9. partners do (10 minutes)
-Student Exercise: Passcode
 
-* *Instructor demos. Look in lesson-4.1.exercise3_passcode folder.*
+Student Exercise: Passcode
 
 * *Slack this out to class*
 
@@ -177,54 +176,82 @@ Student Exercise: Passcode
 ```
 
 ### 10. Everyone do (10 minutes)
+
+* *Open the Code to the above exercise located in 4.1-in-class-exercises/lesson-4.1_exercise5_passcode folder.*
+
 * *Go over the previous exercise call on one unique student per each part of the previous demo to explain what happened*
 
 --------- --------- ---------
 
-###### 80 mintues has passed
+###### 85 mintues has passed
 
 BREAK ( 15 minutes )
 --------- --------- ---------
 
-
 ### 11. Instructor do (10 minutes)
-instructor demo
 
-- create elements
-	var el = $('<div id="buffy">')
-- add attributes and classes to those elements and text
-- add those elements to the dom 
-	$("#random-area").append(randomNumDiv);
-and compare to what the code would look like in JavaScript
+* *Open the Code located in 4.1-in-class-exercises/lesson-4.1_exercise6_addStuff folder.*
 
-### 12. partners do (10 minutes)
-partners exercise
+* *Explain what each line of the code is doing*
 
-### 13. Everyone do (5 minutes)
-* *Go over the previous exercise*
+### 12. Partners do (5 minutes)
 
-### 14. Instructor do (10 minutes)
-instructor demo
+* *Have student talk to each other about what just happened. MAKE SURE THE CODE IS UP ON THE SCREEN!* 
 
-- setting up an object to store an image, and etc
-- looping over objects and adding values to the dom
+### 13. Instructor do (5 minutes)
 
-### 15. Everyone do (5 minutes)
-student exercise
+* *Call on a student different unique students to explain what each parts of the code is doing*
 
-### 16. Everyone do (5 minutes)
-go over
+### 14. Student do (15 minutes)
 
-### 17. Everyone do LAB (20 minutes)
+Student Exercise: Picture Perfect
+* *Give the files from the starter folder to students*
 
-	Bigger Lab
+* *Slack this out to class*
 
-	BONUS
+* You are given an HTML and a folder containing different pictures of letters.
+	* Using jQuery create the code that will render to DOM pictures from the images folder and use it to spell the word "perfect"
 
-### 18. Everyone do (10 minutes)
-* *Go over the previous exercise*
+### 15. Everyone do (10 minutes)
 
-### 19. Instructor Do - (5 minutes)
+* *Open the Code to the above exercise located in 4.1-in-class-exercises/lesson-4.1_exercise7_picturePerfect folder.*
+
+* *Call on a student to go over the previous exercise*
+
+### 16. Instructor do (2 minutes)
+
+Student Exercise: lotteryGenerateor
+
+* *Demo the app located in 4.1-in-class-exercises/lesson-4.1_exercise8_lotteryGenerator folder.*
+
+* *Slack this out to class*
+
+* You are tasked to create a lottery generator
+	* When the HTML is loaded there is a "Generate" button
+	* When the user hits the button it will render on to the screen 7 number randomly generated numbers to the DOM.
+	* Whenever the button is hit new numbers will be generated to the screen under the previse numbers
+	* There is also a "Clear" button
+	* Whenever the "Clear" button is hit, it removes all the number on screen
+
+### 17. Student do (3 minutes)
+
+* *Have student write out the pseudo code. NO CODING YET!* 
+
+### 18. Everyone do (5 minutes)
+
+* *Call on a student to go over explain their pseudo code*
+
+### 19. Student do (15 minutes)
+
+* *Have student start working on the lab! CODE CODE CODE!* 
+
+### 20. Everyone do (10 minutes)
+
+* *Open the Code to the above exercise located in 4.1-in-class-exercises/lesson-4.1_exercise7_picturePerfect folder.*
+
+* *Call on a student to go over the previous exercise*
+
+### 21. Instructor Do - (5 minutes)
     
 * show the hw instructions
 
@@ -236,4 +263,3 @@ go over
 
 # Copyright
 Coding Boot Camp (C) 2015. All Rights Reserved.
-

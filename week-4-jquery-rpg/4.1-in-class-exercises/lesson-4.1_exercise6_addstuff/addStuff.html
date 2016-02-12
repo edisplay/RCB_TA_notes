@@ -7,18 +7,30 @@
 	</head>
 	<body>
 		<div id=""><h1>Add Stuff!</h1></div>
-
+		
+		<div id="js-area"></div>
+		</br>
+		<div id="jQuery-area"></div>
+	    
 	    <script type="text/javascript">
 
 	      function addStuff () { 
-	      	var secretCount = 0;
 
 				//adding element to DOM with Js
+				var jsDiv = document.createElement("div");
+				var jsText = document.createTextNode("This text is created by javascript only.");
+				jsDiv.appendChild(jsText);
+				var jsEl = document.getElementById("js-area");
+				jsEl.appendChild(jsDiv);
 
 				//adding elements to DOM with jQuery
-				
-			});
+				var el = $('<div>This text is created by jQuery.</div>');
+				$("#jQuery-area").append(el);
 
+				//adding an picture to DOM with jQuery
+				var pic = $('<img src="smile.png">');
+				$("#jQuery-area").append(pic);
+				
 	      };
 
 	      document.body.onload = addStuff;
