@@ -1,7 +1,15 @@
+
 body {
 	background: url(images/background_img.jpg);
 	background-repeat: repeat;
 }
+#screen {
+	overflow: auto;
+}
+#screen div {
+	float: left;
+}
+
 #title{
 	color: white;
 	background: chocolate;
@@ -12,7 +20,7 @@ body {
 #rules-area{
 	background: bisque;
 	width: 400px;
-	height: 335px;
+	height: 400px;
 	color: green;
 	padding: 4px;
 	margin-bottom: 10px;
@@ -40,6 +48,7 @@ body {
 	background: darkcyan;
 	width: 210px;
 	padding: 4px;
+	margin-bottom: 10px;
 }
 .crystals-button {
 	display: inline;
@@ -54,4 +63,16 @@ body {
 }
 #score-number{
 	font-size: 3vw;
+}
+
+#winArea {
+	height: 100px;
+	padding: 4px;
+	margin-left: 10px;
+	margin-bottom: 10px;
+	background-color: aqua;
+}
+
+#winArea p {
+	color: color: ghostwhite;
 }
