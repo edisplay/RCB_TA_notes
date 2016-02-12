@@ -18,7 +18,7 @@ Look at this file at the root of the repository:
 # INSTRUCTOR MUST COVER!!!
 
 ```
-Parts 3 - 21 
+Parts 3 - 19 
 ```
 
 # Objectives (Slack out to students, have unique students read each one and Instructor makes a comment after each one is read)
@@ -98,6 +98,7 @@ Student Exercise: Take Names
 		<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
 	</head>
 	<body>
+
 		<div id=""><h1>TakeNames!</h1></div>
 	
 		<div class="greekMythNames">Odysseus</div>
@@ -113,8 +114,8 @@ Student Exercise: Take Names
 
 	    <script type="text/javascript">
 			//write your code here
-
 	    </script>
+
 	</body>
 </html>
 ```
@@ -134,13 +135,44 @@ Student Exercise: Take Names
 * *Explain what `this` is, while inside of the click function.*
 
 ### 9. partners do (10 minutes)
-Student Exercise: Chain Reaction
+Student Exercise: Passcode
+
+* *Instructor demos. Look in lesson-4.1.exercise3_passcode folder.*
 
 * *Slack this out to class*
 
 * You are given the following HTML, using JQuery
-	* 
+	* Create a click event on every "number" class
+	* Whenever a number is clicked store it
+	* If the user correct inputs 122343221 alert them they got in
+	* If the user inputs that many numbers and wasn't correct alert them they got it wrong
 
+```
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Passcode</title>
+		<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+	</head>
+	<body>
+		<div id=""><h1>Passcode!</h1></div>
+
+		<div class="number" data-name="one"><h3>ONE</h3></div>
+		<div class="number" data-name="two"><h3>TWO</h3></div>
+		<div class="number" data-name="three"><h3>THREE</h3></div>
+		<div class="number" data-name="four"><h3>FOUR</h3></div>
+
+	    <script type="text/javascript">
+			//write your code here
+	    </script>
+
+	      document.body.onload = passcode;
+
+	    </script>
+	</body>
+</html>
+```
 
 ### 10. Everyone do (10 minutes)
 * *Go over the previous exercise call on one unique student per each part of the previous demo to explain what happened*
@@ -155,6 +187,7 @@ BREAK ( 15 minutes )
 
 ### 11. Instructor do (10 minutes)
 instructor demo
+
 - create elements
 	var el = $('<div id="buffy">')
 - add attributes and classes to those elements and text
@@ -166,7 +199,7 @@ and compare to what the code would look like in JavaScript
 partners exercise
 
 ### 13. Everyone do (5 minutes)
-go over exercise
+* *Go over the previous exercise*
 
 ### 14. Instructor do (10 minutes)
 instructor demo
@@ -180,25 +213,16 @@ student exercise
 ### 16. Everyone do (5 minutes)
 go over
 
-### 17. Instructor do (10 minutes)
-- setting a counter and adding to it and then updating the dom with it
+### 17. Everyone do LAB (20 minutes)
 
-### 18. Everyone do (5 minutes)
+	Bigger Lab
 
-### 19. Everyone do (5 minutes)
-go over exercise
+	BONUS
 
-### 20. instructor do (10 minutes)
-- do on click events
-- with $(this) to modify the element itself
+### 18. Everyone do (10 minutes)
+* *Go over the previous exercise*
 
-### 21. Everyone do (10 minutes)
-partners exercise
-
-### 22. Everyone do (5 minutes)
-go over exercise
-
-### 23. Instructor Do - (5 minutes)
+### 19. Instructor Do - (5 minutes)
     
 * show the hw instructions
 
@@ -211,23 +235,3 @@ go over exercise
 # Copyright
 Coding Boot Camp (C) 2015. All Rights Reserved.
 
-<!-- 16. instructor demo like 3.2.13 
-
-	AT THE END WE DO THIS
-	-------------------------
-	maybe we build this:
-
-	the page displays a number
-
-	input takes in a number
-
-	then user clicks a button
-
-	then it makes that many buttons with a random number in each button and on the data attribute
-
-	then when the user clicks those buttons, it adds that number to the original number displayed to the screen
-
-	BONUS
-
-	the buttons could subtract or add to the top number
- -->
