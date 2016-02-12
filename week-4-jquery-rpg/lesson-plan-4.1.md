@@ -30,7 +30,7 @@ Parts 3 - 19
 
 PART ONE:
 
-### 1. Everyone do (15 minutes)
+### 1. Student do (15 minutes)
 Review Exercise: coffeeMenu
 
 * *Instructor demos. Look in lesson-4.1.exercise1_coffeeMenu folder.*
