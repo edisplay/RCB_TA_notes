@@ -33,11 +33,11 @@ PART ONE:
 ### 1. Student do (15 minutes)
 Review Exercise: coffeeMenu
 
-* *Instructor demos. Look in lesson-4.1.exercise1_coffeeMenu folder.*
+* *Open this file into chrome and demo it for the class: 4.1-in-class-exercises/lesson-4.1.exercise1_coffeeMenu folder.*
 
 * *Slack this out to class*
 
-|Coffe Menu|
+|Coffee Menu|
 |----------|
 |Coffee: $5|
 |Espresso: $7|
@@ -50,8 +50,8 @@ Review Exercise: coffeeMenu
 |Ice Tea: $4|
 
 ```
-* You are given the following of coffee and their price above.
-	* Create a HTML that has display the title 'Coffee Menu'.
+* You are given the following coffee and their prices above.
+	* Create a HTML file that has display the title 'Coffee Menu'.
 	* Create a script tag and create a JavaScript function
 		* Create an array that contains both the name and price of each item on the list as a string
 		* Create a for loop, that loops through all the elements and makes them divs, add those divs the page
@@ -60,6 +60,9 @@ Review Exercise: coffeeMenu
 ```
 
 ### 2. Everyone do (10 minutes)
+
+* *Open the Code to the above exercise located in 4.1-in-class-exercises/lesson-4.1.exercise1_coffeeMenu folder.*
+
 * *Call on a student to go over the previous exercise*
 
 ### 3. Instructor do (5 minutes)
@@ -69,18 +72,17 @@ Intro to jQuery:
 
 ### 4. Instructor do (10 minutes)
 
-* *Show how it's sourced in HTML*
+* *Show how to use the jQuery cdn in HTML*
 
 * *Instructor demos. Look in lesson-4.1.exercise2_pickEm folder.*
 
-* *Explain what each line of code is doing*
+* *Explain what each line of the code is doing*
 
 ### 5. Partners Do (5 minutes)
 
-* *Have student talk to each other about what just happened* 
+* *Have student talk to each other about what just happened. MAKE SURE THE CODE IS UP ON THE SCREEN!* 
 
-### 6. Everyone do (5 minutes)
-Student Exercise: Take Names
+### 6. Everyone do (10 minutes)
 
 * *Slack this out to class*
 
@@ -95,7 +97,6 @@ Student Exercise: Take Names
 	<head>
 		<meta charset="UTF-8">
 		<title>TakeNames</title>
-		<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
 	</head>
 	<body>
 
@@ -112,6 +113,7 @@ Student Exercise: Take Names
 		</br>
 		<div id="joker" data-name='Jack Napier'></div>
 
+		<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
 	    <script type="text/javascript">
 			//write your code here
 	    </script>
