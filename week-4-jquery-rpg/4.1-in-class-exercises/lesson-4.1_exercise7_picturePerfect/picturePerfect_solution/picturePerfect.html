@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Picture Perfect</title>
+		<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+	</head>
+	<body>
+		<div id=""><h1>Picture!</h1></div>
+		
+		<div id="area"></div>
+	    
+	    <script type="text/javascript">
+
+	      function addPictures() { 
+	      		var letters = ['p','e','r','f','e','c','t'];
+
+	      		for (var i = 0; i < letters.length; i++) {
+					var pic = $('<img src="images/'+ letters[i] +'.png">');
+					$("#area").append(pic);	
+	      		};
+	      };
+
+	      document.body.onload = addPictures;
+
+	    </script>
+	</body>
+</html>
