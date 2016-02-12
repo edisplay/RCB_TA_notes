@@ -50,7 +50,7 @@ Your Guesses so far: # of times the user has failed to guess the letter correctl
 1. choose a theme for your game. 
   * In the example, we used an 80s theme. All the words are famous bands or musicians from the 80s. Please choose whatever theme you'd like.
 3. use key events to get the letter that the user typed
-4. organize your game code inside of an object, except the key events to get the letter tha
+4. organize your game code inside of an object, except the key events to get the letter that the user typed.
 4. Display the following on the page:
 
 Press any key to get started!

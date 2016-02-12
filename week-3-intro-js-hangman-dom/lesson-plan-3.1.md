@@ -200,21 +200,17 @@ answers:
 </head>
 <body>
   <script type="text/javascript">
-    function runFunction() {
-      var name = 'Captain America';
-      var age = 98;
+    var name = 'Captain America';
+    var age = 98;
 
-      alert(name);
-      alert(age);
+    alert(name);
+    alert(age);
 
-      var anotherName = prompt('what\'s your name');
-      var confirmAdult = confirm('are you 18 years or older?');
+    var anotherName = prompt('what\'s your name');
+    var confirmAdult = confirm('are you 18 years or older?');
 
-      alert(anotherName);
-      alert(confirmAdult);      
-    }
-    window.onLoad = runFunction()
-
+    alert(anotherName);
+    alert(confirmAdult);      
   </script>
 </body>
 </html>
@@ -239,15 +235,12 @@ solution
 </head>
 <body>
   <script type="text/javascript">
-    function runMe() = {
-      var confirmSushi = confirm('Do you like sushi?');
-      var sushiType = prompt('What kind of sushi do you like?');
+    var confirmSushi = confirm('Do you like sushi?');
+    var sushiType = prompt('What kind of sushi do you like?');
 
-      alert(confirmSushi);
-      alert(sushiType);
-    }
-    window.onLoad = runMe();
-    </script>
+    alert(confirmSushi);
+    alert(sushiType);
+  </script>
 </body>
 </html>
 ```
@@ -278,22 +271,17 @@ solution
 </head>
 <body>
   <script type="text/javascript">
-    function sushiScript() {
-      var confirmSushi = confirm('Do you like sushi?');
-      var confirmGingerTea = confirm('Do you like Ginger Tea?')
-      var sushiType = prompt('What kind of sushi do you like?');
+    var confirmSushi = confirm('Do you like sushi?');
+    var confirmGingerTea = confirm('Do you like Ginger Tea?')
+    var sushiType = prompt('What kind of sushi do you like?');
 
-      if (confirmSushi){
-        alert("You like " + sushiType + " !");
-      }else if(confirmGingerTea){
-        alert("You like ginger tea!!")
-      }else{
-        document.write("You don't like sushi or ginger tea.");
-      }      
-    }
-
-    window.onLoad = sushiScript();
-
+    if (confirmSushi){
+      alert("You like " + sushiType + " !");
+    }else if(confirmGingerTea){
+      alert("You like ginger tea!!")
+    }else{
+      document.write("You don't like sushi or ginger tea.");
+    }      
   </script>
 </body>
 </html>
@@ -322,31 +310,26 @@ solution:
 </head>
 <body>
   <script type="text/javascript">
-    function awesomeScript() {
-      //exercise
-      var eatSteak = confirm("do you eat steak?");
-      if (eatSteak){
-        document.write("Here's a steak");
-      }else{
-        document.write("Here's a tofu stir fry!");
-      }
-
-      //bonus
-      var year = prompt('What year were you born?');
-
-      var year = parseInt(year);
-
-      if (year > 1987){
-        alert("you're younger than Pavan");
-      }else if(year < 1987){
-        alert("you're older than Pavan");
-      }else{
-        alert("you're around the same age as Pavan");
-      }
+    //exercise
+    var eatSteak = confirm("do you eat steak?");
+    if (eatSteak){
+      document.write("Here's a steak");
+    }else{
+      document.write("Here's a tofu stir fry!");
     }
 
-    window.onLoad = awesomeScript();
+    //bonus
+    var year = prompt('What year were you born?');
 
+    var year = parseInt(year);
+
+    if (year > 1987){
+      alert("you're younger than Pavan");
+    }else if(year < 1987){
+      alert("you're older than Pavan");
+    }else{
+      alert("you're around the same age as Pavan");
+    }
   </script>
 </body>
 </html>
@@ -452,58 +435,53 @@ switch (new Date().getDay()) {
 </head>
 <body>
   <script type="text/javascript">
-    function awesomeScript() {
-        if (true == true){
-          alert('hi')
-        }else{
-          alert('bye')
-        }
+      if (true == true){
+        alert('hi')
+      }else{
+        alert('bye')
+      }
 
-        if (false == false){
-          alert('dude')
-        }else{
-          alert('nope')
-        }
+      if (false == false){
+        alert('dude')
+      }else{
+        alert('nope')
+      }
 
-        if ("4" == 4){
-          alert('puppies')
-        }else{
-          alert('goats')
-        }
+      if ("4" == 4){
+        alert('puppies')
+      }else{
+        alert('goats')
+      }
 
-        if ("4" === 4){
-          alert('puppies')
-        }else{
-          alert('goats')
-        }
+      if ("4" === 4){
+        alert('puppies')
+      }else{
+        alert('goats')
+      }
 
-        if (true){
-          alert('goo goo dolls')
-        }else{
-          alert('vanilla ice')
-        }
+      if (true){
+        alert('goo goo dolls')
+      }else{
+        alert('vanilla ice')
+      }
 
-        if (false){
-          alert('the neighborhood')
-        }else{
-          alert('one direction')
-        } 
+      if (false){
+        alert('the neighborhood')
+      }else{
+        alert('one direction')
+      } 
 
-        if (("5" + "5") == "55"){
-          alert('tofu')
-        }else{
-          alert('soybean')
-        }
+      if (("5" + "5") == "55"){
+        alert('tofu')
+      }else{
+        alert('soybean')
+      }
 
-        if ((6 + "5") == "65"){
-          alert('richard')
-        }else{
-          alert('branson')
-        }
-    }
-
-    window.onLoad = awesomeScript();
-
+      if ((6 + "5") == "65"){
+        alert('richard')
+      }else{
+        alert('branson')
+      }
   </script>
 </body>
 </html>
@@ -517,10 +495,6 @@ Solutions:
 ##### break - 15 minutes
 
 ##### 125 minutes went by
-
-50 minutes
-arrays
-for loops
 
 ### 10. Instructor do - 15 minutes
 > It's time for arrays. Arrays are lists of things. Numbers, words, both, doesn't matter. Arrays are lists of things.
@@ -539,21 +513,16 @@ for loops
 </head>
 <body>
   <script type="text/javascript">
-    function awesomeScript() {
-      var animals = ['parrot', 'cat', 'dog'];
+    var animals = ['parrot', 'cat', 'dog'];
 
-      console.log(animals.length);
-      console.log(animals[1]);
-      console.log(animals[2]);    
-      console.log(animals[0]);
-      console.log(animals[animals.length]);
-      console.log(animals[animals.length-1]);
-      console.log(animals.indexOf('bear'));
-      console.log(animals.indexOf('parrot'));
-    }
-
-    window.onLoad = awesomeScript();
-
+    console.log(animals.length);
+    console.log(animals[1]);
+    console.log(animals[2]);    
+    console.log(animals[0]);
+    console.log(animals[animals.length]);
+    console.log(animals[animals.length-1]);
+    console.log(animals.indexOf('bear'));
+    console.log(animals.indexOf('parrot'));
   </script>
 </body>
 </html>
