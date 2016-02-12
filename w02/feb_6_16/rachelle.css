@@ -1,0 +1,37 @@
+* {
+box-sizing: border-box;
+}
+body {
+  background: #ccc;
+  font-size: 18px;
+  line-height: 27px;
+}
+.wrapper {
+  width: 1024px;
+  margin: auto;
+}
+#main-content, #sidebar {
+  width: 500px;
+  padding: 30px;
+}
+#main-content {
+  float: left;
+  background: #fff;
+}
+#sidebar {
+  float: right;
+  background: #eee;
+}
+
+@media screen and (max-width: 768px) {
+
+  body {
+      background-color: #333;
+  }
+
+  .wrapper {
+      top: 0;
+      left: 0;
+      width: 600px;
+  }
+}

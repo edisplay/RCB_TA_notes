@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Rock Paper Scissors</title>
+</head>
+<body>
+	<script>
+		// user chooses r, p or s on keyboard representing rock, paper or scissors
+		// computer chooses a random value in a list of r, p or s
+		// we determine if the user won or not
+		// 	if user picked rock and computer picked scissor then user wins
+		// 	if user picked rock and computer picked paper then user loses
+		// 	if user picked scissor and computer picked rock then user loses
+		// 	if user picked scissor and computer picked paper then user wins
+		// 	if user picked paper and computer picked rock then user wins
+		// 	if user picked paper and computer picked scissor then user loses
+		// if the user won then we would add one to the wins
+		// if the user lost then we would add one to the losses
+		// if the user ties with the computer then we would add one to the ties
+		// the user would press r, p, s to play again
+		document.onkeyup = function(event) {
+			var userGuess = String.fromCharCode(event.keyCode).toLowerCase();
+			alert(userGuess);
+		};
+	</script>
+</body>
+</html>

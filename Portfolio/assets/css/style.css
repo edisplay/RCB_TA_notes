@@ -5,20 +5,23 @@ body{
 	background-image: url("../images/brickwall.png");
 	/*position: absolute;*/
 }
-
+.container{
+	margin: 0 auto;
+}
 .top-bar{
-	background-color: white;
+	background-color: #fff;
 }
 header{
 	font-family: 'Georgia', serif;
 	background-color: #4aaaa5;
 	color: #fff;
-	width: 29%;
+	width: 22%;
 	padding: 20px;
 	font-size: 30px;
 	left: 138px;
 	position: relative; /* element is positioned relative to its normal position */
 }
+
 ul{
 	font-family: 'Helvetica Neue', serif;
 	color: #777777;
