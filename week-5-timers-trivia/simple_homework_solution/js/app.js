@@ -1,5 +1,4 @@
 var panel = $('#quiz-area');
-var countStartNumber = 120;
 
 
 ///////////////////////////////////////////////////////////////////////////////
@@ -45,7 +44,7 @@ var questions = [{
   answers: ["Aladdin", "Hercules", "Mulan", "The Lion King"],
   correctAnswer: "The Lion King"
 }, {
-  question: 'Finish this line from the Fresh Prince of Bel-Air theme song: "I whistled for a cab and when it came near, the liscense plate said..."',
+  question: 'Finish this line from the Fresh Prince of Bel-Air theme song: "I whistled for a cab and when it came near, the license plate said..."',
   answers: ["Dice", "Mirror", "Fresh", "Cab"],
   correctAnswer: "Fresh"
 }, {
@@ -61,7 +60,7 @@ var questions = [{
 var game = {
   correct:0,
   incorrect:0,
-  counter:10,
+  counter:120,
   countdown: function(){
     game.counter--;
     $('#counter-number').html(game.counter);

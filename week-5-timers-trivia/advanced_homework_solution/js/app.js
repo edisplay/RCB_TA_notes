@@ -56,7 +56,7 @@ var questions = [{
   correctAnswer: "The Lion King",
   image:"img/lionking.gif"
 }, {
-  question: 'Finish this line from the Fresh Prince of Bel-Air theme song: "I whistled for a cab and when it came near, the liscense plate said..."',
+  question: 'Finish this line from the Fresh Prince of Bel-Air theme song: "I whistled for a cab and when it came near, the license plate said..."',
   answers: ["Dice", "Mirror", "Fresh", "Cab"],
   correctAnswer: "Fresh",
   image:"img/fresh.gif"
@@ -83,7 +83,6 @@ var game = {
   incorrect:0,
   countdown: function(){
     //Not sure if we're teaching them how to save the state of "this" to be used elsewhere.
-    console.log('set interval running');
     game.counter--;
     $('#counter-number').html(game.counter);
 

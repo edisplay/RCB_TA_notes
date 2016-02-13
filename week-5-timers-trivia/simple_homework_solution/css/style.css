@@ -20,7 +20,7 @@ button{
   display:block;
   width:400px;
   height:100px;
-  margin: 0 auto;
+  margin: 10px auto 0 auto;
   border:none;
   cursor: pointer;
   background:transparent;
@@ -52,7 +52,9 @@ h3{
   background: pink;
 }
 
-
+#quiz-area h2{
+  margin-top: 50px;
+}
 
 button:hover {
   border:2px solid blue;
