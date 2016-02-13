@@ -197,20 +197,13 @@ $(document).ready(function() {
 				currSelectedCharacter.health = currSelectedCharacter.health - currDefender.enemyAttackBack;
 				renderCharacters(currSelectedCharacter, 'enemyDamage');
 				if (currSelectedCharacter.health <= 0) {
-					//lose condition
-					$("body").empty();
-					$('body').css("background", "black");
-					alert("You been defeated...");
-					alert("GAME OVER!!!");
-					restartGame();
+					restartGame("You been defeated...GAME OVER!!!");
 				};
 			}else{		
 				renderCharacters(currDefender, 'enemyDefeated');
 				killCount++;
 				if (killCount >= 3) {
-					alert("You Won!!!!");
-					alert("GAME OVER!!!");
-					restartGame();
+					restartGame("You Won!!!! GAME OVER!!!");
 				};
 			};
 			turnCounter++;
@@ -219,11 +212,13 @@ $(document).ready(function() {
 		};
 	});
 
-	var restartGame = function() {
+	var restartGame = function(inputEndGame) {
 		//When 'Restart' button is clicked, reload the page.
 	    var restart = $('<button>Restart</button>').click(function () {
 	    	location.reload();
 	    });
+	    var gameState = $("<div>").text(inputEndGame);
+	    $("body").append(gameState);
 	    $("body").append(restart);
 	};
 
