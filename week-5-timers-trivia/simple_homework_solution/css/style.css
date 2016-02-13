@@ -12,8 +12,9 @@ body{
   padding: 5% 0;
   background-color: #FFF17A;
   width:960px;
-  margin:10% auto;
+  margin:5% auto;
   box-sizing: border-box;
+  min-height: 80%;
 }
 
 button{
@@ -30,7 +31,7 @@ button{
 
 h1{
   font-family: 'Geo', sans-serif;
-  font-size: 96px;
+  font-size: 6.5em;
   margin-bottom: 50px;
   font-weight: bold;
   color:blue;
@@ -47,7 +48,7 @@ h3{
 }
 
 #start{
-  margin-top: 25%;
+  margin-top: 10%;
   border:2px solid blue;
   background: pink;
 }
