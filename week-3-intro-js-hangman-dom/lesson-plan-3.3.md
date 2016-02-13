@@ -231,6 +231,84 @@ joan['Real Name']
 
 * *slack this out*
 
+1. explain every line of the below object
+2. DO NOT TOUCH THE INSIDE of the brock object for the next steps.
+1. Outside the brock object, call the injuredStopLifting key and change doYouLift to false.
+2. Outside the brock object, call the upProteinIntake key multiple times and up brock's protein intake to 245 and alert gramsOfproteinIntake
+3. Outside the brock object, call the sayAllCatchPhrases key to get brock to say all his catch phrases
+4. Brock sent you a greeting card. Brock has lost his status as a bro. Outside the brock object, Change brock's bro key to false. Alert the value of the bro key to the screen.
+
+```
+var brock = {
+	bro : true,
+	doYouLift : true,
+	gramsOfproteinIntake : 240,
+	name : 'Brock',
+	catchPhraseOne : "I'm so broke right now because I just bought those new subwoofers.",
+	catchPhraseTwo : "You're taking my picture? Hang on. Let me put on my sunglasses.",
+	catchPhraseThree : "My fantasy football team is crushing it.",
+	catchPhraseFour : "You’re hot. What’s your name?",
+	sayAllCatchPhrases : function(){
+		alert(this.catchPhraseOne);
+		alert(this.catchPhraseTwo);
+		alert(this.catchPhraseThree);
+		alert(this.catchPhraseFour);
+	},
+	upProteinIntake : function(){
+		this.gramsOfproteinIntake++;
+	},
+	injuredStopLifting : function(){
+		this.doYouLift = false;
+	}
+}
+```
+
+### Everyone Do 15 minutes
+
+* *go over the previous exercise*
+
+* *run this code in console and show how this is the object*
+
+```
+var brock = {
+	bro : true,
+	doYouLift : true,
+	gramsOfproteinIntake : 240,
+	name : 'Brock',
+	catchPhraseOne : "I'm so broke right now because I just bought those new subwoofers.",
+	catchPhraseTwo : "You're taking my picture? Hang on. Let me put on my sunglasses.",
+	catchPhraseThree : "My fantasy football team is crushing it.",
+	catchPhraseFour : "You’re hot. What’s your name?",
+	sayAllCatchPhrases : function(){
+		alert(this.catchPhraseOne);
+		alert(this.catchPhraseTwo);
+		alert(this.catchPhraseThree);
+		alert(this.catchPhraseFour);
+	},
+	upProteinIntake : function(){
+		this.gramsOfproteinIntake++;
+	},
+	injuredStopLifting : function(){
+		debugger;
+		this.doYouLift = false;
+	}
+}
+```
+
+##### 215 minutes have gone by including break - you have 25 minutes left
+
+### Instructor Do 5 minutes
+
+* *demonstrate the psychic game in the browser*
+* *demonstrate the hangman game in the browser*
+
+### Partners Do 20 minutes
+write the psuedo code for the psychic game
+
+bonus:
+write the pseudo code for the hangman game
+
+### Partners Do 10 minutes
 explain line by line what's going on, study the following code, watch how it works with your partners and use break points
 
 ```
@@ -240,25 +318,9 @@ var game = {
 		this.counter++;
 	},
 
+
 }
 ```
-
-##### 215 minutes have gone by including break - you have 25 minutes left
-
-### Instructor Do 5 minutes
-
-* *demonstrate the psychic game in the browser*
-
-### Partners Do 
-write the psuedo code for the psychic game
-
-bonus:
-write the pseudo code for the hangman game
-
-### lesson missing
-- objects
-	- scope
-	- this
 
 
 # Copyright
