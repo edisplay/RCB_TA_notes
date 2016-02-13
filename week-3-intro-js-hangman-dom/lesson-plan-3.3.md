@@ -1,3 +1,8 @@
+### Objectives
+
+* students will use use objects differently than the way they use arrays
+* students will use functions to write DRY code
+
 ### 1. Partners do (15 minutes)
 
 Part One
@@ -132,7 +137,7 @@ go over it with the class
 
 ##### Break for 40 minutes - after break it is now 12:30 pm - 150 minutes have went by - you have 90 minutes left
 
-### Instructor do 10 minutes
+### 10. Instructor do 10 minutes
 
 Intro to data structures in JS (when to use an array and when to use an object)
 
@@ -155,19 +160,19 @@ for(var i = 0; i < nums.length; i++){
 
 ```
 
-### Partners do 5 minutes
+### 11. Partners do 5 minutes
 
 * *throw the previous code on the board*
 
 > explain the above code to your partner and why the array is being used affectively
 
-### Everyone do 5 minutes
+### 12. Everyone do 5 minutes
 
 * *call on a student to explain the code above*
 
 * *call on a student to explain why the array is being used affectively*
 
-### Instructor Do 5 minutes
+### 13. Instructor Do 5 minutes
 
 > but what about with this example where we describe joanOfArc and how awesome she is.
 
@@ -179,7 +184,7 @@ var joanOfArcInfoParts = ['Real Name', 'Grew Up Where', 'known for', 'scars', 's
 var joanOfArcInfoValues = ['Jehanne la Pucelle', 'Domremy, a village in northeastern France', 'Peasant girl, daughter of a farmer, who rose to become Commander of the French army. She led the charge against England. Strategized brilliant military strategies.', 'Took an arrow to the shoulder and a crossbow bolt to the thigh while trying to liberate Paris.', 'stands for French unity and nationalism'];
 ```
 
-### Partners Do 5 minutes
+### 14. Partners Do 5 minutes
 
 > How the hell do I relate these two arrays together??????
 
@@ -187,7 +192,7 @@ var joanOfArcInfoValues = ['Jehanne la Pucelle', 'Domremy, a village in northeas
 
 * *point to the parts of the arrays you want to relate together.*
 
-### Instructor Do 15 minutes
+### 15. Instructor Do 15 minutes
 
 > Trick question - even if you guys figured out a way to relate both arrays together, you should not do that. And I will go over how to do it. But first, i'll show you the better way. The way it's supposed to be!
 
@@ -227,23 +232,22 @@ joanOfArcInfoValues[joanOfArcInfoParts.indexOf('Real Name')]
 joan['Real Name']
 ```
 
-### Partners Do 15 minutes
+### 16. Partners Do 15 minutes
 
 * *slack this out*
 
 1. explain every line of the below object
-2. DO NOT TOUCH THE INSIDE of the brock object for the next steps.
-1. Outside the brock object, call the injuredStopLifting key and change doYouLift to false.
-2. Outside the brock object, call the upProteinIntake key multiple times and up brock's protein intake to 245 and alert gramsOfproteinIntake
-3. Outside the brock object, call the sayAllCatchPhrases key to get brock to say all his catch phrases
-4. Brock sent you a greeting card. Brock has lost his status as a bro. Outside the brock object, Change brock's bro key to false. Alert the value of the bro key to the screen.
+2. DO NOT TOUCH THE INSIDE of the owens object for the next steps.
+1. Outside the owens object, call the injuredStopLifting key and change doYouLift to false.
+2. Outside the owens object, call the upProteinIntake key multiple times and up owens's protein intake to 245 and alert gramsOfproteinIntake
+3. Outside the owens object, call the sayAllCatchPhrases key to get owens to say all his catch phrases
+4. owens sent you a greeting card. owens has lost his status as a bro. Outside the owens object, Change owens's bro key to false. Alert the value of the bro key to the screen.
 
 ```
-var brock = {
+var owens = {
 	bro : true,
 	doYouLift : true,
 	gramsOfproteinIntake : 240,
-	name : 'Brock',
 	catchPhraseOne : "I'm so broke right now because I just bought those new subwoofers.",
 	catchPhraseTwo : "You're taking my picture? Hang on. Let me put on my sunglasses.",
 	catchPhraseThree : "My fantasy football team is crushing it.",
@@ -263,18 +267,19 @@ var brock = {
 }
 ```
 
-### Everyone Do 15 minutes
+### 17. Everyone Do 15 minutes
 
 * *go over the previous exercise*
 
-* *run this code in console and show how this is the object*
+* notice the debugger in the object below.
+
+* *run this code in console so that the debugger stops in the injuredStopLifting function and show how `this` is actually the owens object*
 
 ```
-var brock = {
+var owens = {
 	bro : true,
 	doYouLift : true,
 	gramsOfproteinIntake : 240,
-	name : 'Brock',
 	catchPhraseOne : "I'm so broke right now because I just bought those new subwoofers.",
 	catchPhraseTwo : "You're taking my picture? Hang on. Let me put on my sunglasses.",
 	catchPhraseThree : "My fantasy football team is crushing it.",
@@ -295,33 +300,90 @@ var brock = {
 }
 ```
 
-##### 215 minutes have gone by including break - you have 25 minutes left
+### 18. Everyone Do (any time that is left over)
 
-### Instructor Do 5 minutes
+* *slack this out*
 
-* *demonstrate the psychic game in the browser*
-* *demonstrate the hangman game in the browser*
+> everyone save this file and open it up
 
-### Partners Do 20 minutes
-write the psuedo code for the psychic game
+* *demonstrate it on your machine*
 
-bonus:
-write the pseudo code for the hangman game
+* *type the keys*
 
-### Partners Do 10 minutes
-explain line by line what's going on, study the following code, watch how it works with your partners and use break points
+* *explain to the class how it works*
+
+* *call on people*
 
 ```
-var game = {
-	counter : 0,
-	incrementCounter : function(){
-		this.counter++;
-	},
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Owens To The Rescue</title>
+</head>
+<body>
+    <h1>There's a cat stuck in a tree.</h1>
 
+    <h2>Who do we call?</h2>
 
-}
+    <h2>Owens.</h2>
+    
+    <script type="text/javascript">
+
+      var owens = {
+      	bro : true,
+      	doYouLift : true,
+      	gramsOfproteinIntake : 240,
+      	catchPhraseOne : "I'm so broke right now because I just bought those new subwoofers.",
+      	catchPhraseTwo : "You're taking my picture? Hang on. Let me put on my sunglasses.",
+      	catchPhraseThree : "My fantasy football team is crushing it.",
+      	catchPhraseFour : "You’re hot. What’s your name?",
+      	sayAllCatchPhrases : function(){
+      		alert(this.catchPhraseOne);
+      		alert(this.catchPhraseTwo);
+      		alert(this.catchPhraseThree);
+      		alert(this.catchPhraseFour);
+      	},
+      	upProteinIntake : function(){
+      		this.gramsOfproteinIntake++;
+      	},
+      	injuredStopLifting : function(){
+      		this.doYouLift = false;
+      	}
+      }
+      
+      document.onkeyup = function(event) {
+      	var letter = String.fromCharCode(event.keyCode).toLowerCase();
+
+      	switch (letter) {
+      		case 'n':
+      		    alert('owens');
+      		    break;
+      	    case 'b':
+      	        alert(owens.bro);
+      	        break;
+      	    case 'l':
+      	        alert(owens.doYouLift);
+      	        break;
+      	    case 'g':
+      	        alert(owens.gramsOfproteinIntake);
+      	        break;
+      	    case 'c':
+      	        owens.sayAllCatchPhrases();
+      	        break;
+      	    case 'u':
+      	        owens.upProteinIntake();
+      	        alert(owens.gramsOfproteinIntake);
+      	        break;
+      	    case 's':
+      	        owens.injuredStopLifting();
+      	        alert(owens.doYouLift);
+      	        break;
+      	}
+      }
+    </script>
+</body>
+</html>
 ```
-
 
 # Copyright
 Coding Boot Camp (C) 2015. All Rights Reserved.
