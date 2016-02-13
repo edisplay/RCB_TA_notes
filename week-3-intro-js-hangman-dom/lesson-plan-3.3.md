@@ -7,7 +7,7 @@ Part One
 4. Why did we start the second for loop with i=0 instead of i=1?
 
 Part Two
-break point exercise
+add a break point inside of both for loops, execute the code and evertime the browser stops, check the value of 
 
 ```
 <!DOCTYPE html>
@@ -33,9 +33,10 @@ for(var i=0; i < favTVshows.length; i++){
 </body>
 </html>
 
+
 ```
 
-### 2. Everyone do (10 minutes)
+### 2. Everyone do (15 minutes)
 
 * *go over it with the class - call on people*
 
@@ -55,16 +56,40 @@ Solutions:
 
 		Answer: otherwise we would skip alerting the first value of the array
 
-### 2. Partners do (5 minutes)
+### 2. Instructor do (5 minutes)
 
-* *put up this code on the screen* 
+* *demo 3.3-in-class-exercises/demo-1.html*
 
-* *ask the class to discuss with their partners what's wrong with this code*
+* *then put up the code on the screen* 
 
+### 3. Partners do (5 minutes)
+* *ask the class to discuss with their partners what's wrong with the above code*
 
+### 4. Everyone Do (5 minutes)
 
-- functions
+* *call on students until you get the answer you want*
 
+> the problem with the code is that it's redundant.
+
+> the code is not DRY - don't repeat yourself 
+
+> it works and it's fine for a rough draft, but it's not the final product
+
+> we need a way of reduce the repetitiveness
+
+> and we do that with functions
+
+### 5. Instructor Do (15 minutes)
+
+* *show the code in 3.3-in-class-exercises/demo-2.html*
+
+* *demo the file in the browser to show students that it works just like demo-1.html*
+
+> this is how I would reduce the complexities=
+
+##### Break for 40 minutes
+
+# Next I need to finish this
 - objects
 	- scope
 	- game where you use an object to organize your code
@@ -72,5 +97,3 @@ Solutions:
 - pseudo code for psychic game
 
 - pseudo code for hangman game
-
-
