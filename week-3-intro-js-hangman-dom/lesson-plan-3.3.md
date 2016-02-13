@@ -79,13 +79,44 @@ Solutions:
 
 > and we do that with functions
 
-### 5. Instructor Do (15 minutes)
+### 5. Instructor Do (20 minutes)
 
 * *show the code in 3.3-in-class-exercises/demo-2.html*
 
 * *demo the file in the browser to show students that it works just like demo-1.html*
 
-> this is how I would reduce the complexities=
+> this is how I would reduce the complexities with a function
+
+* *explain the following*
+	
+	* consoleInside is the function name
+	* arr is an argument, it gets set equal to whatever you pass into the function
+	* on line 21 arr will be equal to brands
+	* on line 22 arr will be equal to heroes	
+
+* *go to view -> layout -> columns: 2*
+* *show demo-1.html and demo-2.html side by side*
+
+> demo-1 and demo-2 do the same thing
+
+> you're not supposed to think to use functions right away. 
+
+> you're supposed to get it done, and then if you spot redundancies then you use functions to make your code DRY - don't repeat yourself.
+
+### 6. Partners Do 5 minutes
+
+* *keep both files open from the previous exercise on the board*
+
+> explain the code in both files on the board to your partners - go you have 5 minutes
+
+
+### 7. Everyone Do 5 minutes
+
+* *call on a student to go over some of the code*
+
+* *call on another student to go over some of the code*
+
+* *call on another student to go over some of the code*
 
 ##### Break for 40 minutes
 
