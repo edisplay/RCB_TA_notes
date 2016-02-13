@@ -9,11 +9,11 @@ Look at this file at the root of the repository:
 
 # Master Objectives (Internal Use - do not share with students - because it's a waste of time)
 
-* Develop your vision for a website -- and then build it!
 * Work independently or in a group on complex projects throughout the entire development lifecycle
-* Build a frontend website either from scratch or utilizing a frontend framework (such as Bootstrap)
+* Implement complex logical conditions to meet an objective.
+* Write clean code with proper variable names, indentation according to industry best practices
 
-# Theme: jQuery
+# Theme: Intro to jQuery
 
 # INSTRUCTOR MUST COVER!!!
 
@@ -51,6 +51,7 @@ Review Exercise: coffeeMenu
 
 ```
 * You are given the following coffee and their prices above.
+* Do not use jQuery. Use JavaScript.
 	* Create a HTML file that displays the title 'Coffee Menu'.
 	* Create a script tag and create a JavaScript function that will
 		* Create an array that contains both the name and price of each item on the list as a string
@@ -68,6 +69,16 @@ Intro to jQuery:
 
 > Explain what jQuery is and why it's useful.
 
+* *Please keep it short.*
+
+Personally, I would just say this.
+
+> jQuery is a library that makes JavaScript DOM manipulation simple. It makes manipulating html easier than if you had to do it with JavaScript. 
+
+> It's optimized to work on every browser and mobile device. While, with pure JavaScript, you're screwed.
+
+> How do you use it? We'll find out in the next episode of jQuery.
+
 ### 4. Instructor do (10 minutes)
 
 * *Show how to use the jQuery cdn in HTML*
@@ -76,18 +87,19 @@ Intro to jQuery:
 
 * *Explain what each line of the code is doing*
 
-### 5. Partners Do (5 minutes)
+### 5. Partners Do (5 minutes
 
-* *Have student talk to each other about what just happened. MAKE SURE THE CODE IS UP ON THE SCREEN!* 
+* *MAKE SURE THE CODE FROM THE PREVIOUS DEMO IS UP ON THE SCREEN!*
+* *Have student talk to each other about what just happened.* 
 
 ### 6. Student do (10 minutes)
 
 * *Slack this out to class*
 
-* You are given the following HTML, using JQuery create the code that will.
-	* Select everything with the class "greekMythNames" and alert the second element's innerText.
-	* Select the element with the id "wrestler" alert it's innerText
-	* Select the element with the data-name "007" alert it's innerText
+* You are given the following HTML, using jQuery create the code that will:
+	* Select everything with the class "greekMythNames" and alert the second element's text.
+	* Select the element with the id "wrestler" alert it's text
+	* Select the element with the data-name "007" alert it's text
 	* Select the element with the id "joker" alert it's data-name
 
 ```
@@ -133,8 +145,15 @@ Intro to jQuery:
 
 * *Explain what each line of code is doing*
 
-* *Explain why and how `event` is passed into the on click function.*
+* *Explain how the anonymous function that's passed into the click event is not being triggered on page load - it's being triggered when you click. That's a callback function. When a function is triggered later if something happens.*
+
+* *demonstrate how when the page loads, the anonymous function isn't triggered. It's triggered when you click.*
+
 * *Explain what `this` is, while inside of the click function.*
+
+* *demonstrate with a break point what $(this) looks like in the console WHEN YOU ARE INSIDE THE CLICK EVENT'S ANONYMOUS FUNCTION.*
+
+* *demonstrate with a break point what this looks like in the console WHEN YOU ARE INSIDE THE CLICK EVENT'S ANONYMOUS FUNCTION.*
 
 ### 9. partners do (10 minutes)
 
@@ -142,11 +161,11 @@ Student Exercise: Passcode
 
 * *Slack this out to class*
 
-* You are given the following HTML, using JQuery
+* You are given the following HTML, using jQuery
 	* Create a click event on every "number" class
 	* Whenever a number is clicked store it
-	* If the user correct inputs 122343221 alert them they got in
-	* If the user inputs that many numbers and wasn't correct alert them they got it wrong
+	* If the user correctly inputs 122343221 alert them they got in
+	* If the user inputs that many numbers and was wrong, alert them that they got it wrong
 
 ```
 <!DOCTYPE html>
@@ -181,12 +200,9 @@ Student Exercise: Passcode
 
 * *Go over the previous exercise call on one unique student per each part of the previous demo to explain what happened*
 
---------- --------- ---------
+###### 85 minutes have passed
 
-###### 85 mintues has passed
-
-BREAK ( 15 minutes )
---------- --------- ---------
+##### BREAK ( 15 minutes ) - it is now 8:10 pm, you have 80 minutes left of class time
 
 ### 11. Instructor do (10 minutes)
 
@@ -233,15 +249,15 @@ Student Exercise: lotteryGenerateor
 	* There is also a "Clear" button
 	* Whenever the "Clear" button is hit, it removes all the number on screen
 
-### 17. Student do (3 minutes)
+### 17. Student do (10 minutes)
 
 * *Have student write out the pseudo code. NO CODING YET!* 
 
-### 18. Everyone do (5 minutes)
+### 18. Everyone do (3 minutes)
 
 * *Call on a student to go over explain their pseudo code*
 
-### 19. Student do (15 minutes)
+### 19. Student do (10 minutes)
 
 * *Have student start working on the lab! CODE CODE CODE!* 
 

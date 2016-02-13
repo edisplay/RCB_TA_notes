@@ -34,8 +34,6 @@ https://drive.google.com/open?id=1Vn3pmtaIpEiQgItA8vayDjSxq-pYwXnW3D1Y_vVsEUk
 attendance ru oct 15
 https://docs.google.com/spreadsheets/d/10YdsZ4-f1KghEYX_fWSwJkqPoYfdui93TsYoC66uFZI/edit?ts=56ba0ae7
 
-class calendar ru oct 15
-https://docs.google.com/a/trilogyed.com/spreadsheets/d/1vDDqs6xS5vDbnAGaA6Jjch9Vot_6hTluixiKOJpNVX8/edit?usp=drivesdk
 
 assessment framework
 https://docs.google.com/document/u/2/d/1lWuPE34sa_d1G9m6_q0YuR87-MnL9KqzjzDSawN14f8/edit?usp=sharing

@@ -258,3 +258,6 @@ in the for loop, if the value starts with a c or an o then additionally alert th
 * *slack out rps-9.html if you haven't already*
 
 Make break points in the code that was slacked out and watch how it works with your partners
+
+# Copyright
+Coding Boot Camp (C) 2015. All Rights Reserved.

@@ -11,10 +11,10 @@ app.set('view engine', 'handlebars');
 
 var mysql      = require('mysql');
 var connection = mysql.createConnection({
-  port     : 8000,
+  port     : 3306,
   host     : 'localhost',
   user     : 'root',
-  password : '1111',
+  password : 'jigganick',
   database : 'feel_state_db'
 });
 
@@ -61,4 +61,6 @@ app.post('/createRight', function(req, res) {
 });
 
 var port = 3000;
-app.listen(port);
+app.listen(port, function() {
+  console.log("Listening on PORT " + port);
+});
