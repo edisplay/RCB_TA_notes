@@ -1,0 +1,30 @@
+#Week of 15 Rutgers Virtual Flyers
+
+### Introduction
+
+* Work in groups of 4
+* The goal is to create a fully functioning full stack app that shows your Rutgers pride
+* You will use `Handlebars` to generate HTML
+* You will use `Sequelize` to create data models for the database storage
+* You will use `Express` for routing
+* You will use `Bootstrap` (or `Materialize`) as a frontend CSS framework
+* You will use jQuery for front end form validation
+
+### User story
+
+Rutgers Virtual Flyer. There's a lot to do / eat / see / play at Rutgers. We
+need an effective way to categorize it all! Your app should have a user
+creation / login system. It should have a way to add places for everyone to see.
+Only authenticated users can leave reviews and ratings. There should be a basic
+filter that lets users narrow down what they want to search for (only 5 star places,
+  restaurants, etc)
+
+### Remember
+
+* This will span two weeks and will be group work.
+* Everyone must contribute equally.
+* Design matters
+* Communicate, communicate, communicate, communicate!
+
+# Copyright
+Coding Boot Camp (C) 2016. All Rights Reserved.
