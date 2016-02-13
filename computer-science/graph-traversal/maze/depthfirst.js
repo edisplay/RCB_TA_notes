@@ -7,23 +7,14 @@ function dfsolve( graph, start, finish ){
   //create a copy of the graph that adds the visited thing
   for( var i=0; i<graph.length; i++){
 
-    if( nodes[i] === undefined ){
-
-      nodes[i] = [];
-    }
-
-    for( var j=0; j<graph[i].length; j++ ){
-
-      nodes[i].push({
+      nodes.push({
         parent : null,
-        location: [i,j],
+        location: i,
         discovered : null
       });
-
-    }
   }
 
-  stack.push( nodes[ start[0]][ start[1]] );
+  stack.push( nodes[ start ] );
 
   while( stack.length > 0 ){
 
@@ -31,27 +22,29 @@ function dfsolve( graph, start, finish ){
 
     if( current.discovered === null ){
 
-      nodes[ current.location[0] ][ current.location[1] ].discovered = true;
+      nodes[ current.location ].discovered = true;
 
-      var graph_node = graph[ current.location[0] ][ current.location[1] ]
+      var graph_node = graph[ current.location ]
 
       //this for loop sees if we are done, for this level
       for( var i=0; i<graph_node.neighbors.length; i++ ){
 
-        if( graph_node.neighbors[i][0] === finish[0] && graph_node.neighbors[i][1] === finish[1] ){
-          stack.push( current );
-          nodes[ graph_node.neighbors[i][0] ][ graph_node.neighbors[i][1] ].parent = [current.location[0], current.location[1]];
+        if( graph_node.neighbors[i] === finish ){
 
-          stack.push( nodes[ graph_node.neighbors[i][0]][ graph_node.neighbors[i][1]] );
+          stack.push( current );
+
+          nodes[ graph_node.neighbors[i] ].parent = current.location;
+
+          stack.push( nodes[ graph_node.neighbors[i] ] );
 
           return getPath( nodes, start, finish );
         }
       }
 
       for( var i=0; i<graph_node.neighbors.length; i++ ){
-        nodes[ graph_node.neighbors[i][0] ][ graph_node.neighbors[i][1] ].parent = [current.location[0], current.location[1]];
+        nodes[ graph_node.neighbors[i] ].parent = current.location;
 
-        stack.push( nodes[ graph_node.neighbors[i][0] ][ graph_node.neighbors[i][1] ] );
+        stack.push( nodes[ graph_node.neighbors[i] ] );
       }
     }
   }
@@ -68,15 +61,15 @@ function getPath( nodes, start, finish ){
   path.push( finish );
 
   //get the enxt node with parent
-  var current = nodes[ finish[0] ] [ finish[1] ].parent;
+  var current = nodes[ finish ].parent;
   path.push( current );
 
   // this doesnt work for some reason??
   //while( current[0] !== start[0] && current[1] !== start[1] ){
 
-  while( !( current[0] === start[0] && current[1] === start[1] ) ){
+  while( !( current === start ) ){
 
-    current = nodes[ current[0] ] [ current[1] ].parent
+    current = nodes[ current ].parent
     path.push( current );
 
   }

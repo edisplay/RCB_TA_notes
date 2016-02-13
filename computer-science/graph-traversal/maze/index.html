@@ -7,7 +7,8 @@
         box-sizing: border-box;
       }
     table{
-        border-collapse: collapse;
+        margin: 10px;
+        border-collapse: initial;
         border-spacing:0;
         table-layout:fixed;
     }
@@ -31,9 +32,8 @@
   <body>
     <table id="maze"></table>
     <div id="time"></div>
-    <script src="homework.js"></script>
+    <script src="bfs.js"></script>
     <script src="depthfirst.js"></script>
-    <script src="astar.js"></script>
     <script src="app.js"></script>
     <script>
 
@@ -48,27 +48,27 @@
     var height = 10;
     var length = 10;
 
-    var m = cleanGraph( maze( height, length ) );
+    var m = maz( height, length  );
 
-    var start = [0,0];
-    var finish = [Math.floor(Math.random()*height),Math.floor(Math.random()*length)];
+    var start = 0;
+    var finish = Math.floor(Math.random()*(height*length));
 
     var ender = timer();
-    //var path = solve( m, start, finish );
+    var path = solve( m, start, finish );
     var bfs_time = ender();
 
     var ender = timer();
-    var path = dfsolve( m, start, finish );
+    //var path = dfsolve( m, start, finish );
     var dfs_time = ender();
 
     var tt = document.querySelector('#time');
-    tt.innerText = "bfs time: " + bfs_time + "milliseconds | dfs time:" + dfs_time + "milliseconds";
+    tt.innerText = "bfs time: " + bfs_time + " milliseconds | dfs time:" + dfs_time + " milliseconds";
 
 
 //do DOM stuff
 window.onload = function(){
 
-  buildMaze( m, start, finish );
+  buildMaze( m, start, finish, height, length );
 
   setTimeout( function(){
     displayPath( path );

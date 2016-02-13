@@ -1,128 +1,5 @@
-function getRandomInt(min, max) {
-  return Math.floor(Math.random() * (max - min + 1)) + min;
-}
-
-function getRandomIdx( size, except ){
-
-  var id = null;
-
-  while( id == null ){
-    id = getRandomInt( 0, size-1 );
-
-    if( id == except ){
-      id = null;
-    }
-
-  }
-
-  return id;
-};
-
-function getRandomCell( cells, size, current_id ){
-  var id = getRandomIdx( size, current_id );
-
-  var cell = cells[ id ];
-  var count = 1;
-
-  while( count < ( size -1 ) ){
-
-    id = getRandomIdx( size, current_id );
-
-    cell = cells[ id ];
-    count++;
-  }
-
-  return cell;
-}
-
-// generate graph
-function graph( size ){
-
-  var cells = [];
-
-  //generate nested arrasy
-  for( var j = 0; j< size; j++ ){
-    cells.push({
-      id : j,
-      visited : 0,
-      neighbors : []
-    });
-  }
-
-  //setup default values
-  var path = [];
-
-  var currentCell = cells[0];
-  var total_visited = 1;
-
-  //start the path here
-  path.push( currentCell );
-
-  //while we have nodes left to visit
-  while( size > total_visited ){
-
-    // get a random cell that hasnt been visited
-    var nextCell = getRandomCell( cells, size, currentCell.id  );
-
-    //if there's a cell that isnt the current cell's neighbor thats random, and the current cell is determined to be able to add a nother neighbor
-    if( nextCell != null ){
-
-      //for that randomly selected neighbor, set some things
-
-      if( currentCell.visited == 0 ){
-        currentCell.visited = 1;
-        total_visited++;
-      }
-
-      //if we havent visited this cell, push the thing we found as a neighbor
-
-
-      //if(nextCell.visited == 0 && isNewNeighbor( currentCell.neighbors, nextCell.id ) && neighborCount( currentCell.neighbors.length ) ){
-
-        currentCell.neighbors.push( {id: nextCell.id });
-      //}
-
-      currentCell = nextCell;
-      path.push( currentCell );
-
-    }else{
-
-      //if we couldn't find a valid neighbor, go back one square
-      currentCell = path.pop();
-    }
-
-  }
-
-  console.log( cells );
-
-  return cells;
-}
-
-//we dont want a graph with more than 5 neighbors?
-//
-//TODO: add in some probabilities for neighbors less than 5?
-function neighborCount( count ){
-
-  if( count > 5 ){
-    return false;
-  }
-
-  return true;
-}
-
-function isNewNeighbor( neighbors, id ){
-
-  for( var i=0; i<neighbors.length; i++ ){
-
-    if( neighbors[i].id == id ){
-      return false;
-    }
-  }
-
-  return true;
-}
-
-var g = formatGraph( maz( 4,4) );
+var gg = maz( 10,10);
+var g = formatGraph( gg );
 
 function formatGraph( graph ){
 
@@ -167,8 +44,8 @@ var force = d3.layout.force()
     .nodes(d3.values(nodes))
     .links(links)
     .size([width, height])
-    .linkDistance(400)
-    .charge(-2800)
+    .linkDistance(5)
+    .charge(-100)
     .on("tick", tick);
 
 var svg = d3.select("body").append("svg")

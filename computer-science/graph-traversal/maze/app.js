@@ -1,13 +1,4 @@
 //http://dstromberg.com/2013/07/tutorial-random-maze-generation-algorithm-in-javascript/
-//
-function maze( height, length ){
-
-  var size = height * length;
-
-  var zz = maze( size );
-
-  return zz;
-}
 function maz( height, length ){
 
   var size = height * length;
@@ -36,18 +27,14 @@ function maz( height, length ){
   //start the path here
   path.push( currentCell );
 
-  var rounds = 0;
-
-  //while we have nodes left to visit
   while( total_cells > total_visited ){
 
     var nextCell = getRandomNeighbor( cells, currentCell, height, length );
-    //console.log( currentCell.location, nextCell );
-
-    var currentLocation = currentCell.location;
 
     //did we find a valid neighbbor?
     if( nextCell != null ){
+
+      var currentLocation = currentCell.location;
 
       //for that randomly selected neighbor, set some things
 
@@ -58,7 +45,7 @@ function maz( height, length ){
 
 
       //check to make sure its not already in the list of neighbors
-      if(cells[nextCell].visited == 0 && newNeighbor( cells[currentLocation].neighbors, nextCell ) ){
+      if( cells[nextCell].visited == 0 && newNeighbor( cells[currentLocation].neighbors, nextCell ) ){
 
         cells[currentLocation].neighbors.push( nextCell );;
       }
@@ -66,11 +53,7 @@ function maz( height, length ){
       currentCell = cells[nextCell];
       path.push( currentCell );
 
-
     }else{
-
-      //if we couldn't find a valid neighbor, go back one
-      console.log( "back" );
 
       currentCell = path.pop();
     }
@@ -84,19 +67,17 @@ function getRandomNeighbor( cells, currentCell, height, length ){
 
   var neighbors = [];
 
-  //for each current cell, pick a random available neighbor
   var currentLocation = currentCell.location;
 
-  //calculate for a given integer id, what row and column that integer is on:
+  //for each current cell, pick a random available neighbor
   neighbors = getNeighbors( currentLocation, cells, height, length, false);
 
   if( neighbors.length == 0 ){
-
     neighbors = getNeighbors( currentLocation, cells, height, length, true);
   }
 
   var n = getRandomIndex( neighbors );
-  console.log( "for: "+currentCell.location+" : "+n);
+
   return n;
 
 }
@@ -118,153 +99,117 @@ function getRandomIndex( arr ){
   return nextCell;
 }
 
-function cleanGraph( graph ){
-
-  var newGraph = []
-
-  for( var i=0; i<graph.length; i++ ){
-
-    for( var j=0; j<graph[i].length; j++ ){
-
-      newGraph.push(
-        graph[i][j].neighbors
-      )
-
-      graph[i][j] = {
-
-        neighbors : graph[i][j].neighbors
-
-      };
-    }
-  }
-
-  return graph;
-  //return newGraph;
-}
-
-function buildMaze( m, start, last ){
+function buildMaze( m, start, last, height, length ){
   var maze = m;
 
   var table = document.querySelector("#maze");
 
+  var currentRow = null;
+  var tr = null;
+
   for( var i=0; i< maze.length; i++ ){
-    var row = maze[i];
 
-    var tr = document.createElement( "tr" );
-
-    for( var j=0; j<row.length; j++ ){
-
-      //create a square
-      var td = document.createElement("td");
-
-      if( i == start[0] && j == start[1] ){
-        td.style.backgroundColor = "#e6c6c6";
-
+    if( getY( i, length ) != currentRow ){
+      if( tr ){
+        table.appendChild( tr );
       }
 
-      if( i == last[0] && j == last[1] ){
-        td.style.backgroundColor = "#b2d5ff";
-      }
+      var tr = document.createElement( "tr" );
 
-      //apply some styles:
-      td.style.borderTop = "1px solid #000";
-      td.style.borderBottom = "1px solid #000";
-      td.style.borderLeft = "1px solid #000";
-      td.style.borderRight = "1px solid #000";
-
-      //if theres a neighbor dont make the border
-      for( var k=0; k<row[j].neighbors.length; k++ ){
-
-        var neighbor = row[j].neighbors[k]; //row[j].neighbors[k]
-
-        if( neighbor[0] < i ){ //its above
-          td.style.borderTop = "none";
-
-        }else if( neighbor[0] > i ){ //its below
-          td.style.borderBottom = "none";
-
-
-        }//its on the same line
-
-        if( neighbor[1] < j ){ //its ito the left
-          td.style.borderLeft = "none";
-
-        }else if( neighbor[1] > j ){ //its to the right
-
-          td.style.borderRight = "none";
-
-
-        }//its on the same line
-
-      }
-
-      if( i > 0 ){ // not on the top row
-
-        //check this neighbor to see if we are neighbors
-        var n = maze[i - 1][j].neighbors;
-
-        if( hasMe( n, i, j ) ){
-          td.style.borderTop = "none";
-        }
-
-      }
-
-      if( j > 0 ){ // not on the far left
-        var n = maze[i][j - 1].neighbors;
-
-        if( hasMe( n, i, j ) ){
-          td.style.borderLeft = "none";
-        }
-
-      }
-
-      if( i < maze.length - 1 ){ // not on the bottom
-
-        var n = maze[i + 1][j].neighbors;
-
-        if( hasMe( n, i, j ) ){
-          td.style.borderBottom = "none";
-        }
-
-      }
-
-      if( j < row.length - 1 ){ // not on the far right
-
-        var n = maze[i][j + 1].neighbors;
-
-        if( hasMe( n, i, j ) ){
-          td.style.borderRight = "none";
-        }
-      }
-
-      td.id = "node-" + i + '-' + j;
-
-      tr.appendChild( td );
+      currentRow = getY( i, length );
 
     }
 
-    table.appendChild( tr );
-  }
+    //create a square
+    var td = document.createElement("td");
 
-}
-
-function hasMe( neighbors, height, length ){
-  for( var i=0; i< neighbors.length; i++ ){
-    if( neighbors[i][0] == height && neighbors[i][1] == length ){
-      return true;
+    if( i == start ){
+      td.style.backgroundColor = "#e6c6c6";
     }
+
+    if( i == last ){
+      td.style.backgroundColor = "#b2d5ff";
+    }
+
+    //apply some styles:
+    td.style.borderTop = "1px solid #000";
+    td.style.borderBottom = "1px solid #000";
+    td.style.borderLeft = "1px solid #000";
+    td.style.borderRight = "1px solid #000";
+
+    //if theres a neighbor dont make the border
+    for( var k=0; k<maze[i].neighbors.length; k++ ){
+
+      var neighbor = maze[i].neighbors[k];
+
+      var direction = getDirection( i, neighbor, length );
+
+      switch( direction ){
+        case "right":
+          td.style.borderRight = "none";
+          break;
+
+        case "down":
+          td.style.borderBottom = "none";
+          break;
+
+        case "left":
+          td.style.borderLeft = "none";
+          break;
+
+        case "up":
+          td.style.borderTop = "none";
+          break;
+
+      }
+
+    }
+
+    //brute force check each other cell to see if this cell is in the neighbor array
+    //
+    for( var m=0; m<maze.length; m++ ){
+
+      var neighbors = maze[m].neighbors;
+
+      for( var p=0; p<neighbors.length; p++ ){
+
+        //we found our current node, its a neighbor of something else
+        if( neighbors[p] === i ){
+
+          //get the maze[m] nodes direction
+          var direction = getDirection( i, m, length );
+
+          switch( direction ){
+            case "right":
+              td.style.borderRight = "none";
+              break;
+
+            case "down":
+              td.style.borderBottom = "none";
+              break;
+
+            case "left":
+              td.style.borderLeft = "none";
+              break;
+
+            case "up":
+              td.style.borderTop = "none";
+              break;
+
+          }
+        }
+      }
+    }
+
+    td.id = "node-" + i;
+
+    tr.appendChild( td );
+
+
   }
 
-  return false;
-}
+  table.appendChild( tr );
 
-function hasIndexes( arr, i, j ){
-  if( arr[i] && arr[i][j] ){
-
-    return true;
-  }
-
-  return false;
 }
 
 function newNeighbor( neighbors, id ){
@@ -287,7 +232,7 @@ function displayPath( path ){
     setTimeout(function(i) {
       return function() {
 
-        var id = "node-" + path[i][0] + "-" + path[i][1];
+        var id = "node-" + path[i];
 
         var td = document.querySelector('#'+id);
 
@@ -312,11 +257,52 @@ function timer(){
   };
 }
 
+function getY( id, length ){
+
+  return Math.floor( id / length );
+}
+
+function getX( id, length ){
+
+  return id % length;
+}
+
+function getDirection( id, neighbor, length ){
+
+  var x = getX( id, length );
+  var y = getY( id, length );
+
+  var nx = getX( neighbor, length );
+  var ny = getY( neighbor, length );
+
+  if( nx > x ){
+
+    return "right";
+  }
+
+  if( ny > y ){
+
+    return "down";
+  }
+
+  if( nx < x ){
+
+    return "left";
+  }
+
+  if( ny < y ){
+
+    return "up";
+  }
+
+  return null;
+}
+
 function getIndex( id, direction, height, length ){
 
-  var y = Math.floor( id / length );
+  var y = getY( id, length );
 
-  var x = id % length;
+  var x = getX( id, length );
 
   switch( direction ){
 
@@ -377,11 +363,19 @@ function getNeighbors( id, cells, height, length, all_neighbors ){
     }
 
     var index = getIndex( id, directions[i], height, length );
-    //if( index < 0 ) index = 0;
-    var cell = cells[ index ];
-    if( cell === undefined ) debugger;
 
-    if( all_neighbors || cell.visited === 0 ){
+    var cell = cells[ index ];
+
+    var cyclical = false;
+
+    for( var j=0; j < cell.neighbors.length; j++ ){
+
+      if( cell.neighbors[j] == id ){
+        cyclical = true;
+      }
+    }
+
+    if( ( all_neighbors || cell.visited === 0 ) && cyclical == false ){
 
       neighbors.push( index );
     }
