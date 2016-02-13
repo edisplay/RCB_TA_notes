@@ -1,7 +1,51 @@
+html, body{
+  height:100%;
+}
+
 body{
-  background-image: url(http://zabbyallen.com/user/pages/01.blog/freebie-friday-90s-inspired-backgrounds/pinkie-background.jpg);
+  background-image: url(../img/tacky.jpg);
+  text-align: center;
+
 }
 
 #wrapper{
+  padding: 5% 0;
   background-color: #FFF17A;
+  width:960px;
+  margin:10% auto;
+  box-sizing: border-box;
+  height: 70%;
+}
+
+button{
+  display:block;
+  width:400px;
+  height:100px;
+  margin: 0 auto;
+}
+
+
+h1{
+  font-family: 'Geo', sans-serif;
+  font-size: 96px;
+  margin-bottom: 50px;
+  font-weight: bold;
+  color:blue;
+}
+
+h2{
+  font-size: 35px;
+  margin-bottom: 25px;
+}
+
+button{
+  border:none;
+  cursor: pointer;
+  background:transparent;
+  font-size: 42px;;
+}
+
+
+button:hover {
+  background: pink;
 }
