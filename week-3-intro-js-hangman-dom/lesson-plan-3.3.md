@@ -200,8 +200,8 @@ var joanOfArcInfoValues = ['Jehanne la Pucelle', 'Domremy, a village in northeas
 var joan = {
 	'Real Name': 'Jehanne la Pucelle',
 	'Grew Up Where': 'Domremy, a village in northeastern France',
-	'known for': 'Peasant girl, daughter of a farmer, who rose to become Commander of the French army. She led the charge against England. Strategized brilliant military strategies.',
-	'scars': 'Took an arrow to the shoulder and a crossbow bolt to the thigh while trying to liberate Paris.',
+	'known for': 'Peasant girl, daughter of a farmer, who rose to become Commander of the French army. She led the charge against England. Spearheaded brilliant military strategies.',
+	'scars': 'Took an arrow to the shoulder and a crossbow bolt to the thigh while liberating Paris.',
 	'symbolism': 'stands for French unity and nationalism' 
 };
 ```
@@ -241,7 +241,7 @@ joan['Real Name']
 
 1. explain every line of the below object
 2. DO NOT TOUCH THE INSIDE of the owens object for the next steps.
-1. Outside the owens object, call the injuredStopLifting key and change doYouLift to false.
+1. Outside the owens object, call the stopLifting key and change doYouLift to false.
 2. Outside the owens object, call the upProteinIntake key multiple times and up owens's protein intake to 245 and alert gramsOfproteinIntake
 3. Outside the owens object, call the sayAllCatchPhrases key to get owens to say all his catch phrases
 4. owens sent you a greeting card. owens has lost his status as a bro. Outside the owens object, Change owens's bro key to false. Alert the value of the bro key to the screen.
@@ -264,7 +264,7 @@ var owens = {
 	upProteinIntake : function(){
 		this.gramsOfproteinIntake++;
 	},
-	injuredStopLifting : function(){
+	stopLifting : function(){
 		this.doYouLift = false;
 	}
 }
@@ -276,7 +276,7 @@ var owens = {
 
 * notice the debugger in the object below.
 
-* *run this code in console so that the debugger stops in the injuredStopLifting function and show how `this` is actually the owens object*
+* *run this code in console so that the debugger stops in the stopLifting function and show how `this` is actually the owens object*
 
 ```
 var owens = {
@@ -296,7 +296,7 @@ var owens = {
 	upProteinIntake : function(){
 		this.gramsOfproteinIntake++;
 	},
-	injuredStopLifting : function(){
+	stopLifting : function(){
 		debugger;
 		this.doYouLift = false;
 	}
@@ -349,7 +349,7 @@ var owens = {
       	upProteinIntake : function(){
       		this.gramsOfproteinIntake++;
       	},
-      	injuredStopLifting : function(){
+      	stopLifting : function(){
       		this.doYouLift = false;
       	}
       }
@@ -376,7 +376,7 @@ var owens = {
       	        alert(owens.gramsOfproteinIntake);
       	        break;
       	    case 's':
-      	        owens.injuredStopLifting();
+      	        owens.stopLifting();
       	        alert(owens.doYouLift);
       	        break;
       	}
