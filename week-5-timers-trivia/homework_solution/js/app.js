@@ -14,15 +14,11 @@ var countStartNumber = 20;
 
 ///////////////////////////////////////////////////////////////////////////////
 
-$('#start-over').on('click', function() {
-  game.currentQuestion = 0;
-  game.counter = countStartNumber;
-  game.correct = 0;
-  game.incorrect = 0;
-  game.loadQuestion();
+$(document).on('click', '#start-over', function(e) {
+  game.reset();
 });
 
-$(document).on('click', $('.answer-button'), function(e) {
+$(document).on('click', '.answer-button', function(e) {
   game.clicked(e);
 });
 
@@ -168,6 +164,13 @@ var game = {
     } else {
       setTimeout(game.nextQuestion, 3 * 1000);////////////////////////CHANGE ME
     }
+  },
+  reset: function(){
+    this.currentQuestion = 0;
+    this.counter = countStartNumber;
+    this.correct = 0;
+    this.incorrect = 0;
+    this.loadQuestion();
   }
 };
 
