@@ -118,9 +118,21 @@ Solutions:
 
 * *call on another student to go over some of the code*
 
-##### Break for 40 minutes
+### 8. Student Do 20 minutes
 
-# Next I need to finish this
+1. write a function that takes in 3 arguments, adds them together and returns the value
+2. write a function that takes in 3 arguments, multiples them and returns the value
+3. write a function that takes in 3 arguments, checks if they are all strings, and if they are then alert: all are strings!
+4. write a function that takes in 3 arguments, adds them together and returns the value
+5. write a function that takes in 3 arguments, adds them together and returns the value
+
+### 9. Everyone Do 15 minutes
+
+go over it with the class
+
+##### Break for 40 minutes - after break it is now 12:30 pm - 150 minutes have went by - you have 90 minutes left
+
+# Instructor do
 - objects
 	- scope
 	- game where you use an object to organize your code
