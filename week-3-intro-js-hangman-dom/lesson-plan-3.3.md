@@ -3,7 +3,7 @@
 * students will use use objects differently than the way they use arrays
 * students will use functions to write DRY code
 
-### 1. Partners do (15 minutes)
+### 1. Partners do (10 minutes)
 
 Part One
 1. Explain the below code to your partner
@@ -41,7 +41,7 @@ for(var i=0; i < favTVshows.length; i++){
 
 ```
 
-### 2. Everyone do (15 minutes)
+### 2. Everyone do (10 minutes)
 
 * *go over it with the class - call on people*
 
@@ -61,16 +61,16 @@ Solutions:
 
 		Answer: otherwise we would skip alerting the first value of the array
 
-### 2. Instructor do (5 minutes)
+### 3. Instructor do (5 minutes)
 
 * *demo 3.3-in-class-exercises/demo-1.html*
 
 * *then put up the code on the screen* 
 
-### 3. Partners do (5 minutes)
+### 4. Partners do (5 minutes)
 * *ask the class to discuss with their partners what's wrong with the above code*
 
-### 4. Everyone Do (5 minutes)
+### 5. Everyone Do (5 minutes)
 
 * *call on students until you get the answer you want*
 
@@ -84,7 +84,7 @@ Solutions:
 
 > and we do that with functions
 
-### 5. Instructor Do (20 minutes)
+### 6. Instructor Do (20 minutes)
 
 * *show the code in 3.3-in-class-exercises/demo-2.html*
 
@@ -108,22 +108,22 @@ Solutions:
 
 > you're supposed to get it done, and then if you spot redundancies then you use functions to make your code DRY - don't repeat yourself.
 
-### 6. Partners Do 5 minutes
+### 7. Partners Do 5 minutes
 
 * *keep both files open from the previous exercise on the board*
 
 > explain the code in both files on the board to your partners - go you have 5 minutes
 
 
-### 7. Everyone Do 5 minutes
+### 8. Everyone Do 5 minutes
 
 * *call on a student to go over some of the code*
 
 * *call on another student to go over some of the code*
 
-* *call on another student to go over some of the code*
+* *call on another student to go over why the function code is better than the redundant code*
 
-### 8. Student Do 20 minutes
+### 9. Student Do 20 minutes
 
 1. write a function that takes in 3 arguments, adds them together and returns the value
 2. write a function that takes in 3 arguments, multiples them and returns the value
@@ -131,13 +131,13 @@ Solutions:
 4. write a function that takes in 3 arguments, adds them together and returns the value
 5. write a function that takes in 3 arguments, adds them together and returns the value
 
-### 9. Everyone Do 15 minutes
+### 10. Everyone Do 15 minutes
 
 go over it with the class
 
-##### Break for 40 minutes - after break it is now 12:30 pm - 150 minutes have went by - you have 90 minutes left
+##### Break for 40 minutes - after break it is now 12:20 pm - 140 minutes have went by - you have 100 minutes left
 
-### 10. Instructor do 10 minutes
+### 11. Instructor do 10 minutes
 
 Intro to data structures in JS (when to use an array and when to use an object)
 
@@ -160,19 +160,19 @@ for(var i = 0; i < nums.length; i++){
 
 ```
 
-### 11. Partners do 5 minutes
+### 12. Partners do 5 minutes
 
 * *throw the previous code on the board*
 
 > explain the above code to your partner and why the array is being used affectively
 
-### 12. Everyone do 5 minutes
+### 13. Everyone do 5 minutes
 
 * *call on a student to explain the code above*
 
 * *call on a student to explain why the array is being used affectively*
 
-### 13. Instructor Do 5 minutes
+### 14. Instructor Do 5 minutes
 
 > but what about with this example where we describe joanOfArc and how awesome she is.
 
@@ -184,7 +184,7 @@ var joanOfArcInfoParts = ['Real Name', 'Grew Up Where', 'known for', 'scars', 's
 var joanOfArcInfoValues = ['Jehanne la Pucelle', 'Domremy, a village in northeastern France', 'Peasant girl, daughter of a farmer, who rose to become Commander of the French army. She led the charge against England. Strategized brilliant military strategies.', 'Took an arrow to the shoulder and a crossbow bolt to the thigh while trying to liberate Paris.', 'stands for French unity and nationalism'];
 ```
 
-### 14. Partners Do 5 minutes
+### 15. Partners Do 5 minutes
 
 > How the hell do I relate these two arrays together??????
 
@@ -192,7 +192,7 @@ var joanOfArcInfoValues = ['Jehanne la Pucelle', 'Domremy, a village in northeas
 
 * *point to the parts of the arrays you want to relate together.*
 
-### 15. Instructor Do 15 minutes
+### 16. Instructor Do 15 minutes
 
 > Trick question - even if you guys figured out a way to relate both arrays together, you should not do that. And I will go over how to do it. But first, i'll show you the better way. The way it's supposed to be!
 
@@ -232,7 +232,10 @@ joanOfArcInfoValues[joanOfArcInfoParts.indexOf('Real Name')]
 joan['Real Name']
 ```
 
-### 16. Partners Do 15 minutes
+##### 185 minutes have gone by - it is now 1:05 PM - you have 55 minutes left
+
+
+### 17. Partners Do 15 minutes
 
 * *slack this out*
 
@@ -267,7 +270,7 @@ var owens = {
 }
 ```
 
-### 17. Everyone Do 15 minutes
+### 18. Everyone Do 15 minutes
 
 * *go over the previous exercise*
 
@@ -300,7 +303,7 @@ var owens = {
 }
 ```
 
-### 18. Everyone Do (any time that is left over)
+### 19. Everyone Do - 20 minutes
 
 * *slack this out*
 
@@ -350,11 +353,9 @@ var owens = {
       		this.doYouLift = false;
       	}
       }
-      
-      document.onkeyup = function(event) {
-      	var letter = String.fromCharCode(event.keyCode).toLowerCase();
 
-      	switch (letter) {
+      function doItOwens(let){
+      	switch (let) {
       		case 'n':
       		    alert('owens');
       		    break;
@@ -380,10 +381,24 @@ var owens = {
       	        break;
       	}
       }
+      
+      document.onkeyup = function(event) {
+      	var letter = String.fromCharCode(event.keyCode).toLowerCase();
+      	doItOwens(letter);
+      }
     </script>
 </body>
 </html>
 ```
+
+### 20. Partners Do (5 minutes)
+
+* *slack this out to students*
+
+1. watch the demo for the psychic game 
+	* https://github.com/RutgersCodingBootcamp/All-Classwork-Homework/tree/master/week-3-intro-js-hangman-dom
+
+2. write the pseudo code for the psychic game
 
 # Copyright
 Coding Boot Camp (C) 2015. All Rights Reserved.

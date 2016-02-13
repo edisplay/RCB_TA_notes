@@ -25,7 +25,7 @@ You will be fully capable of doing this homework by the end of Saturday's class.
 3. Push up the above changes to Github (Make sure to `git add .` and `git commit -m "initial site files"` then type `git push origin master` to push your changes to your Github repo.
 4. Choose what game you want to make. The psychic game is easier than making the hangman game.
 
-### Option One: Psychic Game (easier than hangman)
+### Option One: Psychic Game (easier than hangman) - you get a max of 9/10
 
 The Psychic Game
 
@@ -44,14 +44,14 @@ Guesses Left: # of guesses left. This will update
 Your Guesses so far: # of times the user has failed to guess the letter correctly after exhausting all guesses
 
 
-### Option Two: Hangman Game
+### Option Two: Hangman Game - you can get 10/10
 
 0. Watch the demo
 1. choose a theme for your game. 
   * In the example, we used an 80s theme. All the words are famous bands or musicians from the 80s. Please choose whatever theme you'd like.
 3. use key events to get the letter that the user typed
 4. organize your game code inside of an object, except the key events to get the letter that the user typed.
-4. Display the following on the page:
+5. Display the following on the page:
 
 Press any key to get started!
 
@@ -69,9 +69,7 @@ Letters Already Guessed: letters the user has guessed.
 
 5. The game should automatically choose another word and make the user play it.
 
-
-
-##### Bonuses
+##### Hangman Game Bonuses
 
 1. play a sound or song when the user guesses the word correctly - in our case it was a song by the artist
 2. style your game so that it looks like your theme.
