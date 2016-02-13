@@ -132,11 +132,134 @@ go over it with the class
 
 ##### Break for 40 minutes - after break it is now 12:30 pm - 150 minutes have went by - you have 90 minutes left
 
-# Instructor do
+### Instructor do 10 minutes
+
+Intro to data structures in JS (when to use an array and when to use an object)
+
+> arrays are lists. They're good when your code expects to loop over the entire list.
+
+> arrays are bad when you need to get to a specific part of the list 
+
+> this is an example of an array being used well:
+
+```
+var nums = [1, 8, 2, 3, 1, 1, 6, 6, 6];
+
+for(var i = 0; i < nums.length; i++){
+	if (num[i] > 2){
+		console.log('number is greater than 2');
+	}else{
+		console.log('number is not greater than 2');
+	}	
+}
+
+```
+
+### Partners do 5 minutes
+
+* *throw the previous code on the board*
+
+> explain the above code to your partner and why the array is being used affectively
+
+### Everyone do 5 minutes
+
+* *call on a student to explain the code above*
+
+* *call on a student to explain why the array is being used affectively*
+
+### Instructor Do 5 minutes
+
+> but what about with this example where we describe joanOfArc and how awesome she is.
+
+* *throw this up on the board*
+
+```
+var joanOfArcInfoParts = ['Real Name', 'Grew Up Where', 'known for', 'scars', 'symbolism'];
+
+var joanOfArcInfoValues = ['Jehanne la Pucelle', 'Domremy, a village in northeastern France', 'Peasant girl, daughter of a farmer, who rose to become Commander of the French army. She led the charge against England. Strategized brilliant military strategies.', 'Took an arrow to the shoulder and a crossbow bolt to the thigh while trying to liberate Paris.', 'stands for French unity and nationalism'];
+```
+
+### Partners Do 5 minutes
+
+> How the hell do I relate these two arrays together??????
+
+> If I give you 'Grew Up Where', how would I get 'Domremy, a village in northeastern France'? 
+
+* *point to the parts of the arrays you want to relate together.*
+
+### Instructor Do 15 minutes
+
+> Trick question - even if you guys figured out a way to relate both arrays together, you should not do that. And I will go over how to do it. But first, i'll show you the better way. The way it's supposed to be!
+
+```
+var joan = {
+	'Real Name': 'Jehanne la Pucelle',
+	'Grew Up Where': 'Domremy, a village in northeastern France',
+	'known for': 'Peasant girl, daughter of a farmer, who rose to become Commander of the French army. She led the charge against England. Strategized brilliant military strategies.',
+	'scars': 'Took an arrow to the shoulder and a crossbow bolt to the thigh while trying to liberate Paris.',
+	'symbolism': 'stands for French unity and nationalism' 
+};
+```
+
+you do it like this 
+
+joan['Real Name']
+joan['Grew Up Where']
+
+joan.symbolism
+joan.scars
+
+> this won't work
+`joan.Real Name`
+
+> you need to do this, because of the spaces:
+`joan['Real Name']`
+
+> Here's how I'd have to do it with the array:
+
+* *call on 3 students and ask: "how much does this suck compared to object"*
+
+```
+//with an array
+joanOfArcInfoValues[joanOfArcInfoParts.indexOf('Real Name')]
+
+//with an object
+joan['Real Name']
+```
+
+### Partners Do 15 minutes
+
+* *slack this out*
+
+explain line by line what's going on, study the following code, watch how it works with your partners and use break points
+
+```
+var game = {
+	counter : 0,
+	incrementCounter : function(){
+		this.counter++;
+	},
+
+}
+```
+
+##### 215 minutes have gone by including break - you have 25 minutes left
+
+### Instructor Do 5 minutes
+
+* *demonstrate the psychic game in the browser*
+
+### Partners Do 
+write the psuedo code for the psychic game
+
+bonus:
+write the pseudo code for the hangman game
+
+### lesson missing
 - objects
 	- scope
-	- game where you use an object to organize your code
+	- this
 
-- pseudo code for psychic game
 
-- pseudo code for hangman game
+# Copyright
+Coding Boot Camp (C) 2015. All Rights Reserved.
