@@ -1,0 +1,60 @@
+html, body{
+  height:100%;
+}
+
+body{
+  background-image: url(../img/tacky.jpg);
+  text-align: center;
+
+}
+
+#wrapper{
+  padding: 5% 0;
+  background-color: #FFF17A;
+  width:960px;
+  margin:10% auto;
+  box-sizing: border-box;
+}
+
+button{
+  display:block;
+  width:400px;
+  height:100px;
+  margin: 0 auto;
+  border:none;
+  cursor: pointer;
+  background:transparent;
+  font-size: 42px;;
+}
+
+
+h1{
+  font-family: 'Geo', sans-serif;
+  font-size: 96px;
+  margin-bottom: 50px;
+  font-weight: bold;
+  color:blue;
+}
+
+h2{
+  font-size: 35px;
+  margin-bottom: 25px;
+}
+
+h3{
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+
+#start{
+  margin-top: 25%;
+  border:2px solid blue;
+  background: pink;
+}
+
+
+
+button:hover {
+  border:2px solid blue;
+  background: pink;
+}

@@ -1,11 +1,6 @@
-console.log('Locked and Loaded');
-
-window.onload = function(){
-
-};
 
 var panel = $('#quiz-area');
-var countStartNumber = 20;
+var countStartNumber = 30;
 
 
 ///////////////////////////////////////////////////////////////////////////////
