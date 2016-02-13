@@ -22,6 +22,10 @@ $(document).on('click', '.answer-button', function(e) {
   game.clicked(e);
 });
 
+$(document).on('click', '#start', function(e) {
+  $('#subwrapper').prepend('<h2>Time Remaining: <span id="counter-number">30</span> Seconds</h2>');
+  game.loadQuestion();
+});
 
 ///////////////////////////////////////////////////////////////////////////////
 
@@ -129,7 +133,7 @@ var game = {
     $('#counter-number').html(game.counter);
     panel.append('<h3>Correct Answers: ' + game.correct + '</h3>');
     panel.append('<h3>incorrect Answers: ' + game.incorrect + '</h3>');
-    panel.append('<h2 id="start-over">Start Over?</h2>');
+    panel.append('<button id="start-over">Start Over?</button>');
   },
   clicked: function(e) {
     clearInterval(timer);
@@ -173,5 +177,3 @@ var game = {
     this.loadQuestion();
   }
 };
-
-game.loadQuestion();

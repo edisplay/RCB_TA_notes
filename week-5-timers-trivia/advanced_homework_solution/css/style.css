@@ -22,6 +22,10 @@ button{
   width:400px;
   height:100px;
   margin: 0 auto;
+  border:none;
+  cursor: pointer;
+  background:transparent;
+  font-size: 42px;;
 }
 
 
@@ -38,14 +42,20 @@ h2{
   margin-bottom: 25px;
 }
 
-button{
-  border:none;
-  cursor: pointer;
-  background:transparent;
-  font-size: 42px;;
+h3{
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+
+#start{
+  margin-top: 25%;
+  border:2px solid blue;
+  background: pink;
 }
 
 
+
 button:hover {
+  border:2px solid blue;
   background: pink;
 }
