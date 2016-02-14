@@ -25,6 +25,9 @@
         text-align:center;
         overflow:hidden;
     }
+    .foo{
+      color:#ffdf3d;
+    }
 
 
     </style>
@@ -35,6 +38,7 @@
     <script src="bfs.js"></script>
     <script src="depthfirst.js"></script>
     <script src="app.js"></script>
+    <script src="mazeBuild.js"></script>
     <script>
 
     /*
@@ -45,36 +49,39 @@
      *
      */
 
-    var height = 10;
-    var length = 10;
+    var height = 20;
+    var length = 20;
 
-    var m = maz( height, length  );
+    //var m = graph( height, length  );
+    var m = connectedGraph( height, length  );
+    console.log("made graph");
 
     var start = 0;
     var finish = Math.floor(Math.random()*(height*length));
 
     var ender = timer();
-    var path = solve( m, start, finish );
+    var bfspath = solve( m, start, finish );
     var bfs_time = ender();
 
     var ender = timer();
-    //var path = dfsolve( m, start, finish );
+    var dfspath = dfsolve( m, start, finish );
     var dfs_time = ender();
 
     var tt = document.querySelector('#time');
     tt.innerText = "bfs time: " + bfs_time + " milliseconds | dfs time:" + dfs_time + " milliseconds";
 
 
-//do DOM stuff
-window.onload = function(){
+      //do DOM stuff
+      window.onload = function(){
 
-  buildMaze( m, start, finish, height, length );
+        buildMaze( m, start, finish, height, length );
 
-  setTimeout( function(){
-    displayPath( path );
-  }, 400 );
+        setTimeout( function(){
+          displayPath( bfspath );
+          displayPath( dfspath );
+        }, 400 );
 
-}
+      }
 
     </script>
   </body>

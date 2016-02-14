@@ -1,4 +1,5 @@
-var gg = maz( 10,10);
+//var gg = graph( 30,30);
+var gg = connectedGraph( 5,5);
 var g = formatGraph( gg );
 
 function formatGraph( graph ){
@@ -44,8 +45,8 @@ var force = d3.layout.force()
     .nodes(d3.values(nodes))
     .links(links)
     .size([width, height])
-    .linkDistance(5)
-    .charge(-100)
+    .linkDistance(50)
+    .charge(-1100)
     .on("tick", tick);
 
 var svg = d3.select("body").append("svg")
