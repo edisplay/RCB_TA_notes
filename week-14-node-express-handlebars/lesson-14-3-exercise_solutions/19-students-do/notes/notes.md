@@ -13,9 +13,9 @@
 #### Database setup:
 
 	1. `npm install mysql --save`
-	2. navigate to your db folder
+	2. navigate to the db folder in this app
 	3. get into mysql
-		may be `mysql`
+		maybe it's `mysql`
 		or `mysql -u root -p`
 	4. run `source schema.sql`
 	5. run `source seeds.sql`
