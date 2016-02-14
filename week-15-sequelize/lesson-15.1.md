@@ -29,15 +29,10 @@ Sequelize Introduction
 
 --------- --------- ---------
 
-# INSTRUCTOR MUST COVER 3 - 12 !!!
-
-PART ONE:
----------
-
 ### 1. Instructor Explain (15 minutes)
-* What is authentication?
-* What is OAuth?
-* What is the purpose of OAuth?
+* What is an ORM?
+* Purpose of an ORM?
+* How an ORM makes your life substantially easier.
 
 ### 2. Instructor Do (15 minutes)
 ```
@@ -67,11 +62,11 @@ Use Sequelize
 
 ### 6. Instructor Do (20 minutes)
 ```
-Passport.js authentication with mysql
+Make a data model with relationships
 ```
 
 ### 7. Student Do (25 minutes)
-* Passport.js authentication
+* Make a data model with relationships
 
 ** Instructor type out partial solution every 10 minutes **
 

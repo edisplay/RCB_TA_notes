@@ -2,60 +2,37 @@
 
 ### Introduction
 
-* Create a login and registration system
 * You will use `Handlebars` to generate HTML
 * You will use `Sequelize` to create data models for the database storage
 * You will use `Express` for routing
 * You will use `Bootstrap` (or `Materialize`) as a frontend CSS framework
-* You will use `Passport` for authentication
 * You will use jQuery for front end form validation
 
 ### User story
 
-Rutgers Virtual Flyer. There's a lot to do / eat / see / play at Rutgers. We
-need an effective way to categorize it all! Your app should have a user
-creation / login system. It should have a way to add places for everyone to see.
-Only authenticated users can leave reviews and ratings. There should be a basic
-filter that lets users narrow down what they want to search for (only 5 star places,
-  restaurants, etc).
-
-### Remember
-
-* This will span two weeks and will be group work.
-* Everyone must contribute equally.
-* Design matters
-* Communicate, communicate, communicate, communicate!
+My Class App. You will be creating a system for the class. It should have user
+registration and a user login. There should be a registration page, a login page,
+a `students` page, an `instructors` page. Students have one instructor and up to
+2 TA's. Instructors have many students. An Instructor can be either a TA or a Teacher.
 
 ### Steps
+
 #### User Interface
-* You should have one layout that has all of the general components.
-* Make it responsive.
-* There should be at least 4 views (but of course, you're free to do more):
-  * Home
-  * Login / Register
-  * Place Detail
-  * Places Listing
+Design a user interface that is pleasing to the eye. CSS Frameworks are your friend.
 
-#### Data Modeling
-* You will blow away your database more times than you think. Be cool with that.
-* Think about relationships.
-* Pay strict attention to data types!
-* Think about sessions sincerely.
+#### Sessions
+Store the session data in a MySQL Database
 
-#### User Authentication
-* This should be an email address / password authentication system
-* You should not be able to register with the an email address if it exists in our system
-* Have password rules (at least 5 characters, etc)
+#### Data Models
+Your data models will change quickly, so you will have to use migrations to keep up.
 
 #### Routing / Templating
-* Most of what you do will be redone. That's okay!
-* Typically each route will have it's own template, but not always
-* Think about the routes that will be parameterized
+There should be a layout that is consistent across all pages. And (roughly speaking),
+a template will match with a route.
 
-#### Working in Groups
-* Use something to assign work! Github Issues. Trello. Something!
-* Talk, text, slack, email. Communicate.
-* Reach out for help when you are stuck. Ask your teammates.
+# BONUS
+
+	Use Passport.js for authentication
 
 # Copyright
 Coding Boot Camp (C) 2016. All Rights Reserved.
