@@ -18,19 +18,11 @@ look at this file at the root of the repository:
 	* Create and consume RESTful API’s utilizing JSON as a data format
 	* Write clean code with proper variable names, indentation according to industry best practices
 
-# Objectives (Slack out to students, have unique students read each one and Instructor makes a comment after each one being read)
+# Objectives
 
-1. slack out the objectives to the students, and call on random students to read them outloud. *Make a comment about each objective after a person reads it.*
+* *slack out the objectives to the students, and call on random students to read each of them outloud.* 
 
-1. in class repo for your section, make a new folder for this week and day.
-
-1. open up that folder in Sublime Text
-
-1. make an objectives.txt file in that folder
-
-1. copy these objectives into that objectives.txt file and save it, commit it, push it up.
-
-1. keep the file open while the students are reading the objectives 
+* *Make a BRIEF comment about each objective after a person reads it.*
 
 	* Students will create a Node App with M.V.C similar to Rails
 	* Students will create a simple O.R.M for MySQL database
@@ -39,8 +31,6 @@ look at this file at the root of the repository:
 # Theme: 
 Node Express Handlebars M.V.C.
 
---------- --------- ---------
-
 # INSTRUCTOR MUST COVER ALL!!!
 
 ```
@@ -48,24 +38,25 @@ ALL or they won't be able to do the homework.
 ```
 
 ### 1. Students do (15 minutes)
-Review Exercise: `feel state`
 
-* *Instructor demos. Look in lesson-14.3.exercise_solutions folder.*
-* *Slack this out and commit this in your in class repo*
+* *demo the app in lesson-14-3-exercise_solutions/1-student-do folder.*
+
+* *Slack this out*
 
 * Create a Node Express MySQL Handlebars App.
 	* The app will render all the data from the database to the HTML using handlebars.
 	* The app will have 3 buttons 'too hot', 'too cold', and 'just right' 
-	* When the any of the button is clicked, it will save the state of the room temp in the MySQL database with a timestamp and display on the page. 
+	* When any of the buttons are clicked, the app will save the state of the room temperature in the MySQL database with a timestamp and display all of the records on the page. 
 
 ### 2. Everyone do (10 minutes)
+* *Bring up the files inside of lesson-14-3-exercise_solutions/1-student-do*
 * *Call on a weaker student to go over the previous exercise*
 
 ### 3. Instructor do (20 minutes)
 * *Demo the app infront of students*
 * *Setup the MySQL database with data schema file from exercise_solutions folder*
 
-* *Instructor demos. Look in lesson-14.3.exercise_solutions folder.*
+* *Instructor demos. Look in lesson-14-3-exercise_solutions folder.*
 
 * No Express, No handlebars, only MySQL and Node Instructor demo ORM just using Node console app, show how to use this with mulitple tables.
 	* The O.R.M functions once run when Node serer is lanuched will use MySQL commands with the user inputs
@@ -73,7 +64,7 @@ Review Exercise: `feel state`
 		* Find an animal by the name of the animal
 		* Find the buyer with the most animal
 
-* Explain why writting O.R.M are helpful, calling a function with inputs as opppose to written out each statement.
+* Explain why writing O.R.M are helpful, calling a function with inputs as opppose to written out each statement.
 
 ### 4. Partners do (5 minutes)
 * *Have student talk to each other about the pros of O.R.M* 
@@ -81,7 +72,7 @@ Review Exercise: `feel state`
 ### 5. Students do (15 minutes)
 Student Exercise: holiday party ORM
 
-* *Look in lesson-14.3.exercise_solutions folder for solutions.*
+* *Look in lesson-14-3-exercise_solutions folder for solutions.*
 
 * *Slack this out and commit this in your in class repo*
 
@@ -119,7 +110,7 @@ Create an Node MySQL app with an O.R.M functions that executes once the server i
 ###### 75 minutes have passed
 
 ### 7. Instructor do: ( 10 minutes ) 
-* *Instructor demo the app. Look in lesson-14.3.exercise_solutions folder.*
+* *Instructor demo the app. Look in lesson-14-3-exercise_solutions folder.*
 * *Demo the app infront of students*
 Talk about why Node asynchronicity is an issue.
 
@@ -131,7 +122,7 @@ Talk about why Node asynchronicity is an issue.
 
 ### 10. Instructor do: ( 15 minutes ) 
 * *Review callbacks*
-* *Instructor demo the functions. Look in lesson-14.3.exercise_solutions folder.*
+* *Instructor demo the functions. Look in lesson-14-3-exercise_solutions folder.*
 
 Explain what each of the functions in the exercise is doing.
 
@@ -163,7 +154,7 @@ M.V.C app.
 * *Setup the MySQL database with data schema file from exercise_solutions folder*
 * *Open the mvc_design app in front of students and talk about each part*
 
-* *Look in lesson-14.3.exercise_solutions folder.*
+* *Look in lesson-14-3-exercise_solutions folder.*
 * *Demo the app infront of students*
 
 Explain the use of {{#if}} in handlebars.
@@ -178,7 +169,7 @@ Explain the use of {{#if}} in handlebars.
 Student Exercise: Super Clubs Gym.
 
 * *Demo the app infront of students*
-* *Look in lesson-14.3.exercise_solutions folder.*
+* *Look in lesson-14-3-exercise_solutions folder.*
 
 * *Slack the followin instructions to student for them to do this exercise*
 

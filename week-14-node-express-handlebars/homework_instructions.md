@@ -61,7 +61,11 @@ DB Setup:
 
 	2. Create the `schema.sql` file
 
-	3. Code out the schema for your database
+	3. Put the SQL that you used to create your database
+
+	4. Create a `seeds.sql` file
+
+	5. Put insert sql queries inside of the `seeds.sql` file to populate your tables with data
 
 	4. Launch MySQL, create the database and table
 
