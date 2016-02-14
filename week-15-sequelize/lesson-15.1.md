@@ -35,13 +35,11 @@ Sequelize Introduction
 * How an ORM makes your life substantially easier.
 
 ### 2. Instructor Do (15 minutes)
-```
-mySQL based authentication
-```
+See https://github.com/RutgersCodingBootcamp/All-Lesson-Plans/tree/master/week-15-sequelize/exercise1-solution
 
 ### 3. Student Do (30 minutes)
 * Create an `express` / `handlebars` / `node.js` / `mysql` app with 3 views
-  * Register
+  * Register - don't let someone with the same email register twice
   * Login
   * Secret Page
 * Only an authenticated user can see the secret page (remember sessions and
@@ -52,6 +50,7 @@ mySQL based authentication
 ### 4. Instructor Do (30 minutes)
 ```
 Use Sequelize
+Use hashing
 ```
 
 -- 15 minute break -- (total including break: 105 minutes)
