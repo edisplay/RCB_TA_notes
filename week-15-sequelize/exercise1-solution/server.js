@@ -13,6 +13,8 @@ var connection = mysql.createConnection({
 
 var PORT = process.env.NODE_ENV || 3000;
 
+var app = express();
+
 app.engine('handlebars', expressHandlebars({
   defaultLayout: 'main'
 }));
@@ -31,8 +33,9 @@ connection.connect(function(err) {
 });
 
 app.get('/', function(req, res) {
-  var msg = req.query.msg;
-  res.render('home');
+  res.render('home', {
+    msg: req.query.msg
+  });
 });
 
 app.post('/register', function(req, res) {
@@ -78,4 +81,9 @@ app.post('/login', function(req, res) {
 
 app.get('/success', function(req, res) {
   res.send('SUCCESS PAGE!');
+});
+
+
+app.listen(PORT, function() {
+  console.log("Listening on port %s", PORT);
 });
