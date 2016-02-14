@@ -40,18 +40,17 @@ See https://github.com/RutgersCodingBootcamp/All-Lesson-Plans/tree/master/week-1
 ### 3. Student Do (30 minutes)
 * Create an `express` / `handlebars` / `node.js` / `mysql` app with 3 views
   * Register - don't let someone with the same email register twice
+    * The registration should have a first name and last name
   * Login
   * Secret Page
+    * On the secret page, display the first and last name of the user
 * Only an authenticated user can see the secret page (remember sessions and
   middleware?)
 
 ** Instructor type out partial solution every 10 minutes **
 
 ### 4. Instructor Do (30 minutes)
-```
-Use Sequelize
-Use hashing
-```
+See https://github.com/RutgersCodingBootcamp/All-Lesson-Plans/tree/master/week-15-sequelize/exercise2-solution
 
 -- 15 minute break -- (total including break: 105 minutes)
 
@@ -65,7 +64,7 @@ Make a data model with relationships
 ```
 
 ### 7. Student Do (25 minutes)
-* Make a data model with relationships
+
 
 ** Instructor type out partial solution every 10 minutes **
 
