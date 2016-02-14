@@ -59,12 +59,11 @@ See https://github.com/RutgersCodingBootcamp/All-Lesson-Plans/tree/master/week-1
 * Change your app to use Sequelize models
 
 ### 6. Instructor Do (20 minutes)
-```
-Make a data model with relationships
-```
+See https://github.com/RutgersCodingBootcamp/All-Lesson-Plans/tree/master/week-15-sequelize/exercise3-solution
 
 ### 7. Student Do (25 minutes)
-
+* Create an app that lets you create persons using Sequelize
+* Add a form that lets you add multiple Alter Ego's to the person
 
 ** Instructor type out partial solution every 10 minutes **
 

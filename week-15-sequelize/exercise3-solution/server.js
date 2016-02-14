@@ -6,21 +6,15 @@ var Sequelize = require('sequelize');
 
 var sequelize = new Sequelize('rcb_sequelize_user_relationships_db', 'root');
 
-var User = sequelize.define('User', {
-  email: {
-    type: Sequelize.STRING,
-    unique: true
-  },
-  password: Sequelize.STRING,
+var Person = sequelize.define('Person', {
+  name: Sequelize.STRING
 });
 
-var User = sequelize.define('User', {
-  email: {
-    type: Sequelize.STRING,
-    unique: true
-  },
-  password: Sequelize.STRING,
+var AlterEgo = sequelize.define('AlterEgo', {
+  name: Sequelize.STRING
 });
+
+Person.hasMany(AlterEgo);
 
 var PORT = process.env.NODE_ENV || 3000;
 
@@ -36,8 +30,15 @@ app.use(bodyParser.urlencoded({
 }));
 
 app.get('/', function(req, res) {
-  var msg = req.query.msg;
-  res.render('home');
+  Person.findAll({
+    include: [{
+      model: AlterEgo
+    }]
+  }).then(function(results) {
+    res.render('home', {
+      persons: results
+    });
+  });
 });
 
 app.post('/register', function(req, res) {
