@@ -1,8 +1,9 @@
-#Week of 15 Login with Authentication
+#Week of 16 Rutgers Virtual Flyers
 
 ### Introduction
 
-* Create a login and registration system
+* Work in groups of 4
+* The goal is to create a fully functioning full stack app that shows your Rutgers pride
 * You will use `Handlebars` to generate HTML
 * You will use `Sequelize` to create data models for the database storage
 * You will use `Express` for routing
