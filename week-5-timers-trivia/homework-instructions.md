@@ -7,7 +7,7 @@
 
 * You will use Javascript and Jquery to create the logic of the game.
 
-* see demonstration of how it works *
+* _See demonstration_
 
 ### Remember
 
