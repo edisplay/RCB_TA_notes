@@ -12,11 +12,15 @@ body{
   margin:2.5% auto;
   background-color: #FFF17A;
   width:960px;
-  min-height: 90%;
+  height: 90%;
   box-sizing: border-box;
-  padding:5% 0;
+  padding:10% 0;
 }
 
+#subwrapper{
+  position: relative;
+  top:20%;
+}
 button{
   display:block;
   width:50%;
@@ -35,7 +39,6 @@ img{
 h1{
   font-family: 'Geo', sans-serif;
   font-size: 6.5em;
-  margin-bottom: 50px;
   font-weight: bold;
   color:blue;
 }
