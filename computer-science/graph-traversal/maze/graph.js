@@ -1,31 +1,5 @@
-//var gg = graph( 30,30);
-var gg = connectedGraph( 5,5);
+var gg = connectedGraph( 10,10);
 var g = formatGraph( gg );
-
-function formatGraph( graph ){
-
-  var ret = [];
-
-  for( var i = 0; i<graph.length; i++ ){
-    if( graph[i].neighbors.length > 0 ){
-
-      for(var j=0; j<graph[i].neighbors.length; j++ ){
-
-        ret.push( {
-          source : graph[i].location,
-          target : graph[i].neighbors[j]
-        })
-
-      }
-
-    }
-
-  }
-
-  return ret;
-}
-
-
 var links = g;
 
 var nodes = {};
@@ -38,15 +12,15 @@ links.forEach(function(link) {
         (nodes[link.target] = {name: link.target});
 });
 
-var width = 2000,
-    height = 1200;
+var width = 3000,
+    height = 2200;
 
 var force = d3.layout.force()
     .nodes(d3.values(nodes))
     .links(links)
     .size([width, height])
-    .linkDistance(50)
-    .charge(-1100)
+    .linkDistance(8)
+    .charge(-800)
     .on("tick", tick);
 
 var svg = d3.select("body").append("svg")
@@ -111,6 +85,29 @@ function tick() {
     });
 }
 
+function formatGraph( graph ){
+
+  var ret = [];
+
+  for( var i = 0; i<graph.length; i++ ){
+    if( graph[i].length > 0 ){
+
+      for(var j=0; j<graph[i].length; j++ ){
+
+        ret.push( {
+          source : i,
+          target : graph[i][j]
+        })
+
+      }
+
+    }
+
+  }
+
+  return ret;
+}
+
 /////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////
@@ -129,7 +126,7 @@ function tick() {
 /////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////
 
-var n = 300;
+var n = 900;
 
 force.start();
 for (var i = n * n; i > 0; --i) force.tick();

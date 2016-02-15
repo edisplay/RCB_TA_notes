@@ -25,38 +25,34 @@ function connectedGraph( height, length ){
   //start the path here
   path.push( currentCell );
 
-  while( total_visited < total_cells * 3 ){
+  var rounds = 0;
+  // ounds is a hack, should be cells visited like below, but its a different ratio...
+  while( rounds < 1000 ){
+
+    rounds++;
 
     var currentLocation = currentCell.location;
 
-    //var neighbors = getNeighbors( currentLocation, cells, height, length, false);
-    var neighbors = getNeighbors( currentLocation, cells, height, length, true);
-
-    //did we find a valid neighbbor?
-    if( neighbors.length > 0 ){
+    var neighbors = getNeighbors( currentLocation, cells, height, length, true, ["down","left","right"]);
 
       for( var i=0; i<neighbors.length; i++ ){
 
         var nextCell = neighbors[i];
 
         cells[nextCell].visited = 1;
-        total_visited++;
 
         if( newNeighbor( cells[currentLocation].neighbors, nextCell ) ){
 
-          cells[currentLocation].neighbors.push( nextCell );;
-
+          cells[currentLocation].neighbors.push( nextCell );
         }
+        total_visited++;
+
+        currentCell = cells[nextCell];
+        path.push( currentCell );
       }
-
-      currentCell = cells[nextCell];
-      path.push( currentCell );
-
-    }else{
-      currentCell = path.pop();
-    }
-
   }
+
+  console.log( total_visited, total_cells );
 
   return cleanGraph( cells );
 }
@@ -283,10 +279,13 @@ function isEdge( id, direction, height, length ){
   return false;
 }
 
-function getNeighbors( id, cells, height, length, all_neighbors ){
+function getNeighbors( id, cells, height, length, all_neighbors, directions ){
 
   var neighbors = [];
-  var directions = ['up', 'down', 'left', 'right'];
+  if( directions === undefined ){
+
+    var directions = ['up', 'down', 'left', 'right'];
+  }
 
   for( var i=0; i<directions.length; i++ ){
 
