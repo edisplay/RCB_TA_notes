@@ -14,37 +14,39 @@ function dfsolve( graph, start, finish ){
       });
   }
 
-  stack.push( nodes[ start ] );
+  stack.push( start );
 
   while( stack.length > 0 ){
 
     var current = stack.pop();
 
-    if( current.discovered === null ){
+    var current_node = nodes[ current ];
 
-      nodes[ current.location ].discovered = true;
+    if( current_node.discovered === null ){
 
-      var graph_node = graph[ current.location ]
+      nodes[ current ].discovered = true;
+
+      var neighbors = graph[ current ]
 
       //this for loop sees if we are done, for this level
-      for( var i=0; i<graph_node.neighbors.length; i++ ){
+      for( var i=0; i<neighbors.length; i++ ){
 
-        if( graph_node.neighbors[i] === finish ){
+        if( neighbors[i] === finish ){
 
           stack.push( current );
 
-          nodes[ graph_node.neighbors[i] ].parent = current.location;
+          nodes[ neighbors[i] ].parent = current;
 
-          stack.push( nodes[ graph_node.neighbors[i] ] );
+          stack.push( nodes[ neighbors[i] ] );
 
           return getPath( nodes, start, finish );
         }
       }
 
-      for( var i=0; i<graph_node.neighbors.length; i++ ){
-        nodes[ graph_node.neighbors[i] ].parent = current.location;
+      for( var i=0; i<neighbors.length; i++ ){
+        nodes[ neighbors[i] ].parent = current;
 
-        stack.push( nodes[ graph_node.neighbors[i] ] );
+        stack.push( neighbors[i] );
       }
     }
   }
@@ -64,10 +66,20 @@ function getPath( nodes, start, finish ){
   var current = nodes[ finish ].parent;
   path.push( current );
 
-  // this doesnt work for some reason??
-  //while( current[0] !== start[0] && current[1] !== start[1] ){
+var rounds = 0;
+  //while( current !== start ){
+  while( rounds < 1000 ){
+    rounds++;
 
-  while( !( current === start ) ){
+    if( current == start ){
+      break;
+    }
+
+    if( nodes[ current ].parent === undefined ){
+
+
+      break;
+    }
 
     current = nodes[ current ].parent
     path.push( current );
