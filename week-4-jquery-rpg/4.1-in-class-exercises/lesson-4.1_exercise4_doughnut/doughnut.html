@@ -6,7 +6,7 @@
 		<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
 	</head>
 	<body>
-		<div id=""><h1>Doughnuts!</h1></div>
+		<h1>Doughnuts!</h1>
 
 		<div id="donut">
 		  Boston Cream Donuts!!!
@@ -22,7 +22,8 @@
 
 	    <script type="text/javascript">
 
-	      function doughnuts () { 
+	    $( document ).ready(function() {
+	      function doughnuts() { 
 	      	var secretCount = 0;
 
 			$( "#donut" ).click(function() {
@@ -40,8 +41,8 @@
 			});
 
 	      };
-
-	      document.body.onload = doughnuts;
+	      doughnuts();
+		});
 
 	    </script>
 	</body>
