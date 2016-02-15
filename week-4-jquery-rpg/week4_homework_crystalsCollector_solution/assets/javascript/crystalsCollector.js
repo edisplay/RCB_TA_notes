@@ -14,22 +14,22 @@ $(document).ready(function() {
 		return {
 			'red' : {
 				points: Math.floor(Math.random() * 11) + 1,
-				imageUrl: "images/red.png"
+				imageUrl: "assets/images/red.png"
 			},
 			'blue' : {
 				points: Math.floor(Math.random() * 11) + 1,
-				imageUrl: "images/blue.png"
+				imageUrl: "assets/images/blue.png"
 			},
 			'yellow' : {
 				points: Math.floor(Math.random() * 11) + 1,
-				imageUrl: "images/yellow.png"
+				imageUrl: "assets/images/yellow.png"
 			},
 			'green' : {
 				points: Math.floor(Math.random() * 11) + 1,
-				imageUrl: "images/green.png"
+				imageUrl: "assets/images/green.png"
 			}
-		}
-	};
+		};
+	}
 
 	function randomNumGen(){
 		return Math.floor(Math.random() * 100) + 18;
@@ -48,11 +48,11 @@ $(document).ready(function() {
 	function updateDom(didUserWin){
 		$('#winArea').empty();
 
-		if (didUserWin == true){
+		if (didUserWin === true){
 			$('#winArea').append($('<p>').text('You won!!'));
 			setGame();
 			renderMatchingNumber();
-		}else if(didUserWin == false) {
+		}else if(didUserWin === false) {
 			$('#winArea').append($('<p>').text('You lost!!'));
 			setGame();
 			renderMatchingNumber();
@@ -60,13 +60,13 @@ $(document).ready(function() {
 
 		var wSpan = $('<span>').text(wins);
 		var lSpan = $('<span>').text(losses);
-		
+
 		var pWins = $('<p>').text('Wins: ');
 		var pLosses = $('<p>').text('Losses: ');
 
 		pWins.append(wSpan);
 		pLosses.append(lSpan);
-		
+
 		$('#winArea').append(pWins);
 		$('#winArea').append(pLosses);
 	}
@@ -74,12 +74,11 @@ $(document).ready(function() {
 	function renderCrystals(){
 		//render crystals
 		for (var key in crystals) {
-			//console.log(key);
 			var crystalDiv = $("<div class='crystals-button' data-name='" + key + "'>");
 		  	var crystalImg = $("<img alt='image' class='crystal-img'>").attr("src", crystals[key].imageUrl);
 		    crystalDiv.append(crystalImg);
 		    $("#crystal-area").append(crystalDiv);
-		};
+		}
 	}
 
 	function updateMatchingNumber(th){
@@ -93,7 +92,7 @@ $(document).ready(function() {
 			yourMatchingNumber = yourMatchingNumber + crystals[self.attr('data-name')].points;
 		}else{
 			yourMatchingNumber = yourMatchingNumber + crystals[self.attr('data-name')].points;
-		};
+		}
 	}
 
 	function renderMatchingNumber(){
@@ -112,7 +111,7 @@ $(document).ready(function() {
 		updateMatchingNumber($(this));
 		renderMatchingNumber();
 
-		//check of win or lost
+		//check if won or lost
 		if (yourMatchingNumber == randomNum) {
 			wins++;
 			setGame();
@@ -121,7 +120,7 @@ $(document).ready(function() {
 			losses++;
 			setGame();
 			updateDom(false);
-		};
+		}
 	});
 
-})
+});
