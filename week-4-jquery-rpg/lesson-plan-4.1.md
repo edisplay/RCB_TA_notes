@@ -253,6 +253,8 @@ Student Exercise: lotteryGenerateor
 
 * *Have student write out the pseudo code. NO CODING YET!* 
 
+* *Walk around and look at students computers to see what their pseudo code looks like*
+
 ### 18. Everyone do (3 minutes)
 
 * *Call on a student to go over explain their pseudo code*

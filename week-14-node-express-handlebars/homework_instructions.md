@@ -71,6 +71,7 @@ DB Setup:
 				* `id` as primary key auto incrementing
 				* `burger_name` as a string
 				* `devoured` as a boolean
+				* `date` as TIMESTAMP
 
 		5. In the db folder, Create a `seeds.sql` file
 

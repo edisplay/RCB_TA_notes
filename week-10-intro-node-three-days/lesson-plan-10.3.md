@@ -1,9 +1,3 @@
-# TO DO PAVAN
-
-last one needs solution
-
-package.json lesson needs multiple packages to show use case
-
 # Have you read the Instructor Guide?
 
 You should before you teach anyone anything.

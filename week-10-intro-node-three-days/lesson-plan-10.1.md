@@ -1,9 +1,3 @@
-#Pavan to do
-
-solutions for in class exercises
-
-need to shorten - too intense
-
 # Have you read the Instructor Guide?
 
 You should before you teach anyone anything.
