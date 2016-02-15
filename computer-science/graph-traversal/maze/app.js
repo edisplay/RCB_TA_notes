@@ -58,7 +58,7 @@ function connectedGraph( height, length ){
 
   }
 
-  return cells;
+  return cleanGraph( cells );
 }
 
 function graph( height, length ){
@@ -119,7 +119,19 @@ function graph( height, length ){
 
   }
 
-  return cells;
+  return cleanGraph( cells );
+}
+
+function cleanGraph( graph ){
+
+  var ret = [];
+
+  for( var i=0; i<graph.length; i++ ){
+
+    ret.push( graph[i].neighbors );
+  }
+
+  return ret;
 }
 
 function getRandomNeighbor( cells, currentCell, height, length ){

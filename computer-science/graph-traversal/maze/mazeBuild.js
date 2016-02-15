@@ -37,9 +37,9 @@ function buildMaze( m, start, last, height, length ){
     td.style.borderRight = "1px solid #000";
 
     //if theres a neighbor dont make the border
-    for( var k=0; k<maze[i].neighbors.length; k++ ){
+    for( var k=0; k<maze[i].length; k++ ){
 
-      var neighbor = maze[i].neighbors[k];
+      var neighbor = maze[i][k];
 
       var direction = getDirection( i, neighbor, length );
 
@@ -68,7 +68,7 @@ function buildMaze( m, start, last, height, length ){
     //
     for( var m=0; m<maze.length; m++ ){
 
-      var neighbors = maze[m].neighbors;
+      var neighbors = maze[m];
 
       for( var p=0; p<neighbors.length; p++ ){
 

@@ -26,7 +26,7 @@ function solve( graph, start, finish ){
 
     var current = nodes[ current_location ];
 
-    var current_neighbors = graph[ current.location ].neighbors;
+    var current_neighbors = graph[ current.location ];
 
     for( var i=0; i<current_neighbors.length; i++ ){
 
