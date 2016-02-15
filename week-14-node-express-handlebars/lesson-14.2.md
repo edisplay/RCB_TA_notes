@@ -15,19 +15,12 @@ look at this file at the root of the repository:
 	* Write SQL commands to perform Create, Read, Update and Delete commands
 	* Write clean code with proper variable names, indentation according to industry best practices
 
-# Objectives (Slack out to students, have unique students read each one and Instructor makes a comment after each one being read)
+# Objectives
 
-1. slack out the objectives to the students, and call on random students to read them outloud. *Make a comment about each objective after a person reads it.*
+* *slack out the objectives to the students, and call on random students to read each of them outloud.* 
 
-1. in class repo for your section, make a new folder for this week and day.
+* *Make a BRIEF comment about each objective after a person reads it.*
 
-1. open up that folder in Sublime Text
-
-1. make an objectives.txt file in that folder
-
-1. copy these objectives into that objectives.txt file and save it, commit it, push it up.
-
-* keep the file open while the students are reading the objectives
   * Students will use GET, POST, PUT, and DELETE.  
   * Students will be able to create C.R.U.D Apps in Node
   * Using Node.js server to connect MySQL database and Express and handlebar to server pages using different routes.
