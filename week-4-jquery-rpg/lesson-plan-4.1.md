@@ -9,31 +9,31 @@ Look at this file at the root of the repository:
 
 # Master Objectives (Internal Use - do not share with students - because it's a waste of time)
 
-* Work independently or in a group on complex projects throughout the entire development lifecycle
+* Work independently or in a group on complex projects throughout the entire development lifecycle.
 * Implement complex logical conditions to meet an objective.
-* Write clean code with proper variable names, indentation according to industry best practices
+* Write clean code with proper variable names and indentation according to industry best practices.
 
 # Theme: Intro to jQuery
 
 # INSTRUCTOR MUST COVER!!!
 
 ```
-Parts 3 - 21 
+Parts 3 - 21
 ```
 
 # Objectives (Slack out to students, have unique students read each one and Instructor makes a comment after each one is read)
 
-* students will be introduced to the jQuery library
-* students will use jQuery to select elements in the DOM
-* students will use jQuery to create elements in the DOM
-* students will create click events using jQuery to manipulate the DOM
+* Students will be introduced to the jQuery library
+* Students will use jQuery to select elements in the DOM
+* Students will use jQuery to create elements in the DOM
+* Students will create click events using jQuery to manipulate the DOM
 
 PART ONE:
 
 ### 1. Student do (15 minutes)
 Review Exercise: coffeeMenu
 
-* *Open this file into chrome and demo it for the class: 4.1-in-class-exercises/lesson-4.1.exercise1_coffeeMenu folder.*
+* *Open this file in chrome and demo it for the class: 4.1-in-class-exercises/4.1.1_coffeeMenu folder.*
 
 * *Slack this out to class*
 
@@ -41,7 +41,7 @@ Review Exercise: coffeeMenu
 |----------|
 |Coffee: $5|
 |Espresso: $7|
-|Capunchino: $6|
+|Cappuccino: $6|
 |Latte: $4|
 |Tea: $3|
 |Ice Coffee: $6|
@@ -53,14 +53,13 @@ Review Exercise: coffeeMenu
 * You are given the following coffee and their prices above.
 * Do not use jQuery. Use JavaScript.
 	* Create a HTML file that displays the title 'Coffee Menu'.
-	* Create a script tag and create a JavaScript function that will
-		* Create an array that contains both the name and price of each item on the list as a string
-		* Create a `for` loop, that loops through all the elements and makes them into divs, append those divs to DOM
+	* Create a script tag and create a JavaScript file that has an array which contains both the name and price of each item on the list as a string.
+	* Create a `for` loop, that loops through all the elements and makes them into divs, append those divs to the DOM.
 ```
 
 ### 2. Everyone do (10 minutes)
 
-* *Open the Code to the above exercise located in 4.1-in-class-exercises/lesson-4.1.exercise1_coffeeMenu folder.*
+* *Open the Code to the above exercise located in 4.1-in-class-exercises/4.1.1_coffeeMenu folder.*
 
 * *Call on a student to go over the previous exercise*
 
@@ -71,9 +70,9 @@ Intro to jQuery:
 
 * *Please keep it short.*
 
-Personally, I would just say this.
+Personally, I would just say this:
 
-> jQuery is a library that makes JavaScript DOM manipulation simple. It makes manipulating html easier than if you had to do it with JavaScript. 
+> jQuery is a library that makes JavaScript DOM manipulation simple. It makes manipulating HTML easier than if you had to do it with JavaScript.
 
 > It's optimized to work on every browser and mobile device. While, with pure JavaScript, you're screwed.
 
@@ -81,26 +80,26 @@ Personally, I would just say this.
 
 ### 4. Instructor do (10 minutes)
 
-* *Show how to use the jQuery cdn in HTML*
+* *Show how to include the jQuery cdn in HTML*
 
-* *Instructor demos. Look in lesson-4.1.exercise2_pickEm folder.*
+* *Instructor demos. Look in 4.1.4_pickEm folder.*
 
 * *Explain what each line of the code is doing*
 
 ### 5. Partners Do (5 minutes)
 
 * *MAKE SURE THE CODE FROM THE PREVIOUS DEMO IS UP ON THE SCREEN!*
-* *Have student talk to each other about what just happened.* 
+* *Have student talk to each other about what just happened.*
 
 ### 6. Student do (10 minutes)
 
 * *Slack this out to class*
 
-* You are given the following HTML, using jQuery create the code that will:
+* You are given the following HTML. Using jQuery, create code that will:
 	* Select everything with the class "greekMythNames" and alert the second element's text.
-	* Select the element with the id "wrestler" alert it's text
-	* Select the element with the data-name "007" alert it's text
-	* Select the element with the id "joker" alert it's data-name
+	* Select the element with the id "wrestler" and alert its text
+	* Select the element with the data-name "007" and alert its text
+	* Select the element with the id "joker" and alert its data-name
 
 ```
 <!DOCTYPE html>
@@ -112,7 +111,7 @@ Personally, I would just say this.
 	<body>
 
 		<div id=""><h1>TakeNames!</h1></div>
-	
+
 		<div class="greekMythNames">Odysseus</div>
 		<div class="greekMythNames">Penelope</div>
 		<div class="greekMythNames">Medea</div>
@@ -135,13 +134,13 @@ Personally, I would just say this.
 
 ### 7. Everyone do (5 minutes)
 
-* *Open the Code to the above exercise located in 4.1-in-class-exercises/lesson-4.1_exercise3_takeNames folder.*
+* *Open the Code to the above exercise located in 4.1-in-class-exercises/4.1.7_takeNames folder.*
 
 * *Call on a student to go over the previous exercise*
 
 ### 8. Instructor do (10 minutes)
 
-* *Instructor demos. Look in lesson-4.1_exercise4_doughnut folder.*
+* *Instructor demos. Look in 4.1.8_doughnut folder.*
 
 * *Explain what each line of code is doing*
 
@@ -161,11 +160,11 @@ Student Exercise: Passcode
 
 * *Slack this out to class*
 
-* You are given the following HTML, using jQuery
-	* Create a click event on every "number" class
-	* Whenever a number is clicked store it
-	* If the user correctly inputs 122343221 alert them they got in
-	* If the user inputs that many numbers and was wrong, alert them that they got it wrong
+* You are given the following HTML. Using jQuery, complete the following:
+	* Create a click event on every "number" class.
+	* Whenever a number is clicked, store it.
+	* If the user correctly inputs 122343221, alert them they got in.
+	* If the user inputs that many numbers and was wrong, alert them that they got it wrong.
 
 ```
 <!DOCTYPE html>
@@ -186,17 +185,13 @@ Student Exercise: Passcode
 	    <script type="text/javascript">
 			//write your code here
 	    </script>
-
-	      document.body.onload = passcode;
-
-	    </script>
 	</body>
 </html>
 ```
 
 ### 10. Everyone do (10 minutes)
 
-* *Open the Code to the above exercise located in 4.1-in-class-exercises/lesson-4.1_exercise5_passcode folder.*
+* *Open the Code to the above exercise located in 4.1-in-class-exercises/4.1.9_passcode folder.*
 
 * *Go over the previous exercise call on one unique student per each part of the previous demo to explain what happened*
 
@@ -206,31 +201,31 @@ Student Exercise: Passcode
 
 ### 11. Instructor do (10 minutes)
 
-* *Open the Code located in 4.1-in-class-exercises/lesson-4.1_exercise6_addStuff folder.*
+* *Open the Code located in 4.1-in-class-exercises/4.1.11_addStuff folder.*
 
 * *Explain what each line of the code is doing*
 
 ### 12. Partners do (5 minutes)
 
-* *Have student talk to each other about what just happened. MAKE SURE THE CODE IS UP ON THE SCREEN!* 
+* *Have students talk to each other about what just happened. MAKE SURE THE CODE IS UP ON THE SCREEN!*
 
 ### 13. Instructor do (5 minutes)
 
-* *Call on a student different unique students to explain what each parts of the code is doing*
+* *Call on different students to explain what each parts of the code is doing*
 
 ### 14. Student do (15 minutes)
 
 Student Exercise: Picture Perfect
-* *Give the files from the starter folder to students*
+* *Give the files from the starter folder located in (4.1-in-class-exercises/4.1.14_picturePerfect/picturePerfect_starter) to students*
 
 * *Slack this out to class*
 
-* You are given an HTML and a folder containing different pictures of letters.
-	* Using jQuery create the code that will render to DOM pictures from the images folder and use it to spell the word "perfect"
+* You are given an HTML file and a folder containing different pictures of letters.
+	* Using jQuery create the code that will render pictures from the images folder to the DOM and use it to spell the word "perfect"
 
 ### 15. Everyone do (10 minutes)
 
-* *Open the Code to the above exercise located in 4.1-in-class-exercises/lesson-4.1_exercise7_picturePerfect folder.*
+* *Open the Code to the above exercise located in 4.1-in-class-exercises/4.1.14_picturePerfect/picturePerfect_solution.*
 
 * *Call on a student to go over the previous exercise*
 
@@ -238,20 +233,20 @@ Student Exercise: Picture Perfect
 
 Student Exercise: lotteryGenerateor
 
-* *Demo the app located in 4.1-in-class-exercises/lesson-4.1_exercise8_lotteryGenerator folder.*
+* *Demo the app located in 4.1-in-class-exercises/4.1.16_lotteryGenerator folder.*
 
 * *Slack this out to class*
 
-* You are tasked to create a lottery generator
-	* When the HTML is loaded there is a "Generate" button
-	* When the user hits the button it will render on to the screen 7 number randomly generated numbers to the DOM.
-	* Whenever the button is hit new numbers will be generated to the screen under the previse numbers
-	* There is also a "Clear" button
-	* Whenever the "Clear" button is hit, it removes all the number on screen
+* You are tasked to create a lottery generator.
+	* When the HTML is loaded there is a "Generate" button.
+	* When the user hits the button it will render 7 randomly generated numbers to the DOM.
+	* Whenever the button is pressed, 7 new numbers will be generated and added under the previous numbers.
+	* There will also be a "Clear" button.
+	* Whenever the "Clear" button is pressed, it removes all of the numbers on the screen.
 
 ### 17. Student do (10 minutes)
 
-* *Have student write out the pseudo code. NO CODING YET!* 
+* *Have student write out the pseudo code. NO CODING YET!*
 
 ### 18. Everyone do (3 minutes)
 
@@ -259,17 +254,17 @@ Student Exercise: lotteryGenerateor
 
 ### 19. Student do (10 minutes)
 
-* *Have student start working on the lab! CODE CODE CODE!* 
+* *Have student start working on the lab! CODE CODE CODE!*
 
 ### 20. Everyone do (10 minutes)
 
-* *Open the Code to the above exercise located in 4.1-in-class-exercises/lesson-4.1_exercise7_picturePerfect folder.*
+* *Open the Code to the above exercise located in 4.1-in-class-exercises/4.1.16_lotteryGenerator folder.*
 
 * *Call on a student to go over the previous exercise*
 
 ### 21. Instructor Do - (5 minutes)
-    
-* show the hw instructions
+
+* show the HW instructions (and demo videos, if there is enough time)
 
 * two choices of games to make:
 
@@ -278,4 +273,4 @@ Student Exercise: lotteryGenerateor
   * harder: make the starwars rpg game
 
 # Copyright
-Coding Boot Camp (C) 2015. All Rights Reserved.
+Coding Boot Camp (C) 2016. All Rights Reserved.
