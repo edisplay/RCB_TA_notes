@@ -6,7 +6,7 @@
 		<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
 	</head>
 	<body>
-		<div id=""><h1>Add Stuff with JavaScript vs jQuery!</h1></div>
+		<h1>Add Stuff with JavaScript vs jQuery!</h1>
 		
 		<div id="js-area"></div>
 		</br>
@@ -14,7 +14,8 @@
 	    
 	    <script type="text/javascript">
 
-	      function addStuff () { 
+	    $( document ).ready(function() {
+	      function addStuff() { 
 
 				//adding element to DOM with JS
 				var jsDiv = document.createElement("div");
@@ -30,10 +31,10 @@
 				//adding an picture to DOM with jQuery
 				var pic = $('<img src="smile.png">');
 				$("#jQuery-area").append(pic);
-				
-	      };
+	        };
 
-	      document.body.onload = addStuff;
+		  addStuff();
+		});
 
 	    </script>
 	</body>

@@ -6,12 +6,13 @@
 		<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
 	</head>
 	<body>
-		<div id=""><h1>Picture!</h1></div>
+		<h1>Picture!</h1>
 		
 		<div id="area"></div>
 	    
 	    <script type="text/javascript">
 
+	    $( document ).ready(function() {
 	      function addPictures() { 
 	      		var letters = ['p','e','r','f','e','c','t'];
 
@@ -20,8 +21,8 @@
 					$("#area").append(pic);	
 	      		};
 	      };
-
-	      document.body.onload = addPictures;
+	      addPictures();
+		});
 
 	    </script>
 	</body>
