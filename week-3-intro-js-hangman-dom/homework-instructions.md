@@ -13,7 +13,7 @@ You will be fully capable of doing this homework by the end of Saturday's class.
 
 ### Instructions
 1. Create a new folder called `week-3-game`.
-2. Inside the Portfolio folder, create the following: 
+2. Inside the `week-3-game` folder, create the following: 
   + Make files like this called `index.html`, `composer.json`, and `index.php`
   + put in the appropriate content in the composer.json and index.php files to be able to deploy your game to heroku
   + Make a folder called `assets`.
