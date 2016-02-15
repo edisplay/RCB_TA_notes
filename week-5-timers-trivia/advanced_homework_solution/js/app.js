@@ -82,7 +82,6 @@ var game = {
   correct:0,
   incorrect:0,
   countdown: function(){
-    //Not sure if we're teaching them how to save the state of "this" to be used elsewhere.
     game.counter--;
     $('#counter-number').html(game.counter);
 
@@ -116,7 +115,6 @@ var game = {
     if (game.currentQuestion === questions.length - 1){
       setTimeout(game.results, 3 * 1000);////////////////////////CHANGE ME
     } else {
-      //figured it would be good to also include setTimeout
       setTimeout(game.nextQuestion, 3 * 1000);////////////////////////CHANGE ME
     }
   },
