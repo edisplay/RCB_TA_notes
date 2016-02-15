@@ -1,77 +1,33 @@
-// Pseudo code it out
-
-// ---General directions
-// 0. Use jQuery to do everything
-// 1. Display everyone's health on the page
-// 2. Choose who to attack
-// 3. A random enemy will attack you
-
-// Students Don't Know
-// Constructors
-//
-
-// Students know
-// click events
-// variables
-// data types
-// html / css
-// git / heroku
-// arrays
-
 $(document).ready(function() {
 
 	// ----------------------------------------------------------------
-	// 1. Create 4 characters with objects.
+	// Create 4 characters with objects.
 	var characters = { 
 		'Obi-Wan Kenobi' : {
-			type: 'jedi',
-			rank: 'master',
 			name: 'Obi-Wan Kenobi', 
 			health: 120,
 			attack: 8,
-			defense: 6,
-			theForceLevel: 600,
-			selected: false,
-			selectedAsEnemy: false,
 			imageUrl: "images/obi-wan.jpg",
 			enemyAttackBack: 15
 		},
 		'Luke Skywalker' : {
-			type: 'jedi',
-			rank: 'knight',
 			name: 'Luke Skywalker',
 			health: 100,
 			attack: 14,
-			defense: 8,
-			theForceLevel: 700,
-			selected: false,
-			selectedAsEnemy: false,
 			imageUrl: "images/luke-skywalker.jpg",
 			enemyAttackBack: 5
 		},
 		'Darth Sidious' : {
-			type: 'sith',
-			rank: 'master',
 			name: 'Darth Sidious',
 			health: 150,
 			attack: 8,
-			defense: 8,
-			theForceLevel: 800,
-			selected: false,
-			selectedAsEnemy: false,
 			imageUrl: "images/darth-sidious.png",
 			enemyAttackBack: 20
 		},
 		'Darth Maul' : {
-			type: 'sith',
-			rank: 'apprentice',
 			name: 'Darth Maul',
 			health: 180,
 			attack: 7,
-			defense: 6,
-			theForceLevel: 600,
-			selected: false,
-			selectedAsEnemy: false,
 			imageUrl: "images/darth-maul.jpg",
 			enemyAttackBack: 25
 		}
@@ -85,7 +41,7 @@ $(document).ready(function() {
 	var killCount = 0;
 	
 	// ----------------------------------------------------------------
-	// 2. Create functions to render to DOM
+	// Create function to render to DOM
 	var renderOne = function(character, renderArea, makeChar) {
 		//character: obj, renderArea: class/id, makeChar: string
 	  	var charDiv = $("<div class='character' data-name='" + character.name + "'>");
@@ -101,6 +57,19 @@ $(document).ready(function() {
 		    currDefender = character;
 		    $(charDiv).addClass("target-enemy");
 	    };
+	};
+
+	// Create function to render game message to DOM
+	var renderMessage = function(message) {
+		//console.log(message);
+	  	var gameMesageSet = $("#gameMessage");
+	  	var newMessage = $("<div>").text(message);
+	  	gameMesageSet.append(newMessage);
+
+	  	if (message == 'clearMessage') {
+	  		var gameMesageSet = $("#gameMessage");
+	  		gameMesageSet.text('');
+	  	};
 	};
 
 	var renderCharacters = function(charObj, areaRender) {
@@ -130,6 +99,7 @@ $(document).ready(function() {
 				if ( $('#defender').children().length == 0 ) {
 					renderCharacters(name, '#defender');
 					$(this).hide();
+					renderMessage("clearMessage");
 				};
 			})
 		};
@@ -156,7 +126,8 @@ $(document).ready(function() {
 		//render defeated enemy
 		if (areaRender == 'enemyDefeated') {
 			$('#defender').empty();
-			alert("You have defated " + charObj.name + ", you can choose to fight another enemy.");
+			var gameStateMessage = "You have defated " + charObj.name + ", you can choose to fight another enemy.";
+			renderMessage(gameStateMessage);
 		};
 	};
 	//this is to render all characters for user to choose their computer
@@ -179,12 +150,13 @@ $(document).ready(function() {
 	});
 
 	// ----------------------------------------------------------------
-	// 3. Create functions to enable actions between objects.
+	// Create functions to enable actions between objects.
 	$("#attack-button").on("click", function() {
 		//if defernder area has enemy
 		if ( $('#defender').children().length != 0 ) {
 			//defender state change
-			alert("You attacked " + currDefender.name + " for " + (currSelectedCharacter.attack * turnCounter) + " damage.");
+			var attackMessage = "You attacked " + currDefender.name + " for " + (currSelectedCharacter.attack * turnCounter) + " damage.";
+			renderMessage("clearMessage");
 			//combat
 			currDefender.health = currDefender.health - (currSelectedCharacter.attack * turnCounter);
 
@@ -193,22 +165,29 @@ $(document).ready(function() {
 				//enemy not dead keep playing
 				renderCharacters(currDefender, 'playerDamage');
 				//player state change
-				alert(currDefender.name + " attacked you back for " + currDefender.enemyAttackBack + " damage.");
+				var counterAttackMessage = currDefender.name + " attacked you back for " + currDefender.enemyAttackBack + " damage.";
+				renderMessage(attackMessage);
+				renderMessage(counterAttackMessage);
+
 				currSelectedCharacter.health = currSelectedCharacter.health - currDefender.enemyAttackBack;
 				renderCharacters(currSelectedCharacter, 'enemyDamage');
 				if (currSelectedCharacter.health <= 0) {
+					renderMessage("clearMessage");
 					restartGame("You been defeated...GAME OVER!!!");
+					$("#attack-button").unbind( "click" );
 				};
 			}else{		
 				renderCharacters(currDefender, 'enemyDefeated');
 				killCount++;
 				if (killCount >= 3) {
+					renderMessage("clearMessage");
 					restartGame("You Won!!!! GAME OVER!!!");
 				};
 			};
 			turnCounter++;
 		}else{
-			alert("No enemy here.");
+			renderMessage("clearMessage");
+			renderMessage("No enemy here.");
 		};
 	});
 
