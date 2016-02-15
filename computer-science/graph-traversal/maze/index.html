@@ -39,6 +39,7 @@
     <script src="depthfirst.js"></script>
     <script src="app.js"></script>
     <script src="mazeBuild.js"></script>
+    <script src="single-obstacle.js"></script>
     <script>
 
     /*
@@ -49,12 +50,12 @@
      *
      */
 
-    var height = 20;
-    var length = 20;
+    var height = 10;
+    var length = 10;
 
     //var m = graph( height, length  );
     var m = connectedGraph( height, length  );
-    console.log("made graph");
+    var m = single_obstacle_graph;
 
     var start = 0;
     var finish = Math.floor(Math.random()*(height*length));
