@@ -1,4 +1,7 @@
-var gg = connectedGraph( 10,10);
+var y = 10;
+var x = 10;
+
+var gg = connectedGraph( y, x );
 var g = formatGraph( gg );
 var links = g;
 
@@ -47,7 +50,7 @@ var path = svg.append("svg:g").selectAll("path")
   .enter().append("svg:path")
     .attr("class", "link")
     .attr("id", function(d) { 
-      return d.source.name + "-" + d.target.name;
+      return "path-" + d.source.name + "-" + d.target.name;
     })
     .attr("marker-end", "url(#end)");
 
@@ -108,6 +111,25 @@ function formatGraph( graph ){
   return ret;
 }
 
+function displayD3Path( path ){
+
+  for( var i=0; i<path.length; i++ ){
+
+    setTimeout(function(i) {
+      return function() {
+
+        var id = "#path-" + path[i-1] + "-" + path[i];
+        console.log( id )
+        console.log( d3.select(id) )
+        d3.select(id)
+          .style("stroke", "#ae70ff");
+
+      };
+    }(i), 500*i);
+
+  }
+}
+
 /////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////
@@ -131,3 +153,16 @@ var n = 900;
 force.start();
 for (var i = n * n; i > 0; --i) force.tick();
 force.stop();
+
+var start = 0;
+var finish = Math.floor(Math.random()*(x*y));
+
+var bfspath = solve( gg, start, finish );
+
+window.onload = function(){
+
+  setTimeout( function(){
+    displayD3Path( bfspath );
+  }, 400 );
+
+}
