@@ -87,7 +87,7 @@ Personally, I would just say this.
 
 * *Explain what each line of the code is doing*
 
-### 5. Partners Do (5 minutes
+### 5. Partners Do (5 minutes)
 
 * *MAKE SURE THE CODE FROM THE PREVIOUS DEMO IS UP ON THE SCREEN!*
 * *Have student talk to each other about what just happened.* 
