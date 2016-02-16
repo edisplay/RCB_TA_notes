@@ -18,7 +18,7 @@ Look at this file at the root of the repository:
 # INSTRUCTOR MUST COVER!!!
 
 ```
-Parts 7 - 14
+Parts 4 - 14
 ```
 
 # Objectives (Slack out to students, have unique students read each one and Instructor makes a comment after each one is read)
@@ -26,7 +26,7 @@ Parts 7 - 14
 * students will learn about Lexical Environments
 * students will be introduced to JavaScope Scope 
 * students will understand `this` more indepth
-* students will understand callbacks more indepth
+* students will understand click events more indepth
 
 PART ONE:
 
@@ -142,7 +142,7 @@ c();
 
 * You are now going over the previous exercise 
 
-* *Open the Code to the above exercise located in 4.2.3_scopeQuiz/sopeQuiz-solution.html.*
+* *Open the Code to the above exercise located in 4.2.3_scopeQuiz/scopeQuiz-solution.html.*
 
 * *Call on a student to go over the previous exercise*
 
@@ -155,50 +155,44 @@ c();
 * *Explain what each line of the code is doing*
 
 ### 9. partners do (10 minutes)
-
+Student Exercise: scopeQuiz
 
 ### 10. Everyone do (10 minutes)
 
+* You are now going over the previous exercise 
+
+* *Open the Code to the above exercise located in 4.2.5_AliceInWonderland/wonderland.html.*
+
+* *Call on a student to go over the previous exercise*
 
 ###### 85 minutes have passed
 
 ##### BREAK ( 15 minutes ) - it is now 8:10 pm, you have 80 minutes left of class time
 
-### 11. Instructor do (15 minutes)
+### 11. Instructor do (10 minutes)
 
-Demo: callbacks with click events
+Demo: click events
 
 ### 12. Partners do (5 minutes)
 
 
-### 13. Instructor do (5 minutes)
-
-
-### 14. Student do (15 minutes)
+### 14. Everyone do (15 minutes)
 
 click events 
 
-### 15. Everyone do (10 minutes)
+### 14. Everyone do (10 minutes)
 
 
-### 16. Instructor do (2 minutes)
+### 11. Instructor do (5 minutes)
+
+
+### 16. Student do (20 minutes)
+
 
 Student Excercise: Lab witches
 
-### 17. Student do (5 minutes)
 
-
-### 18. Everyone do (3 minutes)
-
-
-### 19. Student do (15 minutes)
-
-
-### 20. Everyone do (10 minutes)
-
-
-### 21. Instructor Do - (5 minutes)
-
+### 17. Instructor do (10 minutes)
 
 
 # Copyright
