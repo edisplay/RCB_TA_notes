@@ -17,7 +17,7 @@
 	<body>
 		<div id="display"></div>
 	    <div id="buttons"></div>
-		<div id="clear"></div>
+		<div id="clear">clear</div>
 
 	    <script type="text/javascript">
 
@@ -28,14 +28,13 @@
 				for (var e = 0; e < letters.length; e++) {    
 				    var txt = $('<p class="letter" id='+letters[e]+'></p>').text(letters[e]);   
 				    $("#buttons").append(txt); 
-				    $(txt).click(function() {
+				    $(txt).on('click',function() {
 						//console.log($(this)[0].id);
 						var fridgeM = $('<p class="letter fridge-text" id='+letters[e]+'></p>').text($(this)[0].id);
 						$("#display").append(fridgeM);
 					});
 				};
-				var clear = $('<div>').text("CLEAR");
-				$(clear).click(function() {
+				$('#clear').on('click', function() {
 					$("#display").empty(); 
 				});
 				$("#clear").append(clear);
