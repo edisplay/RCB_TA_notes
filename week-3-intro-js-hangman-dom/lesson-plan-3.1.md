@@ -96,9 +96,9 @@ PART ONE
 
     if (petAge == 5){
       alert('My pet is 5 years old')
-    }elseif(petAge < 5){
+    }else if(petAge < 5){
       alert('My pet is less than 5 years old')
-    }elseif(petAge > 5){
+    }else if(petAge > 5){
       alert('My pet is older than 5 years old')
     }
 
@@ -320,8 +320,6 @@ solution:
 
     //bonus
     var year = prompt('What year were you born?');
-
-    var year = parseInt(year);
 
     if (year > 1987){
       alert("you're younger than Pavan");
@@ -595,9 +593,9 @@ Part 3
 ```
 var word = 'jupiter';
 
-var wordsLetters = word.split(); //doesn't work as expected why?
-
 var wordsLetters = word.split(''); //creates an array of the string 
+
+var wordsLetters = word.split(); //doesn't work as expected why?
 
 var letterIndex = wordsLetters.indexOf('a')
 

@@ -1,5 +1,3 @@
-# Pavan to do - organize this and the instructor guide better into sections
-
 For instructor, TAs, please respond saying you will do all 9 of the highlighted steps in this email. If anything is unclear to you, ask me to clarify a certain step.
 
 I came to a realization after I taught class tonight. What's the secret to being a good teacher for Trilogy Education Services?

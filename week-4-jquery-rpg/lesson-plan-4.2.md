@@ -13,7 +13,7 @@ Look at this file at the root of the repository:
 * Implement complex logical conditions to meet an objective.
 * Write clean code with proper variable names, indentation according to industry best practices
 
-# Theme: JavaScropt Scope
+# Theme: JavaScript Scope and this
 
 # INSTRUCTOR MUST COVER!!!
 
@@ -35,6 +35,7 @@ Review Exercise: Fridge Magnets
 
 * *Open this file into chrome and demo it for the class: 4.2-in-class-exercises/4.2.1_fridgeMagnets/fridge_solution folder.*
 
+* *Give the files from the starter folder located in (4.2-in-class-exercises/fridge_starter) to students*
 * *Slack this out to class*
 
 ```
@@ -46,8 +47,6 @@ Review Exercise: Fridge Magnets
 	* Bonus make the letter different colors
 ```
 
-* *Give the files from the starter folder located in (4.2-in-class-exercises/fridge_starter) to students*
-
 ### 2. Everyone do (10 minutes)
 
 * *Open the Code to the above exercise located in 4.2-in-class-exercises/4.2.1_fridgeMagnets folder.*
@@ -57,29 +56,33 @@ Review Exercise: Fridge Magnets
 ### 3. Instructor do (5 minutes)
 Intro to Lexical Environments:
 
-> Explain what Lexical Environments is.
+* *DO NOT SPEND MORE THAN 5 MINUTES ON THIS. Students are going to be lost. Please don't drone on. Don't go into what lexical scopes are and how they are different from other programming languages. DO NOT CONFUSE THEM!*
 
-> Lexical environments hold variables and parameters. The currently active environment is managed via a stack of execution contexts.
-> Functions remember the scope they were defined in. 
-> When a function is invoked, a new environment is created for is arguments and local variables. 
+> Scope goes up in JS.
 
-> English: Where your code is written in your script is important(as in term of line number), because JavaScript reads the code one line at a time in order, when the code is being read by the JavaScript engine. 
+> First Scope checks inside of the function, and if it doesn't find it, it goes up a level.
 
-> However when the code is being run, it's the execution context that determines what is really going happen, JavaScript creates these "enviroments" that contains variables where functions can grab and use it. So functions inside of the enviroment can use variables in the environment.
+> You could always check what the scope is by checking what `this` is.
 
-> But when a function is called and invoked, it can create it's own environment that can contain variables.
+> If you don't know what the scope is, just console log `this`, or throw a break point and type `this` in and press enter.
 
-### 4. Instructor do (10 minutes)
+> in JavaScript, the technical term to describe scope is lexical scope
+
+
+### 4. Everyone do (15 minutes)
 
 * *Instructor demos. Look in folder.*
 * *Open this file into chrome and demo it for the class: 4.2-in-class-exercises/4.2.2_lexicalScope folder.*
 
-* *Explain what each line of the code is doing*
 
-### 5. Partners Do (5 minutes)
+* *direct students to stand up and come to the front* 
+* *have students go to one side of the room if they think something is going to happen and have students go to the other side of the room if they think something else will happen* 
 
-* *MAKE SURE THE CODE FROM THE PREVIOUS DEMO IS UP ON THE SCREEN!*
-* *Have student talk to each other about what just happened.*
+* *after students make their decision*
+
+* *go over the particular example line by line and using debugger*
+
+### 5. is gone now
 
 ### 6. Student do (5 minutes)
 Student Exercise: scopeQuiz
@@ -137,13 +140,16 @@ c();
 ```
 ### 7. Everyone do (10 minutes)
 
-* *Open the Code to the above exercise located in 4.2.3 folder.*
+* You are now going over the previous exercise 
+
+* *Open the Code to the above exercise located in 4.2.3_scopeQuiz/sopeQuiz-solution.html.*
 
 * *Call on a student to go over the previous exercise*
 
 ### 8. Instructor do (5 minutes)
 
 * *Instructor demos. Look in folder.*
+
 * *Open this file into chrome and demo it for the class: 4.2-in-class-exercises/4.2.4_this folder.*
 
 * *Explain what each line of the code is doing*
@@ -160,7 +166,7 @@ c();
 
 ### 11. Instructor do (15 minutes)
 
-Demo: callbacks
+Demo: callbacks with click events
 
 ### 12. Partners do (5 minutes)
 
@@ -170,14 +176,14 @@ Demo: callbacks
 
 ### 14. Student do (15 minutes)
 
-Student Excise: callbacks
+click events 
 
 ### 15. Everyone do (10 minutes)
 
 
 ### 16. Instructor do (2 minutes)
 
-Student Excise: Lab witches
+Student Excercise: Lab witches
 
 ### 17. Student do (5 minutes)
 
