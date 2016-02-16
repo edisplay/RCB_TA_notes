@@ -162,7 +162,7 @@ Review Exercise: Coin Flipper
 ### 14. Student do (20 minutes)
 >Create a stopwatch with Start, Stop
 >Bonus: Lap timer with Jquery
-
+> put everything in an object to illustrate how this will point to the window inside a timing event. (Because the function exists in the window object )
 ### 15. Everyone do (10 minutes)
 > Go Over stopwatch exercise
 
