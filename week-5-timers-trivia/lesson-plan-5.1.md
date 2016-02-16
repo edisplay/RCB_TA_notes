@@ -30,86 +30,152 @@ Parts
 PART ONE:
 
 ### 1. Student do (15 minutes)
-Review Exercise:
+Review Exercise: Coin Flipper
 
-* *Open this file into chrome and demo it for the class: *
+* *Open this file into chrome and demo it for the class: [PUT FOLDER HERE!]*
 
 * *Slack this out to class*
 
 ```
+* Make a Coin Flipper
+* The user presses a button, and the app randomly chooses heads or tails and displays it on the screen.
+* If heads, use: http://www.marshu.com/articles/images-website/articles/presidents-on-coins/quarter-coin-head.jpg
+* If tails, display: http://www.marshu.com/articles/images-website/articles/presidents-on-coins/quarter-coin-tail.jpg
+* BONUS:
+  * Allow the user to pick Heads or Tails before they press the coin flip button. Notify them if they guessed correctly or incorrectly.
+
 ```
-> Coin Flipper
 
 ### 2. Everyone do (10 minutes)
 
-* *Open the Code to the above exercise located in *
+* *Open the Code to the above exercise located in [PUT FOLDER HERE!]*
 
 * *Call on a student to go over the previous exercise*
 
 ### 3. Instructor do (5 minutes)
 
+* *Recap the last Exercise and answer any questions*
 
 
-### 4. Instructor do (10 minutes)
+### 4. Partners do (10 minutes)
 
-* *Instructor demos. Look in  folder.*
+* *Slack this out*
 
-* *Explain what each line of the code is doing*
+```
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>What is this?</title>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.js"></script>
+</head>
+<body>
+  <button id="button">CLICK ME!</button>
 
-### 5. Partners Do (5 minutes)
+  <script>
+
+  var outside = function() {
+    console.log(this);
+  };
 
 
-### 6. Student do (10 minutes)
+
+  $('#button').on('click', function(){
+    console.log(this);
+  });
 
 
-### 7. Everyone do (5 minutes)
+
+  var demoObject = {
+    firstName: "Bob",
+    lastName: "Smith",
+    aFunction: function () {
+      console.log(this);
+    },
+    anotherFunction: outside,
+    oneMoreFunction: outside(),
+
+  };
+
+  //What would I do to make the following line log "Bob Smith", using the "this" keyword?
+  // demoObject.fullName()
 
 
-### 8. Instructor do (10 minutes)
+  //What would I do to make the following function log "Jane Doe", without changing the function at all?
+  // Hint: Do not use demoObject.
+  //
+  // var fullName = function () {
+  // console.log(this.firstName + "" + this.lastName)
+  // }
+
+  </script>
+</body>
+</html>
 
 
-### 9. partners do (10 minutes)
+* With a partner, talk about what each [this] keyword will be.
+* Answer the questions at the bottom of the script.
+```
+
+### 5. Everyone Do (10 minutes)
+
+* *Open the Code to the above exercise located in [PUT FOLDER HERE!]*
+* *Choose a team to go over the previous exercise*
+* *Run each function to see if they are correct or not*
 
 
-### 10. Everyone do (10 minutes)
+### 6. Instructor does (5 minutes)
 
+* *Recap the last Exercise and answer any questions*
+
+
+### 7. Instructor do (10 minutes)
+  > Introduce setTimeout
+  > Introduce clearTimeout
+
+  >Explain how they are located on the window object?
+
+### 8. partners do (5 minutes)
+  > Show them an example of setTimeout and clearTimeout
+  >Have them pair program and adjust the values
+
+### 9. Student do (15 minutes)
+>Make a page with a a simple timer that sends an alert and plays a sound/video after 15 minutes
+>They will use this to time the break
 
 ###### 85 minutes have passed
 
 ##### BREAK ( 15 minutes ) - it is now 8:10 pm, you have 80 minutes left of class time
 
-### 11. Instructor do (10 minutes)
+### 12. Instructor do (5 minutes)
+  >Go over exercise
+  >Answer any questions
 
+### 10. Instructor do (10 minutes)
+  >Introduce setInterval
+  >Introduce clearInterval
 
-### 12. Partners do (5 minutes)
+### 13. partners do (5 minutes)
+> Show them an example of setInterval and clearInterval
+>Have them pair program and adjust the values
 
-
-### 13. Instructor do (5 minutes)
-
-
-### 14. Student do (15 minutes)
-
+### 14. Student do (20 minutes)
+>Create a stopwatch with Start, Stop
+>Bonus: Lap timer with Jquery
 
 ### 15. Everyone do (10 minutes)
+> Go Over stopwatch exercise
 
+### 19. Student do (20 minutes)
+> Create slideshow using jquery and timing events
 
-### 16. Instructor do (2 minutes)
-
-
-### 17. Student do (10 minutes)
-
-
-### 18. Everyone do (3 minutes)
-
-
-### 19. Student do (10 minutes)
-
-
-### 20. Everyone do (10 minutes)
-
+### 18. Everyone do (5 minutes)
+> Go Over, answer questions
 
 ### 21. Instructor Do - (5 minutes)
-
+ >Present Homework
+ >Trivia game
+ >Simple option and Advanced
 
 
 # Copyright
