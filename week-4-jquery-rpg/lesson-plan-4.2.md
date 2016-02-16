@@ -18,36 +18,39 @@ Look at this file at the root of the repository:
 # INSTRUCTOR MUST COVER!!!
 
 ```
-Parts 
+Parts 7 - 14
 ```
 
 # Objectives (Slack out to students, have unique students read each one and Instructor makes a comment after each one is read)
 
 * students will learn about Lexical Environments
 * students will be introduced to JavaScope Scope 
+* students will understand `this` more indepth
+* students will understand callbacks more indepth
 
 PART ONE:
 
-### 1. Student do (15 minutes)
+### 1. Student do (20 minutes)
 Review Exercise: Fridge Magnets
 
-* *Open this file into chrome and demo it for the class: 4.2-in-class-exercises/lesson-4.2_exercise1_fridgeMagnets folder.*
+* *Open this file into chrome and demo it for the class: 4.2-in-class-exercises/4.2.1_fridgeMagnets/fridge_solution folder.*
 
 * *Slack this out to class*
 
 ```
-* You are given an HTML and a folder containing different pictures.
-	* A picture of a fridge
-	* A folder containing pictures of the alphabet
-* You are tasked to create a web page that lets you creat your own fridge message
-	* The page has all the letters of the alphabet and a space button in the bottom of the page
-	* Whenever a letter button is hit, the fridge will display that letter
+* You are provided with an HTML and an image
+* You are tasked to create a web page that lets you create your own fridge message
+	* The page must have all the letters of the alphabet and an underscore as buttons
+	* Whenever a button is hit, a letter will display on the fridge
 	* Make a clear button as well that will remove all the letters on the fridge
+	* Bonus make the letter different colors
 ```
+
+* *Give the files from the starter folder located in (4.2-in-class-exercises/fridge_starter) to students*
 
 ### 2. Everyone do (10 minutes)
 
-* *Open the Code to the above exercise located in 4.2-in-class-exercises/lesson-4.2_exercise1_fridgeMagnets folder.*
+* *Open the Code to the above exercise located in 4.2-in-class-exercises/4.2.1_fridgeMagnets folder.*
 
 * *Call on a student to go over the previous exercise*
 
@@ -68,21 +71,82 @@ Intro to Lexical Environments:
 
 ### 4. Instructor do (10 minutes)
 
-* *Instructor demos. Look in  folder.*
+* *Instructor demos. Look in folder.*
+* *Open this file into chrome and demo it for the class: 4.2-in-class-exercises/4.2.2_lexicalScope folder.*
 
 * *Explain what each line of the code is doing*
 
 ### 5. Partners Do (5 minutes)
 
+* *MAKE SURE THE CODE FROM THE PREVIOUS DEMO IS UP ON THE SCREEN!*
+* *Have student talk to each other about what just happened.*
 
-### 6. Student do (10 minutes)
+### 6. Student do (5 minutes)
+Student Exercise: scopeQuiz
 
+* *Slack this out to class*
 
-### 7. Everyone do (5 minutes)
+Without running this code, write down what the code is going to in each example and explain why.
 
+```
+/* What happenes when the code is ran! */
 
-### 8. Instructor do (10 minutes)
+//---------- ---------- ---------- ----------
+//question 1
+var myVar = 1;
 
+function a() {
+	var myVar = 5 - 3;
+	b();
+	alert(myVar);
+}
+
+function b() {
+	alert(myVar);
+}
+a();
+
+/* Because... */
+
+//---------- ---------- ---------- ----------
+//question 2
+var myVar = 1;
+function d() {
+	function e() {
+		alert(myVar);
+	}
+	var myVar = 2;
+	e();
+};
+d();
+
+/* Because... */
+
+//---------- ---------- ---------- ----------
+//question 3: Bonus
+var myVar = 1;
+function c() {
+  this.myVar = 15;
+  alert(myVar);
+  var myVar = 3;
+  alert(myVar);
+}
+c();
+
+/* Because... */
+```
+### 7. Everyone do (10 minutes)
+
+* *Open the Code to the above exercise located in 4.2.3 folder.*
+
+* *Call on a student to go over the previous exercise*
+
+### 8. Instructor do (5 minutes)
+
+* *Instructor demos. Look in folder.*
+* *Open this file into chrome and demo it for the class: 4.2-in-class-exercises/4.2.4_this folder.*
+
+* *Explain what each line of the code is doing*
 
 ### 9. partners do (10 minutes)
 
@@ -94,8 +158,9 @@ Intro to Lexical Environments:
 
 ##### BREAK ( 15 minutes ) - it is now 8:10 pm, you have 80 minutes left of class time
 
-### 11. Instructor do (10 minutes)
+### 11. Instructor do (15 minutes)
 
+Demo: callbacks
 
 ### 12. Partners do (5 minutes)
 
@@ -105,20 +170,22 @@ Intro to Lexical Environments:
 
 ### 14. Student do (15 minutes)
 
+Student Excise: callbacks
 
 ### 15. Everyone do (10 minutes)
 
 
 ### 16. Instructor do (2 minutes)
 
+Student Excise: Lab witches
 
-### 17. Student do (10 minutes)
+### 17. Student do (5 minutes)
 
 
 ### 18. Everyone do (3 minutes)
 
 
-### 19. Student do (10 minutes)
+### 19. Student do (15 minutes)
 
 
 ### 20. Everyone do (10 minutes)
