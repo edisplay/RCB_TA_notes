@@ -1,13 +1,12 @@
 {
-  "name": "15.2.1_demo",
+  "name": "15.2.1_bcrypt",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "dependencies": {
-    "body-parser": "^1.15.0",
-    "express": "^4.13.4",
-    "express-handlebars": "^3.0.0",
+    "bcryptjs": "^2.3.0",
     "mysql": "^2.10.2",
+    "prompt": "^1.0.0",
     "sequelize": "^3.19.2"
   },
   "devDependencies": {},
