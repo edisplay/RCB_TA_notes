@@ -1,30 +1,26 @@
-var Sequelize = require('sequelize');
+var express = require('express');
+var expressHandlebars = require('express-handlebars');
+var bodyParser = require('body-parser');
 
+var Sequelize = require('sequelize');
 var connection = new Sequelize('test_sql_mod_db', 'root', '1111', {
-    // mysql is the default dialect, but you know...
-    // for demo purporses we are defining it nevertheless :)
-    // so: we want mysql!
     dialect: 'mysql',
     port: 8000,
     host: 'localhost'
 });
 
-// var School = connection.define('schools', {
-// 	name: Sequelize.STRING
-// });
+var PORT = 3000;
+var app = express();
 
-// School.findAll({
-//   where: {
-//     id: 2
-//   }
-// }).then(function(result) {
-//   if(result) {
-//     console.log(result);
-//   } else {
-//     console.log('err');
-//   }
-// });
+app.engine('handlebars', expressHandlebars({
+  defaultLayout: 'main'
+}));
+app.set('view engine', 'handlebars');
+app.use(bodyParser.urlencoded({
+    extended: false
+}));
 
+//model
 var Note = connection.define('note', {
     title: {
         type: Sequelize.STRING,
@@ -32,36 +28,64 @@ var Note = connection.define('note', {
         allowNull: false,
         //valiation
         validate: {
+            notEmpty: true,
             len: {
                 //set vailation range and error mesage
                 args: [1, 10],
-                msg: 'Please enter a title that is not too long and at least one character'
+                msg: 'Please enter a title that is not too long and at least one character',
             }
         }
     },
     body: {
-        type: Sequelize.TEXT
-            //vailatioin function
+        type: Sequelize.TEXT,
+        //vailatioin function
+        validate: {
+        	check: function (bodyVal) {
+        		if (bodyVal == "watwatwat") {
+        			throw new Error('text must not be watwatwat')
+        		}
+        	}
+        }
     }
+});
+
+app.get('/', function(req, res) {
+  Note.findAll({
+  }).then(function(results) {
+    // var r = results[0].dataValues;
+    // console.log(r);
+    res.render('home', {
+		results
+    });
+  });
+});
+
+app.post('/entry', function(req, res) {
+
+  var myTitle = req.body.title;
+  var myTest = req.body.text;
+
+  Note.create({
+	title: myTitle,
+	body: myTest
+  }).then(function(result) {
+    res.redirect('/success');
+  }).catch(function(err) {
+  	console.log(err);
+    res.redirect('/fail');
+  });
 })
 
-connection.sync({
-    //force: true
-}).then(function() {
+app.get('/success', function(req, res) {
+  res.send('SUCCESS PAGE!');
+});
 
-    // Note.create({
-    // 	title: 'sup yo',
-    // 	body: "this is the body of the text"
-    // });
+app.get('/fail', function(req, res) {
+  res.send('Fail to add entry!');
+});
 
-    Note.findOne({
-    	where: {
-    		id: 1
-    	}
-    }).then(function(res) {
-    	console.log(res.dataValues);
-    });
-
-}).catch(function(error) {
-    console.log(error)
+connection.sync().then(function() {
+  app.listen(PORT, function() {
+    console.log("Listening on port %s", PORT);
+  });
 });
