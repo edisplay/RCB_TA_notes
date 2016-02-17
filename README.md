@@ -26,7 +26,7 @@ homework submission Rutgers JC Feb 16:
 https://drive.google.com/open?id=16RhtUMANWAHRNyLCKJAyqh_GMMRugTkNiMt-CFVqXzw
 
 homework submission Rutgers NB Jan 16:
-https://drive.google.com/open?id=16RhtUMANWAHRNyLCKJAyqh_GMMRugTkNiMt-CFVqXzw
+https://docs.google.com/a/trilogyed.com/forms/d/1-0jQJXI_WBtwJNkKjUjzzwmd-ie9sqcEP0_ZxAUOTYY/edit?usp=drive_web
 
 homework submission Rutgers NB Oct 15:
 https://docs.google.com/a/trilogyed.com/forms/d/1u0CAvOafL4JaLAhLJ8R0ZeOd-LR_W_Z23wsTVNiFoyE/edit?usp=sharing
