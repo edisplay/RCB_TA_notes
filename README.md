@@ -32,7 +32,7 @@ homework submission Rutgers NB Oct 15:
 https://docs.google.com/a/trilogyed.com/forms/d/1u0CAvOafL4JaLAhLJ8R0ZeOd-LR_W_Z23wsTVNiFoyE/edit?usp=sharing
 
 attendance Rutgers NB Jan 16:
-https://docs.google.com/spreadsheets/u/2/d/1oBO5SHLZdTeGeIHrFPCWwZrFOBJaZLsdSsclQLizaPc/edit?usp=sharing_eid&ts=56ba0a3f
+https://docs.google.com/forms/d/1-0jQJXI_WBtwJNkKjUjzzwmd-ie9sqcEP0_ZxAUOTYY/viewform
 
 attendance Rutgers JC Feb 16:
 https://drive.google.com/open?id=1Vn3pmtaIpEiQgItA8vayDjSxq-pYwXnW3D1Y_vVsEUk
