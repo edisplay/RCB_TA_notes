@@ -24,13 +24,16 @@ look at this file at the root of the repository:
 
 # Theme: Sequelize
 	* Model Valiations
-	* Relational DB
-	* Hooks & bcrypt
+	* Bcrypt
+	* Hooks
 
 --------- --------- ---------
 
 ### 1. Instructor Explain (15 minutes)
 Demo: 15.2.1_demo Valiations
+
+* *Demo how vailation works*
+* *Explain what each line of the code is doing*
 
 ### 2. Partners Do (5 minutes)
 
@@ -50,14 +53,22 @@ Student Exercises: Safe Entry
 
 ### 4. Everyone Do (10 minutes)
 
-* *Go over student exercises* 
+* *Call on a student to go over the previous exercise*
 
 ### 5. Instructor Do (30 minutes)
-Demo: 15.2.2
+Demo: 15.2.2_bcrypt
+
+* *Demo how bcrypt works*
+* *Explain what each line of the code is doing*
 
 -- 15 minute break -- (total including break: 105 minutes)
 
 ### 5. Student Do (25 minutes)
+
+* Create an  `node.js`& `mysql` app 
+  * No Express, no handlebars
+  * Use prompt to add user and password into the databse 
+  * You must use hash to store the password
 
 ### 6. Instructor Do (20 minutes)
 
@@ -65,9 +76,21 @@ Demo: 15.2.2
 
 * *DEMO 15.2.3* 
 
+* *Demo how bcrypt works with hooks*
+* *Explain what each line of the code is doing*
+
 ### 7. Student Do (25 minutes)
 
-### 8. Everyone Do ( 5 minutes )
+* Create an `express` / `handlebars` / `node.js` / `mysql` app 
+  * Make a page that will allow users create a user name and password
+  * Make a page that will allow users to login
+  * Valiate the name so it's only strings, and password that it has at least 8 characters
+  * Setup the model with hooks and save password into the database as hash
+  * Check the password against the hash before login
+
+### 8. Everyone Do ( 10 minutes )
+
+* *Call on a student to go over the previous exercise*
 
 # Copyright
 Coding Boot Camp (C) 2016. All Rights Reserved.

@@ -22,8 +22,9 @@ app.use(bodyParser.urlencoded({
     extended: false
 }));
 
-//model
+//model hooks
 var PasswordHash = connection.define('hash', {
+  name: Sequelize.TEXT,
   psw: Sequelize.TEXT
 }, {
     //using hooks to save hash as password
@@ -35,41 +36,51 @@ var PasswordHash = connection.define('hash', {
     }
 });
 
-app.get('/save', function(req, res) {
-  //Using bcypt in Node
-  /*
-  bcrypt.genSalt(10, function(err, salt) {
-      bcrypt.hash("sandwhich", salt, function(err, hash) {
-          // Store hash in your password DB. 
-          PasswordHash.create({
-            psw: hash
-          }).catch(function(err) {
-           console.log(err);
-          });
-      });
-  });
-  */
-  //use hook to save password
-  PasswordHash.create({
-    psw: 'cake'
-  }).catch(function(err) {
-   console.log(err);
-  });
-
+//render reg
+app.get('/', function(req, res) {
+    res.render('save');
 });
 
-app.get('/check', function(req, res) {
-  //
+//log in
+app.get('/login', function(req, res) {
+    res.render('login');
+});
+
+//save to db
+app.post('/save', function(req, res) {
+  var userName = req.body.name;
+  var password = req.body.password;
+
+  //bcrypt and hook to save password
+  PasswordHash.create({
+    name: userName,
+    psw: password
+  }).catch(function(err) {
+   console.log(err);
+  }).then(function(result) {
+    res.redirect('/success');
+  }).catch(function(err) {
+    res.redirect('/fail');
+  });
+
+})
+
+//check if password is correct
+app.post('/check', function(req, res) {
+  var userName = req.body.name;
+  var userPassword = req.body.password;
+
   PasswordHash.findOne({
     where: {
-      id: 1
+      name: userName
     }
   }).then(function(results) {
-    //console.log(results.dataValues.psw)
+    //check password against hash
     bcrypt.genSalt(10, function(err, salt) {
-        bcrypt.compare("cake", results.dataValues.psw, function(err, res) {
-            if (res) {
+        bcrypt.compare(userPassword, results.dataValues.psw, function(err, rest) {
+            if (rest) {
               console.log("HACKER VOICE: Your In...")
+               res.redirect('/success');
             };
         });
     });
@@ -77,30 +88,13 @@ app.get('/check', function(req, res) {
 
 });
 
+app.get('/success', function(req, res) {
+  res.send('SUCCESS PAGE!');
+});
 
-// app.post('/entry', function(req, res) {
-
-//   var myTitle = req.body.title;
-//   var myTest = req.body.text;
-
-//   Note.create({
-// 	title: myTitle,
-// 	body: myTest
-//   }).then(function(result) {
-//     res.redirect('/success');
-//   }).catch(function(err) {
-//   	console.log(err);
-//     res.redirect('/fail');
-//   });
-// })
-
-// app.get('/success', function(req, res) {
-//   res.send('SUCCESS PAGE!');
-// });
-
-// app.get('/fail', function(req, res) {
-//   res.send('Fail to add entry!');
-// });
+app.get('/fail', function(req, res) {
+  res.send('Fail to add entry!');
+});
 
 connection.sync().then(function() {
   app.listen(PORT, function() {
