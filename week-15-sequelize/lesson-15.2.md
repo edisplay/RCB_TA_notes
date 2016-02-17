@@ -43,6 +43,7 @@ Demo: 15.2.1_demo Valiations
 
 Student Exercises: Safe Entry
 
+* Create a new DB
 * Create an `express` / `handlebars` / `node.js` / `mysql` app 
   * Entry: The page will allow users to input an entry into the database with their name/phone number/message
   * Valiate the name so it's only strings
@@ -65,6 +66,7 @@ Demo: 15.2.2_bcrypt
 
 ### 5. Student Do (25 minutes)
 
+* Create a new DB
 * Create an  `node.js`& `mysql` app 
   * No Express, no handlebars
   * Use prompt to add user and password into the databse 
@@ -81,6 +83,7 @@ Demo: 15.2.2_bcrypt
 
 ### 7. Student Do (25 minutes)
 
+* Create a new DB
 * Create an `express` / `handlebars` / `node.js` / `mysql` app 
   * Make a page that will allow users create a user name and password
   * Make a page that will allow users to login

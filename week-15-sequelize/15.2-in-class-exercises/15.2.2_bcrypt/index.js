@@ -30,8 +30,9 @@ var saveUser = function(userName, userPassword) {
             }).catch(function(err) {
              console.log(err);
             });
-          });
-          console.log("User saved.")
+          }).done(function(){
+            console.log("User saved.")
+          })
       });
   });
 
@@ -48,7 +49,9 @@ var checkUser = function(userName, userPassword) {
         bcrypt.compare(userPassword, results.dataValues.psw, function(err, rest) {
             if (rest) {
               console.log("HACKER VOICE: Your In...")
-            };
+            }else{
+              console.log("Wrong password try again!!!")
+            }
         });
     });
   });
