@@ -1,3 +1,9 @@
+http://theory.stanford.edu/~amitp/GameProgramming/AStarComparison.html
+http://web.mit.edu/eranki/www/tutorials/search/
+http://heyes-jones.com/astar.php
+https://www.khanacademy.org/computing/computer-science/algorithms/breadth-first-search/a/the-breadth-first-search-algorithm
+
+
 #### lesson outline
 
 - representation of a graph: https://www.khanacademy.org/computing/computer-science/algorithms/graph-representation/a/describing-graphs
@@ -33,7 +39,8 @@
     - output / visualization of graph traversal
     - add conditional
     - ( with conditional you can satisfy the search requirement )
-    - add path generator
+    - now you've found the thing - depth first SEARCH
+    - add a path generator
 
 - dimensions of the problem: empty maze / screen ( how efficient is that? ) / maze with single blockage / complete maze
 - more problem visualizations
@@ -46,3 +53,14 @@
   - fastest working algorithm
   - uses least space
   - quickest working algorithm
+
+
+TODO:
+
+change table to divs
+
+refactor for naming and readibility
+
+other algo implementation - greedy dfs, etc
+
+lesson plan flush out
