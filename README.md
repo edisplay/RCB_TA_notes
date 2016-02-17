@@ -16,6 +16,9 @@
 
 ### Looking for Google Forms/Sheets?
 
+Everyone's contact info!!!!
+https://docs.google.com/spreadsheets/d/1HTjuhu8_Zr00ghPjcBnZapzDYeoKLJAmdsUo1fJEf4A/edit#gid=309819815
+
 daily instructor report card
 https://docs.google.com/a/trilogyed.com/forms/d/1bLI5MUr3Otox2SbHrCEpWTUYUjgVK_SzEOjEtdWJTJs/edit
 
