@@ -252,6 +252,7 @@ in the for loop, if the value starts with a c or an o then additionally alert th
 	* *use actual break points in the sources tab*
 	* *show how break points don't trigger unless console is open*
 
+* *show how to cheat by putting the breakpoint in rps-9.html on line *
 
 ### 16. Partners do (15 minutes)
 
