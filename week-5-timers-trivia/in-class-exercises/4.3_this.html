@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>What is this?</title>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.js"></script>
+</head>
+<body>
+  <button id="button">CLICK ME!</button>
+
+  <script>
+
+  var outside = function() {
+    console.log(this);
+  };
+
+
+
+  $('#button').on('click', function(){
+    console.log(this);
+  });
+
+
+
+  var demoObject = {
+    firstName: "Bob",
+    lastName: "Smith",
+    aFunction: function () {
+      console.log(this);
+    },
+    anotherFunction: outside,
+    oneMoreFunction: outside(),
+
+  };
+
+  //What would I do to make the following line log "Bob Smith", using the "this" keyword
+  // demoObject.fullName()
+
+
+  //What would I do to make the following function log "Bob Smith", without changing the "this" keyword
+  // var fullName = function () {
+  // console.log(this.firstName + "" + this.lastName)
+  // }
+
+  </script>
+</body>
+</html>
