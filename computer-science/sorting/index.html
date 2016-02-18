@@ -1,0 +1,57 @@
+<html>
+  <head>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css" rel="stylesheet">
+    <style>
+
+      #data{
+        margin: 20px;
+        position:relative;
+        width:100%;
+        display:block;
+      }
+
+      .index{
+
+        display:inline-block;
+        background-color:#98c5f5;
+        margin:5px;
+        padding:5px;
+        width:3%;
+        text-align: center;
+        vertical-align: text-bottom;
+        font-size:.6em;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div id="data">
+    </div>
+    <script src="selection.js"></script>
+    <script src="insertion.js"></script>
+    <script src="app.js"></script>
+    <script>
+      window.onload = function(){
+        console.log( "here" );
+
+        var size = 20;
+
+        var data = generateRandomizedArray( size );
+
+        buildHtmlArray( data );
+
+        console.log( data );
+
+        //var d = insertionSort( data );
+        var d = selectionSort( data );
+
+        console.log( "DONE", d );
+
+        setTimeout( function(){
+          display( arrayStateQueue, 520 );
+        }, 500 );
+
+      };
+    </script>
+  </body>
+</html>

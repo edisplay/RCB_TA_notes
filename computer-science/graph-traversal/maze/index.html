@@ -1,0 +1,89 @@
+<html>
+  <head>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css" rel="stylesheet">
+    <style>
+
+    html {
+        box-sizing: border-box;
+      }
+    table{
+        margin: 10px;
+        border-collapse: initial;
+        border-spacing:0;
+        table-layout:fixed;
+    }
+    tr{
+        padding:0; margin:0;
+    }
+    td {
+        padding:0;
+        margin:0;
+        height: 20px;
+        min-width: 20px;
+        width: 20px;
+        max-width: 20px;
+        text-align:center;
+        overflow:hidden;
+    }
+    .foo{
+      color:#ffdf3d;
+    }
+
+
+    </style>
+  </head>
+  <body>
+    <table id="maze"></table>
+    <div id="time"></div>
+    <script src="bfs.js"></script>
+    <script src="depthfirst.js"></script>
+    <script src="app.js"></script>
+    <script src="mazeBuild.js"></script>
+    <script src="single-obstacle.js"></script>
+    <script>
+
+    /*
+     *
+     *
+     *           RUN ALL THE THINGS HERE
+     *
+     *
+     */
+
+    var height = 10;
+    var length = 10;
+
+    //var m = graph( height, length  );
+    var m = connectedGraph( height, length  );
+    var m = single_obstacle_graph;
+
+    var start = 0;
+    var finish = Math.floor(Math.random()*(height*length));
+
+    var ender = timer();
+    var bfspath = solve( m, start, finish );
+    var bfs_time = ender();
+
+    var ender = timer();
+    var dfspath = dfsolve( m, start, finish );
+    var dfs_time = ender();
+
+    var tt = document.querySelector('#time');
+    tt.innerText = "bfs time: " + bfs_time + " milliseconds | dfs time:" + dfs_time + " milliseconds";
+
+
+      //do DOM stuff
+      window.onload = function(){
+
+        buildMaze( m, start, finish, height, length );
+
+        setTimeout( function(){
+          displayPath( bfspath );
+          displayPath( dfspath );
+        }, 400 );
+
+      }
+
+    </script>
+  </body>
+</html>
