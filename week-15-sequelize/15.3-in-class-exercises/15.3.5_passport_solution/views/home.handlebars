@@ -1,0 +1,15 @@
+{{#if isAuthenticated}}
+	<h1>Hacker Voice: You got in...</h1>
+	<h1>Home Page</h1>
+
+	<div>
+		<!-- 	{{isAuthenticated}} -->
+		{{user.id}}
+		{{user.name}}
+	</div>
+    <h1>Logout</h1>
+    <form action="/logout" method="get">
+      <button type="submit" class="btn btn-default">Submit</button>
+    </form>
+
+{{/if}}

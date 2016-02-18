@@ -31,37 +31,42 @@ look at this file at the root of the repository:
 # INSTRUCTOR MUST COVER ALL!!!
 
 ```
-ALL or they won't be able to do the homework.
+3 - 10 or they won't be able to do the homework.
 ```
 
 ### 1. Students do ( 20 minutes )
+Review student Exercise:
 
+Sequelize app 1 route handlebars
 
 ### 2. Everyone do ( 10 minutes )
 
-* *Call on a weaker student to go over the previous exercise*
-
+* *Call on students to go over the previous exercise*
 
 ### 3. Instructor do ( 20 minutes )
 
+Passport Demo Part 1: Setup Passport 
 
-### 4. Partners do ( 5 minutes )
+### 4. Everyone do ( 5 minutes )
 
+### 5. Instructor do ( 20 minutes )
 
-### 5. Students do ( 20 minutes )
-Student Exercise: 
+Passport Demo Part 2: Handlebars and Express Routes
 
 ### 6. Everyone Do ( 10 minutes )
-* *Go over the previous exercise with the class - call on one unique student per each part of the previous exercise to explain what they did for each part of the exercise*
 
 ###### 85 minutes have passed
 
-### 7. Instructor do: ( 10 minutes ) 
+### 7. Instructor do: ( 15 minutes ) 
 
-### 8. Partners do ( 5 minutes )
-* *Have student talk to each other about why Node async happened and is an issue, and how to fix it* 
+Passport Demo Part 3: Sessions
 
-### 10. Instructor do: ( 20 minutes ) 
+### 8. Everyone do ( 10 minutes )
+* *Have student talk to each other about what happened* 
+
+### 10. Instructor do: ( 15 minutes ) 
+
+Passport Demo Part 4: Sequelize database
 
 ### 11. Partners do ( 5 minutes )
 * *Have student talk to each other about what just happened, and why callbacks can help with asynchronicity* 
@@ -74,18 +79,17 @@ Student Exercise:
 ### 13. BREAK ( 45 minutes )
 --------- --------- ---------
 
-### 14. Student do (10 minutes)
+### 14. Instructor do: ( 30 minutes ) 
+Student Exercise: Secret Clubhouse
 
+* Create an `express` / `handlebars` / `node.js` / `sequelize` app
+  * With user validation. 
+  * Bcrypt password.
+  * Sequelize database.
+  * Passport Sessions authentication.
+  * Users can register, login, and view the secret page with upcoming events. 
 
-### 15. Partners do ( 5 mins ) 
-* *Have student talk to each other about what just happened* 
-
-### 16. Instructor do: ( 30 minutes ) 
-Student Exercise: 
-
-
-### 17. Instructor do: ( 15 minutes )
-
+### 15. Instructor do: ( 15 minutes )
 * *Go over the previous exercise with the class - call on one unique student per each part of the previous exercise to explain what they did for each part of the exercise*
 
 # Copyright
