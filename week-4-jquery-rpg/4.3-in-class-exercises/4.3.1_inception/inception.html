@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Inception</title>
+  </head>
+  <body style="">
+      
+      <script type="text/javascript">
+      
+        var chapterOne = {
+          text: "Down the Rabbit Hole We Go.",
+          read: function () {
+            console.log(this.text)
+          }
+        };
+
+        var chapterTwo = {
+          text: "",
+          read: function () {
+            var self = this;
+            var levelTwo = function() {
+              self.text = "A Pool of Tears Such A Tremendous Size.";
+            };
+            levelTwo();
+            console.log(self.text);
+          }
+        };   
+
+        var chapterThree = {
+          text : "",
+          read: function() {
+            var self = this;
+            var levelThree = function() {
+              var levelThreeMore = function() {
+                self.text = "The Causcs Race and a Long Tale animal."
+                console.log(self.text);
+              };
+              levelThreeMore();
+            };
+            levelThree(self);
+          }
+        };
+        
+        this.text = "OPZ...";
+        chapterOne.read();
+        chapterTwo.read();
+        chapterThree.read();
+
+      </script>
+  </body>
+</html>
