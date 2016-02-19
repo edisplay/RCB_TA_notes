@@ -27,7 +27,9 @@ Parts
 * students will reinforce their knowledge of JavaScript
 * students will understand JavaScript Timing Events
 
-PART ONE:
+Owens something to keep in mind is to keep the homework solutions up next to you, and make sure every aspect of them are covered in the examples and exercises.
+
+Also, stay away from: talk about these things unless it has to with their past experiences (examples: talk about a time when you had to refactor your code to make it scale, talk about a time when you crashed a server and had to rearchitect the system to not do that, talk about a time when you used pseudocode to help you solve a problem better)
 
 ### 1. Student do (15 minutes)
 Review Exercise: Coin Flipper
@@ -61,65 +63,70 @@ Review Exercise: Coin Flipper
 
 * *Slack this out*
 
+* With a partner, talk about what each [this] keyword will be.
+* Answer the questions at the bottom of the script.
+
 ```
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <title>What is this?</title>
-  <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.js"></script>
+  
 </head>
 <body>
   <button id="button">CLICK ME!</button>
 
-  <script>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.js"></script>
+  <script type="text/javascript">
 
-  var outside = function() {
-    console.log(this);
-  };
+    var outside = function() {
+      console.log(this); //1. what will be console logged out? What is *this* in this case?
+    };
 
+    $('#button').on('click', function(){
+      console.log(this); //2. what will be console logged out? What is *this* in this case?
+    });
 
+    var bob = {
+      firstName: "Bob",
+      lastName: "Smith",
+      whoIsBob: function() {
+        console.log(this);
+      },
+      fullName: function() {
+        //put something inside of here so that this works
+      }
+    };
 
-  $('#button').on('click', function(){
-    console.log(this);
-  });
+    //3. what will the console log output if this function gets called:
 
+    demoObject.whoIsBob();
 
+    //4. fill in the code inside the fullName function above so that the below code console.logs out Bob's full name using the firstName and lastName properties
 
-  var demoObject = {
-    firstName: "Bob",
-    lastName: "Smith",
-    aFunction: function () {
-      console.log(this);
-    },
-    anotherFunction: outside,
-    oneMoreFunction: outside(),
+    demoObject.fullName();
 
-  };
+    //5. Fill in the code below to make the theChosenOne function log "Keanu Reeves".
 
-  //What would I do to make the following line log "Bob Smith", using the "this" keyword?
-  // demoObject.fullName()
+    //put code here
+    //and put code here 
 
+    //don't touch any of the code below!!
+    var theChosenOne = function () {
+      console.log(this.firstName + "" + this.lastName)
+    }
 
-  //What would I do to make the following function log "Jane Doe", without changing the function at all?
-  // Hint: Do not use demoObject.
-  //
-  // var fullName = function () {
-  // console.log(this.firstName + "" + this.lastName)
-  // }
+    theChosenOne();
 
   </script>
 </body>
 </html>
-
-
-* With a partner, talk about what each [this] keyword will be.
-* Answer the questions at the bottom of the script.
 ```
 
 ### 5. Everyone Do (10 minutes)
 
-* *Open the Code to the above exercise located in [PUT FOLDER HERE!]*
+* *Open the Code to the above exercise located in file path goes here*
 * *Choose a team to go over the previous exercise*
 * *Run each function to see if they are correct or not*
 
@@ -129,15 +136,11 @@ Review Exercise: Coin Flipper
 * *Recap the last Exercise and answer any questions*
 
 
-### 7. Instructor do (10 minutes)
-  > Introduce setTimeout
-  > Introduce clearTimeout
-
-  >Explain how they are located on the window object?
-
 ### 8. partners do (5 minutes)
   > Show them an example of setTimeout and clearTimeout
   >Have them pair program and adjust the values
+
+  Owens make the example here.
 
 ### 9. Student do (15 minutes)
 >Make a page with a a simple timer that sends an alert and plays a sound/video after 15 minutes
@@ -151,10 +154,6 @@ Review Exercise: Coin Flipper
   >Go over exercise
   >Answer any questions
 
-### 10. Instructor do (10 minutes)
-  >Introduce setInterval
-  >Introduce clearInterval
-
 ### 13. partners do (5 minutes)
 > Show them an example of setInterval and clearInterval
 >Have them pair program and adjust the values
@@ -163,6 +162,7 @@ Review Exercise: Coin Flipper
 >Create a stopwatch with Start, Stop
 >Bonus: Lap timer with Jquery
 > put everything in an object to illustrate how this will point to the window inside a timing event. (Because the function exists in the window object )
+
 ### 15. Everyone do (10 minutes)
 > Go Over stopwatch exercise
 
