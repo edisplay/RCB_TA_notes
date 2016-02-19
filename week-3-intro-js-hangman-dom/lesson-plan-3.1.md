@@ -255,8 +255,6 @@ solution
 
 * *explain it to the class*
 
-* *after demoing it then replace the conditional with (confirmSushi)*
-
 > you can't set a variable to an alert, because the alert function doesn't return anything
 
 > document.write will write to the screen, but it'll overwrite anything you had before on it
@@ -296,7 +294,7 @@ solution
 - if they don't then write the following to the screen: "Here's a tofu stir fry!"
 
 
-BONUS: additionally ask the user what their birth year is. If it's greater than 1987, alert to the screen that "you're older than Pavan". If it's smaller than 1987, then alert to the screen that "you're younger than Pavan". If it's equal to 1987, then alert "you're around the same age as Pavan" to the screen.
+BONUS: additionally ask the user what their birth year is. If it's greater than 1994, alert to the screen that "you're older than Justin Bieber". If it's smaller than 1994, then alert to the screen that "you're younger than Justin Bieber". If it's equal to 1994, then alert "you're around the same age as Justin Bieber" to the screen.
 
 
 solution:
@@ -321,12 +319,12 @@ solution:
     //bonus
     var year = prompt('What year were you born?');
 
-    if (year > 1987){
-      alert("you're younger than Pavan");
-    }else if(year < 1987){
-      alert("you're older than Pavan");
+    if (year > 1994){
+      alert("you're younger than Justin Bieber");
+    }else if(year < 1994){
+      alert("you're older than Justin Bieber");
     }else{
-      alert("you're around the same age as Pavan");
+      alert("you're around the same age as Justin Bieber");
     }
   </script>
 </body>
@@ -337,7 +335,7 @@ solution:
 
 Go over the previous exercise - call on students to speak
 
-##### 80 minutes have gone by
+##### 80 minutes have gone by - it is now 7:50
 
 ### 8. Instructor demo 15 minutes   
 
@@ -366,7 +364,9 @@ console.log(favBand);
 var age = prompt('your age');
 
 if (age !== 'Run DMC'){
-  alert('Your favorite band is not Run DMC.');
+  alert('Your age does not equal to Run DMC.'); //when will this alert?
+}else{
+  alert('Your age equals to Run DMC'); //when will this alert?
 }
 
 if (age == 28){
@@ -421,7 +421,11 @@ switch (new Date().getDay()) {
 
 - exercise regarding strings, numbers and booleans, conditional logic
 
-* *copy the code to the screen and ask the class to discuss what's going to get alerted to the screen (don't paste it to them)
+* *do not paste the below code to the students*
+
+* *ask the class to come to the front of the class*
+
+* *copy the code to your screen and ask the class to go to the left of the room if they think something will alert to the screen AND ask the class to go to the right of the room if they think something else will alert to the screen*
 
 ```
 <!DOCTYPE html>
