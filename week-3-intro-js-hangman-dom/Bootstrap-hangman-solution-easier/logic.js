@@ -20,6 +20,9 @@ var numGuesses  = 9;
 // startGame()
 // Its how we we will start and restart the game. (Note: It's not being run here. It's just being made for future use.)
 function startGame() {
+	// Reset the guesses back to 0
+	guessesLeft = 9;
+
 	chosenWord = wordsList[Math.floor(Math.random() * wordsList.length)]; // solution is chosen randomly from wordList
 	lettersInChosenWord = chosenWord.split(""); // the word is broken into individual letters
 	numBlanks = lettersInChosenWord.length; // we cound the number of letters in the word
@@ -27,6 +30,7 @@ function startGame() {
 	console.log(chosenWord); // We print the solution in console (for testing)
 
 	blanksAndSuccesses = []; // CRITICAL LINE - here we *reset* the guess and success array at each round. 
+	wrongGuesses = []; // CRITICAL LINE - here we *reset* the wrong guesses from the previous round.
 
 	// Fill up the blanksAndSuccesses list with appropriate number of blanks. This is based on number of letters in solution
 	for (var i=0; i <numBlanks; i++){
@@ -35,8 +39,17 @@ function startGame() {
 
 	console.log(blanksAndSuccesses); // print the initial blanks in console.
 
+
+	// Reprints the guessesLeft to 9
+	document.getElementById("guessesLeft").innerHTML = guessesLeft;
+	
 	// Prints the blanks at the beginning of each round in the HTML
 	document.getElementById("wordblanks").innerHTML= blanksAndSuccesses.join(" ");
+
+	// Clears the wrong guesses from the previous round
+	document.getElementById('wrongGuesses').innerHTML = wrongGuesses.join(" ");
+
+
 
 }
 
