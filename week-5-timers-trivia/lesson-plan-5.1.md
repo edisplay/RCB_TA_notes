@@ -29,6 +29,8 @@ Parts
 
 Owens something to keep in mind is to keep the homework solutions up next to you, and make sure every aspect of them are covered in the examples and exercises.
 
+Also, stay away from: talk about these things unless it has to with their past experiences (examples: talk about a time when you had to refactor your code to make it scale, talk about a time when you crashed a server and had to rearchitect the system to not do that, talk about a time when you used pseudocode to help you solve a problem better)
+
 ### 1. Student do (15 minutes)
 Review Exercise: Coin Flipper
 
