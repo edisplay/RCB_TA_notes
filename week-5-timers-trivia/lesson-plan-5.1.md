@@ -27,8 +27,6 @@ Parts
 * students will reinforce their knowledge of JavaScript
 * students will understand JavaScript Timing Events
 
-PART ONE:
-
 ### 1. Student do (15 minutes)
 Review Exercise: Coin Flipper
 
@@ -61,65 +59,70 @@ Review Exercise: Coin Flipper
 
 * *Slack this out*
 
+* With a partner, talk about what each [this] keyword will be.
+* Answer the questions at the bottom of the script.
+
 ```
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <title>What is this?</title>
-  <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.js"></script>
+  
 </head>
 <body>
   <button id="button">CLICK ME!</button>
 
-  <script>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.js"></script>
+  <script type="text/javascript">
 
-  var outside = function() {
-    console.log(this);
-  };
+    var outside = function() {
+      console.log(this); //1. what will be console logged out? What is *this* in this case?
+    };
 
+    $('#button').on('click', function(){
+      console.log(this); //2. what will be console logged out? What is *this* in this case?
+    });
 
+    var bob = {
+      firstName: "Bob",
+      lastName: "Smith",
+      whoIsBob: function() {
+        console.log(this);
+      },
+      fullName: function() {
+        //put something inside of here so that this works
+      }
+    };
 
-  $('#button').on('click', function(){
-    console.log(this);
-  });
+    //3. what will the console log output if this function gets called:
 
+    demoObject.whoIsBob();
 
+    //4. fill in the code inside the fullName function above so that the below code console.logs out Bob's full name using the firstName and lastName properties
 
-  var demoObject = {
-    firstName: "Bob",
-    lastName: "Smith",
-    aFunction: function () {
-      console.log(this);
-    },
-    anotherFunction: outside,
-    oneMoreFunction: outside(),
+    demoObject.fullName();
 
-  };
+    //5. Fill in the code below to make the theChosenOne function log "Keanu Reeves".
 
-  //What would I do to make the following line log "Bob Smith", using the "this" keyword?
-  // demoObject.fullName()
+    //put code here
+    //and put code here 
 
+    //don't touch any of the code below!!
+    var theChosenOne = function () {
+      console.log(this.firstName + "" + this.lastName)
+    }
 
-  //What would I do to make the following function log "Jane Doe", without changing the function at all?
-  // Hint: Do not use demoObject.
-  //
-  // var fullName = function () {
-  // console.log(this.firstName + "" + this.lastName)
-  // }
+    theChosenOne();
 
   </script>
 </body>
 </html>
-
-
-* With a partner, talk about what each [this] keyword will be.
-* Answer the questions at the bottom of the script.
 ```
 
 ### 5. Everyone Do (10 minutes)
 
-* *Open the Code to the above exercise located in [PUT FOLDER HERE!]*
+* *Open the Code to the above exercise located in file path goes here*
 * *Choose a team to go over the previous exercise*
 * *Run each function to see if they are correct or not*
 
