@@ -35,7 +35,7 @@ app.use(session({
     saveUninitialized: false
 }))
 
-//model hooks
+//model
 var PasswordHash = connection.define('hash', {
     name: {
         type: Sequelize.TEXT,
@@ -75,7 +75,6 @@ app.use(passport.session());
 //passport use methed as callback when being authenticated
 passport.use(new passportLocal.Strategy(function(username, password, done) {
     //check password in db
-    console.log(password, ' is psw');
     PasswordHash.findOne({
         where: {
             name: username
@@ -117,7 +116,6 @@ app.get('/home', function(req, res) {
     });
 });
 
-//logging out
 app.get('/logout', function(req, res) {
     //express logout redirect back to homepage
     req.logout();
@@ -130,7 +128,7 @@ app.post('/check', passport.authenticate('local', {
     failureRedirect: '/login'
 }));
 
-//check login with db
+//save into db
 app.post('/save', function(req, res) {
   var u = req.body.name;
   var p = req.body.psw;
