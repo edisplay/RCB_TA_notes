@@ -21,7 +21,7 @@ var numGuesses  = 9;
 // Its how we we will start and restart the game. (Note: It's not being run here. It's just being made for future use.)
 function startGame() {
 	// Reset the guesses back to 0
-	guessesLeft = 9;
+	numGuesses = 9;
 
 	chosenWord = wordsList[Math.floor(Math.random() * wordsList.length)]; // solution is chosen randomly from wordList
 	lettersInChosenWord = chosenWord.split(""); // the word is broken into individual letters
@@ -41,7 +41,7 @@ function startGame() {
 
 
 	// Reprints the guessesLeft to 9
-	document.getElementById("guessesLeft").innerHTML = guessesLeft;
+	document.getElementById("guessesLeft").innerHTML = numGuesses;
 	
 	// Prints the blanks at the beginning of each round in the HTML
 	document.getElementById("wordblanks").innerHTML= blanksAndSuccesses.join(" ");
