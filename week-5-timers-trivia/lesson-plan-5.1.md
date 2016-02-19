@@ -27,6 +27,8 @@ Parts
 * students will reinforce their knowledge of JavaScript
 * students will understand JavaScript Timing Events
 
+Owens something to keep in mind is to keep the homework solutions up next to you, and make sure every aspect of them are covered in the examples and exercises.
+
 ### 1. Student do (15 minutes)
 Review Exercise: Coin Flipper
 
@@ -132,15 +134,11 @@ Review Exercise: Coin Flipper
 * *Recap the last Exercise and answer any questions*
 
 
-### 7. Instructor do (10 minutes)
-  > Introduce setTimeout
-  > Introduce clearTimeout
-
-  >Explain how they are located on the window object?
-
 ### 8. partners do (5 minutes)
   > Show them an example of setTimeout and clearTimeout
   >Have them pair program and adjust the values
+
+  Owens make the example here.
 
 ### 9. Student do (15 minutes)
 >Make a page with a a simple timer that sends an alert and plays a sound/video after 15 minutes
@@ -154,10 +152,6 @@ Review Exercise: Coin Flipper
   >Go over exercise
   >Answer any questions
 
-### 10. Instructor do (10 minutes)
-  >Introduce setInterval
-  >Introduce clearInterval
-
 ### 13. partners do (5 minutes)
 > Show them an example of setInterval and clearInterval
 >Have them pair program and adjust the values
@@ -166,6 +160,7 @@ Review Exercise: Coin Flipper
 >Create a stopwatch with Start, Stop
 >Bonus: Lap timer with Jquery
 > put everything in an object to illustrate how this will point to the window inside a timing event. (Because the function exists in the window object )
+
 ### 15. Everyone do (10 minutes)
 > Go Over stopwatch exercise
 
