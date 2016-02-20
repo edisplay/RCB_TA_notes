@@ -4,22 +4,22 @@ You should before you teach anyone anything.
 
 Have a question? It's probably in the Instructor Guide.
 
-look at this file at the root of the repository: 
+look at this file at the root of the repository:
 [Instructor Guide](https://github.com/RutgersCodingBootcamp/All-Lesson-Plans/blob/master/instructor_guide)
 
 # Master Objectives (Internal Use - do not share with students - because it's a waste of time)
- 
+
 
 # Objectives
 
-* *slack out the objectives to the students, and call on random students to read each of them outloud.* 
+* *slack out the objectives to the students, and call on random students to read each of them outloud.*
 
 * *Make a BRIEF comment about each objective after a person reads it.*
 
-* students will use jQuery to render to HTML 
+* students will use jQuery to render to HTML
 * students will practice using objects with jQuery
 
-# Theme: 
+# Theme:
 
 # INSTRUCTOR MUST COVER ALL!!!
 
@@ -63,7 +63,7 @@ Review Exercise: 4.3.1_inception
 
 * *Have students talk to each other about what just happened. MAKE SURE THE CODE IS UP ON THE SCREEN!*
 
-### 5. Students do (25 minutes)  
+### 5. Students do (25 minutes)
 Student Excercise: 4.3.3_streetFighter
 * *Instructor demo the solution not the code.*
 
@@ -89,7 +89,7 @@ Student Excercise: 4.3.3_streetFighter
 
 ###### 75 minutes have passed
 
-### 7. Instructor do: ( 10 minutes ) 
+### 7. Instructor do: ( 10 minutes )
 4.3.4_fortune teller
 
 * *Slack this out to class*
@@ -118,7 +118,7 @@ Student Excercise: 4.3.3_streetFighter
 BREAK ( 40 minutes )
 --------- --------- ---------
 
-### 9. Student do: ( 15 minutes ) 
+### 9. Student do: ( 15 minutes )
 4.3.5_adventure
 
 * *Slack this out to class*
@@ -129,7 +129,7 @@ BREAK ( 40 minutes )
 	* When the web site loads, you must start with at least 2 different paths as click-able buttons.
 	* Each time a path is choosen or decision is made by the user you must give the user 2 more more path/decisions and render them on the screen.
 	* The game must have at least 2 rounds of choices after the starting one.
-	* Starts out with 2 choices -> 2 more -> 2 more. 
+	* Starts out with 2 choices -> 2 more -> 2 more.
 	* The game should have 8 short text based endings.
 	* You will be rendering onto the HTML but with only text and CSS.
 	* You will be creating all the assets for this app.
@@ -181,7 +181,7 @@ Student Exercise: 4.3.6_cashier
 |Eggs|$3.45|
 |Rice|$2.95|
 
-### 12. Student do ( 10 mins ) 
+### 12. Student do ( 10 mins )
 * *Have student write out the pseudo code. NO CODING YET!*
 
 * *Walk around and look at students computers to see what their pseudo code looks like*
@@ -189,7 +189,7 @@ Student Exercise: 4.3.6_cashier
 ### 13. Everyone do (5 minutes)
 * *Call on a student to go over explain their pseudo code*
 
-### 14. Partners do ( 25 mins ) 
+### 14. Partners do ( 25 mins )
 * *Have student start working on the lab! CODE CODE CODE!*
 
 ### 15. Everyone do: ( 15 minutes )
