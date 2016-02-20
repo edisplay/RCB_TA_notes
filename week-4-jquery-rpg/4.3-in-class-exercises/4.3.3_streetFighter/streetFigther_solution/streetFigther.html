@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Brady Bunch</title>
+    <title>Street Fighter</title>
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
     <style>
     body {
@@ -125,7 +125,7 @@
           render(characters[target], 'button-area-top', 'buttonImg', characterNames[i]);
           $('#'+characterNames[i]).on('click', function() {
               var name = ($(this)[0].id);
-              if (count < 2) {              
+              if (count < 2) {
                 render(characters[name], sides[count], 'biggerImg', name);
                 count++;
               };
@@ -136,7 +136,7 @@
           render(characters[target], 'button-area-bot', 'buttonImg', characterNames[i]);
           $('#'+characterNames[i]).on('click', function() {
               var name = ($(this)[0].id);
-              if (count < 2) {              
+              if (count < 2) {
                 render(characters[name], sides[count], 'biggerImg', name);
                 count++;
               };
