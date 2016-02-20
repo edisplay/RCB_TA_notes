@@ -30,7 +30,7 @@ Look at this file at the root of the repository:
 ### 1. Student do (15 minutes)
 Review Exercise: Coin Flipper
 
-* *Open this file into chrome and demo it for the class: [PUT FOLDER HERE!]*
+* *Open this file into chrome and demo it for the class: 5.1.1_coin_flip/5.1.1_coin_flip.html*
 
 * *Slack this out to class*
 
@@ -48,7 +48,7 @@ Review Exercise: Coin Flipper
 
 ### 2. Everyone do (10 minutes)
 
-* *Open the Code to the above exercise located in [PUT FOLDER HERE!]*
+* *Open the Code for the above exercise, located in the 5.1.1_coin_flip folder*
 
 * *Call on a student to go over the previous exercise*
 
@@ -124,7 +124,7 @@ With a partner, answer the questions in the script:
 
 ### 5. Everyone Do (10 minutes)
 
-* *Open the Code to the above exercise located in file path goes here*
+* *Open the Code for the above exercise located in 5.4.1_this.html*
 * *Choose a team/pair to go over the previous exercise*
 * *Run each function to see if they are correct or not*
 
@@ -157,7 +157,7 @@ With a partner, answer the questions in the script:
 ##### BREAK ( 15 minutes ) - it is now 8:05 pm, you have 85 minutes left of class time
 
 ### 10. Instructor do (5 minutes)
-* *Open 5.1.9_simple_timer*
+* *Open the files in the 5.1.9_simple_timer folder *
 * *Recap the Exercise and answer any questions*
 
 ### 11. partners do (5 minutes)
@@ -209,12 +209,12 @@ With a partner, answer the questions in the script:
 
 ```
 ### 12. Instructor do (5 minutes)
-* *Open 5.1.11_interval*
+* *Open 5.1.11_interval.html*
 * *Choose a team/pair to go over the previous exercise*
 * *Answer any questions about anything we've covered so far*
 
 ### 13. Student do (20 minutes)
-* *Open 5.1.13_stopwatch.html in the 5.1.13_stopwatch folder and demonstrate the stopwatch to the class*
+* *Open 5.1.13_stopwatch/5.1.13_stopwatch.html and demonstrate the stopwatch to the class*
 * *Leave it up while they work.*
 * *Slack the following exercise:*
 
@@ -230,8 +230,8 @@ With a partner, answer the questions in the script:
 
 
 ### 15. Student do (20 minutes)
-* *Open the 5.1.15_slideshow.html in the 5.1.15_slideshow folder and show the students what they will be making.*
-* *Slack out the following exercise AND the "loading.gif" file in the 5.1.14_slideshow/images folder:*
+* *Open 5.1.15_slideshow/5.1.15_slideshow.html and show the students what they will be making.*
+* *Slack out the following exercise _AND the "loading.gif"_ file in the 5.1.14_slideshow/images folder:*
 
 * Create a slideshow using JQuery and JavaScript Timing Events
 * Select a few images and make a slideshow
