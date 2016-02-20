@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Brady Bunch</title>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+    <style>
+    body {
+        background: url(images/streetfighter_bg.png) no-repeat;
+        width: 500px;
+        height: 360px;
+    }
+    #button-area-top {
+      margin-top: 218px;
+      margin-left: 140px;
+    }
+    #button-area-bot {
+      margin-left: 140px;
+    }
+    .buttons {
+        width: 50px;
+        height: 65px;
+        float: left;
+    }
+    .char {
+      width: 90px;
+      height: 125px;
+    }
+    .clear {
+        clear: left;
+    }
+    .left-side{
+      position: absolute;
+      top: 200px;
+    }
+    .right-side{
+      position: absolute;
+      top: 205px;
+      left: 380px;
+    }
+    </style>
+</head>
+
+<body>
+
+    <div id="button-area-top"></div>
+    <div class="clear"></div>
+
+    <div id="button-area-bot"></div>
+    <div class="clear"></div>
+
+    <p class="left-side"></p>
+    <p class="right-side"></p>
+
+    <script type="text/javascript">
+
+    var count = 0;
+
+    $(document).ready(function() {
+        //fight fight fight
+        var characters = {
+            'blanka': {
+                name: "blanka",
+                biggerImg: "images/blanka_big.png",
+                buttonImg: "images/blanka_button.png"
+            },
+            'chunli': {
+                name: "chunli",
+                biggerImg: "images/chunli_big.png",
+                buttonImg: "images/chunli_button.png"
+            },
+            'dhalsim': {
+                name: "dhalsim",
+                biggerImg: "images/dhalsim_big.png",
+                buttonImg: "images/dhalsim_button.png"
+            },
+            'ehonda': {
+                name: "ehonda",
+                biggerImg: "images/ehonda_big.png",
+                buttonImg: "images/ehonda_button.png"
+            },
+            'guile': {
+                name: "guile",
+                biggerImg: "images/guile_big.png",
+                buttonImg: "images/guile_button.png"
+            },
+            'ken': {
+                name: "ken",
+                biggerImg: "images/ken_big.png",
+                buttonImg: "images/ken_button.png"
+            },
+            'ryu': {
+                name: "ryu",
+                biggerImg: "images/ryu_big.png",
+                buttonImg: "images/ryu_button.png"
+            },
+            'zangie': {
+                name: "zangie",
+                biggerImg: "images/zangief_big.png",
+                buttonImg: "images/zangief_button.png"
+            }
+        };
+
+        var render = function(character, renderArea, size, buttonId) {
+            if (size == 'buttonImg') {
+              var charDiv = $("<div data-name='" + character.name + "'>");
+              var charImage = $("<img alt='image' class='buttons' id="+buttonId+">").attr("src", character.buttonImg);
+              charDiv.append(charImage);
+              $("#"+renderArea).append(charDiv);
+            }else{
+              console.log(character, renderArea, size, buttonId);
+              var charDiv = $("<div data-name='" + character.name + "-big'>");
+              var charImage = $("<img alt='image' class='char'>").attr("src", character.biggerImg);
+              charDiv.append(charImage);
+              $("."+renderArea).append(charDiv);
+            };
+        };
+
+        var characterNames = ['blanka', 'chunli', 'dhalsim', 'ehonda', 'guile', 'ken', 'ryu', 'zangie'];
+        var sides = ['left-side','right-side'];
+
+        for (var i = 0; i < 4; i++) {
+          var target = characterNames[i];
+          render(characters[target], 'button-area-top', 'buttonImg', characterNames[i]);
+          $('#'+characterNames[i]).on('click', function() {
+              var name = ($(this)[0].id);
+              if (count < 2) {              
+                render(characters[name], sides[count], 'biggerImg', name);
+                count++;
+              };
+          });
+        };
+        for (var i = 4; i < 8; i++) {
+          var target = characterNames[i];
+          render(characters[target], 'button-area-bot', 'buttonImg', characterNames[i]);
+          $('#'+characterNames[i]).on('click', function() {
+              var name = ($(this)[0].id);
+              if (count < 2) {              
+                render(characters[name], sides[count], 'biggerImg', name);
+                count++;
+              };
+          });
+        };
+    });
+    </script>
+</body>
+
+</html>
