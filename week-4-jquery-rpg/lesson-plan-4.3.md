@@ -42,7 +42,7 @@ Review Exercise: 4.3.1_inception
 	* Each button must be able to run the corresponding function inside of the object given to you in the starter file
 	* Each time a button is clicked, the function must alert to the user that the mission they clicked on is complete and change the status inside the object to complete.
 	* Once all mission is complete the user can click the 'exit limbo' button to finish the story, once 'exit limbo' is clicked alert the user "YAY?".
-	* You can only change the areas that's '/*BLANKED OUT*/' in the starter code given, you can not change the formate of the javaScript object.
+	* You can not change the format of the javaScript object.
 ```
 
 ### 2. Everyone do (10 minutes)
@@ -78,7 +78,7 @@ Student Excercise: 4.3.3_streetFighter
 	* Small images for the buttons when selecting a character
 	* Bigger images for the display of the characters
 	* And a background image
-* When the web page is loaded
+	* When the web page is loaded
 	* Create a button for each character in the game and render the small images on the the selection area of the page.
 	* Whenever a button is clicked it adds the selected character's bigger image and name to the left side of the page.
 	* Whenever a button is clicked a second time it adds the selected character's bigger image and name to the right side of the page.

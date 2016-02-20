@@ -13,6 +13,7 @@
         .mission {
             height: 100px;
             background-color: white;
+            border-radius: 25px;
             font-size: 30px;
             margin: 5px;
             padding: 10px;
@@ -64,29 +65,23 @@
             },
             yusufDream: {
                 completeMission: function() {
-                    inception.missionLog.yusufMission = true;
-                    alert("Yusuf's Mission Complete");
+
                 },
                 arthurDream: {
                     completeMission: function() {
-                        inception.missionLog.arthurMission = true;
-                        alert("Arthur's Mission Complete");
+
                     },
                     eamesDream: {
                         completeMission: function() {
-                            inception.missionLog.eamesMission = true;
-                            alert("Eames's Mission Complete");
+
                         },
                         cubbDream: {
                             completeMission: function() {
-                                inception.missionLog.cubbMission = true;
-                                alert("Cubb's Mission Complete");
+
                             },
                             exitLimbo: {
                                 completeMission: function() {
-                                    if (inception.missionLog.yusufMission && inception.missionLog.arthurMission && inception.missionLog.eamesMission && inception.missionLog.cubbMission == true) {
-                                        alert("YAY?");
-                                    };
+
                                 }
                             }
                         }
