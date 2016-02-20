@@ -63,27 +63,27 @@
             },
             yusufDream: {
                 completeMission: function() {
-                    inception.missionLog.yusufMission = true;
+                    inception.missionLog.yusufMission = "Complete";
                     alert("Yusuf's Mission Complete");
                 },
                 arthurDream: {
                     completeMission: function() {
-                        inception.missionLog.arthurMission = true;
+                        inception.missionLog.arthurMission = "Complete";
                         alert("Arthur's Mission Complete");
                     },
                     eamesDream: {
                         completeMission: function() {
-                            inception.missionLog.eamesMission = true;
+                            inception.missionLog.eamesMission = "Complete";
                             alert("Eames's Mission Complete");
                         },
                         cubbDream: {
                             completeMission: function() {
-                                inception.missionLog.cubbMission = true;
+                                inception.missionLog.cubbMission = "Complete";
                                 alert("Cubb's Mission Complete");
                             },
                             exitLimbo: {
                                 completeMission: function() {
-                                    if (inception.missionLog.yusufMission && inception.missionLog.arthurMission && inception.missionLog.eamesMission && inception.missionLog.cubbMission == true) {
+                                    if (inception.missionLog.yusufMission && inception.missionLog.arthurMission && inception.missionLog.eamesMission && inception.missionLog.cubbMission == "Complete") {
                                         alert("YAY?");
                                     };
                                 }
