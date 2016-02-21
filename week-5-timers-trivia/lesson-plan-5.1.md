@@ -18,39 +18,37 @@ Look at this file at the root of the repository:
 # INSTRUCTOR MUST COVER!!!
 
 ```
-Parts
+7,8,11,13
 ```
 
 # Objectives (Slack out to students, have unique students read each one and Instructor makes a comment after each one is read)
 
-* students will reinforce their knowledge of JQuery
-* students will reinforce their knowledge of JavaScript
-* students will understand JavaScript Timing Events
-
-Owens something to keep in mind is to keep the homework solutions up next to you, and make sure every aspect of them are covered in the examples and exercises.
-
-Also, stay away from: talk about these things unless it has to with their past experiences (examples: talk about a time when you had to refactor your code to make it scale, talk about a time when you crashed a server and had to rearchitect the system to not do that, talk about a time when you used pseudocode to help you solve a problem better)
+* Students will reinforce their knowledge of JQuery
+* Students will reinforce their knowledge of JavaScript
+* Students will understand JavaScript Timing Events
 
 ### 1. Student do (15 minutes)
 Review Exercise: Coin Flipper
 
-* *Open this file into chrome and demo it for the class: [PUT FOLDER HERE!]*
+* *Open this file into chrome and demo it for the class: 5.1.1_coin_flip/5.1.1_coin_flip.html*
 
 * *Slack this out to class*
 
 ```
 * Make a Coin Flipper
-* The user presses a button, and the app randomly chooses heads or tails and displays it on the screen.
-* If heads, use: http://www.marshu.com/articles/images-website/articles/presidents-on-coins/quarter-coin-head.jpg
-* If tails, display: http://www.marshu.com/articles/images-website/articles/presidents-on-coins/quarter-coin-tail.jpg
+* The user chooses Heads or Tails, and the app randomly selects heads or tails and displays the outcome on the screen. The app then displays whether or not the user won or lost.
+* If heads, use: http://random-ize.com/coin-flip/us-quarter/us-quarter-front.jpg
+* If tails, display: http://random-ize.com/coin-flip/us-quarter/us-quarter-back.jpg
+* Put your JavaScript in its own file and link to it in the HTML
 * BONUS:
-  * Allow the user to pick Heads or Tails before they press the coin flip button. Notify them if they guessed correctly or incorrectly.
+  * Keep track of the number of Heads or Tails and display the results on the screen.
+  * Add CSS styling
 
 ```
 
 ### 2. Everyone do (10 minutes)
 
-* *Open the Code to the above exercise located in [PUT FOLDER HERE!]*
+* *Open the Code for the above exercise, located in the 5.1.1_coin_flip folder*
 
 * *Call on a student to go over the previous exercise*
 
@@ -61,10 +59,10 @@ Review Exercise: Coin Flipper
 
 ### 4. Partners do (10 minutes)
 
-* *Slack this out*
+* *Walk around, make sure Students are working with a Partner!*
+* *Slack this out:*
 
-* With a partner, talk about what each [this] keyword will be.
-* Answer the questions at the bottom of the script.
+With a partner, answer the questions in the script:
 
 ```
 <!DOCTYPE html>
@@ -72,7 +70,7 @@ Review Exercise: Coin Flipper
 <head>
   <meta charset="UTF-8">
   <title>What is this?</title>
-  
+
 </head>
 <body>
   <button id="button">CLICK ME!</button>
@@ -110,7 +108,7 @@ Review Exercise: Coin Flipper
     //5. Fill in the code below to make the theChosenOne function log "Keanu Reeves".
 
     //put code here
-    //and put code here 
+    //and put code here
 
     //don't touch any of the code below!!
     var theChosenOne = function () {
@@ -126,8 +124,8 @@ Review Exercise: Coin Flipper
 
 ### 5. Everyone Do (10 minutes)
 
-* *Open the Code to the above exercise located in file path goes here*
-* *Choose a team to go over the previous exercise*
+* *Open the Code for the above exercise located in 5.4.1_this.html*
+* *Choose a team/pair to go over the previous exercise*
 * *Run each function to see if they are correct or not*
 
 
@@ -135,47 +133,118 @@ Review Exercise: Coin Flipper
 
 * *Recap the last Exercise and answer any questions*
 
+### 7. Instructor does (10 minutes)
 
-### 8. partners do (5 minutes)
-  > Show them an example of setTimeout and clearTimeout
-  >Have them pair program and adjust the values
+* *Open 5.1.7_timeout.html*
+* *Introduce setTimeout and clearTimeout (we will get to setInterval after the break)*
+* *Go over the file and explain what it's doing.*
+* *Be sure to mention:*
+  * *These are vanilla Javascript methods, not JQuery*
 
-  Owens make the example here.
+### 8. Instructor does (5 minutes)
+* *Open 5.1.8_context.html*
+* *Explain how functions executed by a setTimeout are run in a different execution context.*
 
-### 9. Student do (15 minutes)
->Make a page with a a simple timer that sends an alert and plays a sound/video after 15 minutes
->They will use this to time the break
+### 9. Student do (10 minutes)
+* *Slack the following:*
 
-###### 85 minutes have passed
+* Make a page with a a simple timer that sends an alert and plays a sound after 15 minutes
+* Have it send an alert when 5 minutes has passed, 10 minutes has passed and when the time is up.
+* You will use this to time the break!
 
-##### BREAK ( 15 minutes ) - it is now 8:10 pm, you have 80 minutes left of class time
+###### 80 minutes have passed
 
+##### BREAK ( 15 minutes ) - it is now 8:05 pm, you have 85 minutes left of class time
+
+### 10. Instructor do (5 minutes)
+* *Open the files in the 5.1.9_simple_timer folder *
+* *Recap the Exercise and answer any questions*
+
+### 11. partners do (5 minutes)
+* *Have students partner up and explain to each other what the following is doing*
+* *Slack the following:*
+
+
+
+```
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+
+<div id="show-number"></div>
+<br>
+<button id="stop">Stop</button>
+<button id="resume">Resume</button>
+
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.js"></script>
+  <script>
+    var number = 100;
+    $('#stop').click(stop);
+    $('#resume').click(run);
+
+    function run(){
+      counter = setInterval(increment, 1000);
+    }
+    function increment(){
+      number--
+      document.getElementById('show-number').innerHTML = ('<h2>' + number + '</h2>')
+      if (number === 0){
+        stop();
+        alert('Time Up!')
+      }
+    }
+
+    function stop(){
+      clearInterval(counter);
+    }
+
+  run();
+  </script>
+</body>
+</html>
+
+```
 ### 12. Instructor do (5 minutes)
-  >Go over exercise
-  >Answer any questions
+* *Open 5.1.11_interval.html*
+* *Choose a team/pair to go over the previous exercise*
+* *Answer any questions about anything we've covered so far*
 
-### 13. partners do (5 minutes)
-> Show them an example of setInterval and clearInterval
->Have them pair program and adjust the values
+### 13. Student do (20 minutes)
+* *Open 5.1.13_stopwatch/5.1.13_stopwatch.html and demonstrate the stopwatch to the class*
+* *Leave it up while they work.*
+* *Slack the following exercise:*
 
-### 14. Student do (20 minutes)
->Create a stopwatch with Start, Stop
->Bonus: Lap timer with Jquery
-> put everything in an object to illustrate how this will point to the window inside a timing event. (Because the function exists in the window object )
+```
+* Use JQuery and the timing events you learned today to create a stopwatch with Start, Stop, and Reset buttons.
+  * Bonus: Add a lap timer.
+```
 
-### 15. Everyone do (10 minutes)
-> Go Over stopwatch exercise
+### 14. Everyone do (15 minutes)
+* *Open the files in the 5.1.13_stopwatch folder*
+* *Go over the previous exercise*
+* *You do not need to show the CSS unless someone asks to see it. The focus is on the javascript*
 
-### 19. Student do (20 minutes)
-> Create slideshow using jquery and timing events
 
-### 18. Everyone do (5 minutes)
-> Go Over, answer questions
+### 15. Student do (20 minutes)
+* *Open 5.1.15_slideshow/5.1.15_slideshow.html and show the students what they will be making.*
+* *Slack out the following exercise _AND the "loading.gif"_ file in the 5.1.14_slideshow/images folder:*
 
-### 21. Instructor Do - (5 minutes)
- >Present Homework
- >Trivia game
- >Simple option and Advanced
+* Create a slideshow using JQuery and JavaScript Timing Events
+* Select a few images and make a slideshow
+* Display the "loading.gif" image in between each picture for one second.
+
+### 16. Everyone do (10 minutes)
+* *Open the files in the 5.1.15_slideshow folder*
+* *Go over the previous exercise*
+
+### 17. Instructor Do - (5 minutes)
+* *Present the homework - there are two options, a basic trivia game and a slightly more advanced one.*
+* *The students learned have learned everything they need to complete the homework, and can complete it tonight.*
+* *Play the two videos (advanced-trivia-demo.mov and basic-trivia-demo.mov)*
 
 
 # Copyright
