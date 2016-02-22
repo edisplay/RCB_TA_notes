@@ -151,6 +151,7 @@ With a partner, answer the questions in the script:
 * *Explain how functions executed by a setTimeout are run in a different execution context.*
 
 ### 9. Student do (10 minutes)
+* *Slack out 5.1.9_simple_timer/skeleton/5.1.9_simple_timer.html*
 * *Slack the following:*
 
 * Make a page with a a simple timer that sends an alert and plays a sound after 15 minutes
@@ -221,11 +222,17 @@ With a partner, answer the questions in the script:
 ### 13. Student do (20 minutes)
 * *Open 5.1.13_stopwatch/5.1.13_stopwatch.html and demonstrate the stopwatch to the class*
 * *Leave it up while they work.*
+* *You will be giving them two starter files, a JavaScript file and an HTML file.*
+* *Slack out 5.1.13_stopwatch/skeleton/5.1.13_stopwatch.html*
+* *Slack out 5.1.13_stopwatch/skeleton/stopwatch.js*
 * *Slack the following exercise:*
 
 ```
+* You will not need to edit the HTML file we give you.
+* Create a file called stopwatch.js in the same folder as your html file. Paste the JavaScript from Slack into it.
 * Use jQuery and the timing events you learned today to create a stopwatch with Start, Stop, and Reset buttons.
   * Bonus: Add a lap timer.
+  * Bonus: Use CSS to style the timer
 ```
 
 ### 14. Everyone do (15 minutes)
@@ -236,7 +243,8 @@ With a partner, answer the questions in the script:
 
 ### 15. Student do (20 minutes)
 * *Open 5.1.15_slideshow/5.1.15_slideshow.html and show the students what they will be making.*
-* *Slack out the following exercise _AND the "loading.gif"_ file in the 5.1.14_slideshow/images folder:*
+* *Slack out the contents of the 5.1.15_slideshow/skeleton folder*
+* *Slack the following exercise:*
 
 * Create a slideshow using jQuery and JavaScript Timing Events
 * Select a few images and make a slideshow

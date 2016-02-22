@@ -1,3 +1,4 @@
+
 var images = ["images/bootstrap.png", "images/github-logo.jpg", "images/logo_JavaScript.png"];
 
 var count = 0;
@@ -13,9 +14,9 @@ function displayImage (){
 }
 
 function nextImage (){
+  count++;
   $('#image-holder').html('<img src="images/loading.gif" width="200px"/>');
   setTimeout(displayImage, 1000);
-  count++;
   if (count==images.length){
     count = 0;
   }
@@ -26,3 +27,5 @@ function startSlideshow (){
 function stopSlideshow () {
   clearInterval(showImage);
 }
+
+displayImage();
