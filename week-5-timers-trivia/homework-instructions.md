@@ -5,9 +5,11 @@
 
 * You will use HTML, CSS to render the game on the web page.
 
-* You will use Javascript and Jquery to create the logic of the game.
+* You will use JavaScript for the logic of the game and jQuery to manipulate the html of the game.
 
-* _See demonstration_
+* You will watch the demo videos to see how the game works.
+    * basic-trivia-demo.mov
+    * advanced-trivia-demo.mov
 
 ### Remember
 
@@ -16,8 +18,8 @@ You will be fully capable of doing this homework by the end of Saturday's class.
 
 ### Setup
   1. Create a folder called `TriviaGame`
-  2. Create a file called `index.html`. Your page's HTML will go in here.
-  2. Create a folder called `assets`.
+  2. Create a file inside of the `TriviaGame` folder called `index.html`. Your page's HTML will go in here.
+  2. Create a folder inside of the `TriviaGame` folder called `assets`.
   2. Inside `assets`: create three folders: `css`, `javascript`, `images`
   3. Create a `style.css` in your `css` folder. Place your CSS in here.
   4. Create an `app.js` file in your `javascript` folder. Write your JavaScript in here.
@@ -41,3 +43,6 @@ You will be fully capable of doing this homework by the end of Saturday's class.
 
 ### Finally
   * Styling and theme are completely up to you. Get Creative!
+
+# Copyright
+Coding Boot Camp (C) 2016. All Rights Reserved.

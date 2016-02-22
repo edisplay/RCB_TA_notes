@@ -1,3 +1,5 @@
+//solution if you put the whole thing in an object:
+
 window.onload = function(){
   $('#lap').click(stopwatch.recordLap);
   $('#stop').click(stopwatch.stop);
@@ -9,8 +11,8 @@ var stopwatch = {
   time:0,
   lap:1,
   reset:function(){
-    this.time = 0;
-    this.lap = 0;
+    stopwatch.time = 0;
+    stopwatch.lap = 1;
     $('#display').html('00:00');
     $('#laps').html('');
   },
@@ -47,7 +49,7 @@ var stopwatch = {
 
 };
 
-//
+// Solution if you choose not to put it in an object
 //
 // var time = 0;
 // var lap = 1;

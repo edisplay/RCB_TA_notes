@@ -13,7 +13,7 @@ Look at this file at the root of the repository:
 * Implement complex logical conditions to meet an objective.
 * Write clean code with proper variable names, indentation according to industry best practices
 
-# Theme: JQuery/JavaScript Review and Timing Events
+# Theme: jQuery/JavaScript Review and Timing Events
 
 # INSTRUCTOR MUST COVER!!!
 
@@ -23,27 +23,32 @@ Look at this file at the root of the repository:
 
 # Objectives (Slack out to students, have unique students read each one and Instructor makes a comment after each one is read)
 
-* Students will reinforce their knowledge of JQuery
+* Students will reinforce their knowledge of jQuery
 * Students will reinforce their knowledge of JavaScript
 * Students will understand JavaScript Timing Events
 
 ### 1. Student do (15 minutes)
 Review Exercise: Coin Flipper
 
-* *Open this file into chrome and demo it for the class: 5.1.1_coin_flip/5.1.1_coin_flip.html*
+* *Open this file into chrome and demo it for the class: 5.1.1_coin_flip/solution/5.1.1_coin_flip.html*
 
-* *Slack this out to class*
+* *Slack these instructions out to class*
+* *Slack out 5.1.1_coin_flip/skeleton/coin_flip.html*
 
 ```
-* Make a Coin Flipper
-* The user chooses Heads or Tails, and the app randomly selects heads or tails and displays the outcome on the screen. The app then displays whether or not the user won or lost.
-* If heads, use: http://random-ize.com/coin-flip/us-quarter/us-quarter-front.jpg
-* If tails, display: http://random-ize.com/coin-flip/us-quarter/us-quarter-back.jpg
-* Put your JavaScript in its own file and link to it in the HTML
+* Make a Coin Flipper Game
+
+* Follow the directions in the html file
+
+* How the app works:
+  * The user chooses Heads or Tails, and the computer randomly selects heads or tails and displays the outcome on the screen. The app then displays whether or not the user won or lost.
+  * If heads, use: http://random-ize.com/coin-flip/us-quarter/us-quarter-front.jpg
+  * If tails, display: http://random-ize.com/coin-flip/us-quarter/us-quarter-back.jpg
+
 * BONUS:
+  * Put your JavaScript in its own file and link to it in the HTML
   * Keep track of the number of Heads or Tails and display the results on the screen.
   * Add CSS styling
-
 ```
 
 ### 2. Everyone do (10 minutes)
@@ -75,7 +80,7 @@ With a partner, answer the questions in the script:
 <body>
   <button id="button">CLICK ME!</button>
 
-  <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.js"></script>
+  <script type="text/javascript" src="https://code.jQuery.com/jQuery-2.2.0.js"></script>
   <script type="text/javascript">
 
     var outside = function() {
@@ -139,13 +144,14 @@ With a partner, answer the questions in the script:
 * *Introduce setTimeout and clearTimeout (we will get to setInterval after the break)*
 * *Go over the file and explain what it's doing.*
 * *Be sure to mention:*
-  * *These are vanilla Javascript methods, not JQuery*
+  * *These are vanilla Javascript methods, not jQuery*
 
 ### 8. Instructor does (5 minutes)
 * *Open 5.1.8_context.html*
 * *Explain how functions executed by a setTimeout are run in a different execution context.*
 
 ### 9. Student do (10 minutes)
+* *Slack out 5.1.9_simple_timer/skeleton/5.1.9_simple_timer.html*
 * *Slack the following:*
 
 * Make a page with a a simple timer that sends an alert and plays a sound after 15 minutes
@@ -180,7 +186,7 @@ With a partner, answer the questions in the script:
 <button id="stop">Stop</button>
 <button id="resume">Resume</button>
 
-  <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.js"></script>
+  <script type="text/javascript" src="https://code.jQuery.com/jQuery-2.2.0.js"></script>
   <script>
     var number = 100;
     $('#stop').click(stop);
@@ -216,11 +222,17 @@ With a partner, answer the questions in the script:
 ### 13. Student do (20 minutes)
 * *Open 5.1.13_stopwatch/5.1.13_stopwatch.html and demonstrate the stopwatch to the class*
 * *Leave it up while they work.*
+* *You will be giving them two starter files, a JavaScript file and an HTML file.*
+* *Slack out 5.1.13_stopwatch/skeleton/5.1.13_stopwatch.html*
+* *Slack out 5.1.13_stopwatch/skeleton/stopwatch.js*
 * *Slack the following exercise:*
 
 ```
-* Use JQuery and the timing events you learned today to create a stopwatch with Start, Stop, and Reset buttons.
+* You will not need to edit the HTML file we give you.
+* Create a file called stopwatch.js in the same folder as your html file. Paste the JavaScript from Slack into it.
+* Use jQuery and the timing events you learned today to create a stopwatch with Start, Stop, and Reset buttons.
   * Bonus: Add a lap timer.
+  * Bonus: Use CSS to style the timer
 ```
 
 ### 14. Everyone do (15 minutes)
@@ -231,11 +243,14 @@ With a partner, answer the questions in the script:
 
 ### 15. Student do (20 minutes)
 * *Open 5.1.15_slideshow/5.1.15_slideshow.html and show the students what they will be making.*
-* *Slack out the following exercise _AND the "loading.gif"_ file in the 5.1.14_slideshow/images folder:*
+* *Slack out the contents of the 5.1.15_slideshow/skeleton folder*
+* *Slack the following exercise:*
 
-* Create a slideshow using JQuery and JavaScript Timing Events
+* Create a slideshow using jQuery and JavaScript Timing Events
 * Select a few images and make a slideshow
 * Display the "loading.gif" image in between each picture for one second.
+  * Bonus: Add CSS styling
+
 
 ### 16. Everyone do (10 minutes)
 * *Open the files in the 5.1.15_slideshow folder*

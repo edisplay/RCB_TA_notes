@@ -4,12 +4,18 @@ var wins = 0;
 var losses = 0;
 
 $('#heads').click(function() {
+  headsCount++;
+  $('#headsChosen').html(headsCount); 
+
   $('#guess').html('<b>Heads</b>');
   flipThatCoin(0);
 });
 
 
 $('#tails').click(function() {
+  tailsCount++;
+  $('#tailsChosen').html(tailsCount); 
+  
   $('#guess').html('<b>Tails</b>');
   flipThatCoin(1);
 });
@@ -18,12 +24,9 @@ function flipThatCoin(result) {
   var randomNumber = Math.floor(Math.random() * 2);
 
   if (randomNumber === 0) {
-    headsCount++;
     $('#coin-image').html('<img src="http://random-ize.com/coin-flip/us-quarter/us-quarter-front.jpg" />');
   } else {
-    tailsCount++;
     $('#coin-image').html('<img src="http://random-ize.com/coin-flip/us-quarter/us-quarter-back.jpg" />');
-
   }
 
   if (result === randomNumber) {
