@@ -1,7 +1,10 @@
+# Theme: Objects and Functions
+
 ### Objectives
 
 * students will use use objects differently than the way they use arrays
 * students will use functions to write DRY code
+* students will explain the code of a mini game that uses an object
 
 ### 1. Partners do (10 minutes)
 
@@ -12,7 +15,7 @@ Part One
 4. Why did we start the second for loop with i=0 instead of i=1?
 
 Part Two
-add a break point inside of both for loops, execute the code and evertime the browser stops, check the value of 
+add a break point inside of both for loops, execute the code and everytime the browser stops, check the value of favTVshows
 
 ```
 <!DOCTYPE html>

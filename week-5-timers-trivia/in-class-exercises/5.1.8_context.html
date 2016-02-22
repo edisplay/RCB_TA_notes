@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Context</title>
+</head>
+<body>
+  <script type="text/javascript">
+      var person = {
+        name: "Donald",
+        sayHi: function() {
+          console.log("Hi, I'm " + this.name);
+        }
+      };
+
+      person.sayHi();
+      //Hi, I'm Donald
+
+      setTimeout(person.introduce, 50);
+      //Hi, I'm undefined
+  </script>
+</body>
+</html>
