@@ -33,7 +33,7 @@ Review Exercise: Coin Flipper
 * *Open this file into chrome and demo it for the class: 5.1.1_coin_flip/solution/5.1.1_coin_flip.html*
 
 * *Slack these instructions out to class*
-* *Slack out 5.1.1_coin_flip/skeleton/coin_flip.html
+* *Slack out 5.1.1_coin_flip/skeleton/coin_flip.html*
 
 ```
 * Make a Coin Flipper Game
@@ -249,6 +249,8 @@ With a partner, answer the questions in the script:
 * Create a slideshow using jQuery and JavaScript Timing Events
 * Select a few images and make a slideshow
 * Display the "loading.gif" image in between each picture for one second.
+  * Bonus: Add CSS styling
+
 
 ### 16. Everyone do (10 minutes)
 * *Open the files in the 5.1.15_slideshow folder*
