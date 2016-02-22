@@ -4,13 +4,8 @@ var request = require('request');
 var cheerio = require('cheerio');
 var fs = require('fs');
 
-// var mongoose = require('mongoose');
-// var Headline = require('./Headline.model')
-// var db = 'mongodb://localhost/headlineDB';
-// mongoose.connect(db);
-
 var mongojs = require('mongojs');
-var db = mongojs('mydb');
+var db = mongojs('newsDB');
 var mycollection = db.collection('headlines');
 
 var app = express();
@@ -59,7 +54,7 @@ request('https://news.ycombinator.com', function (error, response, html) {
 */
 
 //scrape ny times
-var times = function(input) {
+var times = function(input, cb) {
 	if (input == 'grab') {
 		var url = "http://www.nytimes.com";
 		request(url, function(err, res, body) {
@@ -95,21 +90,39 @@ var times = function(input) {
 		    //console.log(obj);
 
 		    //storing into db
-		    mycollection.save(obj);
+		    mycollection.save({
+		    	"nyt": obj,
+		    	date: new Date()
+		    });
 		});
 
 	}else if (input == 'check') {
-		//var f = mycollection.find('headlines');
-		mycollection.find(function (err, docs) {
-		    // docs is an array of all the documents in mycollection
-		    console.log(docs);
-		})
+
+		// mycollection.find(function (err, docs) {
+		//     // docs is an array of all the documents in mycollection
+		//     console.log(docs.nyt);
+		// })
+
+		mycollection.findOne({
+		    _id: mongojs.ObjectId('56cb8e77c628e17c45c59d3a')
+		}, function(err, doc) {
+		    cb(doc);
+		});
+	
 	};
 	
 }
 
-//scrape ny times
-times('check');
+/* scrape ny times */
+// times('grab');
+// times('check');
+
+//basic route use cb return json data from mongodb
+app.get('/', function(req, res) {
+	times('check', function(data) {
+		res.json(data)
+	})
+})
 
 app.listen(port, function(){
 	console.log("lisenting on port:"+port);
