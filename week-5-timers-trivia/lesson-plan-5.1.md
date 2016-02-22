@@ -30,10 +30,10 @@ Look at this file at the root of the repository:
 ### 1. Student do (15 minutes)
 Review Exercise: Coin Flipper
 
-* *Open this file into chrome and demo it for the class: 5.1.1_coin_flip/solution/5.1.1_coin_flip.html*
+* *Open this file into chrome and demo it for the class: in-class-exercises/5.1.1_coin_flip/solution/5.1.1_coin_flip.html*
 
 * *Slack these instructions out to class*
-* *Slack out 5.1.1_coin_flip/skeleton/coin_flip.html*
+* *Slack out in-class-exercises/5.1.1_coin_flip/skeleton/coin_flip.html*
 
 ```
 * Make a Coin Flipper Game
@@ -53,9 +53,9 @@ Review Exercise: Coin Flipper
 
 ### 2. Everyone do (10 minutes)
 
-* *Open the Code for the above exercise, located in the 5.1.1_coin_flip folder*
+* *Open the Code for the above exercise, located in in-class-exercises/5.1.1_coin_flip/solution folder*
 
-* *Call on a student to go over the previous exercise*
+* *Call on students to go over the previous exercise*
 
 ### 3. Instructor do (5 minutes)
 
@@ -64,7 +64,7 @@ Review Exercise: Coin Flipper
 
 ### 4. Partners do (10 minutes)
 
-* *Walk around, make sure Students are working with a Partner!*
+* *Walk around observe student screens and make sure students are working with a Partner!*
 * *Slack this out:*
 
 With a partner, answer the questions in the script:
@@ -129,7 +129,7 @@ With a partner, answer the questions in the script:
 
 ### 5. Everyone Do (10 minutes)
 
-* *Open the Code for the above exercise located in 5.4.1_this.html*
+* *Open the Code for the above exercise located in in-class-exercises/5.4.1_this.html*
 * *Choose a team/pair to go over the previous exercise*
 * *Run each function to see if they are correct or not*
 
@@ -140,18 +140,18 @@ With a partner, answer the questions in the script:
 
 ### 7. Instructor does (10 minutes)
 
-* *Open 5.1.7_timeout.html*
+* *Open in-class-exercises/5.1.7_timeout.html*
 * *Introduce setTimeout and clearTimeout (we will get to setInterval after the break)*
 * *Go over the file and explain what it's doing.*
 * *Be sure to mention:*
   * *These are vanilla Javascript methods, not jQuery*
 
 ### 8. Instructor does (5 minutes)
-* *Open 5.1.8_context.html*
+* *Open in-class-exercises/5.1.8_context.html*
 * *Explain how functions executed by a setTimeout are run in a different execution context.*
 
 ### 9. Student do (10 minutes)
-* *Slack out 5.1.9_simple_timer/skeleton/5.1.9_simple_timer.html*
+* *Slack out in-class-exercises/5.1.9_simple_timer/skeleton/5.1.9_simple_timer.html*
 * *Slack the following:*
 
 * Make a page with a a simple timer that sends an alert and plays a sound after 15 minutes
@@ -163,7 +163,7 @@ With a partner, answer the questions in the script:
 ##### BREAK ( 15 minutes ) - it is now 8:05 pm, you have 85 minutes left of class time
 
 ### 10. Instructor do (5 minutes)
-* *Open the files in the 5.1.9_simple_timer folder *
+* *Open the files in the in-class-exercises/5.1.9_simple_timer folder *
 * *Recap the Exercise and answer any questions*
 
 ### 11. partners do (5 minutes)
@@ -215,16 +215,16 @@ With a partner, answer the questions in the script:
 
 ```
 ### 12. Instructor do (5 minutes)
-* *Open 5.1.11_interval.html*
+* *Open in-class-exercises/5.1.11_interval.html*
 * *Choose a team/pair to go over the previous exercise*
 * *Answer any questions about anything we've covered so far*
 
 ### 13. Student do (20 minutes)
-* *Open 5.1.13_stopwatch/5.1.13_stopwatch.html and demonstrate the stopwatch to the class*
+* *Open in-class-exercises/5.1.13_stopwatch/5.1.13_stopwatch.html and demonstrate the stopwatch to the class*
 * *Leave it up while they work.*
 * *You will be giving them two starter files, a JavaScript file and an HTML file.*
-* *Slack out 5.1.13_stopwatch/skeleton/5.1.13_stopwatch.html*
-* *Slack out 5.1.13_stopwatch/skeleton/stopwatch.js*
+* *Slack out in-class-exercises/5.1.13_stopwatch/skeleton/5.1.13_stopwatch.html*
+* *Slack out in-class-exercises/5.1.13_stopwatch/skeleton/stopwatch.js*
 * *Slack the following exercise:*
 
 ```
@@ -236,14 +236,14 @@ With a partner, answer the questions in the script:
 ```
 
 ### 14. Everyone do (15 minutes)
-* *Open the files in the 5.1.13_stopwatch folder*
+* *Open the files in the in-class-exercises/5.1.13_stopwatch folder*
 * *Go over the previous exercise*
 * *You do not need to show the CSS unless someone asks to see it. The focus is on the javascript*
 
 
 ### 15. Student do (20 minutes)
-* *Open 5.1.15_slideshow/5.1.15_slideshow.html and show the students what they will be making.*
-* *Slack out the contents of the 5.1.15_slideshow/skeleton folder*
+* *Open in-class-exercises/5.1.15_slideshow/5.1.15_slideshow.html and show the students what they will be making.*
+* *Slack out the contents of the in-class-exercises/5.1.15_slideshow/skeleton folder*
 * *Slack the following exercise:*
 
 * Create a slideshow using jQuery and JavaScript Timing Events
@@ -253,12 +253,12 @@ With a partner, answer the questions in the script:
 
 
 ### 16. Everyone do (10 minutes)
-* *Open the files in the 5.1.15_slideshow folder*
+* *Open the files in the in-class-exercises/5.1.15_slideshow folder*
 * *Go over the previous exercise*
 
 ### 17. Instructor Do - (5 minutes)
 * *Present the homework - there are two options, a basic trivia game and a slightly more advanced one.*
-* *The students learned have learned everything they need to complete the homework, and can complete it tonight.*
+* *The students have learned everything they need to complete the homework, and can complete it tonight.*
 * *Play the two videos (advanced-trivia-demo.mov and basic-trivia-demo.mov)*
 
 
