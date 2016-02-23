@@ -5,7 +5,7 @@
 - sort an array using insertion sort algorithm
 - use pseudo code to help understand algorithm implementation
 
-#### Introduction
+#### Introduction - teacher talking (10 mins)
 - Why sorting algorithms
   - An easy understanable intro to basic algorithms with data representations / data structures we are already familiar with
   - Easily understanadle solutions
@@ -23,7 +23,7 @@
   - this in an implementaion of the quick sort algorithm
   - https://en.wikipedia.org/wiki/Quicksort
 
-#### Insertion Sort: Introduction:
+#### Insertion Sort: Introduction: teacher talking (10 mins) [20 mins in]
 - http://www.sorting-algorithms.com/insertion-sort
 - https://en.wikipedia.org/wiki/Insertion_sort
 - start at the beggining of the array
@@ -41,19 +41,19 @@ for i ← 1 to length(A) - 1
     end while
 end for
 ```
-#### Insertion Sort: Execution (pairing exercise) 
+#### Insertion Sort: Execution (pairing exercise) students do - (15 mins) [35 mins in]
 
 - teacher uses english pseudo code above and postit notes, passes them out to students
 - students write down each step of the algorithm on a piece of paper
 - students write a series of numbers on 5 post-it notes - these represent an array
 - students run through the algorithm one step at a time, keeping track of the value of `i` and `j` for each step
 
-#### Insertion Sort Exercise: Debrief 
+#### Insertion Sort Exercise: Debrief - teacher talks / discussion (10 mins) [45 mins in]
 - check for understanding
 - the pseudo code notation for algorithms gives you a good idea of what kind of code you need to write
 - DONT just try to translate the pseudo code directly into code- you MUST understand the algorithm first
 
-#### Insertion sort: Implementation: (pairing exercise)
+#### Insertion sort: Implementation: (pairing exercise) students do - (25 mins) [1hr 10mins in]
 - teacher demos insertion sort code, animation of sorting
 - stay in the same pairs
 - open the index.html file (this is in the students dir)
@@ -83,7 +83,7 @@ function swapValues( A, index ){
 }
 ```
 
-#### Insertion Sort Implementation: Debrief:
+#### Insertion Sort Implementation: Debrief: teacher talks / duscussion (10 mins) [1hr 20 mins in]
 - answer any questions
 - what is the complexity ( Big-O ) of this algortihm?
 - teacher asks student to create a graph of this on the board:
@@ -91,3 +91,13 @@ function swapValues( A, index ){
   - counts number of steps for this execution ( must be for worst case performance )
   - worst case insertion sort array: `[5,4,3,2,1]` ( reversed array )
 - Big-O of insertion sort: O(n^2)
+
+#### Conclusions: teacher talks (5mins) [1hr 25mins in]
+- alogrithms can be easy to understand and implement if you take your time with implementation
+- not all algorithms are created equal, some are much more efficient than others
+- algorithms are programming
+
+#### Looking ahead: teacher talks (5mins) [1hr 30 mins in]
+- we will be spending the majority of the time (next 2 days) on problems that are a little more real world (but with more complicated implementation)
+- graphs ( nodes and trees )
+- we'll be seeing what they're used for, what problems they model and how to manipulate them
