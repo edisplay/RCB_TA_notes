@@ -15,7 +15,9 @@
 
 - why do we want to learn this stuff?
   - one layer above / more abstract than programming
-  - tells you how to do things at "internet scale", i.e. very large systems
+  - abstractions of these problems permeate literally every piece of software you interact with:
+  - https://medium.com/@_marcos_otero/the-real-10-algorithms-that-dominate-our-world-e95fa9f16c04
+  - tells you how to do things at "internet scale", i.e. very large systems ( things you do more than 10 times )
   - shows understanding during job interviews
 
 - what will we be covering this week
