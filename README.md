@@ -40,5 +40,11 @@ https://drive.google.com/open?id=1Vn3pmtaIpEiQgItA8vayDjSxq-pYwXnW3D1Y_vVsEUk
 attendance Rutgers NB Oct 15:
 https://docs.google.com/spreadsheets/d/10YdsZ4-f1KghEYX_fWSwJkqPoYfdui93TsYoC66uFZI/edit?ts=56ba0ae7
 
+homework feedback and who submitted Rutgers NB Jan 16:
+https://docs.google.com/a/trilogyed.com/spreadsheets/d/1oBO5SHLZdTeGeIHrFPCWwZrFOBJaZLsdSsclQLizaPc/edit?usp=sharing
+
+homework feedback and who submitted Rutgers JC Feb 16:
+https://docs.google.com/a/trilogyed.com/spreadsheets/d/1ybGIFwkJbpWzHiM-WpZIuy1WOp7r6dOgXpeeEz9q8SM/edit?usp=sharing
+
 assessment framework for homeworks
 https://docs.google.com/document/u/2/d/1lWuPE34sa_d1G9m6_q0YuR87-MnL9KqzjzDSawN14f8/edit?usp=sharing
