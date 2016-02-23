@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Passcode</title>
+	</head>
+	<body>
+		<div id=""><h1>Passcode!</h1></div>
+
+		<button class="number" data-num="1"><h3>ONE</h3></button>
+		<button class="number" data-num="2"><h3>TWO</h3></button>
+		<button class="number" data-num="3"><h3>THREE</h3></button>
+		<button class="number" data-num="4"><h3>FOUR</h3></button>
+
+		<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+	    <script type="text/javascript">
+	    	/*
+	    		* You are given the following HTML. Using jQuery, complete the following:
+	    			* Create a click event on every "number" class.
+	    			* Whenever a number is clicked, store it into an array
+	    			* If the user correctly inputs one, two, two then alert that they got in.
+	    			* If the user inputs 9 numbers and was wrong, alert them that they got it wrong.
+
+	    	*/
+	    	$( document ).ready(function() {
+
+	    		var userInput = [];
+	    		var correctSequence = [1, 2, 2];
+
+	    		var gotIn = true;
+
+	    		$( ".number" ).on('click', function() {
+	    			//1. make a variable named num and set it equal to the value of the data-num attribute of the button you clicked on
+	    			var num = fill in code for question 1. here;
+
+	    			num = parseInt(num);
+
+	    			//2. push num into userInput
+
+	    			//3. run a for loop, looping over userInput 
+
+		    			//4. inside the for loop, check  whether the element in the userInput array equals the element in the correctSequence array. If it does, then set gotIn to true. If not, then set gotIn to false.
+
+	    			//5. if the length of userInput is equal to the length of correctSequence then check if gotIn is true. If gotIn is true then alert You got in! If it's false then alert You did not get in!
+
+
+	    			//6 explain the above lines to your partner
+	    			
+	    		});
+
+	    	});
+			
+	    </script>
+	</body>
+</html>
