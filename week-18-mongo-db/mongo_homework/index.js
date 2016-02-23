@@ -9,7 +9,23 @@ var db = mongojs('newsDB');
 var mycollection = db.collection('headlines');
 
 var app = express();
+//Serve static content for the app from the "public" directory in the application directory.
+app.use(express.static(__dirname + '/public'));
+
 var port = 3000;
+
+//handlebars
+var expressHandlebars = require('express-handlebars');
+app.engine('handlebars', expressHandlebars({
+    defaultLayout: 'main'
+}));
+app.set('view engine', 'handlebars');
+
+//bodyparser & cookieparser
+var bodyParser = require('body-parser');
+app.use(bodyParser.urlencoded({
+    extended: false
+}));
 
 //download indeed webpage to scrape
 /*
@@ -118,11 +134,15 @@ var times = function(input, cb) {
 // times('check');
 
 //basic route use cb return json data from mongodb
-app.get('/', function(req, res) {
+app.get('/home', function(req, res) {
+	res.render('home');
+});
+
+app.get('/check', function(req, res) {
 	times('check', function(data) {
 		res.json(data)
 	})
-})
+});
 
 app.listen(port, function(){
 	console.log("lisenting on port:"+port);
