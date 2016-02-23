@@ -24,11 +24,13 @@
 				function pickThings () { 
 
 					//selecting via class
-					var doge = $( ".dog" );
-					//jQuery selects the div puts into an array as an object
-					console.log(doge);
+					var dog = $( ".dog" );
+
+					//jQuery selects the elements with a class of dog and logs them as an array like object
+					console.log(dog);
+
 					//getting to the text of the one of selected object
-					console.log(doge.eq(1).text());
+					console.log(dog.eq(1).text());
 
 					//select via id
 					var kitty = $("#cat");
