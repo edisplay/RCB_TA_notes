@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Coffee Menu</title>
+  <style type="text/css">
+    h1 {
+      display: inline;
+      border-bottom: black solid 5px;
+      width: 178px;
+    }
+
+    #menu {
+      margin-top: 25px;
+    }
+
+    .coffeeDiv {
+      width: 150px;
+      height: 200px;
+      border: red solid 5px;
+    }
+  </style>
+</head>
+<body>
+    <h1> Coffee Menu </h1>
+
+    <script type="text/javascript">
+      drinks = [
+        {
+          name: 'coffee',
+          picture: 'https://genesistransformation.files.wordpress.com/2014/11/coffee.jpg',
+          price: 2.30
+        }, 
+        {
+          name: "expresso",
+          picture: 'http://www.chacunsoncafe.fr/Files/18051/Img/25/expresso-cup.jpg',
+          price: 3.15
+        }, 
+        {
+          name: "cappuccino",
+          picture: 'https://upload.wikimedia.org/wikipedia/commons/e/ed/Wet_Cappuccino_with_heart_latte_art.jpg',
+          price: 2.79
+        }, 
+        {
+          name: "latte",
+          picture: 'http://img1.beachbodyimages.com/beachbody/image/upload/v1409762611/beachbodyblog/Beachbody-Blog-Pumpkin-Spice-Latte.jpg',
+          price: 3.55
+        }, 
+        {
+          name: "tea",
+          picture: 'http://princegladyexports.com/wp-content/uploads/2015/12/tea-08.jpg',
+          price: 1.55
+        }
+      ];
+
+      // 1. create a new div element and put it into a variable named coffeeDiv
+      var coffeeDiv = document.createElement("div"); 
+
+      // 2. use the setAttribute function on the coffeeDiv variable and set the id of it to menu
+      coffeeDiv.setAttribute('id', 'menu');; 
+
+      // 3. add the coffeeDiv to the page with the appendChild function
+      document.body.appendChild(coffeeDiv); 
+
+      for (var i = 0; i < drinks.length; i++) {
+        //4. create a div and store it inside a variable named newCoffeeDiv
+        var newCoffeeDiv = document.createElement("div")
+
+        //5. use the setAttribute function on the newCoffeeDiv variable and set the class of it to coffeeDiv
+        newCoffeeDiv.setAttribute('class', 'coffeeDiv');; 
+
+        var html = "<p>Name: " + drinks[i].name + "</p>"
+        html = html + "<p><img width=\"100\" height=\"75\" src=\"" + drinks[i].picture + "\" alt=\" + " + drinks[i].name + " + \" />"
+        html = html + "<p>Price: " + drinks[i].price + "</p>"
+
+        //6. set the innerHTML of the newCoffeeDiv to html
+        newCoffeeDiv.innerHTML = html;
+
+        //7. add the newCoffeeDiv to the coffeeDiv
+        coffeeDiv.appendChild(newCoffeeDiv);
+      };
+    </script>
+</body>
+</html>
