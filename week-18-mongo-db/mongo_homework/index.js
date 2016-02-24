@@ -119,12 +119,16 @@ var times = function(input, cb) {
 		//     console.log(docs.nyt);
 		// })
 
-		mycollection.findOne({
-		    _id: mongojs.ObjectId('56cb8e77c628e17c45c59d3a')
-		}, function(err, doc) {
-		    cb(doc);
+		// mycollection.findOne({
+		//     // _id: mongojs.ObjectId('56cb8e77c628e17c45c59d3a')
+		// }, function(err, doc) {
+		//     cb(doc);
+		// });
+
+		mycollection.find().sort({lastModifiedDate:1}, function(err, doc){
+			cb(doc);
 		});
-	
+
 	};
 	
 }

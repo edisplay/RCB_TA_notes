@@ -15,7 +15,7 @@ $(document).ready(function() {
         $.getJSON('/check', function(data) {
             // Stick our chickenspots data array into a friedChickenList variable in the global object
             // For large apps, this is a bad idea, there should be a limit of chicken spots that get displayed and pagination built in
-            mongoData = data;
+            mongoData = data[0];
             // For each item in our JSON, add a table row and cells to the content string
             console.log(mongoData);
         });
@@ -56,7 +56,7 @@ $(document).ready(function() {
             // if( char === '>' ) isTag = false;
             // if (isTag) return type();
             //recur the function type to add html with setTimeout wait of 30 min seconds
-            setTimeout(type, 15);
+            setTimeout(type, 20);
         }());
     }
 
