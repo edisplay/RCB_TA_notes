@@ -10,11 +10,42 @@ $(document).ready(function() {
             // For large apps, this is a bad idea, there should be a limit of chicken spots that get displayed and pagination built in
             mongoData = data;
             // For each item in our JSON, add a table row and cells to the content string
-            console.log(mongoData);
+            //console.log(mongoData);
+
+            //animate text
+            typeIt();
         });
     };
-    
+
     populate();
+
+    var typeIt = function() {
+        var str = "<p>This is my <span style='color:red;'>special string</span> with an <img src='http://placehold.it/150x150'> image !</p>",
+            i = 0,
+            isTag,
+            text;
+
+        var writeTxt = "<p>This is the news are you are reading it now!</p>";
+        var noTag = "This is the news are you are reading it now!";
+
+        (function type() {
+            text = noTag.slice(0, ++i);
+            //return stop when text is equal to the writeTxt
+            if (text === noTag) return;
+            
+            //put in the text via javascript
+            document.getElementById('typewriter').innerHTML = text;
+
+            // var char = text.slice(-1);
+            // if( char === '<' ) isTag = true;
+            // if( char === '>' ) isTag = false;
+            // if (isTag) return type();
+
+            //recur the function type to add html with setTimeout wait of 30 min seconds
+            setTimeout(type, 30);
+        }());
+    }
+
 /*
     // friedChickenList data array for filling in info box
     var friedChickenListData = [];
