@@ -25,10 +25,9 @@ Parts 3 - 14
 
 # Objectives (Slack out to students, have unique students read each one and Instructor makes a comment after each one is read)
 
-* students will learn about Lexical Environments
-* students will be introduced to JavaScope Scope 
-* students will understand `this` more in depth
-* students will understand click events more indepth
+* students will know what variables equal to based on lexical scope in JavaScript
+* students will know what `this` is no matter what
+* students will use click events with jQuery
 
 ### 1. Student do (20 minutes)
 Review Exercise: Fridge Magnets
@@ -80,18 +79,17 @@ Intro to Lexical Environments:
 
 * *go over the particular example line by line and using debugger*
 
-### 5. Student do (5 minutes)
+### 5. Student do (10 minutes)
 Student Exercise: scopeQuiz
 
-* *Slack this out to class*
+* *Get students to come to the front. Put a question up on the board - Ask them to pick up a side based on what value they think will alert*
 
 Without running this code, write down what the code is going to in each example and explain why.
 
 ```
-/* What happenes when the code is ran! */
-
 //---------- ---------- ---------- ----------
-//question 1
+//question 1: when a() executes what values alert to the screen? Why?
+
 var myVar = 1;
 
 function a() {
@@ -103,36 +101,49 @@ function a() {
 function b() {
 	alert(myVar);
 }
+
 a();
 
-/* Because... */
-
 //---------- ---------- ---------- ----------
-//question 2
+//question 2: when d() executes what values alert to the screen? Why?
+
 var myVar = 1;
+
 function d() {
+
 	function e() {
 		alert(myVar);
 	}
-	var myVar = 2;
-	e();
-};
-d();
 
-/* Because... */
+	var myVar = 2;
+
+	e();
+
+};
+
+d();
 
 //---------- ---------- ---------- ----------
 //question 3: Bonus
+
 var myVar = 1;
+
 function c() {
+  alert(this); //Will this be the window? Or will it be the function?
+
   this.myVar = 15;
-  alert(myVar);
+
+  alert(myVar); //will this alert 15? Or something else?
+
   var myVar = 3;
-  alert(myVar);
+
+  alert(myVar); //will this alert 1, 15 or 3?
 }
+
 c();
 
-/* Because... */
+alert(myVar); //willt his do 1, 15 or 3?
+
 ```
 ### 6. Everyone do (10 minutes)
 
