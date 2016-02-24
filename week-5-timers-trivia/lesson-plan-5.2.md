@@ -14,7 +14,7 @@ To do:
 
 - in the format of our previous lesson plans.
 
-
+- instructors and TAs need to group the class based on how they feel the students are doing
 
 
 
