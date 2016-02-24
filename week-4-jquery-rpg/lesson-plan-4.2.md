@@ -13,7 +13,9 @@ Look at this file at the root of the repository:
 * Implement complex logical conditions to meet an objective.
 * Write clean code with proper variable names, indentation according to industry best practices
 
-# Theme: JavaScript Scope and this
+# Theme: 
+
+JavaScript Scope + Functions/Objects Review
 
 # INSTRUCTOR MUST COVER!!!
 
@@ -25,10 +27,8 @@ Parts 3 - 14
 
 * students will learn about Lexical Environments
 * students will be introduced to JavaScope Scope 
-* students will understand `this` more indepth
+* students will understand `this` more in depth
 * students will understand click events more indepth
-
-PART ONE:
 
 ### 1. Student do (20 minutes)
 Review Exercise: Fridge Magnets
@@ -44,7 +44,6 @@ Review Exercise: Fridge Magnets
 	* The page must have all the letters of the alphabet and an underscore as buttons
 	* Whenever a button is hit, a letter will display on the fridge
 	* Make a clear button as well that will remove all the letters on the fridge
-	* Bonus make the letter different colors
 ```
 
 ### 2. Everyone do (10 minutes)
