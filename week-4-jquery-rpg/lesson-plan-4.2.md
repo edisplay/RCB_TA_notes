@@ -25,8 +25,7 @@ Parts 3 - 14
 
 # Objectives (Slack out to students, have unique students read each one and Instructor makes a comment after each one is read)
 
-* students will know what variables equal to based on lexical scope in JavaScript
-* students will know what `this` is no matter what
+* students will demonstrate their knowledge of scope in JavaScript by solving hard scoping problems
 * students will use click events with jQuery
 
 ### 1. Student do (20 minutes)
