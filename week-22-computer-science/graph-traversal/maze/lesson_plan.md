@@ -3,7 +3,6 @@ http://web.mit.edu/eranki/www/tutorials/search/
 http://heyes-jones.com/astar.php
 https://www.khanacademy.org/computing/computer-science/algorithms/breadth-first-search/a/the-breadth-first-search-algorithm
 
-
 #### lesson outline
 
 - representation of a graph: https://www.khanacademy.org/computing/computer-science/algorithms/graph-representation/a/describing-graphs
