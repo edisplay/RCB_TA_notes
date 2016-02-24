@@ -25,10 +25,13 @@
 //     }
 // });
 /*
-$('#cube').addClass(' show-front');
+$('#cube').addClass('show-front');
 $('#cube').addClass('show-back');
 $('#cube').addClass('show-right');
 $('#cube').addClass('show-left');
 $('#cube').addClass('show-top');
 $('#cube').addClass('show-bottom');
+
+$('#cube').removeClass().addClass('show-front');
+$('#cube').removeClass().addClass('show-back');
 */

@@ -1,53 +1,68 @@
+body {
+	background-color: black;
+	height: 900px;
+}
+#city {
+	background-image: url("../../assets/images/city.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center; 
+	width: 100%;
+	height: 900px;
+	z-index: -30;
+}
+
 .container {
-  width: 300px;
-  height: 300px;
+  width: 100%;
+  height: 100%;
   position: relative;
   perspective: 1000px;
 }
 
 #cube {
-  width: 100%;
-  height: 100%;
+  margin-top: 300px; 
+  margin-left: 750px;
+  margin-right: 750px;
+  width: 400px;
+  height: 400px;
   position: absolute;
   transform-style: preserve-3d;
+  transform: translateZ( -100px ); 
+/*  opacity: 0.3;*/
 }
 
 #cube figure {
   margin: 0;
-  width: 296px;
-  height: 296px;
+  width: 400px;
+  height: 400px;
   display: block;
   position: absolute;
-  border: 2px solid black;
+  border: 3px solid black;
+}
+/* 
+.center {
+    margin: auto;
+    width: 60%;
+    border: 3px solid #73AD21;
+    padding: 10px;
+}
+ */
 
+#face-color{
+	background-color: deepskyblue;
+	opacity: 0.075;
+	width: 400px;
+	height: 400px;
+	position: absolute;
 }
 
-.front{
-background-color: red;
-}
-.back{
-background-color: green;
-}
-.right{
-background-color: yellow;
-}
-.left{
-background-color: black;
-}
-.top{
-background-color: blue;
-}
-.bottom{
-background-color: pink;
-}
-#cube { transform: translateZ( -100px ); }
 
-#cube .front  { transform: rotateY(   0deg ) translateZ( 150px ); }
-#cube .back   { transform: rotateX( 180deg ) translateZ( 150px ); }
-#cube .right  { transform: rotateY(  90deg ) translateZ( 150px ); }
-#cube .left   { transform: rotateY( -90deg ) translateZ( 150px ); }
-#cube .top    { transform: rotateX(  90deg ) translateZ( 150px ); }
-#cube .bottom { transform: rotateX( -90deg ) translateZ( 150px ); }
+#cube .front  { transform: rotateY(   0deg ) translateZ( 202px ); }
+#cube .back   { transform: rotateX( 180deg ) translateZ( 202px ); }
+#cube .right  { transform: rotateY(  90deg ) translateZ( 202px ); }
+#cube .left   { transform: rotateY( -90deg ) translateZ( 202px ); }
+#cube .top    { transform: rotateX(  90deg ) translateZ( 202px ); }
+#cube .bottom { transform: rotateX( -90deg ) translateZ( 202px ); }
 
 #cube.show-front  { transform: translateZ( -100px ) rotateY(    0deg ); }
 #cube.show-back   { transform: translateZ( -100px ) rotateX( -180deg ); }
@@ -56,4 +71,14 @@ background-color: pink;
 #cube.show-top    { transform: translateZ( -100px ) rotateX(  -90deg ); }
 #cube.show-bottom { transform: translateZ( -100px ) rotateX(   90deg ); }
 
-#cube { transition: transform 1s; }
+#cube { transition: transform 2s; }
+
+#typewriter{
+	color: white;
+	font-weight: bold;
+	font-size: 30px;
+	line-height:38px;
+	z-index: 10;
+	margin-top: 35px;
+	margin-left: 10px;
+}
