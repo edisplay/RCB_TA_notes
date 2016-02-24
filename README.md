@@ -46,5 +46,8 @@ https://docs.google.com/a/trilogyed.com/spreadsheets/d/1oBO5SHLZdTeGeIHrFPCWwZrF
 homework feedback and who submitted Rutgers JC Feb 16:
 https://docs.google.com/a/trilogyed.com/spreadsheets/d/1ybGIFwkJbpWzHiM-WpZIuy1WOp7r6dOgXpeeEz9q8SM/edit?usp=sharing
 
+homework feedback and who submitted Rutgers October 2015:
+https://docs.google.com/spreadsheets/d/16O8W4HCSE8BA_Ezw-8Q_hPW0ffITbbd2nnjzL3vP0CQ/edit#gid=1633108853
+
 assessment framework for homeworks
 https://docs.google.com/document/u/2/d/1lWuPE34sa_d1G9m6_q0YuR87-MnL9KqzjzDSawN14f8/edit?usp=sharing
