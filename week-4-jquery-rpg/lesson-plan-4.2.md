@@ -15,7 +15,7 @@ Look at this file at the root of the repository:
 
 # Theme: 
 
-JavaScript Scope + Functions/Objects Review
+JavaScript Scope + jQuery Review
 
 # INSTRUCTOR MUST COVER!!!
 
@@ -25,9 +25,10 @@ Parts 1 - 6
 
 # Objectives (Slack out to students, have unique students read each one and Instructor makes a comment after each one is read)
 
-* students will demonstrate their knowledge of scope in JavaScript by solving hard scoping problems
+* students will demonstrate their knowledge of scope in JavaScript by solving hard scoping problems (through functions and objects)
 * students will use click events with jQuery
-* students will explain to each other how to build a simple crystal game
+* students will create virtual elements with jQuery and add them to the html
+* students will see and explain to each other how to build a simple crystal game
 
 ### 1. Instructor do (20 minutes)
 
