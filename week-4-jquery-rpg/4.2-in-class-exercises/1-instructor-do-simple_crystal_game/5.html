@@ -6,7 +6,7 @@
   	/*
   		we threw in some styling to make the picture fit on the page better
 	*/
-    #crystalImage {
+    .crystalImage {
       width: 300px;
       height: 300px;
     }
@@ -15,7 +15,9 @@
 <body>
 
 <!-- we added this image -->
-<img src="http://cdn.playbuzz.com/cdn/35910209-2844-45c0-b099-f4d82878d54f/00261fda-4062-4096-81fd-8cf96b9034e8.jpg" alt="crystals" id="crystalImage">
+<div id="crystals">
+  <img src="http://cdn.playbuzz.com/cdn/35910209-2844-45c0-b099-f4d82878d54f/00261fda-4062-4096-81fd-8cf96b9034e8.jpg" alt="crystals" class="crystalImage">
+</div>
 
 <!-- we added jQuery -->
 <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
@@ -24,7 +26,7 @@
 
     var counter = 0;
 
-    $('#crystalImage').on('click', function(){
+    $('.crystalImage').on('click', function(){
       alert(counter);
     });
 
