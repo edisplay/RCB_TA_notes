@@ -1,7 +1,7 @@
 var y = 10;
 var x = 10;
 
-var generated_graph = connectedGraph( y, x );
+var generated_graph = graph( y, x );
 var links = formatGraph( generated_graph );
 
 var nodes = {};

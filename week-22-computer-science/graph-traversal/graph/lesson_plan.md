@@ -3,7 +3,7 @@
 #### Objectives: 
 **After this students will be able to:**
 - use an array to represent a graph
-- implement the depth-first-search algorithm
+- implement the depth-first algorithm to visit every node in a graph
 - implement the depth first search algorithm to find a path from one vertex to another
 
 #### Introduction (10 mins)
@@ -11,6 +11,7 @@
   - teacher drwas diagram on the board
     - a graph is a representation of two things that are related to eachother
     - the official (math) names are vertex for the points and edge for the lines
+    - or you can say node and path
 
 - What is a graph good for?
   - models the relationship between two things
@@ -27,7 +28,7 @@
 
 - What kind of graph algorithms are there?
   - many different kinds
-  - we will be looking at 2 interrelated algorithm types (which do apply across many of the above examples )
+  - we will be looking at 2 related algorithm types (which do apply across many of the above examples )
   - 1 graph search algorithms
   - 2 graph path finding algorithms
 
@@ -138,6 +139,9 @@
 - psuedo code:
 ```
 procedure DFS-iterative(G,v):
+    for each node n in G
+         n.discovered = FALSE
+
     let S be a stack
     S.push(v)
     while S is not empty
@@ -156,6 +160,10 @@ procedure DFS-iterative(G,v):
 - one post it note will represent one node / vertex
 - have the students work through the above simple graph (where 0 is the start node and 4 is the finish node)
 - have them keep a notebook to write down the state of the current node and the stack at the same time
+- questions for the students:
+  - what in this code makes it "depth first"
+  - why do you need to copy the graph?
+  - why is it a while loop and not a for loop?
 
 #### Depth First Traversal on Paper: Debrief: Teacher Talks: (10mins) [2hrs in]
 - answer any questions

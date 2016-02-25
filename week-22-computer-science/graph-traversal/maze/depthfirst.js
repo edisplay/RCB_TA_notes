@@ -1,4 +1,4 @@
-function dfsolve( graph, start, finish ){
+function dfsearch( graph, start, finish ){
 
   var nodes = [];
 
