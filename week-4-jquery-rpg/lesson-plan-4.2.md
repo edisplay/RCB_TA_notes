@@ -47,12 +47,15 @@ Parts 1 - 6
 * *open up 4.2-in-class-exercises/1-instructor-do-simple_crystal_game/6.html, demonstrate it, explain it*
 * *open up 4.2-in-class-exercises/1-instructor-do-simple_crystal_game/7.html, demonstrate it, explain it*
 * *open up 4.2-in-class-exercises/1-instructor-do-simple_crystal_game/8.html, demonstrate it, explain it*
+* *open up 4.2-in-class-exercises/1-instructor-do-simple_crystal_game/9.html, demonstrate it, explain it*
+* *open up 4.2-in-class-exercises/1-instructor-do-simple_crystal_game/10.html, demonstrate it, explain it*
+* *open up 4.2-in-class-exercises/1-instructor-do-simple_crystal_game/11.html, demonstrate it, explain it*
 
-* *slack the code from 8.html to students*
+* *slack the code from 11.html to students*
 
 ### 2. Partners do (10 minutes)
 
-* *if you haven't already slack the code from 4.2-in-class-exercises/1-instructor-do-simple_crystal_game/8.html to students*
+* *if you haven't already slack the code from 4.2-in-class-exercises/1-instructor-do-simple_crystal_game/11.html to students*
 
 >go over the code with your partners. Explain every line to each other
 
