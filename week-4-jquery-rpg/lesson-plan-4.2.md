@@ -106,6 +106,7 @@ Intro to Lexical Environments:
 
 * *Instructor demos. Look in folder.*
 * *Open this file into Sublime Text (not the browser): 4.2-in-class-exercises/4.2.2_lexicalScope/1.html*
+* *after 1 is done, then open 2, and so on...*
 
 * *direct students to stand up and come to the front* 
 * *have students go to one side of the room if they think something is going to happen and have students go to the other side of the room if they think something else will happen* 
