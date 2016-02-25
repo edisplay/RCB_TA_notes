@@ -13,13 +13,14 @@ Look at this file at the root of the repository:
 * Provide students with an extended opportunity for supported  coding.
 * Allow students to re-work on critical assignments (exercises and homework) covered in class.
 
-# Theme: Catching Up!
+# Theme: 
+Catching Up!
 
 # Objectives (Slack out to students, have unique students read each one and Instructor makes a comment after each one is read)
 
-* Provide students an opportunity to ask conceptual questions regarding any of the subjects covered so far (HTML, CSS, Git, Javascript, jQuery, etc.)
-* Provide students with a high-level listing of the most important subjects covered to date.
-* Provide students with an opportunity for group coding of previous or new projects. 
+* Students will ask conceptual questions regarding any of the subjects covered so far (HTML, CSS, GIT, Heroku, JavaScript, jQuery)
+* Students will absorb a high-level listing of the most important subjects covered to date.
+* Students will group code previous or new projects if they choose.
 
 ### 1. Instructor do (5 minutes)
 * *Explain to class that today will be focused on providing an opportunity for review and recallibration. The class will be divided into three parts. 1) A few moments to answer lingering questions, 2) A high-level overview of all the major topics covered, 3) And two hours of coding in small groups either redoing select assignments or working on a new project.*
@@ -84,6 +85,7 @@ While working on this assignment, make sure to create a single GitHub repository
 ```
 
 ### 5. Break (15 minutes)
+
 ### 6. Students Do (Groups) (2 hours)
 * *Students begin coding. Be sure to encourage them to try coding from scratch if possible. TAs and Instructors should use this time to assist students where needed.*
 

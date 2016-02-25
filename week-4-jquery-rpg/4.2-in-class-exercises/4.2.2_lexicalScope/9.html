@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>lexicalScope</title>
+  </head>
+  <body>
+      
+      <script type="text/javascript">
+
+        var a = 5;
+
+        var b = function(){
+          alert(a);
+        }
+
+        a = 4;
+        b(a); //what will alert? 5 or 4?
+
+      </script>
+  </body>
+</html>

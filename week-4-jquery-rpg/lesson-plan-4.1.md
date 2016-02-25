@@ -18,7 +18,7 @@ Look at this file at the root of the repository:
 # INSTRUCTOR MUST COVER!!!
 
 ```
-Parts 3 - 21
+Parts 1-13
 ```
 
 # Objectives (Slack out to students, have unique students read each one and Instructor makes a comment after each one is read)

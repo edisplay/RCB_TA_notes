@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>lexicalScope</title>
+  </head>
+  <body>
+      
+      <script type="text/javascript">
+
+        //object scope
+        var person = {
+          hair : 'black',
+          eyes : 'brown',
+          height : 72,
+          describe : function(){
+            
+            console.log(this);
+
+            //console.log('Hey my hair is ' + this.hair + ' . My eyes are ' + this.eyes + '. My height is ' + this.height);
+          }
+        }
+
+        person.describe(); //what will get console logged to the screen? Will it be the window or the person object?
+
+      </script>
+  </body>
+</html>
