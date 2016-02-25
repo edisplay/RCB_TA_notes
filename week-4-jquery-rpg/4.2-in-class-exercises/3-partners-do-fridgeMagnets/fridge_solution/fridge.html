@@ -37,13 +37,20 @@
 
 		step 1: loop over the letters 
 			step 2: inside the loop
-				* inside of a variable named b 
-					* create a button with 
+				* make a variable named b 
+					* set it equal to a button with 
 						- the following classes: letter-button letter letter-button-color
-						- a data-letter attribute set equal to letters[i]
+						- a data-let attribute set equal to letters[i]
 						- text of letters[i]
 				* step 3: append b to the div with an id of buttons
 		*/
+		for (var i = 0; i < letters.length; i++) {    
+		    
+		    var b = $('<button class="letter-button letter letter-button-color" data-let="'+ letters[i] +'">').text(letters[i]);   
+		    
+		    $("#buttons").append(b); 
+		    //alert('watch this');
+		};
 
 
 	    $('.letter-button').on('click', function() {
@@ -55,12 +62,17 @@
 	    				* set the variable equal to a new div 
 	    					* with the following classes: letter fridge-color
 	    					* chain this onto the div: 
-	    						.text($(this).data('letter'))
+	    						.text($(this).data('let'))
 	    	*/
 
+	    	//$('<p>') //that will do <p></p> for you
+	    	//$('<a>') // that will do <a></a> for you
+
+			var fridgeMagnet = $('<div class="letter fridge-color">').text($(this).data('letter'));
 
 			/* Step 5: append the fridgeMagnet variable to the element with an id of display */
-
+			$("#display").append(fridgeMagnet);
+			//alert('watch this')
 		});
 
 	    //Step 6: on the element with an id of clear, attach an on click function
@@ -68,6 +80,9 @@
 	    		Step 7: inside ththeis anonymous function that gets passed to the click event
 	    			* use the empty() function on the element with an id of display 
 	    	*/
+		$('#clear').on('click', function() {
+			$("#display").empty(); 
+		});
 
 	});
 

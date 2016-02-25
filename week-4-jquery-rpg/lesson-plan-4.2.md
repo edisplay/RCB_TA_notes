@@ -20,40 +20,71 @@ JavaScript Scope + Functions/Objects Review
 # INSTRUCTOR MUST COVER!!!
 
 ```
-Parts 3 - 14
+Parts 1 - 6
 ```
 
 # Objectives (Slack out to students, have unique students read each one and Instructor makes a comment after each one is read)
 
 * students will demonstrate their knowledge of scope in JavaScript by solving hard scoping problems
 * students will use click events with jQuery
+* students will explain to each other how to build a simple crystal game
 
-### 1. Student do (20 minutes)
-Review Exercise: Fridge Magnets
+### 1. Instructor do (20 minutes)
 
-* *Open this file into chrome and demo it for the class: 4.2-in-class-exercises/4.2.1_fridgeMagnets/fridge_solution folder.*
+> now i'll build a mini version of the crystal game
 
-* *Give the files from the starter folder located in (4.2-in-class-exercises/fridge_starter) to students*
+* *please just open up each file, instead of coding it out.* 
+
+* *spend time going over each step.* 
+
+* *stop at least 4 times and have students explain the code on the board to their partners.*
+
+* *open up 4.2-in-class-exercises/1-instructor-do-simple_crystal_game/1.html, demonstrate it, explain it*
+* *open up 4.2-in-class-exercises/1-instructor-do-simple_crystal_game/2.html, demonstrate it, explain it*
+* *open up 4.2-in-class-exercises/1-instructor-do-simple_crystal_game/3.html, demonstrate it, explain it*
+* *open up 4.2-in-class-exercises/1-instructor-do-simple_crystal_game/4.html, demonstrate it, explain it*
+* *open up 4.2-in-class-exercises/1-instructor-do-simple_crystal_game/5.html, demonstrate it, explain it*
+* *open up 4.2-in-class-exercises/1-instructor-do-simple_crystal_game/6.html, demonstrate it, explain it*
+* *open up 4.2-in-class-exercises/1-instructor-do-simple_crystal_game/7.html, demonstrate it, explain it*
+* *open up 4.2-in-class-exercises/1-instructor-do-simple_crystal_game/8.html, demonstrate it, explain it*
+
+* *slack the code from 8.html to students*
+
+### 2. Partners do (10 minutes)
+
+* *if you haven't already slack the code from 4.2-in-class-exercises/1-instructor-do-simple_crystal_game/8.html to students*
+
+>go over the code with your partners. Explain every line to each other
+
+### 3. Partners do (20 minutes)
+Exercise: Fridge Magnets
+
+* *Open this file into chrome and demo it for the class: 4.2-in-class-exercises/3-partners-do_fridgeMagnets/fridge_solution folder.*
+
+* *Give the files from the starter folder located in (4.2-in-class-exercises/3-partners-do_fridgeMagnets/fridge_starter) to students*
 * *Slack this out to class*
 
 ```
-* You are provided with an HTML and an image
-* You are tasked to create a web page that lets you create your own fridge message
+* You are provided with HTML and an image
+* You will use jQuery
+* Make sure the fridge image is inside the same folder as your html file
+* Follow the steps inside the JavaScript portion of the html
+* You are tasked to create a web page that lets you create your own fridge messages
 	* The page must have all the letters of the alphabet and an underscore as buttons
 	* Whenever a button is hit, a letter will display on the fridge
 	* Make a clear button as well that will remove all the letters on the fridge
 ```
 
-### 2. Everyone do (10 minutes)
+### 4. Everyone do (10 minutes)
 
-* *Open the Code to the above exercise located in 4.2-in-class-exercises/4.2.1_fridgeMagnets folder.*
+* *Open the Code to the above exercise located in 4.2-in-class-exercises/3-partners-do_fridgeMagnets/fridge_solution/fridge.html into Sublime Text*
 
-* *Call on a student to go over the previous exercise*
+* *Call on students to go over the code on the screen*
 
-### 3. Instructor do (5 minutes)
+### 5. Instructor do (5 minutes)
 Intro to Lexical Environments:
 
-* *DO NOT SPEND MORE THAN 5 MINUTES ON THIS. Students are going to be lost. Please don't drone on. Don't go into what lexical scopes are and how they are different from other programming languages. DO NOT CONFUSE THEM!*
+* *DO NOT SPEND MORE THAN 5 MINUTES ON THIS. Otherwise students are going to get lost. Don't go into what lexical scope is and how it is different from other programming languages. DO NOT CONFUSE THEM!*
 
 > Scope goes up in JS.
 
@@ -65,20 +96,62 @@ Intro to Lexical Environments:
 
 > in JavaScript, the technical term to describe scope is lexical scope
 
+> Important thing to remember is that scope goes up in JavaScript
 
-### 4. Everyone do (15 minutes)
+### 6. Everyone do (30 minutes)
 
 * *Instructor demos. Look in folder.*
-* *Open this file into chrome and demo it for the class: 4.2-in-class-exercises/4.2.2_lexicalScope folder.*
+* *Open this file into Sublime Text (not the browser): 4.2-in-class-exercises/4.2.2_lexicalScope/1.html*
 
 * *direct students to stand up and come to the front* 
 * *have students go to one side of the room if they think something is going to happen and have students go to the other side of the room if they think something else will happen* 
 
-* *after students make their decision*
+* *after students make their decision, execute the code in browser*
 
 * *go over the particular example line by line and using debugger*
 
-### 5. Student do (10 minutes)
+* *explain the following multiple times*
+
+> in javascript scope goes up
+
+* *explain the following after the 7th example*
+  
+> regarding functions
+  
+> if you do console.log(this) it'll be whatever your function is inside
+
+> so if your function is inside the window then 
+
+> inside the function, this 
+
+> will be the window
+
+> if your function is inside of an object then
+
+> inside the function, this 
+
+> will be the object
+
+
+
+
+
+
+# if time left over
+
+push homework solutions for week 3 to in class repo repo
+
+ask students to open up the psychic game and go over it with their partners step by step.
+
+if done, then go over the hangman solutions step by step. There are two! The students can see two different solutions for the homework.
+
+
+
+
+
+# Don't do these until Pavan goes over them
+
+### 7. Student do (10 minutes)
 Student Exercise: scopeQuiz
 
 * *Get students to come to the front. Put a question up on the board - Ask them to pick up a side based on what value they think will alert*
@@ -87,9 +160,10 @@ Without running this code, write down what the code is going to in each example 
 
 ```
 //---------- ---------- ---------- ----------
-//question 1: when a() executes what values alert to the screen? Why?
+//question: when a() executes what values alert to the screen? Why?
 
 var myVar = 1;
+alert(myVar) // what will this alert
 
 function a() {
 	var myVar = 5 - 3;
@@ -104,7 +178,7 @@ function b() {
 a();
 
 //---------- ---------- ---------- ----------
-//question 2: when d() executes what values alert to the screen? Why?
+//question: when d() executes what values alert to the screen? Why?
 
 var myVar = 1;
 
@@ -123,7 +197,7 @@ function d() {
 d();
 
 //---------- ---------- ---------- ----------
-//question 3: Bonus
+//question:  answer the questions below
 
 var myVar = 1;
 
@@ -141,10 +215,10 @@ function c() {
 
 c();
 
-alert(myVar); //willt his do 1, 15 or 3?
+alert(myVar); //will this be 1, 15 or 3?
 
 ```
-### 6. Everyone do (10 minutes)
+### 8. Everyone do (10 minutes)
 
 * You are now going over the previous exercise 
 
@@ -152,7 +226,7 @@ alert(myVar); //willt his do 1, 15 or 3?
 
 * *Call on a student to go over the previous exercise*
 
-### 7. Instructor do (10 minutes)
+### 9. Instructor do (10 minutes)
 
 * *Instructor demos. Look in folder.*
 
@@ -160,7 +234,17 @@ alert(myVar); //willt his do 1, 15 or 3?
 
 * *Explain what each line of the code is doing*
 
-### 8. Student do (10 minutes)
+
+
+
+
+
+
+
+
+
+
+### 10. Student do (10 minutes)
 
 Student Exercise: Alice In Wonderland
 
@@ -210,7 +294,7 @@ Student Exercise: Alice In Wonderland
       this.text = "OPZ...";
 ```
 
-### 9. Everyone do (10 minutes)
+### 11. Everyone do (10 minutes)
 
 * You are now going over the previous exercise 
 
@@ -222,18 +306,18 @@ Student Exercise: Alice In Wonderland
 
 ##### BREAK ( 15 minutes ) - it is now 8:10 pm, you have 80 minutes left of class time
 
-### 10. Instructor do (15 minutes)
+### 12. Instructor do (15 minutes)
 
 * *Instructor demos. Look in folder.*
 * *Open this file into chrome and demo it for the class: 4.2-in-class-exercises/4.2.6_ClickeEvents folder.*
 
 * *go over the particular example line by line*
 
-### 11. Partners do (10 minutes)
+### 13. Partners do (10 minutes)
 
 * *Have students talk to each other about what just happened. MAKE SURE THE CODE IS UP ON THE SCREEN!*
 
-### 12. Student do (30 minutes)
+### 14. Student do (30 minutes)
 
 Student Excercise: Color Correct Game
 
@@ -265,7 +349,7 @@ Student Excercise: Color Correct Game
 * See demo for more details.
 ```
 
-### 13. Everyone do (15 minutes)
+### 15. Everyone do (15 minutes)
 
 * *Open the Code to the above exercise located in 4.2-in-class-exercises/4.2.7_colorCorrect folder.*
 

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>lexicalScope</title>
+  </head>
+  <body>
+      
+      <script type="text/javascript">
+
+        // nested functions example
+
+        var a = 10;
+        function first(){
+
+            var a = 5;
+
+            function second(){
+
+              var a = 3;
+
+              function third(){
+
+                alert(a);  
+              }
+
+              third();
+            } 
+
+            second();
+        }
+
+        //alert(a); //what will alert? 3, 5 or 10?
+
+        first(); //what will it alert? 3, 5 or 10?
+        
+        //alert(a); //will it be 3, 5 or 10?
+
+      </script>
+  </body>
+</html>
