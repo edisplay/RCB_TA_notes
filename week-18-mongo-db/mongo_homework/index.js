@@ -71,9 +71,11 @@ request('https://news.ycombinator.com', function (error, response, html) {
 
 //scrape ny times
 var times = function(input, cb) {
-	if (input == 'grab') {
+
+	if (input == 'fetch') {
 		var url = "http://www.nytimes.com";
 		request(url, function(err, res, body) {
+
 			var $ = cheerio.load(body);
 
 			// var headline = $(".story-heading");
@@ -102,16 +104,29 @@ var times = function(input, cb) {
 		     	var sumyNeat = sumy.replace(/(\r\n|\n|\r|\t|\s+)/gm," ").trim();
 		     	obj[i].push(sumyNeat);
 		    });  
-
 		    //console.log(obj);
 
+			var d = new Date();
+		 	//	console.log( d.getMonth() );
+			//	console.log( d.getDate() );
+		 	//	console.log( d.getFullYear() );
+		    
+		    var formatedDate = "";
+		    formatedDate = formatedDate + (d.getMonth() + 1) + "_";
+		    formatedDate = formatedDate + d.getDate() + "_";
+		    formatedDate = formatedDate + d.getFullYear();
+		    //console.log(formatedDate);
+
 		    //storing into db
+			//db.dropDatabase()
 		    mycollection.save({
 		    	"nyt": obj,
-		    	date: new Date()
+		    	date: formatedDate
 		    });
-		});
+			
+		    console.log("new data fetched.")
 
+		});
 	}else if (input == 'check') {
 
 		// mycollection.find(function (err, docs) {
@@ -119,16 +134,15 @@ var times = function(input, cb) {
 		//     console.log(docs.nyt);
 		// })
 
-		// mycollection.findOne({
-		//     // _id: mongojs.ObjectId('56cb8e77c628e17c45c59d3a')
-		// }, function(err, doc) {
-		//     cb(doc);
-		// });
-
-		mycollection.find().sort({lastModifiedDate:1}, function(err, doc){
-			cb(doc);
+		mycollection.findOne({
+		    _id: mongojs.ObjectId('56cf11ffadd9c2540842870c')
+		}, function(err, doc) {
+		    cb(doc);
 		});
 
+		// mycollection.find().sort({lastModifiedDate:1}, function(err, doc){
+		// 	cb(doc);
+		// });
 	};
 	
 }
@@ -146,6 +160,11 @@ app.get('/check', function(req, res) {
 	times('check', function(data) {
 		res.json(data)
 	})
+});
+
+//get save data
+app.post('/fetch', function(req, res) {
+	times('fetch');
 });
 
 app.listen(port, function(){

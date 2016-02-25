@@ -39,14 +39,6 @@ body {
   position: absolute;
   border: 3px solid black;
 }
-/* 
-.center {
-    margin: auto;
-    width: 60%;
-    border: 3px solid #73AD21;
-    padding: 10px;
-}
- */
 
 #face-color{
 	background-color: deepskyblue;
@@ -81,4 +73,14 @@ body {
 	z-index: 10;
 	margin-top: 35px;
 	margin-left: 10px;
+}
+
+#seek-box{
+	/*	background-color: white;*/
+	position: absolute;
+	width: 100px;
+	height: 100px;
+	left: 100px;
+	bottom: 100px;
+	background-image: url("../../assets/images/cube.png");
 }
