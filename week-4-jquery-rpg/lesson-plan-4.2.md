@@ -105,7 +105,7 @@ Intro to Lexical Environments:
 ### 6. Everyone do (30 minutes)
 
 * *Instructor demos. Look in folder.*
-* *Open this file into Sublime Text (not the browser): 4.2-in-class-exercises/4.2.2_lexicalScope/1.html*
+* *Open this file into Sublime Text (not the browser): 4.2-in-class-exercises/6-everyone-do_lexicalScope/1.html*
 * *after 1 is done, then open 2, and so on...*
 
 * *direct students to stand up and come to the front* 
@@ -123,7 +123,7 @@ Intro to Lexical Environments:
   
 > regarding functions
   
-> if you do console.log(this) it'll be whatever your function is inside
+> Inside your function, if you do console.log(this) it'll be whatever your function is inside
 
 > so if your function is inside the window then 
 

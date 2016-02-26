@@ -32,6 +32,8 @@ Review Exercise: 4.3.1_inception
 
 * *Open this file in chrome and demo it for the class: 4.3-in-class-exercises/4.3.1_inception/inception_solution .*
 
+* note to instructor: the exit limbo button only works when you click on all the other buttons. Otherwise the exit limbo doesn't work.
+
 * *Give student the starter code in: 4.3-in-class-exercises/4.3.1_inception/inception_starter *
 * *Slack this out to class*
 
