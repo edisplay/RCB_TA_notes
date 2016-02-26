@@ -62,29 +62,29 @@
                 cubbMission: "Not complete.",
             },
             yusufDream: {
-                completeMission: function() {
-                    inception.missionLog.yusufMission = "Complete";
-                    alert("Yusuf's Mission Complete");
+                /* Create the func that will */
+                    /* Change yusufMission's to Complete */
+                    /* Create the alert message that will alert Yusuf's mission is complete */
                 },
                 arthurDream: {
-                    completeMission: function() {
-                        inception.missionLog.arthurMission = "Complete";
-                        alert("Arthur's Mission Complete");
+                    /* Create the func that will */
+                        /* Change arthurMission's to Complete */
+                        /* Create the alert message that will alert Arthur's mission is complete */
                     },
                     eamesDream: {
-                        completeMission: function() {
-                            inception.missionLog.eamesMission = "Complete";
-                            alert("Eames's Mission Complete");
+                        /* Create the func that will */
+                            /* Change eamesMission's to Complete */
+                            /* Create the alert message that will alert eames's mission is complete */
                         },
                         cubbDream: {
-                            completeMission: function() {
-                                inception.missionLog.cubbMission = "Complete";
-                                alert("Cubb's Mission Complete");
+                            /* Create the func that will */
+                                /* Change cubbMission's to Complete */
+                                /* Create the alert message that will alert Cubb's mission is complete */
                             },
                             exitLimbo: {
-                                completeMission: function() {
-                                    if (inception.missionLog.yusufMission && inception.missionLog.arthurMission && inception.missionLog.eamesMission && inception.missionLog.cubbMission == "Complete") {
-                                        alert("YAY?");
+                                /* Create the func that will */
+                                        /* Check if all of the missions are complete */
+                                        /* Create the alert message Yay all mission is complete */
                                     };
                                 }
                             }
@@ -95,21 +95,22 @@
         };
         //click events
         $('#yusuf').on('click', function() {
-            //step 1 call the completeMission function for yusufDream 
+            /* Call the yusufDream func */
         });
         $('#arthur').on('click', function() {
-            inception.yusufDream.arthurDream.completeMission();
+            /* Call the arthurDream func */
         });
         $('#eames').on('click', function() {
-            inception.yusufDream.arthurDream.eamesDream.completeMission();
+            /* Call the eamesDream func */
         });
         $('#cubb').on('click', function() {
-            inception.yusufDream.arthurDream.eamesDream.cubbDream.completeMission();
+            /* Call the cubbDream func */
         });
         $('#limbo').on('click', function() {
-            inception.yusufDream.arthurDream.eamesDream.cubbDream.exitLimbo.completeMission();
+            /* Call the exitLimbo func */
         });
     });
+
     </script>
 </body>
 
