@@ -6,7 +6,7 @@
 - understand the graph of the time complexity of a function
 - use the concept of algorithmic complexity to differentiate a fast algorithm from a slow one
 
-##### Introduction 10 mins
+#### Introduction 10 mins
 - what is computer science?
   - study of how to do "computation"
   - computing things in a theoretical, hardware independent, mathematical way
@@ -27,7 +27,7 @@
   - sorting / arrays
   - traversal / graphs
 
-##### What are algorithms? 5 mins [15mins in]
+#### What are algorithms? 5 mins [15mins in]
 - you've already been writing algorithms
 - making a PB&J sandwich is an algorithm
 - studying algorithms means studying how a given algorithm behaves as the inputs grow
@@ -35,7 +35,7 @@
 ##### Isn't one way to do things the same as all the others? ( how many ways can there be to make a pb&j sandwich )
 - lets consider a simple alogrithm that finds a value in an array:
 
-##### Linear Search (pairing exercise) 10mins [40 mins in]
+#### Linear Search (pairing exercise) 10mins [40 mins in]
 - split the students into pairs
 - for a sorted array we will find some arbitrary value inside this array
 - given this code:
@@ -58,7 +58,7 @@ for( var i=0; i<stuff.length; i++ ){
 }
 ```
 
-##### Liner Search: Discussion 15 mins [55 mins in]
+#### Liner Search: Discussion 15 mins [55 mins in]
 - how long does this algorithm take? (what is it's *running time*
 - it will take between 1 and 18 tries depending on the randomly generated thign we are searching for
 - how can we think about a generalizes way to describe how long this algorithm takes?
@@ -69,7 +69,7 @@ for( var i=0; i<stuff.length; i++ ){
   - in math terms we asked the computer to do *n*+1 things
   - this is the "complexity" or "runtime" of one piece of code, independent of it's hardware implementation
 
-##### Changing inputs: graphs and how to define efficiency [10 mins] [1hr 5 mins in]
+#### Changing inputs: graphs and how to define efficiency [10 mins] [1hr 5 mins in]
 - consider if we made these changes:
 ```
 var stuff = [];
@@ -84,7 +84,7 @@ var random_value = Math.ceil( Math.random() * size );
 - if we use the same for loop (search algorithm) to find `random_value` how can we describe how long it will take?
 - It will take between 1 and (size of array) times to find, between 1 and *n* times to find.
 
-##### Big-O: How we describe algorithm efficiency [10 mins] [1 hr 15 mins in]]
+#### Big-O: How we describe algorithm efficiency [10 mins] [1 hr 15 mins in]]
 - In CS we generally describe the efficiency of something as it's longest possible run time
 - `max_size`
 - We want to understand about how this algorithm behaves as we increase or decrease `max_size`
@@ -160,7 +160,7 @@ function binaryIndexOf(stuff, searchElement) {
 - show a graph of common Big-O runtimes
 - "operations" (runtime) as we've defined them basically amount to loops, number of loops your program needs to run
 
-##### Space complexity
+#### Space complexity
 - how much memory something takes up
 - so far we've been dealing with time complexity, how long something takes to run
 - we can denote this with the same Bio-O notation
