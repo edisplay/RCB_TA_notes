@@ -59,8 +59,8 @@ end for
 - open the index.html file (this is in the students dir)
 - open / run the file with the debug console on
 - you will get an error that says "Uncaught ReferenceError: insertionSort is not defined"
-- define a function called insertionSort
-- IMPORTANT: don't write a `swap` function: one has been provided for you.
+- define a function called insertionSort (create a file and include it or write it inline in the html file)
+- **IMPORTANT**: don't write a `swap` function: one has been provided for you.
 - use the english pseudo code to implement insertion sort function
 - if you finish early with this exercise, implement a recursive insertion sort: 
 ```
@@ -92,12 +92,41 @@ function swapValues( A, index ){
   - worst case insertion sort array: `[5,4,3,2,1]` ( reversed array )
 - Big-O of insertion sort: O(n^2)
 
-#### Conclusions: teacher talks (5mins) [1hr 25mins in]
+#### Conclusions / Looking Ahead: teacher talks (5mins) [1hr 25mins in]
 - alogrithms can be easy to understand and implement if you take your time with implementation
 - not all algorithms are created equal, some are much more efficient than others
 - algorithms are programming
-
-#### Looking ahead: teacher talks (5mins) [1hr 30 mins in]
 - we will be spending the majority of the time (next 2 days) on problems that are a little more real world (but with more complicated implementation)
 - graphs ( nodes and trees )
 - we'll be seeing what they're used for, what problems they model and how to manipulate them
+
+#### Homework: Selection Sort:
+- Implement the selection sort algorithm
+- https://en.wikipedia.org/wiki/Selection_sort
+- Use the same code provided for insertion sort
+- replace line 44 of index.html with a call to your selection sort function (it should take the same arguments)
+```
+/* a[0] to a[n-1] is the array to sort */
+int i,j;
+
+/* advance the position through the entire array */
+/*   (could do j < n-1 because single element is also min element) */
+for (j = 0; j < n-1; j++) {
+    /* find the min element in the unsorted a[j .. n-1] */
+
+    /* assume the min is the first element */
+    int iMin = j;
+    /* test against elements after j to find the smallest */
+    for ( i = j+1; i < n; i++) {
+        /* if this element is less, then it is the new minimum */
+        if (a[i] < a[iMin]) {
+            /* found new minimum; remember its index */
+            iMin = i;
+        }
+    }
+
+    if(iMin != j) {
+        swap(a[j], a[iMin]);
+    }
+}
+```
