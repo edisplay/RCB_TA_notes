@@ -117,32 +117,34 @@ var times = function(input, cb) {
 		    formatedDate = formatedDate + d.getDate() + "_";
 		    formatedDate = formatedDate + d.getFullYear();
 		    //console.log(formatedDate);
-/*
-		    //check if date already exit in the database
-			mycollection.find().sort({lastModifiedDate:1}, function(err, doc){
-				//console.log(doc[0].date);
-				if (doc[0].date != formatedDate) {
+			
+			var myCount = function(cb) {
+			    //check if date already exit in the database
+				mycollection.find().count(function(err, doc_count){
+					//console.log(doc_count, "total items")
+					cb( doc_count );
+					//console.log(num, "is the new num");
+				});
+			}
 
-				    //storing into db			    
-					mycollection.save({
-				    	"nyt": obj,
-				    	date: new Date()
-				    	// date: formatedDate
-				    });
-		    		console.log("new data fetched.")
-				};
-			});
-*/
-			var num = 1;
+			//use callback to grab the count
+			myCount(function(c){
+				console.log(c, "this is the db count");
+		
+				mycollection.findOne({
+				    myId: c
+				}, function(err, doc) {
+				    //console.log(doc.date);
+				    if (doc.date != formatedDate) {
+				    	console.log("this is a new item need to be saved");
+				    }else{
+				    	console.log("we already got this, go on");
+				    }
+				});
 
-			mycollection.save({
-		    	"nyt": obj,
-		    	date: new Date(),
-		    	myId: num
-		    	// date: formatedDate
-		    });
-			console.log("new data fetched.")
-			   			
+			})
+
+
 		});
 	}else if (input == 'check') {
 
@@ -164,6 +166,7 @@ var times = function(input, cb) {
 
 		mycollection.find().sort({ myId: -1 }, function(err, doc){
 			console.log(doc[0].date, doc[0].myId);
+			
 			cb(doc);
 		});
 

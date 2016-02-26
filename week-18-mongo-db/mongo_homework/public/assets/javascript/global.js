@@ -112,6 +112,7 @@ $(document).ready(function() {
     $("#seek-box").hide();
 
     $("#seek-box").click(function() {
+        //put data into html
         populate();
         $('.container').show();
         $("#seek-box").hide();
