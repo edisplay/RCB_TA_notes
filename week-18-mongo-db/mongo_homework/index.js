@@ -117,21 +117,32 @@ var times = function(input, cb) {
 		    formatedDate = formatedDate + d.getDate() + "_";
 		    formatedDate = formatedDate + d.getFullYear();
 		    //console.log(formatedDate);
-
+/*
 		    //check if date already exit in the database
 			mycollection.find().sort({lastModifiedDate:1}, function(err, doc){
 				//console.log(doc[0].date);
 				if (doc[0].date != formatedDate) {
-					
+
 				    //storing into db			    
 					mycollection.save({
 				    	"nyt": obj,
-				    	date: formatedDate
+				    	date: new Date()
+				    	// date: formatedDate
 				    });
+		    		console.log("new data fetched.")
 				};
 			});
-			
-		    console.log("new data fetched.")
+*/
+			var num = 1;
+
+			mycollection.save({
+		    	"nyt": obj,
+		    	date: new Date(),
+		    	myId: num
+		    	// date: formatedDate
+		    });
+			console.log("new data fetched.")
+			   			
 		});
 	}else if (input == 'check') {
 
@@ -146,9 +157,16 @@ var times = function(input, cb) {
 		//     cb(doc);
 		// });
 
-		mycollection.find().sort({lastModifiedDate:1}, function(err, doc){
+		// mycollection.find().sort({lastModifiedDate:1}, function(err, doc){
+		// 	console.log(doc[0].date, "popluate data date");
+		// 	cb(doc);
+		// });
+
+		mycollection.find().sort({ myId: -1 }, function(err, doc){
+			console.log(doc[0].date, doc[0].myId);
 			cb(doc);
 		});
+
 	};
 }
 

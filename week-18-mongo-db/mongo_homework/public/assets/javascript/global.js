@@ -94,7 +94,7 @@ $(document).ready(function() {
             type: "POST",
             url: '/fetch'
         }).done(function() {
-            populate();
+            $("#seek-box").show();
         }).fail(function() {
             alert("Sorry. Server unavailable. ");
         });
@@ -104,10 +104,15 @@ $(document).ready(function() {
 
     /* running before user action*/
     $('.container').hide();
-    $("#seek-box").click(function() {
-        //getch da data
-        fetchData();
+    
+    //getch da data
+    fetchData();
 
+    //hide stuff before everything
+    $("#seek-box").hide();
+
+    $("#seek-box").click(function() {
+        populate();
         $('.container').show();
         $("#seek-box").hide();
     });
