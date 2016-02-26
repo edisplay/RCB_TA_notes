@@ -55,10 +55,9 @@
 
     <script type="text/javascript">
 
-    var count = 0;
-
+    //fight fight fight
     $(document).ready(function() {
-        //fight fight fight
+        // Create the object that will contain all character: name, biggerImg, and buttonImg
         var characters = {
             'blanka': {
                 name: "blanka",
@@ -102,52 +101,90 @@
             }
         };
 
+        // Create the "render" function that will take in: character, renderArea, size, buttonId as inputs
         var render = function(character, renderArea, size, buttonId) {
+            // Create a if statment that will check the input size
+            // If size is equal to 'buttonImg' we will be creating button sized image divs
             if (size == 'buttonImg') {
+              // Create the variable "charDiv", use jQuery to create the div with character name as the data-name
               var charDiv = $('<div>');
               charDiv.attr('data-name', character.name);
-
-              //note to zhen make all the elements like the way they are above.
-              //if you're storing data in an element, store it as a data attribute
-              var charImage = $("<img alt='image' class='buttons' id="+buttonId+">").attr("src", character.buttonImg);
+              // Create the variable "charImage", jQuery to create the div that will contain the image, with the class 'buttons' and the id as "button Id"
+              var charImage = $("<img alt='image' class='buttons' id="+buttonId+">")
+              // Source the character's 'buttonImg'
+              charImage.attr("src", character.buttonImg);
+              // Append the "charImage" to "charDiv"
               charDiv.append(charImage);
+              // Append the "charDiv" to the "renderArea"
               $("#"+renderArea).append(charDiv);
             }else{
-              console.log(character, renderArea, size, buttonId);
-              var charDiv = $("<div data-name='" + character.name + "-big'>");
-              var charImage = $("<img alt='image' class='char'>").attr("src", character.biggerImg);
+              // Else we are creating bigger sized image divs
+              // Create the variable "charDiv", use jQuery to create the div with character name + "-big" as the data-name
+              var charDiv = $('<div>');
+              charDiv.attr('data-name', character.name + "-big'>");
+              // Create the variable "charImage", jQuery to create the div that will contain the image, with the class 'char'
+              var charImage = $("<img alt='image' class='char'>");
+              // Source the character's 'biggerImg'
+              charImage.attr("src", character.biggerImg);
+              // Append the "charImage" to "charDiv"
               charDiv.append(charImage);
+              // Append the "charDiv" to the "renderArea"
               $("."+renderArea).append(charDiv);
             };
         };
 
+        // Create the variable "count" that will keep track how many divs are created
+        var count = 0;
+        // Create the array "characterNames" that will store all the character names as Strings
         var characterNames = ['blanka', 'chunli', 'dhalsim', 'ehonda', 'guile', 'ken', 'ryu', 'zangie'];
+        // Create the array "sides" that contains: 'left-side' and 'right-side'
         var sides = ['left-side','right-side'];
+        // Create the array "positions" that contains: 
+        var positions = ['button-area-top', 'button-area-bot'];
 
-        for (var i = 0; i < 4; i++) {
-          var target = characterNames[i];
-          render(characters[target], 'button-area-top', 'buttonImg', characterNames[i]);
-          $('#'+characterNames[i]).on('click', function() {
-              var name = ($(this)[0].id);
-              if (count < 2) {
-                render(characters[name], sides[count], 'biggerImg', name);
-                count++;
-              };
-          });
+        // Create a for loop that will start loop "p" at 0 and loop to until the length of the positions array
+        for (var p = 0; p < positions.length; p++) {
+          // Create the variable "s" and "e"
+          var s;
+          var e;
+          // If loop counter is equal to 0
+          if (p == 0 ) {
+            // set "s" to 0
+            // set "e" to 4
+            s = 0;
+            e = 4;
+          }else{
+            // Else 
+            // set "s" to 4
+            // set "e" to 8
+            s = 4;
+            e = 8;
+          }
+
+          // Create another loop that will start with "i" and set it to "s" and loop until "i" is "e"
+          for (var i = s; i < e; i++) {
+            // Create a variable "target" set it to "characterName" with the index of "i"
+            var target = characterNames[i];
+            // Call the "render" function and input: "characters[target", "positions[p]", "buttonImg", "characterNames[i]"
+            render(characters[target], positions[p], 'buttonImg', characterNames[i]);
+            // Create jQuery event listener on "characterNames[i]"
+            $('#'+characterNames[i]).on('click', function() {
+                // Create the variable "name", using jQuery select the id of 'this'
+                var name = ($(this)[0].id);
+                // If "count" is less than 2 
+                if (count < 2) {
+                  // Call the render function to render the bigger image with the input: "characters[name]", "sides[count]", 'biggerImg', "name"
+                  render(characters[name], sides[count], 'biggerImg', name);
+                  // Add 1 to count
+                  count++;
+                };
+            });
+          };
+
         };
 
-        for (var i = 4; i < 8; i++) {
-          var target = characterNames[i];
-          render(characters[target], 'button-area-bot', 'buttonImg', characterNames[i]);
-          $('#'+characterNames[i]).on('click', function() {
-              var name = ($(this)[0].id);
-              if (count < 2) {
-                render(characters[name], sides[count], 'biggerImg', name);
-                count++;
-              };
-          });
-        };
     });
+
     </script>
 </body>
 
