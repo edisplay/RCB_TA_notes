@@ -45,8 +45,13 @@
 				* step 3: append b to the div with an id of buttons
 		*/
 		for (var i = 0; i < letters.length; i++) {    
-		    
-		    var b = $('<button class="letter-button letter letter-button-color" data-let="'+ letters[i] +'">').text(letters[i]);   
+		    var b = $('<button>');
+		    b.addClass('letter-button letter letter-button-color');
+		    b.attr('data-let', letters[i]);
+		    b.text(letters[i])
+
+		    //alternatively you could do it in one line but it'll be harder to read
+		    //var b = $('<button class="letter-button letter letter-button-color" data-let="'+ letters[i] +'">').text(letters[i]);   
 		    
 		    $("#buttons").append(b); 
 		    //alert('watch this');
