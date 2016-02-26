@@ -16,10 +16,12 @@ look at this file at the root of the repository:
 
 * *Make a BRIEF comment about each objective after a person reads it.*
 
-* students will use jQuery to render to HTML
+* students will use jQuery to render HTML
 * students will practice using objects with jQuery
 
 # Theme:
+
+Making Elments Dynamically Using Arrays and Objects
 
 # INSTRUCTOR MUST COVER ALL!!!
 
@@ -31,6 +33,8 @@ look at this file at the root of the repository:
 Review Exercise: 4.3.1_inception
 
 * *Open this file in chrome and demo it for the class: 4.3-in-class-exercises/4.3.1_inception/inception_solution .*
+
+* note to instructor: the exit limbo button only works when you click on all the other buttons. Otherwise the exit limbo doesn't work.
 
 * *Give student the starter code in: 4.3-in-class-exercises/4.3.1_inception/inception_starter *
 * *Slack this out to class*

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>lexicalScope</title>
+  </head>
+  <body>
+      
+      <script type="text/javascript">
+
+        //local scope and hoisting
+        var e = 5;
+        function doIt() {
+          alert(e); 
+          var e = 3;
+        }
+
+        doIt(); //what will get alerted? 5, 3 or neither
+
+      </script>
+  </body>
+</html>

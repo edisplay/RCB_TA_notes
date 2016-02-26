@@ -18,7 +18,7 @@ Look at this file at the root of the repository:
 # INSTRUCTOR MUST COVER!!!
 
 ```
-Parts 3 - 21
+Parts 1-13
 ```
 
 # Objectives (Slack out to students, have unique students read each one and Instructor makes a comment after each one is read)
@@ -167,6 +167,12 @@ PART FOUR
 * *Open the Code to the above exercise located in 4.1-in-class-exercises/3-student-do_coffeeMenu/coffee.html*
 
 * *Call on students to go over the previous exercise*
+
+* *WHEN SHOULD WE DYNAMCIALLY CREATE HTML FROM THE JAVASCRIPT?*
+	
+	* *ANSWER: when you're building a menu it's always best to dynamically create the html from the JavaScript*
+
+> Menus could be restaurant menus, or a complicated form to generate a report
 
 ### 5. Instructor do (5 minutes)
 Intro to jQuery:

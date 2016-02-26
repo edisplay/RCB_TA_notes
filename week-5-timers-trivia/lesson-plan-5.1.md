@@ -138,17 +138,18 @@ With a partner, answer the questions in the script:
 
 * *Recap the last Exercise and answer any questions*
 
-### 7. Instructor does (10 minutes)
+### 7. Instructor does (5 minutes)
+* *Open in-class-exercises/5.1.7_context.html*
+* *Explain how functions executed by a setTimeout are run in a different execution context.*
 
-* *Open in-class-exercises/5.1.7_timeout.html*
+
+### 8. Instructor does (10 minutes)
+* *Open in-class-exercises/5.1.8_timeout.html*
 * *Introduce setTimeout and clearTimeout (we will get to setInterval after the break)*
 * *Go over the file and explain what it's doing.*
 * *Be sure to mention:*
   * *These are vanilla Javascript methods, not jQuery*
 
-### 8. Instructor does (5 minutes)
-* *Open in-class-exercises/5.1.8_context.html*
-* *Explain how functions executed by a setTimeout are run in a different execution context.*
 
 ### 9. Student do (10 minutes)
 * *Slack out in-class-exercises/5.1.9_simple_timer/skeleton/5.1.9_simple_timer.html*

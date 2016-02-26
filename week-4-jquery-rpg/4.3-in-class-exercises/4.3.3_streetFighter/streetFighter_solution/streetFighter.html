@@ -104,7 +104,11 @@
 
         var render = function(character, renderArea, size, buttonId) {
             if (size == 'buttonImg') {
-              var charDiv = $("<div data-name='" + character.name + "'>");
+              var charDiv = $('<div>');
+              charDiv.attr('data-name', character.name);
+
+              //note to zhen make all the elements like the way they are above.
+              //if you're storing data in an element, store it as a data attribute
               var charImage = $("<img alt='image' class='buttons' id="+buttonId+">").attr("src", character.buttonImg);
               charDiv.append(charImage);
               $("#"+renderArea).append(charDiv);
@@ -131,6 +135,7 @@
               };
           });
         };
+
         for (var i = 4; i < 8; i++) {
           var target = characterNames[i];
           render(characters[target], 'button-area-bot', 'buttonImg', characterNames[i]);

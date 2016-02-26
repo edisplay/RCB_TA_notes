@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>lexicalScope</title>
+  </head>
+  <body>
+      
+      <script type="text/javascript">
+
+        //local scope
+        var e = 5;
+        function doIt() {
+          var e = 3;
+          alert(e); 
+        }
+        doIt(); //what will get alerted? 5 or 3?
+
+      </script>
+  </body>
+</html>
