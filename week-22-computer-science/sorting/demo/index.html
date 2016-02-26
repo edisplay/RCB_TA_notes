@@ -29,12 +29,13 @@
     </div>
     <script src="selection.js"></script>
     <script src="insertion.js"></script>
+    <script src="recursive_insertion.js"></script>
     <script src="app.js"></script>
     <script>
       window.onload = function(){
         console.log( "here" );
 
-        var size = 20;
+        var size = 10;
 
         var data = generateRandomizedArray( size );
 
@@ -42,8 +43,9 @@
 
         console.log( data );
 
-        //var d = insertionSort( data );
-        var d = selectionSort( data );
+        //var d = recursiveInsertionSort( data, 0 );
+        var d = insertionSort( data );
+        //var d = selectionSort( data );
 
         console.log( "DONE", d );
 

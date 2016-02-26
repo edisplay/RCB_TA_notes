@@ -1,5 +1,5 @@
-var y = 10;
-var x = 10;
+var y = 4;
+var x = 4;
 
 var generated_graph = graph( y, x );
 var links = formatGraph( generated_graph );
@@ -156,18 +156,16 @@ force.stop();
 var start = 0;
 var finish = Math.floor(Math.random()*(x*y));
 
-var bfspath = solve( generated_graph, start, finish );
+var path = dfsearch( generated_graph, start, finish );
 
 window.onload = function(){
 
   setTimeout( function(){
-    displayD3Path( bfspath );
+    displayD3Path( path );
   }, 400 );
 
 }
 
-/*
-// DF Traversal Example
-var randomGraph = connectedGraph( 10, 10 );
-var everyVisitedNode = dftraversal( randomGraph, 0 );
-*/
+function dfsearch(){
+  return [];
+}
