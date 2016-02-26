@@ -21,29 +21,27 @@
 	    <script type="text/javascript">
 
 	    	$( document ).ready(function() {
-				function pickThings () { 
 
-					//selecting via class
-					var dog = $( ".dog" );
+				//selecting via class
+				var dog = $( ".dog" );
 
-					//jQuery selects the elements with a class of dog and logs them as an array like object
-					console.log(dog);
+				//jQuery selects the elements with a class of dog and logs them as an array like object
+				console.log(dog);
 
-					//getting to the text of the one of selected object
-					console.log(dog.eq(1).text());
+				//getting to the text of the one of selected object
+				console.log(dog.eq(1).text());
 
-					//select via id
-					var kitty = $("#cat");
-					console.log(kitty.eq(0).text());
+				//select via id
+				var kitty = $("#cat");
+				console.log(kitty.eq(0).text());
 
-					//select via data-attribute
-					var panda = $('*[data-name="red"]');
-					console.log(panda.eq(0).html());
+				//select via data-attribute
+				var panda = $('*[data-name="red"]');
+				console.log(panda.eq(0).html());
 
-					//getting to the data-attribute of an element
-					var element = $('#beast');
-					console.log(element.attr('data-name'));
-				};
+				//getting to the data-attribute of an element
+				var element = $('#beast');
+				console.log(element.attr('data-name'));
 
 				pickThings();
 	    	});

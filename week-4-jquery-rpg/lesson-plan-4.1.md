@@ -168,6 +168,12 @@ PART FOUR
 
 * *Call on students to go over the previous exercise*
 
+* *WHEN SHOULD WE DYNAMCIALLY CREATE HTML FROM THE JAVASCRIPT?*
+	
+	* *ANSWER: when you're building a menu it's always best to dynamically create the html from the JavaScript*
+
+> Menus could be restaurant menus, or a complicated form to generate a report
+
 ### 5. Instructor do (5 minutes)
 Intro to jQuery:
 
