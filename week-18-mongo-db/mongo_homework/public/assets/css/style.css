@@ -84,3 +84,12 @@ body {
 	bottom: 100px;
 	background-image: url("../../assets/images/cube.png");
 }
+
+#honey-box{
+	position: absolute;
+	width: 100px;
+	height: 100px;
+	left: 1800px;
+	bottom: 80px;
+	background-image: url("../../assets/images/honey.png");
+}

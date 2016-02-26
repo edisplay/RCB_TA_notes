@@ -106,6 +106,7 @@ var times = function(input, cb) {
 		    });  
 		    //console.log(obj);
 
+			//db.dropDatabase()
 			var d = new Date();
 		 	//	console.log( d.getMonth() );
 			//	console.log( d.getDate() );
@@ -117,15 +118,20 @@ var times = function(input, cb) {
 		    formatedDate = formatedDate + d.getFullYear();
 		    //console.log(formatedDate);
 
-		    //storing into db
-			//db.dropDatabase()
-		    mycollection.save({
-		    	"nyt": obj,
-		    	date: formatedDate
-		    });
+		    //check if date already exit in the database
+			mycollection.find().sort({lastModifiedDate:1}, function(err, doc){
+				//console.log(doc[0].date);
+				if (doc[0].date != formatedDate) {
+					
+				    //storing into db			    
+					mycollection.save({
+				    	"nyt": obj,
+				    	date: formatedDate
+				    });
+				};
+			});
 			
 		    console.log("new data fetched.")
-
 		});
 	}else if (input == 'check') {
 
@@ -134,17 +140,16 @@ var times = function(input, cb) {
 		//     console.log(docs.nyt);
 		// })
 
-		mycollection.findOne({
-		    _id: mongojs.ObjectId('56cf11ffadd9c2540842870c')
-		}, function(err, doc) {
-		    cb(doc);
-		});
-
-		// mycollection.find().sort({lastModifiedDate:1}, function(err, doc){
-		// 	cb(doc);
+		// mycollection.findOne({
+		//     _id: mongojs.ObjectId('56cf11ffadd9c2540842870c')
+		// }, function(err, doc) {
+		//     cb(doc);
 		// });
+
+		mycollection.find().sort({lastModifiedDate:1}, function(err, doc){
+			cb(doc);
+		});
 	};
-	
 }
 
 /* scrape ny times */
@@ -165,6 +170,7 @@ app.get('/check', function(req, res) {
 //get save data
 app.post('/fetch', function(req, res) {
 	times('fetch');
+	res.send('success');
 });
 
 app.listen(port, function(){
