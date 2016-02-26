@@ -16,10 +16,12 @@ look at this file at the root of the repository:
 
 * *Make a BRIEF comment about each objective after a person reads it.*
 
-* students will use jQuery to render to HTML
+* students will use jQuery to render HTML
 * students will practice using objects with jQuery
 
 # Theme:
+
+Making Elments Dynamically Using Arrays and Objects
 
 # INSTRUCTOR MUST COVER ALL!!!
 
