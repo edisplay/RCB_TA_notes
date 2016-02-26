@@ -38,7 +38,7 @@
 #### Linear Search (pairing exercise) 10mins [40 mins in]
 - split the students into pairs
 - for a sorted array we will find some arbitrary value inside this array
-- given this code:
+- given this code: ( have a nodejs file or html file prepared to run some stuff )
 ```
 var stuff = [1,2,3,4,5,6,7,8,9,10,11,12,13,14];
 var random_value = Math.ceil( Math.random() * 14 );
@@ -46,6 +46,7 @@ var random_value = Math.ceil( Math.random() * 14 );
 
 - write a for loop that looks at each index of the array to see if it matches the random value
 - if it does match the random value display an alert box with the index of the array and the value
+- linear search is just a fancy way of saying a for loop with a conditional
 
 Solution:
 ```
@@ -58,40 +59,49 @@ for( var i=0; i<stuff.length; i++ ){
 }
 ```
 
-#### Liner Search: Discussion 15 mins [55 mins in]
-- how long does this algorithm take? (what is it's *running time*
-- it will take between 1 and 18 tries depending on the randomly generated thign we are searching for
+#### Linear Search: Discussion 15 mins [55 mins in]
+- how long does this algorithm take? (what is it's *running time*)
+- it will take between 1 and 14 tries depending on the randomly generated thign we are searching for
 - how can we think about a generalizes way to describe how long this algorithm takes?
   - also: let's think about what "how long this takes" means:
-  - how do we describe this in a way that only applies to the algorithm itself and not to the computer it runs on or the language you're using or wether or not someone trips over the power cord as you are running this program?
-  - we can speak interms of *instructions to the computer*, each thing we ask the computer to do can be counted as taking a bit longer
+  - how do we describe this in a way that only applies to the algorithm itself and not to the computer it runs on or the language you're using or whether or not someone trips over the power cord as you are running this program?
+  - we can speak in terms of *instructions to the computer*, each thing we ask the computer to do can be counted as taking a bit longer
   - we asked the computer to do `stuff.length` things, plus run an alert
-  - in math terms we asked the computer to do *n*+1 things
+  - in math terms we asked the computer to do a maximum of 14 things, or *n*+1 things
   - this is the "complexity" or "runtime" of one piece of code, independent of it's hardware implementation
 
 #### Changing inputs: graphs and how to define efficiency [10 mins] [1hr 5 mins in]
-- consider if we made these changes:
+- consider if we made these changes in the way that stuff is created:
 ```
 var stuff = [];
+
 var max_size = 1000000000;
+
 var size = Math.ceil( Math.random() * max_size );
+
 for( var j=0; j<size; j++ ){
+
   stuff.push( j+1 );
 }
+
 var random_value = Math.ceil( Math.random() * size );
 ```
-- have a student explain to the class what this code does
-- if we use the same for loop (search algorithm) to find `random_value` how can we describe how long it will take?
+- *have a student explain to the class what this code does*
+- If we use the same for loop (search algorithm) to find `random_value` how can we describe how long it will take?
 - It will take between 1 and (size of array) times to find, between 1 and *n* times to find.
 
 #### Big-O: How we describe algorithm efficiency [10 mins] [1 hr 15 mins in]]
 - In CS we generally describe the efficiency of something as it's longest possible run time
-- `max_size`
-- We want to understand about how this algorithm behaves as we increase or decrease `max_size`
+- equivalent to `max_size` in the example above
+- We want to understand how this algorithm behaves as we increase or decrease `max_size`
 - This is "Big-O": The graph of the run time of an algorithm's worst case performance as the input size grows
-- teacher graphs the efficiency of the algorithm as max_size grows larger
+- teacher graphs the efficiency of the algorithm as max_size grows larger:
+  - what is the number of things that happen 
+  - calculate the actual number of times the algorithm runs for the first 4 or 5 input sizes
+  - draw another graph that extrapolates those numbers
 - we want a picture of the behavior of this function as max_size get bigger and bigger to be as generalized as possible
-  - thanks to the properties of polynomial functions / graphs, if we say that our algorithm takes *n*+1 time to run, we can basically say that it takes *n* time to run
+  - thanks to the properties of polynomial functions / graphs, when we said above that our algorithm takes *n*+1 time to run, we can basically say that it takes *n* time to run
+[big o graph](bigograph.jpg)
 
 ##### Isn't it all the same anyways? (15 mins) [1 hr 20 mins in]
 - lets look at the most efficeint way possible to fins this same value:
