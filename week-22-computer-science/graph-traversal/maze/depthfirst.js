@@ -1,4 +1,4 @@
-function dfsolve( graph, start, finish ){
+function dfsearch( graph, start, finish ){
 
   var nodes = [];
 
@@ -24,34 +24,23 @@ function dfsolve( graph, start, finish ){
 
     if( current_node.discovered === null ){
 
+      if( current === finish ){
+        return getPath( nodes, start, finish );
+      }
+
       nodes[ current ].discovered = true;
 
       var neighbors = graph[ current ]
-
-      //this for loop sees if we are done, for this level
-      for( var i=0; i<neighbors.length; i++ ){
-
-        if( neighbors[i] === finish ){
-
-          stack.push( current );
-
-          nodes[ neighbors[i] ].parent = current;
-
-          stack.push( nodes[ neighbors[i] ] );
-
-          return getPath( nodes, start, finish );
-        }
-      }
 
       for( var i=0; i<neighbors.length; i++ ){
         nodes[ neighbors[i] ].parent = current;
 
         stack.push( neighbors[i] );
       }
-    }
+    }// else we dont do anything, go on to the next thing
   }
 
-  return stack;
+  return false;
 }
 
 function getPath( nodes, start, finish ){
