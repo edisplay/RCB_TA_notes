@@ -62,52 +62,56 @@
                 cubbMission: "Not complete.",
             },
             yusufDream: {
-                /* Create the func that will */
-                    /* Change yusufMission's to Complete */
-                    /* Create the alert message that will alert Yusuf's mission is complete */
+                completeMission: function() {
+                    inception.missionLog.yusufMission = "Complete";
+                    alert("Yusuf's Mission Complete");
                 },
                 arthurDream: {
-                    /* Create the func that will */
-                        /* Change arthurMission's to Complete */
-                        /* Create the alert message that will alert Arthur's mission is complete */
+                    completeMission: function() {
+                        inception.missionLog.arthurMission = "Complete";
+                        alert("Arthur's Mission Complete");
                     },
                     eamesDream: {
-                        /* Create the func that will */
-                            /* Change eamesMission's to Complete */
-                            /* Create the alert message that will alert eames's mission is complete */
+                        completeMission: function() {
+                            inception.missionLog.eamesMission = "Complete";
+                            alert("Eames's Mission Complete");
                         },
                         cubbDream: {
-                            /* Create the func that will */
-                                /* Change cubbMission's to Complete */
-                                /* Create the alert message that will alert Cubb's mission is complete */
+                            completeMission: function() {
+                                inception.missionLog.cubbMission = "Complete";
+                                alert("Cubb's Mission Complete");
                             },
                             exitLimbo: {
-                                /* Create the func that will */
-                                        /* Check if all of the missions are complete */
-                                        /* Create the alert message Yay all mission is complete */
+                                completeMission: function() {
+                                    if (inception.missionLog.yusufMission == "Complete" && inception.missionLog.arthurMission == "Complete" && inception.missionLog.eamesMission == "Complete" && inception.missionLog.cubbMission == "Complete") {
+                                        alert("YAY?");
                                     };
                                 }
                             }
+
                         }
                     }
                 }
             }
         };
+
+        debugger;
+        
         //click events
         $('#yusuf').on('click', function() {
-            /* Call the yusufDream func */
+            /* Step 1: Inside the inception object, in the yusufDream key, call the completeMission function */
         });
         $('#arthur').on('click', function() {
-            /* Call the arthurDream func */
+            /* Step 2: Inside the inception object, in the yusufDream key, inside of the authorDream key, call the completeMission function */
         });
         $('#eames').on('click', function() {
-            /* Call the eamesDream func */
+            /* Step 3: Inside the inception object, in the yusufDream key, inside of the authorDream key, inside call the completeMission function */
         });
         $('#cubb').on('click', function() {
-            /* Call the cubbDream func */
+            /* Step 4: Inside the inception object, in the yusufDream key, inside of the authorDream key, inside of the eamesDream key, call the completeMission function */
         });
         $('#limbo').on('click', function() {
-            /* Call the exitLimbo func */
+            /* Step 5: Inside the inception object, in the yusufDream key, inside of the authorDream key, inside of the eamesDream key, inside of the cubbDream key, inside of the exitLimbo key, call the completeMission function */
         });
     });
 

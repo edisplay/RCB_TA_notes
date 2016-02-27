@@ -29,18 +29,21 @@ Making Elments Dynamically Using Arrays and Objects
 3 - 7 or they won't be able to do the homework.
 ```
 
-### 1. Students do (15 minutes)
-Review Exercise: 4.3.1_inception
+### 1. Student do (15 minutes)
 
-* *Open this file in chrome and demo it for the class: 4.3-in-class-exercises/4.3.1_inception/inception_solution .*
+* *Open this file in chrome and demo it for the class: 4.3-in-class-exercises/1-student-do_inception/inception_solution.html*
 
 * note to instructor: the exit limbo button only works when you click on all the other buttons. Otherwise the exit limbo doesn't work.
 
-* *Give student the starter code in: 4.3-in-class-exercises/4.3.1_inception/inception_starter *
+* *Give student the starter code in: 4.3-in-class-exercises/1-student-do_inception/inception_starter.html*
 * *Slack this out to class*
+
 
 ```
 * In the movie inception the protagonist "Cobb" must traverse many level of dreams in order complete his mission
+
+* Hint: if you're having trouble understanding the inception object, then open your console, refresh the browser and the debugger will be triggered in the code. And now you can type `inception;` into your console, press enter and see what the inception object is.
+
 * You are tasked to create a web page app that tells his story
 	* In the HTML given to you there are 5 buttons
 	* Each button must be able to run the corresponding function inside of the object given to you in the starter file
@@ -59,7 +62,7 @@ Review Exercise: 4.3.1_inception
 4.3.2_bradyBunch
 
 * *Instructor demos. Look in folder.*
-* *Open this file into chrome and demo it for the class: 4.3-in-class-exercises/4.3.2_bradyBunch folder.*
+* *Open this file into chrome and demo it for the class: 4.3-in-class-exercises/3-instructor-do_bradyBunch folder.*
 
 * *go over the particular example line by line*
 

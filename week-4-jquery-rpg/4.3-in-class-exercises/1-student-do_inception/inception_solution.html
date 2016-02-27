@@ -9,7 +9,7 @@
     body {
         background-color: black;
     }
-
+    
     .mission {
         height: 100px;
         background-color: white;
@@ -17,27 +17,27 @@
         margin: 5px;
         padding: 10px;
     }
-
+    
     #yusuf {
         width: 400px;
         background-color: mediumseagreen;
     }
-
+    
     #arthur {
         width: 350px;
         background-color: coral;
     }
-
+    
     #eames {
         width: 300px;
         background-color: deepskyblue;
     }
-
+    
     #cubb {
         width: 250px;
         background-color: darkgray;
     }
-
+    
     #limbo {
         width: 200px;
         background-color: white;
@@ -83,32 +83,42 @@
                             },
                             exitLimbo: {
                                 completeMission: function() {
-                                    if (inception.missionLog.yusufMission && inception.missionLog.arthurMission && inception.missionLog.eamesMission && inception.missionLog.cubbMission == "Complete") {
+                                    if (inception.missionLog.yusufMission == "Complete" && inception.missionLog.arthurMission == "Complete" && inception.missionLog.eamesMission == "Complete" && inception.missionLog.cubbMission == "Complete") {
                                         alert("YAY?");
                                     };
                                 }
                             }
+
                         }
                     }
                 }
             }
         };
+
+        debugger;
+        
         //click events
         $('#yusuf').on('click', function() {
+            /* Step 1: Inside the inception object, in the yusufDream key, call the completeMission function */
             inception.yusufDream.completeMission();
         });
         $('#arthur').on('click', function() {
+            /* Step 2: Inside the inception object, in the yusufDream key, inside of the authorDream key, call the completeMission function */
             inception.yusufDream.arthurDream.completeMission();
         });
         $('#eames').on('click', function() {
+            /* Step 3: Inside the inception object, in the yusufDream key, inside of the authorDream key, inside call the completeMission function */
             inception.yusufDream.arthurDream.eamesDream.completeMission();
         });
         $('#cubb').on('click', function() {
+            /* Step 4: Inside the inception object, in the yusufDream key, inside of the authorDream key, inside of the eamesDream key, call the completeMission function */
             inception.yusufDream.arthurDream.eamesDream.cubbDream.completeMission();
         });
         $('#limbo').on('click', function() {
+            /* Step 5: Inside the inception object, in the yusufDream key, inside of the authorDream key, inside of the eamesDream key, inside of the cubbDream key, inside of the exitLimbo key, call the completeMission function */
             inception.yusufDream.arthurDream.eamesDream.cubbDream.exitLimbo.completeMission();
         });
+
     });
     </script>
 </body>
