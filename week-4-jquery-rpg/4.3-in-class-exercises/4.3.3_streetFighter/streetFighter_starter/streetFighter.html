@@ -11,50 +11,52 @@
         width: 500px;
         height: 360px;
     }
+    
     #button-area-top {
-      margin-top: 218px;
-      margin-left: 140px;
+        margin-top: 218px;
+        margin-left: 140px;
     }
+    
     #button-area-bot {
-      margin-left: 140px;
+        margin-left: 140px;
     }
+    
     .buttons {
         width: 50px;
         height: 65px;
         float: left;
     }
+    
     .char {
-      width: 90px;
-      height: 125px;
+        width: 90px;
+        height: 125px;
     }
+    
     .clear {
         clear: left;
     }
-    .left-side{
-      position: absolute;
-      top: 200px;
+    
+    .left-side {
+        position: absolute;
+        top: 200px;
     }
-    .right-side{
-      position: absolute;
-      top: 205px;
-      left: 380px;
+    
+    .right-side {
+        position: absolute;
+        top: 205px;
+        left: 380px;
     }
     </style>
 </head>
 
 <body>
-
     <div id="button-area-top"></div>
     <div class="clear"></div>
-
     <div id="button-area-bot"></div>
     <div class="clear"></div>
-
     <p class="left-side"></p>
     <p class="right-side"></p>
-
     <script type="text/javascript">
-
     //fight fight fight
     $(document).ready(function() {
         // Create the object that will contain all character: name, biggerImg, and buttonImg
@@ -101,75 +103,61 @@
             }
         };
 
-        // Create the "render" function that will take in: character, renderArea, size, buttonId as inputs
+        // Create a "render" function that will take in: character, renderArea, size, buttonId as arguments
+        var render = function(character, renderArea, size, buttonId) {
+            if (size == 'buttonImg') {
+                // Create a if statment that will check the size argument, if size is equal to 'buttonImg' we will be creating button sized image divs
 
-            // Create a if statment that will check the input size
-            // If size is equal to 'buttonImg' we will be creating button sized image divs
+                // Create a variable named "charDiv", use jQuery to create a div with character name as a "data-name" attribute
 
-              // Create the variable "charDiv", use jQuery to create the div with character name as the data-name
+                // Create a variable named "charImage", use jQuery to create an image element, with a source of a character's buttonImg, with the class 'buttons' and an id of "buttonId"
 
-              // Create the variable "charImage", jQuery to create the div that will contain the image, with the class 'buttons' and the id as "button Id"
+                // Append the "charImage" you made to "charDiv"
 
-              // Source the character's 'buttonImg'
+                // Then append the "charDiv" to the "renderArea"
 
-              // Append the "charImage" to "charDiv"
-
-              // Append the "charDiv" to the "renderArea"
-
-              // Else we are creating bigger sized image divs
-              // Create the variable "charDiv", use jQuery to create the div with character name + "-big" as the data-name
-
-              // Create the variable "charImage", jQuery to create the div that will contain the image, with the class 'char'
-
-              // Source the character's 'biggerImg'
-
-              // Append the "charImage" to "charDiv"
-
-              // Append the "charDiv" to the "renderArea"
+            } else {
 
 
-        // Create the variable "count" that will keep track how many divs are created
+                // Else we are creating bigger sized image divs
+                // Create the variable "charDiv", use jQuery to create the div with character name + "-big" as the data-name attribute
 
-        // Create the array "characterNames" that will store all the character names as Strings
+                // Create the variable "charImage", use jQuery to create the image that will contain the image with a source of a character's 'biggerImg' and with the class of 'char'. 
 
-        // Create the array "sides" that contains: 'left-side' and 'right-side'
+                // Append the "charImage" to "charDiv"
 
-        // Create the array "positions" that contains: 
+                // Append the "charDiv" to the "renderArea"
+            }
+        };
 
+        var count = 0;
+        var characterNames = ['blanka', 'chunli', 'dhalsim', 'ehonda', 'guile', 'ken', 'ryu', 'zangie'];
+        var sides = ['left-side', 'right-side'];
+        var positions = ['button-area-top', 'button-area-bot'];
+        for (var p = 0; p < positions.length; p++) {
+            var s;
+            var e;
+            if (p === 0) {
+                s = 0;
+                e = 4;
+            } else {
+                s = 4;
+                e = 8;
+            }
+            for (var i = s; i < e; i++) {
+                var target = characterNames[i];
+                render(characters[target], positions[p], 'buttonImg', characterNames[i]);
+                $('#' + characterNames[i]).on('click', function() {
+                    var name = ($(this)[0].id);
+                    if (count < 2) {
+                        render(characters[name], sides[count], 'biggerImg', name);
+                        count++;
+                    }
+                })
+            }
 
-        // Create a for loop that will start loop "p" at 0 and loop to until the length of the positions array
-
-          // Create the variable "s" and "e"
-
-          // If loop counter is equal to 0
-
-            // set "s" to 0
-            // set "e" to 4
-
-
-            // Else 
-            // set "s" to 4
-            // set "e" to 8
-
-
-          // Create another loop that will start with "i" and set it to "s" and loop until "i" is "e"
-
-            // Create a variable "target" set it to "characterName" with the index of "i"
-
-            // Call the "render" function and input: "characters[target", "positions[p]", "buttonImg", "characterNames[i]"
-
-            // Create jQuery event listener on "characterNames[i]"
-
-                // Create the variable "name", using jQuery select the id of 'this'
-
-                // If "count" is less than 2 
-
-                  // Call the render function to render the bigger image with the input: "characters[name]", "sides[count]", 'biggerImg', "name"
-
-                  // Add 1 to count
-
+        }
     });
-
     </script>
 </body>
 
