@@ -62,7 +62,7 @@ Making Elments Dynamically Using Arrays and Objects
 4.3.2_bradyBunch
 
 * *Instructor demos. Look in folder.*
-* *Open this file into chrome and demo it for the class: 4.3-in-class-exercises/4.3.2_bradyBunch folder.*
+* *Open this file into chrome and demo it for the class: 4.3-in-class-exercises/3-instructor-do_bradyBunch folder.*
 
 * *go over the particular example line by line*
 
