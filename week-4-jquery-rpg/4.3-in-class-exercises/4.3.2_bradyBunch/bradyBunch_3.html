@@ -102,6 +102,9 @@
         // Create the array "chars" that will store all the names of our characters as String
         var chars = ["mom", "dad", "brother_big", "brother_mid", "brother_small", "sister_big", "sister_mid", "sister_small", "logo"];
 
+        // Create an empty array for the characters we've already used
+        var charsUsed = [];
+
         // Create a function called "render" that will take 2 inputs: character and render
         // This is a reuseable function that will be called to create divs of character image for us
         var render = function(character, renderArea) {
