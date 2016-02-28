@@ -99,7 +99,9 @@ Student Excercise: 4.3.3_streetFighter
 
 ##### 75 minutes have passed
 
-# none of this has solutions and has not been QA'd
+
+
+# none of these have solutions and has not been QA'd
 
 ### 7. Instructor do: ( 10 minutes )
 4.3.4_fortune teller
