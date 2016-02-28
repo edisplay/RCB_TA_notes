@@ -1,6 +1,5 @@
 $(document).ready(function() {
 
-    /* Create the object "characters" and storing all the names and the images of all characters */
     var characters = {
         'brother_big': {
             imageUrl: "assets/images/brother_big.png"

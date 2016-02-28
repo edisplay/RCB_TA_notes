@@ -1,6 +1,7 @@
 $(document).ready(function() {
 
-	/* Create the object "characters" and storing all the names and the images of all characters */
+	var positions = ["slot-top-left", "slot-top-mid", "slot-top-right", "slot-mid-left", "slot-mid-mid", "slot-mid-right", "slot-bot-left", "slot-bot-mid", "slot-bot-right"];
+
 	var characters = {
 	    'brother_big': {
 	        imageUrl: "assets/images/brother_big.png"
@@ -31,14 +32,36 @@ $(document).ready(function() {
 	    },
 	};
 
-	// Create the variable "count" that will keep track how many divs are created
-	var count = 0;
-
-	// Create the array "positions" that will store all the id names of divs that we will be appending to as Strings
-	var positions = ["slot-top-left", "slot-top-mid", "slot-top-right", "slot-mid-left", "slot-mid-mid", "slot-mid-right", "slot-bot-left", "slot-bot-mid", "slot-bot-right"];
-
-	// Create the array "chars" that will store all the names of our characters as String
-	var chars = ["mom", "dad", "brother_big", "brother_mid", "brother_small", "sister_big", "sister_mid", "sister_small", "logo"];
+	// Create the array "chars" that will store all the names of our characters from the characters object
+	var chars = Object.keys(characters);
 
 
+	/* create the following divs and add to the div with an id of container: */
+		// <div id="slot-top-left"></div>
+		// <div id="slot-top-mid"></div>
+		// <div id="slot-top-right"></div>
+		// <div class="clear"></div>
+		// <div id="slot-mid-left"></div>
+		// <div id="slot-mid-mid"></div>
+		// <div id="slot-mid-right"></div>
+		// <div class="clear"></div>
+		// <div id="slot-bot-left"></div>
+		// <div id="slot-bot-mid"></div>
+		// <div id="slot-bot-right"></div>
+		// <div class="clear"></div>
+	for (var i = 0; i < positions.length; i++) {
+	    if ((i == 2) || (i == 5) || (i == 8)) {
+	        var divTag = $('<div>');
+	        divTag.attr('id', positions[i]);
+	        $('#container').append(divTag);
+
+	        var divTag = $('<div>');
+	        divTag.addClass('clear');
+	        $('#container').append(divTag);
+	    } else {
+	        var divTag = $('<div>');
+	        divTag.attr('id', positions[i]);
+	        $('#container').append(divTag);
+	    }
+	}
 });
