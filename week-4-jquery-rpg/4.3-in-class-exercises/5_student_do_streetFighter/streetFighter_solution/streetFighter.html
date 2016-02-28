@@ -3,47 +3,47 @@
 
 <head>
     <title>Street Fighter</title>
-    <style>
-    body {
-        background: url(images/streetfighter_bg.png) no-repeat;
-        width: 500px;
-        height: 360px;
-    }
-    
-    #button-area-top {
-        margin-top: 218px;
-        margin-left: 140px;
-    }
-    
-    #button-area-bot {
-        margin-left: 140px;
-    }
-    
-    .buttons {
-        width: 50px;
-        height: 65px;
-        float: left;
-    }
-    
-    .char {
-        width: 90px;
-        height: 125px;
-    }
-    
-    .clear {
-        clear: left;
-    }
-    
-    .left-side {
-        position: absolute;
-        top: 200px;
-    }
-    
-    .right-side {
-        position: absolute;
-        top: 205px;
-        left: 380px;
-    }
+    <style type="text/css">
+      body {
+          background: url(images/streetfighter_bg.png) no-repeat;
+          width: 500px;
+          height: 360px;
+      }
+      
+      #button-area-top {
+          margin-top: 218px;
+          margin-left: 140px;
+      }
+      
+      #button-area-bot {
+          margin-left: 140px;
+      }
+      
+      .buttons {
+          width: 50px;
+          height: 65px;
+          float: left;
+      }
+      
+      .char {
+          width: 90px;
+          height: 125px;
+      }
+      
+      .clear {
+          clear: left;
+      }
+      
+      .left-side {
+          position: absolute;
+          top: 200px;
+      }
+      
+      .right-side {
+          position: absolute;
+          top: 205px;
+          left: 380px;
+      }
     </style>
 </head>
 
@@ -54,8 +54,9 @@
     <div class="clear"></div>
     <p class="left-side"></p>
     <p class="right-side"></p>
-    <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
-    <script type="text/javascript">
+
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+  <script type="text/javascript">
     //fight fight fight
     $(document).ready(function() {
         var characters = {
@@ -101,34 +102,62 @@
             }
         };
 
-        // Create the "render" function that will take in: character, renderArea, size, buttonId as inputs
         var render = function(character, renderArea, size, buttonId) {
-            // Create a if statment that will check the input size
-            // If size is equal to 'buttonImg' we will be creating button sized image divs
-            if (size == 'buttonImg') {
-                // Create the variable "charDiv", use jQuery to create the div with character name as the data-name
+            //Step 8: if size is equal to 'buttonImg'
+              //then 
+                //make a variable named charDiv and set it equal to a new div
+                // set a data-name attribute to charDiv and set it equal to character.name
+
+                //make another variable named charImage and set it equal to a new image 
+                  //add an alt attribute to the charImage and set it equal to: character.name + ' menu image'
+                  //add the buttons class to the charImage
+                  //set the data-name attribute of the charImage to buttonId
+                  //set the src of the charImage to character.buttonImg
+
+                //append charImage to charDiv
+
+                //append charDiv to $("#" + renderArea)
+
+              //else
+                //then
+                  //make a variable named charDiv and set it equal to a new div
+                  //set charDiv's data-name to this: character.name + "-big'"
+
+                  //make another variable named charImage and set it equal to a new image 
+                    //add an alt attribute to the charImage and set it equal to: character.name + ' bigger image'
+                    //add the char class to the charImage
+                    //set the data-name attribute of the charImage to buttonId
+                    //set the src of the charImage to character.biggerImg
+
+                    //append charImage to charDiv
+
+                    //append charDiv to $("." + renderArea)
+
+            if (size == 'buttonImg') {                
                 var charDiv = $('<div>');
                 charDiv.attr('data-name', character.name);
-                // Create the variable "charImage", jQuery to create the div that will contain the image, with the class 'buttons' and the id as "button Id"
-                var charImage = $("<img alt='image' class='buttons' data-name=" + buttonId + ">")
-                    // Source the character's 'buttonImg'
+
+                var charImage = $("<img>"); 
+                charImage.attr('alt', character.name + ' menu image'); 
+                charImage.addClass('buttons'); 
+                charImage.attr('data-name', buttonId);
                 charImage.attr("src", character.buttonImg);
-                // Append the "charImage" to "charDiv"
+                
                 charDiv.append(charImage);
-                // Append the "charDiv" to the "renderArea"
+
                 $("#" + renderArea).append(charDiv);
+            
             } else {
-                // Else we are creating bigger sized image divs
-                // Create the variable "charDiv", use jQuery to create the div with character name + "-big" as the data-name
                 var charDiv = $('<div>');
-                charDiv.attr('data-name', character.name + "-big'>");
-                // Create the variable "charImage", jQuery to create the div that will contain the image, with the class 'char'
-                var charImage = $("<img alt='image' class='char'>");
-                // Source the character's 'biggerImg'
+                charDiv.attr('data-name', character.name + "-big'");
+
+                var charImage = $("<img>"); 
+                charImage.attr('alt', character.name + ' bigger image');
+                charImage.addClass('char');
                 charImage.attr("src", character.biggerImg);
-                // Append the "charImage" to "charDiv"
+
                 charDiv.append(charImage);
-                // Append the "charDiv" to the "renderArea"
+
                 $("." + renderArea).append(charDiv);
             };
         };
@@ -136,8 +165,9 @@
         //Step 1: Create a variable named count and set it equal to 0. This will keep track of how many divs are created 
         var count = 0;
 
-        //Step 2: Create a variable named characterNames and set it equal to an array with the following strings: 'blanka', 'chunli', 'dhalsim', 'ehonda', 'guile', 'ken', 'ryu', 'zangie'. This let's us store all of the character names as Strings
-        var characterNames = ['blanka', 'chunli', 'dhalsim', 'ehonda', 'guile', 'ken', 'ryu', 'zangie'];
+        //Step 2: Create a variable named characterNames and set it equal to Object.keys(characters)
+        //note: this takes all the keys of the characters object and turns them into an array
+        var characterNames = Object.keys(characters);
 
         //Step 3: Create a variable named  array "sides" that contains: 'left-side' and 'right-side'
         var sides = ['left-side', 'right-side'];
@@ -168,7 +198,7 @@
             for (var i = start; i < end; i++) {
                 // Step 6:
                   /*
-                    * Create a variable named target and set it to characterNames with an index of i
+                    * Create a variable named target and set it to characterNames[i]
                     * Call the render function and pass these in as the arguments: characters[target, positions[p], buttonImg, characterNames[i]
                   */
                 var target = characterNames[i];
@@ -198,7 +228,7 @@
         });
 
     });
-    </script>
+  </script>
 </body>
 
 </html>
