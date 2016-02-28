@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Adventure</title>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+    <style>
+    body {
+        background-color: black;
+        color: white;
+    }
+    #title{
+        width: 400px;
+        color: red;
+    }
+    #left-area {
+        width: 305px;
+        height: 500px;
+        background-color: steelblue;
+        float: left;
+        margin-right: 2px;
+        padding: 3px;
+    }
+    #right-area {
+        width: 305px;
+        height: 500px;
+        background-color: chocolate;
+        float: left;
+        padding: 3px;
+    }
+    .buttons {
+        width: 300px;
+        height: 300px;
+        background-color: white;
+        margin: 2px;
+    }
+    </style>
+</head>
+
+<body>
+
+    <h1 id="title">Adventure: Zombie Attack</h1>
+
+    <div id="left-area">
+        <div id="left-image">
+            <div class="buttons"></div>
+        </div>
+        <div id="left-text"></div>
+    </div>
+    <div id="right-area">
+        <div id="right-image"></div>
+        <div id="right-text"></div>
+    </div>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            // The Adventure of when zombies attack!
+
+            // Zombie attacks are happening all over your neighborhood what do you do?
+            var paths = {
+                intro: "Your neighborhood is been attacked by zombies, what are you going to do?",
+                run: {
+                    result: "You choose to make a run for it and hoop into your car, and started driving north, after driving for 4 hours straight you saw a hitchhiker on the road.",
+                    stop: {
+                        result: "You choose to pick up the hitchhiker who tells you to head for the sea and find a boat, but you were planning to keep going north to find an airport",
+                        boat: {
+                            result: "You choose to find the boat with the hitchhiker, but the hitchhiker betrays you and steals all of your stuff and leaves you for the zombies to come...The end."
+                        },
+                        airport: {
+                            result: "You choose the airport, after getting to the airport you find there are small number of survivors boarding an airplane, you both get on the airplane, not sure what will come next...The end."
+                        }
+                    },
+                    keep_going: {
+                        result: "You choose to keep driving and not pick up the hitchhiker, after 2 more days of driving you get to the airport hoping to find survivors. You see a group of survivors at a check point, they ask you to help defend the check point until help arrives.",
+                        help: {
+                            result: "You choose to help the survivors, after battling zombies for a few days, your group survived, but you are still unsure when the real help is going to arrive, maybe never...The end."
+                        },
+                        leave: {
+                            result: "You choose to not help and keep driving in the hopes of finding another airport, after a few days of driving you ran out of gas and supplies, with no food or water you started walking but behind you are sounds of footsteps of the dead...The end"
+                        }
+                    }
+                },
+                stay: {
+                    result: "You choose to stay and protect the house you are in, first you need to get supplies, and board up the house. After making your house defenses you hear knocking on the door, other survivors has come in hope of staying at your house for safty",
+                    invite: {
+                        result: "You invite the survivors into your house and as they come in the door, you notice one of them is bitten by the zombies, you have to address this right now before it gets out of hand.",
+                        kill: {
+                            result: "You choose to kill the person that's been bitten by zombies, your group is now safter, but everyone looks at you like a monster, and leaves your house. You wait alone in your house for help...The end."
+                        },
+                        kickOut: {
+                            result: "You choose to kick out the person who is bitten by zombies, but the group is happy that you did the right thing but betrays you by kicking you out as well, you wonder the streets hoping that the zombies won't catch up...The end."
+                        }
+                    },
+                    reject: {
+                        result: "You choose to not let anyone in the house in the fear of trouble, but that night zombies starts to attack your house breaking the door, you can hide in the basement safe or make a final stand.",
+                        hide: {
+                            result: "You choose to hide in the basement, after running out of water and food you decide to end it all, opening the basement door seeing no zombies but just an empty neighborhood all destroyed...The end."
+                        },
+                        stand: {
+                            result: "You choose make a final stand and after hours of fight zombies they over run the house, as all the zombie swamp you things did not end will...The end."
+                        }
+                    }
+                }
+            }
+
+
+        });
+    </script>
+</body>
+
+</html>

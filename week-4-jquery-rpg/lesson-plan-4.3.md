@@ -112,9 +112,12 @@ Student Excercise: 4.3.3_streetFighter
 		* What day of the month is your birthday?
 		* How many letters are in your last name?
 	* Take the user's answer from these question, render all of them onto the HTML.
-	* Take the squreroot of that number and render that number to the screen with the text below saying, that is the number of day until lady luck finds you and great awesome things will happen for you.
+		* Your age is _ .
+		* your height is _.
+		* etc
+	* Add all these numbers together and find the squreroot and render that number to the screen with the text below saying, that is the number of day until lady luck finds you and great awesome things will happen for you.
 	* Also take that number mulitple by 1.5 that will be dollar amount for the cost of this fortune telling session.
-	* You will be creating all the assets for this app.
+	* If any of the answer the user gives you is blank change it to 1;
 ```
 
 ### 8. Students do (10 minutes)
@@ -133,13 +136,12 @@ BREAK ( 40 minutes )
 ```
 * You are tasked to create a choose your own adventure game.
 * The theme of this game is up to you, it could be from a book, movie, a video game, or something you made up.
+	* You are going to get the default assets of a zombie attack adventure story if you do choose to use that.
 	* When the web site loads, you must start with at least 2 different paths as click-able buttons.
 	* Each time a path is choosen or decision is made by the user you must give the user 2 more more path/decisions and render them on the screen.
 	* The game must have at least 2 rounds of choices after the starting one.
 	* Starts out with 2 choices -> 2 more -> 2 more.
-	* The game should have 8 short text based endings.
-	* You will be rendering onto the HTML but with only text and CSS.
-	* You will be creating all the assets for this app.
+	* The game should have 8 different endings.
 ```
 
 ### 10. Everyone Do (10 minutes)
