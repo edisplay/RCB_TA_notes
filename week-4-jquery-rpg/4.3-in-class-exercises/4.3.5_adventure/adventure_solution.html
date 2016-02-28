@@ -9,9 +9,9 @@
     body {
         background-color: black;
         color: white;
+        font-size: 22px;
     }
     #title{
-        width: 400px;
         color: red;
     }
     #left-area {
@@ -20,47 +20,45 @@
         background-color: steelblue;
         float: left;
         margin-right: 2px;
-        padding: 3px;
     }
     #right-area {
         width: 305px;
         height: 500px;
         background-color: chocolate;
         float: left;
-        padding: 3px;
     }
     .buttons {
-        width: 300px;
-        height: 300px;
+        width: 295px;
+        height: 295px;
         background-color: white;
-        margin: 2px;
+        margin: 3px;
+    }
+    #story-text{
+        padding-top: 30px;
+        width: 500px;
+        clear:both;
     }
     </style>
 </head>
 
 <body>
-
+    <!-- The Adventure of when zombies attack! -->
     <h1 id="title">Adventure: Zombie Attack</h1>
 
-    <div id="left-area">
-        <div id="left-image">
-            <div class="buttons"></div>
-        </div>
-        <div id="left-text"></div>
-    </div>
-    <div id="right-area">
-        <div id="right-image"></div>
-        <div id="right-text"></div>
-    </div>
+    <div id="left-area"></div>
+    <div id="right-area"></div>
+    <div id="story-text"></div>
 
     <script type="text/javascript">
         $(document).ready(function() {
-            // The Adventure of when zombies attack!
 
             // Zombie attacks are happening all over your neighborhood what do you do?
             var paths = {
-                intro: "Your neighborhood is been attacked by zombies, what are you going to do?",
-                run: {
+                intro: "Your neighborhood is under attack by zombies, what are you going to do?",
+                left: "Get in the car and drive.",
+                right: "Stay and build a defense.",
+                car: {
+                    img: "images/car.png",
                     result: "You choose to make a run for it and hoop into your car, and started driving north, after driving for 4 hours straight you saw a hitchhiker on the road.",
                     stop: {
                         result: "You choose to pick up the hitchhiker who tells you to head for the sea and find a boat, but you were planning to keep going north to find an airport",
@@ -102,9 +100,28 @@
                         }
                     }
                 }
-            }
+            };
 
+            var render = function(choice) {
+                // var but = $('<div class="buttons">');
+                // but.attr('data-name', "big'>");
+                // var imgz = $("<img alt='image'>");
+                // imgz.attr("src", paths.car.img);
+                // but.append(imgz);
+                // $("#left-area").append(but)
 
+                // var story = $('<div>');
+                // story.text(paths.intro);
+                // $("#story-text").append(story)
+                console.log(choice);
+            };
+
+            // Check track of the stage of the adventure
+            var stage = 0;
+
+            // Init render of first two choices 
+            render(paths.left);
+            render(paths.right);
         });
     </script>
 </body>
