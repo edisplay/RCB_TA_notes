@@ -2,6 +2,13 @@ body {
 	background-color: black;
 	height: 900px;
 }
+h1{
+	padding-top: 20px;
+	width: 500px;
+	margin: auto;
+	color: deepskyblue;
+	font-size: 60px;
+}
 #city {
 	background-image: url("../../assets/images/city.png");
     background-repeat: no-repeat;
@@ -92,4 +99,22 @@ body {
 	left: 1800px;
 	bottom: 80px;
 	background-image: url("../../assets/images/honey.png");
+}
+
+#input-box input[type="text"], textarea {
+	color: deepskyblue;
+	background-color : black; 
+    text-align: left;
+    padding-top: 1px;
+    width: 300px;
+    height: 400px;
+    position: absolute;
+    font-size: 20px;
+    top: 395px;
+    left: 295px;
+    opacity: .78;
+}
+
+#note-button {
+	
 }

@@ -13,9 +13,6 @@ $(document).ready(function() {
     function populate() {
         // jQuery AJAX call for JSON
         $.getJSON('/check', function(data) {
-            // Stick our chickenspots data array into a friedChickenList variable in the global object
-            // For large apps, this is a bad idea, there should be a limit of chicken spots that get displayed and pagination built in
-
             //mongoData = data;
             mongoData = data[0];
 
@@ -34,31 +31,23 @@ $(document).ready(function() {
         $("#typewriter").remove();
         $("." + sideAry[side]).append("<div id='typewriter'></div>");
 
-        var str = "<p>This is my <span style='color:red;'>special string</span> with an <img src='http://placehold.it/150x150'> image !</p>",
-            i = 0,
-            isTag,
-            text;
-
-        // var writeTxt = "<p>This is the news are you are reading it now!</p>";
-        // var noTag = "This is the news are you are reading it now!";
+        var i = 0;
+        var newsText;
 
         //cycle to different story
-        //var print = mongoData.nyt[dataCount][0] + '     ' + mongoData.nyt[dataCount][1];
+        var show = mongoData.nyt[dataCount][0];
         var print = mongoData.nyt[dataCount][1];
         dataCount++;
 
+        // type animation for new summary
         (function type() {
-            text = print.slice(0, ++i);
+            console.log(newsText);
+            newsText = print.slice(0, ++i);
             //return stop when text is equal to the writeTxt
-            if (text === print) return;
+            if (newsText === print) return;
 
             //put in the text via javascript
-            document.getElementById('typewriter').innerHTML = text;
-            // var char = text.slice(-1);
-            // if( char === '<' ) isTag = true;
-            // if( char === '>' ) isTag = false;
-            // if (isTag) return type();
-            //recur the function type to add html with setTimeout wait of 30 min seconds
+            $("#typewriter").text(newsText);
             setTimeout(type, 30);
         }());
     }
@@ -82,13 +71,6 @@ $(document).ready(function() {
     }
 
     var fetchData = function() {
-        // Use AJAX to post the object to our adduser service
-        // $.ajax({
-        //     type: 'POST',
-        //     url: '/fetch'
-        // }).done(function() {
-        //     alert( "second success" );
-        // });
 
         $.ajax({
             type: "POST",
@@ -98,7 +80,6 @@ $(document).ready(function() {
         }).fail(function() {
             alert("Sorry. Server unavailable. ");
         });
-
 
     };
 
@@ -120,6 +101,5 @@ $(document).ready(function() {
 
     /* running the functions*/
     clickBox();
-
 
 });

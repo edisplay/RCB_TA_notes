@@ -7,6 +7,7 @@ var fs = require('fs');
 var mongojs = require('mongojs');
 var db = mongojs('newsDB');
 var mycollection = db.collection('headlines');
+var mynotes = db.collection('notes');
 
 var app = express();
 //Serve static content for the app from the "public" directory in the application directory.
@@ -27,48 +28,6 @@ app.use(bodyParser.urlencoded({
     extended: false
 }));
 
-//download indeed webpage to scrape
-/*
-var indeed = function() {
-	var url = "http://www.indeed.com/cmp/El-Media-Group/jobs/Director-Music-Programming-cf81fd78479c2899?q=DJ";
-	request(url, function(err, res, body) {
-		var $ = cheerio.load(body);
-		// $('.company').filter(function() {
-		// 	var companyName = $(this);
-		// 	companyNameText = companyName.text();
-		// })
-		var companyName = $('.company');
-		var companyNameText = companyName.text();
-		var jobTitle = $('.jobtitle font');
-		var jobTitleText = jobTitle.text();
-		var location = $('.location'); 
-		var locationText = jobTitle.text(); 
-		var summary = $('#job_summary p');
-		var summaryText = summary.text();
-
-		var job = {
-			jobTitle: jobTitleText,
-			location: locationText,
-			companyName: companyNameText,
-			summary: summaryText
-		};
-
-		console.log(job);
-	});
-}
-*/
-/*
-request('https://news.ycombinator.com', function (error, response, html) {
-  if (!error && response.statusCode == 200) {
-    var $ = cheerio.load(html);
-    $('span.comhead').each(function(i, element){
-      var a = $(this).prev();
-      console.log(a.text());
-    });
-  }
-});
-*/
-
 //scrape ny times
 var times = function(input, cb) {
 
@@ -77,20 +36,8 @@ var times = function(input, cb) {
 		request(url, function(err, res, body) {
 
 			var $ = cheerio.load(body);
-
-			// var headline = $(".story-heading");
-			// var headlineText = headline.eq(0).text();;
-			// var read = {
-			// 	headline: headlineText
-			// }
-			// console.log(read);
-
 			var obj = {};
 
-			/*
-			var str = "one thing\\\'s for certain: power blackouts and surges can damage your equipment.";
-			alert(str.replace(/\\/g, ''))
-			*/
 			//str.replace(/\s+/g, ' ').trim()
 		    $('.story-heading').each(function(i, element){
 		    	var msg = $(this).text();
@@ -106,76 +53,75 @@ var times = function(input, cb) {
 		    });  
 		    //console.log(obj);
 
-			//db.dropDatabase()
 			var d = new Date();
-		 	//	console.log( d.getMonth() );
-			//	console.log( d.getDate() );
-		 	//	console.log( d.getFullYear() );
-		    
 		    var formatedDate = "";
 		    formatedDate = formatedDate + (d.getMonth() + 1) + "_";
 		    formatedDate = formatedDate + d.getDate() + "_";
 		    formatedDate = formatedDate + d.getFullYear();
 		    //console.log(formatedDate);
 			
+
+			console.log("start fetching");
 			var myCount = function(cb) {
 			    //check if date already exit in the database
 				mycollection.find().count(function(err, doc_count){
-					//console.log(doc_count, "total items")
+					//count the collection
+					console.log(doc_count, "total items");
+					//use the callback to return the count
 					cb( doc_count );
-					//console.log(num, "is the new num");
 				});
 			}
 
 			//use callback to grab the count
 			myCount(function(c){
+				//callback c returns the doc_count
 				console.log(c, "this is the db count");
-		
-				mycollection.findOne({
-				    myId: c
-				}, function(err, doc) {
-				    //console.log(doc.date);
-				    if (doc.date != formatedDate) {
-				    	console.log("this is a new item need to be saved");
-				    }else{
-				    	console.log("we already got this, go on");
-				    }
-				});
+				// if collection empty
+				if (c == 0) {
+					console.log("Didn't find any object in collection, do the scrape.");
+					mycollection.save({
+		 		    	"nyt": obj,
+		 		    	date: formatedDate,
+		 		    	myId: 1
+					});
+				}else{
+					mycollection.findOne({
+					    myId: c
+					}, function(err, doc) {
+					    console.log(doc.date);
+					    if (doc.date != formatedDate) {
+					    	console.log("this is a new item need to be saved");
+					    	var newId = c + 1;
+							mycollection.save({
+				 		    	"nyt": obj,
+				 		    	date: formatedDate,
+				 		    	myId: newId
+							});
+					    }else{
+					    	console.log("we already got this, go on");
+					    }
+					});
+				}								
 
 			})
 
 
 		});
 	}else if (input == 'check') {
-
-		// mycollection.find(function (err, docs) {
-		//     // docs is an array of all the documents in mycollection
-		//     console.log(docs.nyt);
-		// })
-
-		// mycollection.findOne({
-		//     _id: mongojs.ObjectId('56cf11ffadd9c2540842870c')
-		// }, function(err, doc) {
-		//     cb(doc);
-		// });
-
-		// mycollection.find().sort({lastModifiedDate:1}, function(err, doc){
-		// 	console.log(doc[0].date, "popluate data date");
-		// 	cb(doc);
-		// });
-
+		//descending sort
 		mycollection.find().sort({ myId: -1 }, function(err, doc){
 			console.log(doc[0].date, doc[0].myId);
-			
 			cb(doc);
 		});
 
-	};
+	}else if (input == 'update') {
+		//descending sort
+		mycollection.find().sort({ myId: -1 }, function(err, doc){
+			console.log(doc[0].date, doc[0].myId);
+			//cb(doc);
+		});
+	}
 }
-
-/* scrape ny times */
-// times('grab');
-// times('check');
 
 //basic route use cb return json data from mongodb
 app.get('/home', function(req, res) {
