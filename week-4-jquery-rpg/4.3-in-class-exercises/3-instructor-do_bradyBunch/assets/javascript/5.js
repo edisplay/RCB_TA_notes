@@ -1,5 +1,7 @@
 $(document).ready(function() {
 
+    var positions = ["slot-top-left", "slot-top-mid", "slot-top-right", "slot-mid-left", "slot-mid-mid", "slot-mid-right", "slot-bot-left", "slot-bot-mid", "slot-bot-right"];
+
     var characters = {
         'brother_big': {
             imageUrl: "assets/images/brother_big.png"
@@ -30,35 +32,35 @@ $(document).ready(function() {
         },
     };
 
-    var count = 0;
+    // Create the array "chars" that will store all the names of our characters from the characters object
+    var chars = Object.keys(characters);
 
-    var positions = ["slot-top-left", "slot-top-mid", "slot-top-right", "slot-mid-left", "slot-mid-mid", "slot-mid-right", "slot-bot-left", "slot-bot-mid", "slot-bot-right"];
+    for (var i = 0; i < positions.length; i++) {
+        //if ((i == 2) || (i == 5) || (i == 8)) {
+        if ((i+1) % 3 == 0) { //this is better than what's above
+            var divTag = $('<div>');
+            divTag.attr('id', positions[i]);
+            $('#container').append(divTag);
 
-    var chars = ["mom", "dad", "brother_big", "brother_mid", "brother_small", "sister_big", "sister_mid", "sister_small", "logo"];
+            var divTag = $('<div>');
+            divTag.addClass('clear');
+            $('#container').append(divTag);
+        } else {
+            var divTag = $('<div>');
+            divTag.attr('id', positions[i]);
+            $('#container').append(divTag);
+        }
+    }
 
-    var charsUsed = [];
+    for (var key in characters) {
 
-    var render = function(character, renderArea) {
+        var buttonTag = $('<button>');
+        buttonTag.addClass('charButton');
+        buttonTag.attr('data-char', key);
 
-        var charDiv = $('<div>');
-        charDiv.attr('data-name', String(character));
+        var nameModified = key.split('_').join(' '); //replace underscores with spaces
+        buttonTag.text(nameModified);
 
-        $("#"+renderArea).append(charDiv);
-    };
-
-    for (var i = 0; i < chars.length; i++) {
-        $('[data-char="' + chars[i] + '"]').on('click', function() {
-            var name = ($(this).data('char'));
-
-            if(charsUsed.indexOf(name)===-1){
-                 render(characters[name], positions[count]);
-                 count++;
-                 charsUsed.push(name);
-             }else{
-                 alert("Character already used.");
-             }
-
-        });
-    };
-
+        $('#container').append(buttonTag);
+    }
 });
