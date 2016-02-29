@@ -128,11 +128,15 @@ Show how to hit the browser with the omdbi api
 
 use 12-instructor-do.html
 
-### last but not least Partners Do (10 minutes)
+### 13. last but not least Partners Do (10 minutes)
 
 read through the giphy documentation
 
-how do you return a random gif back from their api?
+how do you return the trending gifs back from their api?
+
+### 14. last instructor do (15 minutes)
+
+show 14-instrucor-do.html
 
 ### last. Instructor Do (5 minutes)
 
