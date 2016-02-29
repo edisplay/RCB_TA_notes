@@ -56,4 +56,4 @@ We should explain to students that they're the same thing. MATTER OF FACT, the s
 
 ### Python Standards
 
-### Django Standards∏`
+### Django Standards
