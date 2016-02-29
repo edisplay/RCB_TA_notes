@@ -64,9 +64,75 @@ explain how now the on click event is attached to the document and how event bub
 
 ##### 70 minutes have passed. It is now 7:40.
 
-### 7. Partners Do (10 minutes)
+### 8. Instructor Do (5 minutes)
 
+Talk about what an API is
 
+application protocol interface
+
+APIs are how websites share their data to the public and to their mobile apps.
+
+We'll be exploring the omdbapi and the giphy api.
+
+-----------
+
+Talk about what JSON is
+
+JSON = JavaScript Object Notation
+
+- just a way of structuring data
+
+* it's based on JavaScript objects. It has key value pairs.
+
+Why use it?
+
+* Most back end programming languages have support for it, so it's really easy to pass data back and forth from your JavaScript in your HTML to the code on the server.
+
+### 9. Partners Do (10 minutes)
+
+read through the omdbapi documentation
+
+how do I get data back about a classic movie like the terminator?
+
+### 10. Instructor Do (15 minutes)
+
+Show students how you can take this url and hit it in the browser
+
+http://www.omdbapi.com/?t=the+terminator&y=&plot=short&r=json
+
+Explain the ? mark and &'s seperate data you're sending to the server
+
+Explain that t, y, plot, short, r hold data
+
+Explain the plus signs
+
+Show students how chrome will format it for you if you have a special chrome extension called: 
+
+JSONView
+
+### 11. Student Do (10 minutes)
+
+Part 1: 
+install the JSONView chrome extension
+
+go to this url
+
+http://www.omdbapi.com/?t=the+terminator&y=&plot=short&r=json
+
+Part 2:
+change the+terminator to "the hateful 8" with the pluses
+
+### 12. Instructor Do (15 minutes)
+
+Show how to hit the browser with the omdbi api
+
+use 12-instructor-do.html
+
+### last but not least Partners Do (10 minutes)
+
+read through the giphy documentation
+
+how do you return a random gif back from their api?
 
 ### last. Instructor Do (5 minutes)
 
