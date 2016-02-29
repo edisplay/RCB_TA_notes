@@ -64,9 +64,7 @@ explain how now the on click event is attached to the document and how event bub
 
 ##### 70 minutes have passed. It is now 7:40.
 
-
-
-### 7. Instructor Do (10 minutes)
+### 7. Partners Do (10 minutes)
 
 
 
