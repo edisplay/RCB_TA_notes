@@ -1,10 +1,11 @@
 <div id="city">
 
-  <h1>Hologram News</h1>
+  <h1>Hologram News Cube</h1>
+  
+  <div id="headline"></div>
+
   <section class="container">
-
     <div id="cube">
-
       <figure class="front">
         <div id="face-color"></div>
       </figure>
@@ -23,16 +24,22 @@
       <figure class="bottom">
          <div id="face-color"></div>
       </figure>
-
     </div>
-
   </section>
 
   <div id="input-area">
     <textarea id="input-box" rows="4" cols="50"></textarea>
-    <div id="note-button"></div>
+    <div id="note-button">
+      <div id="note-text">Save</div>
+    </div>
   </div>
-  
+  <div id="saved-area">
+    <textarea readonly id="note-box" rows="4" cols="50"></textarea>
+    <div id="delete-button">
+      <div id="delete-text">Delete</div>
+    </div>
+  </div>
+
   <div id="seek-box"></div>
   <div id="honey-box"></div>
 
