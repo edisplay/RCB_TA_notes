@@ -7,6 +7,7 @@ var fs = require('fs');
 var mongojs = require('mongojs');
 var db = mongojs('newsDB');
 var mycollection = db.collection('headlines');
+var mynotes = db.collection('notes');
 
 var app = express();
 //Serve static content for the app from the "public" directory in the application directory.
@@ -27,173 +28,224 @@ app.use(bodyParser.urlencoded({
     extended: false
 }));
 
-//download indeed webpage to scrape
-/*
-var indeed = function() {
-	var url = "http://www.indeed.com/cmp/El-Media-Group/jobs/Director-Music-Programming-cf81fd78479c2899?q=DJ";
-	request(url, function(err, res, body) {
-		var $ = cheerio.load(body);
-		// $('.company').filter(function() {
-		// 	var companyName = $(this);
-		// 	companyNameText = companyName.text();
-		// })
-		var companyName = $('.company');
-		var companyNameText = companyName.text();
-		var jobTitle = $('.jobtitle font');
-		var jobTitleText = jobTitle.text();
-		var location = $('.location'); 
-		var locationText = jobTitle.text(); 
-		var summary = $('#job_summary p');
-		var summaryText = summary.text();
+//custom date 
+var makeDate = function() {
 
-		var job = {
-			jobTitle: jobTitleText,
-			location: locationText,
-			companyName: companyNameText,
-			summary: summaryText
-		};
+    var d = new Date();
+    var formatedDate = "";
+    formatedDate = formatedDate + (d.getMonth() + 1) + "_";
+    formatedDate = formatedDate + d.getDate() + "_";
+    formatedDate = formatedDate + d.getFullYear();
+    //console.log(formatedDate);
 
-		console.log(job);
-	});
+    return formatedDate;
 }
-*/
-/*
-request('https://news.ycombinator.com', function (error, response, html) {
-  if (!error && response.statusCode == 200) {
-    var $ = cheerio.load(html);
-    $('span.comhead').each(function(i, element){
-      var a = $(this).prev();
-      console.log(a.text());
-    });
-  }
-});
-*/
 
 //scrape ny times
 var times = function(input, cb) {
 
-	if (input == 'fetch') {
-		var url = "http://www.nytimes.com";
-		request(url, function(err, res, body) {
+    if (input == 'fetch') {
+        var url = "http://www.nytimes.com";
+        request(url, function(err, res, body) {
 
-			var $ = cheerio.load(body);
+            var $ = cheerio.load(body);
+            var obj = {};
 
-			// var headline = $(".story-heading");
-			// var headlineText = headline.eq(0).text();;
-			// var read = {
-			// 	headline: headlineText
-			// }
-			// console.log(read);
+            //str.replace(/\s+/g, ' ').trim()
+            $('.story-heading').each(function(i, element) {
+                var msg = $(this).text();
+                var msgNeat = msg.replace(/(\r\n|\n|\r|\t|\s+)/gm, " ").trim();
+                obj[i] = [msgNeat]
+            });
 
-			var obj = {};
+            //appending the summary
+            $('.summary').each(function(i, element) {
+                var sumy = $(this).text();
+                var sumyNeat = sumy.replace(/(\r\n|\n|\r|\t|\s+)/gm, " ").trim();
+                obj[i].push(sumyNeat);
+            });
+            //console.log(obj);
 
-			/*
-			var str = "one thing\\\'s for certain: power blackouts and surges can damage your equipment.";
-			alert(str.replace(/\\/g, ''))
-			*/
-			//str.replace(/\s+/g, ' ').trim()
-		    $('.story-heading').each(function(i, element){
-		    	var msg = $(this).text();
-		     	var msgNeat = msg.replace(/(\r\n|\n|\r|\t|\s+)/gm," ").trim();
-		     	obj[i] = [msgNeat]
-		    });
+            console.log("start fetching");
+            var myCount = function(cb) {
+                //check if date already exit in the database
+                mycollection.find().count(function(err, doc_count) {
+                    //count the collection
+                    console.log(doc_count, "total items");
+                    //use the callback to return the count
+                    cb(doc_count);
+                });
+            }
 
-		    //appending the summary
-		    $('.summary').each(function(i, element){
-		    	var sumy = $(this).text();
-		     	var sumyNeat = sumy.replace(/(\r\n|\n|\r|\t|\s+)/gm," ").trim();
-		     	obj[i].push(sumyNeat);
-		    });  
-		    //console.log(obj);
+            var formatedDate = makeDate();
 
-			//db.dropDatabase()
-			var d = new Date();
-		 	//	console.log( d.getMonth() );
-			//	console.log( d.getDate() );
-		 	//	console.log( d.getFullYear() );
-		    
-		    var formatedDate = "";
-		    formatedDate = formatedDate + (d.getMonth() + 1) + "_";
-		    formatedDate = formatedDate + d.getDate() + "_";
-		    formatedDate = formatedDate + d.getFullYear();
-		    //console.log(formatedDate);
-			
-			var myCount = function(cb) {
-			    //check if date already exit in the database
-				mycollection.find().count(function(err, doc_count){
-					//console.log(doc_count, "total items")
-					cb( doc_count );
-					//console.log(num, "is the new num");
-				});
-			}
+            //use callback to grab the count
+            myCount(function(c) {
+                //callback c returns the doc_count
+                console.log(c, "this is the db count");
+                // if collection empty
+                if (c == 0) {
+                    console.log("Didn't find any object in collection, do the scrape.");
+                    mycollection.save({
+                        "nyt": obj,
+                        date: formatedDate,
+                        myId: 1
+                    });
+                } else {
+                    //if database doesn't have it save it as new
+                    mycollection.findOne({
+                        myId: c
+                    }, function(err, doc) {
+                        console.log(doc.date);
+                        if (doc.date != formatedDate) {
+                            console.log("this is a new item need to be saved");
+                            var newId = c + 1;
+                            mycollection.save({
+                                "nyt": obj,
+                                date: formatedDate,
+                                myId: newId
+                            });
+                        } else {
+                            console.log("we already got this, go on");
+                        }
+                    });
+                }
 
-			//use callback to grab the count
-			myCount(function(c){
-				console.log(c, "this is the db count");
-		
-				mycollection.findOne({
-				    myId: c
-				}, function(err, doc) {
-				    //console.log(doc.date);
-				    if (doc.date != formatedDate) {
-				    	console.log("this is a new item need to be saved");
-				    }else{
-				    	console.log("we already got this, go on");
-				    }
-				});
+            })
+        });
+    } else if (input == 'check') {
+        //descending sort
+        mycollection.find().sort({ myId: -1 }, function(err, doc) {
+            console.log(doc[0].date, doc[0].myId);
+            cb(doc);
+        });
 
-			})
-
-
-		});
-	}else if (input == 'check') {
-
-		// mycollection.find(function (err, docs) {
-		//     // docs is an array of all the documents in mycollection
-		//     console.log(docs.nyt);
-		// })
-
-		// mycollection.findOne({
-		//     _id: mongojs.ObjectId('56cf11ffadd9c2540842870c')
-		// }, function(err, doc) {
-		//     cb(doc);
-		// });
-
-		// mycollection.find().sort({lastModifiedDate:1}, function(err, doc){
-		// 	console.log(doc[0].date, "popluate data date");
-		// 	cb(doc);
-		// });
-
-		mycollection.find().sort({ myId: -1 }, function(err, doc){
-			console.log(doc[0].date, doc[0].myId);
-			
-			cb(doc);
-		});
-
-	};
+    } else if (input == 'update') {
+        //descending sort
+        mycollection.find().sort({ myId: -1 }, function(err, doc) {
+            console.log(doc[0].date, doc[0].myId);
+            //cb(doc);
+        });
+    }
 }
 
-/* scrape ny times */
-// times('grab');
-// times('check');
+//save notes into mongodb
+var notes = function(input, data, cb) {
+
+    if (input == "save") {
+        console.log(data.id, data.date, "is what we are checking");
+
+        mynotes.find({
+            //mongodb find sucks ugh
+            "articleId": data.id,
+            "articleDate": data.date
+        }, function(err, doc) {
+            console.log(doc, data.id, "this is what notes we found")
+            if (!doc[0]) {
+                console.log("this is a new notes need to be saved");
+                mynotes.save({
+                    articleId: data.id,
+                    articleDate: data.date,
+                    articleNote: data.note
+                });
+            } else {
+                //console.log(doc[0]["_id"]);
+                console.log("we already got a note but we can replace it");
+                mynotes.remove({
+                    "_id": doc[0]["_id"]
+                });
+                mynotes.save({
+                    articleId: data.id,
+                    articleDate: data.date,
+                    articleNote: data.note
+                });
+            }
+        });
+
+        cb(data);
+
+    } else if (input == "check") {
+        console.log(data, "got the data needed for notes");
+
+        mynotes.find({
+            articleDate: data.date
+        }).sort({ articleId: 1 }, function(err, doc) {
+            cb(doc);
+        });
+
+    } else if (input == "delete") {
+        console.log(data, "for replace into empty note");
+        mynotes.find({
+            //mongodb find sucks ugh
+            "articleId": data.id,
+            "articleDate": data.date
+        }, function(err, doc) {
+            console.log(doc, data.id, "this is what notes we found")
+            if (!doc[0]) {
+                console.log("this is a new notes need to be saved");
+                mynotes.save({
+                    articleId: data.id,
+                    articleDate: data.date,
+                    articleNote: data.note
+                });
+            } else {
+                //console.log(doc[0]["_id"]);
+                console.log("we already got a note but we can replace it");
+                mynotes.remove({
+                    "_id": doc[0]["_id"]
+                });
+                mynotes.save({
+                    articleId: data.id,
+                    articleDate: data.date,
+                    articleNote: " "
+                });
+            }
+        });
+        
+    	cb(data);
+    };
+
+}
 
 //basic route use cb return json data from mongodb
 app.get('/home', function(req, res) {
-	res.render('home');
+    res.render('home');
 });
 
 app.get('/check', function(req, res) {
-	times('check', function(data) {
-		res.json(data)
-	})
+    times('check', function(data) {
+        res.json(data)
+    })
 });
 
-//get save data
+app.post('/gather', function(req, res) {
+    notes('check', req.body, function(data) {
+        res.json(data)
+    })
+});
+
+//get grab web scrape
 app.post('/fetch', function(req, res) {
-	times('fetch');
-	res.send('success');
+    times('fetch');
+    res.send('success');
 });
 
-app.listen(port, function(){
-	console.log("lisenting on port:"+port);
+//post save note
+app.post('/save', function(req, res) {
+    notes('save', req.body, function(data) {
+        // post req must give back resopnce as json??? wat..ok..
+        res.json(data)
+    })
+});
+
+//delete note
+app.delete('/delete', function(req, res) {
+    notes('delete', req.body, function(data) {
+        // post req must give back resopnce as json??? wat..ok..
+        res.json(data)
+    })
+});
+
+app.listen(port, function() {
+    console.log("lisenting on port:" + port);
 });
