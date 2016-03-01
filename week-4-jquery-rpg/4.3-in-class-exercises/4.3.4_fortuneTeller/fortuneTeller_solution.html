@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Fortune Teller</title>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+    <style>
+    </style>
+</head>
+
+<body>
+    <h1>Fortune Teller</h1>
+    <div id="fortune"></div>
+    <br>
+    <div id="result"></div>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            /* Create an array that contains all of the questions as Strings */
+            var questions = ['What is your age?', 'What is your height in cm?', 'What is your lucky number?', 'What day of the month is your birthday?', 'How many letters are in your last name?'];
+            /* Create an array that contains beginning of answers as Strings */
+            var answers = ['Your age is ', 'Your height is ', 'Your lucky number is ', 'Your birthday is on the month ', 'The length of your last name is '];
+            /* Create a varaible sum set it to zero */
+            var sum = 0;
+
+            /* Create a for loop that loops though all the questions */
+            for (var q = 0; q < questions.length; q++) {
+                /* Using prompt to get the number from user */
+                var res = prompt(questions[q]);
+                /* If res */
+                if (!res) { res = 1 };
+                /* Change the answer one a time by index to String of the beginning of the answer plus user input */
+                answers[q] = answers[q] + res + '.';
+                /* Add the user input to sum */
+                sum = sum + parseInt(res);
+
+                /* Create a variable, useing jQuery create a div with answer text inside of it */
+                var charDiv = $('<div>');
+                charDiv.text(answers[q]);
+                /* Append it to fortune */
+                $("#fortune").append(charDiv);
+            };
+            /* Create the div that will have the sum of the square root and message for users about the lucky day */
+            var luck = $('<div>');
+            luck.text(parseInt(Math.sqrt(sum)) + " is the number of day until lady luck finds you and great awesome things will happen for you.");
+            /* Append it to result */
+            $("#result").append(luck);
+
+            /* Create the div that will have the sum of the square root and message for users about the session price */
+            var charge = $('<div>');
+            charge.text(parseInt((Math.sqrt(sum)*1.5)) + " is dollar amount for the cost of this fortune telling session.");
+            /* Append it to result */ 
+            $("#result").append(charge);
+
+        });
+    </script>
+</body>
+
+</html>
