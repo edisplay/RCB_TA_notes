@@ -140,7 +140,15 @@ With a partner, answer the questions in the script:
 
 ### 7. Instructor does (5 minutes)
 * *Open in-class-exercises/5.1.7_context.html*
-* *Explain how functions executed by a setTimeout are run in a different execution context.*
+* *Explain how `this` inside of functions executed by a setTimeout are scoped to the window!*
+
+* *Don't dwell on this but mention it: technical terminology: the functions are run in a different execution context.*
+
+> so for `setTimeout(person.sayHi, 50);`, inside the sayHi function, `this` is the window, it isn't the person object anymore.
+
+> To be able to access the person object in the sayHi function when passing it to setTimeout, you have to use the person object in sayHi.
+
+* *don't talk about call or bind here - WE DO NOT WANT TO FREAK THE STUDENTS OUT*
 
 
 ### 8. Instructor does (10 minutes)

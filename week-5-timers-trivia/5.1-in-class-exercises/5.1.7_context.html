@@ -7,14 +7,15 @@
 <body>
   <script type="text/javascript">
       var person = {
-        name: "Donald",
+        name: "Jeff",
         sayHi: function() {
+          debugger;
           console.log("Hi, I'm " + this.name);
         }
       };
 
       person.sayHi();
-      //Hi, I'm Donald
+      //Hi, I'm Jeff
 
       setTimeout(person.sayHi, 50);
       //Hi, I'm undefined
