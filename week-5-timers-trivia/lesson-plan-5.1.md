@@ -80,7 +80,7 @@ With a partner, answer the questions in the script:
 <body>
   <button id="button">CLICK ME!</button>
 
-  <script type="text/javascript" src="https://code.jQuery.com/jQuery-2.2.0.js"></script>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.js"></script>
   <script type="text/javascript">
 
     var outside = function() {
@@ -140,7 +140,15 @@ With a partner, answer the questions in the script:
 
 ### 7. Instructor does (5 minutes)
 * *Open in-class-exercises/5.1.7_context.html*
-* *Explain how functions executed by a setTimeout are run in a different execution context.*
+* *Explain how `this` inside of functions executed by a setTimeout are scoped to the window!*
+
+* *Don't dwell on this but mention it: technical terminology: the functions are run in a different execution context.*
+
+> so for `setTimeout(person.sayHi, 50);`, inside the sayHi function, `this` is the window, it isn't the person object anymore.
+
+> To be able to access the person object in the sayHi function when passing it to setTimeout, you have to use the person object in sayHi.
+
+* *don't talk about call or bind here - WE DO NOT WANT TO FREAK THE STUDENTS OUT*
 
 
 ### 8. Instructor does (10 minutes)
@@ -155,8 +163,8 @@ With a partner, answer the questions in the script:
 * *Slack out in-class-exercises/5.1.9_simple_timer/skeleton/5.1.9_simple_timer.html*
 * *Slack the following:*
 
-* Make a page with a a simple timer that sends an alert and plays a sound after 15 minutes
-* Have it send an alert when 5 minutes has passed, 10 minutes has passed and when the time is up.
+* Make a page with a a simple timer that sends an alert and plays a sound after 15 seconds
+* Have it send an alert when 5 seconds has passed, 10 seconds has passed and when the time is up.
 * You will use this to time the break!
 
 ###### 80 minutes have passed
@@ -169,52 +177,10 @@ With a partner, answer the questions in the script:
 
 ### 11. partners do (5 minutes)
 * *Have students partner up and explain to each other what the following is doing*
-* *Slack the following:*
+
+* *Slack the code in 5.1.11_interval.html*
 
 
-
-```
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Document</title>
-</head>
-<body>
-
-<div id="show-number"></div>
-<br>
-<button id="stop">Stop</button>
-<button id="resume">Resume</button>
-
-  <script type="text/javascript" src="https://code.jQuery.com/jQuery-2.2.0.js"></script>
-  <script>
-    var number = 100;
-    $('#stop').click(stop);
-    $('#resume').click(run);
-
-    function run(){
-      counter = setInterval(increment, 1000);
-    }
-    function increment(){
-      number--
-      document.getElementById('show-number').innerHTML = ('<h2>' + number + '</h2>')
-      if (number === 0){
-        stop();
-        alert('Time Up!')
-      }
-    }
-
-    function stop(){
-      clearInterval(counter);
-    }
-
-  run();
-  </script>
-</body>
-</html>
-
-```
 ### 12. Instructor do (5 minutes)
 * *Open in-class-exercises/5.1.11_interval.html*
 * *Choose a team/pair to go over the previous exercise*

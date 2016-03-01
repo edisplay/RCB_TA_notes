@@ -3,7 +3,7 @@ var tailsCount = 0;
 var wins = 0;
 var losses = 0;
 
-$('#heads').click(function() {
+$('#heads').on('click', function() {
   headsCount++;
   $('#headsChosen').html(headsCount); 
 
@@ -12,7 +12,7 @@ $('#heads').click(function() {
 });
 
 
-$('#tails').click(function() {
+$('#tails').on('click', function() {
   tailsCount++;
   $('#tailsChosen').html(tailsCount); 
   
@@ -21,6 +21,7 @@ $('#tails').click(function() {
 });
 
 function flipThatCoin(result) {
+  //STEP ONE: set a variable named randomNumber to either 1 or 2. Make it random
   var randomNumber = Math.floor(Math.random() * 2);
 
   if (randomNumber === 0) {

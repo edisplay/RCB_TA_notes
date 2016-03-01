@@ -1,20 +1,21 @@
-var audio = new Audio('raven.mp3');
-setTimeout(fivePassed, 1000 * 60 * 5);
-setTimeout(tenPassed, 1000 * 60 * 10);
-setTimeout(timeUp, 1000 * 60 * 15);
+var audio = new Audio('https://p.scdn.co/mp3-preview/ed5a443bc86176135ebca8a114f66f4d814d4c90');
 
-function fivePassed() {
-  alert('Five Minutes Have Passed!');
-  $('#time-left').html('<h2>About 10 Minutes Left!</h2>');
+setTimeout(fiveSeconds, 1000 * 5);
+setTimeout(tenSeconds, 1000 * 10);
+setTimeout(timeUp, 1000 * 15);
+
+function fiveSeconds() {
+  $('#time-left').html('<h2>About 10 Seconds Left!</h2>');
+  alert('10 seconds left');
 }
 
-function tenPassed() {
-  alert('Ten Minutes Have Passed!');
-  $('#time-left').html('<h2>About 5 Minutes Left!</h2>');
+function tenSeconds() {
+  $('#time-left').html('<h2>About 5 Seconds Left!</h2>');
+  alert('5 seconds left');
 }
 
 function timeUp(){
   audio.play();
-  alert('Time is up!');
   $('#time-left').html('<h2>Time\'s Up!</h2>');
+  alert('time is up');
 }
