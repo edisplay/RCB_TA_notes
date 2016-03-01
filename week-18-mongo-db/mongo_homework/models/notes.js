@@ -1,23 +1,15 @@
-//custom date 
-var makeDate = function() {
-
-    var d = new Date();
-    var formatedDate = "";
-    formatedDate = formatedDate + (d.getMonth() + 1) + "_";
-    formatedDate = formatedDate + d.getDate() + "_";
-    formatedDate = formatedDate + d.getFullYear();
-    //console.log(formatedDate);
-
-    return formatedDate;
-}
+var makeDate = require('../scripts/date.js');
+var mynotes = require('../config/notes_connect.js');
 
 //save notes into mongodb
-var notes = function(input, data, cb) {
+var notesMaker = function(input, data, cb) {
+    //create date
+    var formatedDate = makeDate();
 
     if (input == "save") {
         console.log(data.id, data.date, "is what we are checking");
 
-        notes.find({
+        mynotes.find({
             //mongodb find sucks ugh
             "articleId": data.id,
             "articleDate": data.date
@@ -25,7 +17,7 @@ var notes = function(input, data, cb) {
             console.log(doc, data.id, "this is what notes we found")
             if (!doc[0]) {
                 console.log("this is a new notes need to be saved");
-                notes.save({
+                mynotes.save({
                     articleId: data.id,
                     articleDate: data.date,
                     articleNote: data.note
@@ -33,23 +25,21 @@ var notes = function(input, data, cb) {
             } else {
                 //console.log(doc[0]["_id"]);
                 console.log("we already got a note but we can replace it");
-                notes.remove({
+                mynotes.remove({
                     "_id": doc[0]["_id"]
                 });
-                notes.save({
+                mynotes.save({
                     articleId: data.id,
                     articleDate: data.date,
                     articleNote: data.note
                 });
             }
         });
-
         cb(data);
-
     } else if (input == "check") {
         console.log(data, "got the data needed for notes");
 
-        notes.find({
+        mynotes.find({
             articleDate: data.date
         }).sort({ articleId: 1 }, function(err, doc) {
             cb(doc);
@@ -57,7 +47,7 @@ var notes = function(input, data, cb) {
 
     } else if (input == "delete") {
         console.log(data, "for replace into empty note");
-        notes.find({
+        mynotes.find({
             //mongodb find sucks ugh
             "articleId": data.id,
             "articleDate": data.date
@@ -65,7 +55,7 @@ var notes = function(input, data, cb) {
             console.log(doc, data.id, "this is what notes we found")
             if (!doc[0]) {
                 console.log("this is a new notes need to be saved");
-                notes.save({
+                mynotes.save({
                     articleId: data.id,
                     articleDate: data.date,
                     articleNote: data.note
@@ -73,10 +63,10 @@ var notes = function(input, data, cb) {
             } else {
                 //console.log(doc[0]["_id"]);
                 console.log("we already got a note but we can replace it");
-                notes.remove({
+                mynotes.remove({
                     "_id": doc[0]["_id"]
                 });
-                notes.save({
+                mynotes.save({
                     articleId: data.id,
                     articleDate: data.date,
                     articleNote: " "
@@ -88,3 +78,5 @@ var notes = function(input, data, cb) {
     };
 
 }
+
+module.exports = notesMaker;

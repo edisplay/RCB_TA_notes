@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-    console.log('hihi');
+    console.log('hi');
     //put data in here
     var mongoData;
     var dataCount = 0;
@@ -18,7 +18,7 @@ $(document).ready(function() {
         $.getJSON('/check', function(data) {
             //mongoData = data;
             mongoData = data[0];
-            dataDate = mongoData.date; 
+            dataDate = mongoData.date;
             // For each item in our JSON, add a table row and cells to the content string
             console.log(mongoData, "gotem new");
         }).done(function() {
@@ -55,7 +55,7 @@ $(document).ready(function() {
     var postNote = function() {
         $("#note-box").val("");
         var currentData = dataCount - 1;
-        if (notesData.length > currentData) {        
+        if (notesData.length > currentData) {
             console.log(notesData.length, currentData);
             var currentNote = notesData[currentData].articleNote;
             if (currentNote) {
@@ -66,31 +66,32 @@ $(document).ready(function() {
 
     //save notes and clear note taking area
     var saveNote = function() {
-        $("#note-button").on('click', function() {
-            var t = $("#input-box").val();
-            //console.log(t)
-            var idCount = dataCount - 1;
-            console.log(dataCount, "current dataCount");
+            $("#note-button").on('click', function() {
+                var t = $("#input-box").val();
+                //console.log(t)
+                var idCount = dataCount - 1;
+                console.log(dataCount, "current dataCount");
 
-            $.ajax({
-                type: "POST",
-                dataType: "json",
-                url: '/save',
-                data: {
-                    id: idCount,
-                    date: dataDate,
-                    note: t
-                }
-            }).done(function() {
-                $("#input-box").val("");
-                // grab the notes again because we just saved note
-                gather();
-            }).fail(function() {
-                console.log("Sorry. Server unavailable. ");
+                $.ajax({
+                    type: "POST",
+                    dataType: "json",
+                    url: '/save',
+                    data: {
+                        id: idCount,
+                        date: dataDate,
+                        note: t
+                    }
+                }).done(function() {
+                    $("#input-box").val("");
+                    // grab the notes again because we just saved note
+                    gather();
+                }).fail(function() {
+                    console.log("Sorry. Server unavailable. ");
+                });
+
             });
-
-        });
-    }
+        }
+    
     //delete notes and clear note taking area
     var deleteNote = function() {
         $("#delete-button").on('click', function() {
@@ -119,7 +120,7 @@ $(document).ready(function() {
         $("#typewriter").remove();
         var i = 0;
         var newsText;
-        
+
         if (state > 0) {
             side = state - 1;
         } else {
@@ -199,7 +200,6 @@ $(document).ready(function() {
 
     /* running before user action*/
     $('.container').hide();
-
     //getch da data
     fetchData();
 
@@ -208,15 +208,12 @@ $(document).ready(function() {
     $("#input-area").hide();
     $("#saved-text").hide();
     $("#saved-area").hide();
-
     $("#seek-box").click(function() {
         //put data into html
         populate();
         //show stuff
         $('.container').show();
         $("#seek-box").hide();
-
     })
-
 
 });
