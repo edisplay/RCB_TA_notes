@@ -82,7 +82,7 @@ h1{
 #typewriter{
 	color: white;
 	font-weight: bold;
-	font-size: 30px;
+	font-size: 26px;
 	line-height:38px;
 	z-index: 10;
 	margin-top: 35px;
@@ -129,18 +129,10 @@ h1{
     opacity: .45;
 	background-color : deepskyblue; 
 	width: 300px;
-	height: 100px;
+	height: 110px;
     top: 710px;
     left: 298px;
     position: absolute;
-}
-
-#note-text {
-	padding-top: 20px;
-	width: 100px;
-    font-size: 40px;
-	margin: auto;
-	cursor: pointer;
 }
 
 #note-box {
@@ -159,16 +151,17 @@ h1{
     opacity: .65;
 	background-color : darkslategray; 
 	width: 300px;
-	height: 100px;
+	height: 110px;
     top: 710px;
     left: 1295px;
     position: absolute;
 	cursor: pointer;
 }
 
-#delete-text {
-	padding-top: 20px;
-	width: 100px;
-    font-size: 40px;
-	margin: auto;
+.button {
+	width: 80px;
+	height: 80px;
+	margin-top: 10px;
+	margin-left: 95px;
+	cursor: pointer;
 }

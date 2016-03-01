@@ -45,14 +45,28 @@ $(document).ready(function() {
         }).done(function(response) {
             notesData = response;
             console.log(notesData, "gotem notes");
+            postNote();
         }).fail(function() {
             console.log("Sorry. Server unavailable. ");
         });
     }
 
+    //render notes from data
+    var postNote = function() {
+        $("#note-box").val("");
+        var currentData = dataCount - 1;
+        if (notesData.length > currentData) {        
+            console.log(notesData.length, currentData);
+            var currentNote = notesData[currentData].articleNote;
+            if (currentNote) {
+                $("#note-box").val(currentNote);
+            };
+        };
+    }
+
     //save notes and clear note taking area
     var saveNote = function() {
-        $("#note-text").on('click', function() {
+        $("#note-button").on('click', function() {
             var t = $("#input-box").val();
             //console.log(t)
             var idCount = dataCount - 1;
@@ -77,6 +91,28 @@ $(document).ready(function() {
 
         });
     }
+    //delete notes and clear note taking area
+    var deleteNote = function() {
+        $("#delete-button").on('click', function() {
+            var idCount = dataCount - 1;
+            console.log(dataCount, "current dataCount");
+
+            $.ajax({
+                type: "DELETE",
+                dataType: "json",
+                url: '/delete',
+                data: {
+                    id: idCount,
+                    date: dataDate
+                }
+            }).done(function() {
+                gather();
+            }).fail(function() {
+                console.log("Sorry. Server unavailable. ");
+            });
+
+        });
+    }
 
     //type animation function
     var typeIt = function() {
@@ -92,7 +128,7 @@ $(document).ready(function() {
 
         $("." + sideAry[side]).append("<div id='typewriter'></div>");
         //cycle to different story
-        var print = mongoData.nyt[dataCount][0];
+        var print = mongoData.nyt[dataCount][0] + mongoData.nyt[dataCount][1];
         dataCount++;
         // type animation for new summary
         (function type() {
@@ -138,6 +174,11 @@ $(document).ready(function() {
             headline();
             //animte text
             typeIt();
+            //render note
+            gather();
+            //enable delete
+            deleteNote();
+
             //start the notes 
             $("#input-area").show();
             $("#saved-area").show();

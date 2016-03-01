@@ -133,15 +133,15 @@ var times = function(input, cb) {
 var notes = function(input, data, cb) {
 
     if (input == "save") {
-		console.log(data.id, data.date, "is what we are checking");
+        console.log(data.id, data.date, "is what we are checking");
 
         mynotes.find({
-        	//mongodb find sucks ugh
+            //mongodb find sucks ugh
             "articleId": data.id,
             "articleDate": data.date
         }, function(err, doc) {
             console.log(doc, data.id, "this is what notes we found")
-            if ( !doc[0] ) {
+            if (!doc[0]) {
                 console.log("this is a new notes need to be saved");
                 mynotes.save({
                     articleId: data.id,
@@ -149,7 +149,16 @@ var notes = function(input, data, cb) {
                     articleNote: data.note
                 });
             } else {
-                console.log("we already got this note, pass");
+                //console.log(doc[0]["_id"]);
+                console.log("we already got a note but we can replace it");
+                mynotes.remove({
+                    "_id": doc[0]["_id"]
+                });
+                mynotes.save({
+                    articleId: data.id,
+                    articleDate: data.date,
+                    articleNote: data.note
+                });
             }
         });
 
@@ -160,10 +169,40 @@ var notes = function(input, data, cb) {
 
         mynotes.find({
             articleDate: data.date
-        }, function(err, doc) {
+        }).sort({ articleId: 1 }, function(err, doc) {
             cb(doc);
         });
 
+    } else if (input == "delete") {
+        console.log(data, "for replace into empty note");
+        mynotes.find({
+            //mongodb find sucks ugh
+            "articleId": data.id,
+            "articleDate": data.date
+        }, function(err, doc) {
+            console.log(doc, data.id, "this is what notes we found")
+            if (!doc[0]) {
+                console.log("this is a new notes need to be saved");
+                mynotes.save({
+                    articleId: data.id,
+                    articleDate: data.date,
+                    articleNote: data.note
+                });
+            } else {
+                //console.log(doc[0]["_id"]);
+                console.log("we already got a note but we can replace it");
+                mynotes.remove({
+                    "_id": doc[0]["_id"]
+                });
+                mynotes.save({
+                    articleId: data.id,
+                    articleDate: data.date,
+                    articleNote: " "
+                });
+            }
+        });
+        
+    	cb(data);
     };
 
 }
@@ -191,7 +230,7 @@ app.post('/fetch', function(req, res) {
     res.send('success');
 });
 
-//get save note
+//post save note
 app.post('/save', function(req, res) {
     notes('save', req.body, function(data) {
         // post req must give back resopnce as json??? wat..ok..
@@ -199,6 +238,13 @@ app.post('/save', function(req, res) {
     })
 });
 
+//delete note
+app.delete('/delete', function(req, res) {
+    notes('delete', req.body, function(data) {
+        // post req must give back resopnce as json??? wat..ok..
+        res.json(data)
+    })
+});
 
 app.listen(port, function() {
     console.log("lisenting on port:" + port);
