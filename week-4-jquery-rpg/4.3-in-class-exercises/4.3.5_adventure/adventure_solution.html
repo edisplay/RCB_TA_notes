@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Adventure</title>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+    <style>
+    body {
+        background-color: black;
+        color: white;
+        font-size: 22px;
+    }
+    
+    #title {
+        color: red;
+    }
+    
+    #left-area {
+        width: 305px;
+        height: 500px;
+        background-color: steelblue;
+        float: left;
+        margin-right: 2px;
+    }
+    
+    #right-area {
+        width: 305px;
+        height: 500px;
+        background-color: chocolate;
+        float: left;
+    }
+    
+    .buttons {
+        width: 295px;
+        height: 295px;
+        margin: auto;
+        padding-top: 5px;
+        cursor: pointer;
+    }
+    
+    hr {
+        display: block;
+        height: 1px;
+        border: 0;
+        border-top: 1px solid crimson;
+        margin: 1em 0;
+        padding: 0;
+        width: 600px;
+    }
+    
+    #story-text {
+        padding-bottom: 20px;
+        width: 500px;
+        /*        clear: both;*/
+        color: crimson;
+    }
+    
+    .choice-text {
+        margin-left: 5px;
+        margin-top: 10px;
+    }
+    </style>
+</head>
+
+<body>
+    <!-- The Adventure of when zombies attack! -->
+    <h1 id="title">Adventure: Zombie Attack</h1>
+    <hr>
+    <div id="story-text"></div>
+    <div id="left-area">
+        <div class="buttons" id="left-image"></div>
+        <div class="choice-text" id="left-text"></div>
+    </div>
+    <div id="right-area">
+        <div class="buttons" id="right-image"></div>
+        <div class="choice-text" id="right-text"></div>
+    </div>
+    <script type="text/javascript">
+    $(document).ready(function() {
+        /*
+            obj = {
+                result: "",
+                leftText: "",
+                rightText: "",
+                leftImg: "",
+                rightImg: "",
+                leftChoice: {
+                    result: "",
+                    leftText: "",
+                    rightText: "",
+                    leftImg: "",
+                    rightImg: "",
+                }
+            }    
+        */
+
+        // Zombie attacks are happening all over your neighborhood what do you do?
+        var paths = {
+            result: "Your neighborhood is under attack by zombies, what are you going to do?",
+            leftText: "Get in the car and drive.",
+            rightText: "Stay behind and build a defense.",
+            leftImg: "images/car.png",
+            rightImg: "images/house.png",
+            leftChoice: {
+                leftImg: "images/hitchhiker.png",
+                rightImg: "images/keepDriving.png",
+                result: "You choose to make a run for it and hoop into your car, and started driving north, after driving for 4 hours you see a hitchhiker on the road.",
+                leftText: "Choose pick up the hitchhiker and travel together.",
+                rightText: "Choose to keep driving and leave the hitchhiker behind.",
+                leftChoice: {
+                    result: "You choose to pick up the hitchhiker who tells you to head for the sea and find a boat, but you were planning to keep going north to the airport",
+                    leftText: "Choose to head to the sea to find the boat.",
+                    rightText: "Choose to keep heading to the airport",
+                    leftImg: "images/boat.png",
+                    rightImg: "images/airport.png",
+                    leftChoice: {
+                        result: "You choose to find the boat with the hitchhiker, but the hitchhiker betrays you and steals all of your stuff and leaves you for the zombies to come...The end.",
+                        leftText: "You got betrayed.",
+                        leftImg: "images/betray.png",
+                    },
+                    rightChoice: {
+                        result: "You choose the airport, after getting to the airport you find there are small number of survivors boarding an airplane, you both get on the airplane, not sure what will come next...The end.",
+                        rightText: "You made it to safety...for now.",
+                        rightImg: "images/airplane.png"
+                    }
+                },
+                rightChoice: {
+                    result: "You choose to keep driving and not pick up the hitchhiker, after 2 more days of driving you get to the airport hoping to find survivors. You see a group of survivors at a check point, they ask you to help defend the check point until help arrives.",
+                        leftText: "Choose to help the survivors.",
+                        rightText: "Choose to leave them to die.",
+                        leftImg: "images/defend.png",
+                        rightImg: "images/leave.png",
+                    leftChoice: {
+                        result: "You choose to help the survivors, after battling zombies for a few days, your group survived, you have gained a stronghold, but the danger is far from over.",
+                        leftText: "You won the battle, for now you can rest easy...for now.",
+                        leftImg: "images/stronghold.png",
+                    },
+                    rightChoice: {
+                        result: "You choose to not help and keep driving in the hopes of finding another airport, after a few days of driving you ran out of gas and supplies, with no food or water you started walking but behind you are sounds of footsteps of the dead...The end",
+                        rightText: "It's a matter of time before the undead gets you.",
+                        rightImg: "images/tired.png"
+                    }
+                }
+            },
+            rightChoice: {
+                result: "You choose to stay and protect the house you are in. After making your house defenses you hear knocking on the door, other survivors has come in hope of staying at your house for safety",
+                leftText: "Choose to help the survivors and let them in your house.",
+                rightText: "Choose to reject the survivors and tell them to leave.",
+                leftImg: "images/group.png",
+                rightImg: "images/reject.png",
+                leftChoice: {
+                    result: "You invite the survivors into your house and as they come in the door, you notice one of them is bitten by the zombies, you have to address this right now before it gets out of hand.",
+                    leftText: "Choose to kill the person who is bitten.",
+                    rightText: "Choose to kick out the person who is bitten.",
+                    leftImg: "images/kill.png",
+                    rightImg: "images/kickOut.png",
+                    leftChoice: {
+                        result: "You choose to kill the person that's been bitten by zombies, your group is now safer, but everyone looks at you like a monster, and leaves your house. You wait alone in your house for whatever comes next...The end.",
+                        leftText: "You are alone now, but not for long.",
+                        leftImg: "images/alone.png"
+                    },
+                    rightChoice: {
+                        result: "You choose to kick out the person who is bitten by zombies, even though the group is happy that you didn't kill the person that is bitten. You still feel guilty for letting another person die for the group. The end.",
+                        rightText: "You are safe for a cost.",
+                        rightImg: "images/guilt.png"
+                    }
+                },
+                rightChoice: {
+                    result: "You choose to not let anyone in the house in the fear of trouble, but that night zombies starts to attack your house breaking the door, you can hide in the basement safe or make a final stand.",
+                    leftText: "Choose to hide in the basement.",
+                    rightText: "Choose to fight to make a final stand.",
+                    leftImg: "images/basement.png",
+                    rightImg: "images/fight.png",
+                    leftChoice: {
+                        result: "You choose to hide in the basement, after running out of water and food you decide to end it all, opening the basement door seeing no zombies but just an empty neighborhood all destroyed...The end.",
+                        leftText: "The zombies has moved on, but you are lost.",
+                        leftImg: "images/empty.png"
+                    },
+                    rightChoice: {
+                        result: "You choose make a final stand and after hours of fighting the zombies over run the house, as all the zombie swamp you things did not end will...The end.",
+                        rightText: "Went down fighting.",
+                        rightImg: "images/notEndWell.png"
+                    }
+                }
+            }
+        };
+
+        // Check track of the stage of the adventure
+        var stage = 0;
+
+        // Render things to DOM
+        var render = function(choice, type, renderArea, inputObj) {
+            // render image
+            $("#" + renderArea).empty();
+            if (type == "image") {
+                var but = $('<div>');
+                var imgz = $("<img alt='image'>");
+                imgz.attr("src", choice);
+                but.append(imgz);
+                $("#" + renderArea).append(but)
+            };
+            $("#" + renderArea).unbind();
+            $("#" + renderArea).on('click', function() {
+                stage++;
+                traverse(inputObj);
+            });
+
+            // render text
+            if (type == "text") {
+                $("#" + renderArea).empty();
+                var story = $('<div>');
+                story.text(choice);
+                $("#" + renderArea).append(story)
+            }
+
+            // remove image for last stage
+            if (stage == 3 && renderArea == "left-image") {
+                $("#right-area").remove();
+            }else if (stage == 3 && renderArea == "right-image") {
+                $("#left-area").remove();
+                $("#left-image").unbind();
+            };
+        };
+
+        // Object traverser
+        var traverse = function(inputObj) {
+            //console.log("currently", stage, " stage.");
+            var obj = inputObj;
+
+                for (var property in obj) {
+                    // init render story
+                    switch (String(property)) {
+                        case "result":
+                            render(obj[property], "text", "story-text")
+                            break;
+                        case "leftText":
+                            render(obj[property], "text", "left-text")
+                            break;
+                        case "rightText":
+                            render(obj[property], "text", "right-text")
+                            break;
+                        case "leftImg":
+                            render(obj[property], "image", "left-image", obj.leftChoice)
+                            break;
+                        case "rightImg":
+                            render(obj[property], "image", "right-image", obj.rightChoice)
+                            break;
+                        default:
+                            break;
+                    }
+                }
+
+            };
+        
+        // traverse is a function that loops though an object and for each key it has switch statment into an action
+        // each of the action is using the function render
+        // render append to the DOM text or image depending on the input
+        // traverse also pass the render render function an obj
+        // this obj is used in a click event that calls traverse and use this obj as the input
+        // traverse is loop though this new object repeating the process
+
+        traverse(paths);
+
+    });
+    </script>
+</body>
+
+</html>
