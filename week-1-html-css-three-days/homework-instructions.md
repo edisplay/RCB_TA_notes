@@ -10,14 +10,55 @@
 * Push your code to Github.
 * Deploy your code from Github to Heroku.
 
-### Remember
+### When will you be able to do this homework?
 
-You will be fully capable of doing this homework by the end of Saturday's class.
+* Random fact to make sure you read this: Abraham Lincoln was the tallest president ever. 
+ * He was 6 ft 4 inches.
 
-### Week 1 Mantra
+-----
+
+* You will be fully capable of doing this homework by the end of Saturday's class.
+
+### When is this homework due?
+
+* Random fact to make sure you read this: Nixon Was A Card Shark. In the Navy, He won $6k in a few months playing casually.
+
+-----
+
+* THIS HW IS DUE AT THIS DATE: <instructor fill in> . 
+  * You submit it as is when it's due before class starts. 
+
+* Even if your homework isn't completely done, has errors or doesn't work, YOU NEED TO SUBMIT IT.
+
+* If you don't, then it will be marked as incomplete.
+
+### Want additional practice - like mini hws? (NOT PART OF HW)
+
+* Random fact to make sure you read this part: Warren Harding (Our 29th President) Lost The White House China In A Poker Game.
+  * In one poker game, he bet the White House China collection and lost it all in one hand.
+
+-----
+
+* look at your instructor's in class repository for the exercises that you did in class. 
+  * redo those exercises from scratch
+    * if you have trouble with them, rewatch the recorded video of class when your instructor went over it and lastly look at the solution 
+
+### When should you be an expert with the concepts from this homework?
+
+* Random fact to make sure you read this part: Ronald Reagan Did Stand-Up for a few weeks in Las Vegas
+
+-----
+
+6 months from now. 
+
+You have 6 months to get really good at this material :)
+
+Obviously, you need to try YOUR VERY BEST AT finishing this homework, but remember you have 6 months to get good at it.
 
 Week 1 you learn a lot of html/css, github and heroku
+
 Week 2 you'll learn an easier way to manage the html/css along with some more github stuff
+
 Week 3 we'll start JavaScript, and weeks 1+2 get used a lot less
 
 There is no need to panic over week 1's material. Because you'll have 23 weeks to digest it and get good at it. 
