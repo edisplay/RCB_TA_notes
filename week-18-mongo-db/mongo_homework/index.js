@@ -1,6 +1,5 @@
 var express = require('express');
 var path = require('path');
-var fs = require('fs');
 var app = express();
 
 app.use(express.static(__dirname + '/public'));
@@ -26,6 +25,7 @@ app.use('/gather', routes);
 app.use('/check', routes);
 app.use('/save', routes);
 app.use('/delete', routes);
+
 
 app.listen(port, function() {
     console.log("lisenting on port:" + port);
