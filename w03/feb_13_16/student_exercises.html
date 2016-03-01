@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Student exercises</title>
+</head>
+<body>
+	<script>
+		//write a function that takes in 3 arguments, adds them together and returns the value
+		var add = function(x, y, z){
+			return(x + y + z);
+		};
+		console.log("add", add(2, 3, 5));
+		//ANOTHER SOLUTION
+		var numsToAdd = [1, 4, 7];
+		function addItems(arr){
+			var sum = 0;
+			for (var i = 0; i < arr.length; i++){
+				sum = sum + arr[i];
+			}
+			return sum;
+		}
+		console.log("addItems", addItems(numsToAdd));
+		//write a function that takes in 3 arguments, multiples them and returns the value
+		var multiply = function(x,y,z){
+			return(x*y*z);
+		};
+		console.log("multiply", multiply(2,3,5));
+		//ANOTHER SOLUTION
+		var numsToMultiply = [2, 4, 8];
+		function multiplyItems(arr){
+			var product = 1;
+			for (var i =0; i < arr.length; i++){
+				product = product*arr[i];
+			}
+			return product;
+		}
+		console.log("multiplyItems", multiplyItems(numsToMultiply));
+		//write a function that takes in 3 arguments, checks if they are all strings, and if they are then alert: all are strings!
+		var me = "John";
+		var theseAreAllStrings = ["hello", "there", me];
+		var theseAreNotAllStrings = ["hello", 42, me];
+		function checkIfItemsAreAllStrings(arr){
+			var counter=0;
+			for(var i = 0; i < arr.length; i++){
+				if (typeof(arr[i]) === "string"){
+					counter++;
+				};
+			};
+			if(counter==arr.length){
+				alert("all variables are strings!");
+			};
+		};
+		checkIfItemsAreAllStrings(theseAreAllStrings);
+	</script>
+</body>
+</html>

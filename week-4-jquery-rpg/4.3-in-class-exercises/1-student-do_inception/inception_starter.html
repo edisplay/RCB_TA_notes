@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Inception</title>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+    <style>
+    body {
+        background-color: black;
+    }
+
+    .mission {
+        height: 100px;
+        background-color: white;
+        font-size: 30px;
+        margin: 5px;
+        padding: 10px;
+    }
+
+    #yusuf {
+        width: 400px;
+        background-color: mediumseagreen;
+    }
+
+    #arthur {
+        width: 350px;
+        background-color: coral;
+    }
+
+    #eames {
+        width: 300px;
+        background-color: deepskyblue;
+    }
+
+    #cubb {
+        width: 250px;
+        background-color: darkgray;
+    }
+
+    #limbo {
+        width: 200px;
+        background-color: white;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="mission" id="yusuf">Yusuf's Dream</div>
+    <div class="mission" id="arthur">Arthur's Dream</div>
+    <div class="mission" id="eames">Eames's Dream</div>
+    <div class="mission" id="cubb">Cubb's Dream</div>
+    <div class="mission" id="limbo">Exit Limbo</div>
+    <script type="text/javascript">
+    $(document).ready(function() {
+        //dreamer's mission
+        var inception = {
+            missionLog: {
+                yusufMission: "Not complete.",
+                arthurMission: "Not complete.",
+                eamesMission: "Not complete.",
+                cubbMission: "Not complete.",
+            },
+            yusufDream: {
+                completeMission: function() {
+                    inception.missionLog.yusufMission = "Complete";
+                    alert("Yusuf's Mission Complete");
+                },
+                arthurDream: {
+                    completeMission: function() {
+                        inception.missionLog.arthurMission = "Complete";
+                        alert("Arthur's Mission Complete");
+                    },
+                    eamesDream: {
+                        completeMission: function() {
+                            inception.missionLog.eamesMission = "Complete";
+                            alert("Eames's Mission Complete");
+                        },
+                        cubbDream: {
+                            completeMission: function() {
+                                inception.missionLog.cubbMission = "Complete";
+                                alert("Cubb's Mission Complete");
+                            },
+                            exitLimbo: {
+                                completeMission: function() {
+                                    if (inception.missionLog.yusufMission == "Complete" && inception.missionLog.arthurMission == "Complete" && inception.missionLog.eamesMission == "Complete" && inception.missionLog.cubbMission == "Complete") {
+                                        alert("YAY?");
+                                    };
+                                }
+                            }
+
+                        }
+                    }
+                }
+            }
+        };
+
+        debugger;
+        
+        //click events
+        $('#yusuf').on('click', function() {
+            /* Step 1: Inside the inception object, in the yusufDream key, call the completeMission function */
+        });
+        $('#arthur').on('click', function() {
+            /* Step 2: Inside the inception object, in the yusufDream key, inside of the authorDream key, call the completeMission function */
+        });
+        $('#eames').on('click', function() {
+            /* Step 3: Inside the inception object, in the yusufDream key, inside of the authorDream key, inside call the completeMission function */
+        });
+        $('#cubb').on('click', function() {
+            /* Step 4: Inside the inception object, in the yusufDream key, inside of the authorDream key, inside of the eamesDream key, call the completeMission function */
+        });
+        $('#limbo').on('click', function() {
+            /* Step 5: Inside the inception object, in the yusufDream key, inside of the authorDream key, inside of the eamesDream key, inside of the cubbDream key, inside of the exitLimbo key, call the completeMission function */
+        });
+    });
+
+    </script>
+</body>
+
+</html>

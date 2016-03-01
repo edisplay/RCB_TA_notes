@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Street Fighter</title>
+    <style type="text/css">
+      body {
+          background: url(images/streetfighter_bg.png) no-repeat;
+          width: 500px;
+          height: 360px;
+      }
+      
+      #button-area-top {
+          margin-top: 218px;
+          margin-left: 140px;
+      }
+      
+      #button-area-bot {
+          margin-left: 140px;
+      }
+      
+      .buttons {
+          width: 50px;
+          height: 65px;
+          float: left;
+      }
+      
+      .char {
+          width: 90px;
+          height: 125px;
+      }
+      
+      .clear {
+          clear: left;
+      }
+      
+      .left-side {
+          position: absolute;
+          top: 200px;
+      }
+      
+      .right-side {
+          position: absolute;
+          top: 205px;
+          left: 380px;
+      }
+    </style>
+</head>
+
+<body>
+    <div id="button-area-top"></div>
+    <div class="clear"></div>
+    <div id="button-area-bot"></div>
+    <div class="clear"></div>
+    <p class="left-side"></p>
+    <p class="right-side"></p>
+
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+  <script type="text/javascript">
+    //fight fight fight
+    $(document).ready(function() {
+        var characters = {
+            'blanka': {
+                name: "blanka",
+                biggerImg: "images/blanka_big.png",
+                buttonImg: "images/blanka_button.png"
+            },
+            'chunli': {
+                name: "chunli",
+                biggerImg: "images/chunli_big.png",
+                buttonImg: "images/chunli_button.png"
+            },
+            'dhalsim': {
+                name: "dhalsim",
+                biggerImg: "images/dhalsim_big.png",
+                buttonImg: "images/dhalsim_button.png"
+            },
+            'ehonda': {
+                name: "ehonda",
+                biggerImg: "images/ehonda_big.png",
+                buttonImg: "images/ehonda_button.png"
+            },
+            'guile': {
+                name: "guile",
+                biggerImg: "images/guile_big.png",
+                buttonImg: "images/guile_button.png"
+            },
+            'ken': {
+                name: "ken",
+                biggerImg: "images/ken_big.png",
+                buttonImg: "images/ken_button.png"
+            },
+            'ryu': {
+                name: "ryu",
+                biggerImg: "images/ryu_big.png",
+                buttonImg: "images/ryu_button.png"
+            },
+            'zangie': {
+                name: "zangie",
+                biggerImg: "images/zangief_big.png",
+                buttonImg: "images/zangief_button.png"
+            }
+        };
+
+        var render = function(character, renderArea, size, buttonId) {
+            //Step 8: if size is equal to 'buttonImg'
+              //then 
+                //make a variable named charDiv and set it equal to a new div
+                // set a data-name attribute to charDiv and set it equal to character.name
+
+                //make another variable named charImage and set it equal to a new image 
+                  //add an alt attribute to the charImage and set it equal to: character.name + ' menu image'
+                  //add the buttons class to the charImage
+                  //set the data-name attribute of the charImage to buttonId
+                  //set the src of the charImage to character.buttonImg
+
+                //append charImage to charDiv
+
+                //append charDiv to $("#" + renderArea)
+
+              //else
+                //then
+                  //make a variable named charDiv and set it equal to a new div
+                  //set charDiv's data-name to this: character.name + "-big'"
+
+                  //make another variable named charImage and set it equal to a new image 
+                    //add an alt attribute to the charImage and set it equal to: character.name + ' bigger image'
+                    //add the char class to the charImage
+                    //set the data-name attribute of the charImage to buttonId
+                    //set the src of the charImage to character.biggerImg
+
+                    //append charImage to charDiv
+
+                    //append charDiv to $("." + renderArea)
+        };
+
+        //Step 1: Create a variable named count and set it equal to 0. This will keep track of how many divs are created 
+
+        //Step 2: Create a variable named characterNames and set it equal to Object.keys(characters)
+            //note: this takes all the keys of the characters object and turns them into an array
+
+        //Step 3: Create a variable named  array "sides" that contains: 'left-side' and 'right-side'
+
+        //Step 4: Create an array named positions that contains: 'button-area-top', 'button-area-bot'
+
+
+        for (var p = 0; p < positions.length; p++) {
+
+            var start;
+            var end;
+
+            //Step 5: 
+            /*
+                * do an if statement and check if p is equal to 0
+                  if so then set variable start to 0 and variable end to 4
+                  else then set variable start to 4 and variable end to 8 
+            */
+
+
+            for (var i = start; i < end; i++) {
+                // Step 6:
+                  /*
+                    * Create a variable named target and set it to characterNames[i]
+                    * Call the render function and pass these in as the arguments: characters[target, positions[p], buttonImg, characterNames[i]
+                  */
+
+            };
+
+        };
+
+        $('.buttons').on('click', function() {
+            //Step 7 
+              /*
+                * Create a variable named name and set it equal to value of what was clicked on's data-name value.
+                * If count is less than 2 
+                  * then call the render function and pass in these arguments: characters[name], sides[count], 'biggerImg', name
+                  * increment count by 1
+
+
+              */
+
+        });
+
+    });
+  </script>
+</body>
+
+</html>

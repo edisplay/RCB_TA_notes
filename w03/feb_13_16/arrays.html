@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Objects & Arrays</title>
+</head>
+<body>
+	<script>
+		var nums = [1, 8, 2, 3, 1, 1, 6, 6, 6];
+		for(var i = 0; i < nums.length; i++){
+			if (nums[i] > 2){
+				console.log(nums[i] + ' is greater than 2');
+			} else {
+				console.log(nums[i] + ' is not greater than 2');
+			};    
+		};
+		//JOAN OF ARC EXAMPLE
+		//not a good way to express the relationship between two arrays
+		var joanOfArcInfoParts = ['Real Name', 'Grew Up Where', 'known for', 'scars', 'symbolism'];
+		var joanOfArcInfoValues = ['Jehanne la Pucelle', 'Domremy, a village in northeastern France', 'Peasant girl, daughter of a farmer, who rose to become Commander of the French army. She led the charge against England. Strategized brilliant military strategies.', 'Took an arrow to the shoulder and a crossbow bolt to the thigh while trying to liberate Paris.', 'stands for French unity and nationalism'];
+		//SOLUTION
+		i = joanOfArcInfoParts.indexOf('Grew Up Where');
+		alert(joanOfArcInfoValues[i]);
+		//more elegant solution
+		var joan = {
+			'Real Name': 'Jehanne la Pucelle',
+			'Grew Up Where': 'Domremy, a village in northeastern France',
+			'known for': 'Peasant girl, daughter of a farmer, who rose to become Commander of the French army. She led the charge against England. Strategized brilliant military strategies.',
+			'scars': 'Took an arrow to the shoulder and a crossbow bolt to the thigh while trying to liberate Paris.',
+			'symbolism': 'stands for French unity and nationalism'
+		};
+		//SOLUTION
+		// alert(joan['Grew Up Where']);
+		//NOTE: not as easy with an object to get the key using the value.
+		joan.birthYear = 1480; //added a new property after you created the object. Fine fine.
+		alert(joan.birthYear);
+	</script>
+</body>
+</html>

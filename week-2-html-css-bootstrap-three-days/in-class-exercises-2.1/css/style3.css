@@ -1,0 +1,23 @@
+/*exercise three*/
+body {
+	font-family: 'Merriweather', serif;
+	line-height: 180%;
+	font-size: 	18px;
+	color: #333;
+}
+#main-header {
+	line-height: 0
+}
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Noto Sans', sans-serif;
+	margin-bottom: 20px;
+	font-weight: 700;
+}
+h1 {
+	font-size: 30px;
+	line-height: 45px;
+}
+h2 {
+	font-size: 25px;
+	line-height: 38px;
+}

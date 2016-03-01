@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Coffee Menu</title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	<div> Coffee Menu </div>
+	<div>----------- -----------</div>
+    <script type="text/javascript">
+      function addElement () { 
+        // create a new div element 
+        var coffeeDiv = document.createElement("div"); 
+        // add the newly created element and its content into the DOM 
+        document.body.appendChild(coffeeDiv); 
+        var coffeeList = [ //array of menu items
+        'Coffee: $5',
+        'Espresso: $7',
+        'Capunchino: $6',
+        'Latte: $4',
+        'Tea: $3',
+        'Ice Coffee: $6',
+        'Ice Espresso: $8',
+        'Ice Latte: $6',
+        'Ice Tea: $4'
+        ];
+        // loop to create the coffee content
+        for (var i = 0; i < coffeeList.length; i++) { //loop through the array
+          var newCoffeeDiv = document.createElement("div"); //add the text node to the newly created div
+          newCoffeeDiv.innerHTML = coffeeList[i]; //set the text for each array index
+          coffeeDiv.appendChild(newCoffeeDiv); //add each new div to the coffee div
+        };
+      };
+      document.body.onload = addElement; //run the function addElement as soon as the page loads
+    </script>
+</body>
+</html>

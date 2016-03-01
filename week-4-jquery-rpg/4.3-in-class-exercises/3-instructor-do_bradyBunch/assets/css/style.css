@@ -1,0 +1,24 @@
+body {
+    background-color: powderblue
+}
+
+.character {
+    width: 200px;
+    height: 160px;
+    float: left;
+}
+
+.charButton {
+    width: 110px;
+    height: 80px;
+    border-style: solid;
+    padding: 3px;
+    color: dimgray;
+    float: left;
+    margin: 1px;
+    font-size: 20px;
+}
+
+.clear {
+    clear: left;
+}

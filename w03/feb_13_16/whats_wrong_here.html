@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>what's wrong here?</title>
+		</head>
+	<body>
+	<script type="text/javascript">
+		//too many for loops. very repetitive.
+		//put everything in one array and loop through it
+		var brands = ['Acer', 'Apple', 'Sony', 'Samsung'];
+		var heroes = ['Black Panther', 'Cyborg', 'Black Canary', 'Donna Troy', 'Huntress', 'Blue Beetle', 'Captain Atom', 'Power Girl'];
+		var booksOnMyShelf = ['Calculus Early Transcendentals', 'Ravens', 'The Self Illusion', 'Hematology Clinical Principles and Applications'];
+		var thingsInFrontOfMe = ['laptop', 'beanbag', 'cats', 'slippers'];
+		var howIFeel = ['sleep deprived', 'wired on coffee', 'excited'];
+
+		for (var i =0; i < brands.length; i++){ //loop through brands array and console log each one in the array
+			console.log(brands[i]);
+		}
+		console.log('---------'); //put this in the array. shouldn't be writing it out everytime
+		for (var i =0; i < heroes.length; i++){ //loop through heroes array and console log each one in the array
+			console.log(heroes[i]);
+		}
+		console.log('---------'); //put this in the array 
+		for (var i =0; i < booksOnMyShelf.length; i++){ //loop through heroes array and console log each one in the array
+			console.log(booksOnMyShelf[i]);
+		}
+		console.log('---------'); //put this in the array 
+		for (var i =0; i < thingsInFrontOfMe.length; i++){ //loop through heroes array and console log each one in the array
+			console.log(thingsInFrontOfMe[i]);
+		}
+		console.log('---------'); //put this in the array 
+		for (var i =0; i < howIFeel.length; i++){ //loop through heroes array and console log each one in the array
+			console.log(howIFeel[i]);
+		}
+		console.log('---------'); //put this in the array 
+	</script>
+	</body>
+</html>

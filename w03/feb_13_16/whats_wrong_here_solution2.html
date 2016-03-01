@@ -1,0 +1,34 @@
+<html>
+<head>
+	<title>what's wrong here? SOLUTION2</title>
+</head>
+<body>
+
+<script type="text/javascript">
+	var brands = ['Acer', 'Apple', 'Sony', 'Samsung'];
+	var heroes = ['Black Panther', 'Cyborg', 'Black Canary', 'Donna Troy', 'Huntress', 'Blue Beetle', 'Captain Atom', 'Power Girl'];
+	var booksOnMyShelf = ['Calculus Early Transcendentals', 'Ravens', 'The Self Illusion', 'Hematology Clinical Principles and Applications'];
+	var thingsInFrontOfMe = ['laptop', 'beanbag', 'cats', 'slippers'];
+	var howIFeel = ['sleep deprived', 'wired on coffee', 'excited'];
+	var arrays = [brands, heroes, booksOnMyShelf, thingsInFrontOfMe, howIFeel];
+	function consoleInside(){ //this function doesn't actually run until line 19
+		for (var i = 0; i < arrays.length; i++){
+			console.log("nested arrays", arrays[i]);
+			console.log('---------');
+			for (var j=0; j < brands.length; j++){
+				console.log("brands", brands[j]);
+			}
+			
+		}
+		
+	};
+	consoleInside(arrays);
+	// consoleInside(brands); //whichever argument is passed in becomes "arr". so here, consoleInside is being handed the "brands" array
+	// consoleInside(heroes);
+	// consoleInside(booksOnMyShelf);
+	// consoleInside(thingsInFrontOfMe);
+	// consoleInside(howIFeel);
+	//another solution is to nest arrays and nest for loops
+</script>
+</body>
+</html>

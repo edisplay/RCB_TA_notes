@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>this</title>
+  </head>
+  <body style="">
+      
+      <script type="text/javascript">
+
+      	//EXAMPLE ONE
+		//what is `this`?
+		//`this` reference ALWAYS refers to (and holds the value of) an object—a singular object
+		console.log(this);
+
+
+		//EXAMPLE TWO
+		/*
+		when `this` is used outside of an object, it references the global scope: 
+		Window {external: Object, chrome: Object, document: document, speechSynthesis: SpeechSynthesis, webkitStorageInfo: DeprecatedStorageInfo…}
+		*/
+		//In most cases, the value of this is determined by how a function is called
+
+		function myFunction(){
+		  console.log(this);
+		}
+		myFunction();
+
+		//In the example above `this` isn't referenced anywhere so it refer backs to the global object
+		//`this` is not assigned a value until an object invokes the function where this is defined. Let’s call the function where this is defined the “this Function.”
+
+
+		//EXAMPLE THREE
+		//When a function is called as a method of an object, its this is set to the object the method is called on.
+		var someObj = {
+			name: 'Red Hat',
+			say: function() {
+				console.log(this.name);
+			}
+		};
+
+		someObj.say();
+		//In the example above `this` referes to the object "someObj"
+
+
+		//EXAMPLE FOUR
+		//when `this` gets lost and loses scope
+		var myObj = {
+			name: "",
+			yell: function() {
+				this.name = 'Star Powerup';
+				console.log(this);
+				var changeName = function(newName) {
+					this.name = newName;
+				};
+				changeName('Blue Shell');
+				console.log(this);
+			}
+		};
+		myObj.yell();
+		//Wait why didn't changeName work? Why did the '.name' get added to global object but not 'myObj'
+		//When 'changeName' function is run it's scope is no longer inside of the 'myObj'
+		//What can we do to make sure 'this' is pointing to the correct obj.
+
+
+		//Useing 'self' to fix the issue of losing scope
+		var myObj = {
+			name: "",
+			yell: function() {
+				var self = this; //Use 'self' to store 'this' currently pointing to the 'myObj'
+
+				this.name = 'Star Powerup';
+				console.log(this);
+				var changeName = function(newName) {
+					self.name = newName; //'self' is now the correct 'this' for 'myObj'
+				};
+				changeName('Blue Shell');
+				console.log(self);
+			}
+		};
+		myObj.yell();
+
+      </script>
+  </body>
+</html>

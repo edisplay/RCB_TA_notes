@@ -1,0 +1,13 @@
+<div class="row">
+  <div class="col-md-6">
+    <h1>People</h1>
+    {{#each persons}}
+      <h2>{{ name }}</h2>
+      <ul>
+        {{#each AlterEgos}}
+          <li>{{ name }}</li>
+        {{/each}}
+      </ul>
+    {{/each}}
+  </div>
+</div>

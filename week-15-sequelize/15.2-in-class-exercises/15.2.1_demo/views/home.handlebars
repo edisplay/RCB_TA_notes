@@ -1,0 +1,33 @@
+<div class="row">
+  <div class="col-md-6">
+    <h1>Make Note</h1>
+    <form action="/entry" method="post">
+      <div class="form-group">
+        <label for="exampleInputEmail1">Title</label>
+        <input type="" class="form-control" id="exampleInputEmail1" placeholder="Title" name="title">
+      </div>
+      <br>
+      <div class="form-group">
+        <label for="exampleInputPassword1">Message</label>
+        <input type="" class="form-control" id="exampleInputPassword1" placeholder="Text" name="text">
+      </div>
+      <br>
+      <button type="submit" class="btn btn-default">Submit</button>
+    </form>
+  </div>
+
+<br>
+<div class="row">
+  <div class="col-md-12">
+      {{#each results}}
+        <div>        
+          {{title}}
+          <br>
+          {{body}}
+        </div>
+        <br>
+        <br>
+      {{/each}}
+  </div>
+
+</div>

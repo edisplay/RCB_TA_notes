@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Take Names</title>
+		
+	</head>
+	<body>
+		<h1>Take Names!</h1>
+	
+		<div class="greekMythNames">Odysseus</div>
+		<div class="greekMythNames">Penelope</div>
+		<div class="greekMythNames">Medea</div>
+		<div class="greekMythNames">Callisto</div>
+		</br>
+		<div id="wrestler">Hulk Hogan</div>
+		</br>
+		<div data-name='007'>Agent</div>
+		</br>
+		<div id="joker" data-name='Jack Napier'></div>
+
+		<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+	    <script type="text/javascript">
+
+	    	$( document ).ready(function() {
+
+	    		// 1. Select everything with the class "greekMythNames" and console.log the second element's text.
+
+			      	//selecting via the greekMythNames class
+			      	var greekMyth = $( ".greekMythNames" );
+
+			      	//getting to the text of the first element with a class of greekMythNames
+			      	console.log(greekMyth.eq(1).text());
+
+			    // 2. Select the element with the id "wrestler" and console.log its text
+
+			      	//select via id
+			     	var wrestler = $("#wrestler");
+					console.log(wrestler.text());
+
+				// 3. Select the element with the data-name "007" and console.log its text
+
+					//select via data-attribute
+			      	var bond = $('*[data-name="007"]');
+			      	console.log(bond.eq(0).text());
+
+			    // 4. Select the element with the id "joker" and console.log its data-name
+
+			      	//getting to the data-attribute of an element
+			      	var element = $('#joker');
+			      	console.log(element.attr('data-name'));
+
+				      	//alternatively you can do
+				      	console.log(element.data('name'));
+
+				// 5. Edit the data-name attribute of the div with an id of joker to Tom Cruise and console.log the data-name value of it to the screen
+
+			      	//to update the data attribute
+			      	element.attr('data-name', 'Tom Cruise');
+			      	
+			      	console.log(element.data('name'));
+
+			      
+	    	});
+
+	    </script>
+	</body>
+</html>

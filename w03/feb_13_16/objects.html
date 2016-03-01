@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>OWENS</title>
+</head>
+<body>
+    <script>
+    // explain every line of the below object
+    // DO NOT TOUCH THE INSIDE of the owens object for the next steps.
+    var owens = {
+        bro : true,
+        doYouLift : true,
+        gramsOfproteinIntake : 240,
+        catchPhraseOne : "I'm so broke right now because I just bought those new subwoofers.",
+        catchPhraseTwo : "You're taking my picture? Hang on. Let me put on my sunglasses.",
+        catchPhraseThree : "My fantasy football team is crushing it.",
+        catchPhraseFour : "You’re hot. What’s your name?",
+        sayAllCatchPhrases : function(){
+            alert(this.catchPhraseOne);
+            alert(this.catchPhraseTwo);
+            alert(this.catchPhraseThree);
+            alert(this.catchPhraseFour);
+        },
+        changeBroStatus: function(broStatus){
+            this.bro = broStatus;
+        }
+        upProteinIntake : function(){
+            this.gramsOfproteinIntake++;
+        },
+        injuredStopLifting : function(){
+            this.doYouLift = false; //this is a placeholder for the name of the object. use "this" within the object
+            console.log(this.doYouLift);
+        }
+    };
+    // Outside the owens object, call the injuredStopLifting key and change doYouLift to false.
+    owens.injuredStopLifting();
+    // Outside the owens object, call the upProteinIntake key multiple times and up owens's protein intake to 245 and alert gramsOfproteinIntake
+    owens.upProteinIntake();
+    console.log(owens.gramsOfproteinIntake);
+    // Outside the owens object, call the sayAllCatchPhrases key to get owens to say all his catch phrases
+    owens.sayAllCatchPhrases();
+    // owens sent you a greeting card. owens has lost his status as a bro. Outside the owens object, Change owens's bro key to false. Alert the value of the bro key to the screen.
+    owens.changeBroStatus(false);
+    console.log(owens.bro);
+    </script>
+</body>
+</html>
