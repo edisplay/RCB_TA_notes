@@ -59,7 +59,6 @@ Making Elments Dynamically Using Arrays and Objects
 * *Call on a student to go over the previous exercise*
 
 ### 3. Instructor do (20 minutes)
-4.3.2_bradyBunch
 
 * *Instructor demos. Look in folder.*
 * *Open this file into chrome and demo it for the class: 4.3-in-class-exercises/3-instructor-do_bradyBunch folder.*
@@ -70,17 +69,21 @@ Making Elments Dynamically Using Arrays and Objects
 
 * *Have students talk to each other about what just happened. MAKE SURE THE CODE IS UP ON THE SCREEN!*
 
-### 5. Students do (25 minutes)
+### 5. Student do (25 minutes)
 Student Excercise: 4.3.3_streetFighter
 * *Instructor demo the solution not the code.*
 
-* *Give student the starter code in: 4.3-in-class-exercises/4.3.3_streetFighter/streetFigther_starter *
+* *show the images to the student individually to show how we'll take these images and create a Street Fighter menu*
+
+* *Give student the starter code in: 4.3-in-class-exercises/5-student-do_streetFighter/streetFighter_starter *
 * *Slack this out to class*
 
-> You can use the starter code as a template but feel free to change anything in the code to make the app work, you don't have to do it the way it's done in the starter code, it's just there to help you get started.
-
 ```
-* You are tasked to create a character selection screen for the game street figther.
+* (EASIER) Option 1: use the starter code and follow the directions in it.
+
+* (DIFFICULT) Option 2: follow the directions below, delete the JavaScript in the starter code and do it yourself.
+
+* You are tasked to create a character selection screen for the game street fighter.
 * You will be given 2 sets of images in the starter code.
 	* Small images for the buttons when selecting a character
 	* Bigger images for the display of the characters
@@ -94,7 +97,11 @@ Student Excercise: 4.3.3_streetFighter
 ### 6. Everyone Do (10 minutes)
 * *Open the Code to the above exercise located in and go over it.*
 
-###### 75 minutes have passed
+##### 75 minutes have passed
+
+
+
+# none of these have solutions and has not been QA'd
 
 ### 7. Instructor do: ( 10 minutes )
 4.3.4_fortune teller
