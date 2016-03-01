@@ -38,7 +38,7 @@ var makeDate = function() {
     formatedDate = formatedDate + d.getFullYear();
     //console.log(formatedDate);
 
-	return formatedDate;
+    return formatedDate;
 }
 
 //scrape ny times
@@ -133,17 +133,38 @@ var times = function(input, cb) {
 var notes = function(input, data, cb) {
 
     if (input == "save") {
-    	console.log(data);
+		console.log(data.id, data.date, "is what we are checking");
 
-        mynotes.save({
-			articleId: data.id,
-			articleDate: data.date,
-			articleNote: data.note
+        mynotes.find({
+        	//mongodb find sucks ugh
+            "articleId": data.id,
+            "articleDate": data.date
+        }, function(err, doc) {
+            console.log(doc, data.id, "this is what notes we found")
+            if ( !doc[0] ) {
+                console.log("this is a new notes need to be saved");
+                mynotes.save({
+                    articleId: data.id,
+                    articleDate: data.date,
+                    articleNote: data.note
+                });
+            } else {
+                console.log("we already got this note, pass");
+            }
         });
 
-    	cb(data);
+        cb(data);
+
+    } else if (input == "check") {
+        console.log(data, "got the data needed for notes");
+
+        mynotes.find({
+            articleDate: data.date
+        }, function(err, doc) {
+            cb(doc);
+        });
+
     };
-    //finish the save
 
 }
 
@@ -158,6 +179,12 @@ app.get('/check', function(req, res) {
     })
 });
 
+app.post('/gather', function(req, res) {
+    notes('check', req.body, function(data) {
+        res.json(data)
+    })
+});
+
 //get grab web scrape
 app.post('/fetch', function(req, res) {
     times('fetch');
@@ -167,7 +194,7 @@ app.post('/fetch', function(req, res) {
 //get save note
 app.post('/save', function(req, res) {
     notes('save', req.body, function(data) {
-    	// post req must give back resopnce as json??? wat..ok..
+        // post req must give back resopnce as json??? wat..ok..
         res.json(data)
     })
 });

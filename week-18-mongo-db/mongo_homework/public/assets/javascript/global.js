@@ -5,12 +5,14 @@ $(document).ready(function() {
     var mongoData;
     var dataCount = 0;
     var dataDate;
+    var notesData;
 
+    //rotating cube state
     var state = 0;
     var cubeRotateAry = ['show-front', 'show-back', 'show-right', 'show-left', 'show-top', 'show-bottom'];
     var sideAry = ['back', 'right', 'left', 'top', 'bottom', 'front'];
 
-    //ajax get data function
+    //ajax get news data function
     var populate = function() {
         // jQuery AJAX call for JSON
         $.getJSON('/check', function(data) {
@@ -18,7 +20,33 @@ $(document).ready(function() {
             mongoData = data[0];
             dataDate = mongoData.date; 
             // For each item in our JSON, add a table row and cells to the content string
-            console.log(mongoData, "gotem");
+            console.log(mongoData, "gotem new");
+        }).done(function() {
+            // running clickBox functions
+            clickBox();
+            saveNote();
+        });
+    }
+
+    //ajax get notes data
+    var gather = function() {
+        // jQuery AJAX call for JSON
+        console.log(dataCount, "current dataCount");
+        var idCount = dataCount - 1;
+
+        $.ajax({
+            type: "POST",
+            dataType: "json",
+            url: '/gather',
+            data: {
+                id: idCount,
+                date: dataDate
+            }
+        }).done(function(response) {
+            notesData = response;
+            console.log(notesData, "gotem notes");
+        }).fail(function() {
+            console.log("Sorry. Server unavailable. ");
         });
     }
 
@@ -28,6 +56,7 @@ $(document).ready(function() {
             var t = $("#input-box").val();
             //console.log(t)
             var idCount = dataCount - 1;
+            console.log(dataCount, "current dataCount");
 
             $.ajax({
                 type: "POST",
@@ -40,6 +69,8 @@ $(document).ready(function() {
                 }
             }).done(function() {
                 $("#input-box").val("");
+                // grab the notes again because we just saved note
+                gather();
             }).fail(function() {
                 console.log("Sorry. Server unavailable. ");
             });
@@ -61,7 +92,7 @@ $(document).ready(function() {
 
         $("." + sideAry[side]).append("<div id='typewriter'></div>");
         //cycle to different story
-        var print = mongoData.nyt[dataCount][1];
+        var print = mongoData.nyt[dataCount][0];
         dataCount++;
         // type animation for new summary
         (function type() {
@@ -109,8 +140,7 @@ $(document).ready(function() {
             typeIt();
             //start the notes 
             $("#input-area").show();
-            $("#saved-text").show();
-            saveNote();
+            $("#saved-area").show();
         });
     }
 
@@ -136,6 +166,7 @@ $(document).ready(function() {
     $("#seek-box").hide();
     $("#input-area").hide();
     $("#saved-text").hide();
+    $("#saved-area").hide();
 
     $("#seek-box").click(function() {
         //put data into html
@@ -146,8 +177,5 @@ $(document).ready(function() {
 
     })
 
-    /* running the functions*/
-    clickBox();
 
-    /* note box */
 });
