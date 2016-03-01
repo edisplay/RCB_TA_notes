@@ -75,15 +75,15 @@ $(document).ready(function() {
     }
 
     /* create the following buttons and add to the div with an id of container: */
-    // <button class="charButton" data-char="sister_big">sister big</p>
-    // <button class="charButton" data-char="mom">mom</p>
-    // <button class="charButton" data-char="brother_big">brother big</p>
-    // <button class="charButton" data-char="sister_small">sister small</p>
-    // <button class="charButton" data-char="logo">logo</p>
-    // <button class="charButton" data-char="brother_mid">brother mid</p>
-    // <button class="charButton" data-char="sister_mid">sister mid</p>
-    // <button class="charButton" data-char="dad">dad</p>
-    // <button class="charButton" data-char="brother_small">brother small</p>
+    // <button class="charButton" data-char="sister_big">sister big</button>
+    // <button class="charButton" data-char="mom">mom</button>
+    // <button class="charButton" data-char="brother_big">brother big</button>
+    // <button class="charButton" data-char="sister_small">sister small</button>
+    // <button class="charButton" data-char="logo">logo</button>
+    // <button class="charButton" data-char="brother_mid">brother mid</button>
+    // <button class="charButton" data-char="sister_mid">sister mid</button>
+    // <button class="charButton" data-char="dad">dad</button>
+    // <button class="charButton" data-char="brother_small">brother small</button>
     for (var key in characters) {
 
         var buttonTag = $('<button>');
