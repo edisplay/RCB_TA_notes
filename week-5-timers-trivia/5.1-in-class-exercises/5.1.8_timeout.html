@@ -17,9 +17,9 @@
 
   <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.js"></script>
   <script>
-    $('#start').click(buttonClicked);
-    $('#cancel').click(cancelButtonAlert);
-    $('#window-cancel').click(cancelWindowAlert);
+    $('#start').on('click', buttonClicked);
+    $('#cancel').on('click', cancelButtonAlert);
+    $('#window-cancel').on('click', cancelWindowAlert);
 
     var windowTimeout = setTimeout(windowAlert, 1000)
 
@@ -28,11 +28,11 @@
     }
 
     function windowAlert() {
-      alert('Hi! This alert came from the window!')
+      alert('Hey Kelly and JT are sitting kind fo close to the window!')
     }
 
     function buttonAlert() {
-      alert('Hi! This alert came from the button!')
+      alert('Hey Davon is sitting next to Jimmy!')
     }
 
     function buttonClicked() {
