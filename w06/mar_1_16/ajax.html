@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>AJAX</title>
+</head>
+<body>
+	<div id="result"></div>
+	<script src="http://code.jquery.com/jquery-2.1.3.min.js"></script>
+	<script type="text/javascript">
+		var title="ferris+bueller";
+		var queryURL = "http://www.omdbapi.com/?t=" + title + "&y=&plot=short&r=json";
+
+		console.log(queryURL);
+		$.ajax({url: queryURL, method: 'GET'})
+		.done(function(response) {
+			omdbResponse=response;
+			$("#result").html(response.Title + " is a movie starring " + response.Actors);
+		});
+
+		function tellMe(){
+			console.log(omdbResponse.Title);
+		}
+		timer = setInterval(tellMe, 1);
+	</script>
+</body>
+</html>

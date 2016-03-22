@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <title></title>
+    </head>
+    <body>
+
+        <script>
+
+            var customer = {
+                "firstName": "John",
+                "lastName": "Smith",
+                "age": 25,
+                "address": {
+                    "streetAddress": "21 2nd Street",
+                    "city": "New York",
+                    "state": "NY",
+                    "postalCode": "10021" },
+                "phoneNumber": [
+                    {
+                    "type": "home",
+                    "number": "212 555-1234"
+                    },
+                    {
+                    "type": "fax",
+                    "number": "646 555-4567"
+                    }
+                ]
+            }
+
+            // Log the First Name
+            console.log(customer.firstName);
+            // Log the Last Name
+            console.log(customer.lastName);
+            // Log the State of the Address
+            console.log(customer.address.state);
+            // Log the Home Phone Number
+            console.log("phone number", customer.phoneNumber[0].number);
+            // Log the Fax Number
+            console.log("fax number", customer.phoneNumber[1].number);
+
+        </script>
+
+    </body>
+</html>
