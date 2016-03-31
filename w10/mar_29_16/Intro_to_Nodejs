@@ -1,0 +1,19 @@
+node an open-source, cross-platform js runtime environment designed to be run outside of browsers.
+
+general utility that can be used for a variety of purposes including asset compliation, scripting, monitoring, and most notably as the basis for web servers.
+
+who uses Node.js?
+Microsoft 
+Dow Jones
+ebay
+Uber
+Google
+GE
+Walmart
+LinkedIN
+
+around since 2009
+It reuses JS, meaning a front-end JS developer can build an entire server themselves
+it's easily extendable: numerous plugins exist to expand the capabilities of Node
+fast-implementation, which allows for the creation of an entire working server with only a few lines of code. 
+single-threaded asyncronous model - meaning it can handle multiple requests simultaneously and not get bottlenecked.

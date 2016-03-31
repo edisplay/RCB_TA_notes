@@ -1,1 +1,0 @@
-INSERT INTO feel_states (state) VALUES ('Just right.');
