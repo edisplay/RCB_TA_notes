@@ -11,3 +11,5 @@ protocol is way of facilitating communication between servers/browsers
 
 how do we get the command line arguments in node? process.argv[i]
 
+a lot of javascript happens inside callbacks. 
+promises are cleaner. have a .then() method, so don't need the callback

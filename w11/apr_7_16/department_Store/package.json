@@ -1,0 +1,16 @@
+{
+  "name": "department_store",
+  "version": "1.0.0",
+  "description": "add items to a menu",
+  "main": "admin.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "rachelle erica faroul",
+  "license": "ISC",
+  "dependencies": {
+    "fs": "0.0.2",
+    "prompt": "^1.0.0",
+    "request": "^2.70.0"
+  }
+}
