@@ -1,7 +1,7 @@
 //prompt user to input info about each item
 //need an item constructor that creates a new item on keyStroke enter
 //user is passing in arguments, process.argv[2]??
-var menu = require('./menu.js');
+var storeMenu = require('./menu.js');
 var prompt = require('prompt');
 var request = require('request');
 var fs = require('fs'); //file system library
@@ -26,12 +26,12 @@ prompt.get(['name', 'price', 'jacket'], function (err, item) {
 
     //Add item
     fs.appendFile("menu.txt", JSON.stringify(storeMenu.items) + "\r\n", function(err){
-    	if{(err)
+    	if(err)
     		throw err;
-    	} else{
+    	else{
     		console.log("Item added to menu");
     	}
     })
-‹});
+});
 
 //item is an object
