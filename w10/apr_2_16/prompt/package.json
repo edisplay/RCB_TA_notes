@@ -15,7 +15,7 @@
     "colors": "^1.1.2",
     "pkginfo": "0.x.x",
     "read": "1.0.x",
-    "revalidator": "0.1.x",
+    "revalidator": "0.3.1",
     "utile": "0.3.x",
     "winston": "2.1.x"
   },
